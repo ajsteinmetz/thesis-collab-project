@@ -1,0 +1,1427 @@
+\title{\phantom{.}\\\phantom{.}\\Discovery of Quark-Gluon-Plasma:\\[0.3cm]
+Strangeness Diaries}
+%\subtitle{Strangeness diaries}
+\author{Johann Rafelski\inst{1,2}\fnmsep\thanks{\email{Rafelski@Physics.Arizona.EDU}}}
+%
+\institute{CERN-TH, CH-1211 Geneva 23 
+ \and Department of Physics, The University of Arizona, Tucson, AZ 85721%\\[-0.7cm]
+}
+%
+\abstract{We look from a theoretical perspective at the new phase of matter, quark-gluon plasma (QGP), the new form of nuclear matter created at high temperature and pressure. Here I retrace the path to QGP discovery and its exploration in terms of strangeness production and strange particle signatures. We will see the theoretical arguments that have been advanced to create interest in this determining signature of QGP. We explore the procedure used by several experimental groups making strangeness production an important tool in the search and discovery of this primordial state of matter present in the Universe before matter in its present form was formed. We close by looking at both the ongoing research that increases the reach of this observable to LHC energy scale $pp$ collisions, and propose an interpretation of these unexpected results.%\\[-0.7cm]
+} %end of abstract
+% 
+\maketitle
+\vskip -15.1cm \phantom{.}\hfill \hspace*{1cm} Preprint CERN-TH-2019-138 \ \ 
+\vskip -0.3cm\phantom{.}\hfill \hspace*{0.8cm} submitted to EPJ Special Topics \ \ \\
+\phantom{.}\hfill \hspace*{2cm} November 4/12, 2019 \ \ \\[-0.7cm]
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+% 
+\label{Luciano}
+\textit{It is very appropriate that you did reconstruct your version of the QGP discovery. Your quotations concerning me are correct and reproduce well my opinion, which I have not changed. CERN found good evidence for deconfinement,  and it was at all
+appropriate to say that in public, independently from the status of RHIC at the time. 
+%I had mostly contacts with Maurice Jacob for the preparation of my  CERN announcement  talk.
+}\\
+\textbf{Luciano Maiani} CERN Director General 1 January 1999--31 December 2003.
+\end{mdframed}
+\vskip 0.5cm 
+
+\vskip 10cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Dedications} (alphabetic):
+\addcontentsline{toc}{section}{Dedications}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+\item 
+{\bf Rolf Hagedorn}, who would have been 100 years old on 20th July 2019. His influence at CERN was essential in the quest to unlock the scientific opportunities relativistic heavy ion collisions offer. I had the privilege to have been marked by Hagedorn\rq s magic wand in a decisive way. 
+\item 
+\textbf{Jean Letessier}, Jean\rq s 80th birthday in December of 2018 provided the initial motivation to prepare a manuscript that includes a review of the highlights of our research achievements. I worked with Jean on the topic of this review for 20 years, from a first meeting in Summer 1992, arranged by Rolf Hagedorn, to the end of 2013. After many years of fruitful collaboration, Jean is the friend and colleague with whom I have published the largest number of research papers. 
+\item
+{\bf Berndt M\"uller}, with whom I studied physics in Frankfurt, and with whom I published many influential works on strangeness and strong field physics. 
+\item
+{\bf Helga Rafelski (3 September 1949 -- 5 November 2000)}\\ she would have been 70 years old this year. 
+\end{enumerate}
+\vfill\eject
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\markboth{Preamble}{Strangeness in QGP: Diaries}
+\addcontentsline{toc}{section}{Preamble}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This review introduces the strangeness signature of QGP in the format of a personal diary: diary means that I use some (unpublished) material buried in my history chest box. This includes some unpublished manuscripts from arXiv with some added insight into the reasons why these works are unpublished. All told, about half of this review presentation relies on earlier written personal records, the other half is freshly written with added verifiable references or records. Here is an example how this works -- in November 1993 I prepared a short write-up describing the ongoing and future work I hoped to carry out collaborating with Jean Letessier:\\
+
+
+\noindent \textit{The LPTHE laboratory at the University Paris submitted this to CNRS in order to secure funding to allow me to work in Paris in the Spring 1994. This roadmap focused on the ongoing experimental program at the CERN-SPS, defining our ensuing and enduring collaboration:\/}\\[-0.7cm]
+% 
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+%\vskip 0.5cm
+\small
+\begin{center}
+\textbf{STRANGE ANTIBARYONS}
+\end{center}
+
+The high temperature phase of quantum-chromodynamics (QCD), the quark-gluon plasma (QGP) is characterized by\\ 
+- color deconfinement, and\\ 
+- partial restoration of chiral symmetry.\\ 
+This picture is supported by numerical simulations of lattice SU(3)-gauge theory and by high temperature QCD perturbation theory. In QGP the production of strange particles is expected to be efficient due to:\\[-0.6cm] 
+
+\begin{itemize}
+\item[(a)] 
+{\it Lower energy threshold:} \\
+The most efficient conventional strangeness producing reactions\\[-0.3cm] 
+$$p+p\to p +\Lambda+{\rm K}^+,\quad \pi+\pi\to{\rm K}+\bar{\rm K}$$
+require c.m. energy of 700 MeV, in the QGP the energy for strange quark pair production\\[-0.6cm] 
+$$G+G\to s+\bar s;\quad q+\bar q\to s\bar s$$
+is $2m_{s}\simeq 300$ MeV. The reduction of threshold is very important in the presence of a thermalized phase space distribution, where at best temperatures $T = 160-250$ MeV can be reached today.
+\item[(b)]
+ {\it Increased strangeness density:} \\
+In a HG the density of strange hadrons is $\simeq 0.1$ fm$^{-3}$. By contrast, in the QGP the density of strange quarks is\\[-0.3cm] 
+\begin{equation}\nonumber
+n_{s} = n_{\bar s} \approx 6(Tm_{s}/2\pi)^{3/2} \exp(-m_{s}/T) 
+\approx 0.3 {\rm fm}^{-3} . 
+\end{equation} 
+\item[(c)]
+ {\it Anti-strangeness can be more abundant than} $\bar u, \bar d$:\\
+Since strange valence quarks are practically completely absent in the nuclear matter entering a relativistic heavy ion collision, the available phase space for strange antiquarks is not suppressed. Non-strange antiquarks, on the other hand, are suppressed due to the presence of a non-vanishing baryo-chemical potential $\mu_{\rm B}$ in a baryon-rich QGP, as it forms at AGS or SPS energies. The predicted phase space ratio in QGP:\\[-0.3cm] 
+\begin{equation} \nonumber
+\frac{n_{\bar s}}{n_{\bar u}+n_{\bar d}} \approx 
+{1\over 2}(m_{s}/T)^2 {\rm K}_2(m_{s}/T) \exp(\mu_{B}/3T) . 
+\end{equation} 
+\end{itemize}
+\indent Both these consequences (a), (b) of deconfinement and chiral symmetry restoration favor the production of multiply strange hadrons. The condition (c) further allows to expect that this enhancements is increasing with increasing $\bar s$ content of hadrons. This observation is certainly contrary to the normal hadronic reactions in which (e.g. in $p$ -- $p$ collisions) the yield of strange antibaryons is falling rapidly with $\bar s$ content. The corresponding experimentally measured cross sections are inputs in hadronic cascade models. Consequently, the abundance of strange antibaryons from dynamical hadronic models is expected to be opposite to the expectations from QGP, and the yields computed are considerably smaller than obtainable in QGP models.
+\end{mdframed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vfill\eject
+
+\addcontentsline{toc}{section}{\contentsname}
+{\protect\markboth{\contentsname}{\contentsname}}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vfill\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\markboth{1. Discovery of QGP}{Strangeness in QGP: Diaries}
+
+\section{A New Phase of Matter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Why we are interested in quark-gluon plasma}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{A new and interdisciplinary field of physics}
+
+This review introduces the laboratory exploration of \lq quark-gluon plasma\rq\ (QGP) by means of strangeness production and strange antibaryon enhancement. QGP can be formed in relativistic heavy ion collisions. This research field has seen phenomenal growth in the past 40 years. This happened because the study of QGP is at the crossroads of several fundamental questions, connecting to several physics disciplines. 
+
+In this spirit and in consideration of the great interest in QGP, let me first briefly describe my take on why so many theorists and even more experimentalists crowd the QGP physics field. First note that even though this research field has today a large component addressing questions arising in the context of cosmology and particle physics, it is seen as being a part of the nuclear science effort. The rationales are:
+\begin{itemize}
+\item
+The laboratory experiments use atomic nuclei in collision to discover, study, and explore this new state of matter in the laboratory; and
+\item
+This new field of research evolved and absorbed the earlier exploration of the properties of nuclei in low energy heavy ion collisions. 
+\end{itemize}
+However, in the study of QGP we address many important and often interdisciplinary domains of physics; some are far and away from traditional nuclear physics context as is shown in \rf{WHYrhic}: 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\centerline{\includegraphics[width=1\textwidth]{./AllFigs/WHYrhic.jpg}}
+\caption{The five reasons to study QGP: a snapshot from a recent lecture by the author -- the background is based on the Sistine Chapel ceiling fresco \lq The Creation of Adam\rq\ by Michelangelo -- this picture ornamented the poster seen on p.138 in Ref.\cite{Rafelski:2016hnq} of the 1992 NATO Summer school \lq\lq Particle Production in Highly Excited Matter\rq\rq\ I organized with \textbf{Hans H. Gutbrod,} for proceedings see Ref.\cite{Gutbrod:1993rp}}
+\label{WHYrhic}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We study QGP because: 
+\begin{enumerate}
+\item
+We desire to understand the formation of matter we are made from as it emerged from the primordial soup of quarks and gluons in the early evolution of the Universe\label{UniverseR1}.
+\item
+We search to improve the understanding of the mechanism of quark confinement by exploring its \lq melting\rq\ in a relatively large space-time volume into locally color deconfined quark-gluon plasma.
+\item
+We seek a deeper experimental and theoretical understanding of the origin of the mass of matter: how does the nuclon aquire its mass, and not another value? In other words what is the origin of the energy scales governing the vacuum structure confining quarks? 
+\item 
+In the laboratory QGP environment we find particles from the three flavor families: at CERN-LHC energies we find numerous $u,d,s,c$ (up, down, strange, charm) quarks, the four members of the two first quark families. There are also a few $b$ (bottom) quarks present. This may help us to explore physics phenomena that encompass all three families of particles known today allowing perhaps to study the origin of flavor.
+\item
+We may be able to the strong field physics phenomena: the electromagnetic (EM) forces acting in ultra relativistic collisions on the colliding heavy ions can be stronger than strong interactions. 
+\end{enumerate}
+ 
+We next discuss how these questions arose from the interest in the exploration of different possible forms of nuclear matter in heavy ion collisions. I will describe my personal perspective based on my participation in this field of physics. I was there at the birth of the ideas and I contributed to each stage of the research program development. I am convinced that the personal experience snapshots of events I present are sufficient for understanding the path into this new physics paradigm. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Quantum vacuum structure and quark confinement}\label{subsec:quarkQCD}
+
+The Nobel prize for the quark model of hadrons was awarded in 1969. Most students of physics at that time have been influenced by this event; I was one of them\footnote{See 
+\href{http://iopp.fileburst.com/ccr/archive/CERNCourier2019JulAug-digitaledition.pdf}{CERN Courier July/August 2019 } \textbf{Murray Gell-Man, Memorial Issue}.}. Less than a decade later the dynamical model of quark-quark interaction, quantum-chromodynamics~\cite{Fritzsch:1973pi} (QCD) was formulated. The first quantitative quark-bag model~\cite{Chodos:1974je,Chodos:1974pn,DeGrand:1975cf} descriptions of hadron structure ensued, followed by ever more precise quantitative models of hadrons~\cite{Thomas:1981vc,Thomas:1982kv}. We note that the quark model of hadron structure relied on quark-quark QCD based chromo-magnetic interaction.
+
+These models postulated that quarks were constrained to reside within a small domain of space-time. This postulate, as was soon understood, required a local change of the vacuum structure to be introduced in the context of strong field physics~\cite{Rafelski:1974rh}. My immersion into the physics of local in space-time modification of vacuum structure motivated me in 1975/6 to attempt to explain quark confinement, introducing auxiliary vacuum field~\cite{Rafelski:1975ra}, followed by effort to introduce quark overcritical binding by gauge fields~\cite{Muller:1976ms}.
+
+However, to this day a detailed model of confinement by a change in vacuum structure remains elusive. That this would be so was forecast by the bag model inventors\cite{Jaffe:1977su} R.L. Jaffe and Ken Johnson and it is elaborated in depth in the 1980 book by T.D. Lee~\cite{Lee:1980book}.\\
+
+\noindent\textit{\textbf{R.L. Jaffe and Ken Johnson}~\cite{Jaffe:1977su} explain in one phrase in 1977:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+% 
+\label{JaJo}
+We wish to describe here our own work on confinement which has been motivated by the belief that the starting point of conventional Lagrangian field theory is too distant from the phenomena to be useful.
+\end{mdframed}
+\vskip 0.5cm 
+
+I was among a few researchers drawn into the QGP research area by our earlier consideration of the vacuum structure and strong fields; I am pretty certiain this remark applies to \textbf{Berndt M\"uller, Miklos Gyulassy,} and perhaps also to \textbf{Larry McLerran.} I described my path to QGP in a 10 year retrospective as shown below.\\
+
+\noindent \textit{In the March 1984 inaugural lecture: \href{http://inspirehep.net/record/1750535/files/Rafelski.pdf}\lq\lq Why versus How in Theoretical Physics\rq\rq~\cite{Rafelski:1984twl} \url{http://inspirehep.net/record/1750535/files/Rafelski.pdf} at the University of Cape Town I presented the connection of the physics of strong fields with quark confinement and hadron structure:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\centerline{\includegraphics[width=1.0\textwidth]{./AllFigs/84JRInauguralCapeTown.jpg}}
+%\caption
+\noindent{\small The invitation to the Inaugural Lecture at the University of Cape Town, March 1984}\\
+
+\noindent \ldots My own work on the vacuum\label{JRVac} begun in Frankfurt when I was a young student in 1970. I \ldots met \emph{Walter Greiner}\ldots my mentor and teacher. \ldots We studied the vacuum structure arising from properties of electrically charged particles and determined the conditions under which transitions between different vacua were expected. \ldots 
+
+When we apply a strong electric field to it, the vacuum will spark. Virtual matter is always there and all you need to do when you apply strong electrical field to the vacuum is to create conditions to materialize what is already there. Of course you will now wonder why, if one looks around, one doesn\rq t see positrons everywhere. The point is that one has to have a very strong electric field -- and it turns out that the only way to create sufficiently strong electric fields in the laboratory right now is by \emph{bringing two heavy nuclei together.} \ldots
+
+From the study of the vacuum of electrically charged particles arose the suggestion that vacuum structures, so established, are a general phenomenon of all charged particles, with charges now being other than electrical. In particular, if one were to pursue the substructure of atomic nuclei to the level of quarks, the well established constituents of nucleons, one encounters a new charge that these particles carry. But this charge is always neutralized -- we only detect particles neutral under strong charge and quarks are not available to be looked at individually. Why?
+
+While one tries to understand this, the only conceptual explanation that one arrives at is the fact that actually these particles live in a different vacuum. That is, the region of space inside the nucleons in which quarks can live is, indeed, a different vacuum. But the substance around it is the kind of vacuum we live in. One usually calls this the true vacuum and the inside, the perturbative vacuum.
+
+%We have already accepted the concept that there can be different vacua. But here a step forward is made: 
+\ldots two different vacua can coexist, they are here simultaneously, except that the perturbative vacuum is very small. Its region is very small compared to space domains we have experienced. The radius of a proton is on the order of $10^{-13}\;$cm. Now arises the question: What do I do in order to create a large volume of this new vacuum? That is certainly the next step in order to test the consistency of the coexisting vacuum picture. I must be able to make a large box of perturbative vacuum -- a box full of different nothing. And I will come to this point below.
+%
+%But first we must understand why, in the first place, 
+\ldots why \ldots these different nothings only come in small sizes in nature. The answer is that it takes energy to change the structure of the vacuum. The inside is a different \lq nothing,\rq\ but it takes some form of energy to get it there. This is our current understanding of what happens
+% -- we must melt the true vacuum. We must supply the energy and melt the ice -- that is exactly what is needed to get to the new state. It is like what happens to water: 
+\ldots you have two states -- ice and water -- they are two different structures of the same thing, exactly a parallel situation to our coexistent vacuum. We have true and perturbative vacua -- both are just different structures of the \lq nothing.\rq\ I have to supply energy to go from one to the other. 
+
+So we must now accept that we live in an ice age! This ice age already exists for $1.5\times 10^{10}$\;years -- the lifetime of our universe. The last heat period ceased $10^{-6}$\;sec (one millionth of a second) after the birth of the universe, so we have only spent a short time in the other melted state. As the universe expanded, and temperatures dropped, the vacuum froze, leading ultimately to the present state of iced vacuum. Conceptually, this scenario is well understood, but since the birth of the universe has been a one-time event, we do not have firm experimental basis to confirm the above. While practically everybody in particle and theoretical physics believes in this picture, the belief in frozen vacuum picture is mainly supported by the fact that it is currently the only consistent explanation of all scarce experimental facts. But this hypothesis has until now not been subject to thorough experimental verification. And we recall that one negative experiment is sufficient to uproot the understanding. But there is at present no reason whatsoever for this picture of coexistent vacua not to be the correct one.
+
+Today we can attempt to simulate the hot early universe by colliding matter -- heavy nuclei -- at high velocity. The heat generated may suffice to melt the vacuum locally and open the opportunity to study the fundamental degrees of freedom in the melted state. The concept of \lq quark-gluon plasma\rq\ is so developed. Remember, however, that subnuclear particles are investigated. So the needed particle accelerators are giant and the experimental effort quite outrageous. Temperatures and pressures thousands of times higher than in the sun would be needed. Still, the program in this research field is likely to proceed and be a fruitful one for all involved. 
+
+\emph{Its particular importance is the undertaken test of the principle of true and perturbative vacua needed for the explanation of the elusiveness of quarks.} But we should recognize that what we learn in such experiments will not only concern the past of the universe, but also its present structure. Extreme conditions are believed to prevail in the centers of very densely collapsed stars -- neutron stars. It is possible that the interior of the star has \lq melted.\rq\ Even more exciting is the possibility that the least understood of all stellar objects, quasars, may have an energy generating core consisting of melted vacuum.
+\end{mdframed}
+\vskip 0.5cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+During my tenure at the University of Cape Town 1984-87, the exploration of the vacuum structure described above was accompanied by the development of the strangeness signature of the new phase of matter, the QGP, to the level of experimental usefulness. Dozens of research papers were published, and many remain well-cited to this day. The academic structures and traditions that were created to accommodate the international character of the QGP activities have endured and allowed the University of Cape Town to remain a participant in the exploration of this new phase of matter to this day.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Hagedorn (temperature physics) Frontier}
+The new quark paradigm that morphed into the confining vacuum paradigm we just introduced \lq happened\rq\ nearly in parallel with the proposal of thermal model of hadron production driven by Hagedorn\rq s invention of the statistical bootstrap model in 1964; for a review of Hagedorn\rq s work see Ref.\,\cite{Rafelski:2016hnq}. Hagedorn was interpreting fragmentary experimental data about particle production; these data were not in agreement with the rudimentary statistical particle production models. 
+
+Given model difficulties that beset interpretation of multi-particle production spectra in the early 1960s it would have been easy to abandon the early thermal particle production models. This was an easy option since the majority of particle effort was devoted to other theories that have largely lost their luster today: S-Matrix bootstrap, Regge-poles, are but two examples. Hagedorn a few companions persevered. His achievements are both intuitive and imaginative: by trial and error he created a new paradigm developing thermal model and establishing the statistical physics as a new domain in the realm of strong interactions {\em before} experimental necessity arose. The concept of \lq Hagedorn temperature\rq\ is a part of current physics vocabulary. Hagedorn\rq s work is an example of a theoretical hypothesis focusing the direction of future experimental work. 
+
+The two seminal ideas addressing the properties of strong interactions are:
+\begin{itemize}
+\item
+Quarks and later, QCD with vacuum structurer on one side; and on another, 
+\item 
+Statistical bootstrap, Hagedorn\rq s temperature, thermal models of particle production. 
+\end{itemize}
+were proposed within a few month of each other in 1964/65. Just 15 years later these two fields merged creating the new discipline, the physics of QGP, a new phase of matter~\cite{Rafelski:2015cxa}. 
+
+While before 1980 the deconfinement of quarks was searched in highest energy \lq elementary\rq\ collision experiments, the new QGP paradigm arises at relatively modest relativistic heavy ion collision energy. This is so since the size of the space-time domain also matters and needs to be sufficiently large. This allows the aether of modern day, the structured and confining quantum-vacuum, to be dissolved by the extreme heat generated in the large volume by colliding large atomic nuclei, which in turn melts the quark structure of strongly interacting particles called hadrons. This melting of hadrons at high temperature into the color deconfined QGP can therefore be studied in modest energy laboratory relativistic heavy ion collision experiments, and it is also found at highest energy available in $p$-$p$ interactions. 
+
+The term quark-gluon plasma was at first a particle physics buzz-phrase. It was introduced in the exploration of relativistic proton-proton collisions in the than accessible energy range of 0.1-0.3 TeV addressing the free motion of and parton dynamics by ed Shuryak~\cite{Shuryak:1978ij}. In the context of the relativistic heavy ion (=nucleus, nuclear) collisions (RHI collisions) we instead spoke of the study of nuclear and quark matter at the two first formative meetings~\cite{Satz:1980Bil,Bock:1980GSI}. The term QGP used for parton dynamics was rapidly abandoned in particle physics, and it was adopted as more appropriate term than quark matter considering that color charged quarks were set free.
+
+However, before the QGP term morphed to designate the new field of physics, the names of conference series were already defined. We call the primary conference series \lq Quark Matter YEAR\rq\ (QM\;YEAR) and strangeness related series \lq Strangeness in Quark Matter YEAR\rq\ (SQM\;YEAR). These terms appear often in this report. The generally accepted first QM\;1980 conference is the one held in Darmstadt~\cite{Bock:1980GSI} in October 1980, organized by \textbf{Rudolf Bock} and \textbf{Reinhard Stock.} However, some in the QGP community look at the earlier theoretical, August 1980 meeting~\cite{Satz:1980Bil} organized by \textbf{Helmut Satz} in Bielefeld, as the first in the series of QM meetings. 
+
+At the birth of this new field of physics, the exploration of the fifth state of matter, the deconfined quark-gluon plasma, arose from the exploration of properties of nuclear matter in relativistic collisions of heavy nuclei. As noted already this implied that this novel research area is a part of nuclear science. However, I would like to argue that quark-gluon plasma as a field of research stands today on its own merit, see also \rf{WHYrhic}. It overlaps most with quark physics and hadron structure, and less with the traditional nuclear science dealing predominantly with nuclear reactions and nuclear structure. 
+
+The Hagedorn Physics Frontier (which you will not --yet -- find mentioned on the WWW) as a research field includes, for example, the study of the Universe at the QGP epoch at the age of about 20\;$\mu$s; of quark matter in neutron stars; of the quantum vacuum structure and the deconfinement process, connecting here to the question about the origin of dark energy. Finite temperature lattice QCD is the computational method, providing insights into fully equilibrated hot QCD matter. Most of the heavy quark physics, including the discoveries of new multi-quark states relate to the \lq\lq Vacuum Structure and Quark Deconfinement\rq\rq \ novel area of research, and as noted in \rf{WHYrhic}, we accidentally touch on several other very important fundamental research topics.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Superdense nuclei or QCD matter?}\label{sssec:dense}
+
+The general interest in new types of \lq superheavy nuclei\rq\ and dense neutron star type nuclear matter was abundant in the late 60s and early 70s. There was also profound interest in some even more exotic ideas. I arrived in late Summer 1974 as a postdoc at the Argonne National Laboratory (ANL), just as \textbf{Arnold Bodmer} was promoted to be a senior scientist in \lq my\rq\ Physics Division. This coincidence is important for these diaries: I was interested to know what Arnold Bodmer did to earn this academic distinction, and this interest was my first encounter with strangness and strange quarks.
+
+Bodmer\rq s research addressed $\Lambda(uds)$-bound in light nuclei~\cite{Ali:1967vji} (hypernuclei) and collapsed nuclei~\cite{Bodmer:1971we}. He argued that dense and more strongly bound nuclear isomer states were consistent with the then available knowledge. In the context of the quark bag model these ideas led on to strange dibaryons~\cite{Jaffe:1976yi}, strange quark matter~\cite{Farhi:1984qu,Alford:2006vz}, and morphed into strange quark drops (strangelets) formation~\cite{Greiner:1987tg,Rafelski:1987sf} in heavy ion collisions. There is an ongoing quest to discover strange quark matter in neutron stars and their fragments~\cite{Madsen:1998uh,Weber:2004kj}
+
+Returning to the context of collapsed nuclear matter, Bodmer\rq s idea gained a lot of traction with the publication in 1974 by (T.D.) Lee and Wick~\cite{Lee:1974ma} of an effective theory model. This work occurred in parallel to the rise of the quark model and about two years after quantum-chromodynamics (QCD), a theory of strong interactions was advanced and rapidly accepted.
+
+In their influential study of collapsed nuclear matter, Lee-Wick did not use these new, quark and gluon, degrees of freedom. However, the theoretical work on hypernuclei and collapsed nuclei by Bodmer, updated with symmetry consideration by the renowned Particle \& Fields luminaries Lee and Wick had put pressure on the nuclear community to rapidly develop experimental instruments that were suitable for the exploration of these very interesting proposals. 
+
+The BEVALAC\label{BEVALAC} at the Lawrence Berkeley National Laboratory (LBNL) became the first operational relativistic heavy ion accelerator. It was created in 1971 by connecting two existent accelerators, the Bevatron and SuperHILAC. The at-that-time relatively high beam momentum, of about 2\;GeV/c per nucleon, opened up research into relativistic heavy ion (RHI) collisions; that is relativistic nuclear collisions: relativistic meaning that the energy available appears at the scale of multiple rest mass of colliding nuclei. This frontier experimental program got a strong boost from the work of Lee-Wick which was addressed at the so-called \lq Bear Mountain\rq-meeting~\cite{BearMountain}\label{BearMountain}. \\ 
+
+\noindent\textit{\textbf{Gordon Baym} in his QM2001 opening remarks comments~\cite{Baym:2001in}:}\\[-0.7cm]
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+% 
+ \ldots at the time (Fall 1974, JR) of the Bear Mountain meeting, the idea of quark matter as the ultimate state of nuclear matter at high energy density had not taken hold.\ldots Despite suggestive hints, the experiments have not yet identified a quark-gluon plasma.
+ \end{mdframed} 
+%\vskip 0.5cm
+%
+Gordon Baym explains above why ten years after quarks were recognized as building blocks of matter, and nucleons in particular. One cannot find in the white paper that was prepared at the \lq Bear Mountain\rq-meeting~\cite{BearMountain}, or for that matter in any documents accompanying the BEVALAC scientific program from this epoch, any mention of quarks. The Bear Mountain workshop ordained the collapsed nuclei as the research objective of the early US-RHI physics effort. 
+
+At the time of the Bear Mountain meeting, the idea of QCD as the theory of strong interactions underpinning nuclear science was whizzing around, and yet at this important meeting this topic did not get a hearing. This was so despite the fact that quark matter was already considered by several groups. In 1974 I had seen the related work of Peter Carruthers~\cite{Carruthers:74}; Carruthers was well known, soon after appointed to be the Theory Division leader at the Los Alamos Laboratory. His views were widely read in the particle physics community.
+
+Later I learned of equally relevant quark-star work carried out in the Soviet Union~\cite{Ivanenko:1965dg} already in 1965. It is noteworthy that just at the time of the Bear Mountain meeting, the asymptotic freedom was connected with dense quark matter in neutron stars by Collins and Perry~\cite{Collins:1974ky} -- Baym misdates Collins and Perry to be the year after Bear Mountain event. The preprint existed before the meeting. I had also already lectured at Fermilab, presenting quark matter as a large scalar-bag; in that period called the \lq SLAC\rq\ quark bag, see Ref.\cite{Lee:1980book}, with quarks preferring to sit on the confinement volume surface. I did not trust in a surface of quarks as an excited or collapsed state of nuclear matter, so I never published this work.
+
+Weinberg~\cite{Weinberg:QFT} explains the physics reasons for the remarkable rapid and universal adoption of QCD in the particle physics context. Let me add to this by clarifying why nuclear scientists did not follow: a) They could explore nuclear structure without knowing quarks existed; b) \lq People with quarks\rq\ had difficulty arguing for or even justifying the relevance of quarks in nuclear interactions. 
+ 
+The nuclear community saw the Lee-Wick work as an alternative to working with quarks. But to me it was and is unimaginable that these authors were not aware of the newly created and widely adopted theory of strong interactions, QCD. So why would \textbf{T.D. Lee} after QCD was discovered turn to effective model of nuclear matter? The answer is seen in the quotation of Jaffe \& Johnson, see page \pageref{JaJo}. 
+
+I believe that T.D. Lee was interested in an effective theory capable of replacing in the context of nuclear collisions the non-Abelian gauge theory, the QCD. This was also a natural step to take for him since QCD was relying on concepts developed two decades earlier by Yang and Mills~\cite{Yang:1954ek}, the same Yang who coauthored with T.D. Lee the parity violating Nobel prize winning weak interaction paper~\cite{Lee:1956qn} two years later.
+
+The detour to the Lee-Wick effective theory may derive from another situation: I imagine that T.D. Lee was in part motivated by his relationship with C.N. Yang who was at SUNY Stony Brook, near the future Brookhaven’s RHIC machine. QCD relied on a theory invented by C.N. Yang and these two inventors of parity violation in weak interactions were not the best of friends. Maybe T.D. Lee was looking for a way to support the LBNL on distant West Coast.
+
+Writing about \lq\lq What Fuels Progress in Science? Sometimes, a Feud\rq\rq\ \href{https://www.nytimes.com/1999/09/14/science/what-fuels-progress-in-science-sometimes-a-feud.html}{in the New York Times of Sept. 14, 1999} James Glanz uses the Lee-Yang situation as a singular counterexample to the generally science beneficial scientific feuds.\\
+
+\noindent \textit{\textbf{James Glanz} comments on T.D. Lee and C.N. Yang as follows:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+% 
+\ldots\label{NYT1999} entirely destructive, with little redeeming value for scientific research-- like the bitter personal and professional split between Dr. Tsung Dao Lee and Dr. Chen Ning Yang, who won the Nobel Prize in 1957 for collaborative work on particle physics. Each now claims the lion\rq s share of credit for the work, and the two have not spoken for 35 years. \ldots
+\end{mdframed} 
+%\vskip 0.5cm
+%
+{\bf However:} 20 years later I see the situation differently; James Glanz of the NYT did not have all the facts in hand. T.D. Lee, by advising the CERN Director General (DG) Herwig Schopper in the early 80s, did help CERN to the SPS RHI collision program and by extension to the LHC program as well has created the counterbalance to the BNL forthcoming heavy ion research program. We return below to this matter, see page \pageref{SchopperRem}. 
+
+In just the right moment I was at CERN and saw T.D. Lee in the CERN cafeteria. I do not remember the date, but the event lives strongly in my memory. I joined him as is usual at CERN with my coffee cup in hand. This was just before, as I know this today, his meetings with the DG regarding the RHI project at CERN. In this entirely random CERN cafteteria meeting I advanced the case of strange (anti)hyperons observable which benefit greatly from the SPS longitudinal boost of the unstable particle decay length. 
+
+With T.D.s support a pivotal decision, contrarian to other advice, was taken by the CERN DG as he clarified in the introduction to Ref.\cite{Rafelski:2016hnq}, see page \pageref{SchopperRem}. So unlike James Glanz of the NYT I believe that all scientific battles without exception did advance knowledge in a decisive way -- history clarifies the question \lq How?\rq\ which in September 1999 had not yet become visible. 
+
+Back to the early 70s: The primary outcome of the Bear Mountain meeting was to define a contextual pillar of the US-RHI community working at BEVALAC. On balance the Bear Mountain participants strengthened the future of RHI physics in USA using the Lee-Wick collapsed nuclei proposal. Being different from the QCD based understanding of strong interactions, this proposal created a well understood context for nuclear science already engaged into exotic forms of nuclear matter. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Strangeness: a natural tool to study QGP}\label{sec:ssig}
+
+The heaviest of the three light quark flavors, strangeness, emerged as the candidate signature of QGP for the following three reasons~\cite{Koch:2017pda,Rafelski:1982ii}: 
+\begin{enumerate} 
+\item
+When color bonds are broken, the chemically equilibrated deconfined state contains an unusually high abundance of strange quark pairs~\cite{Rafelski:1980rk,Rafelski:1980fy} leading on to strangeness (kaon, hyperon) enhancement. 
+\item 
+The gluon component in the QGP (rather than quark component) produces strange quark pairs rapidly, and just on the required time scale~\cite{Rafelski:1982pu} -- strangeness enhancement was now tied to the presence of gluons \lq G\rq\ in the QGP, while strangeness yield depended on size and initial conditions of the QGP fireball. 
+\item The high density of strangeness at the time of QGP hadronization was a natural source of multi-strange hadrons~\cite{Rafelski:1982rq}, quantified in the coalescence picture of pre-existing quarks and antiquarks~\cite{Koch:1986ud}.
+\end{enumerate}
+ %
+\textit{At the inaugural lecture in June 1980 at the University Frankfurt I described the work at CERN carried out in collaboration with Rolf Hagedorn that led to the proposal of melting of nuclear matter into quark matter and introduced (strangeness as an) observable of this process:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%Rafelski:1982pu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerline{\includegraphics[width=0.95\textwidth]{./AllFigs/80InauguralCLEAN.jpg}}
+\noindent{\small The invitation to the Inaugural Lecture\label{FRAINAU} at University Frankfurt, 18 June 1980. The short abstract reads, translated: Recent theoretical work shows melting of the constituents of protons and neutrons -- quarks -- into quark matter, a new phase of nuclear matter. This is expected to occur in an experimentally accessible domain of pressure and temperature.}
+\end{mdframed}
+%%%%%%%%%%%%%%%%%
+
+This event was closely followed by two conference lectures.
+\begin{enumerate}
+\item
+I lectured on two topics in Bielefeld~\cite{Satz:1980Bil} at the end of August 1980: I) on strangeness signature of quark-gluon plasma, and II) on the strong field vacuum aspects, see page \pageref{JRVac} for this second topic discussion. Much of the work addressing the heavy ion collisions and QGP presented in the first lecture was carried out in collaboration with Rolf Hagedorn at CERN-Geneva, more details are seen in Ref.\cite{Rafelski:2016hnq}.
+
+Rolf Hagedorn also lectured at Bielefeld, introducing our work on hot hadron matter in relativistic nuclear collisions. My talk followed. I was presenting the properties of quark-gluon plasma, the transformation between hadron and quark phases of strongly interacting matter, introducing for the first time to a international audiance strangeness as QGP observable. We submitted our papers as two parts of a joint project overlapping, but for the new strangness and QGP segments, with our joint publication~\cite{Hagedorn:1980kb} on \lq\lq Hot Hadronic Matter and Nuclear Collisions.\rq\rq\ 
+\item
+At the following October 1980 meeting in Darmstadt at the GSI laboratory\cite{Bock:1980GSI} we published our contributions individually. Hagedorn presented his evaluation of the status of the understanding of contemporary experimental and theoretical work on dense and hot strongly interacting matter. He was attempting an overview of heavy ion scattering experiments available at the time. This left me the task to advance stronger the phenomenology of the search for QGP and deconfinement, which compared to other contributions in Ref.\cite{Bock:1980GSI} was a true \lq progressive\rq\ effort.\\
+\end{enumerate}
+
+\noindent\textit{\textbf{Hans Specht} in his meeting summary captures the gist of my contribution as follows (see pp. 552/3 in Ref.\cite{Bock:1980GSI}):}\\[-0.7cm]
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\label{Specht} 
+\ldots The particular sensitivity of the production of such particles (K$^-$ and $\bar p$, JR) which do not contain any of the entrance channel quarks, to possible collective effects in this region was mentioned by J. Rafelski, who placed his emphasis on the $\overline{\Lambda^0}$. It is also here that the transition from a simple cascading picture to the full complication of the space-time development \ldots takes place.
+\end{mdframed}
+\vskip 0.5cm
+
+For a long time the precision of experimental data was not at the level to allow clear recognition of the predicted $\overline{\Lambda^0}/\bar p>1$ enhancement. However, this unexpected result is clearly visible at the LHC energy scale, see \rss{sec:AliceSys}.
+
+\noindent \textit{The argument for strangeness and strange antibaryons as a signature of QGP were already stated~\cite{Rafelski:1980rk} in 1980 and follow verbatim. These remarks cannot be expressed better today:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+ \ldots assuming equilibrium in the quark plasma,
+we find the density of the strange quarks to be (two spins and three colors)\,\footnote{I change here the notation introducing
+$ s\to N_s,\ \bar s\to N_{\bar s} $ etc., adding subscript \lq B\rq\ to indicate baryo-chemical potential.}:
+\begin{equation}\label{Eq1}\tag{26}
+\frac{ N_s} V =\frac{ N_{\bar s}} V =6\,\int \frac{d^3p}{(2\pi)^3}e^{-\sqrt{p^2+m_s^2}/T}=3\frac{Tm_s^2}{\pi^2}K_2(m_s/T),
+\end{equation}
+(neglecting, for the time being, the perturbative corrections and, of course, ignoring weak decays). As the mass of the strange quarks, $m_s$, in the perturbative vacuum is believed to be of the order of 280--300 MeV\footnote{This high value of strange quark mass applies at a scale of about 0.5 GeV was obtained from hadron spectra. The tabulated value today, about 1/3 as large as I used in 1980, is at the scale of of 2 GeV.}, the assumption of equilibrium for $m_s/T\simeq 2$ may indeed be correct. In Eq.\,(\ref{Eq1}), we were able to use the Boltzmann distribution, as the density of strangeness is relatively low. Similarly, there is a certain light anti-quark density ($\bar q$ stands for either $\bar u$ or $\bar d$):
+\begin{equation}\label{Eq2}\tag{27}
+\frac{N_{\bar q}}{V}\simeq 6\int \frac{d^3p}{(2\pi)^3}e^{-|p|/T-\mu_q/T}=e^{-\mu_q/T}\cdot T^3 \frac{6}{\pi^2},
+\end{equation}
+where the quark chemical potential is, as given by Eq.(3) $\mu_q=\mu_\mathrm{B}/3$, $(\mu_\mathrm{B}$ is baryo-chemical potential). This exponent suppresses the $q\bar q$ pair production as only for energies higher than $\mu_q$ is there a large number of empty states available for the $q$. 
+
+What we intend to show is that there are many more $\bar s$ quarks than anti-quarks of each light flavor. Indeed:
+\begin{equation}\label{Eq3}\tag{28}
+\frac{N_{\bar s}}{N_{\bar q}}=\frac 1 2 \left( \frac{ m_s}{T}\right)^2K_2(m_s/T)e^{\mu_\mathrm{B}/(3T)}.
+\end{equation}
+The function $x^2K_2(x)$ is, for example, tabulated in Ref.[15] (Abramowitz-Stegun). For $x=m_s/T$ between $1.5$ and $2$, it varies between $1.3$ and $1$. Thus, we almost always have more $\bar s$ than $\bar q$ quarks and, in many cases of interest $N_{\bar s}/N_{\bar q}\simeq 5$. As $\mu_\mathrm{B}\to 0$ there are about as many $\bar u$ and $\bar d$ quarks as there are $\bar s$ quarks. 
+
+\label{FirstPredict}
+When the quark matter dissociates into hadrons, some of numerous $\bar s$ may, instead of being bound in a $q\bar s$ Kaon, enter into a ($\bar q \bar q \bar s$) anti-baryon and in particular, a $\overline{\Lambda}$ or a $\overline{\Sigma}^{\,0}$. The probability for this process seems to be comparable to the similar one for the production of antinucleons by the (light) antiquarks present in the plasma.\ldots We would like to argue that a study of $\overline{\Lambda}$ , $\overline{\Sigma}^{\,0}$ \ldots could shed light on the early stages of the nuclear collision in which quark matter may be formed.
+%
+\end{mdframed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip 0.5cm
+
+There are three important issues raised above, which have since seen significant elaboration:
+\begin{enumerate}
+\item 
+The chemical equilibration of strange quarks, generalized later to address the equilibration of all QGP degrees of freedom in the deconfined phase. 
+\item 
+The combinant quark hadronization, generalized later to the study of hadron abundances as diagnostic tool of the hadronizing fireball.
+\item 
+Use of particles made entirely of newly created quarks, and in particular here the strange anti-baryon signature of QGP as introduced in 1980, and our prediction has been verified at SPS, RHIC and LHC energy range and as we will argue it is one of the key observables of the QGP phase of matter. 
+\end{enumerate}
+
+The October 1980 GSI workshop!\cite{Bock:1980GSI} was attended by \textbf{J\'ozsef Zim\'anyi,} who lectured on kinetic thery in HG: \lq\lq Approach to Equilibrium in High Energy Heavy Ion Collisions\rq\rq, which directly followed on my lecture~\cite{Rafelski:1980fy}, and was also presented in Acta Physica Hungarica~\cite{Zimanyi:1980fz}. Zim\'anyi proposed in this work the theoretical framework to check the hypothesis if chemical equilibrium can be attained in QGP. By the Summer 1981, \textbf{Tam\'as B\'{\i}r\'o,} a young graduate student working with J\'ozsef Zim\'anyi~\cite{Biro:1981zi} extended this work and obtained strangeness production rates in perturbative QCD when considering the specific processes $q\bar q\to s\bar s$. 
+ 
+The key result of this study was that it would take much too long, about 8 times the natural lifespan of a QGP fireball, to equilibrate strangeness chemically. Unfortunately, when J\'ozsef Zim\'anyi came to present the pre-publication results in Frankfurt in late Summer 1981, set up on a short notice, I was at a meeting in Seattle. Upon my return, I believe in late October 1981, I received a copy of the Bir\'o--Zim\'anyi preprint~\cite{Biro:1981zi}. I saw an important omission: $GG\to s\bar s$ process was not considered.
+
+During my CERN 1977--79 fellowship period I learned about QCD based charm production in $p$-$p$ reactions. I shared, for about a year, an office with \textbf{Brian Combridge,} of perturbative QCD charm production fame~\cite{Combridge:1978kx}. Brian was an extrovert who was keen to share his insights. From Brian I learned (sometimes against my will) that even if the cross sections were similar for both quark $q\bar q\to c\bar c$ and gluon $GG\to c\bar c$ fusion processes into charm, it was the gluon fusion process which dominated the production rate. 
+
+In the Fall 1981 this CERN experience turned out to be a valuable asset; the outcome of the calculation of the strangeness production relaxation time remained open since Bir\'o--Zim\'anyi did not study glue fusion process. I described my insight to Berndt M\"uller, who was enthusiastic at the prospect of using real plasma gluons in a physical process. This was so since we had just completed a study based on virtual gluon fluctuations of the temperature dependence of the latent heat of the QCD Vacuum \cite{Muller:1980kf}. In view of this preparation the glue-based flavor producing reactions were a natural extension of Bir\'o--Zim\'anyi.
+
+Within a few weeks of work, we confirmed in an explicit computation the hypothesis that the thermal strangeness chemical equilibrium in QGP is due to gluon fusion process~\cite{Rafelski:1982pu}. While Berndt was practicing thermal perturbative QCD, I was racing ahead preparing the manuscript seen in \rf{sProdPrep}: we see on right first corrections introduced by Berndt in red, and my second thoughts written in by pencil -- later we needed to count the words and improve the English for the PRL publication.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\includegraphics[width=1.0\columnwidth]{./AllFigs/81sProdPrepHand.jpg}
+\caption{The birth of strangness production in gluon fusion manuscript Ref.\cite{Rafelski:1982pu}; On left: the preprint page before PRL level edits; On right: the first handwritten version of November 1981, with edits: my first writing, Berndt\rq s red pen edits, my penciled-in additions: Berndt insisted I should be the first author}\label{sProdPrep}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+An important aspect in the evaluation of the rate of strangeness production, which Berndt and I undertook, was the choice of the value of the running strong coupling constant $\alpha_s(\Lambda)$. We knew that if one uses a 1st-order perturbative expression for a QCD process, it can only produce reasonable results if the coupling strength is chosen just at the right strength for the appropriate energy scale. 
+
+Considering the experimental results available, we determined the value $\alpha_s$ to produce strangeness at the typical thermal collision energy $\sqrt{s_\mathrm{th}}=3$-$6T$, for $T=200$-$300$ MeV should be $\langle\alpha_s\rangle=0.6$. This turned out to be just the right choice, a value $\langle\alpha_s(0.86\;\rm{GeV})\rangle=0.60\pm0.10\pm0.07$ is appropriate -- more discussion of strangeness production allowing for the running of both $\alpha_s$ and the strange quark mass is seen in Sec.~\ref{QCDrunning}. 
+
+However, for the following 15 years, a value $\langle\alpha_s\rangle=0.2$ was often used in literature; this smaller value is appropriate for the energy scale $\Lambda\simeq 6$ GeV. Since the reaction rates scale with $\alpha_s^2$, this seemingly small modification meant that the chemical equilibration of QGP is delayed by an order of magnitude, eliminating strangeness as signature of QGP. Thus misunderstanding of running QCD parameters explains why our results were not always trusted.
+
+On the other hand our result, the process of chemical equilibration in QGP became an asset: the QGP chemical equilibrium yield of strangeness evolved into an indicator of the presence of mobile, free gluons required to produce strangeness. Strangeness abundance is the signature of deconfinement, since the work of B\'{\i}r\'o-Zim\'anyi showed that as long as there was no free glue, just the thermal light $u,\bar u, d, \bar d$ quarks; chemical equilibration was therefore without glue not attainable. 
+
+The other required element of this argument is that only in deconfined QGP strangeness enhancement can be expected. Strangeness production in hadron gas was elaborated in a kinetic approach by Peter Koch a talented Franfurt graduate student. Peter computed the strangeness yields and relaxation times expected in the hadron phase~\cite{Koch:1984tz}. We also recognized that hadron processes cannot enhance strange antibaryons, detailed balance prevents excess of $\overline\Xi$ to form. 
+
+By 1986 a detailed discussion of how a fireball of deconfined mobile (strange) quarks turns into strangeness carrying hadrons was complete~\cite{Koch:1986ud}. In this work Peter Koch, Berndt M\"uller and I proposed the nonequilibrium recombinant processes for the hadronization of the QGP fireball. These results in particular demonstratd that the high strangeness density in chemically equilibrated QGP is the source of greatly enhanced strange antibaryon yield.
+
+With these results, we see: 
+\begin{enumerate}
+\item
+Strangeness yield enhancement based on thermal gluon reactions has been well established theoretically as the signature for deconfinement. 
+\item
+The strength of this enhancement was recognized to dependent on how hot and how long the hot QGP phase would last. 
+\item 
+Strange antibaryons $\overline\Lambda$, $\overline\Xi$ and $\overline\Omega$ emerging in overabundance in hadronization process were understood as an unmistaken signature of QGP. No competing process was known then and now.
+\end{enumerate}
+
+
+These results confirmed multi-strange hadrons as the key characteristic signature of the QGP. Many detailed model predictions showed how the high density and the mobility of already produced strange and antistrange quarks in the fireball creates this signature. The expected backgrounds were explored, demonstrating that multi-strange antibaryons are by a large factor dominated by the formation mechanisms present during QGP fireball hadronization. 
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Establishing (ultra)relativistic heavy ion collisions beams}\label{ref:dst}
+\label{HowQGP} 
+The pioneering QGP experiments were carried out at the CERN Super Proton Synchrotron (SPS) accelerator, beginning with the first beams obtained 1986/7. By the end of the last century, Pb beams with the highest energy had, to the disbelief of some of the discoverers, created the QGP phase of matter. This was announced early February 2000, see page \pageref{CERN2000}. 
+
+The BNL laboratory (Brookhaven National Laboratory, Long Island, New York) joined in the \lq Hunting for QGP\rq, see Section~\ref{ssec:flow}. At BNL the Relativistic Heavy Ion Collider (RHIC) by means of the greater energy reach made accessible additional experimental opportunities. The SPS and RHIC results have been confirmed and elaborated at the CERN Large Hadron Collider (LHC), while the research program at SPS continued yielding additional corroborating evidence. 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Heavy ions at CERN}\label{sec:RHI-CERN}
+CERN\label{CERN} is an international, European-funded, particle physics laboratory built near Geneva across the Swiss/French border. The name derives from \lq Conseil Europ\' een pour la Recherche Nucl\' eaire\rq (European Council for Nuclear Research) established by 12 European governments in 1952. CERN\rq s RHI experimental research program was helped along by both internal interest and the German GSI laboratory research program carried out in the 70s at the Lawrence Berkley National Laboratory BEVALAC, see page \pageref{BEVALAC}. 
+
+After GSI joined the CERN RHI effort in the early 80s, Hans H. Gutbrod and Reinhard Stock returned from their LBNL projects and became spokespersons of CERN SPS experiments, WA80 and NA35, respectively, developed at CERN. Some of the GSI paid experimental equipment was also moved from LBNL to CERN. Another CERN-SPS experiment, NA36, was prepared by LBNL researchers who chose CERN over the long wait for the to-be-built RHIC. 
+
+At CERN the WA85 experiment under the leadership of \textbf{Emanuele Quercigh} took off focusing on strange antibaryons. All told three strangeness and antibaryon experiments were being set up to search and study quark-gluon plasma: NA35, NA36 and WA85 -- the acronyms derive in part from the location at CERN: WA is the West area on the main campus of CERN and NA is the North area at the CERN-II campus, both connected by the SPS accelerator ring. The numerical code tracks the sequential approval status of the experiment.\\
+
+\noindent \textit{\textbf{Gra\.zyna Odyniec} writes for the proceedings of the SQM2000 meeting held in July 2000 at Berkeley \cite{Odyniec:2001}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\label{Pugh}
+{\Large\bf In the memory of Howel G Pugh}\\[0.1cm]
+{\bf Gra\.zyna Odyniec}\\
+%
+\ldots From the very beginning Howel (Pugh, LBNL, scientific director of BEVALAC, JR), with firmness and clarity, advocated the study of strange baryon and antibaryon production. He played a leading role in launching two of the major CERN heavy-ion experiments: NA35 and NA36, the latter being exclusively dedicated to measurements of hyperons. Strangeness enhancement predicted by theorists was discovered \ldots\\[0.2cm]
+%
+\centerline{\includegraphics[width=0.99\textwidth]{./AllFigs/SQM2000GroupS.jpg}}
+%\caption
+\noindent{\small Group picture at SQM2000\label{SQM2000Group}, the {\it 5th International Conference on Strangeness in Quark Matter}, Berkeley,July 20-25, 2000 (a B/W version is seen in the \emph{printed} proceedings volume~\cite{Odyniec:2001qb}); Gra\.zyna is second from left in front standing raw; sitting on the ground from left: Hans H. Gutbrod, Johann Rafelski and Stefan Bass}\\
+
+
+\end{mdframed}
+\vskip 0.5cm
+
+My personal move to CERN preceded these developments by several years. In the mid 70s, following the Bear Mountain events, see Section~\ref{sssec:dense}, and after accidental meetings at lecture venues with both Rolf Hagedorn and Leon van Hove (soon to be DG at CERN) I understood that my interest in quark matter, vacuum structure and deconfinement would find a better home at CERN. I recived an offer in 1976 and I departed from Argonne Laboratory for Europe on leave (I was in the interim made junior staff member) in Spring 1977. Argonne was more than delighted, indeed \lq encouraging\rq\ this development, wanting to develop another field of nuclear physics. However, a few years later the ANL Physics Division turned to experimental studies in my areas of expertise: of strong fields and positron production, and later, quark matter. In these experimental efforts ANL had lost on-site theoretical expertise since I resigned from Argonne after I accepted a tenured appointment in Frankfurt, see page \pageref{FRAINAU}.
+
+After a few months at GSI and my alma matter Frankfurt, which were useful as I met there several future RHI colleagues for whom I would later open CERN portals, I arrived in September 1977 as a Fellow at CERN. I was on the way to learn from Rolf Hagedorn, whom I met before, about thermal models of hot hadron matter, and to move him to help me study the phase transformation of strongly interacting matter into quark matter. 
+
+Hagedorn was himself very interested in including quarks and QCD into his work on hot hadronic matter; thus our interests were well matched. He was a superb teacher; more on this can be found in the book dedicated to these events~\cite{Rafelski:2016hnq}, in which many reminiscences are collected. 
+
+However, one input is missing in Ref.\cite{Rafelski:2016hnq} -- the contribution of Bill Willis to the creation of the RHI program at CERN. Bill passed away before I began Ref.\cite{Rafelski:2016hnq}; I found no substitute able to fill the large gap he left in the Hagedorn volume~\cite{Rafelski:2016hnq}.\\
+
+\noindent \textit{\href{https://physics.columbia.edu/william-bill-j-willis-1932-2012}{\textbf{Bill Willis} obituary page at Columbia University} \url{https://physics.columbia.edu/william-bill-j-willis-1932-2012}reminds of his influence:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+Bill was a towering presence in the development of particle physics, with a career encompassing nearly the entire history of the field. \ldots he was a true renaissance figure who influenced the development of particle physics, nuclear physics and accelerator physics.\ldots
+
+Bill made seminal contributions to nuclear physics, specifically in establishing the case for and the methods to investigate collisions of heavy nuclei at relativistic energies as a means of searching for new forms of matter. He worked\ldots to promote this new field of physics, both in early investigations at Brookhaven and CERN, and in building the case for the Relativistic Heavy Ion Collider (RHIC), which began operations at BNL in 2000.\ldots
+\end{mdframed}
+\vskip 0.5cm
+
+I met Bill Willis for the first time when he stormed into Hagedorn\rq s office with a copy of our first conference manuscript in hand, a CERN preprint~\cite{Hagedorn:1978kc} created in late 1978 (Bill worked at CERN between 1973 and 1990). He was very excited and explained to us that he did not know Hagedorn was interested in colliding relativistic nuclei and that our work was helping his science case to develop this research program at the CERN-ISR (intersecting storage ring).
+
+He was, to the best of my knowledge, the conceptual designer of collider detectors like those we use today. The first one was the AFS: it consisted of a central detector, a cylindrical drift chamber located in an axial magnetic field (hence the name Axial Field Spectrometer = AFS)\label{AFSexp}, entirely surrounded by a calorimeter. AFS became operational at the ISR and carried out the first experiments with light nuclei, $\alpha$-particles, reaching the per-nucleon center of momentum collision energy $\sqrt{S_\mathrm{NN}}=30$\;GeV. 
+
+Bill Willis saw in our work a further justification for a CERN research program in relativistic heavy nuclear collisions at the ISR collider. He believed that a collider experiment at the ISR~\cite{Willis:1981xm} could rapidly explore the dynamic behavior of the new form of matter. However, CERN entering the LEP era had to find funding for the heavy ion research program. There was too little interest in the ISR: the ISR presented a considerable technological detector challenge, which combined with the high cost of collider operation turned out to be an insurmountable obstacle. 
+
+A few explanations are needed, which I give from my personal perspective of this period when CERN was at the crossroads of particle and nuclear physics. The mix of a few CERN employees collaborating with a much larger number of visiting researchers from all over the world created an unusual openness to new ideas, including nuclear collisions utilizing any of the available CERN accelerators. The development of a new research program thus required a focus of interest accompanied by related new funding. This was so since at that time CERN had a specific mission to build the next big machine, the Large $e^+e^-$ Collider (LEP). Any other program needed to find external resources. 
+
+For this reason the costly and technologically challenging ISR program championed by Bill Willis faltered. However, another CERN machine, the SPS (Super Proton Synchrotron), also an injector for the future LEP and later LHC, was offering within the realm of established technologies and existent equipment also the capability of several parallel run experiments. This situation was attracting a large population of researchers and in turn was attracting the necessary additional funding. Beginning with 5 experiments, the research program expanded to 7 large experiments, attracting several hundred external researchers. At the SPS in the fixed target mode the equivalent $\sqrt{s_\mathrm{NN}}=20$\;GeV beams of Sulfur became available in 1987/8. This energy was comparable to that ISR would have made available. 
+
+The approval of the RHI research program was a major effort and it happened due to the decisive actions of two men, Maurice Jacob, who we will meet a few more times in these diaries, who was the CERN Theory Division leader before retirement, and Herwig Schopper, the Director General of CERN in the 80s. The situation is best understood by giving these two personalities their own voices in finding the answer to the often posed question \lq How did CERN decide to develop the heavy ion research program at the SPS while shutting down the ISR?\rq\\
+
+\noindent \textit{Copying from CERN protocols the key elements of the Maurice Jacob presentation on 22 June 1982 to the CERN council, see Chapter 29 in~\cite{Rafelski:2016hnq}, along with the reminiscences of Herwig Schopper in the forward to this volume:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+{\bf Maurice Jacob} speaking for about 90 minutes to the CERN Science Policy Council, and answering questions for 20 minutes on 22 June 1982:\\
+
+\ldots Heavy ion collisions offer the possibility to reach very high densities and very high temperatures over extended domains, many times larger than the size of a single hadron. The energy densities considered are of the order of 0.5 to 1.5 GeV/fm$^3$ and the relevant temperatures are in the 200 MeV range. The great interest of reaching such conditions originates from recent developments in Quantum Chromodynamics, QCD, which make it very plausible that, while color confinement should prevail under standard circumstances, deconfinement should occur at sufficiently high density and (or) sufficiently high temperature.\ldots 
+
+Over an extended volume where the required density or temperature conditions would prevail, one expects that the properties of the physical vacuum would be modified. While the normal vacuum excludes the gluon field, the color-equivalent of the dielectric constant being zero (or practically zero), one would get a new vacuum state where quarks and gluons could propagate while interacting perturbatively. \ldots 
+
+Granting the fact that a thermalized quark-gluon plasma is formed during the collision, it will very rapidly destroy itself through instabilities, expansion and cooling. One should then watch for specific signals which could be associated with its transient (but most interesting) presence. \ldots
+
+Several signals have attracted particular 
+attention.
+\begin{enumerate}
+\item One of them is provided by the prompt photon or lepton pairs radiated (a volume effect!) by the thermalized plasma, \ldots 
+\item 
+Another interesting signal may be provided by strange particles originating in relatively large number from the plasma, once it has reached chemical equilibrium. 
+\item
+There may also be more violent effects, with abnormal density fluctuations in the overall energy flow associated with secondaries. 
+\item
+Size and lifetime could be determined through pion/photon interferometry since each violent event with head on collision could produce pions in the thousands!''
+\end{enumerate} 
+
+\ldots The chairman, {\bf Prof. H. Schopper}, thanked Maurice Jacob for his presentation, and opened the discussion. 
+
+Replying to a question from {\bf Prof. P.T. Matthews}, Maurice Jacob said that the fundamental purpose of heavy-ion collision experiments was to study matter at very high quark densities. \ldots
+
+Replying to questions from {\bf Prof. D.H. Perkins} and the chairman, {\bf Prof. H. Schopper}, Maurice Jacob said that collisions with a projectile with a large atomic number were required because the amount of deposited energy was proportional to the number of nucleons in the incident nucleus. Estimates suggested that, in the most optimistic case of head-on uranium/uranium collisions, energy densities of the order of 2 GeV/fm$^3$ would be obtained, whereas in the case of carbon/uranium collisions, this figure would fall to 1 GeV/fm$^3$. 
+
+Replying to a question from {\bf Prof. E. Amaldi}, Maurice Jacob said that, with regard to the question of the time necessary for the plasma to achieve equilibrium, it was expected that there was a chance that some thermalization would take place at the level of the quarks and the gluons present in the plasma, many collisions having time to take place. \ldots
+
+Replying to a question from {\bf Prof. J. Lefran\c{c}ois}, SPS Experiments Chairman, Maurice Jacob said that at 1 GeV/fm$^3$ the temperature of the plasma would be too low for significant production of charm and beauty particles. 
+
+In reply to a question from {\bf Prof. N. Cabibbo}, Maurice Jacob said that the great merit of the QCD calculation using the lattice over the Hagedorn model was that it made direct exploration of the system possible over and beyond the phase transition, whereas the phenomenological model had been based on a separate study of the two phases. The two approaches were, however, complementary, in many respects. What the experimenters wished to do with heavy-ion collision experiments was to ascertain whether matter existed in a different form beyond the hadron gas.
+
+The chairman, {\bf Prof. H. Schopper}, in conclusion, said it was clear that any discussion of heavy-ion collision experiments raised as many questions as it attempted to resolve. However, before very long the Scientific Policy Committee would have to address itself to the question of heavy-ion collision experiments in a more formal way. \ldots\\
+
+
+\noindent \textit{{\bf Herwig Schopper\rq s}\label{Schopper2014} reminiscences prepared in November 2014 for the forward to Ref.\cite{Rafelski:2016hnq}:}\\
+\ldots in the 1970s and 80s, the study of heavy ion reactions grew out of nuclear physics and eventually became an interdisciplinary field of its own that is presently achieving new peaks. Hagedorn can rightly be considered as one of the founding fathers of this field in which the \lq Hagedorn – temperature\rq\ still plays a vital role. 
+
+\ldots At CERN difficulties arose in the 1980s, because in order to build LEP at a constant and even reduced budget, it became necessary to stop even unique facilities like the ISR collider at CERN. Some physicists considered this an act of vandalism. 
+
+In that general spirit of CERN physics program concentration and focus on LEP it was also proposed to stop the heavy ion work at CERN, and at the least, not to approve the new proposals for using the SPS for this kind of physics. I listened to all the arguments of colleagues in favor and against heavy ions in the SPS. I also remembered the conversations I had had with Hagedorn 15 years earlier. In the end, T. D. Lee\label{SchopperRem} gave me the decisive arguments that this new direction in physics should be part of the CERN programme. He persuaded me because his physics argument sounded convincing and the advice was given by somebody without a direct interest.
+
+I decided that the SPS should be converted so that it could function as a heavy ion accelerator, which unavoidably implied using some resources of CERN. But the LEP construction and related financial constraints made it impossible to provide direct funds for the experiments from the CERN budget. Heavy Ion physicists would have to find the necessary resources from their home bases and to exploit existing equipment at CERN.
+
+This decision was one of the most difficult to take since contrary to the practice at CERN, it was not supported by the competent bodies. However, the reaction of the interested physicists was marvelous and a new age of heavy ion physics started at CERN. \ldots
+
+Since the first steps of Hagedorn and his collaborators, a long path of new insights had to be paved with hard work. The quark-gluon plasma, a new state of matter was at last identified in the year 2000. \ldots\\
+\end{mdframed}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{(Ultra)relativistic heavy ion collisions in USA}\label{sec:RHI-US}
+How did the US get the RHIC project? In Summer 1983 I was invited to lecture at a meeting at Lawrence Berkeley National Laboratory (LBNL). Ten years after Bear Mountain, quarks and gluons could be mentioned in my invited LBNL lecture~\cite{Rafelski:1983im}. This meeting had, aside of the now long forgotten \lq anomalons\rq, the objective of drumming up support for a follow-up to BEVALAC, a heavy ion collider, the VENUS.
+
+VENUS was being designed with a size that fitted into the hillscape at Berkeley. By the landscape accident, the energy was well chosen to create and study quark-gluon plasma. I presented the status of the strangeness observable of QGP. During the lecture I was asked how many strange particles could be seen by their decay per collision. My answer, as I still like to recall, generated explosive laughter in the lecture room.\\
+
+\noindent \textit{The answer is in the proceedings near the end of my paper~\cite{Rafelski:1983im}:}\\[-0.7cm]
+% 
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\ldots we can expect to have several V's (decay signature of K$_s$ and $\Lambda$) per collision, which is 100-1000 times above current observation for Ar-KCl collisions at 1.8\;GeV/Nuc kinetic energy.\\
+\centerline{\resizebox{1.0\textwidth}{!}{\includegraphics{./AllFigs/Exotica1.png}}}
+\textit{The proceedings contents page show two classes of lectures: in chapter \lq High Energy Reactions\rq\ eminent theorists Vesa Ruuskanen and Gordon Baym contribute, and, there is another chapter \lq More or Less Exotica\rq.\label{exotica}}
+\end{mdframed}
+\vskip 0.5cm
+Today we know that at the VENUS design energy the ratio K$^+/\pi^+\simeq 0.18$; hence my answer was correct. In 1983 my talk was placed (see above) in \lq More or Less Exotica\rq\ section of proceedings, rather than \lq High Energy Reactions,\rq\ where related theoretical presentations are seen above. It is good that I shared this fate with another important theoretical contributions, as we see in the contents fragment I present above: \lq\lq Do Light Fermions Destroy the Confinement/Deconfinement Phase Transition?\rq\rq\ by T. A. DeGrand and C.E. DeTar; the answer, we know, is YES. 
+
+The LBNL project VENUS was not approved. The US heavy-ion community was served by a few times larger, and many years longer in construction RHI collider (RHIC) at the Brookhaven National Laboratory (BNL). The BNL laboratory had already built an accelerator ring for the ISABELLE project, a $p$--$p$ collider which was scrapped in view of a changing scientific landscape and technical difficulties. This civil engineering investment was handed over to Nuclear Physics and became the {\bf Re}lativistic {\bf H}eavy {\bf I}on {\bf C}ollider: RHIC. 
+
+While the BEVALAC research program was ending, in preparation for RHIC, at a modest cost, a Heavy Ion low energy tandem accelerator at BNL was connected with a synchrotron, called AGS, and thus other investments made in the past at BNL could be reprogrammed towards a rapid creation of a heavy ion research program capable of higher energy beams compared to the Berkeley BEVALAC. However, these developments also meant that the entire heavy ion research community in the USA had to reorganize, focusing now on the East coast. 
+
+The delay and reorganization also meant that to continue their research efforts during the years of transition from LBNL to BNL, several heavy ions groups moved on. Researchers delegated to LBNL from Germany were soon working at CERN. Moreover, my lecture of 1983 had a lasting impact on the leader of the LBNL heavy ion program, Howel Pugh, see page \pageref{Pugh}. Howel contributed to the rise of strange antibaryon CERN program at CERN in decisive way.
+
+AGS, with its terminal heavy ion per nucleon energy of 10-15$A$\;GeV, about 15 times lower compared to CERN-SPS, was seen as a training ground for RHIC. Also, funds for the heavy-ion experimental program in US became scarce due to the ballooning construction cost of the RHIC collider. Therefore, the AGS research program included low cost searches, but not for QGP. All \lq experts\rq\ believed that the QGP formation threshold would first be breached at RHIC, justifying the large investment made. We turn in a moment to see how, without any good physics reason, this opinion came to be.
+
+I note that AGS started delivering heavy ion beams months ahead of the CERN-SPS. To this day it is hard to tell what exactly was the AGS discovery potential of QGP, since only after 15 years the needed detector equipment became available to look for strange antibaryons. This was just before the AGS experimental program was shut, the results made available were not allowing a convincing evaluation. It is quite possible that AGS could have scooped CERN-SPS in the race for QGP had the circumstances allowed this.
+
+For reasons that are hard to understand from today\rq s perspective, even the CERN-SPS reaction energies were by the standards of the US East Coast theorists not considered high enough. AGS was considered as totally out of the QGP league -- all RHI theorists working within a 100 miles radius of BNL\label{100miles} were advancing the view that only RHIC collider, operating at an order of magnitude higher $\sqrt{s_\mathrm{NN}}$, as compared to SPS, was capable of achieving QGP formation. 
+
+In order to justify this view, those advancing it cited the James Bjorken scaling solution of one-dimensional hydrodynamic flow of relativistic matter~\cite{Bjorken:1982qr} proposed in Summer 1982. Bjorken, in order to illustrate the physics contents of his work, assumed initial dense matter conditions which actually were exceeded at CERN-SPS. However, at SPS \lq Bjorken longitudinal scaling\rq\ was not seen in the experimental results that emerged as early as Spring 1987: the model predicted that at sufficiently high collision energy the distribution of produced final state particles should be a very flat function of rapidity. This result confirmed in the eyes of the RHIC \lq chamber theorists\rq\ that neither AGS nor SPS would be of use in search for QGP; only RHIC had, in their perception, any chance. 
+
+However, the absence of Bjorken rapidity scaling does not mean that there was no quark-gluon plasma formation at SPS in the S--S collisions at the equivalent $\sqrt{s_\mathrm{NN}}=20$\;GeV. Absence of scaling means that this schematic one-dimensional infinite energy hydrodynamic \lq Bjorken\rq\ solution was an irrelevant reaction model at the SPS energy range. This is so since we observe at SPS a very significant stopping of nuclear matter, a phenomenon that continues to be a topic of ongoing research, as is the question how QGP is formed at the relatively low energies available at SPS producing same observational outcome as found at much higher RHIC and CERN-LHC energy range. 
+
+To summarize: The extra money needed for RHIC needed extra time to be \lq printed.\rq\ The additional dozen years that were tacked in the USA onto the new field of physics, the search for QGP, sent, in my opinion, the discovery of quark-gluon plasma to CERN. RHIC started a decade if not more after LBNL-VENUS would have discovered QGP. There was also plenty of time within the BNL-AGS experimental program to search for QGP, another missed opportunity. RHIC was switched on long after the experimental SPS program completed the approved experiments with maximum available energy of the maximum size lead beams, and where the experimental program included many diverse observables, including strangeness and strange antibaryons in duplicate experiments. This is why CERN alone was able to present the experimental evidence for QGP already in 1999 or even earlier, delayed to February 2000, a long time after the scheduled RHIC turn-on. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Was quark-gluon plasma really discovered?}
+\subsubsection{Strangeness is getting ready}
+In the early 80s strangeness as an observable of QGP was shifting from a theoretical idea into the experimental realm, with several experiments coming on line. This research effort was supported in part by an odd couple, the University of Cape Town where I was chair of Theoretical Physics in the pivotal years, see page \pageref{JRVac}, and the CERN-TH Division which often welcomed me. In the pivotal period, 1982-1988, the Director of the Theory Division was Maurice Jacob. Maurice had assumed an important role in steering CERN into the search and discovery of QGP. At the 1988 Quark Matter Conference~\cite{Jacob:1988wt} he addressed the strangeness signature of QGP; these comments are reprinted unchanged several years later in his 1992 book \textit{Quark Structure of Matter}.\\
+
+\noindent\textit{\textbf{Maurice Jacob} speaking at the QM1988 meeting:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\underline{Is strangeness production enhanced?}\\ 
+An enhanced production of strange particles has long been advocated as a signature for the formation of quark-gluon plasma$^{17}$.
+A high temperature and a high chemical potential for non-strange quarks both favor the production of $s\bar s$ pairs and eventually of strange particles, as strange quarks drop out of equilibrium relatively easily. However, there are other ways to produce strange particles and a dense hadronic medium could be enough. 
+\ldots
+Experimental evidence for an enhanced production of strange particles will be one of the big issues at this Conference$^{18}$.
+The production rate of K$^+$ and $\Lambda$ particles is typically twice as large as expected from the mere superposition of nucleon-nucleon collisions. Whether this signals the formation of a quark-gluon plasma is however still unclear (in Fall 1988, JR). In order to draw a conclusion, one would have to have a much tighter control of the strangeness production rate as a function of time. 
+\ldots The clearest experimental test would be an anomalously large production of anti-hyperons which standard hadronic reactions are very unlikely to produce in large numbers. We will probably be left with too little information to draw a conclusion now (Summer 1988, JR), but this conference is likely to open up exciting perspectives on strangeness production. 
+%
+\footnotetext{\vspace*{-0.5cm}
+\begin{itemize}
+\item[17] J. Rafelski, Physics Reports \textbf{88} (1982) 272 
+\item[\phantom{17}] J. Rafelski and B. M\"uller, Phys. Rev. Lett. \textbf{48} (1982) 1066
+\item[\phantom{17}] P. Koch, J. Rafelski and W. Greiner, Phys. Lett. B \textbf{123} 91983) 151
+\item[18] P. Vincent (E802), contribution to this conference
+\item[\phantom{18}] E. Quercigh (WA85), contribution to this conference 
+\item[\phantom{18}] M. Ga\'zdzicki (NA35), contribution to this conference 
+\end{itemize}
+}
+\end{mdframed}
+\vskip 0.5cm
+
+After the QM1988 conference some of the participants joined the Hadronic Matter in Collision 1988 October 6-12 meeting held in Tucson, Arizona~\cite{Carruthers:1989sx}. This smaller meeting complemented the QM1988 meeting by opening up a possible future for the relativistic heavy ion collisions at the planned Superconductive Super Collider (SSC). As a second point of emphasis, it offered a comprehensive coverage of the strangeness signature of quark-gluon plasma.\\
+
+\noindent \textit{\textbf{Berndt M\"uller\rq s} October 1988 verbal remarks on strangeness signature include~\cite{Muller:1988mj}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+%
+\textbf{Strangeness and Quark-Gluon Plasma:}\\ 
+\noindent \underline{1. Abstract:} 
+This rapporteur talk describes theory aspects of strangeness 
+production in QGP and hot HG, with particular emphasis on signatures 
+of QGP formation. 
+
+\noindent \underline{2.1. Enhancement Mechanisms:}
+According to our standard picture the QGP, i.e. the high 
+temperature phase of quantum chromodynamics (QCD), is characterized by\\ 
+- color deconfinement, and\\ 
+- partial restoration of chiral symmetry. \ldots 
+ 
+For both reasons, the production of strange particles
+is expected to be enhanced by the QGP as compared with a 
+thermalized HG, as has been proposed by Rafelski$^1$. The two main ingredients of this argument are: 
+ (a){\it Lower energy threshold:} \ldots\\
+(b) {\it Increased strangeness density:} \ldots\\
+
+\noindent \underline{5. Strangeness as a QGP Signal:}
+\ldots Any hadron ratio, such as K$^+/\pi^+$, $\Lambda/$N, $\Xi/$N, 
+$\bar\Lambda/\Lambda$, $\bar\Xi/\bar\Lambda$ which is 
+{\it much higher than in pp collisions} 
+signals the intermediate presence of a QGP phase, because HG reaction 
+rates (at thermal equilibrium) are too slow to allow for abundant 
+secondary production.\ldots\\
+
+\noindent \underline{6. Conclusions:}
+The first experimental results$^{19,24,25,26}$, which indicate surprisingly high values in particular at central rapidity range for some of the proposed strangeness signals of QGP formation are encouraging. \ldots 
+%
+
+\footnotetext{\vspace*{-0.5cm}
+\begin{itemize}
+\item[\phantom{1}1] Rafelski, J. and Hagedorn, R., in: \textit{Thermodynamics of Quarks and Hadrons,} Satz, H. (ed.),(Amsterdam 1981), p. 253 
+\item[\phantom{11}] Rafelski, J., Phys. Rep. \textbf{88}, 331 (1982)
+\item[19] Steadman, S. et al. (E-802 collaboration), this volume 
+\item[24] Gazdzicki, M. et al. (NA35 collaboration), this volume 
+\item[25] Quercigh, E. et al. (WA85 collaboration), this volume 
+\item[26] Greiner, D. et al. (NA36 collaboration), this volume 
+\end{itemize}
+}
+\end{mdframed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Strangeness in the race for QGP}
+Following on the proposal to consider strangness production in RHI collisions, the first results were reported by Anikina {\it et.al}~\cite{Anikina:1984zh}. The main merit of these DUBNA laboratory (today in Russia) effort was the development of: i) new experimental techniques; and ii) of manpower. \textbf{Marek Ga\'zdzicki,} now spokesperson of NA61 strangeness SPS experiment, started his scientific work with this DUBNA effort, which was followed by his participation in the NA35/NA35/NA49 line of CERN experiments.
+
+The CERN NA35 experiment where Marek Gazdzicki led the analysis group in the early 90s rapidly obtained the results that I was hoping for. However, for a considerable time this large group of researchers disbelieved the implications of their results. At the QM1990 meeting in mid-May 1990 printed 11 months later, the spokesperson of NA35 Reinhard Stock conveys~\cite{Baechler:1991pp} his view about the meaning of NA35 results in the following message:\\
+
+\noindent \textit{\textbf{Reinhard Stock} as speaker at QM1990~\cite{Baechler:1991pp}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\label{StockOAu}
+In a previous NA35 experiment we reported [4] results for central $^{16}$0+Au collisions which did not exhibit spectacular (strangeness) enhancements over the corresponding $p$+Au data. \ldots we have demonstrated a two-fold increase in the relative $s + \bar s$ concentration in central S--S collisions, both as reflected in the $K/\pi$ ratio and in the hyperon multiplicities. A final explanation in terms of reaction dynamics has not been given as of yet.
+%
+\end{mdframed}
+\vskip .5cm
+
+We see that in Summer 1990 and for several years after the NA35 collaboration did not, as a group, introduce the QGP interpretation of their strangeness enhancement results, though they were aware, as unpublished NA35 documents show, of our QGP work. We note further that in the opinion of Reinhard Stock, strangeness enhancement was not present in central $^{16}$0+Au collisions, but was seen in the S--S collisions. The first inkling that the internal NA35 collaboration dynamics was evolving towards a discovery story can be seen in Ref.\,\cite{Bachler:1992js} (available at CERN preprint server in October 1992). \\
+
+\noindent \textit{\textbf{NA35 collaboration}~\cite{Bachler:1992js}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+4. Neither the FRITIOF nor the VENUS model gives a satisfactory description of the full set of the results \ldots\\
+5. S--S data extrapolated to the full phase space show that the observed strangeness enhancement appears mainly as kaon-hyperon pairs which indicates that this enhancement comes from the region of nonzero baryo-chemical potential.
+%
+\end{mdframed}
+\vskip 0.5cm
+However, while NA35 recognizes defects of a few models presenting insights about strangness dynamics, there was no mention of their result relation to the QGP. In this NA35 comprehensive year 1992 report other theories are introduced, but QGP. The mention of QGP appears once in the first sentence of this manuscript: A motivational general comment characterizing all experimental work carried out with heavy ions. 
+
+I am aware that in this time frame the spokesperson, Reinhard Stock, wrote an open letter to his collaboration noting that NA35 strangeness results went unnoticed. The point in the matter was that NA35 did not present a claim that was of consequence in these early years. On the topic of anti-hyperons Reinhard Stock showed preliminary results concerning $\overline{\Lambda}$ for $p_\bot>0.5$\,GeV at the QM1990 Menton meeting, and we find this picture in the NA35 publication~\cite{Bachler:1992js}. A full $4\pi$ result appeared several years later in the Summer 1994~\cite{Alber:1994tz}, and in July 1995 a direct comparison with $p$--$p$ reactions wass made made in a Ph.D. thesis for the first time~\cite{Foka:1995Thesis} (see Figure 8.24, p.271).\\
+
+\noindent \textit{\textbf{Yiota Foka} writes (p.268) in her July 1995 thesis~\cite{Foka:1995Thesis}:} \\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+The enhancement (of $\overline{\Lambda}$) at mid-rapidity is a factor 6 in S-S\ldots strange particle production that is not (due to) a simple superposition of elementary interactions. \\
+\textit{Earlier on anticipating this result in the thesis resume:}\\
+The question if we can conclude that QGP has been observed is the topic of hot debates and this should be considered within the context of many other observables. 
+%
+\end{mdframed}
+\vskip 0.5cm
+
+Dr. Foka worked under the direct supervision of Reinhard Stock and these comments were presumably coordinated with him. The NA35 presented the ratio $ \overline{\Lambda}/ \bar p\lesssim 1.4$ measured near mid-rapidity in Summer 1995~\cite{Alber:1996mq}, showing an enhancement by a factor 3 to 5 dependent on the collision system as compared to a measurement in more elementary reactions. This was the QGP signature/strange antibaryon signature which I proposed~\cite{Rafelski:1980rk,Rafelski:1980fy} in my first strangeness papers in 1980. $ \overline{\Lambda}/ \bar p\ > 1 $ is now well established, see page \pageref{RLam}.
+
+While NA35 was standing at a crossroad not seeing a street sign pointing in the direction of QGP, WA85 sited at the CERN $\Omega\rq$ spectrometer under the leadership of Emanuele Quercigh took the center stage in the QGP search. The WA85 collaboration offered results on: $\Lambda$ and $\bar{\Lambda}$~\cite{Abatzis:1990cm} (available as CERN preprint 18 April 1990); on $\Xi^-$, $\overline{\Xi^-}$~\cite{Abatzis:1990gz} (available as CERN preprint 8 November 1990); and a systematic exploration of QGP characteristic behavior for both~\cite{Abatzis:1991ju} (available as CERN preprint 5 July 1991).\\
+
+\noindent \textit{\textbf{WA85 collaboration:} A firm position in favor of QGP discovery ~\cite{Abatzis:1991ju} in 1991:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+The(se) results indicate that our $\overline{\Xi^-}$ production rate, relative to $\bar{\Lambda}$, is enhanced with respect to pp interactions; this result is difficult to explain in terms of non-QGP models [11] or QGP models with complete hadronization dynamics [12]. We note, however, that sudden hadronization from QGP near equilibrium could reproduce this enhancement [2].
+%
+\end{mdframed}
+\vskip 0.5cm
+
+Ref.\,[2] mentioned above is my work~\cite{Rafelski:1991rh} published in March 1991, where I invented the SHM model as an interpretative tool of experimental results. We see that at least for a year after WA85 took firmly the position that its strangeness results are QGP driven.
+
+The WA85 (200 GeV$A$ beam S on S), and WA94 (200 GeV$A$ beam S on W) reported speedily and in definitive manner their perplexing strangeness, hyperon and in particular anti-hyperon results, giving all these results a QGP discovery interpretation as early as 1990/91. The WA85/94, focused on the more QGP characteristic multi-strange hadron ratios, for $ \overline{\Xi}/\overline{\Lambda}$ see the 1993 review~\cite{Evans:1994sg}. A full summary of all results is seen in the review of \textbf{Federico Antinori} of 1997~\cite{Antinori:1997nn} presented in Ref.\cite{Omega25y}, see \rf{SigLamCERNFig} on page \pageref{SigLamCERNFig}, with data referring to the WA85/94 reports presented at the January 1995 Quark Matter meeting~\cite{DiBari:1995cy,Kinson:1995cz}. 
+
+We conclude: The new phase of matter reported in February 2000 (see Section~\ref{CERN2000} below) was discovered by the end of 1995, before the arrival of the Pb-beam at CERN SPS (and the new experiment names evolved into NA35/35II/NA49 and WA85/94/97). The Pb--Pb collisions provided the control showing that the sizes of S--S and S--W collision fireball were sufficient. In their writings WA85/WA94 were clear all the time in regard to the QGP interpretation of their results. 
+
+%%%%%%%%%%%%%%%%%%%%% 
+\subsubsection{Particles from a hot fireball}\label{findingQGP}
+A first theoretical analysis of the experimental particle production in RHI collisions experiment, focused on strangeness, became possible in late 1990. I presented these results at the February 1991 week-long workshop at CERN; they were published soon after~\cite{Rafelski:1991rh}. In this work, WA85/94 strange baryon and antibaryon particle production data for S--W collisions were used to determine the \lq chemical\rq\ properties of the fireball particle source, {\it i.e.} the chemical potentials $\mu_i$ and phase space occupancy $\gamma_i$. 
+
+An important feature of these results was that despite a large observed baryon number presence in the particle source, the transverse momentum spectra for hyperons (and Kaons) predicted the shape of the pertinent anti-particles. This meant that the hadronization; that is, the particle formation process, was sufficiently fast and occurred late when particle density was low, preventing (partial) elimination by rescattering and annihilation of the low $p_\bot$ anti-particle yield. This motivated the use and further development of the sudden hadronization description of these results. The total particle ratios we study today are independent of the explosive matter flow dynamics. However, in 1990/91 results did not include all transverse momentum $p_\bot$ yields. Thus the focus at the time was on particle ratios rather than yields, evaluated for high range of $p_\bot$.
+
+This work marked the beginning of the development of the statistical hadronization model (SHM), the present day \lq gold\rq\ standard in the study of the hadronization of QGP. In collaboration with my friend Jean Letessier, the full model including the decaying resonances, was completed, allowing many analysis results to be published in 1993/94.\\
+ 
+\noindent {\it A few words from the abstract and conclusion of the February 1991 SHM analysis Ref.\cite{Rafelski:1991rh}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]
+\relax
+%
+Experimental results on strange anti-baryon production in nuclear S--W collisions at $200\;A$\,GeV are described in terms of a simple model of an explosively disintegrating quark-gluon plasma (QGP). \ldots We have presented here a method and provided a wealth of detailed predictions, which may be employed to study the evidence for the QGP origin of high $p_\bot$ strange baryons and anti-baryons.
+%
+\end{mdframed}
+%\vskip 0.5cm
+
+Today, we can say that with this 1990/91 analysis method and the WA85 results and claims of the period, QGP was already unmasked. More on this is also seen in a popular review I presented with the spokesman of WA85 Emanuele Quercigh shortly after the CERN announced (February 2000) QGP discovery, see Ref.\,\cite{Quercigh:2000nwx}\\
+
+\noindent{\it Our abstract of June 2000 reads~\cite{Quercigh:2000nwx}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]
+\relax
+%
+Laboratory experiments have recreated the conditions that existed in the early universe before the quarks and gluons created in the Big Bang had formed the protons and neutrons that make up the world today
+%
+\end{mdframed}
+%\vskip 0.5cm
+
+Back to the timeline: Seeing the strangeness-WA85/WA94 CERN experiment analysis of early 90s, Marek Ga\'zdzicki from NA35 lobbied me with an inviting remark that continues to reverberate in my memory, \lq\lq \ldots would it not be nice to also apply these methods to other experiments?\rq\rq\ We began the discussion of the data available in NA35. However, I needed more data for the rudimentary SHM to be useful; NA35 was using a photographic method based on hand selected handful of events from a streamer chamber device. Analysis was a time intensive process with human biases, and for most central head-on hits on havy nuclei (central collisions), when particle track density on the photograph was high, this approach was in addition inefficient. 
+
+On this note: The (anti)hyperon experiment NA36 at the time used pioneering time projection chamber (TPC) technology. However, it became mired in technical difficulties and did not deliver the hoped-for results before losing institutional support.
+
+Back to the effort to analyze NA35 data: Marek\rq s and my initial objective, the confirmation data analysis study of the equivalent to WA85 S-Pb reactions, was not possible. However, we soon realized that the lighter collision system S--S experimental results were both sufficiently precise and rich in particles considered, and therefore could be analyzed. Our discussions resulted in an analysis publication of the NA35 S--S $200 A$ GeV collision results~\cite{Sollfrank:1993wn} (submitted in August 1993). Our effort was helped by a young student, \textbf{Josef Sollfrank} from Regensburg, see \rss{ss:SHARE}, introduced to us by his thesis advisor, \textbf{Ulrich Heinz}\label{UHentro}, whose own contribution to the contents of the draft manuscript was the removal of every mention of quark-gluon plasma. \\
+
+\noindent{\it We thus read in the conclusions~\cite{Sollfrank:1993wn}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]
+\relax
+%
+This (result of analysis, JR) agrees with the notion of common chemical and thermal freeze-out following explosive disintegration of a high entropy source,\ldots
+%
+\end{mdframed}
+%\vskip 0.5cm
+Here read QGP=high entropy source, and see the related manuscript~\cite{Letessier:1992xd} of September 1992.
+
+Just like the earlier WA85 analysis~\cite{Rafelski:1991rh}, this follow-up of the NA35 S--S $200 A$ GeV analysis was fully consistent with our predictions about strangeness production in QGP. At the time NA35 did not have multi-strange particles, which I always viewed to be the unique QGP signature, thus not easily subject to reinterpretation. In Fall 1992, when this work was prepared, multi-strange (anti)hyperon results were alone in the hands of the WA85/94 experiment. 
+
+The following 25 months saw stormy and rapid development of both the experimental results and the related data analysis employing the evolving SHM model. In early 1995 strangeness enthusiasts celebrated the discovery of the QGP, a new phase of matter at a meeting in Tucson~\cite{Rafelski:1995zq}. If I had my present day experience and gravitas I would have staged a press event to announce the discovery of QGP at that event. The series of meeting initiated in Tucson continued, see Refs. \cite{Rafelski:1995zq,S96,SQM97}, and so on to this day.
+
+Here is the reason why I should have announced in the January 1995 QGP discovery:\label{SQM95an} The anti-hyperon results from S--S and S-Pb collisions, obtained at the $\Omega$\rq-spectro\-meter by CERN experiments WA85 and WA94 are seen in \rf{SigLamCERNFig}. We note that across all reaction systems the predicted enhancement growing with the size of collision system and (anti)strangeness content was observed, in \rf{SigLamCERNFig} AFS (see page \pageref{AFSexp}) stands for Axial Field Spectrometer $p$-$p$ experiment at the ISR collider that provides for RHI collision result the baseline, supported by $p$-S and $p$-W results. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\includegraphics[width=0.66\columnwidth]{./AllFigs/OmegaSpectrXiLam.png}
+\caption{Results obtained at the CERN-SPS $\Omega\rq$-spectrometer for $\Xi/\Lambda$-ratio in fixed target S--S and S-Pb at 200\,$A$\,GeV/$c$; results from the compilation presented in Ref.\cite{Omega25y}}\label{SigLamCERNFig}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+While the results in \rf{SigLamCERNFig} were compiled for the $\Omega$\rq-spectro\-meter March 19, 1997~\cite{Omega25y} 25th anniversary celebrations, they were for all to see before. To this day there is only one explanation of the large $\overline{\Xi}/\overline{\Lambda}$ ratio: {\bf quark recombinant sudden hadronization of QGP}, see Section~\ref{sec:highPT}. This model was proposed in Ref.\cite{Koch:1986ud} in 1986, and used in my following work since.
+
+With arrival of the Pb--Pb collisions the WA85/94 experiment was redesignated WA97 (and evolved with new technologies into NA57 moving to CERN North Area when LHC beam preparations were underway). The first results from Pb--Pb collisions were reported by WA97 in December 1997 at the QM1997 conferencce~\cite{QM97}, see \rf{RSS}. We see that the enhanced $\overline{\Xi}/\overline{\Lambda}$ ratio is confirmed. The reference horizontal dashed line based on CLEO, MARKII, HSR, TPC, TASSO, UA5, and AFS experiments with collisions of $e^+$-$e^-$ and $p$-$\bar p$ is symmetric between matter and antimatter. The RHI collision data now includes NA35/NA35/NA49 results as well.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\includegraphics[width=0.66\columnwidth]{./AllFigs/1997Fig1.png}
+\caption{
+Sample of World results for strange (anti)baryon ratios available by the end of 1997 (as a \lq function\rq\ of experiment name). Dark squares: first 1997 Pb--Pb WA97 results announced in December 1997 Tsukuba Quark Matter conference~\cite{QM97} \label{RSS}
+}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The important further experimental development, in my opinion triggering the CERN February 2000 announcement (see next section), was the measurement of more than an order of magnitude $\Omega(sss)+\overline\Omega(\bar s\bar s\bar s)$ production enhancement in Pb--Pb collisions by WA97 (and confirmed by NA57 collaboration, we return to these results, see page \pageref{fig:NA57}). 
+
+In the following years the theory evolved as well, allowing by means of SHM analysis the understanding how the QGP bulk properties depended on the size of the interaction volume. However, the process of theory testing has also set in, creating transient disarray. In the process one usually sees proposals aiming to explain within a new framework a subset of the experimental results. The reader should remember:
+\begin{itemize}
+\item
+Enrico Fermi\rq s words: \lq the most beautiful theory is proven wrong by just one experimental result\rq.
+\item 
+New ideas put forward after the data is known must await controle experiments. 
+\end{itemize}
+This has of course been now done for QGP strangeness signature in several iterations and I intentionally do not review here \lq exotic\rq\ ideas where in the end at least one relevant data set must be excluded from analysis in order to keep this idea afloat. 
+
+In the process of theory verification there is yet another complication that can occur, an error that another group can make in data analysis. I illustrate this problem  by looking at the discovery of full flavor chemical non-equilibrium among produced hadrons: In mid-1998 \textbf{Jean Letessier} and I recognized that the more complete S-W results available at that time would be better described allowing for all quark flavors in the hadron phase that emerges from the QGP fireball chemical nonequilirbrium 
+
+This means that not only strange, but also light $u,d$ quark (and antiquark) yields~\cite{Letessier:1998sz} may, at the time of chemical freeze-out, need to be fitted allowing for a non-equilibrium parameter. When we speak of quarks in hadron phase we refer here to the count of valence quarks in all produced hadrons. Such a situation would be expected even if on the \lq other side\rq\ in the QGP complete chemical equilibrium prevailed. This is so since the size of the phase space differs comparing two differently structured phases. 
+
+The reason that this idea did not enter into earlier consideration was that one expects a light quark yield to adjust more easily to chemical equilibrium. However, the equilibrium result should be an outcome of an analysis and not an input. Since the wealth of experimental data increased we attempted this test. The result was astonishing to us but there was no doubt.
+
+We expected that the rest of the world would follow, applying our new insight which emerged generalizing the accepted strange quark yield (chemical) nonequilibrium model. I recall vividly a comment by Sollfrank who helped in the NA35 S-S data analysis, see page \pageref{UHentro}, and now was with another theory group: \lq We cannot fit the data your way, our fits become unstable when we allow full (chemical) nonequilibrium\rq. The reason slowly emerged: the numerical analysis programs used by other groups were not easily adaptable, and/or some had bugs which were innocent in one case but grossly disruptive in another. 
+
+Sometimes one can see the error with naked eyes, see \rf{PBMletter}. I believe that in Heidelberg the assistant writing the analysis code did not know that for historical reasons the strangeness of a baryon is \emph{negative}. The leader of the analysis group checked and confirmed by return fax, concluding \lq our error does not matter.\rq\ What he was saying, and I agree, was that within the realm of this particular publication given the precision of experimental results it indeed did not matter if strangeness of hyperons is negative, as it should be, or positive as it was apparently used.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]
+\includegraphics[width=\columnwidth]{./AllFigs/2002PBMErrorShort.png}
+\caption{
+A FAX alert of an analyzis error, see text \label{PBMletter}
+}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+However, the admitted error does matter in other ways. Once corrected, meaning all baryons are included with negative strangeness, the group would realize just as we did that the full nonequilibrium fit would produce a more significant description of the SPS and RHIC data available. Moreover, the value $T=174$\,MeV of the freeze-out temperature reported, was as we know today entirely wrong and it distracted for years from the reality that the fitted Temperature should be below $T=150$\,MeV. We return to this matter in \rss{ss:SHARE}; note that this fit corresponds to the second most aberrant value of $T$ which we will meet in this discussion in \rf{TEcol}. So at least for this one case we know the cause. 
+
+Jumping ahead, we found funding to create the SHARE project, see \rss{ss:SHARE}, which provided a standarized SHM program. One could think that this would resolve the errors theory students can make when working with little supervision among experimentalists. This expectation turned out to be unrealistic. After a few years the computer programming problem returned with a wrong SHM method being used again. This time it was how SHM was incorporated into the widely used CERN ROOT platform discussed in \rss{ss:SHARE}. 
+
+To conclude, the study of QGP in terms of strangness and strange antibaryons has suffered from \lq beyond the call of duty\rq\ scrutiny Theoretical studies to explore alternative explanations were using incomplete data sets. Analysis programs used unverified numerical approaches.
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The CERN February 2000 announcement}\label{CERN2000}
+
+By the end of the last century, towards the end of the SPS Pb-Pb run, experimental results demonstrated that the enhanced production of strange antibaryon is the same irrespective of colliding systems and the collision energy as long as the size and lifespan of the fireball is tuned to assure that the fireball of matter is created in comparable conditions. It took two years after the Tsukuba conference~\cite{QM97} in December 1997 for CERN to reach consensus and to announce the evidence for QGP formation in the context of SPS relativistic collisions at a press conference~\cite{CERNPress} held on 10 February, 2000.\\
+
+\noindent \textit{In an interview~\cite{MaianiInterview} in January 2017 with \textbf{Luciano Maiani}, Director General of CERN from 1999 to 2003 we read:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\vskip 0.0cm
+\hspace*{0.4cm} \textbf{Virginia Greco:} But the public announcement \textit{(you made in February 2000 as CERN DG, JR)\/} was cautious, wasn\rq t it? Was there still some doubt?
+
+\textbf{Luciano Maiani:} I think that the announcement was quite clear. I have the text of it with me, it reads: \lq\lq The data provide evidence for color deconfinement in the early collision stage and for a collective explosion of the collision fireball in its late stages. The new state of matter exhibits many of the characteristic features of the theoretically predicted Quark-Gluon Plasma.\rq\rq\ The key word is \lq\lq evidence,\rq\rq\ not discovery, and the evidence was there, indeed.\ldots
+
+\textbf{Virginia Greco:} The announcement came just a few months before the start of the programme of RHIC. Were there some polemics about this \lq\lq timing?\rq\rq\
+
+\textbf{Luciano Maiani:} We were almost at the conclusion of a long and accurate experimental programme at the SPS, so making a summing up was needed. In addition, as I said, we thought there were the elements for a public announcement. And this has been proved right by later experiments.\ldots
+%
+\end{mdframed}
+%\vskip 0.5cm
+
+Reading these remarks I recall the RHIC timeline: the first physics Au-Au collisions at RHIC were recorded in June 2000, see for example Ref.\cite{Back:2000gw}. However, this happened after a long RHIC commissioning. Some readers could recall that the start-up difficulties of RHIC delayed the Quark Matter conference to mid January 2001; The organizers moved the meeting from the prior agreed to a nine-month later date in 2001. At this meeting Gordon Baym presented his view, see also page \pageref{BearMountain}, on the history how RHIC came to be.
+
+During the long commissioning period of RHIC I heard that it was possible RHIC could never deliver Au-Au collisions. Some even suggested RHIC could be abandoned, a failed project. At that time it seemed wise for CERN to move towards QGP annoucement supporting this research program. Had the RHIC start-up been on schedule, perhaps a common BNL-CERN announcement could be made. 
+
+Recalling this environment it is evident that CERN was coasting on its own inertia towards the QGP announcement, perhaps also aiming to strengthen the reseach field in the process. This announcement also, as Luciano Maiani explained, was set after the experiments exploring the full reach of SPS were complete. This also emerges reading the detailed timelineof the activities at CERN reported in 2008~\cite{Heinz:2008ds}.\\
+
+Let us now look at some of the context of the CERN announcement:
+
+\noindent \textit{Maurice Jacob before Pb--Pb CERN-SPS run was underway had set up in Summer 1996 his views in a conference report (submitted for publication on 22 July 1996)~\cite{Jacob:1991pb}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\textbf{The quest for the quark-gluon plasma}\label{Jacob1996}\\
+{\bf Abstract:} Heavy-Ion Collisions at very high energy offer conditions such that QGP could be formed. \ldots New rounds of tests using the heaviest ions \ldots are proceeding. The present situation is assessed.\\
+
+ \textbf{p4952:}\\ 
+ \indent We can now look for signals\ldots J/$\Psi$ suppression has been observed \ldots\ \lq fac\-tor of two\rq\ effect \ldots one could not refrain from attempting to explain it differently \ldots evidence for \ldots very dense system \ldots evidence for something new.\ldots\\
+
+Strangeness enhancement has long been advocated by Rafelski as evidence for (QGP)\ldots again typically a \lq factor of two\rq\ effect \ldots This is nevertheless \ldots tool to probe further, studying in particular the production of strange antibaryons. \ldots Much should be learned in that case from the increase in volume associated with lead beams.\\
+
+\noindent {\bf Conclusions:}\\
+\indent Exciting signals have been seen. The prominent ones are offered by quarkonium, \ldots strangeness production with enhancement seen \ldots information provided by interferometry\ldots There is no doubt that a new state of matter, with density of at least an order of magnitude higher than hadronic matter, is created. \ldots we have good proven tools now at hand, we can expect much from an increase in volume\ldots
+%
+\end{mdframed}
+%\vskip 0.5cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent \textit{CERN document prepared for the CERN QGP February 2000 event~\cite{Heinz:2000ba} is quoted in Ref.\cite{Heinz:2008ds} as follows:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\label{CERN2000} \ldots compelling evidence now exists for the formation of a new state of matter at energy densities about 20 times larger than that in the center of atomic nuclei and temperatures about 100\,000 times higher than in the center of the sun. This state exhibits characteristic properties which cannot be understood with conventional hadronic dynamics but which are consistent with expectations from the formation of a state of matter in which quarks and gluons no longer feel the constraints of color confinement.
+\end{mdframed}
+\vskip 0.5cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This document was coordinated and prepared by by Maurice Jacob and also signed by a CERN theorist,  mentioned earlier in the context of our collaboration on S-S NA35 data analysis, see page \pageref{UHentro}. The second author gives his personal assesement in Summer 2000:\\
+
+\noindent \textit{The following remarks arXiv\rq ed September 2000~\cite{Heinz:2000ba} were presented at the 7th International Conference on Nucleus-Nucleus Collisions (NN 2000) 3-7 July 2000 in Strasbourg, France:}\\[-0.7cm]
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\label{Heinz2000} \ldots what is missing to claim \lq\lq discovery\rq\rq\ of the quark-gluon plasma? \\
+1st: on the theoretical side, we only know that with known hadronic physics we can not describe the data, but \ldots description of strongly interacting matter and its dynamics in the neighborhood
+of the phase transition is an exceedingly difficult problem \ldots \lq\lq new physics\rq\rq\ has so far not received enough careful theoretical attention \\
+\ldots important experimental questions which can be answered at the SPS (and in a few cases only there) are: Assuming that we have seen quark deconfinement, where is its energy threshold? How big does the collision system have to be to establish approximate thermal equilibrium and strangeness saturation and to exhibit collective flow? \\
+\ldots Some answers will be provided by data already collected at lower beam energies and with smaller nuclei and more peripheral collisions.\ldots\\
+ A detailed characterization of the \lq\lq new state of matter\rq\rq\ will only be possible when the larger initial energy densities and resulting longer plasma lifetimes before hadronization provided by RHIC and LHC become available. 
+%
+\end{mdframed}
+\vskip 0.5cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+These words were spoken by the only member of the CERN Theory Division (TH) conducting research in the field of relativistic heavy ion collisions  after Maurice Jacob\rq s retirement April 1998. I interpret these demands as follows:
+\begin{enumerate}
+\item 
+More theory to build on the 20 years 1980-2000 effort: I believe that  the need for a framework to explore the quark matter flow, a topic very important to the Frankfurt school of \textbf{Walter Greiner} was here in play. The nuclear matter bounce now referred to as $v_1$ was the trademark of \textbf{Horst St\"ocker}, and there was the opportunity to study the azimuthal flow $v_2$  characterizing the transverse fireball matter explosive flow, introduced as early as 1992 in the Ph.D. thesis of \textbf{Jean-Yves Ollitrault}\cite{Ollitrault:1992bk} from Paris.
+\item
+More experimental verification at SPS of the CERN evidence for QGP: After the CERN announcement the strangeness SPS-QGP research program was indeed continued with experiments NA57, and NA61.
+\item  The verification of CERN results at the RHIC collider: this effort was delayed by a decade due to the \lq 100 mile BNL horizon group of theorists\rq\ conviction that CERN results were unworthy of confirmation, for more details see next quote. 
+\end{enumerate}
+
+From the above we can clearly learn that this author  does not know if CERN did or not make a discovery. Moreovr, he presents in 2008 an eulogy on Maurice Jacob~\cite{Heinz:2000ba} -- for a eulogy, the contents is unusually critical of the seminal role of Maurice Jacob in the QGP discovery.  
+
+In 1999 I was observing QGP discussions at CERN mostly from afar. However, I am sure in view of (mostly phone) interactions  see Sec.\ref{PRL2000}, that there was this  one profoundly negative voice working against CERN announcing the QGP discovery. This maybe indeed the reason why the Director General of CERN called on an already retired Maurice Jacob in early 1999 to help advance the QGP discovery announcement. 
+
+Nearly 20 years later we find another retrospective view on the QGP discovery at CERN. It is convenient that the UniReport, a periodic of the J.W.v. Goethe University, Frankfurt, published a feature containing a transcript of a conversation  that directly relates to this matter. This article was triggered by a research visit in Frankfurt in the Summer/Fall 2019 and is signed by \href{http://www.muk.uni-frankfurt.de/36152080/anne_hardy}{Dr Anne Hardy}, a communication director at University Frankfurt, who specialized in Physics.\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textit{In Frankfurt JWGoethe University UniReport of July 11, 2019 (No. 4 issue) p.6, an article entitled\footnote{Original: Als das Universum die Gr\"o\ss e einer Melona hatte} \textit{Looking back at the Universe the Size of a Melon} we read\footnote{German: \lq\lq Man hatte bereits Mitte der 1990er Jahren Hinweise f\"ur das Quark-Gluon-Plasma in Schwerionen-Experimenten am CERN und auch am Brookhaven National Laboratory gefunden\lq\lq, erkl\"art Heinz. \lq\lq Aber wir waren damals, aufgrund der noch etwas fragmentarischen Datenlage, in unseren Schlussfolgerungen sehr vorsichtig. R\"uckblickend wissen wir, dass wir zu vorsichtig waren.\rq\rq\ Das stellte sich heraus, nachdem vor etwa 10 Jahren am RHIC Sto\ss experimente auch bei niedrigeren Energien durchgef\"uhrt wurden, um die \"alteren Experimente am CERN-SPS (Super Proton Synchrotron) zu \"uberpr\"ufen und weiter zu verbessern. \lq\lq Eigentlich hoffte man mit dieser Prozedur das Quark-Gluon Plasma kontrolliert abzuschalten, aber dieser Versuch misslang. Auch bei SPS-Energien zeige es immer noch seine (in den nun viel umfangreicheren Datens\"atzen unmissverst\"andlichen) 
+Signaturen\,!\rq\rq, so Heinz.}:}%\\[-0.7cm] << RESTORE IF ROLL TO NEXT PAGE
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+{\bf Heinz explains:}\label{Heinz2019} Already in the mid-90s there was some indication for quark-gluon plasma in heavy ion experiments at CERN and at Brookhaven National Laboratory. However, I was at that time due to fragmentary data very cautious. In hindsight I know my position was too cautious.\\ 
+{\it \textbf{Anne Hardy:} This insight surfaced when about 10 years ago lower-energy collider experiments were performed at RHIC to test and further improve the older experiments at the CERN-SPS (Super Proton Synchrotron).}\\
+{\bf Heinz continues:} Actually, I hoped that this procedure would switch off the quark-gluon plasma in a controlled manner, but this attempt failed. Also at SPS energies there are in the now much more extensive data records unmistakable signatures (of the QGP formation, JR).
+%
+\end{mdframed}
+%\vskip 0.5cm
+
+In the above translation I interpreted the so called royal \lq we\rq\ as \lq I, my\rq\ given that he comments on his own position in regard to the CERN QGP announcement of February 2000. We note that he is referring to \lq fragmentary results\rq\ at CERN. This wording is a mystery to me: I presented strange antibaryons results aboved; they were in my opinion not fragmentary. Nothing changed in these results in the following 20 years -- many more results were obtained corroborating these.
+
+The phenomenon called \lq reflection\rq\ maybe at the origin of the use of the words \lq fragmentary\rq: This researchers work on QGP was at that time of CERN QGP announcement just that.  This was so since he joined this field relatively late, driven into this research area by the NATO collaborative grant with me, see page \pageref{NATOfun}. 
+
+In the book \textit{Quark-Gluon Plasma: Theoretical Foundations -- An Annoted Reprint Collection} prepard in 2002/ by Berndt M\"uller, \textbf{Joseph Kapusta} and myself~\cite{Rafelski:2003zz} one does not encounter a work by Heinz: This book introduces the theoretical roots of QGP with a time cut-off in 1992. The rationale of the authors was to look more than 10 years back in 2002/3, since in 1992 QGP was already discovered but recognized only by a small subset of researchers, see Sec.~\ref{findingQGP}. This 2002/3 volume celebrates 10 years of QGP discovery, unofficially, of course.
+
+To conclude: As the Summer 2019 conversation in Frankfurt shows, the one strong CERN voice  against the discovery announced by CERN in February 2000 evolves. We see  \lq mea-culpa\rq\ words, and recognition that CERN discovered QGP at the SPS energy range. This co-author of the February 2000 CERN announcement, who opposed it in the following months and years finally realized his mistake. In my interpretation of these words only when RHIC reduced the collision energy to the CERN-SPS domain, and was connecting the strangeness signatures for QGP previously seen at CERN with the nearly ideal matter (quark) flow now measured at RHIC, he became convinced that SPS had indeed discovered QGP many years earlier. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{SQM2000 Meeting in Berkeley}\label{Berk2000}
+
+The first  SQM meeting  after the CERN announcement took place in late July at Berkeley, see picture on page \pageref{SQM2000Group}.  My written summary~\cite{Rafelski:2001rj}   was received on November 2, 2000 -- due to personal events, recognized on the front page an arXive version of this work does not exist. In this short summary, I pointed out the  need to work in support of the CERN QGP announcement, which was primarily carried by the strangeness results. 
+
+I then introduced the important results obtained now to a great precision by the WA97 collaboration~\cite{Antinori:2000sb} very shortly before the CERN announcement shown in \rf{fig:WA97Spectra}, also presented at the meeting~\cite{Antinori:2001qk}. We note that the transverse slopes for the four collision centralities considered, and the four particles $\Lambda(uds)$, $\overline\Lambda(\bar u\bar d\bar s)$, $\Xi^-(dss)$, and $\overline\Xi^+(\bar d\bar s\bar s)$ are the same. This means that the production mechanism of these particles is the same,  independent to a large degree of the quark content or  matter-antimatter nature of these particles. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}\sidecaption
+\centerline{
+\includegraphics[width=0.75\textwidth]{./AllFigs/WA97TransverseLXSlop.png}
+}
+\caption{The final Pb--Pb results for hyperon spectra by WA97 adapted from~\cite{Antinori:2000sb} 
+}
+\label{fig:WA97Spectra}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This result was  direct evidence for an exploding fireball source. The  light and strange quarks and antiquarks participated in the same fashion in the formation of these particles. No rescattering after formation was visible, as the spectra of antimatter particles were just like those of matter and these particles were born in relatively baryon rich environment. These remarks were confirmeed in a more detailed study~\cite{Torrieri:2000xi} arXived a few months later. \textbf{Giorgio Torrieri}, who had just started his Ph.D. program in Tucson, demonstrated the single freeze-out of hadrons: thermal and chemical decoupling was found at the same temperature near to $T=140$ MeV, with the speed of expansion near $v_f=0.55c$, this study included all other particles presented by the WA97 collaboration, omitted  in \rf{fig:WA97Spectra}.
+
+A   thorough least-square deviation fit analysis  was carried out by Wojtek Broniowski and Wojtek Florkowski~\cite{Broniowski:2001uk}. They also invented the appropriate name \lq single freeze-out model\rq.
+
+
+
+\noindent{\it In conclusion we read~\cite{Rafelski:2001rj}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]
+\relax
+%
+I believe that the diligent work of CERN experimental collaborations such as WA97
+and NA49 regarding hadronic and, in particular, strange particle production has clearly demonstrated the formation of a new state of matter. Considering that the results obtained are in agreement with the predictions made some 20 years ago, and the current analysis of experimental results, there is good reason to believe that this new phase is most probably the quark–gluon plasma. However, \textbf{some of the qualitative theoretical arguments} put forward in the (CERN) consensus report  are deeply flawed and thus obstruct the development of an understanding of the experimental results.  
+%
+\end{mdframed}
+\vskip 0.5cm
+
+One must see here the word  \lq flawed\rq: some of the presented  arguments were  conflicting  with the model of a fireball of QGP hadronizing out of chemical equilibrium, a reaction picture as clearly favored then and now by these original and beautiful WA97 experimental results. These flowed qualitative theoretical arguments are further discussed in Sec.\ref{PRL2000}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{BNL announces ideal flow}\label{ssec:flow}
+At the April 2005 meeting of the American Physical Society, held in Tampa, Florida, a press conference took place on Monday, April 18, 9:00 local time. At this event I made a few amateur pictures, a sample is shown below, probably the only photographic record of the event.\\
+
+\noindent \textit{The \textbf{BNL public announcement} of this event was available as of April 4, 2005:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\textbf{Evidence for a new type of nuclear matter:}\label{RHIC2005}
+At the Relativistic Heavy Ion Collider (RHIC) at Brookhaven National Lab (BNL), two beams of gold atoms are smashed together, the goal being to recreate the conditions thought to have prevailed in the universe only a few microseconds after the big bang, so that novel forms of nuclear matter can be studied. At this press conference, RHIC scientists will sum up all they have learned from several years of observing the world’s most energetic collisions of atomic nuclei. The four experimental groups operating at RHIC will present a consolidated, surprising, exciting new interpretation of their data. Speakers will include: Dennis Kovar, Associate Director, Office of Nuclear Physics, U.S. Department of Energy's Office of Science; Sam Aronson, Associate Laboratory Director for High Energy and Nuclear Physics, Brookhaven National Laboratory. Also on hand to discuss RHIC results and implications will be: Praveen Chaudhari, Director, Brookhaven National Laboratory; representatives of the four experimental collaborations at the Relativistic Heavy Ion Collider; and several theoretical physicists.\\
+
+\centerline{\includegraphics[width=1.0\textwidth]{./AllFigs/BNLPressConfTampa5.jpg}}
+\vskip-35pt\phantom{.}\hfil {\color{yellow}{\small Photo: J. Rafelski\hspace*{1cm}}}\\
+\centerline{\includegraphics[width=1.0\textwidth]{./AllFigs/BNLRHICPressRoom4.jpg}}
+\vskip-24pt\phantom{.}\hfil{\color{yellow}{\small Photo: J. Rafelski}}\\
+\end{mdframed}
+\vskip 0.5cm
+
+I cannot recall at this announcement any mention of the five year earlier CERN presentation of the QGP discovery. Nor do we see in the above pictures the theorist critical of CERN who since moved to USA: this I cannot understand easily as much of the BNL discovery is today claimed by Heinz to be his doing. Akin to the CERN press release of February 2000, the BNL press announcement speaks of \lq a new type of nuclear matter\rq\ (compare to CERN\rq s \lq new state of matter\rq). The participants at this event received a \textit{Hunting for Quark-Gluon Plasma} report introducing the four BNL experiments operating at the time: BRAHMS, PHOBOS, PHENIX, and STAR, which reported on BNL results obtained since Summer 2000. These four experimental reports were later published in an issue of Nuclear Physics A~\cite{Arsene:2004faB,Adcox:2004mhB,Back:2004jeB,Adams:2005dqB}. We note that the report title does not say \textit{Discovery of Quark-Gluon Plasma}. So what was discovered? There was a retrospective review of this situation at BNL:\\ 
+
+\noindent \textit{At the RHIC Users' Meeting June 9-12, 2015 a 10 year anniversary session \lq\lq The Perfect Liquid at RHIC: 10 Years of Discovery\rq\rq\ was held, \href{https://www.bnl.gov/newsroom/news.php?a=25756}{the press release of June 26, 2015 says}:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\lq\lq RHIC lets us look back at matter as it existed throughout our universe at the dawn of time, before QGP cooled and formed matter as we know it,\rq\rq\ said Berndt Mueller, Brookhaven\rq s Associate Laboratory Director for Nuclear and Particle Physics. \lq\lq The discovery of the perfect liquid was a turning point in physics, and now, 10 years later, RHIC has revealed a wealth of information about this remarkable substance, which we now know to be a QGP, and is more capable than ever of measuring its most subtle and fundamental properties.
+\end{mdframed}
+
+The press notice of 2015 says that BNL in 2005 was reporting a single specific property of a new form of nuclear matter, which could have been Lee-Wick matter, see Sec.~\ref{sssec:dense}. However, the BNL actors decided in 2015, it was QGP. The obvious questions here are:\\
+\begin{itemize}
+\item
+Why and how is the ideal flow of matter evidence of QGP?
+\item
+Why is ideal flow worth scientific attention 15 years after the new phase of matter was announced for the first time at CERN?
+\end{itemize}
+
+\noindent \textit{\textbf{Berndt M\"uller}, Brookhaven\rq s Associate Laboratory Director for Nuclear and Particle Physics, responded to me as follows:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+% 
+Nuclear matter at \lq room temperature\rq\ is known to behave like a superfluid. When heated the nuclear fluid evaporates and turns into a dilute gas of nucleons and, upon further heating, a gas of baryons and mesons (hadrons). But then something new happens; at critical temperature $T_\mathrm{H}$ hadrons melt and the gas turns back into a liquid. Not just any kind of liquid. At RHIC we have shown that this is the most perfect liquid ever observed in any laboratory experiment at any scale. The new phase of matter consisting of dissolved hadrons exhibits less resistance to flow than any other substance known. The experiments at RHIC have a decade ago shown that the Universe at its beginning was uniformly filled with a new type of material, a super-liquid, which once Universe cooled below $T_\mathrm{H}$ evaporated into a gas of hadrons. 
+
+Detailed measurements over the past decade have shown that this liquid is a quark-gluon plasma; \textit{i.e.\/} matter in which quarks, antiquarks and gluons flow independently. There remain very important questions we need to address: What makes the interacting quark-gluon plasma such a nearly perfect liquid? How exactly does the transition to confined quarks work? Are there conditions under which the transition becomes discontinuous first-order phase transition? Today we are ready to address these questions. We are eagerly awaiting new results from the upgraded STAR and PHENIX experiments at RHIC.
+\end{mdframed}
+%%%%%%%%%%%%%%%%%%%
+%
+We note: In the first part of the response Berndt invokes \textit{ex officio} and without introducing the work at CERN the outcome: \lq consisting of dissolved hadrons\rq. Another \textit{ex officio} statement in this paragraph is connecting RHIC to early Universe. This postulates the principle that we can in a local domain of space-time recreate the molten vacuum structure that filled \textbf{ALL} the Universe once upon a time, granting the big-bang scenario, another CERN claim. All told, he says, that ideal flow of matter is evidence for QGP because this form of primordial matter is already known to exist. Reading the first paragraph in this way the 2nd is a meaningful answer to my 2nd question.
+
+Back to the timeline: The BNL quark matter ideal flow announced in April 2005 was neither made nor presented in the context of QGP actual discovery, and would not be related to the QGP form BNL was \lq hunting\rq\ in the following years. In his above note Berndt did not tell when BNL reached its institutional decision to accept CERN announcement as a valid scientific discovery announcement. However, he shares my view that the nearly ideal flow by quarks including in particular strange quarks supports and confirms the CERN-SPS strangeness enhancement signature. This is so since the SPS signature relies on the independent presence of quark and gluon degrees of freedom in the dense matter fireball. 
+ 
+We see that while no other (than QGP) global and convincing explanation of the SPS strangeness and strange antibaryon QGP signature results was ever presented, the direct observation of free motion of quarks helps to reduce the psychological resistance that even today is hindering the acceptance of the QGP discovery. At this point let me step back in history a few years to better understand the reasons why QGP discovery even today is argued about. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Can QGP be experimentally recognized?}
+\label{canQGP}
+\label{subsubsec:hoho}
+It is hard if not impossible to find someone directly involved in the quark-gluon plasma research program doubting the experimental results and their theoretical interpretation in terms of the properties of a new phase of matter comprising highly mobile deconfined quarks, the phase we call quark-gluon plasma. Nevertheless, in the last 5 years I found one person within the group of 1000 researchers making up the ALICE collaboration denying QGP was already discovered. This is the proverbial exception to the rule. 
+
+However, books addressing particle and/or nuclear physics written years after the QGP discovery do not, as yet, introduce this field. I see QGP addressed just like one writes about unicorns, animals that exist in sagas but not in the real world. I believe that this situation relates to some doubts about QGP from years long gone:
+\begin{itemize}
+\item if the QGP phase of matter can in principle be observed, see for example in Ref.\cite{Muller:1991jk} Section 7;
+\item which continue with the question: when, how, and by whom the discovery was completed -- I believe I did asnwer this in the above pages.
+\end{itemize}
+
+Consider a few words taken from an eminent introductory text to particle and nuclear physics, which I extract from the year 2008 English edition, repeated in that format in the more recent German 9th edition ~\cite{Povh:1995mua} (granted that this was the time window of more widespread QGP recognition).\\
+
+\noindent \textit{It is hard to tell who among severall authors (B.~Povh, K.~Rith, C.~Scholz and F.~Zetsche) signs the following seen in the English book edition pp.\;321 and 328}:\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\ldots this state (QGP), where the hadrons are dissolved, cannot be observed through the study of emitted hadrons \ldots\\
+Such a quark-gluon plasma has, however, not yet been indubitably generated and a study of the transition to the hadronic phase is thus only possible in a rather limited fashion. 
+\end{mdframed}
+\vskip 0.5cm
+All told, I have not seen a student level general nuclear and/or particle physics textbook that gives justice to the discovery of QGP. One could argue that the only way QGP can be discovered is that we sit out a few more decades; during this period QGP researchers of today will reach textbook writing age. 
+
+That decades are needed for this is illustrated by a closely related anecdote. In the Summer 2019 I visited the Wigner Institute in Budapest where QGP physics is a major research direction. I was welcomed to the heavy ion research retreat at Lake Balaton. I gave a lecture loosely related to QGP addressing another topic, the compact ultra dense objects~\cite{Labun:2011wn} (CUDOs). 
+
+All present noted that I treated QGP as discovered and, well established, and a potential source of specific quark-matter CUDO objects in the Universe. A participant at the retreat (a just tenured staff researcher from Budapest) approached me later \lq \ldots you really think QGP was discovered?\rq\ I probed and learned that my lecture triggered conversations about QGP discovery. Another outside visitor to the group, a senior meeting participant claimed that QGP was not discovered.\label{HoHo} Given his position and experience he should have known better.
+
+While some individual \lq spectators\rq\ continue to discuss the discovery of QGP, within the interdisciplinary \lq participant\rq\ community of QGP physicists the research objectives have shifted from the QGP discovery to the exploration mode of the new deconfined phase of matter, and the study of the quantum vacuum properties of strong interactions. 
+
+To conclude: There are many senior members of the nuclear physics community who were not directly involved in the QGP discovery, have fragmentary knowledge of experimental results, but have loud voices and distract from the objective status of the field, sometimes justifying their position by recalling early \lq stone age\rq\ period views, such as the already noted Ref.\cite{Muller:1991jk} Section 7. We may have to wait for these voices to fade into retirement homes. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Non-strangeness signatures of QGP: J/$\Psi$ psions/charmonium}
+Here just a few words about the (unrelated to our presentation) topic of more weakly coupled to QGP signatures considered over the past 50 years. These in particular include~\cite{Shuryak:1978ij}:
+\begin{enumerate}
+\item Dileptons and photons: In consideration of the strong background originating in secondary hadronic particle decays after QGP hadronized makes observation and interpretation difficult. 
+\item The J/$\Psi(c\bar c)$ (psions or better charmonium) abundance. 
+\end{enumerate}
+Unlike strangeness, and strange antibaryons formed in hadro\-nization, the J/$\Psi$ yields are determined by evolution in the dense matter formed, be it QGP or other forms of strongly interacting matter. Thus we need to trust models to use this signature to distinguish between the influence on the yield by confined and deconfined matter. Another obstacle is that any breakup of J/$\Psi$ preformed in initial interactions is accompanied in kinetic models due to detailed balance by formation processes. This in turn requires precise modeling of J/$\Psi$ freeze-out process in the primordial form of matter.
+
+Initially there was a strong case made for J/$\Psi$ suppression by QGP compared to confined matter by \textbf{Tetsuo Matsui} and Helmut Satz~\cite{Matsui:1986dk}. However, it was noted that at SPS energies the J/$\Psi$ yields could also be described in a statistical model~\cite{Gazdzicki:1999rk,BraunMunzinger:2000px}. Moreover, in a kinetic model we have shown~\cite{Thews:2000rj} that at higher RHIC and LHC energies an enhancement of J/$\Psi$ abundance is possible since the population development of charmonium J/$\Psi$ abundance in quark-gluon plasma is very complex and depends in decisive way on QGP properties and component interaction with these small and tightly bound $\bar c c $ states.
+
+Although Helmut Satz and co-workers over past decades have refined their models considerably, there is in my opinion no convincing QGP evidence that $\bar c c $ states demonstrate. In particular, an enhancement over initial abundance can also occur in some phase space domains~\cite{Thews:2000rj}. Just about any conclusion can be reached about the suppression or enhancement of charmonium J/$\Psi$ propagating through the quark-gluon plasma fireball. The reader can best appreciate this by reading the referee evaluation of our work~\cite{Thews:2000rj} where we were first to note that in principle the kinetic models are more likely to result in charmonium J/$\Psi$ enhancement than the suppression that was the rage of the day.\\
+
+\noindent \textit{The first rejection of our manuscript Ref.\,~\cite{Thews:2000rj} submitted on 29 August 2000(PRL reference LV7733) by Physical Review Letters arrived on 23 October 2000. We received the following two reviews:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\textbf{ Referee A:}\\
+\indent Strong \lq\lq anomalous\rq\rq\ J/$\Psi$ suppression is regarded as one of the most important signals of quark-gluon plasma formation in relativistic heavy ion collisions. \ldots
+
+\ldots On the basis of the information presented in this manuscript, it is conceivable that these effects compensate completely the \lq\lq order of magnitude\rq\rq\ enhancement claimed by the authors. The argument made by the authors is - at least in its present form - not as stringent as I would require for a publication in the Physical Review Letters.\\
+ 
+\noindent \textbf{Referee B:}\\
+\indent I do not recommend the publication of this manuscript in Physical Review Letters.
+
+The main idea and formalism have already been published in a recent paper by the same authors [Phys. Rev. C 62, 024905 (2000)] in the case of $B_c$ meson production. This is just an application to another process. \ldots 
+
+\ldots
+The increase of the relative abundance of species with higher masses (in this case J/psi) with increasing collision energy is what one would expect not knowing anything about the quark-gluon plasma. So, before the J/psi enhancement can be considered as a signature for the quark-gluon plasma formation, it must be said how it compares with this trivial phase-space expectation.
+\end{mdframed}
+\vskip 0.5cm
+
+We see that the referees represent two different schools of thought: Referee A is a believer in Matsui-Satz~\cite{Matsui:1986dk} simple suppression argument, while Referee B indicates the need to review the statistical phase space arguments~\cite{Gazdzicki:1999rk}. Both referees were competent and took considerable effort to reject our manuscript that perturbed the prevailing status quo by advancing a kinetic theory model. There was incipient competition from statistical equilibrium considerations~\cite{BraunMunzinger:2000px} that due our prolonged referee battle appeared in press a half year earlier than our work.\\
+
+\noindent \textit{This was a very difficult personal context for this author, hence it took about 6 weeks to compose a comprehensive response and modify the manuscript. Our resubmission letter to Physical Review Letters, was dated Dec. 5, 2000:}\\[-0.7cm]
+% 
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=Dandelion!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\underline{General comment:} At this point in time and without experimental feedback we do not attempt in this short publication a detailed phenomenology of J/$\Psi$ production at RHIC. In our rewording of the text we have emphasized that our purpose is to show that the effects of formation of J/$\Psi$ in a deconfined region to be quite large at RHIC. We support this conclusion from kinetic calculations in a simple model, supplemented by input parameters motivated by perturbative QCD and a generic picture the deconfined region space-time parameters. 
+
+We have rewritten many of the sections and changed our presentation emphasis in order to clarify the basis of our scenario. In the revised manuscript, the major uncertainties in the formation rates are now incorporated directly into the text and shown in the results of Figures 2 and 3. These involve the initial charm quark momentum distributions, and to a lesser degree the effects of color screening vs gluon dissociation in determining the appropriate kinematic parameters.
+
+{Key specific changes in resubmitted manuscript:} \ldots 
+\end{mdframed} 
+
+\noindent \textit{The rejection letter from Physical Review Letters arrived before the end of the year on Friday, 29 Dec 2000 10:19:45 (EST), quoting the referees as follows:}\\[-0.7cm]
+%
+\begin{mdframed}[linecolor=gray,roundcorner=12pt,backgroundcolor=GreenYellow!15,linewidth=1pt,leftmargin=0cm,rightmargin=0cm,topline=true,bottomline=true,skipabove=12pt]\relax%
+%
+\textbf{Second report of referee A:}\\
+\indent My main criticism remains unchanged: On the basis of the information presented in this manuscript, it is conceivable that effects not treated sufficiently explicit in the discussion compensate completely the \lq\lq order of magnitude\rq\rq\ enhancement of J/$\Psi$ production claimed by the authors. The argument made by the authors is not as stringent and clear as I would require for a publication in the Physical Review Letters. \ldots Referee B is correct in pointing out that the main idea and formalism of this manuscript was already explored by the same authors in PRC 62, 024905 (2000) for the case of B$_c$ meson production.\\
+
+\noindent\textbf{Second report of referee B:}\\
+\indent Instead of mentioning my further objections and doubts I would like to stress that the main idea explored in this manuscript have already been published by the same authors in their recent paper [Phys. Rev. C 62, 024905 (2000)] about the B$_c$ meson production. This fact itself suggests that the right place for publishing this paper is the Brief Report section of Physical Review C. 
+\end{mdframed}
+\vskip 0.5cm
+
+To conclude: It was not easy to shift the attention from suppression to enhancement of charmonium J/$\Psi$ in quark-gluon plasma. Our work~\cite{Thews:2000rj} should have been seen as a watershed event. Instead, it was shredded by two expert referees burying us in unessential details (lawyers call this \lq burying in paper\rq) while a somewhat competing but much less elaborate study~\cite{BraunMunzinger:2000px} went into press rapidly. It is interesting to note that our paper~\cite{Thews:2000rj} published in the Physical Review C earns more annual citations than, arguably, most PRL published articles. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{After the CERN quark-gluon plasma discovery}
+The heavy ion community at CERN continued work to clarify QGP formation thresholds and bulk matter properties. A similar program followed soon at RHIC. We note:
+\begin{itemize}
+\item[\phantom{i}i.] A research program at CERN-SPS fixed target has run in parallel to the LHC operation. 
+\item[ii.] The two colliders, LHC at CERN and RHIC at BNL continue as important parts of their research program, the study of relativistic nuclear collisions.
+\end{itemize}
+Among all CERN experiments contributing to the CERN announcement, two devoted to strangeness continued for many years: the successor to WA97 called NA57, and the successor to NA49 called NA61/SHINE. This situation reflects on the preeminent role of strangeness as characteristic signature of quark-gluon plasma.
+ 
+\subsubsection{Enhancement of multi-strange baryons at CERN-SPS}
+At the CERN-SPS the experiment NA57 continued the program of research of the WA97 experiment shown in \rf{RSS}, see page \pageref{RSS}. The final report~\cite{Antinori:2006ij} confirms the results that have been used in the CERN announcement and demonstrates an enhancement effect by more than an order of magnitude for the $\Omega$ and $\bar \Omega$, see \rf{fig:NA57}. The enhancement is shown dependent on the number of inelastically damaged nucleons called \lq wounded\rq. To this date these NA57 results are the largest \lq medium\rq\ effect observed.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}\sidecaption
+\centerline{
+\includegraphics[width=0.85\textwidth]{./AllFigs/06NA57Enh.png}
+}
+\caption{The final Pb--Pb results on hyperon enhancement by NA57, Energy dependence of strangeness adapted from~\cite{Antinori:2006ij} 
+}
+\label{fig:NA57}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The reader should note that the research program at SPS after the CERN QGP discovery was focused on strange antibaryons and strangness exclusively.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{NATO support for strangeness and SHARE}\label{ss:SHARE}
+\label{diabolicum}
+One would perhaps not see the defense organization NATO\label{NATOfun} as a source of funding for the QGP research and strangeness, and yet it happened; Hans Gutbrod and I were able to secure funding for the Summer 1992 Il Ciocco School, and a Summer 1994 Hagedorn celebration workshop. In addition, in the early 90s I obtained funding for the Tucson-Regensburg collaboration where much of the work was done with than graduate student Josef Sollfrannk, see Sec.\ref{findingQGP}, and than, for the current topic, the Tucson-Krakow SHARE collaboration early this century, where my NATO partner was \textbf{Wojtek Florkowski}. NATO itself was hardly explicitly present but there were guidelines for how we could use the funding to bring togather participants from member countries at meetings. The proceedings were part of a uniform publication series. Everyone at the meeting wore a standarized conference badge showing the flags of the NATO member countries.
+
+The need for a standardized formulation of the hadronization of the QGP fireball was discussed at the end of Sec.~\ref{findingQGP}, see \rf{PBMletter}. This was clearly an imminent objective after the CERN QGP announcment. At the time I lectured at several Summer and Winter schools in Poland. I could see that several researchers in Krakow, in particular Wojtek Florkowski and \textbf{Wojtek Broniowski}, shared in our research interest creating their own statistical hadronization program. This laid the roots of the SHARE-1 collaboration where the acronym derives from {\bf S}tatistical {\bf HA}dronization with {\bf RE}sonances.
+
+The Krakow and Tucson groups joined forces and in a period of two years we created and documented a web available SHM model SHARE~\cite{Torrieri:2004zz}. Our program was thoroughly vetted against the existent Tucson and Krakow programs. In the end the three programs were agreeing to the last significant digit in all benchmark tests. Aside of creating a debugged tool, another objective of our effort was to enhance the capabilities of the SHM approach. 
+
+There were three generations of SHARE: SHARE-2 developed in the following two years in collaboration with the Montreal group~\cite{Torrieri:2006xi} incorporated the option to fit particle fluctuation results, aside of considerable update of the input of all particle data tables. SHARE-3 (SHARE with CHARM) introduced into the program hadron prodduction by charmed particles~\cite{Petran:2013dva}. While the program is fully functional there is rapidly increasing data field for charmed hadrons thus the situation is in need of active managemeent.
+
+SHARE was designed to offer study options far beyond the previous norm:
+\begin{enumerate}
+\item We maximized the parameter set to be able to try new model ideas:
+the full set of parameters that can be fitted to the observed hadron abundance of any directly produced elementary hadron created by a hot fireball in relativistic heavy-ion collision is:\\[0.3cm]
+\begin{tabular}{p{2ex}p{13ex}p{7ex}p{44ex}}
+&Symbol & SHARE Param. & Param. Description\\
+\hline
+1)& $V$ or $dV/dy$ & \texttt{norm} & source volume (normalization) in fm$^3$;\\
+2)& $T$ & \texttt{temp} & chemical freeze-out $T$ (in MeV); \\
+3)& $\lambda_q=e^{(\mu_q/T)}$ & \texttt{lamq}& light quark fugacity factor;\\
+4)& $\lambda_s=e^{(\mu_s/T)}$ & \texttt{lams}& strangeness fugacity factor;\\
+5)& $\gamma_q$ & \texttt{gamq }& light quark phase space occupancy;\\
+6)& $\gamma_s$ & \texttt{gams} & strangeness phase space occupancy.\\
+7)& $\lambda_3$ &\texttt{lmi3} & proton-neutron (isospin) $I_3$ fugacity factor\\
+8)& $\gamma_3$ & \texttt{gam3} & $I_3$ phase space occupancy\\[0.3cm]
+\end{tabular}
+\item We allowed bulk properties of QGP source to be usable as an input that could be fitted -- one such natural bulk constraint is the count of strange and antistrange quarks. SHARE allows this constraint $\langle s-\bar s\rangle =0\pm \epsilon$ to be \lq fitted\rq\ as much as one fits a prescribed yield of produced hadrons. 
+\end{enumerate}
+The role of parameters 3)-- 6) is illustrated in \rf{gamlam} according to insights seen in the 1986 report~\cite{Koch:2017pda}. Parameters 7), 8) allow for $u$, $d$ light quark asymmetry. This is necessary in fits in which for example also charge $Q$ of the fireball is explored.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[bt]\sidecaption
+\includegraphics[width=1.0\textwidth]{./AllFigs/gamlam.png}
+\caption{The meaning of chemical parameters 3)-- 6), and by extension also 7), 8)}
+\label{gamlam}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+As noted we can \lq fit\rq\ the constraint $\langle s-\bar s\rangle =0\pm \epsilon$ -- and in SHARE any bulk output property, such as energy density $\varepsilon$, entropy density $\sigma$, and pressure $P$ can also be fitted. This allows to compare the fireball source created in different collision systems.
+
+The study of bulk properties of QGP furthermore provided an unexpected asset: when the number of parameters increases (up to 8 in SHARE, see above), finding a fit minimum in a rich data field is haphazard, as one can easily get caught in a false minimum. It turns out that by leaving parameter range unconstrained but contstraining loosely the bulk property of the hadronizing fireball is sufficent to both accelerate and make reliable the particle production data fit minimum. 
+
+All these novel features incorporate into SHARE meant that user manuals~\cite{Torrieri:2004zz,Torrieri:2006xi,Petran:2013dva} became bulky and the program difficult to handle without in-house training. This spelled trouble; our code was \lq open source\rq\ and much of its easy to use content was thus quickly adopted in simplified student programs. This meant that the old era of SHM errors was back with a vengeance. The hearsay is that the most troublesome error is seen in the implementation on the CERN-ROOT analysis platform a simplistic SHARE version called Thermus.
+
+The error in ROOT-Thermus version 1 and version 2 is, as I am told, that once particle resonances were read out, this meant these were stable particles. In order to understand what this means, consider, as an example, K$^*$ abundance needed in some fits that use this yield. In ROOT-Thermus that meant K$^*$ is a \lq stable\rq\ particle and thus kaons from the decay of K$^*\to \pi+$K were not included in the final kaon yields, which were of course also fitted. 
+
+Even if different arguments float, in my opinion, it is impossible to simultanously fit both K and K$^*$ and accordingly Thermus fit results before 2019  with a hadron resonance probably need an erratum. To repeat: publications you read where Thermus is used (2004-2018) and where for example $\phi$, K$^*$ or/and any other hadronically decaying particle is fitted must be reconsidered.
+
+To cut the story short: Soon after SHARE was created I saw again aberrantly high hadronization temperatures that were presented as the best fit. However, today there is an easy physics test of this situation: We know that free-streaming particles we analyze must emerge after freeze-out; that means, below the QGP disintegration condition. QGP fireball breaks into hadrons when temperature cools below but near to the QGP existence boundary. SHM analysis provides therefore a value of the chemical freeze-out temperature below the lattice-QCD phase cross-over boundary.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[bt]
+\centerline{%
+\includegraphics[width=0.85\textwidth]{./AllFigs/TmuU.png}
+}
+\caption{The $T,\mu_\mathrm{B}$ scatter diagram showing lattice value of critical temperature $T_c$ (bar on left), as compared to SHM results of different groups for analysis performed for different collision energies as indicated. For references to these results see related discussion in Figure~9 in Ref.\cite{Rafelski:2015cxa}. Our SHARE chemical non-equilibrium results are seen as full blue circles, dashed blue line guides the eye; the GSI chemical (semi-)equilibrium results are crosses with dashed black line guiding the eye. Other results are also shown, including those obtained using the wrong decay chain of the Thermus program}
+\label{TEcol}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+This present day situation is shown in the hadronization temperature -- chemical potential plane scatter plot in \rf{TEcol}, which is an update of Figure~9 in Ref.\cite{Rafelski:2015cxa} (see there for all pertinent references to data and lattice QCD). All model values that we see in \rf{TEcol} well above the lattice value $T_c$ on the left margin in \rf{TEcol} are either old pre-SHARE results of other groups, like the $T=174$\,MeV fit, see \rf{PBMletter}, or are using the newly recreated (but wrong) SHARE simplifications such as the ROOT-Thermus program, or in some cases, both. As can be seen in \rf{TEcol}, only the full chemical non-equilibrium results obtained using SHARE are convincingly below the phase transformation boundary between QGP and hadron phase obtained in lattice-QCD. 
+
+As already noted some groups fit the data with a very small parameter set using the four first parameters in above list. The tacit assumption of absolute chemical equilibrium after hadronization is made in this approach. However, if such equilibrium among particles produced by QGP exists, one should find it as an output of analysis. In my personal opinion the real reason to use simplisitc chemcal equilibrium is the lack of capability to use a more complex approach such as offered by SHARE. On the other hand, by publishing SHARE program and data files we have opened a  door to eager students who realized the opportunity of creating their own reincarnations of SHM using our work and impressing their supervisors in the process. I have no doubt that this was done after looking over the shoulders of some of these students. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{How does SHM work?}\label{sec:SHMwork}
+To obtain a grand canoncical description of the produced particles we study the quantum Fermi and Bose phase space distributions, which maximize the entropy at a fixed particle number. In the local rest frame of the volume element, the particle spectra take the form 
+\begin{equation}\label{eq:fermiDist}
+ {{d^6N_\mathrm{F/B}}\over {d^3pd^3x}} = {g\over (2\pi)^3}n_\mathrm{F/B}, \qquad 
+n_\mathrm{F/B} (t)= \displaystyle\frac 1 {\gamma^{-1}(t) \E^{(E \mp \mu )/T(t)}\pm 1}, 
+\end{equation}
+where $g$ is the statistical degeneracy and $E =\sqrt{p^2+m ^2}$ the particle energy in  a local comoving frame. The integral of the distribution \req{fermiDist} provides the particle yield. In the Boltzmann limit suitable for heavy particles we do not need to make a distinction between Fermions and Bosons and we obtain 
+\begin{equation}\label{eq:fermiY}
+N = \frac{g V T^3}{2\pi^2} \gamma \E^{\pm\mu/T} \left(\frac{m}{T}\right) ^2 K_2\left(\frac{m}{T}\right) \ \to \ gV (mT/2\pi)^{3/2} \gamma \E^{-(m\mp\mu)/T}+\ldots\;.
+\end{equation}
+In a program like SHARE the full quantum distribution is included; here we proceed to use the Boltzmann limit as it offers simplicity in presentation.
+
+It is common to express chemical potentials related to conserved quantum numbers of the system, such as the baryon number $B$, the strangeness $s$, and the third component of isospin $I_3$ in terms of corresponding quark fugacities 
+\begin{equation}\label{eq:mu}
+\mu_B = 3T \log \lambda_q\;, \quad
+\mu_S = T \log \lambda_q/\lambda_s\;, \quad
+\mu_{I_3} = T \log \lambda_3\;. % \quad
+%\mu_C = T \log \lambda_c\lambda_q\;. 
+\end{equation} 
+Notice the inverse, compared to intuitive definition introduction of $\mu_S$, which has a historical origin and is a source of frequent mistakes. 
+
+As is a common practice we took advantage of the approximate isospin symmetry to treat the two lightest quarks ($q = u,d$) using light quark and isospin phase space occupancy and fugacity factors which are obtained via a transformation of parameters:
+\begin{equation}\label{eq:q3toud}
+\lambda_q = \sqrt{\lambda_u\lambda_d}\;,\quad
+\gamma_q = \sqrt{\gamma_u\gamma_d}\;,\qquad 
+\lambda_3=\sqrt{\frac{\lambda_u}{\lambda_d}}\;,\quad
+\gamma_3=\sqrt{\frac{\gamma_u}{\gamma_d}}\;,
+\end{equation}
+with straightforward backwards transformation
+\begin{equation}\label{eq:udtoq3}
+\lambda_u = \lambda_q\lambda_3\;,\quad \gamma_u = \gamma_q\gamma_3\;,\qquad 
+\lambda_d = \frac{\lambda_q}{\lambda_3}\;,\quad \gamma_d = \frac{\gamma_q}{\gamma_3}\;.
+\end{equation}
+Even if the electrical charge $Q=Ze$ has not appeared explicitly, it can be defined in full using the available chemical potentials considering that quarks carry a specific charge. 
+
+The fugacity of hadron states is defining according to \req{fermiY} the yields of different hadrons is obtained from the individual constituent quark fugacities. In the most general case, for a hadron consisting of $N_u^i, N_d^i ,N_s^i$ and $N_c^i$ up, down, strange and charm 
+quarks respectively and $N_{\bar{u}}^i,N_{\bar{d}}^i,N_{\bar{s}}^i$ and $N_{\bar{c}}^i$ anti-quarks, the fugacity can be expressed as
+\begin{equation} 
+\label{eq:fugacity}
+\Upsilon_i = (\lambda_u\gamma_u)^{N_u^i}(\lambda_d\gamma_d)^{N_d^i}(\lambda_s\gamma_s)^{N_s^i}
+%(\lambda_c\gamma_c)^{N_c^i} 
+ (\lambda_{\bar{u}}\gamma_{\bar{u}})^{N_{\bar{u}}^i}(\lambda_{\bar{d}}\gamma_{\bar{d}})^{N_{\bar{d}}^i}(\lambda_{\bar{s}}\gamma_{\bar{s}})^{N_{\bar{s}}^i}\;,
+%(\lambda_{\bar{c}}\gamma_{\bar{c}})^{N_{\bar{c}}^i},
+\end{equation} 
+where $\gamma_i$ is the phase space occupancy of flavor $i$ and $\lambda_i$ is the fugacity factor of flavor $i$, $i=u,d,s$, extension to charm can be made easily. For quarks and anti-quarks of the same flavor
+\begin{equation} 
+\gamma_f = \gamma_{\bar{f}}\qquad\text{ and }\qquad \lambda_f = \lambda_{\bar{f}}^{-1},
+\end{equation}
+which reduces the number of variables necessary to evaluate the fugacity by half. To be specific, for $\Lambda(uds)$ and its antiparticle we have:
+\begin{equation} 
+\Upsilon_{\Lambda(uds)}= \gamma_u\gamma_d\gamma_s\lambda_u\lambda_d\lambda_s;\qquad
+ \Upsilon_{\bar{\Lambda}(\bar{u}\bar{d}\bar{s})}= \gamma_u\gamma_d\gamma_s\lambda_u^{-1}\lambda_d^{-1}\lambda_s^{-1}\;.
+\end{equation} 
+We now see how a few fugacities along with the source temperature $T$ and the volume $V$ characterize in full particle yields at the time of chemical freeze-out. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Threshold and energy dependence of strangeness enhancement}
+
+NA49 and NA61/SHINE experiments at the CERN-SPS continued and continue the exploration of energy and volume thresholds of the onset of deconfinement. The results seen in \rf{fig:onset} show the excitation function for the K$^+/\pi^+$ ratio~\cite{NA61Shine}, which in baryon-rich QGP represents in the numerator the strangeness yield, and in the denominator the entropy content of QGP. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\centering
+\includegraphics[width=0.50\textwidth]{./AllFigs/hornKP.jpg}
+\caption{The so-called horn structure in energy dependence of the K$^+/\pi^+$ ratio excitation function indicating threshold in strangeness to entropy yield in central Pb+Pb (Au+Au) collisions, from CERN-SPS NA61/Shine collaboration report~\cite{NA61Shine}
+}
+\label{fig:onset}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The \lq horn\rq\ in this result could be the searched-for energy threshold to quark deconfinement. This is so since at the onset of QGP formation at the energy above the horn the speed of production of entropy by color bond melting exceeds the speed of strangeness production. One of the unsolved riddles is the mechanism responsible for the rapid production of strangeness seen below the horn peak where strangeness beats entropy. An idea I have been following is the possibility of strange-down quark mixing driven by chiral symmetry restoration. Such an effect could be driven by the ultra strong EM fields present in these reactions.
+
+The nearly obvious question seen the eperimental results is if we can interpret these using SHM. Earlier, I bragged to Marek Ga\'zdzicki that within the chemical nonequilibrium approach I should have no problem to characterize his \lq horn\rq. This was therefore the first project achieved with SHARE~\cite{Letessier:2005qe}. With Jean Letessier I demonstrated that Marek\rq s experimental results were indeed consistent with the SHM chemical non-equilibrium model assuming explosive hadronization of QGP. 
+
+However, the publication of our work was difficult. We submitted to PRC and encountered a wall of resistence. Ultimately, the PRC editors rejected our manuscript. At first we moved on to other projects instead of wasting time convincing referees of another journal, who easily could be the same personalities, as the community of experts is small. However, this arXiv\rq ed work was noted and well cited. Two years later we chose to update our analysis to more recent Marek\rq s experimental data and submit to EPJA. In the year 2007 the horn we were describing was not  a fragment of a unicorn anymore. Our paper reviewed well and was soon published~\cite{Letessier:2005qe}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Addressing small volume effects}\label{sec:canon}
+
+In the statistical hadronization model (SHM), a phase-space based hadron yield evaluation is performed. Such a model cannot be used to describe production of particles that are weakly coupled to the (QGP) fireball source. Thus photons and dileptons have to be obtained using microscopic collision models. SHM can describe production of strongly interacting particles in composite ground state, \ie\ \lq stable\rq\ mesons and baryons, and their resonances with excitation energy measured at comparable scale with the prevailing temperature, \ie\ below GeV-scale. 
+
+The central postulate of the statistical model is that particle yields depend only on the available phase space. However, there are several ways to accomomodate this:
+\begin{itemize}
+\item 
+\underline{Fermi Micro-canonical phase space:}\\ 
+has sharp energy and a sharp number of particles. Introduced in study of cosmic ray individual events, this may not be an appropriate approach since laboratory experiments report event-averaged particle abundances.
+\item 
+\underline{Canonical phase space:} \\
+employs an average over an ensemble of systems with temperature $T$ tunable average fireball energy $E$. In this approach at least one of all (quasi) conserved quantum numbers is exactly fixed: these exact numbers include color charge~\cite{Turko:1981nr,Elze:1983du,Elze:1984un}, isospin~\cite{Muller:1982gd}, baryon number\cite{Derreth:1985kk} and, conserved on strong interaction time scale, the number of strange $s$ quark pairs~\cite{Rafelski:1980gk,Rafelski:2001bu}, and similarly charm $c$ or bottom $b$ quark pairs -- a fixed electric charge $Q$ follows if some of the above are conserved exactly, but also can be introduced independently.
+\item 
+\underline{Grand-canonical ensemble phase space:}\\ 
+allows an event ensemble average with regard to energy $E$ and all discrete (quasi) conserved particle numbers. SHARE uses a grand-canonical ensemble allowing the implementation of an average particle abundance constraints. The one exception is the option to conserve strangness exactly: This creates a constraint fixing the value of strangeness chemical potential for any given baryochemical potential and temperature $T$. 
+\end{itemize}
+
+Entropy must be conserved or increasing during the hadronization process of QGP. This means that there are, to first approximation, as many hadronic particles produced as there are quarks, antiquarks and gluons present in the fireball of QGP. The production of nonrelativistic (heavy) particles may reduce somewhat the required number of emerging particles. This means that canonical phase space constraints have a weaker impact after hadronization than before. Moreover, hadronic particles without conserved quantum numbers are produced without constraints at all.
+
+One of the cornerstones of the argument that multiply strange particles are direct products of hadronization of QGP arises from the study of the ratio $\bar \Xi(\bar s\bar s q),\ \Xi(ssq)$ compared to $\phi(s\bar s)$, which is practically independent of the energy and centrality of the collision. This is what we expect in the combinant production of these multiply strange hadrons of different mass and strangeness contents, and different quantum nature (Bose/Fermi). Some variance is expected due to need for a light quark in $\bar \Xi, \Xi$ compared to $\phi$, and possibility of interference from other production mechanisms. 
+
+For systems that have a finite baryon density in the fireball, one chooses as a variable~\cite{Petran:2009dc} $\Xi\to \sqrt{\bar \Xi \Xi}$, to neutralize the particle antiparticle asymmetry as shown on the left in \rf{fig:Xiphi}, where we see results compiled in Ref.~\cite{Petran:2009dc} for data available more than decade ago at SPS and RHIC. Note that the bottom (red) line across all lines presents the $\sqrt{\bar \Xi \Xi}/\phi$ ratio. The other results show that the level of variability of other related particle ratios so that one can appreciate that this is a sensitive observable.
+
+On the right in \rf{fig:Xiphi} we see the recent results~\cite{Tripathy:2018ehz,Tripathy:2019flj} obtained by the ALICE collaboration at the CERN LHC collider. Here one can ignore the variance between $\bar \Xi, \Xi$. There are three collision systems that are combined in a single presentation that uses as its variable the mean central pseudo-rapidity $\eta$ charged particle $N_\mathrm{ch}$ density $\langle dN_\mathrm{ch}/d\eta\rangle_{|\eta|<0.5}$. We see the sum of $\bar \Xi+ \Xi$ particle yield divided by $\phi$; hence the horizontal black line is placed at the corresponding value to that seen on left (bottom straight line at 0.281) for SPS and RHIC and earlier LHC results.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\centerline{%
+\includegraphics[width=0.52\textwidth]{./AllFigs/XiPhi.png}
+\includegraphics[width=0.44\textwidth]{./AllFigs/AliceXiPhiRev.png}
+}
+\caption{%
+On left: CERN-SPS and RHIC and early \lq low energy\rq\ LHC results for $\sqrt{\overline{ \Xi} \Xi}/\phi$, adapted from Ref.~\cite{Petran:2009dc}, compared in this frame to other more variable ratios: $\Xi$/K, $\Xi/\pi$, $\phi/\pi$. The straight line for $\sqrt{\bar \Xi \Xi}/\phi$, is by definition at half of the LHC-Alice value we see marked on AHS, see text. On right: LHC-Alice results for $(\bar\Xi+\Xi)/\phi$ obtained in three different collision systems at highest available energy as function of charged hadron multiplicity produced, adapted from~\cite{Tripathy:2018ehz,Tripathy:2019flj}
+}
+\label{fig:Xiphi}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+
+
+The particle $\phi(s\bar s)$ has no open strangeness and canonical phase space constraints do not apply to it~\cite{Rafelski:1980gk,Rafelski:2001bu}. However, they apply strongly to the double strange $\Xi$. In the presence of canonical volume effects, the relative yield results seen in \rf{fig:Xiphi} are therefore impossible to attain.
+
+In \rf{fig:Xiphi} we see on the right that for the most peripheral $p$-$p$ Alice collisions with a small ($\simeq 2$--$4$) charged particle multiplicity, the ratio decreases. We note that a QGP fireball picture may not apply here. Considering as source primary parton collisions this is a natural behavior, with $\phi$ requiring one pair of $s$-$\bar s$ quarks, while $\Xi$ requiring that the production of two pairs of strange quarks is suppressed. The rise of the $\Xi/\phi$ ratio seen in most central Pb--Pb collisions, a 1.2sd effect, needs to be confirmed. However, we also note that a high $p_\bot$ enhancement of the $\Xi$ was predicted decades ago, see Sec.\ref{sec:highPT} and Ref.\,\cite{Rafelski:1987un}, and this rise for very large $\langle dN_\mathrm{ch}/d\eta\rangle_{|\eta|<0.5}$ could be due to enhancement at relatively large $p_\bot$.
+
+{To conclude:} The fact that $\phi$ tracks closely the yield of $\bar \Xi, \Xi$ for vastly different collision energies, for different collision systems, in a large domain of collision centrality, demonstrates that these particles emerge directly from a fireball by combinant processes~\cite{Koch:1986ud,Rafelski:1987un}, demonstrating that canonical statistical phase space does not conspire by some mechanism to influence the yields of these particles, see Sec.\ref{sec:SHMwork}.
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Strangness enhancement at collider energies}\label{sec:sS}
+
+Strangeness observable remains experimentally popular at collider (RHIC, LHC) energies, since strange hadrons are produced abundantly and can be measured over a large kinematic domain: All quark flavors can be produced in initial parton collisions. Strangeness differs from the heavier quarks by the relatively low mass threshold. This means that it continues to be produced in ensuing in medium thermal parton processes, dominated in QGP by the gluon fusion process.
+
+This coupling to the gluon degree of freedom implies that the strangeness QGP abundance rises rapidly early on in time line of fireball evolution, but it can also fall, tracking the cooling of the gluon degrees of freedom. Ultimately, when parton temperature and density is sufficiently low, the strangness rich QGP fireball breaks apart. High yield of strangeneess in QGP couples with the self-analyzing decay patterns of strange hadronss. Therefore, a large body of experimental results is available today. 
+
+The total particle yield at colliders, as observed in a small selected centrality interval tracks closely the entropy produced in this rapidity interval. In order to characterize the source of strange particles our bulk QGP fireball target variable is therefore the specific per entropy strangeness-flavor content $s/S$ which we want to track as a function of collision energy and centrality. 
+
+The relative $s/S$ yield measures the number of active degrees of freedom and the degree of relaxation when strangeness production freezes-out. Perturbative expression in chemical equilibrium reads 
+\begin{equation}
+{s \over S}=\frac{{g_s\over 2\pi^2} T^3 (m_{ s}/T)^2K_2(m_{ s}/T)}
+ {(g2\pi^2/ 45) T^3 +(g_s n_{\rm f}/6)\mu_q^2T}\simeq \frac{1}{35}\simeq 0.0286\;.
+\end{equation}
+When looking closer at this ratio one sees that much of ${\cal O}(\alpha_s)$ QCD interaction effect cancels out. However, for completeness we note that one could argue that $s/S|_{{\cal O}(\alpha_s)}\to 1/31=0.0323$. A stronger effect can occur in presence of QGP nonequilibrium, in this case
+\begin{equation}
+{s \over S}= { {0.03 \gamma_s^{\rm QGP}} \over 
+ {0.4 \gamma_{\rm G} + 
+ 0.1 \gamma_s^{\rm QGP}\!\!+
+ 0.5\gamma_q^{\rm QGP}\!\! + 
+ 0.05 \gamma_q^{\rm QGP} (\ln \lambda_q)^2}}\to 0.03\gamma_s^{\rm QGP}\;.
+\end{equation}
+Finally, introducing the quantum statistics and doing numerical evaluation produces for $m_s=90$\;MeV the result seen on left in \rf{sSFig} where we also for comparison show this ratio computed in hadron gas. We see that equilibrated QGP is 50\% above equilibrated hadron gas. Actual strangeness production enhancement is larger considering that hadron gas governed reactions are further away from chemical equilibrium. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.51\columnwidth]{./AllFigs/soS90.png}
+\includegraphics[width=0.47\columnwidth]{./AllFigs/soSAlice.png}
+\caption{Strangeness per entropy $s/S$: On left: as a function of temperature in QGP with $m_s=90$\;MeV, and (red) in the hadron resonance gas as defined by SHARE implemented mass spectrum. On right: Outcome of the fit to ALICE $\sqrt{s_\mathrm{NN}}=2.76$\;TeV results as a function of centrality, expressed by the number of participants. Comparison with RHIC-62 GeV analysis (dotted line) based on STAR data which may contains ROOT-Thermus distortions}
+\label{sSFig}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We show on the right in \rf{sSFig} the centrality dependence for the ALICE and STAR 62 GeV $s/S$ results~\cite{Petran:2013lja}. The ALICE results show a quick rise to saturation in $s/S$ near the perturbative QGP estimated value shown on left in \rf{sSFig}. This can be understood as a piece of evidence that at time of fireball hadronization we study a fireball in which quarks and gluons (but not hadrons) are chemically equilibrated.
+
+We see more fireball properties in \rf{univRL}. Despite a difference in collision energy by a factor 40 we see little, if any, difference, which clearly shows that the same type of QGP fireball is formed at this SPS, RHIC and LHC energies, see Ref.\cite{Petran:2013lja,Rafelski:2009jr,Rafelski:2014cqa,Petran:2013qla}. For the physical properties of the fireball at freeze-out we find the energy density $\varepsilon=0.45\pm 0.05$ GeV/fm$^3$, the pressure of $P=82\pm 2$ MeV/fm$^3$ and the entropy density of $\sigma=3.8\pm 0.3$ fm$^{-3}$ varying little as a function of reaction energy $\sqrt{s_\mathrm{NN}}$, collision centrality $N_\mathrm{part}$. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!t]\sidecaption
+\includegraphics[width=0.35\textwidth]{./AllFigs/UnivSPSRHIC.png}
+\includegraphics[width=0.65\textwidth]{./AllFigs/UnivPropLHCRHIC.png}
+\caption{The SHARE fit of QGP fireball properties: on left as function of energy for SPS, RHIC (left most point: AGS); on right: as function of the number of participants with comparison of LHC 2.6 TeV results with RHIC 62 GeV, adapted from Refs.\cite{Petran:2013lja,Rafelski:2009jr}}
+\label{univRL}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+All of these results are consistent with hadronic particle production occurring from a dense source in which the deconfined strange quarks are already created before hadrons are formed. These (anti-)strange quarks are free to move around or diffuse through the QGP and are readily available to form hadrons. In final state strange hadrons compete in abundancce with nonstrange hadrons. Interpretation of the relation between strange antibaryon production and $s/S$ helps us understand the onset of deconfinement and the appearance of critical point.
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Systematics of ALICE-LHC strangeness results}\label{sec:AliceSys}
+
+In \rf{fig:hypppp} and \rf{fig:hypXO} we see the yields of individual particles, per charged pion, reported by the ALICE-LHC collaboration for all collision systems explored so far. We note in both \rf{fig:hypppp} (on logarithmic scale), and in \rf{fig:hypXO} (on linear scale) the smooth behavior of all shown particle yield results as a function of global $dN_\mathrm{ch}/d\eta$ charged particle multiplicity. The here considered charge multiplicity is measured in the (pseudo)rapidity interval $\eta\in\{-0.5,+0.5\}$. This kinematic domain comprises only a part of the surface surrounding the collision event. Thus the lowest multiplicity bin with $dN_\mathrm{ch}/d\eta\simeq 3\pm 1$ for the most peripheral $p$-$p$ collisions corresponds, allowing for the expected large longitudonal produced particle momentum, to a total charged particle multiplicity that is at least five times larger. Thus we have a sizable, but still a relatively small particle source.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\centerline{%
+\includegraphics[width=0.75\textwidth]{./AllFigs/1807AliceStrangeY.png} 
+}
+\caption{%
+Universal dependence of $p(uud)$+$\bar p(\bar u\bar u\bar d)$, K$_s(d\bar s+\bar d s$, $\Lambda(uds)+\overline{\Lambda}(\bar u\bar d\bar s)$, $\phi(s\bar s)$, $\Xi^-(dss)+\overline{\Xi}^+(\bar d\bar s\bar s)$, $\Omega(sss)+\overline{\Omega}(\bar s\bar s\bar s)$ multiplicities (scaled by yield of $\pi^+ + \pi^-$) obtained in $p$-$p$, $p$-$A$ and $A$-$A$ by LHC-Alice experiment at LHC collision energies indicated. Adapted from Ref.\cite{Albuquerque:2018kyy}
+}
+\label{fig:hypppp}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+We note three features inherent to these results:
+\begin{enumerate}
+\item
+All results align as a smooth function dependent on the size of the fireball measured by the number of produced charged hadrons $dN_\mathrm{ch}/d\eta$ for the entire LHC energy range. At these ultra high energies the $p$-$p$, $p$-$A$ and $A$-$A$ collisions cannot be clearly distinguished.
+\item
+All particle yields, shown as a ratio with charged pion yield, do not depend on the energy of the collision in the LHC range. (The 1.5sd disagreement seen between 2.76 and 5.02 TeV results at large multiplicity for $\Xi$ and $\Omega$ is under re-evaluation.) 
+\item
+For $dN_\mathrm{ch}/d\eta>6$ for all large fireball volumes the ratio 
+\begin{equation}\label{eq:RLambda}
+R_\Lambda \equiv \frac{\Lambda(uds)+\overline{\Lambda}(\bar u\bar d\bar s)}
+{p(uud)+\bar p(\bar u\bar u\bar d)}\ge 1.5
+\end{equation}
+is greater than unity. 
+\end{enumerate}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[tb]\sidecaption
+\centerline{%
+\includegraphics[width=0.49\textwidth]{./AllFigs/Xi2019p133C.png} 
+\includegraphics[width=0.49\textwidth]{./AllFigs/Omega2019p134C.png} 
+}
+\caption{%
+Results for $\Xi$ (left) and $\Omega$ (right) from \rf{fig:hypppp} are shown on linear scale. The horizontal grey line shows the central result of SHM yields for chemical equilibrium model evaluated at $T=156$\,MeV, for $\Xi$ we see othet models (hydrodynamical computations, dashed including final state re-scattering computed with so called RQMD model). It is generally believed that the high centrality results shown for $2.6$\,TeV (in red) need to be reevaluated. Adapted from Ref.\cite{Albuquerque:PhD} 
+}
+\label{fig:hypXO}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+The ALICE collaboration associate these results with the formation of the QGP in high multiplicity $p$-$p$ collisions~\cite{ALICE:2017jyt,Albuquerque:2018kyy,Albuquerque:PhD}. In $p$-$p$ and $\alpha$-$\alpha$ collisions studies carried out at the ISR-AFS at 1/100 of the CM energy, a collective effect indicating formation of QGP was not found, see as example the baseline in \rf{RSS}. This indicates that only at sufficiently high energy the small collision system leads to a behavior akin to QGP formation. Similarly, in the scattering of O-Au evaluated at the SPS strangeness enhancement was not observed by the NA35 collaboration, see quote on page \pageref{StockOAu}. Consequently, a boundary of QGP formation must be present both as a function of reaction volume and energy.
+
+Regarding the third result, the ratio \req{RLambda}, this manifestation of strangeness enhancement was presented in our first publications~\cite{Rafelski:1980rk,Rafelski:1980fy}, see bottom paragraph in the quote on page \pageref{FirstPredict}. In the chemical nonequilibrium SHM analysis this result requires that the phase space occupancy in the hadron phase, $\gamma_s/\gamma_q>1.5$ as was have shown in the analysis of the first ALICE 2.6 TeV results\cite{Petran:2013qla,Petran:2013lja}. This result further confirms the universality of the sudden QGP hadronization process~\cite{Rafelski:2000by}, which underpins the principle of universality of hadronization~\cite{Petran:2013qla,Rafelski:2014cqa}. \label{RLam}
+
+The $p$-$p$, $p$-$A$ results agree with the earlier ALICE Pb-Pb results and confirm the need for the full chemical nonequilibrium model with $\gamma_s\ne 1$, and $\gamma_q\ne 1$ when addressing these results within the SHM nonequilibrium approach. In the chemical nonequilibrium SHM analysis these RHIC and LHC hadronization condition results track closely those we reported for the much lower energy at SPS~\cite{Letessier:2005qe} energies. The rise of yields with volume size is well understood as being due to the increased strangeness phase space occupancy factor $\gamma_s$. The relative yield increase seen best in \rf{fig:hypXO} is incompatible with the chemical equilibrium SHM depicted for $T=156$\,MeV, by a grey horizontal line ($\pm5\% $ precision of the model is also indicated).
+
+In the near future a better understanding of QGP formation needs to be developed allowing us to explain why and how small $p$-$p$, ultra-high energy collision systems are capable of forming this new phase of matter. 
+%I expect to return to this question in forthcoming work~\cite{Chris2019:Oct}. 
+
+%\vfill\eject
+%\end{document}

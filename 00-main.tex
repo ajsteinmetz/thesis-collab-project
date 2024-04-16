@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag
+\documentclass[epjST,usenames,dvipsnames,vecphys]{svjour}
+
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{footnote}
+%\usepackage{natbib}
+\usepackage{doi}
+\usepackage{enumitem}
+
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+\makesavenoteenv{figure}
+%\makesavenoteenv{mdframed}
+%\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xcolor}
+\usepackage{graphicx}
+%\usepackage{graphics}
+
+% Useful macros for equations and units
+\newcommand*{\TeV}{\text{ TeV}}
+\newcommand*{\GeV}{\text{ GeV}}
+\newcommand*{\MeV}{\text{ MeV}}
+\newcommand*{\keV}{\text{ keV}}
+\newcommand*{\eV}{\text{ eV}}
+\newcommand*{\meV}{\text{ meV}}
+\newcommand*{\Msun}{\mathrm{M}_{\odot}}
+\newcommand*{\bb}{\boldsymbol}
+\newcommand*{\beqn}{\begin{equation}}
+\newcommand*{\eeqn}{\end{equation}}
+\newcommand{\req}[1]{Eq.~(\ref{#1})}
+\newcommand{\rf}[1]{Fig.~{\ref{#1}}}
+\newcommand{\rt}[1]{Table~{\ref{#1}}}
+\newcommand{\rsec}[1]{Sec.~{\ref{#1}}}
+\newcommand{\rchap}[1]{Ch.~{\ref{#1}}}
+\newcommand{\rapp}[1]{Appendix~{\ref{#1}}}
+\newcommand{\mydoi}[2]{\href{http://dx.doi.org/#2}{#1}}
+\newcommand{\E}{\mathrm{e}}
+\newcommand{\ie}{{\em i.e.}} % i.e.
+\newcommand{\ms}[1]{\rule[-#1mm]{0mm}{0mm}}
+
+% Struts for tables 
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}
+\newcommand{\TBstrut}{\Tstrut\Bstrut}
+  
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%
+% This WON'T just be single files!
+% Temporary structure!
+\include{01-introduction}
+\include{02-birrell}
+\include{03-yang}
+\include{04-grayson}
+\include{05-steinmetz}
+
+\bibliographystyle{spphys}
+\bibliography{bibs/birrell-refs,bibs/steinmetz-refs}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
