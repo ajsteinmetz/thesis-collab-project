@@ -1,8 +1,8 @@
 
-\chapter{ Collision Integrals}\label{ch:coll_simp}
+\section{ Collision Integrals}\label{ch:coll_simp}
 
 
-\section{Collision Integral Inner Products}\label{coll_simp_sec}
+\subsection{Collision Integral Inner Products}\label{coll_simp_sec}
 Having detailed our method for solving the Boltzmann equation in chapter \ref{ch:boltz_orthopoly}, we must now address the computation of  collision integrals for neutrino processes.   See also our paper \cite{Birrell:2014uka}. To solve for the mode coefficients using \req{b_eq}, we must evaluate the collision operator inner products
 \begin{align}\label{collision_integrals}
 R_k\equiv&\langle\frac{1}{f_\Upsilon E_1}C[f_1],\hat\psi_k\rangle=\int_0^\infty \hat\psi_k(z_1)C[f_1](z_1) \frac{z_1^2}{E_1}dz_1\\
@@ -28,7 +28,7 @@ Even after eliminating the delta functions in \req{coll_ip}, we are still left w
 
 The distribution functions we are concerned with are isotropic in some frame defined  by a unit timelike vector $U$, i.e. they depend only on the four-momentum only through $p_i\cdot U$.  The same is true of the basis functions $\hat\psi_k$, and hence the  $g_i$ depend only on $p_i\cdot U$ as well.  In \cite{Madsen,Dolgov_Hansen} approaches are outlined that reduce integrals of this type down to $3$ dimensions.  We outline the method from \cite{Dolgov_Hansen}, as applied to our spectral method solver, in appendix \ref{app:dogov_method}.  However, the integrand one obtains from these methods is only piecewise smooth or has an integration domain with a complicated geometry.  This presents difficulties for the integration routine we employ, which utilizes adaptive mesh refinement to ensure the desired error tolerance.  We take an alternative approach that, for the scattering kernels found in $e^\pm$, neutrino interactions, reduces the problem to three iterated integrals (but not quite to a three dimensional integral) and results in an integrand with better smoothness properties.  In our comparison with the method in \cite{Dolgov_Hansen}, the resulting formula evaluates significantly faster under the numerical integration scheme we used.   The derivation presented expands on what is found in \cite{letessier2002hadrons}.
 
-\section{Simplifying the Collision Integral}\label{coll_simp_sec}
+\subsection{Simplifying the Collision Integral}\label{coll_simp_sec}
 Our strategy for simplifying the collision integrals is as follows.  We first make a change of variables designed to put the 4-momentum conserving delta function in a particularly simple form and allowing us to analytically use that delta function to reduce the integral from $16$ to $12$ dimensions.  The remaining four delta functions, which impose the mass shell constraints, are then seen to reduce to integration over a product of spheres.  The simple form of the submanifold that these delta function restict us to allows us to use the method in chapter \ref{ch:vol_forms} to analytically evaluate all four of the remaining delta functions simultaneously.  During this process, the isotropy of the system in the frame given by the 4-vector $U$ allows us to reduce the dimensionality further, by analytically evaluating several of the angular integrals. 
 
 The change of variables that simplifies the 4-momentum conserving delta function is given by
@@ -201,7 +201,7 @@ t(x)=&\frac{1}{4}((q^0)^2-r^2+((q^{'})^0)^2-(r^{'})^2-2q^0(q^{'})^0+2rr^{'}x),\\
 \end{align}
 
 
-\section{Electron and Neutrino Collision Integrals}\label{nu_matrix_elements}
+\subsection{Electron and Neutrino Collision Integrals}\label{nu_matrix_elements}
 In this section, we compute various integrals of the scattering matrix element that appear in the scattering kernels for processes involving $e^\pm$ and neutrinos.  For reference, we collect the important results from section \ref{coll_simp_sec} on evaluation of the scattering kernel integrals \req{collision_integrals}, where we have changed notation from $|\vec p|$ to $p$.
 
 \begin{align}\label{M_simp}
@@ -284,7 +284,7 @@ $\nu_i+e^+\rightarrow\nu_i+e^+$ & $128G_F^2[g_R^2(p_1\cdot p_2)(p_3\cdot p_4)+\t
 In the following subsections, we will analytically simplify \req{M_simp} for each of these processes as much as possible.
 
 
-\subsection{$\nu\nu\rightarrow\nu\nu$ }
+\subsubsection{$\nu\nu\rightarrow\nu\nu$ }
 Using \req{Mandelstam}, the matrix elements for neutrino neutrino scattering can be simplified to
 \begin{align}
 \label{TA002}
@@ -324,7 +324,7 @@ where the tilde quantities are obtained by non-dimensionalizing via scaling by $
 
 
 
-\subsection{$\nu\bar\nu\rightarrow \nu\bar\nu$ }
+\subsubsection{$\nu\bar\nu\rightarrow \nu\bar\nu$ }
 Using \req{Mandelstam}, the matrix elements for neutrino anti-neutrino scattering can be simplified to
 \begin{align}
 S|\mathcal{M}|^2=C\left(\frac{s+t}{2}\right)^2
@@ -361,7 +361,7 @@ M_{\nu\bar\nu\rightarrow\nu\bar\nu}=&\frac{C}{2048(2\pi)^5 }T^8\!\!\!\int_0^\inf
 \end{align}
  If we want to emphasize the role of $C$ then we write $M_{\nu\bar\nu\rightarrow\nu\bar\nu}(C)$. Note that due to the polynomial form of the matrix element integral, the double integral in brackets breaks into a linear combination of products of one dimensional integrals, meaning that the nesting of integrals is only three deep.
 
-\subsection{$\nu\bar{\nu}\rightarrow e^+e^-$}\label{nu_nubar_int}
+\subsubsection{$\nu\bar{\nu}\rightarrow e^+e^-$}\label{nu_nubar_int}
 Using \req{Mandelstam}, the matrix elements for neutrino anti-neutrino annihilation into $e^\pm$ can be simplified to
 \begin{align}
 S|\mathcal{M}|^2=A\left(\frac{s+t-m_e^2}{2}\right)^2+B\left(\frac{m_e^2-t}{2}\right)^2+Cm_e^2\frac{s}{2}
@@ -410,7 +410,7 @@ M_{\nu\bar\nu\rightarrow e^+e^-}=&\frac{1}{128(2\pi)^5 }\int_{4m_e^2}^\infty\int
 where $\tilde{m_e}=m_e/T$.  If we want to emphasize the role of $A,B,C$ then we write $M_{\nu\bar\nu\rightarrow e^+e^-}(A,B,C)$.  Note that this expression is linear in $(A,B,C)\in\mathbb{R}^3$. Also note that, under our assumptions that the distributions of $e^+$ and $e^-$ are the same,  the $G_{ij}$ terms that contain the product of $e^\pm$ distributions are even functions. Hence the term involving the integral of $yz$ vanishes by antisymmetry.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{ $\nu e^\pm\rightarrow \nu e^\pm$}
+\subsubsection{ $\nu e^\pm\rightarrow \nu e^\pm$}
  Using \req{Mandelstam}, the matrix elements for neutrino $e^\pm$ scattering can be simplified to
 \begin{align}
 \label{TA002}
@@ -467,7 +467,7 @@ As above, after scaling all masses by $T$, we obtain a prefactor of $T^8$. If we
 
 
 
-\subsection{Total Collision Integral}
+\subsubsection{Total Collision Integral}
 We now give the total collision integrals for neutrinos.    In the following, we indicate which distributions are used in each of the four types of scattering integrals discussed above by using the appropriate subscripts. For example, to compute $M_{\nu_e\bar\nu_\mu\rightarrow\nu_e\bar\nu_\mu}$  we set $G_{1,2}=\hat\psi_jf^1f^2$, $G_{3,4}=f_3f_4$, $f_1= f_{\nu_e}$, $f_3=f_{\nu_e}$, and $f_2=f_4=f_{\bar\nu_\mu}$ in the expression for $M_{\nu\bar\nu\rightarrow\nu\bar\nu}$ from section \ref{nu_nubar_int} and then, to include the reverse direction of the process, we must {\emph subtract}  the analogous expression whose only difference is $G_{1,2}=\hat\psi_jf_1f_2$, $G_{3,4}=f^3f^4$.
 With this notation the collision integral for $\nu_e$ is
 \begin{align}\label{M_tot}
@@ -499,7 +499,7 @@ R_k=&2\pi^2T^{-3} M_{k,\nu_\mu}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{ Neutrino Freeze-out Test}
+\subsubsection{ Neutrino Freeze-out Test}
 Now that we have the above expressions for the neutrino scattering integrals, we can abandon the model problem used to test our method in chapter \ref{ch:boltz_orthopoly} and compare the chemical equilibrium and non-equilibrium methods on the problem of neutrino freeze-out using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor, \req{divTmn}, implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from appendix \ref{app:QED_corr}.
 
 
@@ -535,7 +535,7 @@ Chemical Non-Eq& 3&1.39785&0.009230 & 0.003791&3.044264 \\
 \end{table}
 We see that $\Delta N_\nu\equiv N_\nu-3$ agrees to $2$ digits and $4$ digits when using $2$ and $3$ modes respectively for the chemical non-equilibrium method, and similar behavior holds for the other quantities. Due to the reduction in the required number of modes, the chemical non-equilibrium method with the minimum number of required modes ($2$ modes) is more than $20\times$ faster than the chemical equilibrium method with its minimum number of required modes ($4$ modes), a very significant speed-up when the minimum number of modes meets the required precision.  The value of $N_\nu$ we obtain agrees with that found by \cite{Mangano2005}, up to their cited error tolerance of $\pm 0.002$.
 
-\section{Conservation Laws and Scattering Integrals}
+\subsection{Conservation Laws and Scattering Integrals}
 For some processes, some of the $R_k$'s vanish exactly.  As we now show, this is an expression of various conservation laws. First consider processes in which $f_1=f_3$ and $f_2=f_4$, such as kinetic scattering processes. Since $m_1=m_3$ and $m_2=m_4$ we have $r=r^{'}$, $q^0=(q^{'})^0$.  The scattering terms are all two dimensional integrals of some function of $s$ and $p$ multiplied by 
 
 {\small
@@ -570,7 +570,7 @@ Finally, we point out how the vanishing of these inner products is a reflection 
 for some $c_0,d_0,d_1$. Therefore, the vanishing of $R_0$ is equivalent to conservation of comoving particle number.  The vanishing of $R_0$ and $R_1$ implies $\rho\propto 1/a^4$ i.e. that the reduction in energy density is due entirely to redshift; energy is not lost from the distribution due to scattering.  These findings match the situations above where we found one or both of $R_0=0$, $R_1=0$.  $R_0$ vanished for all kinetic scattering processes and we know that all such processes conserve comoving particle number.  Both $R_0$ and $R_1$ vanished for a distribution scattering from itself and in such a process one expects that no energy is lost from the distribution by scattering, it is only redistributed among the particles corresponding to that distribution.
 
 
-\section{Freeze-Out Temperature and Relaxation Time}
+\subsection{Freeze-Out Temperature and Relaxation Time}
 To make a connection with our development from chapter \ref{ch:model_ind}, we now give a definition of the kinetic freeze-out temperature that is applicable to the Boltzmann equation model. Any such definition will be only approximate, as the freeze-out process is not a sharp transition.  Our definition is motivated in part the treatment in \cite{kolb}. 
 
 We first define a characteristic length between scatterings. Recalling the formula \req{n_div}, we obtain the fractional rate of change of comoving particle number
@@ -610,7 +610,7 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-\centerline{\includegraphics[height=6cm]{./ParametricStudies/nu_e_scattering_length_eta_0_23-eps-converted-to.pdf}\includegraphics[height=6cm]{./ParametricStudies/nu_mu_scattering_length_eta_0_23-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6cm]{03-birrell/ParametricStudies/nu_e_scattering_length_eta_0_23.eps}\includegraphics[height=6cm]{03-birrell/ParametricStudies/nu_mu_scattering_length_eta_0_23.eps}}
 \caption{Comparison of Hubble parameter to neutrino scattering length for various types of processes for $\sin^2(\theta_W)=.23$. }\label{fig:scatt_length}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -649,9 +649,9 @@ We demonstrate this numerically in figure \ref{fig:relax} where we have initiali
 
 \begin{minipage}{\linewidth}
 \makebox[0.5\linewidth]%
-{\includegraphics[height=6.2cm]{./ScatteringIntegrals/Ups_relax-eps-converted-to.pdf}}
+{\includegraphics[height=6.2cm]{03-birrell/ScatteringIntegrals/Ups_relax.eps}}
 \makebox[0.5\linewidth]%
-{\includegraphics[height=6.2cm]{./ScatteringIntegrals/T_relax-eps-converted-to.pdf}}
+{\includegraphics[height=6.2cm]{03-birrell/ScatteringIntegrals/T_relax.eps}}
 \end{minipage}
 \caption{Starting at $12\MeV$, this figure shows the relaxation of a non-equilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the left frame while the temperatures are shown in the right frame.\label{fig:relax}}
  \end{figure}
@@ -663,9 +663,8 @@ The attentive reader will notice that we have omitted here a discussion of flavo
 
 
 
-\begin{subappendices}
 
-\section{Another Method for Computing Scattering Integrals}\label{app:dogov_method}
+\subsection{Another Method for Computing Scattering Integrals}\label{app:dogov_method}
 As a comparison and consistency check for our method of computing the scattering integrals, in this appendix we analytically reduce the collision integral down to $3$ dimensions by a method adapted from \cite{Dolgov_Hansen}.  The only difference between our treatment in this section and theirs being that they solved the Boltzmann equation numerically on a grid in momentum space and not via a spectral method.  Therefore we must take an inner product of the collision operator with a basis function and hence we are integrating over all particle momenta, whereas they integrate over all momenta except that of particle one.  For completeness we give a detailed discussion of their method.
 
  Writing the conservation of four-momentum enforcing delta function
@@ -745,7 +744,7 @@ D_3=&\frac{\pi}{240}(p_3^5-p_4^5-(p_1+p_2)^3(p_1^2-3p_1p_2+p_2^2)+5(p_1^3+p_2^3)
 \end{align}
 We computed the remaining integrals numerically in several test cases for each of the reaction types in section \ref{nu_matrix_elements} and obtained agreement between this method and ours, up to the integration tolerance used.  However, the method we have developed in this chapter has the distinct advantage of resulting in a smooth integrand which then must be evaluated numerically.  The expressions obtained here are only piecewise smooth and therefore much costlier to integrate numerically.  In tests, the difference in integration time was found to be $1000$ times longer in some instances for the non-smooth integrand using an adaptive mesh integration method.  Since the cost of numerically solving the Boltzmann equation is dominated by the cost of computing the collision integrals, this is a very significant optimization.
 
-\section{QED Corrections to Equation of State}\label{app:QED_corr}
+\subsection{QED Corrections to Equation of State}\label{app:QED_corr}
 At the time of neutrino freeze-out, the universe is at sufficiently high temperature for photons and $e^\pm$ to be in chemical and kinetic equilibrium.  The temperature is also sufficiently high for QED corrections to the photon and $e^\pm$ equation of state to be non-negligible.  We use the results given in \cite{Heckler:1994tv,Mangano2002} to include these in our computation by modifying the combined photon, $e^\pm$ equation of state
 \begin{align}
 P=P^0+P^{int},\hspace{2mm} \rho=-P+T\frac{dP}{dT}
@@ -759,4 +758,3 @@ and $P^0$ is the pressure of a noninteracting gas of photons and $e^\pm$ in chem
 
 
 
-\end{subappendices}

@@ -1,11 +1,11 @@
-\chapter{Dependence of Neutrino Freeze-out on Parameters}\label{ch:param_studies}
+\section{Dependence of Neutrino Freeze-out on Parameters}\label{ch:param_studies}
 Having developed an improved method for solving the Boltzmann equation and computing scattering integrals that greatly reduces the computational cost, we are now able to characterize the dependence of neutrino freeze-out on parameters.  This will allow us to identify potential avenues by which the tension between observed and theoretical values of $N_\nu$ may be alleviated.  See also our paper \cite{Birrell:2014uka}.
 
 Our study will also us to constrain the time and/or temperature variation of certain natural constants by comparing the results with measurements of $N_\nu$.  The topic of time variation of natural constants is a very active field with a long history. For a comprehensive review of this area, with which we make only slight contact,  see \cite{Uzan:2010pm}.
 
 
 
-\section{Weinberg Angle}
+\subsection{Weinberg Angle}
 
 As mentioned above, the Weinberg angle is one of the standard model parameters that impacts the neutrino freeze-out process.  More specifically, it is found in the matrix elements of weak force processes, including the reactions $e^+e^-\rightarrow \nu\bar\nu$ and $\nu e^\pm\rightarrow \nu e^\pm$ found in tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac}.  It is determined by the $SU(2)\times U(1)$ coupling constants $g$, $g^{'}$  by
 \begin{equation}
@@ -24,7 +24,7 @@ It has a measured value in vacuum $\theta_W\approx 30^\circ$, giving $\sin(\thet
 In letting $\sin(\theta_W)$, and hence $g$ and $g^{'}$, vary we must fix the electromagnetic coupling $e$ so as not to impact sensitive cosmological observables such as Big Bang Nucleosynthesis.  Fixing $v$, the smallest $M_W$ can become is when $\sin(\theta_W)=1$, yielding a reduction in $M_W$ by a factor of $2$.  This implies that $M_Z>M_W\gg |p|$ for neutrino momentum $p$ in the energy range of neutrino freeze-out, around $1\MeV$, even as we vary $\sin(\theta_W)$.  This approximation is inherent in the formulas for the matrix elements  in tables  \ref{table:nu_e_reac} and \ref{table:nu_mu_reac} and continues to be valid here. We will characterize the dependence of $N_\nu$ on $\sin(\theta_W)$ in section \ref{sec:param_char} below, but first we identify the remaining parameter dependence in the Einstein Boltzmann system
 
 
-\section{Interaction Strength}
+\subsection{Interaction Strength}
  In order to isolate the dependence of the Einstein Boltzmann system for neutrino freeze-out on dimensioned quantities, we now convert it to dimensionless form. Letting $m_e$ be the mass scale and $M_p/m_e^2$ be the time scale the Einstein equations take the form
 \begin{equation}
 H^2=\frac{\rho}{3},\hspace{2mm}\dot\rho=-3H(\rho+P).
@@ -44,13 +44,13 @@ In the following section we characterize the dependence of $N_\nu$ on the intera
 
 
 
-\section{Dependence of $N_\nu$ on Parameters}\label{sec:param_char}
+\subsection{Dependence of $N_\nu$ on Parameters}\label{sec:param_char}
 
 The main result  of this chapter is the  dependence of $N_\nu$ on  the SM parameters   $\sin^2\theta_W$ and $\eta$. These results are shown in  figure \ref{N_nu_params}, presented as a function of  Weinberg angle $\sin^2 \theta_W $ for $\eta/\eta_0=1,2,5,10$. The effects of an increase in both parameters above the vacuum values superpose  in the parameter range  considered, amplifying the effect and generating a significant increase in  $N_\nu\to 3.5$. The present day vacuum value of Weinberg angle puts the $\nu_\mu,\nu_\tau$ freeze-out temperature, seen in the right pane of figure \ref{fig:freezeoutT},  near its maximum value.  This is why a comparatively large change in $\sin^2(\theta_W)$ is needed to produce a change in $N_\nu$ for $\sin^2(\theta_W)\approx0.23$.
  
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}%[H]
-\centerline{\includegraphics[width=0.70\columnwidth]{./ParametricStudies/N_eff2-eps-converted-to.pdf}
+\centerline{\includegraphics[width=0.70\columnwidth]{03-birrell/ParametricStudies/N_eff2.eps}
 }
 \caption{Change in effective number of neutrinos  $N_\nu$ as a function of Weinberg angle for  several values of $\eta/\eta_0=1,2,5,10$. Vertical line is $\sin^2(\theta_W)=0.23$.}
 \label{N_nu_params}  
@@ -61,7 +61,7 @@ We performed a least squares fit of $N_\nu$ over the range $0\leq \sin^2(\theta_
 N_\nu=&3.003-0.095\sin^2\theta_W +0.222\sin^4\theta_W  -0.164\sin^6\theta_W \notag\\
 +&\sqrt{\frac{\eta}{\eta_0}}\left(0.043+0.011\sin^2\theta_W +0.103\sin^4\theta_W\right).
 \end{align}
-$N_\nu$ is monotonically increasing in $\eta/\eta_0$ with dominant behavior  scaling as $\sqrt{ \eta/\eta_0}$. Monotonicity is to be expected, as increasing $\eta$ decreases the freeze-out temperature and the longer neutrinos are able to remain coupled to $e^\pm$, the more energy and entropy from annihilation is transfered to neutrinos.
+$N_\nu$ is monotonically increasing in $\eta/\eta_0$ with dominant behavior  scaling as $\sqrt{ \eta/\eta_0}$. Monotonicity is to be expected, as increasing $\eta$ decreases the freeze-out temperature and the longer neutrinos are able to remain coupled to $e^\pm$, the more energy and entropy from annihilation is transferred to neutrinos.
 
 We complement this with fits to the photon to neutrino temperature ratios $ T_\gamma / T_{\nu_e}, T_\gamma / T_{\nu_\mu}= T_\gamma / T_{\nu_\tau} $, and the neutrino fugacities, $\Upsilon_{\nu_e}, \Upsilon_{\nu_\mu}=\Upsilon_{\nu_\tau}$, again with relative error less than $0.2\%$  
 \begin{align}
@@ -79,7 +79,7 @@ y\equiv  \sqrt{\frac{\eta}{\eta_0}}.
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}%[H]
-\centerline{\includegraphics[width=0.75\columnwidth]{./ParametricStudies/region_plot_legend-eps-converted-to.pdf}
+\centerline{\includegraphics[width=0.75\columnwidth]{03-birrell/ParametricStudies/region_plot_legend.eps}
 }
 \caption{$N_\nu$ bounds in the $\eta/\eta_0, \sin^2(\theta_W)$ plane. Dark (green) for $N_\nu\in (3.03,3.57)$ corresponding to Ref.\cite{Planck} CMB+BAO analysis and light(teal) extends the region to $N_\nu<3.87$ i.e. to CMB+$H_0$. Dot-dashed line delimits the 1s.d. lower boundary of the second analysis.}
 \label{N_nu_domain}
@@ -92,12 +92,12 @@ In  Figure \ref{N_nu_domain} the dark (green) color shows the combined range of 
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
-\section{Summary, Discussion, and Conclusions}\label{sec:concl}
+\subsection{Summary, Discussion, and Conclusions}\label{sec:concl}
 We have employed a novel spectral method Boltzmann solver and a new procedure for evaluating the Boltzmann scattering integrals in order to characterize the impact of a potential time and/or temperature variation of SM parameters on the effective number of neutrinos. Specifically, we identified a dimensionless combination of $m_e$, $M_p$, and $G_F$, called the interaction strength $\eta$, that, along with the Weinberg angle $\sin^2 \theta_W$, control neutrino freeze-out and the resulting value of the effective number of neutrinos, $N_\nu$.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Primordial Variation of Natural Constants}
+\subsubsection{Primordial Variation of Natural Constants}
 The question which we addressed in this section is: What neutrino decoupling in the early Universe can tell us about the values of natural constants when the Universe was about one second old and at an ambient temperature near to 1 MeV (11.6 billion degrees K). Our results were presented assuming that the Universe contains no other effectively massless particles but the three left handed neutrinos and corresponding, three right handed anti-neutrinos. 
 
 We found that near to the physical value of the Weinberg angle  $\sin^2 \theta_W\simeq 0.23$ the effect of changing $\sin^2\theta_W$ on the decoupling of neutrinos is small. Thus as seen in Figure \ref{N_nu_params}  the dominant variance is due to the change  in the coupling strength $\eta/\eta_0$, \req{eta_def}  and \req{eta0_def}. The dotted line in  Figure \ref{N_nu_domain} shows that in order to achieve a change in $N_\nu$ at the level of up to 5\% that is  $N_\nu\lesssim 3.2 $  both $\sin^2 \theta_W$ and $\eta/\eta_0$ must change significantly, with e.g. $\eta$ increasing by an order of magnitude.
@@ -115,7 +115,7 @@ While ideas justifying strong variation of $\eta$ can be developed as two of the
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Two Different Ways to Change $N_\nu$}
+\subsubsection{Two Different Ways to Change $N_\nu$}
 
 However, there are additional challenges we have not at this time addressed. This is so since the immediate observable is the energy content of the invisible Universe as defined by the effective number of neutrinos $N_\nu$. Considering a value of   $N_\nu>3$,  there could  be a contribution from presently not discovered, more weakly interacting massless particles that decoupled even before neutrinos, and which therefore could contribute fractionally to $N_\nu$, see our discussion in Ref.\cite{Birrell:2014connect}. 
 
@@ -128,14 +128,13 @@ The alternative explanation of $N_\nu>3$ in terms of variation of  of natural co
 
 
 
-\begin{subappendices}
-\section{Weinberg Angle Plots}\label{app:weinberg}
+\subsection{Weinberg Angle Plots}\label{app:weinberg}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
-\centerline{\includegraphics[height=5.8cm]{./ParametricStudies/delta_rho-eps-converted-to.pdf}\hspace{-5mm}\includegraphics[height=5.8cm]{./ParametricStudies/upsilon-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/delta_rho.eps}\hspace{-5mm}\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/upsilon.eps}}
 \caption{Fractional increase in neutrino energy (left) and neutrino fugacities (right), as functions of Weinberg angle. Vertical line is $\sin^2(\theta_W)=0.23$.}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,7 +144,7 @@ The alternative explanation of $N_\nu>3$ in terms of variation of  of natural co
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
-\centerline{\includegraphics[height=5.8cm]{./ParametricStudies/aT_gamma-eps-converted-to.pdf}\hspace{-5mm}\includegraphics[height=5.8cm]{./ParametricStudies/T_ratio-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/aT_gamma.eps}\hspace{-5mm}\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/T_ratio.eps}}
 \caption{Dependence on Weinberg angle of photon reheating  (left) and photon-neutrino temperature ratios (right) after freeze-out. Vertical line is $\sin^2(\theta_W)=0.23$.}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,18 +153,18 @@ The alternative explanation of $N_\nu>3$ in terms of variation of  of natural co
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
-\centerline{\includegraphics[height=6.3cm]{./ParametricStudies/nu_e_freezeout-eps-converted-to.pdf}\hspace{5mm}\includegraphics[height=6.3cm]{./ParametricStudies/nu_mu_freezeout-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.3cm]{03-birrell/ParametricStudies/nu_e_freezeout.eps}\hspace{5mm}\includegraphics[height=6.3cm]{03-birrell/ParametricStudies/nu_mu_freezeout.eps}}
 \caption{Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of Weinberg angle. Vertical line is $\sin^2(\theta_W)=0.23$.}\label{fig:freezeoutT}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Interaction Strength Plots}\label{app:int_strength}
+\subsection{Interaction Strength Plots}\label{app:int_strength}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
-\centerline{\includegraphics[height=5.8cm]{./ParametricStudies/delta_rho_GF-eps-converted-to.pdf}\hspace{-5mm}\includegraphics[height=5.8cm]{./ParametricStudies/upsilon_GF-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/delta_rho_GF.eps}\hspace{-5mm}\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/upsilon_GF.eps}}
 \caption{Fractional increase in neutrino energy (left) and neutrino fugacities (right), as functions of interaction strength.}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,7 +174,7 @@ The alternative explanation of $N_\nu>3$ in terms of variation of  of natural co
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
-\centerline{\includegraphics[height=5.8cm]{./ParametricStudies/aT_gamma_GF-eps-converted-to.pdf}\hspace{-5mm}\includegraphics[height=5.8cm]{./ParametricStudies/T_ratio_GF-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/aT_gamma_GF.eps}\hspace{-5mm}\includegraphics[height=5.8cm]{03-birrell/ParametricStudies/T_ratio_GF.eps}}
 \caption{Dependence on  interaction strength of photon reheating (left) and photon-neutrino temperature ratios (right) after freeze-out.}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,10 +183,9 @@ The alternative explanation of $N_\nu>3$ in terms of variation of  of natural co
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
-\centerline{\includegraphics[height=6.3cm]{./ParametricStudies/nu_e_freezeout_GF-eps-converted-to.pdf}\hspace{5mm}\includegraphics[height=6.3cm]{./ParametricStudies/nu_mu_freezeout_GF-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.3cm]{03-birrell/ParametricStudies/nu_e_freezeout_GF.eps}\hspace{5mm}\includegraphics[height=6.3cm]{03-birrell/ParametricStudies/nu_mu_freezeout_GF.eps}}
 \caption{Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of interaction strength.}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{subappendices}
 

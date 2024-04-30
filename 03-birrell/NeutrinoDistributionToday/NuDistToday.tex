@@ -1,9 +1,9 @@
-\chapter{Neutrinos Today}\label{ch:nu_today}
+\section{Neutrinos Today}\label{ch:nu_today}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Among the great science and technology challenges of this century is the development of the experimental capability to detect cosmic background neutrinos~\cite{Stodolsky:1975,Cabibbo:1982,Shvartsman,Langacker:1982,Smith,Ferreras:1995wf,Hagmann:1999kf,Duda:2001hd,Gelmini,Ringwald:2009,Liao:2012,Hedman}. With the  recently proposed PTOLEMY experiment, which aims to detect relic  elctron-neutrino capture by tritium \cite{PTOLEMY}, the characterization of the relic neutrino background is increasingly relevant.  Using our  characterization of the neutrino distribution after freeze-out and the subsequent free-streaming dynamics from \cite{Birrell:2013_2} and summarized in section \ref{nu_freezeout_summary}, we lay groundwork for a characterization of the present day relic neutrino spectrum, which we explore  from the  perspective of an observer moving relative to the neutrino background, including the dependence on neutrino mass and $N_\nu$. Beyond consideration of the observable neutrino distributions, we evaluate the ${\cal O}(G_F^2)$ mechanical drag force acting on the moving observer.  The work presented here can be found in our paper \cite{nu_today}
+Among the great science and technology challenges of this century is the development of the experimental capability to detect cosmic background neutrinos~\cite{Stodolsky:1975,Cabibbo:1982,Shvartsman,Langacker:1982,Smith,Ferreras:1995wf,Hagmann:1999kf,Duda:2001hd,Gelmini,Ringwald:2009,Liao:2012,Hedman}. With the  recently proposed PTOLEMY experiment, which aims to detect relic  electron-neutrino capture by tritium \cite{PTOLEMY}, the characterization of the relic neutrino background is increasingly relevant.  Using our  characterization of the neutrino distribution after freeze-out and the subsequent free-streaming dynamics from \cite{Birrell:2013_2} and summarized in section \ref{nu_freezeout_summary}, we lay groundwork for a characterization of the present day relic neutrino spectrum, which we explore  from the  perspective of an observer moving relative to the neutrino background, including the dependence on neutrino mass and $N_\nu$. Beyond consideration of the observable neutrino distributions, we evaluate the ${\cal O}(G_F^2)$ mechanical drag force acting on the moving observer.  The work presented here can be found in our paper \cite{nu_today}
 
 %%%%%%%%%%%%%%%%
-\section{Neutrino Distribution in a Moving Frame}
+\subsection{Neutrino Distribution in a Moving Frame}
 
 The neutrino background and the cosmic microwave background (CMB) were in equilibrium until decoupling (called freeze-out) at $T_k\simeq {\cal O}{\rm (MeV)}$, hence one surmises that an observer would have the same relative velocity relative to the relic neutrino background  as with CMB. As a particular example in considering the spectrum, we present in more detail the case of an observer comoving with  Earth velocity $v_\oplus=300$\,km/s relative to the CMB,  modulated by orbital velocity ($\pm29.8$\,km/s).  We will write velocities in units of $c$, though our specific results will be presented in km/s.
 
@@ -24,7 +24,7 @@ There are several available bounds on neutrino masses. Neutrino energy and press
  The relations derived in~\cite{Birrell:2013_2} and restated in section \ref{nu_freezeout_summary} determine $T_\nu/T_\gamma$ and  $\Upsilon$ in terms of the measured  value of  $N_\nu$ under the assumption of a strictly SM-particle inventory.  In the following we treat $N_\nu$  as a variable model parameter and use the above mentioned relations to characterize our results in terms of $N_\nu$.
 
 
-\section{Velocity, Energy, and Wavelength Distributions}
+\subsection{Velocity, Energy, and Wavelength Distributions}
 
 Using \req{neutrino_dist}, the normalized FDEV velocity distribution for an observer in relative motion has the form
 \begin{align} \label{fvdistrib}
@@ -40,7 +40,7 @@ n_\nu=[-0.3517\delta N_\nu^2+6.717\delta N_\nu+56.06]\,{\rm cm}^{-3}
 We show $f_v$ in figure \ref{fig:rel_v_dist_300}   for several values of the neutrino mass, $v_{\text{rel}}=300$ km/s, and $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines). As expected, the lighter the neutrino, the more $f_v$  is weighted towards higher velocities with the velocity becoming visibly peaked about $v_{\text{rel}}$ for $m_\nu=2$ eV. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}%[h]
-\centerline{\includegraphics[height=6cm]{./NeutrinoDistributionToday/rel_v_dist_300-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6cm]{03-birrell/NeutrinoDistributionToday/rel_v_dist_300.eps}}
 \caption{Normalized neutrino FDEV velocity distribution in the Earth frame. We show the distribution for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines).}\label{fig:rel_v_dist_300}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,7 +53,7 @@ We show $f_E$ in figure \ref{fig:E_dist_300}  for several values of the neutrino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}%[h]
-\centerline{\includegraphics[height=6cm]{./NeutrinoDistributionToday/E_dist_300-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6cm]{03-birrell/NeutrinoDistributionToday/E_dist_300.eps}}
 \caption{Neutrino FDEV energy distribution in the Earth frame. We show the distribution for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines). }\label{fig:E_dist_300}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,10 +62,10 @@ By multiplying $f_E$ by the neutrino velocity and number density for a single ne
  \begin{equation}
  \frac{dJ}{dE}\equiv\frac{dn}{dAdtdE},
 \end{equation} 
-shown in figure \ref{fig:flux_dist}. We show the result for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines). The flux is normalized in these cases to a local denisty $56.36$~cm${}^{-3}$ and $60.10$~cm${}^{-3}$ respectively. The precise neutrino flux in the Earth frame is significant for efforts to detect relic neutrinos, such as the PTOLEMY experiment~\cite{PTOLEMY}. The energy dependence of the flux shows a large sensitivity to the mass. However, the maximal fluxes do not vary significantly with $m$. In fact the maximum values are independent of $m$ when $v_{\text{rel}}=0$, as follows from the fact that $v=p/E=dE/dp$.  In the Earth frame, where $0<v_\oplus\ll c$, this translates into only a small variation in the maximal flux.
+shown in figure \ref{fig:flux_dist}. We show the result for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines). The flux is normalized in these cases to a local density $56.36$~cm${}^{-3}$ and $60.10$~cm${}^{-3}$ respectively. The precise neutrino flux in the Earth frame is significant for efforts to detect relic neutrinos, such as the PTOLEMY experiment~\cite{PTOLEMY}. The energy dependence of the flux shows a large sensitivity to the mass. However, the maximal fluxes do not vary significantly with $m$. In fact the maximum values are independent of $m$ when $v_{\text{rel}}=0$, as follows from the fact that $v=p/E=dE/dp$.  In the Earth frame, where $0<v_\oplus\ll c$, this translates into only a small variation in the maximal flux.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}%[h]
-\centerline{\includegraphics[height=7cm]{./NeutrinoDistributionToday/flux_dist-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=7cm]{03-birrell/NeutrinoDistributionToday/flux_dist.eps}}
 \caption{Neutrino flux density in the Earth frame. We show the result for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines) for an observer moving with $v_\oplus=300$\,km/s.}\label{fig:flux_dist}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,15 +80,15 @@ shown in figure \ref{fig:deBrogle_300} for $v_{\text{rel}}=300$ km/s and for sev
 \begin{figure}%[h]
 \begin{minipage}{\linewidth}
 \makebox[0.5\linewidth]%
-{\includegraphics[height=5.8cm]{./NeutrinoDistributionToday/deBrogle_300-eps-converted-to.pdf}}
+{\includegraphics[height=5.8cm]{03-birrell/NeutrinoDistributionToday/deBrogle_300.eps}}
 \makebox[0.5\linewidth]%
-{\includegraphics[height=5.8cm]{./NeutrinoDistributionToday/f_ratio-eps-converted-to.pdf}}
+{\includegraphics[height=5.8cm]{03-birrell/NeutrinoDistributionToday/f_ratio.eps}}
 \end{minipage}
 \caption{Neutrino  FDEV de Broglie wavelength  distribution in the Earth frame. We show in top panel the distribution for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines) and in bottom panel their ratio.}\label{fig:deBrogle_300}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Drag Force}
+\subsection{Drag Force}
 Given the neutrino distribution, we evaluate the drag force due to the anisotropy of the neutrino distribution in the rest frame of the moving object for $N_\nu=3.046$. The relic neutrinos will undergo potential scattering with the scale of the potential strength being
 \begin{equation}\label{V0}
 V_0=CG_F\rho_{N_c},\hspace{2mm} \rho_N\equiv N_c/R^3
@@ -204,7 +204,7 @@ This is a similar result to the long wavelength hard sphere limit \req{FLHard}, 
 
 
  
-\section{Summary and Conclusion}
+\subsection{Summary and Conclusion}
 In summary, we have characterized the relic cosmic neutrinos and their velocity, energy, and de Broglie wavelength distributions in a frame of reference moving relative to the neutrino background. We have shown explicitly the mass $m_\nu$ dependence and the dependence on neutrino reheating expressed by $N_\nu$, choosing a range within the experimental constraints. This is a necessary input for the measurement of $N_\nu$ and neutrino mass by future detection efforts.  Finally, we have discussed in detail the $O(G_F^2)$ mechanical drag force  originating in the dipole anisotropy induced by motion relative to the neutrino background.  Despite enhancement with the total target charge found within the massive neutrino wavelength, the magnitude of the force is found to be well below the reach of current  precision force measurements.
 
 Our results are derived under the assumption that $N_\nu$ is due entirely to SM neutrinos, with no contribution from new particle species. In principle future, relic neutrino detectors, such as PTOLEMY~\cite{PTOLEMY}, will be able to distinguish between these alternatives since the effect of $N_\nu$ as presented here is to increase neutrino flux~\cite{Birrell:2013_2}, see \req{nnu}. However, to this end one must gain precise control over the enhancement of neutrino galactic relic density due to  gravitational effects~\cite{Ringwald:2004np} as well as the annual modulation~\cite{Safdi}. 

@@ -1,4 +1,4 @@
-\chapter{Boltzmann Equation Solver Adapted to Emergent Chemical Non-equilibrium}\label{ch:boltz_orthopoly}
+\section{Boltzmann Equation Solver Adapted to Emergent Chemical Non-equilibrium}\label{ch:boltz_orthopoly}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Having completed our brief geometrical interlude, we now return to our study of neutrino freeze-out. The analysis in chapter \ref{ch:model_ind} was based on exact chemical and kinetic equilibrium and sharp freeze-out transitions at $T_{ch}$ and $T_k$, but these are  only approximations.  The  Boltzmann equation is a more precise model of the dynamics of the freeze-out process and furthermore, given the collision dynamics it is capable of capturing in a {\em quantitative manner} the non-thermal distortions from equilibrium, for example the emergence of actual distributions and the approximate values  of $T_{ch}$, $T_k$, and $\Upsilon$.  Indeed,  in  such a dynamical description no hypothesis about the presence of kinetic or chemical (non) equilibrium needs to be made, as the distribution close to \req{k_eq} with   $\Upsilon\ne  1$ emerges naturally as the outcome of collision processes, even when the particle system approaches the freeze-out temperature domain  in chemical equilibrium.
@@ -9,11 +9,11 @@ In the cosmological neutrino freeze-out context, the general relativistic Boltzm
 
 The efficacy of the spectral method used in \cite{Esposito2000,Mangano2002} can largely be attributed to the fact that, under the conditions considered there, the true solution is very close to a chemical equilibrium distribution, \req{ch_eq}, where the temperature is controlled by the dilution of the system. However, as we have discussed, the Planck CMB results \cite{Planck} indicate the possibility that neutrinos participated in reheating to a greater degree than previously believed, leading to a more pronounced chemical non-equilibrium and reheating. Efficiently obtaining this emergent chemical non-equilibrium within realm of kinetic theory motivates the development of a new numerical method that adapts to this new circumstance.
 
-In section \ref{boltzmann_basics} we give a basic overview of the relativistic Boltzmann equation in an FRW Universe.  In section \ref{the_method} we discuss our modified spectral method in detail.  In subsection \ref{free_stream_approach} we recall the orthogonal polynomial basis used in \cite{Esposito2000,Mangano2002} and in subsection \ref{kinetic_eq_approach} we introduce our modified basis and characterize precisely the differences in the method  we propose. We compare these two bases in subsection \ref{basis_comparison}. In subsection \ref{dynamics_sec} we use the Boltzmann equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In section \ref{validation} we validate the method using a model problem.  In  \ref{orthopoly_app} we give further details on the construction of the parametrized family orthogonal polynomials we use to solve the Boltzmann equation.  The work presented in this chapter can be found in our paper \cite{Birrell_orthopoly}.
+In section \ref{boltzmann_basics} we give a basic overview of the relativistic Boltzmann equation in an FRW Universe.  In section \ref{the_method} we discuss our modified spectral method in detail.  In subsection \ref{free_stream_approach} we recall the orthogonal polynomial basis used in \cite{Esposito2000,Mangano2002} and in subsection \ref{kinetic_eq_approach} we introduce our modified basis and characterize precisely the differences in the method  we propose. We compare these two bases in subsection \ref{basis_comparison}. In subsection \ref{dynamics_sec} we use the Boltzmann equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In section \ref{validation} we validate the method using a model problem.  In  \ref{orthopoly_app} we give further details on the construction of the parameterized family orthogonal polynomials we use to solve the Boltzmann equation.  The work presented in this chapter can be found in our paper \cite{Birrell_orthopoly}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Relativistic Boltzmann Equation }\label{boltzmann_basics}
+\subsection{Relativistic Boltzmann Equation }\label{boltzmann_basics}
 
 Recall the general relativistic Boltzmann equation introduced in chapter \ref{ch:model_ind}
 \begin{equation}\label{boltzmann}
@@ -25,7 +25,7 @@ C[f_1]=&\frac{1}{2}\int F(p_1,p_2,p_3,p_4) S |\mathcal{M}|^2(2\pi)^4\delta(\Delt
 F=&f_3(p_3)f_4(p_4)f^1(p_1)f^2(p_2)-f_1(p_1)f_2(p_2)f^3(p_3)f^4(p_4),\notag\\
 f^i=&1- f_i.\notag
 \end{align}
-Here $|\mathcal{M}|^2$ is the process amplitude or matrix element, $S$ is a numerical factor that incorporates symmetries and prevents over-counting, $f^i$ are the fermi blocking factors, $\delta(\Delta p)$ enforces four-momentum conservation in the reactions, and the $\delta_0(p_i^2-m_i^2)$ restrict the four momenta to the future timelike mass shells.
+Here $|\mathcal{M}|^2$ is the process amplitude or matrix element, $S$ is a numerical factor that incorporates symmetries and prevents over-counting, $f^i$ are the Fermi blocking factors, $\delta(\Delta p)$ enforces four-momentum conservation in the reactions, and the $\delta_0(p_i^2-m_i^2)$ restrict the four momenta to the future timelike mass shells.
 
 
 The matrix element for a $2-2$ reaction is some function of the Mandelstam variables $s, t, u$, of which only two are independent, defined by 
@@ -48,12 +48,12 @@ The Boltzmann equation \req{boltzmann_p} can be simplified by the method of char
 \label{rho_div}
 \frac{1}{a^4}\frac{d}{dt}(a^4\rho_1)=&\frac{g_p}{(2\pi)^3}\int C[f_1] d^3p .
 \end{align} 
-For free-streaming particles the vanishing of the collision operator implies conservation of `comoving' particle number of species 1. From the associated powers of $a$ in \req{n_div} and \req{rho_div} we see that the energy per free streaming particle as measured by an observer scales as $1/a$, a manefestation or redshift.
+For free-streaming particles the vanishing of the collision operator implies conservation of comoving particle number of species 1. From the associated powers of $a$ in \req{n_div} and \req{rho_div} we see that the energy per free streaming particle as measured by an observer scales as $1/a$, a manifestation or redshift.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spectral Methods}\label{the_method}
+\subsection{Spectral Methods}\label{the_method}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Polynomials for systems close to kinetic and chemical equilibrium}\label{free_stream_approach}
+\subsubsection{Polynomials for systems close to kinetic and chemical equilibrium}\label{free_stream_approach}
 Here we outline the approach for solving \req{a_vars} used in \cite{Esposito2000,Mangano2002} in order to contrast it with our approach as presented in subsection \ref{kinetic_eq_approach}.  As just discussed, the Boltzmann equation  is a linear first order partial differential equation and can be reduced using a new variable $y=a(t)p$  via the method of characteristics and exactly solved in the collision free ($C[f]=0)$ limit.   This motivates a change of variables from $p$ to $y$ which eliminates the momentum derivative, leaving the simplified equation
 \begin{equation}\label{a_vars}
 \partial_tf=\frac{1}{E} C[f].
@@ -83,7 +83,7 @@ n&=\frac{g_p}{2\pi^2 a^3}\sum_0^2 d^i\int_0^\infty f_{ch}\hat\chi_i y^2dy,\\
 Note that the sums truncate at $3$ and $4$ terms respectively, due to the fact that $\hat\chi_k$ is orthogonal to all polynomials of degree less than $k$. This implies that in general, at least four modes are required to capture both the particle number and energy flow. More modes are needed if the non-thermal distortions are large and the back reaction of higher modes on lower modes is significant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Polynomials for systems   not close to chemical equilibrium}\label{kinetic_eq_approach}
+\subsubsection{Polynomials for systems   not close to chemical equilibrium}\label{kinetic_eq_approach}
 Our primary interest is in solving \req{T_vars} for systems close to the kinetic equilibrium distribution \req{k_eq} but not necessarily in chemical equilibrium, a task for which the method in the previous section is not well suited in general. For a general kinetic equilibrium distribution, the temperature does not necessarily scale as $T\propto 1/a$ i.e. the temperature is not controlled solely by dilution.  For this reason, we will find it more useful to make the change of variables $z=p/T(t)$ rather than the scaling used in \req{a_vars}.  Here $T(t)$ is to be viewed as the time dependent effective temperature of the distribution $f$, a notion we will make precise later.  With this change of variables, the Boltzmann equation becomes
 \begin{equation}\label{T_boltzmann}
 \partial_t f-z\left(H+\frac{\dot T}{T}\right)\partial_z f=\frac{1}{E}C[f].
@@ -96,7 +96,7 @@ f(t,z)= f_\Upsilon (t,z)\psi(t,z),\hspace{2mm} f_\Upsilon(z)=\frac{1}{\Upsilon^{
 \end{equation}
 where the kinetic equilibrium distribution $f_\Upsilon $ depends on $t$ because we are assuming $\Upsilon$ is time dependent (with dynamics to be specified later). 
 
-We will solve \req{T_boltzmann} by expanding $\psi$ in the basis of orthogonal polynomials generated by the parametrized weight function
+We will solve \req{T_boltzmann} by expanding $\psi$ in the basis of orthogonal polynomials generated by the parameterized weight function
 \begin{equation}\label{weight}
 w(z)\equiv w_\Upsilon(z)\equiv z^2f_\Upsilon (z)=\frac{z^2}{\Upsilon^{-1} e^z+1}
 \end{equation}
@@ -111,7 +111,7 @@ We emphasize that we have made three important changes as compared to  the chemi
 We note that the authors of \cite{Esposito2000} did consider the case of fixed chemical potential imposed as an initial condition. This is not the same as an emergent chemical non-equilibrium, i.e. time dependent $\Upsilon$, that we study here, nor do they consider a $z^2$ factor in the weight. We borrowed the idea for the $z^2$ prefactor from   Ref.\cite{Wilkening2}, where it was found that including a $z^2$ factor along with the non-relativistic chemical equilibrium distribution in the weight improved the accuracy of their method. Fortuitously,  this will also allow us to capture the particle number and energy flow with fewer terms than required by the chemical equilibrium method. A suitably modified weight and method allows us to maintain  these advantages when a particle mass scale becomes relevant. However, there are some additional qualifications and subtleties that arise in such a program and so we return to this problem in a subsequent work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Comparison of Bases}\label{basis_comparison}
+\subsubsection{Comparison of Bases}\label{basis_comparison}
 
 Before deriving the dynamical equations for the method outlined in section \ref{kinetic_eq_approach}, we illustrate the error inherent in approximating the chemical non-equilibrium distribution \req{k_eq}  with a  chemical equilibrium distribution \req{ch_eq} whose temperature is $T=1/a$.   Given a chemical non-equilibrium distribution 
 \begin{equation}\label{zeroth_approx}
@@ -138,12 +138,12 @@ in the denominator of \req{zeroth_approx}, which comes from changing variables f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.cm]{./SpectralMethodBoltzmann/free_stream_f0_approx_Ups_5-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.cm]{03-birrell/SpectralMethodBoltzmann/free_stream_f0_approx_Ups_5.eps}}
 \caption{Errors in expansion of \req{zeroth_approx} as a function of number of modes, $\Upsilon=0.5$.}\label{fig:free_stream_f0_approx_Ups_5}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6cm]{./SpectralMethodBoltzmann/free_stream_f0_approx_Ups_1_5-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6cm]{03-birrell/SpectralMethodBoltzmann/free_stream_f0_approx_Ups_1_5.eps}}
 \caption{Errors in  expansion of \req{zeroth_approx} as a function of number of modes, $\Upsilon=1.5$.}\label{fig:free_stream_f0_approx_Ups_1_5}
  \end{minipage}
  \end{figure}
@@ -151,23 +151,23 @@ in the denominator of \req{zeroth_approx}, which comes from changing variables f
 
 
 
- In the case of large reheating, we find that when $R$ approaches and surpasses $2$, large spurious oscillations begin to appear in the expansion and they persist even when a large number of terms are used, as seen in figures  \ref{fig:free_stream_f0_approx_Ups_1_T_r_1_85} and \ref{fig:free_stream_f0_approx_Ups_1_T_r_2}, where we compare $f_\Upsilon/f_{ch}^{1/2}$ with $f_{\Upsilon}^N/f_{ch}^{1/2}$ for $\Upsilon=1$ and $N=20$.    See Ref.~\cite{Birrell_orthopoly} for futher discussion of the origin of these oscillations. This demonstrates that the chemical equilibrium method with dilution temperature scaling will  perform extremely poorly in situations that experience a large degree of reheating. For $R\approx 1$, the benefit of including fugacity is not as striking, as the chemical equilibrium basis is able to approximate \req{zeroth_approx} reasonably well.  However, for more stringent error tolerances including $\Upsilon$ can reduce the number of required modes in cases where the degree of chemical non-equilibrium is large.
+ In the case of large reheating, we find that when $R$ approaches and surpasses $2$, large spurious oscillations begin to appear in the expansion and they persist even when a large number of terms are used, as seen in figures  \ref{fig:free_stream_f0_approx_Ups_1_T_r_1_85} and \ref{fig:free_stream_f0_approx_Ups_1_T_r_2}, where we compare $f_\Upsilon/f_{ch}^{1/2}$ with $f_{\Upsilon}^N/f_{ch}^{1/2}$ for $\Upsilon=1$ and $N=20$. See Ref.~\cite{Birrell_orthopoly} for further discussion of the origin of these oscillations. This demonstrates that the chemical equilibrium method with dilution temperature scaling will  perform extremely poorly in situations that experience a large degree of reheating. For $R\approx 1$, the benefit of including fugacity is not as striking, as the chemical equilibrium basis is able to approximate \req{zeroth_approx} reasonably well.  However, for more stringent error tolerances including $\Upsilon$ can reduce the number of required modes in cases where the degree of chemical non-equilibrium is large.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.cm]{./SpectralMethodBoltzmann/free_stream_f0_approx_Ups_1_T_r_1_85_n_20-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.cm]{03-birrell/SpectralMethodBoltzmann/free_stream_f0_approx_Ups_1_T_r_1_85_n_20.eps}}
 \caption{Approximation to \req{zeroth_approx} for $\Upsilon=1$ and $R=1.85$ using the first $20$ basis elements generated by \req{free_stream_weight}.}\label{fig:free_stream_f0_approx_Ups_1_T_r_1_85}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.cm]{./SpectralMethodBoltzmann/free_stream_f0_approx_Ups_1_T_r_2_n_20-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.cm]{03-birrell/SpectralMethodBoltzmann/free_stream_f0_approx_Ups_1_T_r_2_n_20.eps}}
 \caption{Approximation to \req{zeroth_approx} for $\Upsilon=1$ and $R=2$ using the first $20$ basis elements generated by \req{free_stream_weight}.}\label{fig:free_stream_f0_approx_Ups_1_T_r_2}
  \end{minipage}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Dynamics}\label{dynamics_sec}
+\subsubsection{Dynamics}\label{dynamics_sec}
 In this section we derive the dynamical equations for the  method outlined in section \ref{kinetic_eq_approach}.  In particular, we identify physically motivated dynamics for the effective temperature and fugacity.  Using \req{T_boltzmann} and the definition of $\psi$ from \req{kinetic_approx} we have
 \begin{align}\label{near_equilib_eq}
 \partial_t \psi+\frac{1}{f_\Upsilon }\frac{\partial f_\Upsilon }{\partial\Upsilon}\dot\Upsilon\psi-\frac{z}{f_\Upsilon }\left(H+\frac{\dot{T}}{T}\right)\left(\psi\partial_zf_\Upsilon +f_\Upsilon \partial_z \psi\right)=\frac{1}{f_\Upsilon E}C[f_\Upsilon \psi].
@@ -290,7 +290,7 @@ K_2=&[\langle\partial_\Upsilon\hat\psi_0,\hat\psi_0\rangle||\psi_0||+\partial_\U
 This proves that $K$ is nonzero at $t=0$.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Validation}\label{validation}
+\subsection{Validation}\label{validation}
 We will validate our numerical method on an exactly solvable model problem
 \begin{equation}\label{toy_eq}
 \partial_t f-pH \partial_p f=M\left(\frac{1}{\Upsilon^{-1}e^{p/T_{eq}}+1}-f(p,t)\right), \hspace{2mm} f(p,0)=\frac{1}{e^{p/T_{eq}(0)}+1}
@@ -315,7 +315,7 @@ f(z,t)=&\int_0^t\frac{e^{s-t}}{\Upsilon^{-1}\exp[a(t)T(t)z/(a(s)T_{eq}(s))]+1}ds
 We use this to test the chemical equilibrium and chemical non-equilibrium methods under two different conditions. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Reheating Test}
+\subsubsection{Reheating Test}
 First we test the two methods we have outlined in a scenario that exhibits reheating.  Motivated by applications to cosmology, we choose a scale factor evolving as in the radiation dominated era, a fugacity $\Upsilon=1$, and choose an equilibrium temperature that exhibits reheating like behavior with $aT_{eq}$ increasing for a period of time,
 \begin{align}\label{a_T_def}
 a(t)=\left(\frac{t+b}{b}\right)^{1/2}\!\!\!,\ \  \ \
@@ -337,12 +337,12 @@ In figures   \ref{fig:free_stream_num_err} and  \ref{fig:free_stream_E_err} we s
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.0cm]{./SpectralMethodBoltzmann/free_stream_num_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.0cm]{03-birrell/SpectralMethodBoltzmann/free_stream_num_err.eps}}
 \caption{Maximum relative error in particle number density.}\label{fig:free_stream_num_err}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.0cm]{./SpectralMethodBoltzmann/free_stream_E_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.0cm]{03-birrell/SpectralMethodBoltzmann/free_stream_E_err.eps}}
 \caption{Maximum relative error in energy density.}\label{fig:free_stream_E_err}
  \end{minipage}
  \end{figure}
@@ -351,12 +351,12 @@ In figures   \ref{fig:free_stream_num_err} and  \ref{fig:free_stream_E_err} we s
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6cm]{./SpectralMethodBoltzmann/free_stream_b_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6cm]{03-birrell/SpectralMethodBoltzmann/free_stream_b_err.eps}}
 \caption{Maximum error in mode coefficients.}\label{fig:free_stream_b_err}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.0cm]{./SpectralMethodBoltzmann/free_stream_L1_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.0cm]{03-birrell/SpectralMethodBoltzmann/free_stream_L1_err.eps}}
 \caption{Maximum ratio  of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution.}\label{fig:free_stream_L1_err}
  \end{minipage}
  \end{figure}
@@ -380,12 +380,12 @@ For $R=1$ and $R=1.4$  the chemical equilibrium method works reasonably well (as
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{./SpectralMethodBoltzmann/free_stream_approx_T_r_2-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.1cm]{03-birrell/SpectralMethodBoltzmann/free_stream_approx_T_r_2.eps}}
 \caption{Approximate and exact solution for a reheating ratio $R=2$ and $N=10$ modes.}\label{fig:free_stream_approx_T_r_2}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{./SpectralMethodBoltzmann/free_stream_L1_err_time-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.1cm]{03-birrell/SpectralMethodBoltzmann/free_stream_L1_err_time.eps}}
 \caption{$L^1$ error ratio as a function of time for $N=10$ modes.}\label{fig:free_stream_L1_err_time}
  \end{minipage}
  \end{figure}
@@ -401,12 +401,12 @@ We now solve  \req{free_stream_toy} using the chemical non-equilibrium method, w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{./SpectralMethodBoltzmann/keq_num_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.2cm]{03-birrell/SpectralMethodBoltzmann/keq_num_err.eps}}
 \caption{Maximum relative error in particle number density.}\label{fig:keq_num_err}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{./SpectralMethodBoltzmann/keq_E_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.2cm]{03-birrell/SpectralMethodBoltzmann/keq_E_err.eps}}
 \caption{Maximum relative error in energy density.}\label{fig:keq_E_err}
  \end{minipage}
  \end{figure}
@@ -417,12 +417,12 @@ In figures \ref{fig:keq_num_err} and  \ref{fig:keq_E_err} we show the maximum re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{./SpectralMethodBoltzmann/keq_num_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.2cm]{03-birrell/SpectralMethodBoltzmann/keq_num_err.eps}}
 \caption{Maximum relative error in particle number density.}\label{fig:keq_num_err}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{./SpectralMethodBoltzmann/keq_E_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.2cm]{03-birrell/SpectralMethodBoltzmann/keq_E_err.eps}}
 \caption{Maximum relative error in energy density.}\label{fig:keq_E_err}
  \end{minipage}
  \end{figure}
@@ -431,12 +431,12 @@ In figures \ref{fig:keq_num_err} and  \ref{fig:keq_E_err} we show the maximum re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6cm]{./SpectralMethodBoltzmann/keq_b_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6cm]{03-birrell/SpectralMethodBoltzmann/keq_b_err.eps}}
 \caption{Maximum error in mode coefficients.}\label{fig:keq_b_err}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{./SpectralMethodBoltzmann/keq_L1_err-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.1cm]{03-birrell/SpectralMethodBoltzmann/keq_L1_err.eps}}
 \caption{Maximum ratio of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution.}\label{fig:keq_L1_err}
  \end{minipage}
  \end{figure}
@@ -455,12 +455,12 @@ In summary, in addition to the reduction in the computational cost when going fr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
  \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{./SpectralMethodBoltzmann/keq_approx_T_r_2-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.2cm]{03-birrell/SpectralMethodBoltzmann/keq_approx_T_r_2.eps}}
 \caption{Approximate and exact solution for $R=2$ obtained with two modes.}\label{fig:keq_approx_Tr_2}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{./SpectralMethodBoltzmann/keq_L1_err_time-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.2cm]{03-birrell/SpectralMethodBoltzmann/keq_L1_err_time.eps}}
 \caption{$L^1$ error ratio as a function of time for $n=10$ modes.}\label{fig:keq_L1_err_time}
  \end{minipage}
  \end{figure}
@@ -468,19 +468,19 @@ In summary, in addition to the reduction in the computational cost when going fr
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Chemical Non-equilibrium Attractor}
+\subsubsection{Chemical Non-equilibrium Attractor}
 The model problem above with $\Upsilon=1$  is reminiscent of the way that chemical equilibrium can emerge from chemical non-equilibrium in practice; the distribution of interest is attracted to some chemical equilibrium distribution but the particle creation/annihilation processes are not able to keep up with the momentum exchange and maintain an equilibrium particle yield, and so a fugacity $\Upsilon<1$ develops.  However, in order to isolate the effects of the fugacity on the solutions, we will now solve \req{toy_eq} under the  condition where our distribution is attracted to a fixed chemical non-equilibrium distribution.  More specifically, we take $T_{eq}(t)=1/a(t)$ and fugacities $\Upsilon=1.5$, $\Upsilon=0.9$, $\Upsilon=0.75$, and $\Upsilon=0.5$ with $a(t)$ defined as in \req{a_T_def}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
  \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{./SpectralMethodBoltzmann/free_stream_L1_err_Ups-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.1cm]{03-birrell/SpectralMethodBoltzmann/free_stream_L1_err_Ups.eps}}
 \caption{Maximum ratio  of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution using the chemical equilibrium method.}\label{fig:free_stream_L1_err_Ups}
  \end{minipage}
  \hspace{0.5cm}
  \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{./SpectralMethodBoltzmann/k_eq_L1_err_Ups-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.1cm]{03-birrell/SpectralMethodBoltzmann/k_eq_L1_err_Ups.eps}}
 \caption{Maximum ratio of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution using the chemical non-equilibrium method.}\label{fig:k_eq_L1_err_Ups}
  \end{minipage}
  \end{figure}
@@ -500,13 +500,13 @@ where the distribution functions are evaluated at $t=t_f=10$. This figure is for
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
-\centerline{\includegraphics[height=6.1cm]{./SpectralMethodBoltzmann/k_eq_L1_err_Ups_final-eps-converted-to.pdf}}
+\centerline{\includegraphics[height=6.1cm]{03-birrell/SpectralMethodBoltzmann/k_eq_L1_err_Ups_final.eps}}
 \caption{Final value of the ratio  of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution using the chemical non-equilibrium method.}\label{fig:k_eq_L1_err_Ups_final}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Summary and Outlook}
+\subsection{Summary and Outlook}
 We have presented a spectral method for solving the Relativistic Boltzmann equation for a system  of massless fermions  diluting in time based on a dynamical basis of orthogonal polynomials.  The method is adapted to systems evolving near kinetic equilibrium, but allows for potentially strong chemical non-equilibrium in a transient and/or final state as well as strong reheating i.e. decoupling of temperature scaling from dilution scaling.  
 
 The method depends on two time dependent parameters, the effective temperature $T(t)$ and phase space occupancy or fugacity $\Upsilon(t)$, whose dynamics are isolated by the requirement that the lowest modes capture the energy and particle number densities.  This gives the method a natural physical interpretation.  In particular, the dynamical fugacity is capable of naturally expressing the emergence of chemical non-equilibrium during the freeze-out process while the effective temperature captures any reheating phenomenon. Any system in approximate kinetic equilibrium that undergoes reheating and/or transitions to chemical non-equilibrium is a good match for this method.  In fact it is almost assured that our method will be considerably more computationally economical than the chemical equilibrium spectral method for any physical system in which the cost of computing the collision terms is high.
@@ -517,10 +517,9 @@ The method presented here should be compared to the spectral method used in \cit
 
 Numerical evaluation of collision operators for realistic interactions is a costly operation and so the new `emergent chemical non-equilibrium' approach we have presented here constitutes a significant reduction in the numerical cost of obtaining solutions. Moreover, even if the chemical equilibrium approach were to be properly modified to gain mathematical advantages we show  in our chemical non-equilibrium approach, it is not at all clear that the chemical equilibrium method can, with comparable numerical effort, achieve  a precise solution under conditions where transient or final chemical non-equilibrium and reheating are strong.
 
-\begin{subappendices}
-\section{Orthogonal Polynomials}\label{orthopoly_app}
+\subsection{Orthogonal Polynomials}\label{orthopoly_app}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Generalities}\label{ortho-general}
+\subsubsection{Generalities}\label{ortho-general}
 Let $w:(a,b)\rightarrow [0,\infty)$ be a weight function where $(a,b)$ is a (possibly unbounded) interval and consider the Hilbert space $L^2(w dx)$.   We will consider weights such that $x^n\in L^2(wdx)$ for all $n\in\mathbb{N}$. We denote the inner product by $\langle\cdot,\cdot\rangle$, the norm by $||\cdot||$, and for a vector $\psi\in L^2$ we let $\hat{\psi}\equiv \psi/||\psi||$.  The classical three term recurrence formula can be used to define a set of orthonormal polynomials $\hat{\psi}_i$ using this weight function, for example see \cite{Olver},
 \begin{align}\label{poly_recursion}
 &\psi_0=1, \hspace{2mm} \psi_1=||\psi_0||(x-\langle x\hat\psi_0,\hat{\psi}_0\rangle)\hat{\psi}_0,\\
@@ -544,7 +543,7 @@ a_1^0=\frac{||\psi_0||}{||\psi_1||}.
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Parametrized Families of Orthogonal Polynomials}\label{ortho-polynom-fam}
+\subsubsection{Parametrized Families of Orthogonal Polynomials}\label{ortho-polynom-fam}
 Our method requires not just a single set of orthogonal polynomials, but rather a parametrized family of orthogonal polynomial generated by a weight function $w_t(x)$ that is a $C^1$ function of both $x\in(a,b)$ and some parameter $t$.  To emphasize this, we write $g_t(\cdot,\cdot)$ for $\langle\cdot,\cdot\rangle$.  We will assume that $\partial_t w$ is dominated by some $L^1(dx)$ function of $x$ only that decays exponentially as $x\rightarrow\pm\infty$ (if the interval is unbounded). In particular, this holds for the weight function \req{weight}.
 
 Given the above assumption about the decay of $\partial_t w$, the dominated convergence theorem implies that $\langle p,q\rangle$ is a $C^1$ function of $t$ for all polynomials $p$ and $q$ and justifies  differentiation under the integral sign. By induction, it also implies implies that the $\hat\psi_i$ have coefficients that are $C^1$ functions of $t$. Therefore, for any polynomials $p$, $q$ whose coefficients are $C^1$ functions of $t$ we have
@@ -571,7 +570,7 @@ g_t(\dot{\hat\psi}_i,\hat\psi_j)=-\dot{g}_t(\hat\psi_i,\hat\psi_j),\hspace{2mm} 
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Proof of Lower Triangularity}\label{lower_triang}
+\subsubsection{Proof of Lower Triangularity}\label{lower_triang}
 Here we prove that the matrices that define the dynamics of the mode coefficients $b^k$ are lower triangular.  Recall the definitions
 \begin{align}
 A^k_i(\Upsilon)\equiv&\langle\frac{z}{f_\Upsilon }\hat\psi_i\partial_zf_\Upsilon ,\hat\psi_k\rangle+\langle z\partial_z \hat\psi_i,\hat\psi_k\rangle,\\
@@ -599,4 +598,3 @@ B^k_i=-\Upsilon\langle\hat\psi_i,\partial_{\Upsilon}\hat\psi_k\rangle.
 $\partial_\Upsilon \hat\psi_k$ is a degree $k$ polynomial, hence $B_i^k=0$ for $k<i$ as desired.
 
 
-\end{subappendices}

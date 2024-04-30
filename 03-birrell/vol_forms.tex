@@ -1,10 +1,8 @@
-\part{General Relativistic Boltzmann Equation and Neutrino Freeze-out }
-\chapter{Geometry Background: Volume Forms on Submanifolds}\label{ch:vol_forms}
-We now begin our transition from chemical and kinetic equilibrium matter models to full nonequilibrium.  This requires the machinery of general relativistic kinetic theory.  Before we make that transition, in this chapter we address the purely geometrical problem of inducing volume forms on submanifolds, a problem that will be of interest to us in concrete computations later on and is necessary for the definition of kinetic theory in its usual form. This chapter is much more mathematical than the remainder of this dissertation and, when standard, we use geometrical language and notation here without further explanation.  See for example \cite{lee2003introduction,lee1997riemannian}.  We found this formalism to be a great aid, especially in our development of an improved method for computing scattering integrals, presented in chapter \ref{ch:coll_simp}.  However, if one is content with simply using the results then this chapter is non-essential. See also our paper \cite{Birrell:2014uka}.
+\section{Geometry Background: Volume Forms on Submanifolds}\label{ch:vol_forms}We now begin our transition from chemical and kinetic equilibrium matter models to full nonequilibrium.  This requires the machinery of general relativistic kinetic theory.  Before we make that transition, in this chapter we address the purely geometrical problem of inducing volume forms on submanifolds, a problem that will be of interest to us in concrete computations later on and is necessary for the definition of kinetic theory in its usual form. This chapter is much more mathematical than the remainder of this dissertation and, when standard, we use geometrical language and notation here without further explanation.  See for example \cite{lee2003introduction,lee1997riemannian}.  We found this formalism to be a great aid, especially in our development of an improved method for computing scattering integrals, presented in chapter \ref{ch:coll_simp}.  However, if one is content with simply using the results then this chapter is non-essential. See also our paper \cite{Birrell:2014uka}.
 
 
 
-\section{Inducing Volume Forms on Submanifolds}
+\subsection{Inducing Volume Forms on Submanifolds}
 
 Given a Riemannian manifold $(M,g)$ with volume form $dV_g$ and a  hypersurface $S$, the standard Riemannian hypersurface area form, $dA_g$ is defined on $S$ as the volume form of the pullback metric tensor on $S$.   Given vectors $v_1,...,v_k$ we define the interior product (i.e. contraction)  operator acting on a form $\omega$ of degree $n\geq k$ as the $n-k$ form 
 \begin{equation}
@@ -145,7 +143,7 @@ The set K of $x\in M$ where $F_*$ is surjective is open in M by the rank theorem
 int_N_reg int F^{-1}(z).  Therefore they are equal.  QED
 \end{comment}
 \end{proof}
-\section{Comparison to Riemannian Coarea Formula}
+\subsection{Comparison to Riemannian Coarea Formula}
 We now recall the classical coarea formula for semi-Riemannian metrics, see \cite{chavel1995riemannian} for example,  and give its relation to theorem \ref{vol_form_coarea}.
 \begin{definition}
 Let $F:(M,g)\rightarrow (N,h)$ be a smooth map between semi-Riemannian manifolds.  The {\bf normal Jacobian} of $F$ is
@@ -221,7 +219,7 @@ as densities.
 In particular, this shows that even though $NJF$ and $dA_g$ are undefined individually when $g$ is degenerate on $F^{-1}(c)$, one can make sense of their ratio in this situation as the induced volume form $\omega$.
 
 
-\section{Delta Function Supported on a Level Set}
+\subsection{Delta Function Supported on a Level Set}
  The induced measure defined above allows for a coordinate independent definition of a delta function supported on a regular level set.  Such an object is of great use in performing calculations in relativistic phase space.  We give the definition and prove several properties that justify several common formal manipulations that one would like to make with such an object.
 \begin{definition}
 Motivated by the coarea formula, we define the composition of the {\bf Dirac delta function} supported on $c\in N$ with a smooth map $F:M\rightarrow N$ such that $c$ is a regular value of $F$ by
@@ -421,8 +419,8 @@ Let $\Omega^M$ be a volume form on $M$, $F:M\rightarrow (N,\Omega^N)$ be smooth,
 
 
 
-\section{Applications}
-\subsection{Relativistic Volume Element}\label{rel_vol_form}
+\subsection{Applications}
+\subsubsection{Relativistic Volume Element}\label{rel_vol_form}
 We now discuss an application of the above results to the single particle phase space volume element. We first define it in the massive case, where the semi-Riemannian method of defining volume forms is applicable.  In such and approach, the massless case is often handled via a limiting argument \cite{tsamparlis}.  We then show how our method is able to handle both the massive and massless case in a unified and simpler manner.
 
  Given a time oriented $n+1$ dimensional semi-Riemannian manifold $(M,g)$, there is a natural induced metric $\tilde{g}$ on the tangent bundle, called the diagonal lift.  At a given point $(x,p)\in TM$ its coordinate independent definition is
@@ -522,7 +520,7 @@ We also point out another convention in common use where $h$ is replaced by $2h$
 \end{equation}
  is in common use and will be employed in the scattering integral computations in chapter \ref{ch:coll_simp}.
 
-\subsection{Relativistic Phase Space}
+\subsubsection{Relativistic Phase Space}
 Here we justify several manipulations that are useful for working with relativistic phase space integrals.
 
 \begin{lemma}\label{parallel_lemma}
@@ -571,9 +569,8 @@ If $p_j$ is null then there is a $c$ such that $q=c p_j$ satisfies these conditi
 \end{proof}
 
 
-\begin{subappendices}
 
-\section{Volume Form in Coordinates}\label{coord_comp}
+\subsection{Volume Form in Coordinates}\label{coord_comp}
 Here we derive a useful formula for the volume form on the momentum bundle in a simple coordinate system, continuing from section \ref{rel_vol_form}.  We begin in a coordinate system $x^\alpha$ on $U\subset M$ and the induced coordinates $p^\alpha$ on $TM$ where our only assumption is that the $0$'th coordinate direction is future timelike, and so $g_{00}>0$.  For any $v^i\in \mathbb{R}^n$, let $v^0=-g_{0i}v^i/g_{00}$.  $v^\alpha$ is orthogonal to the $0$'th coordinate direction, and therefore spacelike. Hence 
 \begin{equation}
 0\geq g_{\alpha \beta}v^\alpha v^\beta=-(g_{0i}v^i)^2/g_{00}+g_{ij}v^iv^j.
@@ -625,7 +622,6 @@ since $\det(\Lambda^\sigma_\alpha g_{\sigma\delta}\Lambda^\delta_\beta)=1$.
 \begin{equation}
 \widetilde{dV}_{m,x}=\frac{m|g|^{1/2}}{p_0}dp^1\wedge...\wedge dp^n.
 \end{equation}
-\end{subappendices}
 
 
 

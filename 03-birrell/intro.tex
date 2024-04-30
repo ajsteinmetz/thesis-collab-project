@@ -1,12 +1,10 @@
-\part{Neutrino Freeze-out via Conservation Laws}
-\chapter{Introduction to Cosmology and the Relic Neutrino Background}\label{ch:intro}
-
+\section{Introduction to Cosmology and the Relic Neutrino Background}\label{ch:intro}
 At a temperature of $5$ MeV the Universe consisted of a plasma of $e^\pm$, photons, and neutrinos.  At around $1$ MeV neutrinos stop interacting, or freeze-out, and begin to free-stream through the Universe. Today they comprise the relic neutrino background. Photons freeze-out around $0.25$ eV and today they make up the Cosmic Microwave Background (CMB), currently at $T_{\gamma,0}=0.235$ meV.  Relic neutrinos have not been directly measured, but their impact on the speed of expansion of the Universe is imprinted on the CMB.  Indirect measurements of the relic neutrino background, such as by the Planck satellite \cite{Planck},  constrain neutrino properties such as mass and number of massless degrees of freedom.
 
  In later chapters, we will study the details of the neutrino freeze-out process and their impact on observables in detail but first we present an overview of cosmology, from just prior to neutrino freeze-out until today, putting the relic neutrinos in their proper context. Much of this material, including most figures, was adapted from our paper \cite{ErasOfUniverse}.
 
 
-\section{Standard Cosmology}\label{cosmo}
+\subsection{Standard Cosmology}\label{cosmo}
  To follow the history of the relic neutrino distribution, one must first understand the relation between the expansion dynamics of the Universe, its energy content, and the connection to the photon and neutrino temperature. For this purpose we need some preparation in the  Friedmann$-$Lemaitre$-$Robertson$-$Walker (FRW) cosmological  model, see for example \cite{hartle2003gravity,hobson,misner1973gravitation}. Assuming a homogeneous, isotropic Universe, one arrives at the spacetime metric
 \beqn\label{metric}
 ds^2=dt^2-a^2(t)\left[ \frac{dr^2}{1-kr^2}+r^2(d\theta^2+\sin^2(\theta)d\phi^2)\right]
@@ -72,7 +70,7 @@ this allows us to solve for the large scale dynamics of the Universe.
 Using the flat FRW model of cosmology outlined above, we now present several perspectives on the history of the Universe.  First we focus on the reheating history. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Reheating History of the Universe}\label{Eralink}
+\subsection{Reheating History of the Universe}\label{Eralink}
 
 At times where dimensional scales are irrelevant, entropy conservation means that  temperature scales inversely with the scale factor $a(t)$. This follows from \req{divTmn} when $ \rho\simeq 3P   \propto T^4$. However, as the temperature drops and at their respective $m\simeq T$ scales, successively less massive particles annihilate and disappear from the thermal Universe. Their entropy reheats the other degrees of freedom and thus in the process, the entropy originating in a massive degree of freedom is shifted into the effectively massless degrees of freedom that still remain.  This causes the  $T\propto 1/a(t)$ scaling to break down; during each of these `reorganization' periods the drop in temperature is slowed by the concentration of entropy in fewer degrees of freedom, leading to a change in the reheating ratio, $R$, defined as
 \begin{equation}\label{redshiftratio}
@@ -92,7 +90,7 @@ In figure~\ref{fig:dof}  we show the cube of the reheating ratio \req{redshiftra
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\hspace*{0.4cm}\includegraphics[height=6.6cm]{./ErasOfUniverse/z_T_plot-eps-converted-to.pdf}}
+\centerline{\hspace*{0.4cm}\includegraphics[height=6.6cm]{03-birrell/ErasOfUniverse/z_T_plot.eps}}
 \caption{Disappearance of degrees of freedom. The Universe volume inflated approximately by a factor of 27 above the thermal red shift scale as massive particles disappeared successively from the inventory.\label{fig:dof}}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,12 +114,12 @@ Using \req{r_ratio}  we  compute the total drop in $R^3$ shown in figure \ref{fi
 which is the  fractional change we see in the fermi gas model curve in figure \ref{fig:dof} (as mentioned above, the QCD model is reduced due to interactions). The meaning of this factor is that the Universe approximately inflated by a factor 27 above the thermal red shift scale as massive particles disappeared successively from the inventory. 
 
 
-\section{Composition of the Universe}
+\subsection{Composition of the Universe}
 From the perspective of reheating, the history of the Universe from the end of $e^\pm$ annihilation until today has been uneventful.  We can shed additional light on this period and others by looking at the composition of the Universe as a function of temperature
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\hspace*{0.4cm}\includegraphics[height=7.6cm]{./ErasOfUniverse/energy_densities_total-eps-converted-to.pdf}}\label{fig:energy_frac}
+\centerline{\hspace*{0.4cm}\includegraphics[height=7.6cm]{03-birrell/ErasOfUniverse/energy_densities_total.eps}}\label{fig:energy_frac}
 \caption{Current era: $69\%$ dark energy, $26\%$ dark matter, $5\%$ baryons, $<1\%$ photons and neutrinos, $1$ massless and $2\times .1$ eV neutrinos (Neutrino mass choice is just for illustration.  Other values are possible).}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -132,7 +130,7 @@ After passing through a long period, from $T=O(1)$ MeV until $T=O(1)$ eV, where 
 Finally, as we move towards the present day CMB temperature of $T_{\gamma,0}=0.235$ meV on the left hand side, we have entered the dark energy dominated regime.  For the present day values, we have used the fits from the Planck data \cite{Planck} of  $69\%$ dark energy, $26\%$ dark matter and $5\%$ baryons (and zero spatial curvature).  The photon energy density is fixed by the CMB temperature $T_{\gamma,0}$ and the neutrino energy density is fixed by $T_{\gamma,0}$ along with the photon to neutrino temperature ratio.  Both constitute $<1\%$ of the current energy budget.
 
 
-\section{Deceleration Parameter}
+\subsection{Deceleration Parameter}
 We conclude our overview of cosmology with one final perspective, the Universe as seen through the deceleration parameter.  The deceleration parameter is another indicator of the transition between different eras of the Universe's history.  Recall the relation \req{qparam} (for $k=0$)  between deceleration parameter and matter content of the Universe. In particular we have the regimes
 
 \begin{itemize}
@@ -150,7 +148,7 @@ We use $q$ first to characterize the era from today back to the end of neutrino 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Back in time to Neutrino Freeze-out}\label{recomb}
+\subsubsection{Back in time to Neutrino Freeze-out}\label{recomb}
 In the following we use the mix of matter  (31\%) and dark energy (69\%) with photon and neutrino backgrounds favored by the latest Planck results \cite{Planck}, where we gave two neutrino species mass of $m_\nu=30\meV$ and a third neutrino remains  massless.  This is a different mass value than used above and again, it is only for illustration-- other mass choices are possible within present day constraints and will impact to some degree where exactly matter dominance emerges from the radiative Universe.  We presume  that neutrino kinetic freeze-out completed before the onset of $e^\pm$-annihilation into  photons, leading to the neutrino to photon temperature ratio \req{T_nu_T_gamma}. Again, this is a common simplifying assumption.  Much of the remainder of this work will involve improving on this approximation, but for the purposes of this overview it is sufficient.
 
 Figure \ref{fig:today} shows in the left frame the temperature  (left axis) and deceleration parameter (right axis)  from shortly after the completion neutrino freeze-out until today.  The horizontal dot-dashed lines show  the pure radiation-dominated value of $q=1$ and the matter-dominated value of $q=1/2$. The expansion in this era starts off as radiation-dominated, but transitions to matter-dominated starting around $T=\mathcal{O}(10\eV)$ and begins to transition to a dark energy dominated era at $T=\mathcal{O}(1\meV)$. We are still in the midst of this transition today. The vertical dot-dashed lines show  the time of recombination at $T\simeq0.25\eV$, when the Universe became transparent to photons, and reionization at $T\simeq {\cal O}(1\meV)$, when hydrogen in the Universe was again ionized due to light from the first galaxies \cite{Zaroubi:2012in}. 
@@ -162,9 +160,9 @@ On the right in figure  \ref{fig:today}  we show the Hubble parameter $H$ and re
 \begin{figure}
 \begin{minipage}{\linewidth}
 \makebox[0.5\linewidth]%
-{\includegraphics[keepaspectratio=true,scale=0.52]{./ErasOfUniverse/T_q_today-eps-converted-to.pdf}}
+{\includegraphics[keepaspectratio=true,scale=0.52]{03-birrell/ErasOfUniverse/T_q_today.eps}}
 \makebox[0.5\linewidth]%
-{\includegraphics[keepaspectratio=true,scale=0.52]{./ErasOfUniverse/H_z_today-eps-converted-to.pdf}}
+{\includegraphics[keepaspectratio=true,scale=0.52]{03-birrell/ErasOfUniverse/H_z_today.eps}}
 \caption{Transition periods in the composition of the Universe: on left -- evolution of temperature $T$  and deceleration parameter $q$; on right --  evolution of the Hubble parameter $H$ and redshift $z$.
 \label{fig:today} }
 \end{minipage}
@@ -172,7 +170,7 @@ On the right in figure  \ref{fig:today}  we show the Hubble parameter $H$ and re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Neutrino Freeze-out Era }\label{nudecoup}
+\subsubsection{Neutrino Freeze-out Era }\label{nudecoup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The era separating the photon-neutrino-matter-dark energy Universe we just described from the end of the hadron Universe is quite complex in its evolution.   We begin when the number of $e^\pm$-pairs has decayed to the same abundance as the number of baryons in the Universe at the temperature  $T=\mathcal{O}(10\keV)$ and reach back to $T={\cal O}(30\MeV)$ where muons and pions are disappearing from the Universe.
 
@@ -180,9 +178,9 @@ The era separating the photon-neutrino-matter-dark energy Universe we just descr
 \begin{figure}
 \begin{minipage}{\linewidth}
 \makebox[0.5\linewidth]%
-{\includegraphics[keepaspectratio=true,scale=0.54]{./ErasOfUniverse/T_q_BBN-eps-converted-to.pdf}} 
+{\includegraphics[keepaspectratio=true,scale=0.54]{03-birrell/ErasOfUniverse/T_q_BBN.eps}} 
 \makebox[0.5\linewidth]%
-{\includegraphics[keepaspectratio=true,scale=0.54]{./ErasOfUniverse/H_z_BBN-eps-converted-to.pdf}} 
+{\includegraphics[keepaspectratio=true,scale=0.54]{03-birrell/ErasOfUniverse/H_z_BBN.eps}} 
 \caption{From the end of baryon antimatter annihilation through BBN, see figure \ref{fig:today}.%  on left -- evolution of temperature $T$  and deceleration parameter $q$; on right --  evolution of the Hubble parameter $H$ and redshift $z$.
 \label{fig:BBN}  }
 \end{minipage}
@@ -193,12 +191,10 @@ The era separating the photon-neutrino-matter-dark energy Universe we just descr
 
  The dashed line shows the neutrino temperature, which decouples from the $e^\pm$ and photon temperature at $T={\cal O}(1\MeV)$ when neutrinos freeze-out and begin free streaming. In figure~\ref{fig:BBN} the unit of time is seconds and the range spans the domain from fractions of a millisecond to a few hours. After neutrino freeze-out we come to Big Bang Nucleosynthesis, the period when the lighter elements were synthesized in a hot but relatively dilute plasma \cite{Iocco:2008va}. We left some time gap between this and the domain shown in figure \ref{fig:today}  describing the current era -- there is an uneventful evolution between the two domains. 
 
-\section{Focusing on Neutrino Freeze-out}
+\subsection{Focusing on Neutrino Freeze-out}
 Neutrino freeze-out is, as far as we know, the unique era in the history of the Universe when a significant matter fraction froze out at the same time that a reheating period was beginning, namely the start of $e^\pm$ annihilation.  It is this coincidence that makes neutrino freeze-out a rich and complicated period to study as compared to the many other reheating periods in the history of the Universe. This period has been studied before \cite{Madsen,Dolgov_Hansen,Gnedin,Esposito2000,Mangano2002,Mangano2005}, but the Planck satellite results \cite{Planck} motivate a reinvestigation of this period of cosmology.  We therefore make the interplay of neutrino freeze-out and reheating from $e^\pm$ annihilation the primary focus of the remainder of this work.
 
-\begin{subappendices}
-\section{Conventions}\label{app:conventions}
-
+\subsection{Conventions}\label{app:conventions}
 There are several sign conventions in use in general relativity.  As discussed in \cite{hobson}, these conventions differ by the sign factors $S1$, $S2$, $S3$, which appear in the following objects:
 \vspace{3mm}
 
@@ -217,5 +213,4 @@ Ricci Tensor: $R_{\mu\nu}=(S2)(S3)R^\alpha_{\mu\alpha\nu}$
 The sign $S3$ comes from the choice of what index is contracted in forming the Ricci tensor.  Since that sign factor appears in both $R_{\mu\nu}$ and $R$ it affects the overall sign of $G_{\mu\nu}$ and therefore Einstein's equation as shown above. In this dissertation we will use the $(-,+,-)$ convention.
 
 
-\end{subappendices}
 
