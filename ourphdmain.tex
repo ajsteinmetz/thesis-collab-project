@@ -47,11 +47,27 @@
 \newcommand{\grad}{\operatorname{grad}}
 \newcommand{\diag}{\mathrm{diag}}
 
+% Chris's commands
+\newcommand{\reff}[1]{Figure\,({\ref{#1}})}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\eq}[1]{#1^{(\mathrm{eq})}}
+\newcommand{\peq}[1]{#1^{'(\mathrm{eq})}}
+\newcommand{\reqs}[2]{Eqs.\,({\ref{#1}}-{\ref{#2}})}
+\newcommand{\mk}{|\boldsymbol{k}|}
+\newcommand{\ft}[1]{\widetilde{\boldsymbol{#1}}}
+\newcommand{\hatv}[1]{\hat{\boldsymbol{#1}}}
+\newcommand{\bom}[1]{{\color{blue}#1}}
+\newcommand{\jr}[1]{{\color{red}#1}}
+\newcommand{\cg}[1]{{\color{magenta}#1}}
+\newcommand{\mf}[1]{{\color{cyan}#1}}
+
 % Struts for tables 
 \newcommand\Tstrut{\rule{0pt}{2.6ex}}
 \newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}
 \newcommand{\TBstrut}{\Tstrut\Bstrut}
-  
+
+\numberwithin{equation}{section}
+
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%
 \include{01-introduction/introduction}
@@ -82,6 +98,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliographystyle{spphys}
-\bibliography{bibs/birrell-refs,bibs/steinmetz-refs,bibs/yang-refs,bibs/chap01intro-refs,bibs/chap02QCD-refs,bibs/chap03BBN-refs}
+\bibliography{bibs/birrell-refs,bibs/steinmetz-refs,bibs/yang-refs,bibs/grayson-refs}
 %%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

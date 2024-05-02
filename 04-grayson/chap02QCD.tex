@@ -1,4 +1,4 @@
-\chapter{Dynamic response of quark-gluon plasma to electromagnetic fields}\label{chap:QCD}
+\section{Dynamic response of quark-gluon plasma to electromagnetic fields}\label{chap:QCD}
 
  In this chapter, we discuss the application of the ultrarelativistic limit of the polarization tensor in Chapter \ref{chap:PlasmaSF} to the electromagnetic properties of quark-gluon plasma (QGP), as found in \cite{Grayson:2022asf}. QGP is an extreme state of matter composed of free quarks and gluons, which occurs in the aftermath of colliding nuclei in particle accelerators and existed a few microseconds after the big bang \cite{Letessier:2002ony}. 
 
@@ -23,7 +23,7 @@ Past analytic calculations \cite{Tuchin:2010vs,Deng:2012pc,McLerran:2013hla,Tuch
 \end{equation} 
 in a  hydrodynamically evolving QGP. For a collisionless plasma $\kappa\rightarrow0$, the conductivity is infinite, and the medium behaves as a perfect conductor. This work introduces the frequency and wavevector dependence of the QGP analytically using the polarization tensor previously obtained in \cite{Formanek:2021blc}.
 
-Numerical calculations \cite{Inghirami:2016iru, Inghirami:2019mkc} have incorporated the dynamical response of QGP by numerically solving the coupled magneto-hydrodynamic equations for a conducting quark-gluon plasma in the presence of the colliding nuclear charges. More recent calculations \cite{Yan:2021zjc,Wang:2021oqq} also incorporate the frequency and wave-vector dependence of QGP response to electromagnetic fields by solving the coupled Vlasov-Boltzmann--Maxwell equations numerically.
+Numerical calculations \cite{Inghirami:2016iru,Inghirami:2019mkc} have incorporated the dynamical response of QGP by numerically solving the coupled magneto-hydrodynamic equations for a conducting quark-gluon plasma in the presence of the colliding nuclear charges. More recent calculations \cite{Yan:2021zjc,Wang:2021oqq} also incorporate the frequency and wave-vector dependence of QGP response to electromagnetic fields by solving the coupled Vlasov-Boltzmann--Maxwell equations numerically.
 
 
 
@@ -48,7 +48,7 @@ where $\Lambda(\omega,\boldsymbol{k})$ is defined as
 \begin{align}\label{eq:definitions}
  \Lambda \equiv \ln \frac{\omega'+  |\boldsymbol{k}|}{\omega'- |\boldsymbol{k}|}\,, \quad \text{with} \quad \omega' = \omega+i\kappa\,.
 \end{align}
-The parallel and transverse polarization functions have the same form as in \cite{Formanek:2021blc} except for an overall factor $N_Q$  as found in \cite{Kapusta:1992fm, Grayson:2022asf}:
+The parallel and transverse polarization functions have the same form as in \cite{Formanek:2021blc} except for an overall factor $N_Q$  as found in \cite{Kapusta:1992fm,Grayson:2022asf}:
 \begin{equation}\label{eq:DebyemQCD}
     {m_D}^2_{(\text{EM})} = \sum_{u,d,s} q^2_f T^2 \frac{N_c}{3} = N_Q\frac{e^2T^2}{3} \equiv C_{\text{em}}T^2\,,
 \end{equation}
@@ -83,7 +83,7 @@ This is plotted along with the electromagnetic Debye mass in \reff{fig:kappaDeby
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.85\linewidth]{plots/chap02QCD/condcomp.png}
-    \caption{The black line shows the static conductivity $\sigma_0$ as a function of temperature predicted by \req{eq:condstat}, which is compared to lattice results adapted from \cite{Aarts:2020dda} for $T>T_c$. The factor of $C_{\text{em}}$, defined in \req{eq:DebyemQCD}, normalizes the conductivity by the charge of the plasma constituents, such that results using different numbers of dynamical quark flavors can be compared. We indicate each set of points by its arXiv reference: blue diamonds \cite{Amato:2013naa, Aarts:2014nba}, green circles \cite{Brandt:2015aqk}, and red triangles \cite{Astrakhantsev:2019zkr}.}
+    \caption{The black line shows the static conductivity $\sigma_0$ as a function of temperature predicted by \req{eq:condstat}, which is compared to lattice results adapted from \cite{Aarts:2020dda} for $T>T_c$. The factor of $C_{\text{em}}$, defined in \req{eq:DebyemQCD}, normalizes the conductivity by the charge of the plasma constituents, such that results using different numbers of dynamical quark flavors can be compared. We indicate each set of points by its arXiv reference: blue diamonds \cite{Amato:2013naa,Aarts:2014nba}, green circles \cite{Brandt:2015aqk}, and red triangles \cite{Astrakhantsev:2019zkr}.}
     \label{fig:lattice comp}
 \end{figure}
 
@@ -91,7 +91,7 @@ This is plotted along with the electromagnetic Debye mass in \reff{fig:kappaDeby
 We can then use the Debye mass \req{eq:DebyemQCD} and the damping rate \req{eq:kappadef} to calculate the static conductivity \req{eq:condstat}, shown as a black line in \reff{fig:lattice comp}, which we then compare to Lattice calculations of the conductivity in QGP.
 
 
-These lattice-QCD results \cite{Amato:2013naa, Aarts:2014nba,Brandt:2015aqk,Astrakhantsev:2019zkr} are scaled with temperature $T$ to remove the linear temperature dependence. We also scale the conductivity with $C_{\text{em}}$, as defined in \req{eq:DebyemQCD}, such that computations with different numbers of flavors can be compared. One can see that the conductivity value predicted by \req{eq:kappadef}, plotted in Fig.~\ref{fig:lattice comp} as a black line, lies well within the lattice-QCD results. We will use the value predicted by \reff{fig:lattice comp}, $\sigma = 5.01\,$MeV at $T=300\,$GeV, in the next section to compute the screened heavy ion fields in QGP.
+These lattice-QCD results \cite{Amato:2013naa,Aarts:2014nba,Brandt:2015aqk,Astrakhantsev:2019zkr} are scaled with temperature $T$ to remove the linear temperature dependence. We also scale the conductivity with $C_{\text{em}}$, as defined in \req{eq:DebyemQCD}, such that computations with different numbers of flavors can be compared. One can see that the conductivity value predicted by \req{eq:kappadef}, plotted in Fig.~\ref{fig:lattice comp} as a black line, lies well within the lattice-QCD results. We will use the value predicted by \reff{fig:lattice comp}, $\sigma = 5.01\,$MeV at $T=300\,$GeV, in the next section to compute the screened heavy ion fields in QGP.
 
 % Here, we focus on the damping effect of the collision rate $\kappa$ on the induced magnetic fields in nuclear collisions. The collision term generates a nonvanishing conductivity via the imaginary part of the polarization tensor. This conductivity manifests itself in poles of the resummed propagator in the lower complex $\omega$-plane that generate long-range tails or wake fields that extend far beyond the collision time. In Table~\ref{tab:timescales} we collect the relevant timescales of the problem in ascending order.  The collision time $t_{\text{coll}}$ is much shorter than all other relevant time scales. The collective oscillations of the plasma are highly damped by the large value of the relaxation time giving rise to over-damped behavior.
 
@@ -483,7 +483,7 @@ The work reviewed here and presented in Appendix \ref{appendixB} calculates the 
 \subsection{The QGP medium}
 This calculation can be improved in numerous ways. One of our main interests is to incorporate a finite size and a time-dependent onset in the QGP medium, which we describe here as infinite and homogenous. Boundary effects at the QGP surface are likely crucial for many collisions since the Debye sphere is not much smaller than the size of QGP, or similarly, the skin depth is probably large in comparison to the radius of QGP. Plasma skin effects could lead to novel electromagnetic phenomena at the QGP surface. We have begun some work on implementing an initial onset and formation time for QGP in the Vlasov-Boltzmann equation, effectively creating a boundary in time. This work should be extendable to studying plasma with a finite boundary in space which could be interesting with respect to the study of surface plasmons.
 
-QGP is also not stationary; peripheral heavy ion collisions are one of the most highly rotational systems ever observed \cite{PhysRevC.87.034906, PhysRevC.93.064907,PhysRevC.94.044910, doi:10.1146/annurev-nucl-021920-095245}. This is due to the huge angular momentum of the colliding system. This rotation can be incorporated into the equilibrium distribution \cite{Hakim2011}, which creates a temperature that depends on radius \cite{chernikov1964equilibrium} changing our description of the magnetic field.
+QGP is also not stationary; peripheral heavy ion collisions are one of the most highly rotational systems ever observed \cite{PhysRevC.87.034906,PhysRevC.93.064907,PhysRevC.94.044910,doi:10.1146/annurev-nucl-021920-095245}. This is due to the huge angular momentum of the colliding system. This rotation can be incorporated into the equilibrium distribution \cite{Hakim2011}, which creates a temperature that depends on radius \cite{chernikov1964equilibrium} changing our description of the magnetic field.
 
 In \cite{Grayson:2022asf} it would have been simple to use the adiabatic expansion of a relativistic ideal gas \cite{Bjorken:1982qr} to parameterize the temperature dependence as a function of time. To reduce the number of free parameters, we found the magnetic field at large times by simply assuming the plasma temperature was the freeze-out temperature \reff{fig:bcolcomp}.
 

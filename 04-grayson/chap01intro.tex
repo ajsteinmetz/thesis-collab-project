@@ -1,6 +1,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \chapter*{Notation and Conventions}
+% \section*{Notation and Conventions}
 % on a pedagogical note, we would like to point out that the 4-vector $k^\mu = (\omega,\mathbf{k})$ represents the momentum and energy in the electromagnetic field while $p^{\mu}  = (E,\boldsymbol{p})$ represents the momentum and energy of plasma constituents.
 % units 
 % metric
@@ -23,7 +23,7 @@
 % fourier transform definitions
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter*{Publications and author contributions}
+%\section*{Publications and author contributions}
 %\label{sec:pubs}
 %\addcontentsline{toc}{chapter}{PUBLICATIONS AND AUTHOR CONTRIBUTIONS}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,7 +39,7 @@
 %This dissertation includes some additional unpublished work where relevant. This line of research began in 2021 and continues to the present day. Previously, I studied strong field pair production in electromagnetic fields in heavy ion collisions, to which I hope to one day return using the knowledge I have gained in plasma physics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Plasma response to electromagnetic fields}
+\section{Plasma response to electromagnetic fields}
 \label{chap:PlasmaSF}
 
 
@@ -56,7 +56,7 @@
 This chapter aims to briefly introduce the background knowledge for the published articles reproduced in the Appendices \ref{appendixA}-\ref{appendixC}. This theoretical framework was mainly developed in  \cite{Formanek:2021blc}. Chapters \ref{chap:QCD} and \ref{chap:bbn} summarize Appendices \ref{appendixB} and \ref{appendixC}. This dissertation contains the same contents as \cite{Grayson:2022asf} and \cite{Grayson:2023flr} with omissions and additions for clarity.
 
 The interaction of electromagnetic fields within relativistic plasmas is of interest in astrophysics, intense laser interactions with matter, and quark-gluon plasma in relativistic heavy ion collisions. Quark-gluon plasma (QGP), a state of matter of deconfined quarks and gluons at extremely high temperatures $T>150$ MeV, is formed in the violent collision of heavy ions at relativistic speeds~\cite{Letessier:2002ony}. This deconfined state is also of astrophysical interest since it filled the early universe for the first few microseconds after the Big Bang~\cite{rafelski2013connecting}. Several methods have been introduced to study the linear response of a collisionless ultrarelativistic QGP following the seminal work by~\cite{Weldon:1982aq} by using semiclassical transport theory based on the Boltzmann equation~\cite{Mrowczynski:1987jr,Mrowczynski:1989np,Blaizot:1993zk,Kelly:1994ig,Kelly:1994dh}. However, applications of this formalism are restricted to dilute plasmas where collisions can be neglected~\cite{Blaizot:2001nr}. 
-Previously, the effects of collisions within the plasma were mainly studied to derive transport coefficients, such as the electrical conductivity, of interest to the study of plasma response to long-wavelength perturbations~\cite{Mrowczynski:1988xu,Heiselberg:1993cr,Ahonen:1996nq,Baym:1997gq,Ahonen:1998iz}. In quantum field theory, transport coefficients have also been calculated using effective propagators that re-sum thermal modifications to avoid infrared divergences~\cite{Heiselberg:1994ms,Arnold:2002zm,Arnold:2003zc}. Here, we will study semi-classical transport using the Vlasov-Boltzmann equation with momentum-averaged quantum collisions between particles, a topic discussed in numerous other works, such as \cite{DeGroot:1980dk, Cercignani2002, Hakim2011, Carrington:2003je, Schenke:2006xu}.
+Previously, the effects of collisions within the plasma were mainly studied to derive transport coefficients, such as the electrical conductivity, of interest to the study of plasma response to long-wavelength perturbations~\cite{Mrowczynski:1988xu,Heiselberg:1993cr,Ahonen:1996nq,Baym:1997gq,Ahonen:1998iz}. In quantum field theory, transport coefficients have also been calculated using effective propagators that re-sum thermal modifications to avoid infrared divergences~\cite{Heiselberg:1994ms,Arnold:2002zm,Arnold:2003zc}. Here, we will study semi-classical transport using the Vlasov-Boltzmann equation with momentum-averaged quantum collisions between particles, a topic discussed in numerous other works, such as \cite{DeGroot:1980dk,Cercignani2002,Hakim2011,Carrington:2003je,Schenke:2006xu}.
 
 
 The theoretical description of relativistic plasma is based on transport theory, i.e., the relativistic form of Liouville's equation. The one-particle phases space distribution function $f(x,p)$ undergoes Liouville flow,
@@ -84,7 +84,7 @@ The relaxation time $\tau$ can be computed using the schematic relaxation time a
 The well-known disadvantage of the RTA is that it forces all quantities, even conserved ones, to return to their equilibrium value at a rate $\tau$. This can cause the dynamics derived from this collision term to violate current and energy-momentum conservation. The violation of energy conservation is similar to introducing frictional damping into one particle Newtonian dynamics where energy is lost to the environment.
 %the difference being that it neglects the dependence of friction on the velocity of particles.
 
-Correcting for current and energy-momentum conservation is possible by adding terms that ensure that conserved quantities are unaffected~\cite{Bhatnagar:1954zz, Greene1973, Rocha:2021zcw, Singha:2023eia}. It is worth noting that this breaking of conservation law does not always affect the physical behavior of the plasma. For instance, the behavior of transverse waves in an infinite homogeneous plasma is unaffected by the addition of current conservation~\cite{Formanek:2021blc}.
+Correcting for current and energy-momentum conservation is possible by adding terms that ensure that conserved quantities are unaffected~\cite{Bhatnagar:1954zz,Greene1973,Rocha:2021zcw,Singha:2023eia}. It is worth noting that this breaking of conservation law does not always affect the physical behavior of the plasma. For instance, the behavior of transverse waves in an infinite homogeneous plasma is unaffected by the addition of current conservation~\cite{Formanek:2021blc}.
 
 In this work, we generalize the BGK modification of the linearized collision term to relativistic plasmas using the Anderson-Witting form Eq.\,(\ref{eq:lincoll}), ensuring current conservation \req{eq:collision} but not energy-momentum conservation. In \cite{Formanek:2021blc} we show that the resulting linear response functions satisfy current conservation and gauge invariance constraints. 
 
@@ -109,7 +109,7 @@ with the covariant integration, measure can be written as
 \end{equation}
 where $p^0 = p \cdot u$ in the rest frame of the plasma. The one particle distribution function is effectively the phase space density of the system. We will always refer to the 4-momentum as $p = (p_0, \, \boldsymbol{p})$ and the 3-momentum as $\boldsymbol{p}$.
 
-The kinetic equation describing the evolution of this distribution is the Vlasov-Boltzmann equation (VBE). The VBE is often derived in detail from heuristic arguments see \cite{DeGroot:1980dk, Cercignani2002}. Here, we will outline how it relates to Liouville's theorem. A similar derivation of the equilibrium distribution in the presence of electromagnetic fields is found in \cite{Hakim2011}.
+The kinetic equation describing the evolution of this distribution is the Vlasov-Boltzmann equation (VBE). The VBE is often derived in detail from heuristic arguments see \cite{DeGroot:1980dk,Cercignani2002}. Here, we will outline how it relates to Liouville's theorem. A similar derivation of the equilibrium distribution in the presence of electromagnetic fields is found in \cite{Hakim2011}.
 We derive the classical one-species Vlasov-Boltzmann equation from the Liouville theorem
 \begin{equation}
     \frac{d f(Q,P)}{d\tau} = \{H(Q,P), f(Q,P)\} = 0\,,
@@ -207,7 +207,7 @@ to identify the polarization tensor $\Pi^{\mu}_{\nu}$. To begin, we solve the Vl
 \end{equation}
 Since the solutions for these equations will differ only by the sign of charge, we need only solve one to understand dynamics. The $\pm$, which indicates electrons or positrons, may be dropped when unnecessary in the equations below.
 
-We assume for the equilibrium distribution the covariant Fermi-Dirac distribution function~\cite{DeGroot:1980dk, Hakim:1967prd}:
+We assume for the equilibrium distribution the covariant Fermi-Dirac distribution function~\cite{DeGroot:1980dk,Hakim:1967prd}:
 \begin{equation}\label{eq:fb}
 f^\mathrm{eq}_\pm(x,p) \equiv \frac{1}{e^{([p^{\mu} +q A^\mu (x) ] u_\mu\pm \mu_q)/T} + 1}\,,
 \end{equation}
@@ -280,7 +280,7 @@ We can substitute this result back into (\ref{eq:deltaftilde}) to obtain an expl
 	\widetilde{\delta f}(k,p) = \frac{i}{p \cdot k + i (p \cdot u) \kappa}\bigg[-q (u \cdot \widetilde{F} \cdot p)f'_\mathrm{eq}(p) 
 	\left.+ (p \cdot u) \kappa \frac{f_\mathrm{eq}(p)}{n_\mathrm{eq}} \frac{R(k)}{1+Q(k)}\right]\,.
 \end{equation}
-The right-hand side contains only known quantities. In the next section, we will use \req{eq:deltafsolution} to calculate the induced current in the plasma. Adding additional conservation laws requires further integrals to solve the Vlasov-Boltzmann equation involving higher moments of the fluctuation $\delta f$ as discussed in \cite{Rocha:2021zcw, Singha:2023eia}.
+The right-hand side contains only known quantities. In the next section, we will use \req{eq:deltafsolution} to calculate the induced current in the plasma. Adding additional conservation laws requires further integrals to solve the Vlasov-Boltzmann equation involving higher moments of the fluctuation $\delta f$ as discussed in \cite{Rocha:2021zcw,Singha:2023eia}.
 
 %=====================================================================
 \subsection{Induced current}
@@ -534,7 +534,7 @@ The dispersion \req{eq:disp} can be solved for numerous choices of variables des
 \end{equation}
 with $c=1$. This is not always the best choice for simplifying the solutions of \req{eq:disp}, but these modes are often the easiest to interpret. A study of the modes for the general polarization tensor is not the most informative process unless one is looking for general behavior which can be found in most plasma physics textbooks. Usually, in looking at these modes $\omega_m(\mathbf{k})$, one must first assume the external field's shape or some flow distribution in the plasma by specifying the equilibrium momentum distribution to yield interesting effects in the modes such as plasma instabilities.
 
-When the plasma is perturbed in time in a way that doesn't depend on space, such as for a plane wave, one can take $k \to 0$ for both the transverse and longitudinal roots of the dispersion relation which reduces the frequency of plasma oscillations \cite{Formanek:2021blc, Grayson:2022asf}
+When the plasma is perturbed in time in a way that doesn't depend on space, such as for a plane wave, one can take $k \to 0$ for both the transverse and longitudinal roots of the dispersion relation which reduces the frequency of plasma oscillations \cite{Formanek:2021blc,Grayson:2022asf}
 \begin{equation}\label{plasmafreq}
     \omega_{\pm} = -\frac{i\kappa}{2} \pm \sqrt{\omega_p^2 - \frac{\kappa}{4}^2}\,,
 \end{equation}
@@ -626,9 +626,9 @@ The projector operator$\mathcal{P}^{\mu \nu}(u)$ is
 \begin{equation}
     \mathcal{P}^{\mu \nu}(u) = g^{\mu \nu} -u^\mu u^\nu\,.
 \end{equation}
-We show in \cite{Grayson:2022asf} that the energy-momentum violation cancels in the current for a matter-antimatter plasma. Finding the polarization tensor, including energy-momentum conservation, is the subject of future work. The addition of this term in the current is studied in relativistic hydrodynamics in \cite{Singha:2023eia}. Instead of adding these complex correction terms, it may be better to use the Fokker-Planck equation or its simplified counterpart the LBO or Doughtery collision term \cite{Dougherty1964,Francisquez_Juno_Hakim_Hammett_Ernst_2022, Ong_Yu_1970}, which manifestly conserves energy-momentum and current, and is better suited to study electromagnetic grazing collisions. 
+We show in \cite{Grayson:2022asf} that the energy-momentum violation cancels in the current for a matter-antimatter plasma. Finding the polarization tensor, including energy-momentum conservation, is the subject of future work. The addition of this term in the current is studied in relativistic hydrodynamics in \cite{Singha:2023eia}. Instead of adding these complex correction terms, it may be better to use the Fokker-Planck equation or its simplified counterpart the LBO or Doughtery collision term \cite{Dougherty1964,Francisquez_Juno_Hakim_Hammett_Ernst_2022,Ong_Yu_1970}, which manifestly conserves energy-momentum and current, and is better suited to study electromagnetic grazing collisions. 
 \subsection{Applications to other plasmas}
-The main motivation of this paper was to derive a relativistic polarization tensor that could be used to describe quark-gluon plasma and other plasmas where damping is important. In Chapter \ref{chap:QCD} and Appendix \ref{appendixB} we discuss the application of the ultrarelativistic limit of the polarization tensor to study the electromagnetic properties of QGP. This polarization tensor is easy to generalize to other ultrarelativistic antimatter plasmas. Since the particles are massless increasing the number of plasma particle species merely leads to an enhancement of the Debye mass \cite{Grayson:2022asf, Kapusta:1992fm}
+The main motivation of this paper was to derive a relativistic polarization tensor that could be used to describe quark-gluon plasma and other plasmas where damping is important. In Chapter \ref{chap:QCD} and Appendix \ref{appendixB} we discuss the application of the ultrarelativistic limit of the polarization tensor to study the electromagnetic properties of QGP. This polarization tensor is easy to generalize to other ultrarelativistic antimatter plasmas. Since the particles are massless increasing the number of plasma particle species merely leads to an enhancement of the Debye mass \cite{Grayson:2022asf,Kapusta:1992fm}
 \begin{equation}\label{eq:Debyem}
     {m_D}^2_{(\text{EM})} = \sum_{u,d,s} q^2_f T^2 \frac{N_c}{3} \equiv C_{\text{em}}T^2\,,
 \end{equation}
@@ -659,7 +659,7 @@ We feel it should be possible to derive the electromagnetic field in plasma for 
 \begin{equation}
     f(x,p) = f_\text{eq}(x,p) + \delta f (x,p)\,,
 \end{equation}
-where in the Boltzmann limit the strong field equilibrium distribution is \cite{Hakim2011, Hakim:1967prd}
+where in the Boltzmann limit the strong field equilibrium distribution is \cite{Hakim2011,Hakim:1967prd}
 \begin{equation}
      f_\text{eq}(x,p) = \exp \left(-u_{\mu}[p^{\mu}+q A^{\mu}(x)]/T\right)\,.
 \end{equation}
