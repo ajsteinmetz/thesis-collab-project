@@ -5,23 +5,28 @@
 Jeremiah Birrell\inst{1}, %\inst{1}\fnmsep\thanks{\email{jeremey.birrell@gmail.com}},
 Christopher Grayson\inst{1}, %\inst{1}\fnmsep\thanks{\email{chrisgray1044@arizona.edu}},
 Johann Rafelski\inst{1}, %\inst{1}\fnmsep\thanks{\email{johannr@arizona.edu}}
-\newline Andrew Steinmetz\inst{1,2}\fnmsep\thanks{Corresponding author \email{ajsteinmetz@arizona.edu}}, 
+\newline Andrew Steinmetz\inst{1}\fnmsep\thanks{Corresponding author \email{ajsteinmetz@arizona.edu}}, 
 Cheng Tao Yang\inst{1}%\fnmsep\thanks{\email{chengtaoyang@arizona.edu}}
 }
 
 \institute{Department of Physics, The University of Arizona, Tucson, AZ, 85721, USA
-\and Arizona College of Technology, Hebei University of Technology, Tianjin 300130, China
 }
 
 \abstract{
 We aim to deepen the understanding of the primordial composition of the Universe in the temperature range $300\,\mathrm{MeV}>T>0.02\,\mathrm{MeV}$. Within the Big Bang model, the Universe began as a highly energetic fireball with an immensely high temperature and energy density. Consequently, an ultra-relativistic plasma was generated whose content of fundamental particles (such as quarks, leptons, and gauge bosons) dynamically changed as the Universe expanded and cooled. These elementary particles were abundantly present once the temperature dropped below $T=130$\,~GeV. At $T=\mathcal{O}(1)$\,~MeV through the free-streaming era up to today, we characterize the deviation of the neutrino spectrum from equilibrium and in particular we demonstrate the presence of chemical non-equilibrium that continues to the present day. We focus on the distinction between chemical and kinetic equilibrium and freeze-out. Using these concepts, we derive those properties of neutrino freeze-out that depend only on conservation laws and are independent of the details of the microscopic scattering processes. We characterize the dependence of both $N_\nu$ and the deviation of the neutrino distribution from chemical equilibrium on the neutrino kinetic freeze-out temperature. We detail a spectral method was designed extend the regime of applicability to systems far from chemical equilibrium and/or that undergo significant reheating. In the early universe during the hot dense electron-positron plasma epoch (after neutrino freeze-out), we analyze the paramagnetic characteristics of electron-positron plasma when exposed to an external primordial field. We note the high density of antimatter in the form of positrons which persisted into the Big Bang Nucleosynthesis era.
 } 
 \maketitle
+\section{Introduction}
+\label{sec:Intro}
+\section*{Context}
+\label{sec:context}
+This review collects in edited and resequenced manner the contents of four recent Ph.D. Thesis completed at the Department of Physics, The University of Arizona by: Jeremiah Birrell~\cite{BirrellThesis:2014}, Christopher M. Grayson~\cite{GraysonThesis:2024}, Andrew J. Steinmetz~\cite{SteinmetzThesis:2023}, and Cheng Tao Yang~\cite{YangThesis:2023}. We include material incorporated to the thesis in published form as well as further going related work which due to time constraints did not find its way to the formal thesis document.
+
 \setcounter{tocdepth}{2}
 \tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Cosmology introduction}
+\section{Cosmology introduction}
 \label{sec:flrw}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent This section introduces some necessary concepts which will be useful in describing the magnetization of the electron-positron primordial plasma in \rchap{chap:cosmo}. We operate under the $\Lambda$ Cold Dark Matter $(\Lambda\mathrm{CDM})$ model of cosmology where the contemporary universe is approximately 69\% dark energy, 26\% dark matter, 5\% baryons, and $<1$\% photons and neutrinos in energy density~\cite{Davis:2003ad,Planck:2018vyg}. The standard picture of the universe's evolution is outlined in \rf{fig:cosmo}.
@@ -81,3 +86,204 @@ When hot and relativistic, particle energy decreases inversely with scale factor
     \label{EScale} E(t) = E_{0}\frac{a_{0}}{a(t)}\xrightarrow{\mathrm{NR}}\  E_{0}\frac{a_{0}^{2}}{a(t)^{2}}\,.
 \end{alignat}
 This occurs because of the functional dependence of energy on momentum in the relativistic $E\sim p$ versus non-relativistic $E\sim p^{2}$ cases.
+
+\subsection{The standard FLRW-Universe model}
+%In this section we will focus on the following:
+%\begin{itemize}
+%    \item The Robertson –Walker Universe
+%    \item The Friedmann equation (Hubble %    \item The composition of the universe
+%\end{itemize}
+The Friedmann-Lemaitre-Robertson-Walker (FLRW) Universe is a theoretical model used widely to describe the cosmological evolution of the Universe. It is based on the cosmological principles which assumes homogeneity and isotropy of the Universe on large scales. In general, the FLRW metric can be written as
+\begin{align}\label{metric}
+ds^2=c^2dt^2-a^2(t)\left[ \frac{dr^2}{1-kr^2}+r^2(d\theta^2+\sin^2\theta\,d\phi^2)\right].
+\end{align}
+The metric is characterized by the scale factor $a(t)$ which measures the size of the Universe as a function of time $t$. The geometric parameter $k$ identifies the Gaussian geometry of the spatial hyper-surfaces defined by co-moving observers. The metrics are qualitatively different depending on the value of $k$. We have $k=1$ which correspond to the closed Universe,  $k=0$ correspond to flat Universe, and $k=-1$ for open geometries of the Universe. Current observation of cosmic microwave background (CMB) anisotropy preferred value $k=0$~[\cite{Planck:2013pxb,Planck:2015fie,Planck:2018vyg}].
+
+
+The cosmological equations that describe the evolution of the Universe are derived from the Einstein equations. In general, the Einstein equation with cosmological constant $\Lambda$ can be written as:
+\begin{equation}\label{Einstein}
+  G^{\mu\nu}=R^{\mu\nu}-\left(\frac R 2 +\Lambda\right) g^{\mu\nu}=8\pi G_N T^{\mu\nu}, 
+\quad R= g_{\mu\nu}R^{\mu\nu}.  
+\end{equation}
+where $G_{N}$ is the Newtonian gravitational constant, and $T^{\mu\nu}$ is the stress-energy tensor. Given the homogeneous and isotropic symmetry conditions imply that the matter context of the Universe can be expressed as a perfect fluid. The stress-energy tensor $T^\mu_\nu$ of perfect fluid can be written as
+\begin{align}
+ T^\mu_\nu =\mathrm{diag}(\rho, -P, -P, -P).
+\end{align}
+where $\rho$ is energy density and an $P$ is the isotropic pressure.
+
+Substituting the perfect fluid form of the stress-energy tensor into the Einstein equations, one can derive the cosmological equations that describe the evolution of the Universe. We then obtain Friedmann equations as follows:
+\begin{align}
+\label{Hubble} 
+&H^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho-\frac{k}{a^2}+\frac{\Lambda}{3},\\
+\label{q_value}
+&qH^2=\frac{4\pi G_{N}}{3}\left(\rho+3P\right)-\frac{\Lambda}{3},\qquad q\equiv -\frac{a\ddot a}{\dot a^2},
+\end{align}
+where $H$ is the Hubble parameter,  $q$ is the deceleration parameter. These equations relate the dynamics of the scale factor $a(t)$ to the energy density and pressure of the cosmic plasma. On the other hand, considering the divergence freedom of the total stress-energy tensor $\nabla_\nu T^{\mu\nu}=0$. For $\mu=0$ component, we have
+\begin{align}\label{energy_eq}
+\nabla_\nu T^{0\nu}=\frac{d\rho}{dt}+3H(\rho+P)=0
+\end{align}
+which provides dynamical evolution equation for $\rho(t)$ and $P(t)$. Solutions of Eq.~(\ref{energy_eq}) describes the time evolution of  energy density and pressures in the Universe. Given the energy density and pressure as a function of time, we can illustrates how the Universe evolves according to the Friedmann equations Eq.~(\ref{Hubble}) and Eq.~(\ref{q_value}). Solving these equations allows us to understand the dynamics and evolution of the Universe such as the Hubble expansion and the behavior of matter and energy over cosmic time.
+
+\subsection{Cosmic plasma in early Universe $300\,\mathrm{MeV}>T>0.02\,\mathrm{MeV}$}
+%In this section we will focus on the following:
+%\begin{itemize}
+%    \item Five different plasma epoch from $0.3\mathrm{GeV}>T>20$keV
+%\end{itemize}
+
+The primordial hot Universe fireball underwent several practically adiabatic phase changes that dramatically evolved its bulk properties as it expanded and cooled~[\cite{Rafelski:2023emw}]. We present an overview of the Universe evolution as a function of temperature from $300\,\mathrm{MeV}>T>0.02\,\mathrm{MeV}$ and main events constituting the history of the early Universe in Fig.~\ref{Overview_fig}. After the electroweak symmetry breaking epoch and presumably inflation, the comic plasma in the early Universe evolves in the following sequence:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+ \centerline{\includegraphics[width=\textwidth,width=\linewidth]{./plots/CosmicTimeTemperature_Project}}
+ \caption{The time evolution of the early Universe as a function of temperature from $300\,\mathrm{MeV}>T>0.02\,\mathrm{MeV}$ and 
+ different sequence of main events are shown with the temperature/time range in the evolution. }
+ \label{Overview_fig}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+    \item \textbf{Primordial quark-gluon plasma}: 
+    At early times when the temperature was between $130\,\mathrm{GeV}>T>0.15\,\mathrm{GeV}$ we have the building blocks of the Universe as we know them today, including the leptons, vector bosons, and all three families of deconfined quarks and gluons which propagated freely in plasma. As all hadrons are dissolved into their constituents during this time, strongly interacting particles $u,d,s,t,b,c,g$ controlled the fate of the Universe. When temperature is near to the QGP phase transition $300\, \mathrm{MeV}>T>150$ MeV, the bottom quark  breaks the detail balance and disappearance from particle inventory provides the arrow in time (see Chapter~\ref{Bottom} for detail).
+    
+    \item \textbf{Hadronic epoch}: Around the hadronization temperature $T_H\approx150\,\mathrm{MeV}$, a phase transformation occurred, forcing 
+    the free quarks and gluons become confined within baryon and mesons [\cite{Letessier:2005qe}]. In the temperature range $ 150\,\mathrm{MeV}>T>20\,\mathrm{MeV}$, the Universe is rich in physics phenomena involving strange mesons and (anti)baryons including (anti)hyperon abundances~[\cite{Fromerth:2012fe,Yang:2021bko}]. The antibaryons disappear from the Universe at temperature $T=38.2$ MeV, and strangeness can be produced by the inverse decay reactions that are in equilibrium via weak, electromagnetic, and strong interactions in the early Universe until $T\approx13$ MeV (see Chapter~\ref{Strangeness} for detailed discussion).
+
+    
+    \item \textbf{Lepton-photon epoch}: For temperature $10\,\mathrm{MeV}>T>2\,\mathrm{MeV}$, the Universe contained relativistic electrons, positrons, photons, and three species of (anti)neutrinos. During this epoch massless leptons and photons controlled the fate of the Universe. Massive $\tau^\pm$ disappear from the plasma at high temperature via decay processes. However $\mu^\pm$ leptons can persist in the early Universe until temperature $T=4.2$ MeV, and positron $e^+$ can persist until the temperature $T=0.02$ MeV (See Chapter~\ref{Electron} for discussion).
+    Neutrinos were still coupled to the charged leptons via the weak interaction~[\cite{Birrell:2012gg,Birrell:2014ona}] and freeze-out at temperature range $3\,\mathrm{MeV}>T>2\,\mathrm{MeV}$ which depends on the neutrino's flavors and the magnitude of the Standard Model parameters (See Chapter~\ref{Neutrino} for details). After neutrino freeze-out, they still play a important role in the Universe expansion via the effective number of neutrinos $N_{\nu}^{\mathrm{eff}}$ and affects the Hubble parameter significantly.  
+    
+    \item \textbf{Electron-positron epoch}: After neutrinos freeze-out at $T=3\sim2\,\mathrm{MeV}$ and become free-streaming in the early Universe, the cosmic plasma was dominated by electrons, positrons, and photons. The $e^\pm$ plasma existed until $T\approx0.02\,\mathrm{MeV}$ such that BBN occurred within a rich electron-positron plasma, and the dense number density of electron/positron also provide the opportunities to investigate magnetization process (See Chapter~\ref{Electron} for detailed discussion). This is the last time the Universe will contain a significant fraction of its content in antimatter.
+\end{enumerate}
+After $e^\pm$ annihilation, the Universe was still opaque to photons at this point and remained so until the recombination period at $T\approx0.25\,\mathrm{eV}$ starting the era of observational cosmology with the Cosmic Microwave Background. This period has been studied in detail before in~[\cite{Planck:2018vyg}]. Therefore, we focus on the temperature $300\,\mathrm{MeV}>T>0.02\,\mathrm{MeV}$ which corresponds to the first hour of the Universe evolution. We will address the cosmic plasma as follow: In Chapter~\ref{Bottom}, we discuss the heavy quarks (bottom/charm) abundance near to the QGP hadronization and show the nonequilibrium of bottom quark.  In Chapter~\ref{Strangeness} we study the strangeness abundance after hadronization and show the long lasting strangeness in the early Universe. In Chapter~\ref{Neutrino} we focus on the neutrino-matter interactions and the evolution of cosmic neutrino in early universe before/after freeze-out. In Chapter~\ref{Electron} we study the abundance of charged leptons $\mu^\pm$ and $e^\pm$ and show that the present of $e^\pm$ plasma plays an important role in early Universe. In Chapter~\ref{Outlook} we address the ongoing and prospective research projects for future publication.
+Finally in Chapter~\ref{Summary} we summarize the important results of our study and conclusion.
+
+\section{Introduction to Cosmology and the Relic Neutrino Background}\label{ch:intro}
+At a temperature of $5$ MeV the Universe consisted of a plasma of $e^\pm$, photons, and neutrinos. At around $1$ MeV neutrinos stop interacting, or freeze-out, and begin to free-stream through the Universe. Today they comprise the relic neutrino background. Photons freeze-out around $0.25$ eV and today they make up the Cosmic Microwave Background (CMB), currently at $T_{\gamma,0}=0.235$ meV.  Relic neutrinos have not been directly measured, but their impact on the speed of expansion of the Universe is imprinted on the CMB.  Indirect measurements of the relic neutrino background, such as by the Planck satellite \cite{Planck},  constrain neutrino properties such as mass and number of massless degrees of freedom.
+
+ In later chapters, we will study the details of the neutrino freeze-out process and their impact on observables in detail but first we present an overview of cosmology, from just prior to neutrino freeze-out until today, putting the relic neutrinos in their proper context. Much of this material, including most figures, was adapted from our paper \cite{ErasOfUniverse}.
+
+
+\subsection{Standard Cosmology}\label{cosmo}
+ To follow the history of the relic neutrino distribution, one must first understand the relation between the expansion dynamics of the Universe, its energy content, and the connection to the photon and neutrino temperature. For this purpose we need some preparation in the  Friedmann$-$Lemaitre$-$Robertson$-$Walker (FRW) cosmological  model, see for example \cite{hartle2003gravity,hobson,misner1973gravitation}. Assuming a homogeneous, isotropic Universe, one arrives at the spacetime metric
+\beqn\label{metric}
+ds^2=dt^2-a^2(t)\left[ \frac{dr^2}{1-kr^2}+r^2(d\theta^2+\sin^2(\theta)d\phi^2)\right]
+%g_{00}=1, \quad g_{rr}=-\frac{a^2}{1-kr^2}, \quad g_{\theta\theta}=-a^2r^2, \quad g_{\phi\phi}=-a^2 r^2\sin^2\theta
+\eeqn
+characterized  by the scale parameter $a(t)$.  $a(t)$ determines the distance between objects at rest in the Universe frame, otherwise known as comoving observers. The geometric parameter $k=-1,0,1$ identifies the geometry of the spacial hypersurfaces defined by comoving observers. Space is a flat-sheet for the observationally preferred value $k=0$ \cite{Planck}, hyperbolic for $k=-1$, and spherical for $k=1$.
+
+The dynamics are governed by the Einstein equations
+\beqn\label{Einstine}
+G^{\mu\nu}=R^{\mu\nu}-\left(\frac R 2 -\Lambda\right) g^{\mu\nu}=-\frac{1}{M_p^2} T^{\mu\nu},  
+\quad R= g_{\mu\nu}R^{\mu\nu}
+\eeqn
+where $M_p\equiv 1/\sqrt{8\pi G_N}$ is the Planck mass, $G_N$ is the gravitational constant, and we work in units where $\hbar=c=1$. Recall that the Einstein tensor $G^{\mu\nu}$ is divergence free and hence so is the total stress energy tensor, $T^{\mu\nu}$.  Note that our definition of $M_p$, while more convenient in cosmology, differs by a factor of $1/\sqrt{8\pi}$ from the particle physics convention.  Finally, we point out that there are several sign conventions in use regarding the definition of geometrical quantities and Einstein's equation that are clarified in appendix \ref{app:conventions}.
+
+ In a homogeneous isotropic spacetime, the matter content is necessarily characterized by two quantities, the energy density $\rho$ and isotropic pressure $P$
+\begin{equation}
+  T^\mu_\nu =\mathrm{diag}(\rho, -P, -P, -P).
+\end{equation}
+ It is common to absorb the Einstein cosmological constant $\Lambda$ into $\rho$ and $P$ by defining
+\beqn\label{EpsLam}
+\rho_\Lambda=M_p^2\Lambda, \qquad P_\Lambda=-M_p^2 \Lambda.
+\eeqn
+We implicitly consider this done from now on. 
+
+
+The global Universe dynamics can be characterized by two  quantities, the Hubble parameter  $H$, a strongly time dependent quantity on cosmological time scales,  and the deceleration parameter $q$
+\beqn\label{dynamic}
+\frac{\dot a }{a}\equiv H(t) ,\quad 
+q\equiv -\frac{a\ddot a}{\dot a^2}.
+\eeqn
+We note the relations
+\beqn
+\quad \frac{\ddot a}{a}=-qH^2,\quad \dot H=-H^2(1+q). 
+\eeqn
+
+Two dynamically independent equations arise using the metric \req{metric} in \req{Einstine}
+\beqn\label{hubble}
+\frac{8\pi G_N}{3} \rho =  \frac{\dot a^2+k}{a^2}
+=H^2\left( 1+\frac { k }{\dot a^2}\right),
+\qquad
+\frac{4\pi G_N}{3} (\rho+3P)  =-\frac{\ddot a}{a}=qH^2.
+\eeqn
+We can eliminate the strength of the interaction, $G_N$,  solving both these equations for ${8\pi G_N}/{3}$, and equating the result to find a relatively simple constraint for the deceleration parameter
+\beqn\label{qparam}
+q=\frac 1 2 \left(1+3\frac{P}{\rho}\right)\left(1+\frac{k}{\dot a^2}\right).
+\eeqn
+ From this point on, we work within the  flat cosmological model with $k=0$ and so $q$ is determined entirely by the matter content of the Universe
+\begin{equation}\label{qparam}
+q=\frac 1 2 \left(1+3\frac{P}{\rho}\right).
+\end{equation}
+
+
+As must be the case for any solution of Einstein's equations,   \req{hubble} implies that the energy momentum tensor of matter is divergence free
+\beqn\label{divTmn}
+\nabla_\nu T^{\mu\nu} =0 \Rightarrow -\frac{\dot\rho}{\rho+P}=3\frac{\dot a}{a}=3H.
+\eeqn
+ The same relation also follows from  conservation of entropy, $dE+PdV=TdS=0,\  dE=d(\rho V),\  dV=d(a^3)$. Given an equation of state $P(\rho)$, solution of \req{divTmn} describes the dynamical evolution of matter in the Universe. Combined with the Hubble equation
+\begin{equation}\label{Hubble_eq}
+H^2=\frac{\rho}{3M_p}
+\end{equation}
+this allows us to solve for the large scale dynamics of the Universe. 
+
+Using the flat FRW model of cosmology outlined above, we now present several perspectives on the history of the Universe.  First we focus on the reheating history. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Reheating History of the Universe}\label{Eralink}
+
+At times where dimensional scales are irrelevant, entropy conservation means that  temperature scales inversely with the scale factor $a(t)$. This follows from \req{divTmn} when $ \rho\simeq 3P   \propto T^4$. However, as the temperature drops and at their respective $m\simeq T$ scales, successively less massive particles annihilate and disappear from the thermal Universe. Their entropy reheats the other degrees of freedom and thus in the process, the entropy originating in a massive degree of freedom is shifted into the effectively massless degrees of freedom that still remain.  This causes the  $T\propto 1/a(t)$ scaling to break down; during each of these `reorganization' periods the drop in temperature is slowed by the concentration of entropy in fewer degrees of freedom, leading to a change in the reheating ratio, $R$, defined as
+\begin{equation}\label{redshiftratio}
+R\equiv \frac{1+z}{ T_\gamma/T_{\gamma,0}}, \qquad 1+z\equiv \frac{a_{0}}{a(t)}.
+\end{equation}
+The reheating ratio connects the photon temperature redshift to the geometric redshift, where $a_0$ is the scale factor today (often normalized to $1$) and quantifies the deviation from the scaling relation between $a(t)$ and $T$.
+
+As we will see, the change in $R$ can be computed by the drop in the number of degrees of freedom.  At a temperature on the order of the top quark mass, when all standard model particles were in thermal equilibrium, the Universe was pushed apart by 28 bosonic and 90 fermionic degrees of freedom. The total number of degrees of freedom can be computed as follows.  
+
+For bosons we have the following: the doublet of charged Higgs particles has $4=2\times2=1+3$  degrees of freedom -- three will migrate to the longitudinal components of $W^\pm, Z$ when the electro-weak vacuum freezes and the EW symmetry breaking arises, while one is retained in the one single dynamical charge neutral Higgs component. In the massless stage, the SU(2)$\times$U(1) theory has 4$\times$2=8 gauge degrees of freedom where the first coefficient  is  the number of particles $(\gamma, Z, W^\pm)$ and each massless gauge boson has  two transverse polarizations. Adding in $8_c\times2_s=16$ gluonic degrees of freedom we obtain 4+8+16=28  bosonic degrees of freedom. 
+
+The count of fermionic degrees of freedom includes three $f$ families, two spins $s$, another factor two for particle-antiparticle duality. We have in each family of flavors a doublet of $2\times 3_c$ quarks, 1-lepton and 1/2 neutrinos (due left-handedness which was not implemented counting spin). Thus we find that a total $3_f\times 2_p\times 2_s\times(2\times 3_c+1_l+1/2_\nu)=90$ fermionic degrees of freedom. We further recall that massless fermions contribute 7/8 of that of bosons in both pressure and energy density. Thus the total number of massless Standard Model particles at a temperature above the top quark mass scale, referring by convention to bosonic degrees of freedom, is $g_{\rm SM}=28+90\times 7/8=106.75$ 
+
+
+
+In figure~\ref{fig:dof}  we show the cube of the reheating ratio \req{redshiftratio} as a function of photon temperature $T_\gamma$ from the primordial high temperature  early Universe on the right to the present on the left, where $R$  must be by definition unity.  The periods of change seen in figure \ref{fig:dof} come when the temperature crosses the mass of a particle species that is in equilibrium. One can see drops corresponding to the disappearance of particles as indicated.   After $e^+e^-$ annihilation on the left, there are no significant degrees of freedom remaining to annihilate and feed entropy into photons, and so $R$  remains constant until today. We show the result using a Fermi gas model with a very rough model for the QGP phase transition and hadronization period near $O(100\MeV)$. The fermi gas model is a poor approximation above the QGP phase transition; a more precise model using lattice QCD, see e.g. \cite{Borsanyi:2013bia}, together with a high temperature perturbative QCD expansion, see e.g. \cite{letessier2002hadrons}, would be needed to improve on this situation but the details do not impact the neutrino freeze-out period near $1\MeV$ which is our primary concern, and so we do not consider these issues further here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} 
+\centerline{\hspace*{0.4cm}\includegraphics[height=6.6cm]{03-birrell/ErasOfUniverse/z_T_plot.eps}}
+\caption{Disappearance of degrees of freedom. The Universe volume inflated approximately by a factor of 27 above the thermal red shift scale as massive particles disappeared successively from the inventory.\label{fig:dof}}
+ \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+As long as the dynamics are at least approximately entropy conserving, the total drop in $R$ is entirely determined by entropy conservation. Namely, the magnitude of the drop in $R$ figure~\ref{fig:dof} is a measure of the number of degrees of freedom that have disappeared from the Universe. Consider   two times $t_1$ and $t_2$ at which all particle species that have not yet annihilated are effectively massless.  By conservation of comoving entropy and  scaling $T\propto 1/a$ we have
+\begin{equation}\label{r_ratio}
+1=\frac{a_1^3S_{1}}{a_2^3 S_2}=\frac{a_1^3\sum_ig_i T_{i,1}^3}{a_2^3\sum_j g_j T_{j,2}^3},\qquad \left(\frac{R_1}{R_2}\right)^3=\frac{\sum_ig_i (T_{i,1}/T_{\gamma,1})^3}{\sum_j g_j (T_{j,2}/T_{\gamma,2})^3}
+\end{equation}
+where the sums are over the total number of degrees of freedom present at the indicated time and the degeneracy factors $g_i$ contain the $7/8$ factor for fermions. In the second form    we divided the numerator and denominator by $a_{0}T_{\gamma,0}$. We distinguish between the temperature of each particle species and our reference temperature, the photon temperature.  This is important since today neutrinos are colder than photons, due to photon reheating from  $e^\pm$ annihilation occurring after neutrinos decoupled (this is only an approximation, a point we will study in detail in subsequent chapters).  By conservation of entropy one obtains the neutrino to photon temperature ratio of
+\begin{equation}\label{T_nu_T_gamma}
+T_\nu/T_\gamma=({4}/{11})^{1/3}.
+\end{equation}
+We will call this the reheating ratio in the decoupled limit.  For details on the derivation of this standard result, see for example our paper in appendix \ref{app:model_ind}, where it is obtained as a special case of a more general analysis. 
+
+Using \req{r_ratio}  we  compute the total drop in $R^3$ shown in figure \ref{fig:dof}.  At $T=T_\gamma=\mathcal{O}(100\GeV)$ the number of active degrees of freedom is slightly below $g_{\rm SM}=106.75$ due to the partial disappearance of top quarks, but this approximation will be good enough for our purposes.  At this time, all the species are in thermal equilibrium with photons and so $T_{i,1}/T_{\gamma,1}=1$ for all $i$.  Today we have $2$ photon and $7/8\times 6$ neutrino degrees of freedom and a  neutrino to photon temperature ratio \req{T_nu_T_gamma}.  Therefore we have
+\begin{equation}
+\left(\frac{R_{100GeV}}{R_{now}}\right)^3= \frac{g_{SM}}{g_{\rm now}}=\frac{106.75}{2+\frac{7}{8}\times 6\times \frac{4}{11}}\approx 27.3
+\end{equation}
+which is the  fractional change we see in the fermi gas model curve in figure \ref{fig:dof} (as mentioned above, the QCD model is reduced due to interactions). The meaning of this factor is that the Universe approximately inflated by a factor 27 above the thermal red shift scale as massive particles disappeared successively from the inventory. 
+
+
+\subsection{Composition of the Universe}
+From the perspective of reheating, the history of the Universe from the end of $e^\pm$ annihilation until today has been uneventful.  We can shed additional light on this period and others by looking at the composition of the Universe as a function of temperature
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centerline{\hspace*{0.4cm}\includegraphics[height=7.6cm]{03-birrell/ErasOfUniverse/energy_densities_total.eps}}\label{fig:energy_frac}
+\caption{Current era: $69\%$ dark energy, $26\%$ dark matter, $5\%$ baryons, $<1\%$ photons and neutrinos, $1$ massless and $2\times .1$ eV neutrinos (Neutrino mass choice is just for illustration.  Other values are possible).}
+ \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In figure \ref{fig:energy_frac} we begin on the right at the end of the hadron era with the disappearance of muons and pions.  This constitutes a reheating period, with energy and entropy from these particles being transfered to the remaining $e^\pm$, photon, neutrino plasma.  Continuing to $T=O(1)$ MeV, we come to the annihilation  of $e^\pm$ and the photon reheating period.  Notice that only the photon energy density fraction increases here.  As discussed above, a common simplifying assumption is that neutrinos are already decoupled at this time and hence do not share in the reheating process, leading to a difference in photon and neutrino temperatures \req{T_nu_T_gamma}.
+
+After passing through a long period, from $T=O(1)$ MeV until $T=O(1)$ eV, where the energy density is dominated by photons and free-streaming neutrinos, we then come to the beginning of the matter dominated regime, where the energy density is dominated by dark matter and baryonic matter.  This transition is the result of the redshifting of the photon and neutrino energy, $\rho\propto T^4$, whereas for non-relativistic matter $\rho\propto a^{-3}\propto T^3$.  Note that our inclusion of neutrino mass causes the leveling out of the neutrino energy density fraction during this period, as compared to the continued redshifting of the photon energy.
+
+Finally, as we move towards the present day CMB temperature of $T_{\gamma,0}=0.235$ meV on the left hand side, we have entered the dark energy dominated regime.  For the present day values, we have used the fits from the Planck data \cite{Planck} of  $69\%$ dark energy, $26\%$ dark matter and $5\%$ baryons (and zero spatial curvature).  The photon energy density is fixed by the CMB temperature $T_{\gamma,0}$ and the neutrino energy density is fixed by $T_{\gamma,0}$ along with the photon to neutrino temperature ratio.  Both constitute $<1\%$ of the current energy budget.
