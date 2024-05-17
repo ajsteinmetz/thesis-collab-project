@@ -1,0 +1,197 @@
+\section{General Relativistic Boltzmann Equation}
+The general relativistic Boltzmann equation describes the dynamics of a gas of particles that travel freely in between point interactions in an general spacetime~\cite{andre,cercignani,bruhat,ehlers} 
+\begin{equation}\label{boltzmann}
+p^\alpha\partial_{x^\alpha}f-\sum_{j=1}^3\Gamma^j_{\mu\nu}p^\mu p^\nu\partial_{p^j}f=C[f]\,.
+\end{equation}
+Here $ \Gamma^\alpha_{\mu\nu}$ is the affine connection (Christoffel symbols) corresponding to a metric $g_{\alpha\beta}$,   the distribution function $f$ is a function of four-momentum on the mass shell, i.e., that satisfy
+ \begin{equation}
+g_{\alpha\beta}p^\alpha p^\beta=m^2\,.
+\end{equation}
+Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  $C[f]$ is the collision operator and encodes all information about point interactions between particles.  If $C[f]$ vanishes then the equation is called the Vlasov equation and describes particles that move on geodesics (or free stream).  At this point, we are  not invoking the assumption that the distribution function has a kinetic equilibrium form, nor are we assuming a FRW universe; here we will discuss  general properties of \req{boltzmann}.   We will need the following definitions of entropy current $s^\mu$, stress energy tensor ${T}^{\mu\nu}$, and number current $n^\mu$,
+\begin{align}
+\label{smdef} s^\mu&=-\int \left(f\ln(f)\pm(1\mp f)\ln(1\mp f)\right)p^\mu d\pi\,,\\
+\label{Tmndef}{T}^{\mu\nu}&=\int p^\mu p^\nu f d\pi\,,\\
+\label{nmdef} n^\nu&=\int f p^\nu d\pi\,,\\
+d\pi&=\frac{\sqrt{-g}}{p_0}\frac{g_pd^3{\bf p}}{8\pi^3}\,,
+\end{align}
+where $d\pi$ is the volume element on the mass shell, $g$ denotes the determinant of the metric tensor, $p_0=g_{0\alpha} p^\alpha$, non-bold $p$ are four-momenta while bold ${\bf p}$ denotes the spacial components, the upper signs are for fermions and the lower signs for bosons. 
+
+\subsection{Collision Operator}
+We now elaborate on the form of the collision operator.  Our presentation is an expanded version of the survey in \cite{ehlers}.  Suppose we have a collection of  distinct particle and antiparticle types $\mathcal{C}$ with distribution functions $f_{C}$, $C\in\mathcal{C}$, and they partake in some number of reactions or interactions $I=n_{B_1} B_1, n_{B_2}B_2...\longrightarrow n_{A_1} A_1,n_{A_2}A_2...$, $A_i\in\mathcal{C}$ distinct and $B_j\in\mathcal{C}$ distinct, where $n_{A_i}$ is the number of particles of type $A_i$ occurring in the interaction (all nonzero) and similarly for $n_{B_i}$.  Given an interaction, $I$, we let $r(I)$ be the collection of particle types that are reactants in the interaction, $p(I)$ be the collection of particle types that are products, and we let $\overleftarrow{I}$ denote the reverse reaction, i.e., with reactants and products reversed.   We let $int$ denote the set of all interactions and, for any given species $A$, $int(A)$ be the set of all interactions involving $A$ as a   product.   We will assume that $\overleftarrow{I}\in int$ whenever $I\in int$.  With these conventions, the collision operator for particle type $A$ takes the form
+\begin{align}\label{collision_operator}
+&C[f_A]\\
+=&\sum_{I\in int(A)} \frac{n_A}{\prod_i n_{A_i}!\prod _j n_{B_j}!}\int\left[\left(\prod_j \prod_{l=1}^{n_{B_j}}f_{B_j}(p_{B_j}^l)\right)\left(\prod_i \prod_{k=1}^{n_{A_i}}f^{A_i}(p_{A_i}^k)\right)W^I(p_{B_j}^l,p_{A_i}^k) \right.\notag\\
+& \left. -\left(\prod_i \prod_{k=1}^{n_{A_i}}f_{A_i}(p_{A_i}^k)\right)\left(\prod_j \prod_{l=1}^{n_{B_j}}f^{B_j}(p_{B_j}^l)\right)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) \right] \delta(\Delta p)\prod_i \widehat{dV}_{A_i}\prod_j dV_{B_j},\notag\\
+&f^C=1\mp f_C, \hspace{2mm} \Delta p=\sum_i \sum_{k=1}^{n_{A_i}}p^k_{A_i}-\sum_j \sum_{l=1}^{n_{B_j}}p^l_{B_j}\,,\notag\\
+&\widehat{dV}_{A_i}=\tilde{\pi}_{A_i}\prod_{k=2}^{n_{A_i}}\frac{1}{2}d\pi^k_{A_i}, \hspace{2mm}  dV_{B_j}=(2\pi)^4\prod_{l=1}^{n_{B_j}}\frac{1}{2}d\pi^l_{B_j}\,,\notag\\
+&\tilde{\pi}_{A_i}=\frac{1}{2} \text{ if } A_i=A \text{ and }  \tilde{\pi}_{A_i}=\frac{1}{2}d\pi^1_{A_i} \text{ otherwise,} \notag\\
+&d\pi_{C}^r=\frac{\sqrt{-g}}{(p_{C}^r)_0}\frac{g_{C}d^3{\bf p}_{C}^r}{8\pi^3}, \hspace{2mm}p_0=g_{0\alpha}p^\alpha.\notag
+\end{align}
+  The integrations are over the future mass shells of all the particles, so the $p$ are related by $g_{\alpha \beta}p^\alpha p^\beta=m^2$. The factorials take into account the indistinguishably of the particles and prevent one from over counting the independent ways a reaction can happen when integrating over momentum.  The terms $f^A$ are due to quantum statistics and account for Fermi repulsion or Bose attraction (again, upper signs are for fermions and lower signs for bosons).  $W^I(p_{B_j}^l,p_{A_i}^k)$, an abbreviation for  $W^I(p_{B_1}^1,p_{B_1}^2,...,p_{B_1}^{n_{B_1}},p_{B_2}^1,...,p_{A_1}^1,...)$, is the scattering kernel that encodes the probability of $n_{B_j}$ particles of types $B_j$ with momenta $p_{B_j}^l$ interacting to form $n_{A_i}$ particles of types $A_i$ with momenta $p_{A_i}^k$ in the process $I=n_{B_1}B_1,n_{B_2}B_2,...\longrightarrow n_{A_1}A_1,n_{A_1}A_1,...$, and so it is non-negative.  The delta function enforces conservation of four-momentum. The factors of $(2\pi^4)$ and $\frac{1}{2}$ in the definitions of the volume elements come from normalization of the transition functions from quantum scattering calculations.
+
+ As defined, $C[f_A]$ is a function of $p_{A_i}^1$ where $A=A_i$. The choice to not integrate over $p_{A_i}^1$ rather than any of the other $p_{A_i}^k$ is completely arbitrary, but makes no difference in the result since the interaction does not depend on how we number the participating particles. In terms of the scattering kernels, this means we assume $W^I$ has the property
+\begin{equation}\label{reorder_property}
+W^I(p_{A_1}^{\sigma_1},p^{\sigma 2}_{A_1},...)=W^I(p_{A_1}^1,p_{A_1}^2,...)\,,
+\end{equation}
+for any permutation $\sigma$, and similarly for any other permutation with one of the collections $p_{A_i}^k$ or $p_{B_j}^l$ for any choice of $i$ or $j$. For economy of notation in these derivations, we will employ the additional abbreviations for a given interaction  $I=n_{B_i}B_i\longrightarrow n_{A_i}A_i$:
+\begin{align}
+f_{p,I}(p^k_{A_i})&\equiv f_{p,I}(p^1_{A_i},p^2_{A_i},...,p^{n_{A_i}}_{A_i})\equiv \prod_i \prod_{k=1}^{n_{A_i}}f_{A_i}(p_{A_i}^k)\,,\\
+f^{p,I}(p^k_{A_i})&=f^{p,I}(p^1_{A_i},p^2_{A_i},...,p^{n_{A_i}}_{A_i})=\prod_i \prod_{k=1}^{n_{A_i}}f^{A_i}(p_{A_i}^k)\,,\notag\\
+f_{r,I}(p^l_{B_j})&\equiv f_{r,I}(p^1_{B_j},p^2_{B_j},...,p^{n_{B_j}}_{B_j})\equiv \prod_j \prod_{l=1}^{n_{B_j}}f_{B_j}(p_{B_j}^l)\,,\notag\\
+f^{r,I}(p^l_{B_j})&=f^{r,I}(p^1_{B_j},p^2_{B_j},...,p^{n_{B_j}}_{B_j})=\prod_j \prod_{l=1}^{n_{B_j}}f^{B_j}(p_{B_j}^l)\,,\notag\\
+n_I&=\prod_i n_{A_i}!\prod _j n_{B_j}!\,,\notag\\
+\widehat{dV}_I&=\delta(\Delta p)\prod_i\widehat{dV}_{A_i}\prod_jdV_{B_j}\,,\notag\\
+dV_I&=\delta(\Delta p)\prod_idV_{A_i}\prod_jdV_{B_j}\,,\notag
+\end{align}
+where the $r$ and $p$ sub and superscripts stand for reactants and products respectively.   See Appendix \ref{int_vol} for more information on the precise meaning and properties of the delta function factor in the integrand.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Conserved Currents}
+Suppose all the interactions of interest conserve some charge $b_A$, i.e.,
+ \begin{align}\label{eq:conserved_charge}
+\sum_{A\in p(I)} n_Ab_A=\sum_{A\in r(I)} n_Ab_A
+\end{align}
+for all $I\in int$.   We can construct and $4$-vector current corresponding to this charge as follows:
+\begin{equation}
+B^\mu=\sum_A b_A N_A^\mu\,,
+\end{equation}
+where $N^\mu_A$ are the number currents of the particle species \req{nmdef}.  In this section we show that $B^\mu$ has vanishing divergence,  i.e., a $B^\mu$ satisfies a conservation law.
+
+First note that by transforming to normal coordinates at a point $x$ (i.e., coordinates in which the Christoffel symbols vanish at $x$), one obtains
+\begin{equation}\label{use_normal_coords}
+\nabla_\mu N_A^\mu=\int p^\mu \partial_{x^\mu} f d\pi_A=\int C[f_A] d\pi_A.
+\end{equation}
+at $x$. The initial and final objects are independent of coordinates, and therefore they are equal in any coordinate system. Noting this, we can then calculate
+\begin{align}
+\nabla_\mu B^\mu=&\sum_A b_A\int C[f_A]d\pi_A=\sum_A\sum_{I\in int(A)} \frac{n_Ab_A}{n_I}\int\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)\widehat{dV}_I d\pi_A\notag\\
+=&\sum_A\sum_{I\in int(A)} \frac{n_Ab_A}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\notag\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I.\notag
+\end{align}
+Now observe that, for any collection of finite sets $D_j$ indexed by a finite set $J$ with $\bigcup_{j\in J}D_j=D$ and any function $h:J\times D\rightarrow \mathbb{R}^m$ we have
+\begin{equation}\label{sum_lemma}
+\sum_{j\in J}\sum_{x\in D_j} h(j,x)=\sum_{x\in D}\sum_{\{j:x\in D_j\}}h(j,x)\,.
+\end{equation}
+Using this fact, we can switch the order of the sums to obtain
+\begin{align}\label{del_B}
+\nabla_\mu B^\mu=&\sum_{I\in int}\sum_{A\in p(I)} n_Ab_A \,,\\
+R_I\equiv& \frac{1}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,.\notag
+\end{align}
+The sum over all interactions splits over a sum over symmetric interactions, $int_{s}$, and a sum over asymmetric interactions.  For each asymmetric interaction, pair it up with its reverse and arbitrarily choose one of them to call the forward direction.  Let the set of these forward interactions be denoted $\overrightarrow{int}$.  Then the sum in \req{del_B} splits as follows
+\begin{equation}
+\nabla_\mu B^\mu=\sum_{I\in int_s}R_I\sum_{A\in p(I)} n_A b_A+\sum_{I\in\overrightarrow{int}}R_I\sum_{A\in p(I)} n_Ab_A+\sum_{I\in\overrightarrow{int}}R_{\overleftarrow{I}}\sum_{A\in p(\overleftarrow{I})} n_Ab_A\,.
+\end{equation}
+For each symmetric interaction $W^I=W^{\overleftarrow{I}}$, $f_{A_i}=f_{B_i}$, and $f^{A_i}=f^{B_i}$, so we have
+\begin{align}
+R_I=&\frac{1}{n_I}\left(\int f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I \right.\\
+&\left. -\int f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)  dV_I\right)\notag\\
+=&\frac{1}{n_I}\left(\int f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I \right.\notag\\
+&\left. -\int f_{r,I}(p_{A_i}^k)f^{p,I}(p_{B_j}^l)W^{I}(p_{A_i}^k,p_{B_j}^l)  dV_I\right)\notag\\
+=&0\,,\notag
+\end{align}
+as the two integrals differ only by a relabeling of integration variables.  Asymmetric interactions satisfy
+\begin{align}
+R_{\overleftarrow{I}}=&\frac{1}{n_I}\int\left(f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) \right.\\
+&\left. -f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)\right)  dV_I\notag\\
+=&-R_I.\notag
+\end{align}
+Combining this with \req{eq:conserved_charge} we find
+\begin{align}
+\nabla_\mu B^\mu&=\sum_{I\in\overrightarrow{int}}R_I\left(\sum_{A\in p(I)} n_Ab_A-\sum_{A\in p(\overleftarrow{I})} n_Ab_A\right)\\
+&=\sum_{I\in\overrightarrow{int}}R_I\left(\sum_{A\in p(I)} n_Ab_A-\sum_{A\in r(I)} n_Ab_A\right)=0\,.\notag
+\end{align}
+Therefore  $B^\mu$ is a conserved current, as claimed.
+
+\subsection{Divergence Freedom of Stress Energy Tensor}
+The Einstein equation implies that the total stress energy tensor of all matter coupled to gravity is divergence free.  Here we show that the relativistic Boltzmann stress energy tensor \req{Tmndef} has this property, and is therefor a valid matter model that can be  coupled to gravity.  
+
+First use normal coordinates to compute
+\begin{align}
+\nabla_\mu T^{\mu\nu}=&\sum_A \int p_A^\nu C[f_A]d\pi_A\notag\\
+=&\sum_A\sum_{I\in int(A)}\frac{n_A}{n_I}\int (p^1_{A_\ell})^\nu\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\notag\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,,
+\end{align}
+where $\ell$ is the unique index such that $A_\ell=A$ ($\ell$ depends on $A$ and $I$, but we suppress this dependence for simplicity of notation). Using \req{sum_lemma} we can switch the summation order to get
+\begin{align}
+\nabla_\mu T^{\mu\nu}=&\sum_{I\in int}\sum_{A\in p(I)} \frac{n_A}{n_I}\int (p^1_{A_\ell})^{\nu}\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\notag\,.
+\end{align}
+By \req{reorder_property} and the surrounding remarks, we can rewrite this as
+\begin{align}\label{del_T_sum}
+\nabla_\mu T^{\mu\nu}=&\sum_{I\in int}\sum_{A\in p(I)} \frac{1}{n_I}\sum_{a=1}^{n_A}\int (p^a_{A_\ell})^{\nu}\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\notag\\
+=&\sum_{I\in int} \frac{1}{n_I}\sum_{\ell}\sum_{a=1}^{n_{A_\ell}}\int (p_{A_\ell}^a)^{\nu}\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\notag\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,.\notag
+\end{align}
+As before, we can break the sum over $I$ into a sum over symmetric processes and two other sums over forward and backward asymmetric processes respectively.  For a symmetric interaction $I=\overleftarrow{I}$ and $f_{A_i}=f_{B_i}$ for all $i$, hence
+\begin{align}
+&\sum_\ell\sum_{a=1}^{n_{A_\ell}}\int (p_{A_\ell}^a)^{\nu}\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\notag\\
+=&\int\sum_\ell\sum_{a=1}^{n_{A_\ell}}\left((p_{A_\ell}^a)^\nu- (p_{B_\ell}^a)^{\nu}\right) f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\notag\\
+=& 0\,,\notag
+\end{align}
+due to the delta function $\delta(\Delta p)$ in the volume form $dV_I$.  Therefore the terms in the sum \req{del_T_sum} corresponding to symmetric interactions vanish.  For every pair of forward and backward asymmetric interactions we obtain
+\begin{align}
+&\sum_\ell\sum_{a=1}^{n_{A_\ell}}\int (p_{A_\ell}^a)^{\nu}\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\notag\\
+&+\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \int (p_{B_{\tilde\ell}}^c)^{\nu}\left(f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) \right.\notag\\
+&\left. -f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)\right)  dV_I\notag\\
+=&\int\left( \sum_\ell\sum_{a=1}^{n_{A_\ell}}(p_{A_\ell}^a)^{\nu} -\sum_{\tilde \ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} (p_{B_{\tilde\ell}}^c)^{\nu}\right)f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
+&+\int \left(\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}}(p_{B_{\tilde\ell}}^c)^{\nu}-\sum_\ell\sum_{a=1}^{n_{A_\ell}}(p_{A_\ell}^a)^{\nu}\right)f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) dV_I\notag\\
+=&0\,,\notag
+\end{align}
+again because of $\delta(\Delta p)$ in the volume forms.  This shows $\nabla_\mu T^{\mu\nu}=0$, as claimed.
+
+\subsection{Entropy and Boltzmann's H-Theorem}
+As our final general background result, we prove that the entropy four-current satisfies $\nabla_\mu s^\mu\geq 0$, known as Boltzmann's H-theorem. This result holds under the additional assumption that the interactions are time-reversal symmetric, meaning that
+\begin{equation}\label{time_symmetry}
+W^I(p_{B_j}^l,p_{A_i}^k)=W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)
+\end{equation}
+for all $I$.   The entropy four current is future directed hence, given any splitting of spacetime into space and time $M=S\times T$,   Boltzmann's H-theorem implies that the total entropy  is non-decreasing on $T$.
+
+Working in normal coordinates once again, we can compute
+\begin{align}
+\nabla_\mu s^\mu=&-\sum_A\int p^\mu \partial_{x^\mu}\left(f_A\ln\left(f_A\right)\pm\left(1\mp f_A\right)\ln\left(1\mp f_A\right)\right)d\pi_A\\
+=&\sum_A\int\ln\left(1/f_A\mp 1\right)C[f_A]d\pi_A\,.\notag
+\end{align}
+Similar reasoning to the above two subsections then gives
+\begin{align}
+\nabla_\mu s^\mu=&\sum_{I\in int}\frac{1}{n_I}\sum_\ell\sum_{a=1}^{n_{A_\ell}}\int\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp1\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,.\notag
+\end{align}
+Again, we can break this up into a sum over symmetric processes and two other sums over forward and backward asymmetric processes respectively. Each symmetric processes contributes a term of the form
+\small
+\begin{align}
+&\int\sum_\ell\sum_{a=1}^{n_{A_\ell}}\left(\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right)-\ln\left(1/f_{B_\ell}(p_{B_\ell}^a)\mp 1\right)\right) f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\\
+=& \int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right) f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\notag\\
+=& \frac{1}{2}\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left( f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)- f_{p,I}(p_{A_j}^l)f^{r,I}(p_{B_i}^k)\right)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\,,\notag
+\end{align}
+\normalsize
+\begin{comment}
+\begin{align}
+&\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right) f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV\\
+=&\int\ln\left(\frac{f^{p,I}(p_{B_i}^k)f_{r,I}(p_{A_j}^l)}{f_{p,I}(p_{B_i}^k)f^{r,I}(p_{A_j}^l)}\right) f_{r,I}(p_{A_j}^l)f^{p,I}(p_{B_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV\\
+=&-\int\ln\left(\frac{f_{p,I}(p_{B_i}^k)f^{r,I}(p_{A_j}^l)}{f^{p,I}(p_{B_i}^k)f_{r,I}(p_{A_j}^l)}\right) f_{r,I}(p_{A_j}^l)f^{p,I}(p_{B_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV
+\end{align}
+\end{comment}
+where to obtain the last line we used the time-reversal property  \eqref{time_symmetry}.
+
+A pair of forward and backward asymmetric interactions combine to give a term of the form
+\begin{align}
+&\sum_\ell\sum_{a=1}^{n_{A_b}}\int\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\notag\\
+&+\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \int\ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\left(f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) \right.\notag\\
+&\left. -f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)\right)  dV_I\notag\\
+=&\int\left( \sum_\ell\sum_{a=1}^{n_{A_\ell}}\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right) -\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\right)f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
+&-\int \left(\sum_\ell\sum_{a=1}^{n_{A_\ell}}\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right) -\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\right)f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{I}(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
+=&\int\ln\left(\frac{f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)\right)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\,.
+\end{align}
+where in to obtain the first equality we  used  the time-reversal property  \eqref{time_symmetry}.  Combining the symmetric and asymmetric cases we find
+\begin{align}
+\nabla_\mu s^\mu=&\sum_{I\in int_s} \frac{1}{2n_I}\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left( f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\\
+&\left.- f_{p,I}(p_{A_j}^l)f^{r,I}(p_{B_i}^k)\right)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\notag\\
+&+\sum_{I\in \overrightarrow{int}}\frac{1}{n_I}\int\ln\left(\frac{f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\notag\\
+&\left.-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)\right)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\,.
+\end{align}
+Each term in either sum is the integral of a non-negative quantity $W^{I}$ times a quantity of the form $(a-b)\ln(a/b)$, $a,b>0$, which is easily seen to be non-negative.  Therefore we obtain the claimed result $\nabla_\mu s^\mu\geq 0$.
+
