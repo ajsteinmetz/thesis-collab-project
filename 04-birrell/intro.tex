@@ -1,21 +1,20 @@
 \section{Boltzmann-Einstein Equation}
-The general relativistic Boltzmann equation describes the dynamics of a gas of particles that travel freely in between point interactions in an general spacetime~\cite{andre,cercignani,bruhat,ehlers} 
-\begin{equation}\label{boltzmann}
+We now begin a detailed study of the non-equilibrium properties of the neutrino freezeout and it's impact on the effective number of neutrinos, an important cosmological observable. We model the dynamics of the neutrino freezeout using the Boltzmann-Einstein equation, also called the general relativistic Boltzmann equation, which describes the dynamics of a gas of particles that travel on geodesics in an general spacetime, with the only interactions being point collisions~\cite{andre,cercignani,bruhat,ehlers},
+\begin{equation}\label{boltzmann_einstein}
 p^\alpha\partial_{x^\alpha}f-\sum_{j=1}^3\Gamma^j_{\mu\nu}p^\mu p^\nu\partial_{p^j}f=C[f]\,.
 \end{equation}
 Here $ \Gamma^\alpha_{\mu\nu}$ is the affine connection (Christoffel symbols) corresponding to a metric $g_{\alpha\beta}$,   the distribution function $f$ is a function of four-momentum on the mass shell, i.e., that satisfy
  \begin{equation}
 g_{\alpha\beta}p^\alpha p^\beta=m^2\,.
 \end{equation}
-Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  $C[f]$ is the collision operator and encodes all information about point interactions between particles.  If $C[f]$ vanishes then the equation is called the Vlasov equation and describes particles that move on geodesics (or free stream).  At this point, we are  not invoking the assumption that the distribution function has a kinetic equilibrium form, nor are we assuming a FRW universe; here we will discuss  general properties of \req{boltzmann}.   We will need the following definitions of entropy current $s^\mu$, stress energy tensor ${T}^{\mu\nu}$, and number current $n^\mu$,
+Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  $C[f]$ is the collision operator and encodes all information about point interactions between particles.  If $C[f]$ vanishes then the equation is called the Vlasov equation and describes particles that move on geodesics (or free stream).  At this point, we are  not invoking the assumption that the distribution function has a kinetic equilibrium form, nor are we assuming a FRW universe; in this section we will discuss  general properties of \req{boltzmann_einstein} before turning to the study of neutrino freezeout in subsequent sections.   We will need the following definitions of entropy current $s^\mu$, stress energy tensor ${T}^{\mu\nu}$, and number current $n^\mu$,
 \begin{align}
 \label{smdef} s^\mu&=-\int \left(f\ln(f)\pm(1\mp f)\ln(1\mp f)\right)p^\mu d\pi\,,\\
 \label{Tmndef}{T}^{\mu\nu}&=\int p^\mu p^\nu f d\pi\,,\\
 \label{nmdef} n^\nu&=\int f p^\nu d\pi\,,\\
 d\pi&=\frac{\sqrt{-g}}{p_0}\frac{g_pd^3{\bf p}}{8\pi^3}\,,
 \end{align}
-where $d\pi$ is the volume element on the mass shell, $g$ denotes the determinant of the metric tensor, $p_0=g_{0\alpha} p^\alpha$, non-bold $p$ are four-momenta while bold ${\bf p}$ denotes the spacial components, the upper signs are for fermions and the lower signs for bosons. 
-
+where $d\pi$ is the volume element on the future mass shell, $g$ denotes the determinant of the metric tensor, $p_0=g_{0\alpha} p^\alpha$, non-bold $p$ are four-momenta while bold ${\bf p}$ denotes the spacial components, the upper signs are for fermions and the lower signs for bosons. See Appendix \ref{ch:vol_forms} for the derivation of the form of the volume element.
 \subsection{Collision Operator}
 We now elaborate on the form of the collision operator.  Our presentation is an expanded version of the survey in \cite{ehlers}.  Suppose we have a collection of  distinct particle and antiparticle types $\mathcal{C}$ with distribution functions $f_{C}$, $C\in\mathcal{C}$, and they partake in some number of reactions or interactions $I=n_{B_1} B_1, n_{B_2}B_2...\longrightarrow n_{A_1} A_1,n_{A_2}A_2...$, $A_i\in\mathcal{C}$ distinct and $B_j\in\mathcal{C}$ distinct, where $n_{A_i}$ is the number of particles of type $A_i$ occurring in the interaction (all nonzero) and similarly for $n_{B_i}$.  Given an interaction, $I$, we let $r(I)$ be the collection of particle types that are reactants in the interaction, $p(I)$ be the collection of particle types that are products, and we let $\overleftarrow{I}$ denote the reverse reaction, i.e., with reactants and products reversed.   We let $int$ denote the set of all interactions and, for any given species $A$, $int(A)$ be the set of all interactions involving $A$ as a   product.   We will assume that $\overleftarrow{I}\in int$ whenever $I\in int$.  With these conventions, the collision operator for particle type $A$ takes the form
 \begin{align}\label{collision_operator}
@@ -27,7 +26,7 @@ We now elaborate on the form of the collision operator.  Our presentation is an 
 &\tilde{\pi}_{A_i}=\frac{1}{2} \text{ if } A_i=A \text{ and }  \tilde{\pi}_{A_i}=\frac{1}{2}d\pi^1_{A_i} \text{ otherwise,} \notag\\
 &d\pi_{C}^r=\frac{\sqrt{-g}}{(p_{C}^r)_0}\frac{g_{C}d^3{\bf p}_{C}^r}{8\pi^3}, \hspace{2mm}p_0=g_{0\alpha}p^\alpha.\notag
 \end{align}
-  The integrations are over the future mass shells of all the particles, so the $p$ are related by $g_{\alpha \beta}p^\alpha p^\beta=m^2$. The factorials take into account the indistinguishably of the particles and prevent one from over counting the independent ways a reaction can happen when integrating over momentum.  The terms $f^A$ are due to quantum statistics and account for Fermi repulsion or Bose attraction (again, upper signs are for fermions and lower signs for bosons).  $W^I(p_{B_j}^l,p_{A_i}^k)$, an abbreviation for  $W^I(p_{B_1}^1,p_{B_1}^2,...,p_{B_1}^{n_{B_1}},p_{B_2}^1,...,p_{A_1}^1,...)$, is the scattering kernel that encodes the probability of $n_{B_j}$ particles of types $B_j$ with momenta $p_{B_j}^l$ interacting to form $n_{A_i}$ particles of types $A_i$ with momenta $p_{A_i}^k$ in the process $I=n_{B_1}B_1,n_{B_2}B_2,...\longrightarrow n_{A_1}A_1,n_{A_1}A_1,...$, and so it is non-negative.  The delta function enforces conservation of four-momentum. The factors of $(2\pi^4)$ and $\frac{1}{2}$ in the definitions of the volume elements come from normalization of the transition functions from quantum scattering calculations.
+  The integrations are over the future mass shells of all the particles, so the $p$ are related by $g_{\alpha \beta}p^\alpha p^\beta=m^2$. The factorials take into account the indistinguishably of the particles and prevent one from over counting the independent ways a reaction can happen when integrating over momentum.  The terms $f^A$ are due to quantum statistics and account for Fermi repulsion or Bose attraction (again, upper signs are for fermions and lower signs for bosons).  $W^I(p_{B_j}^l,p_{A_i}^k)$, an abbreviation for  $W^I(p_{B_1}^1,p_{B_1}^2,...,p_{B_1}^{n_{B_1}},p_{B_2}^1,...,p_{A_1}^1,...)$, is the scattering kernel that encodes the probability of $n_{B_j}$ particles of types $B_j$ with momenta $p_{B_j}^l$ interacting to form $n_{A_i}$ particles of types $A_i$ with momenta $p_{A_i}^k$ in the process $I=n_{B_1}B_1,n_{B_2}B_2,...\longrightarrow n_{A_1}A_1,n_{A_1}A_1,...$, and so it is non-negative.  The delta function enforces conservation of four-momentum. The factors of $(2\pi^4)$ and $\frac{1}{2}$ in the definitions of the volume elements come from normalization of the transition functions from quantum scattering calculations.  For computational purposes, the expression \eqref{collision_operator} must be further simplified, taking into account the structure of each interaction.  For example, see Appendix \ref{ch:coll_simp} for a detailed study of the collision operator in the case of neutrino freezeout.
 
  As defined, $C[f_A]$ is a function of $p_{A_i}^1$ where $A=A_i$. The choice to not integrate over $p_{A_i}^1$ rather than any of the other $p_{A_i}^k$ is completely arbitrary, but makes no difference in the result since the interaction does not depend on how we number the participating particles. In terms of the scattering kernels, this means we assume $W^I$ has the property
 \begin{equation}\label{reorder_property}
@@ -43,8 +42,9 @@ n_I&=\prod_i n_{A_i}!\prod _j n_{B_j}!\,,\notag\\
 \widehat{dV}_I&=\delta(\Delta p)\prod_i\widehat{dV}_{A_i}\prod_jdV_{B_j}\,,\notag\\
 dV_I&=\delta(\Delta p)\prod_idV_{A_i}\prod_jdV_{B_j}\,,\notag
 \end{align}
-where the $r$ and $p$ sub and superscripts stand for reactants and products respectively.   See Appendix \ref{int_vol} for more information on the precise meaning and properties of the delta function factor in the integrand.
+where the $r$ and $p$ sub and superscripts stand for reactants and products respectively.   See Appendix \ref{ch:vol_forms} for more information on the precise meaning and properties of the delta function factors.
 
+In the following subsections we derive several important  properties of the equation \eqref{boltzmann_einstein}.  While in principle these properties are well known~\cite{andre,cercignani,bruhat,ehlers}, here we prove them at a level of generality that, to the authors knowledge, is not available in other references, i.e., for a general collection of interactions as encapsulated in \req{collision_operator}.  We  note that Riemannian normal coordinates will a key tool   in these derivations.   These are coordinates centered at a chosen point, $x$, in spacetime wherein the geodesics through $x$ are straight lines in the coordinate system and the derivatives of the metric in the coordinate system vanish at $x$. In particular, the Christoffel symbols vanish at $x$; see, e.g., page 42 in \cite{wald2010general} or pages 72-73 of \cite{o1983semi}.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Conserved Currents}
 Suppose all the interactions of interest conserve some charge $b_A$, i.e.,
@@ -57,11 +57,11 @@ B^\mu=\sum_A b_A N_A^\mu\,,
 \end{equation}
 where $N^\mu_A$ are the number currents of the particle species \req{nmdef}.  In this section we show that $B^\mu$ has vanishing divergence,  i.e., a $B^\mu$ satisfies a conservation law.
 
-First note that by transforming to normal coordinates at a point $x$ (i.e., coordinates in which the Christoffel symbols vanish at $x$), one obtains
+For any point $x$ in spacetime,  by transforming to Riemannian normal coordinates at   $x$ and using \eqref{boltzmann_einstein} along with the fact that the first derivatives of the metric vanish at $x$,  one can compute
 \begin{equation}\label{use_normal_coords}
-\nabla_\mu N_A^\mu=\int p^\mu \partial_{x^\mu} f d\pi_A=\int C[f_A] d\pi_A.
+\nabla_\mu N_A^\mu=\int p^\mu \partial_{x^\mu} f d\pi_A=\int C[f_A] d\pi_A
 \end{equation}
-at $x$. The initial and final objects are independent of coordinates, and therefore they are equal in any coordinate system. Noting this, we can then calculate
+at $x$. The left and right hand sides are scalars   and therefore they are equal in any coordinate system. Noting this, we can then calculate
 \begin{align}
 \nabla_\mu B^\mu=&\sum_A b_A\int C[f_A]d\pi_A=\sum_A\sum_{I\in int(A)} \frac{n_Ab_A}{n_I}\int\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
 &\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)\widehat{dV}_I d\pi_A\notag\\
@@ -74,14 +74,14 @@ Now observe that, for any collection of finite sets $D_j$ indexed by a finite se
 \end{equation}
 Using this fact, we can switch the order of the sums to obtain
 \begin{align}\label{del_B}
-\nabla_\mu B^\mu=&\sum_{I\in int}\sum_{A\in p(I)} n_Ab_A \,,\\
-R_I\equiv& \frac{1}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,.\notag
+&\nabla_\mu B^\mu=\sum_{I\in int}\sum_{A\in p(I)} n_Ab_A R_I \,,\\
+&R_I\equiv \frac{1}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,.\notag
 \end{align}
 The sum over all interactions splits over a sum over symmetric interactions, $int_{s}$, and a sum over asymmetric interactions.  For each asymmetric interaction, pair it up with its reverse and arbitrarily choose one of them to call the forward direction.  Let the set of these forward interactions be denoted $\overrightarrow{int}$.  Then the sum in \req{del_B} splits as follows
 \begin{equation}
 \nabla_\mu B^\mu=\sum_{I\in int_s}R_I\sum_{A\in p(I)} n_A b_A+\sum_{I\in\overrightarrow{int}}R_I\sum_{A\in p(I)} n_Ab_A+\sum_{I\in\overrightarrow{int}}R_{\overleftarrow{I}}\sum_{A\in p(\overleftarrow{I})} n_Ab_A\,.
 \end{equation}
-For each symmetric interaction $W^I=W^{\overleftarrow{I}}$, $f_{A_i}=f_{B_i}$, and $f^{A_i}=f^{B_i}$, so we have
+For every $I\in int_s$ we have $W^I=W^{\overleftarrow{I}}$, $f_{A_i}=f_{B_i}$, and $f^{A_i}=f^{B_i}$, and therefore
 \begin{align}
 R_I=&\frac{1}{n_I}\left(\int f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I \right.\\
 &\left. -\int f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)  dV_I\right)\notag\\
@@ -91,9 +91,9 @@ R_I=&\frac{1}{n_I}\left(\int f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p
 \end{align}
 as the two integrals differ only by a relabeling of integration variables.  Asymmetric interactions satisfy
 \begin{align}
-R_{\overleftarrow{I}}=&\frac{1}{n_I}\int\left(f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) \right.\\
-&\left. -f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)\right)  dV_I\notag\\
-=&-R_I.\notag
+R_{\overleftarrow{I}}=&\frac{1}{n_I}\int\left(f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) 
+-f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)\right)  dV_I\notag\\
+=&-R_I.
 \end{align}
 Combining this with \req{eq:conserved_charge} we find
 \begin{align}
@@ -103,13 +103,13 @@ Combining this with \req{eq:conserved_charge} we find
 Therefore  $B^\mu$ is a conserved current, as claimed.
 
 \subsection{Divergence Freedom of Stress Energy Tensor}
-The Einstein equation implies that the total stress energy tensor of all matter coupled to gravity is divergence free.  Here we show that the relativistic Boltzmann stress energy tensor \req{Tmndef} has this property, and is therefor a valid matter model that can be  coupled to gravity.  
+The Einstein equation implies that the total stress energy tensor of all matter coupled to gravity is divergence free.  Here we show that the relativistic Boltzmann stress energy tensor \req{Tmndef} has this property, and is therefore a natural candidate matter model for  coupling to gravity.  
 
-First use normal coordinates to compute
+First use Riemannian normal coordinates to compute
 \begin{align}
-\nabla_\mu T^{\mu\nu}=&\sum_A \int p_A^\nu C[f_A]d\pi_A\notag\\
-=&\sum_A\sum_{I\in int(A)}\frac{n_A}{n_I}\int (p^1_{A_\ell})^\nu\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\notag\\
-&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,,
+\nabla_\mu T^{\mu\nu}=&\sum_A \int p_A^\nu C[f_A]d\pi_A\\
+=&\sum_A\sum_{I\in int(A)}\frac{n_A}{n_I}\int (p^1_{A_\ell})^\nu\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,,\notag
 \end{align}
 where $\ell$ is the unique index such that $A_\ell=A$ ($\ell$ depends on $A$ and $I$, but we suppress this dependence for simplicity of notation). Using \req{sum_lemma} we can switch the summation order to get
 \begin{align}
@@ -143,13 +143,13 @@ due to the delta function $\delta(\Delta p)$ in the volume form $dV_I$.  Therefo
 again because of $\delta(\Delta p)$ in the volume forms.  This shows $\nabla_\mu T^{\mu\nu}=0$, as claimed.
 
 \subsection{Entropy and Boltzmann's H-Theorem}
-As our final general background result, we prove that the entropy four-current satisfies $\nabla_\mu s^\mu\geq 0$, known as Boltzmann's H-theorem. This result holds under the additional assumption that the interactions are time-reversal symmetric, meaning that
+Finally, we prove that the entropy four-current satisfies $\nabla_\mu s^\mu\geq 0$, known as Boltzmann's H-theorem. This result requires the additional assumption that the interactions are time-reversal symmetric,  i.e.,
 \begin{equation}\label{time_symmetry}
 W^I(p_{B_j}^l,p_{A_i}^k)=W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)
 \end{equation}
-for all $I$.   The entropy four current is future directed hence, given any splitting of spacetime into space and time $M=S\times T$,   Boltzmann's H-theorem implies that the total entropy  is non-decreasing on $T$.
+for all $I$.  
 
-Working in normal coordinates once again, we can compute
+Working in Riemannian normal coordinates once again, we can compute
 \begin{align}
 \nabla_\mu s^\mu=&-\sum_A\int p^\mu \partial_{x^\mu}\left(f_A\ln\left(f_A\right)\pm\left(1\mp f_A\right)\ln\left(1\mp f_A\right)\right)d\pi_A\\
 =&\sum_A\int\ln\left(1/f_A\mp 1\right)C[f_A]d\pi_A\,.\notag
@@ -159,14 +159,14 @@ Similar reasoning to the above two subsections then gives
 \nabla_\mu s^\mu=&\sum_{I\in int}\frac{1}{n_I}\sum_\ell\sum_{a=1}^{n_{A_\ell}}\int\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp1\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
 &\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,.\notag
 \end{align}
-Again, we can break this up into a sum over symmetric processes and two other sums over forward and backward asymmetric processes respectively. Each symmetric processes contributes a term of the form
-\small
+Once again, we break the summation into a sum over symmetric processes and two other sums over forward and backward asymmetric processes respectively. Each symmetric process contributes a term of the form
 \begin{align}
-&\int\sum_\ell\sum_{a=1}^{n_{A_\ell}}\left(\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right)-\ln\left(1/f_{B_\ell}(p_{B_\ell}^a)\mp 1\right)\right) f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\\
+&\int\sum_\ell\sum_{a=1}^{n_{A_\ell}}f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\left(\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right)\right.\\
+&\left.\qquad\qquad\qquad\qquad-\ln\left(1/f_{B_\ell}(p_{B_\ell}^a)\mp 1\right)\right) W^I(p_{B_j}^l,p_{A_i}^k) dV_I\notag\\
 =& \int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right) f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\notag\\
-=& \frac{1}{2}\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left( f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)- f_{p,I}(p_{A_j}^l)f^{r,I}(p_{B_i}^k)\right)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\,,\notag
+=& \frac{1}{2}\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left( f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\notag\\
+&\left.\qquad\qquad\qquad\qquad- f_{p,I}(p_{A_j}^l)f^{r,I}(p_{B_i}^k)\right)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\,,\notag
 \end{align}
-\normalsize
 \begin{comment}
 \begin{align}
 &\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right) f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) dV\\
@@ -182,16 +182,17 @@ A pair of forward and backward asymmetric interactions combine to give a term of
 &\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\notag\\
 &+\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \int\ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\left(f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l) \right.\notag\\
 &\left. -f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)\right)  dV_I\notag\\
-=&\int\left( \sum_\ell\sum_{a=1}^{n_{A_\ell}}\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right) -\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\right)f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
-&-\int \left(\sum_\ell\sum_{a=1}^{n_{A_\ell}}\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right) -\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\right)f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{I}(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
-=&\int\ln\left(\frac{f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)\right)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\,.
+=&\int\left( \sum_\ell\sum_{a=1}^{n_{A_\ell}}\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right) \right.\notag\\
+&\left.\qquad\qquad\qquad-\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\right)f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
+&-\int \left(\sum_\ell\sum_{a=1}^{n_{A_\ell}}\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp 1\right) \right.\notag\\
+&\left.\qquad\qquad\qquad-\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\right)f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{I}(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
 \end{align}
-where in to obtain the first equality we  used  the time-reversal property  \eqref{time_symmetry}.  Combining the symmetric and asymmetric cases we find
+where  to obtain the first equality we  used  the time-reversal property  \eqref{time_symmetry}.  Combining the symmetric and asymmetric cases we find
 \begin{align}
 \nabla_\mu s^\mu=&\sum_{I\in int_s} \frac{1}{2n_I}\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left( f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\\
 &\left.- f_{p,I}(p_{A_j}^l)f^{r,I}(p_{B_i}^k)\right)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\notag\\
 &+\sum_{I\in \overrightarrow{int}}\frac{1}{n_I}\int\ln\left(\frac{f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\notag\\
 &\left.-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)\right)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\,.
 \end{align}
-Each term in either sum is the integral of a non-negative quantity $W^{I}$ times a quantity of the form $(a-b)\ln(a/b)$, $a,b>0$, which is easily seen to be non-negative.  Therefore we obtain the claimed result $\nabla_\mu s^\mu\geq 0$.
+Each term in either sum is the integral of a non-negative quantity $W^{I}$ times a quantity of the form $(a-b)\ln(a/b)$, $a,b>0$, which is easily seen to be non-negative.  Therefore we obtain the claimed result $\nabla_\mu s^\mu\geq 0$.  The entropy four current is future directed, due to the volume element being supported on the future mass shell. Therefore, given any splitting of spacetime into space and time $M=S\times T$,   Boltzmann's H-theorem implies that the total entropy  is non-decreasing on $T$.
 
