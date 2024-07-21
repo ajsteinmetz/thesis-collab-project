@@ -24,17 +24,17 @@ As the Universe expands and cools, the various components of the Universe transi
 
 
 
-At sufficiently high temperatures, such as existed in the early Universe, both particle creation and annihilation (i.e. chemical) processes and momentum exchanging (i.e. kinetic) scattering processes can occur sufficiently rapidly to establish complete thermal equilibrium of a given particle species. The  distribution function $f_{ch}^\pm$ of  fermions (+) and bosons (-) in both chemical and kinetic equilibrium is found by maximizing entropy subject to energy being conserved
+At sufficiently high temperatures, such as existed in the early Universe, both particle creation and annihilation (i.e., chemical) processes and momentum exchanging (i.e., kinetic) scattering processes can occur sufficiently rapidly to establish complete thermal equilibrium of a given particle species. The  distribution function $f_{ch}^\pm$ of  fermions (+) and bosons (-) in both chemical and kinetic equilibrium is found by maximizing entropy subject to energy being conserved
 \begin{equation}\label{ch_eq}
-f_{ch}^\pm=\frac{1}{\exp(E/T)\pm 1}, \hspace{2mm} T>T_{ch}
+f_{ch}^\pm=\frac{1}{\exp(E/T)\pm 1}\,, \hspace{2mm} T>T_{ch}\,,
 \end{equation}
 where $E$ is the particle energy, $T$ the temperature, and $T_{ch}$ the chemical freeze-out temperature. 
 
 
 
-As temperature decreases, there will be a period where the temperature is greater than the kinetic freeze-out temperature, $T_k$, but below chemical freeze-out. During this period, momentum exchanging processes continue to maintain an equilibrium distribution of energy among the available particles, which we call kinetic equilibrium, but particle number changing processes no longer occur rapidly enough to keep the equilibrium particle number yield, i.e. for $T<T_{ch}$ the particle number changing processes have `frozen-out'. In this condition the momentum distribution, which is in kinetic equilibrium but chemical non-equilibrium, is obtained by maximizing  entropy subject to  particle number and energy constraints and thus two parameters appear
+As temperature decreases, there will be a period where the temperature is greater than the kinetic freeze-out temperature, $T_k$, but below chemical freeze-out. During this period, momentum exchanging processes continue to maintain an equilibrium distribution of energy among the available particles, which we call kinetic equilibrium, but particle number changing processes no longer occur rapidly enough to keep the equilibrium particle number yield, i.e., for $T<T_{ch}$ the particle number changing processes have `frozen-out'. In this condition the momentum distribution, which is in kinetic equilibrium but chemical non-equilibrium, is obtained by maximizing  entropy subject to  particle number and energy constraints and thus two parameters appear
 \begin{equation}\label{k_eq}
-f_{k}^\pm=\frac{1}{\Upsilon^{-1} \exp(E/T)\pm 1},\hspace{2mm} T_k<T\leq T_{ch}.
+f_{k}^\pm=\frac{1}{\Upsilon^{-1} \exp(E/T)\pm 1}\,,\hspace{2mm} T_k<T\leq T_{ch}\,.
 \end{equation}
 The need to preserve the total particle number within the distribution introduces an additional parameter $\Upsilon$ called fugacity. 
 
@@ -53,15 +53,15 @@ The effect of $\sigma$ is similar after that of chemical potential $\mu$, except
 \subsubsection{Dynamics and Conservation Laws}
 In a flat FRW universe, the spacial components of the divergence of the stress energy tensor automatically vanish, leaving the single condition
 \begin{equation}\label{stress_energy_eq}
-\nabla_\mu \mathcal{T}^{\mu 0}=\dot{\rho}+3\left(\rho+P\right)\frac{\dot{a}}{a}=0.
+\nabla_\mu \mathcal{T}^{\mu 0}=\dot{\rho}+3\left(\rho+P\right)\frac{\dot{a}}{a}=0\,.
 \end{equation}
 If the set of particles can be portioned into subsets such that there is no interaction between the different subsets then this condition applies independently to each and leads to an independent temperature for each such subset.  We will focus on a single such group and use \req{stress_energy_eq}  to derive an equivalent condition involving entropy and particle number, which illustrate how the entropy of the universe evolves in time. 
 
 Consider a  collection of particles in kinetic equilibrium at a common temperature $T$, with distinct fugacities $\Upsilon_i$, and  which satisfy \req{stress_energy_eq}.   For the following derivation, it is useful to define $\mu_i=\sigma_i T$.  This gives the expressions a familiar thermodynamic form with $\mu$ playing the role of chemical potential and helps with the calculations, but should not be confused with a chemical potential as discussed above.  The expressions for the  energy density, pressure, number density, and entropy density of a particle of mass $m$ with momentum distribution $f$ are
 \begin{align}\label{moments}
-\rho=&\frac{g_p}{(2\pi)^3}\int f(t,p)Ed^3p\,,\\
+\rho=&\frac{g_p}{(2\pi)^3}\int f(t,p)Ed^3p\,, \hspace{2mm} E=\sqrt{m^2+p^2}\,,\\
 P=&\frac{g_p}{(2\pi)^3}\int f(t,p)\frac{p^2}{3E}d^3p\,,\\
-n=&\frac{g_p}{(2\pi)^3}\int f(t,p) d^3p, \hspace{2mm} E=\sqrt{m^2+p^2}\,,\\
+n=&\frac{g_p}{(2\pi)^3}\int f(t,p) d^3p\,,\\
 s=&-\frac{g_p}{(2\pi)^3}\int (f\ln(f)\pm(1\mp f)\ln(1\mp f)) d^3p\,,
 \end{align}
 where $g_p$ is the degeneracy of the particle.
@@ -71,7 +71,7 @@ Integration by parts establishes the following identities when $f=f_i$ is the ki
 s_i=\frac{\partial P_i}{\partial T}=(P_i+\rho_i-\mu_i n_i)/T, \hspace{3mm} n_i=\frac{\partial P_i}{\partial \mu_i}.
 \end{equation}
 Combining \req{stress_energy_eq} with the identities in \req{identities} we can obtain the rate of change of the total comoving entropy as follows.  Letting $s=\sum_i s_i$ be the total entropy density, first compute
-\begin{align}\frac{1}{a^3}\frac{d}{dt}(a^3sT)&=\frac{1}{a^{3}}\frac{d}{dt}(a^3(P+\rho-\sum_i \mu_i n_i))\\
+\begin{align}\frac{1}{a^3}\frac{d}{dt}(a^3sT)&=\frac{1}{a^{3}}\frac{d}{dt}\left(a^3\left(P+\rho-\sum_i \mu_i n_i\right)\right)\\
 &=\dot{P}+\dot{\rho}-\sum_i \left(\dot{\mu_i}n_i+\mu_i\dot{n_i}\right)+3\left(P+\rho-\sum_i \mu_i n_i\right)\dot{a}/a\notag\\
 &=\frac{\partial P}{\partial T} \dot{T}+\sum_i\frac{\partial P_i}{\partial \mu_i} \dot{\mu_i}-\sum_i \left(\dot{\mu_i}n_i+\mu_i\dot{n_i}+3\mu_i n_i \dot{a}/a\right)+\nabla_\mu \mathcal{T}^{\mu 0}\notag\\
 &=s\dot{T}-\sum_i \left(\mu_i\dot{n_i}+3\mu_i n_i \dot{a}/a\right)\notag\\
@@ -79,14 +79,14 @@ Combining \req{stress_energy_eq} with the identities in \req{identities} we can 
 \end{align}
 Therefore we find
 \begin{align}\label{S_n_eq}
-\frac{d}{dt}(a^3s)=&\frac{1}{T}\frac{d}{dt}(a^3sT)-a^3s\frac{\dot T}{T}=-\sum_i\sigma_i\frac{d}{dt}(a^3n_i).
+\frac{d}{dt}(a^3s)=&\frac{1}{T}\frac{d}{dt}(a^3sT)-a^3s\frac{\dot T}{T}=-\sum_i\sigma_i\frac{d}{dt}(a^3n_i)\,.
 \end{align}
-From this we can conclude that comoving entropy in conserved as long as every particles satisfies one of the following  conditions: 1) The particle is  in chemical equilibrium, i.e. $\sigma_i= 0$. 2) The particle has frozen out chemically and thus has conserved comoving particle number, i.e., $\frac{d}{dt}(a^3n_i)$.  Therefore, under the instantaneous freeze-out assumption, we can conclude  conservation of comoving entropy. 
+From this we can conclude that comoving entropy in conserved as long as every particles satisfies one of the following  conditions: 1) The particle is  in chemical equilibrium, i.e., $\sigma_i= 0$. 2) The particle has frozen out chemically and thus has conserved comoving particle number, i.e., $\frac{d}{dt}(a^3n_i)$.  Therefore, under the instantaneous freeze-out assumption, we can conclude  conservation of comoving entropy. 
 
 
-These observations provide an alternative characterization of the dynamics of a FRW universe that is composed of entirely of particles in chemical or kinetic equilibrium.  The dynamical quantities are the scale factor $a(t)$, the common temperature $T(t)$, and the fugacities of each particle species $\Upsilon_i(t)$ that is not in chemical equilibrium.  The dynamics are given by the Einstein equation, conservation of the total comoving entropy of all particle species, and conservation of comoving particle number for each species not in chemical equilibrium (otherwise $\Upsilon_i=1$ is constant)
+These observations provide an alternative characterization of the dynamics of a FRW universe that is composed of entirely of particles in chemical or kinetic equilibrium.  The dynamical quantities are the scale factor $a(t)$, the common temperature $T(t)$, and the fugacities of each particle species $\Upsilon_i(t)$ that is not in chemical equilibrium.  The dynamics are given by the Einstein equation, conservation of the total comoving entropy of all particle species, and conservation of comoving particle number for each species not in chemical equilibrium (otherwise $\Upsilon_i=1$ is constant),
 \begin{equation}\label{eq_dynamics}
-H^2=\frac{\rho_{tot}}{3M_p^2}, \hspace{2mm} \frac{d}{dt}(a^3s)=0,\hspace{2mm} \frac{d}{dt}(a^3n_i)=0 \text{ when } \Upsilon_i\neq 1.
+H^2=\frac{\rho_{tot}}{3M_p^2}\,, \hspace{2mm} \frac{d}{dt}(a^3s)=0\,,\hspace{2mm} \frac{d}{dt}(a^3n_i)=0 \,\text{ when } \Upsilon_i\neq 1\,.
 \end{equation}
 We emphasize here that $\rho_{tot}$ is the total energy density of the Universe, which may be composed of contributions from multiple particle groupings with no cross goup interactions. In such case, each grouping has its own temperature and   independently conserves its comoving entropy. 
 
@@ -96,11 +96,11 @@ We emphasize here that $\rho_{tot}$ is the total energy density of the Universe,
 \subsection{Einstein-Vlasov Equation in FRW Spacetime}\label{sec:free_stream_sol}
 Once the temperature drops below the kinetic freeze-out temperature $T_k$ of a particular component of the Universe, we reach  the free streaming period where  particle scattering processes have completely frozen out. The   dynamics are therefore determined by the free-streaming Boltzmann-Einstein equation (\req{boltzmann_einstein} with $C[f]=0$), known as the Einstein-Vlasov equation, in a spatially flat FRW universe.  Due to the assumed homogeneity and isotropy, the particle distribution function depends on $t$ and $p^0=E$ only and so the Einstein-Vlasov equation becomes
 \begin{equation}\label{VEeqFLR}
-E\partial_tf+(m^2-E^2)\frac{\partial_ta}{a}\partial_{E}f=0.
+E\partial_tf+(m^2-E^2)\frac{\partial_ta}{a}\partial_{E}f=0\,.
 \end{equation}
 The general solution to \req{VEeqFLR} can be found in, e.g., ~\cite{bruhat,Wong}:
 \begin{equation}\label{general_sol}
-f(t,E)=K(x),\hspace{3mm} x\equiv\frac{a(t)^2}{D^2}(E^2-m^2),
+f(t,E)=K(x),\hspace{3mm} x\equiv\frac{a(t)^2}{D^2}(E^2-m^2)\,,
 \end{equation}
 where $K$ is an arbitrary smooth function and $D$ is an arbitrary constant with units of mass.  To continue the evolution beyond thermal freeze-out  we choose $K$ to match the kinetic equilibrium distribution \req{k_eq} at the freeze-out time $t_k$. For neutrinos, this is accomplished by setting
 \begin{equation}\label{K_func}
@@ -108,11 +108,11 @@ K(x)=\frac{1}{\Upsilon_\nu^{-1}e^{\sqrt{x+m^2/T_k^2}}+ 1}
 \end{equation}
 and $D=T_k a(t_k)$. The Fermi-Dirac-Einstein-Vlasov (FDEV) distribution function for neutrinos after freeze-out is then
 \begin{equation}\label{neutrino_dist}
-f(t,E)=\frac{1}{\Upsilon_\nu^{-1}e^{\sqrt{(E^2-m^2)/T_\nu^2+m_\nu^2 /T_k^2}}+ 1}
+f(t,E)=\frac{1}{\Upsilon_\nu^{-1}e^{\sqrt{(E^2-m^2)/T_\nu^2+m_\nu^2 /T_k^2}}+ 1}\,,
 \end{equation}
 where 
 \begin{equation}\label{Tneutrino_dist}
-T_\nu(t)=\frac{T_ka(t_k)}{a(t)}.  
+T_\nu(t)=\frac{T_ka(t_k)}{a(t)}\,.  
 \end{equation}
 \req{neutrino_dist} describes a gas of neutrinos that is free streaming in an expanding universe ever since the freeze-out temperature $T_\nu(t_k)=T_k$. We will call $T_\nu$ in \req{Tneutrino_dist} the neutrino background temperature, even though  the distribution of free streaming particles has a thermal shape only for $m=0$ and hence $T_{\nu}$ will differ from the temperature of the photon background.   
 
@@ -208,29 +208,25 @@ N^{\mathrm{eff}}_\nu=\frac{360}{7\pi^4}\frac{e^{-4b\sigma}}{(1+c\sigma^2)^4}\int
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Contribution to $N^{\text{eff}}_{\nu}$ of  Sub-eV  Mass Sterile Particles}\label{sec:Neff_QGP}
 
-Moving beyond neutrinos, in this section we study the effect on $N_\nu^{\text{eff}}$ of non-SM light weakly coupled  particle species, referred to here as a sterile particles (SP),   generalizing the  sterile neutrino concept. We emphasize that such hypothetical SPs would behave as `dark radiation'~\cite{Steigman:2013yua} rather than cold dark matter.  This section is based on the work in \cite{Birrell:2014cja}.
+Moving beyond neutrinos, we now study the effect on $N_\nu^{\text{eff}}$ of non-SM light weakly coupled  particle species, referred to here as a sterile particles (SP). Such hypothetical SPs would behave as `dark radiation'~\cite{Steigman:2013yua} rather than cold dark matter and would therefore impact $N_\nu^{\text{eff}}$ in a similar manner to neutrinos, though potentially with a vastly different freeze-out temperature.  This section is adapted from the work in \cite{Birrell:2014cja}.
 
 
-{\bf ??? edit ???}
-The possibility that Goldstone bosons  could be mistaken for fractional contribution to cosmic neutrinos was  identified in \cite{Weinberg:2013kea}.  Another viable candidate for SPs are sterile neutrinos. It has been shown that for three `new' right-handed neutrinos to fully account for the effective number of neutrinos, $N^{\text{eff}}_{\nu}$, the required freeze-out temperature required   is in the vicinity of the quark gluon plasma (QGP) phase transition~\cite{Anchordoqui:2011nh,Anchordoqui:2012qu}. Here we consider the QGP  phase transformation in the early Universe and evaluate quantitatively  the production and freeze-out of possible SPs in such a transition. If SPs are interpreted as Goldstone bosons, it would imply that in the deconfined phase there is  an additional hidden symmetry, weakly broken at hadronization.  For example, if this symmetry were to be part of the baryon conservation riddle, then we can expect that these Goldstone bosons will  couple to particles with baryon number, and possibly only in the domain where the vacuum is modified from its present day condition. 
+The possibility that Goldstone bosons, one candidate for SPs,  could be mistaken for a fractional contribution to cosmic neutrinos was  identified in \cite{Weinberg:2013kea}.  Another viable candidate for SPs are sterile neutrinos. It has been shown that  three `new' right-handed neutrinos could fully account for the observed tension in the effective number of neutrinos, $N^{\text{eff}}_{\nu}$, if their freeze-out temperature    is in the vicinity of the quark gluon plasma (QGP) phase transition~\cite{Anchordoqui:2011nh,Anchordoqui:2012qu}.  If SPs originating in the QGP phase transition are interpreted as Goldstone bosons it would imply that in the deconfined phase there is  an additional hidden symmetry, weakly broken at hadronization.  For example, if this symmetry were to be part of the baryon conservation riddle, then we can expect that these Goldstone bosons will  couple to particles with baryon number, and possibly only in the domain where the vacuum is modified from its present day condition.  These considerations motivate  study of the contribution to 
+$N^{\text{eff}}_{\nu}$ of boson or fermion degrees of freedom (DoF) that froze out near to the QGP phase transformation. 
 
-The former paper proposed a concrete model of how this might be obtained from an expanded gauge group for QCD.  However,  the QGP equation of state (EoS) which were used are not consistent with recent numerical lattice-QCD results.   We use the  lattice-QCD derived QGP EoS from Ref.~\cite{Borsanyi:2013bia} to characterize the relation between $N^{\text{eff}}_{\nu}$ and the number of DoF that froze out at the time that the quark-gluon deconfined phase froze into hadrons near $T=150\MeV$, and  compute the coupling strength required to achieve freeze-out at the QGP transformation. 
-
-
-The Einstein equations  imply a practically entropy conserving expansion of the Universe. Entropy conservation during periods when dimensional (mass) scales are irrelevant means that all temperatures scale inversely with the metric  scale factor $a(t)$. As temperature  passes through $m\simeq T$ thresholds, successively less massive particles annihilate and their entropy is shifted into the remaining effectively massless particles, causing the  $T\propto 1/a(t)$ scaling to break down. 
+In this study we use the  lattice-QCD derived QGP EoS from~\cite{Borsanyi:2013bia} to characterize the relation between $N^{\text{eff}}_{\nu}$ and the number of DoF that froze out at the time that the quark-gluon deconfined phase froze into hadrons near $T=150\MeV$.  We work within the instantaneous freeze-out approximation, using the same reasoning that was applied to neutrinos in Section \ref{Tnugam}, i.e., we employ comoving entropy conservation along with the facts that   frozen-out particle species undergo temperature scaling with $1/a(t)$  and the remaining coupled particles undergo reheating  at each $T\simeq m$ threshold, caused by a disappearing particle species transfer  entropy   into the remaining  particles.
 
 
-After an effectively massless particle species decouples, its temperature scales as $1/a(t)$ at all later times as a result of the free-streaming solution of the Einstein-Vlasov equation.  This leads to a temperature difference between the free streaming particles, and the photon background, which is the last to freeze-out. This reheating effect builds up during each  period  in which particle species disappear from the Universe inventory.
 
-We denote by $S$ the conserved `comoving' entropy in a volume element $dV$, which scales with the factor $a(t)^3$. We define the effective number of entropy DoF, $g_*^S$, by
+We denote by $S$ the conserved `comoving' entropy in a volume element $dV$, which scales with the factor $a(t)^3$. As we are no longer only considering just the neutrino freeze-out, here we employ the definition of the effective number of entropy DoF, $g_*^S$, given by
 \begin{equation}
-S=\frac{2\pi^2}{45}g^S_*T_\gamma^3 a^3.
+S=\frac{2\pi^2}{45}g^S_*T_\gamma^3 a^3\,.
 \end{equation} 
 For ideal Fermi and Bose gases
 \begin{equation}
-g_*^S=\!\!\!\!\sum_{i=\text{bosons}}\!\!\!\!g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^-+\frac{7}{8}\!\!\!\sum_{i=\text{fermions}}\!\!\!\! g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^+.
+g_*^S=\!\!\!\!\sum_{i=\text{bosons}}\!\!\!\!g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^-+\frac{7}{8}\!\!\!\sum_{i=\text{fermions}}\!\!\!\! g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^+\,.
 \end{equation}
-The $g_i$ are degeneracies, $f_i^\pm$ are known functions, valued in $(0,1)$, that turn off the various species as the temperature drops below their mass-- compare to the analogous Eqs. (2.3) and (2.4) in Ref.\cite{Blennow:2012de}. 
+The $g_i$ are degeneracies, $f_i^\pm$ are known functions, valued in $(0,1)$, that turn off the various species as the temperature drops below their mass; compare to the analogous Eqs. (2.3) and (2.4) in~\cite{Blennow:2012de}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -239,11 +235,11 @@ The $g_i$ are degeneracies, $f_i^\pm$ are known functions, valued in $(0,1)$, th
 \begin{minipage}[b]{.49\textwidth}
 \centerline{\hspace*{-0.10cm}\includegraphics[height=6.4cm]{04-birrell/ModelIndStudy/Figures/gS_T_ratio.eps}}
 \end{minipage}
-\caption{\cccite{Birrell:2014cja}. Left axis: Effective number of entropy-DoF, including lattice QCD effects applying Ref.~\cite{Borsanyi:2013bia} (solid line) and  Ref.~\cite{HotQCD:2014kol} (circles), compared to the early Ref.\cite{Bazavov:2009zn} (triangles) results used by~\cite{Anchordoqui:2011nh}, and the ideal gas model of Ref.\cite{Coleman:2003hs} (dashed line) as function of temperature $T$. Right axis: Photon to SP temperature ratio, $T_\gamma/T_s$, as a function of SP decoupling temperature (dash-dotted (blue) line). The vertical dotted lines at $T=142$ and 163 MeV delimit the QGP transformation region.\label{fig:gS}}
+\caption{\cccite{Birrell:2014cja}. Left axis: Effective number of entropy-DoF, including lattice QCD effects applying~\cite{Borsanyi:2013bia} (solid line) and~\cite{HotQCD:2014kol} (circles), compared to the earlier results~\cite{Bazavov:2009zn} (triangles) used by~\cite{Anchordoqui:2011nh}, and the ideal gas model of~\cite{Coleman:2003hs} (dashed line) as function of temperature $T$. Right axis: Photon to SP temperature ratio, $T_\gamma/T_s$, as a function of SP decoupling temperature (dash-dotted (blue) line). The vertical dotted lines at $T=142$ and 163 MeV delimit the QGP transformation region.\label{fig:gS}}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Such a simple characterization does not hold in the vicinity of the QGP phase transformation where  quark-hadron degrees of freedom are strongly coupled  and the system must be studied using lattice QCD. This result is incorporated in the solid line in figure \ref{fig:gS} (left axis), where we have used a table of entropy density values through the QGP phase transition presented by Borsanyi et al.~\cite{Borsanyi:2013bia}, while circles show recent results from Bazavov et al.~\cite{HotQCD:2014kol}. This should be compared to the ideal gas approximation from~\cite{Coleman:2003hs} together with the fit in~\cite{Wantz:2009it} to interpolate though the QGP phase transition and older (year 2009) lattice data from Ref.\cite{Bazavov:2009zn} (triangles). The free gas approximation carries with it a maximum error of $10\%$ in the temperature range of the QGP phase transition  $T\simeq 150$\,MeV where quarks appear.  The error in the 2009 lattice data used in Ref.\cite{Anchordoqui:2011nh} is on the order of $25\%$.  This leads to a non-negligible difference in the relation between freeze-out temperature and $N^{\text{eff}}_{\nu}$.
+Such a simple characterization does not hold in the vicinity of the QGP phase transformation where  quark-hadron degrees of freedom are strongly coupled  and the system must be studied using lattice QCD. A computation of $g_*^S$ that incorporates the lattice QCD results is shown in the solid line in Figure \ref{fig:gS} (left axis). Specifically, we used the table of entropy density values through the QGP phase transition presented by Borsanyi et al.~\cite{Borsanyi:2013bia}, while circles show recent results from Bazavov et al.~\cite{HotQCD:2014kol}. This should be compared to the use of the ideal gas approximation from~\cite{Coleman:2003hs} together with the fit in~\cite{Wantz:2009it} to interpolate though the QGP phase transition and older (year 2009) lattice data from~\cite{Bazavov:2009zn} (triangles). The free gas approximation has a maximum error of $10\%$ in the QGP phase transition  temperature range  $T\simeq 150$\,MeV.  The 2009 lattice data used in~\cite{Anchordoqui:2011nh} has a maximum error on the order of $25\%$ which leads to a non-negligible difference in the relation between freeze-out temperature and $N^{\text{eff}}_{\nu}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -256,28 +252,24 @@ Such a simple characterization does not hold in the vicinity of the QGP phase tr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Once the SPs decouple from the  particle inventory at a photon temperature of $T_{d,s}$, a difference in their temperature from that of photons will build up during subsequent photon reheating periods, as discussed above. Conservation of entropy leads to a temperature ratio at $T_\gamma<T_{d,s}$, shown in the dot-dashed line in figure \ref{fig:gS} (right axis), of
+Independent of their source, once the SPs decouple from the  particle inventory at a photon temperature of $T_{d,s}$, a difference in their temperature from that of photons will build up during subsequent photon reheating periods, similarly to the computation in Section \ref{Tnugam}. Conservation of entropy leads to a temperature ratio at $T_\gamma<T_{d,s}$, shown in the dot-dashed line in Figure \ref{fig:gS} (right axis), given by
 \begin{equation}\label{T_ratio}
-R_s\equiv T_{s}/T_{\gamma}=\left(\frac{g_*^S(T_\gamma)}{g_*^S(T_{d,s})}\right)^{1/3}.
+R_s\equiv T_{s}/T_{\gamma}=\left(\frac{g_*^S(T_\gamma)}{g_*^S(T_{d,s})}\right)^{1/3}\,.
 \end{equation}
-
-
-If $T_s$ and $T_\gamma$ are the light SP and photon temperatures, both after $e^\pm$ annihilation, and $g_s$ is the number of DoF of the SPs normalized to bosons (i.e. for fermions it includes an additional factor of $7/8$) then this gives
+Evolving the Universe through neutrino freeze-out, if $T_s$ and $T_\gamma$ are the light SP and photon temperatures, both after $e^\pm$ annihilation, and $g_s$ is the number of DoF of the SPs normalized to bosons (i.e., for fermions it includes an additional factor of $7/8$) then this leads to the following change in the effective number of neutrinos in excess of the SM value:
 \begin{equation}\label{Neff1}
-\delta N_{\text{eff}}\equiv N^{\text{eff}}_{\nu}-3.046=\frac{4g_s}{7}\left(\frac{T_s}{R_s T_{\gamma}}\right)^4
+\delta N_{\text{eff}}\equiv N^{\text{eff}}_{\nu}-3.046=\frac{4g_s}{7}\left(\frac{T_s}{R_s T_{\gamma}}\right)^4\,,
 \end{equation}
 where $3.046$ is the SM neutrino contribution. Using \req{T_ratio} we can rewrite $\delta N_{\text{eff}}$ as
 \begin{equation}\label{delta_N}
-\delta N_{\text{eff}}=\frac{4g_s}{7R_\nu^4}\left(\frac{g_*^S(T_{\gamma})}{g_*^S(T_{d,s})}\right)^{4/3}.
+\delta N_{\text{eff}}=\frac{4g_s}{7R_\nu^4}\left(\frac{g_*^S(T_{\gamma})}{g_*^S(T_{d,s})}\right)^{4/3}\,,
 \end{equation}
-where   $T_{d,s}$ is the decoupling temperature of the SP and $T_{\gamma}$ is any photon temperature $T_{\gamma}\ll m_e$. The SM particles remaining at $T_{\gamma}$ are  photons and SM neutrinos, the latter with temperature $R_\nu T_{\gamma}$, and so $g_*^S(T_{\gamma})=2+7/8\times 6\times 4/11$ and (see also Eq.(2.7) in~\cite{Blennow:2012de})
+where   $T_{d,s}$ is the decoupling temperature of the SP and $T_{\gamma}$ is any photon temperature in the regime $T_{\gamma}\ll m_e$. The SM particles remaining (in relevant amounts) at such $T_{\gamma}$ are  photons and SM neutrinos, the latter with temperature $R_\nu T_{\gamma}$, and so $g_*^S(T_{\gamma})=2+7/8\times 6\times 4/11$ and (see also Eq.(2.7) in~\cite{Blennow:2012de})
 \begin{align}\label{delta_N2}
-\delta N_{\text{eff}}\approx&g_s\left(\frac{7.06}{g_*^S(T_{d,s})}\right)^{4/3}.
+\delta N_{\text{eff}}\approx&g_s\left(\frac{7.06}{g_*^S(T_{d,s})}\right)^{4/3}\,.
 \end{align}
 
-Figure \ref{fig:Neff_Td_zoom} shows $\delta N_{\text{eff}}$ as a function of $T_{d,s}$ for $1,\dots,6$ boson (solid lines) and fermion (dashed lines) DoF. For a low decoupling temperature $T_{d,s}<100$\,MeV  a single bose or fermi SP  can help alleviate the tension in $N^{\text{eff}}_{\nu}$. Within QGP hadronization interval $T_c=142-163\MeV$ (marked by vertical lines) we see that three bose degrees of freedom or four fermi degrees of freedom are the most likely cases to resolve the tension. 
-
-It is also clear from  figure \ref{fig:Neff_Td_zoom} that the rapid growth of the number of degrees of freedom in the QGP phase implies that earlier decoupling temperatures lead to a rapid increase in the required number of SPs. While one cannot exclude the possible presence of 20--30 new dark light particles, it seems to us unlikely that there are that many undiscovered weakly broken symmetries producing light Goldstone, or/and sterile neutrino-like particles. We believe that figure \ref{fig:Neff_Td_zoom}  pinpoints the QGP  temperature range and below as the primary domain of interest for the freeze-out of such hypothetical degrees of freedom, should these be responsible for the modification $\delta N_{\text{eff}}$.
+In Figure \ref{fig:Neff_Td_zoom} we plot $\delta N_{\text{eff}}$ as a function of $T_{d,s}$ for $1,\dots,6$ boson (solid lines) and fermion (dashed lines) DoF. For a low decoupling temperature $T_{d,s}<100$\,MeV  a single bose or fermi SP  can help alleviate the observed tension in $N^{\text{eff}}_{\nu}$. Within the QGP hadronization temperature range  $T_c=142-163\MeV$ (marked by vertical dotted lines) we see that three boson degrees of freedom or four fermion degrees of freedom are the most likely cases to resolve the tension. If the SPs froze out in the QGP phase at $T_{d,s}\gg 163\MeV$ then a significantly larger number of SPs would be required. While such a scenario cannot be excluded, such a large number undiscovered weakly broken symmetries, or/and sterile neutrino-like particles, seems unlikely. Therefore we suggest that Figure \ref{fig:Neff_Td_zoom}  pinpoints the QGP  temperature range and below as the primary domain of interest for the freeze-out of a small to moderate number of hypothetical degrees of freedom, should these be responsible the excess in $N_\nu^{\text{eff}}$ above  the SM value.
 
 
 

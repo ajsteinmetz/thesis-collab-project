@@ -16,7 +16,7 @@ In Section \ref{boltzmann_basics} we give a basic overview of the relativistic B
 \subsection{Relativistic Boltzmann Equation }\label{boltzmann_basics}
 
 Recall the general relativistic Boltzmann equation introduced in Section \ref{ch:model_ind}
-\begin{equation}\label{boltzmann}
+\begin{equation}
 p^\alpha\partial_{x^\alpha}f-\Gamma^j_{\mu\nu}p^\mu p^\nu\partial_{p^j}f=C[f]\,.
 \end{equation}
 As discussed above, the left hand side expresses the fact that particles undergo geodesic motion in between point collisions. The term $C[f]$ on the right hand side of the Boltzmann equation is called the collision operator and models the short range scattering processes that cause deviations from geodesic motion. For $2\leftrightarrow 2$ reactions between fermions, such as neutrinos and $e^\pm$, the collision operator takes the form
@@ -406,19 +406,7 @@ We now solve  \req{free_stream_toy} using the chemical non-equilibrium method, w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In Figures \ref{fig:keq_num_err} and  \ref{fig:keq_E_err} we show the maximum relative error over the time interval $[0,10]$ in the number densities and energy densities respectively for various numbers of computed modes. Even for only $2$ modes, the number and energy densities are accurate up to the integration tolerance level.  This is in agreement with the analytical expressions in \req{th_eq_moments}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_num_err.eps}}
-\caption{Maximum relative error in particle number density.}\label{fig:keq_num_err}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_E_err.eps}}
-\caption{Maximum relative error in energy density.}\label{fig:keq_E_err}
-\end{minipage}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]

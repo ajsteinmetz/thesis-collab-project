@@ -2,7 +2,7 @@
 \section{Neutrino Collision Integrals}\label{ch:coll_simp}
 
 
-\subsection{Collision Integral Inner Products}\label{coll_simp_sec}
+\subsection{Collision Integral Inner Products}
 Having detailed our method for solving the Boltzmann-Einstein equation in Appendix \ref{ch:boltz_orthopoly}, in this appendix we address the computation of  collision integrals for neutrino processes; see also \cite{Birrell:2014uka}. To solve for the mode coefficients using \req{b_eq}, we must evaluate the collision operator inner products
 \begin{align}\label{collision_integrals}
 R_k\equiv&\langle\frac{1}{f_\Upsilon E_1}C[f_1],\hat\psi_k\rangle=\int_0^\infty \hat\psi_k(z_1)C[f_1](z_1) \frac{z_1^2}{E_1}dz_1\\
@@ -189,7 +189,7 @@ K(s,p)=&\frac{8\pi rr^{\prime}}{s}\int_{-1}^1 \left[\int_{-1}^1\left(\int_0^{2\p
 &\hspace{26mm}\times G_{34}((q^{\prime})^0\alpha-r^{\prime}\delta y) dy\bigg] G_{12}(q^0\alpha-r\delta z)dz\,,\notag
 \end{align}
 where
-\begin{align}\label{t_def}
+\begin{align}
 t(x)=&\frac{1}{4}((q^0)^2-r^2+((q^{\prime})^0)^2-(r^{\prime})^2-2q^0(q^{\prime})^0+2rr^{\prime}x),\\
 =&\frac{1}{4}((q^0-(q^{\prime})^0)^2-r^2-(r^{\prime})^2+2rr^{\prime}x)\,.\notag
 \end{align}
@@ -404,7 +404,6 @@ where $\tilde{m_e}=m_e/T$.  If we want to emphasize the role of $A,B,C$ then we 
 \subsubsection{ $\nu e^\pm\rightarrow \nu e^\pm$}
  Using \req{Mandelstam}, the matrix elements for neutrino $e^\pm$ scattering can be simplified to
 \begin{align}
-\label{TA002}
 S|\mathcal{M}|^2=A\left(\frac{s-m_e^2}{2}\right)^2+B\left(\frac{s+t-m_e^2}{2}\right)^2+Cm_e^2\frac{t}{2}
 \end{align}
  where the coefficients $A,B,C$ are given in table \ref{table:nu_e_coeff}.
@@ -446,12 +445,12 @@ Therefore we have
 \equiv& \pi q(m_e,s,y,z)
 \end{align}
 and
-\begin{align}\label{matrix_elem_int}
+\begin{align}
 K(s,p)=&\frac{8\pi^2 rr^{\prime}}{s}\!\!\int_{-1}^1 \!\left[\int_{-1}^1 \! q(m_e,s,y,z) G_{34}(p^0,(q^{\prime})^0\alpha-r^{\prime}\delta y) dy\right] \!G_{12}(p^0,q^0\alpha-r\delta z)dz\,,\\
 r=r^{\prime}=&\frac{s-m_e^2}{\sqrt{s}}\,,\hspace{2mm} q^0=(q^{\prime})^0=-\frac{m_e^2}{\sqrt{s}}\,,\hspace{2mm} \delta=\frac{p}{\sqrt{s}}\,,\hspace{2mm}  \alpha=\frac{p^0}{\sqrt{s}}\,.\notag
 \end{align}
 This implies
-\begin{align}\label{M_simp}
+\begin{align}
 M_{\nu e\rightarrow\nu e}=&\frac{1}{128(2\pi)^5 }\int_{m_e^2}^\infty\!\int_0^\infty (1-m_e^2/s)^2\left(\int_{-1}^1 \int_{-1}^1 q(m_e,s,y,z) G_{34}(p^0,(q^{\prime})^0\alpha-r^{\prime}\delta y)\right.\\
 &\hspace{50mm}\times  G_{12}(p^0,q^0\alpha-r\delta z)dydz\bigg)\frac{ p^2}{p^0}dpds\,.\notag
 \end{align}

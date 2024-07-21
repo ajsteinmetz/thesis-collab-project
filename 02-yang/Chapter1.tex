@@ -45,7 +45,7 @@ The Boltzmann equation describes the evolution of distribution function f in pha
 \begin{align}
 \frac{\partial f}{\partial t}-\frac{\left(E^2-m^2\right)}{E}H\frac{\partial f}{\partial E}=\frac{1}{E}\sum_{q}\mathcal{C}_q[f],
 \end{align}
-where $H=\dot{a}/a$ is the Hubble parameter. Due to homogeneity and isotropy of the Universe, the distribution function depends on time $t$ and energy $E=\sqrt{p^2+m^2}$ only. The collision term $\sum_qC_q$ represents all elastic and inelastic interactions and $q$ labels the corresponding physical process. In general, the collision term is proportional to the relaxation time for given collision as follows [\cite{ANDERSON1974466}]
+where $H=\dot{a}/a$ is the Hubble parameter. Due to homogeneity and isotropy of the Universe, the distribution function depends on time $t$ and energy $E=\sqrt{p^2+m^2}$ only. The collision term $\sum_qC_q$ represents all elastic and inelastic interactions and $q$ labels the corresponding physical process. In general, the collision term is proportional to the relaxation time for given collision as follows \cite{ANDERSON1974466}
 \begin{align}
 \frac{1}{E}\mathcal{C}_q[f]\propto\frac{1}{\tau_{rel}}
 \end{align}
@@ -56,7 +56,7 @@ As the Universe expands, the collision term in the Boltzmann equation competes w
 \begin{align}
 H\geqslant\tau_{rel}^{-1}.
 \end{align}
-When this happens, the particle's interactions are not rapid enough to maintain thermal distribution, either because the density of particles becomes so low that the chances of any two particles meeting each other becomes negligible, or because the particle energy becomes too low to interact. The freeze-out process can be categorized into three distinct stages based on the type of freeze-out interactions, we have~[\cite{Birrell:2012gg,Rafelski:2023emw}]:
+When this happens, the particle's interactions are not rapid enough to maintain thermal distribution, either because the density of particles becomes so low that the chances of any two particles meeting each other becomes negligible, or because the particle energy becomes too low to interact. The freeze-out process can be categorized into three distinct stages based on the type of freeze-out interactions, we have~\cite{Birrell:2012gg,Rafelski:2023emw}:
 
 \begin{itemize}
 \item Chemical freeze-out :\\
@@ -76,7 +76,7 @@ where $T_f$ represents the kinetic freeze-out temperature. The generalized fugac
 
 
 \item{Free streaming:}\\
-After kinetic freeze-out, the particles have fully decoupled from the primordial plasma, and thereby ceased influencing the dynamics of the Universe and become free-streaming. The Einstein-Vlasov equation can be solved [\cite{choquet2008general}] and the free-streaming momentum distribution can be written as [\cite{Birrell:2012gg}]
+After kinetic freeze-out, the particles have fully decoupled from the primordial plasma, and thereby ceased influencing the dynamics of the Universe and become free-streaming. The Einstein-Vlasov equation can be solved \cite{choquet2008general} and the free-streaming momentum distribution can be written as \cite{Birrell:2012gg}
 \begin{equation}\label{free_stream_dist}
 f_{fs}(t,E)=\frac{1}{\Upsilon^{-1}\exp{\left[\sqrt{\frac{E^2-m^2}{T_{fs}^2}+\frac{m^2}{T^2_f}}-\frac{\mu}{T_f}\right]+1}},\quad T_{fs}(t)=\frac{T_fa(t_k)}{a(t)},
 \end{equation}
@@ -88,7 +88,7 @@ Boltzmann approximation, and the free-streaming distribution for nonrelativistic
 where we define the effective temperature $T_{eff}$ for massive free-streaming particle. In this scenario, the effective temperature for massive particles decreases faster than the Universe temperature cools. It's worth emphasizing the different temperatures between cold free-streaming particles and hot cosmic plasma would affect the evolution of the early Universe and require more detailed study. 
 \end{itemize}
 
-The division of the freeze-out process into these three regimes is a simplification. However, it is a very useful approximation in the study of cosmology~[\cite{Mangano:2005cc,Birrell:2014gea}] . For detailed discussion, see [\cite{Birrell:2012gg,Rafelski:2023emw}].
+The division of the freeze-out process into these three regimes is a simplification. However, it is a very useful approximation in the study of cosmology~\cite{Mangano:2005cc,Birrell:2014gea}. For detailed discussion, see \cite{Birrell:2012gg,Rafelski:2023emw}.
 
 
 
@@ -131,7 +131,7 @@ where $g^s_\ast$ counts the effective number of `entropy' degrees of freedom. Th
 &B\left(\frac{m_i}{T}\right)=\frac{45}{12\pi^4}\int^\infty_{m_i/T}\,dx\sqrt{x^2-\left(\frac{m_i}{T}\right)^2}\left[4x^2-\left(\frac{m_i}{T}\right)^2\right]\frac{1}{\Upsilon^{-1}_ie^x-1},\\
 &F\left(\frac{m_i}{T}\right)=\frac{45}{12\pi^4}\frac{8}{7}\int^\infty_{m_i/T}\,dx\sqrt{x^2-\left(\frac{m_i}{T}\right)^2}\left[4x^2-\left(\frac{m_i}{T}\right)^2\right]\frac{1}{\Upsilon^{-1}_ie^x+1}.
 \end{align}
-In Fig.\,\ref{EntropyDOF_Fig} we plot the $g^s_\ast$ as a function of temperature, the effect of particle mass threshold~[\cite{Coc:2006rt}] is considered in the calculation for all involved particles. When $T$ decreases below the mass of particle $T\ll m_i$, this particle species becomes nonrelativistic and the contribution to $g^s_\ast$ becomes negligible, creating the dependence on $T$ seen in Fig.\,\ref{EntropyDOF_Fig}.
+In Fig.\,\ref{EntropyDOF_Fig} we plot the $g^s_\ast$ as a function of temperature, the effect of particle mass threshold~\cite{Coc:2006rt} is considered in the calculation for all involved particles. When $T$ decreases below the mass of particle $T\ll m_i$, this particle species becomes nonrelativistic and the contribution to $g^s_\ast$ becomes negligible, creating the dependence on $T$ seen in Fig.\,\ref{EntropyDOF_Fig}.
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \begin{figure}[t]
 %\begin{center}
@@ -168,21 +168,21 @@ An important assumption allowing us to explore the early Universe evolution is t
 \frac{n_B-n_{\overline{B}}}{\sigma}= \left.\frac{n_B-n_{\overline{B}}}{ \sigma}\right|_{t_0}=\mathrm{Const.}\;
 \end{align}
 The subscript $t_0$ denotes the present day condition, and $\sigma$ is the total entropy density.
-The observation gives the present baryon-to-photon ratio ~[\cite{ParticleDataGroup:2022pth}] $5.8 \times 10^{-10} \leqslant(n_B-n_{\overline{B}})/n_\gamma\leqslant6.5\times10^{-10}$. This small value quantifies the matter-antimatter asymmetry in the present day Universe, and allows the determination of the present value of baryon per entropy ratio~[\cite{Rafelski:2019twp,Fromerth:2002wb,Fromerth:2012fe}]:
+The observation gives the present baryon-to-photon ratio ~\cite{ParticleDataGroup:2022pth} $5.8 \times 10^{-10} \leqslant(n_B-n_{\overline{B}})/n_\gamma\leqslant6.5\times10^{-10}$. This small value quantifies the matter-antimatter asymmetry in the present day Universe, and allows the determination of the present value of baryon per entropy ratio~\cite{Rafelski:2019twp,Fromerth:2002wb,Fromerth:2012fe}:
 \begin{align}\label{BaryonEntropyRatio}
 \left.\frac{n_B-n_{\overline{B}}}{ \sigma}\right|_{t_0}=\eta\left(\frac{n_\gamma}{\sigma_\gamma+\sigma_\nu}\right)_{\!t_0}\!\!\!\!=(8.69\pm0.05)\!\!\times\!\!10^{-11},\qquad \eta=\frac{(n_B-n_{\overline{B}})}{n_\gamma},
 \end{align}
-where the $\eta=(6.12\pm0.04)\times10^{-10}$~[\cite{ParticleDataGroup:2022pth}] is used in calculation. To obtain the ratio, we consider that the Universe today is dominated by photons and free-streaming massless neutrinos~[\cite{Birrell:2012gg}], and $\sigma_\gamma$ and $\sigma_\nu$ are the entropy densities for photon and neutrino respectively. We have
+where the $\eta=(6.12\pm0.04)\times10^{-10}$~\cite{ParticleDataGroup:2022pth} is used in calculation. To obtain the ratio, we consider that the Universe today is dominated by photons and free-streaming massless neutrinos~\cite{Birrell:2012gg}, and $\sigma_\gamma$ and $\sigma_\nu$ are the entropy densities for photon and neutrino respectively. We have
 \begin{align}
     \frac{\sigma_\nu}{\sigma_\gamma}=\frac{7}{8}\,\frac{g_\nu}{g_\gamma}\left(\frac{T_\nu}{T_\gamma}\right)^3\,\qquad\frac{T_\nu}{T_\gamma}=\left(\frac{4}{11}\right)^{1/3}
 \end{align}
-and the entropy-per-particle for massless bosons and fermions are given by~[\cite{Fromerth:2012fe}]
+and the entropy-per-particle for massless bosons and fermions are given by~\cite{Fromerth:2012fe}
 \begin{align}
 s/n|_\mathrm{boson}\approx 3.60\,,\qquad
 s/n|_\mathrm{fermion}\approx 4.20\,.
 \end{align}
 However, from the neutrino oscillation experiment, we know that the the neutrinos are not massless particles. 
-The mass differences between neutrino mass eigenstates are~[\cite{ParticleDataGroup:2022pth}]:
+The mass differences between neutrino mass eigenstates are~\cite{ParticleDataGroup:2022pth}:
 \begin{align}
 &\Delta{m}_{21}^2=7.39^{+0.21}_{-0.20}\times10^{-5}\,\mathrm{eV}^2,\\
 &\Delta{m}_{32}^2=2.45^{+0.03}_{-0.03}\times10^{-3}\,\mathrm{eV}^2.
@@ -201,8 +201,8 @@ Thermal equilibrium implies both chemical equilibrium (particles abundances are 
 The chemical nonequilibrium condition is more important than the kinetic equilibrium because it relates to the arrow of time for the particle reactions. 
 
 The chemical nonequilibrium conditions in the early Universe are of general interest: they are understood to be prerequisite for the arrow of time dependent processes to take hold in the Hubble expanding Universe. The arrow of time plays an important role in the evolution of the early Universe, for example:
- 1.) The Big Bang Nucleosynthesis (BBN)~[\cite{Pitrou:2018cgg,Kolb:1990vq,Dodelson:2003ft,Mukhanov:2005sc}]  the synthesis of light elements of  e.g. D, $^3$He, $^4$He, and $^7$Li are produced at temperatures around $86\,\mathrm{keV}>T_{BBN}>50\,\mathrm{keV}$. 
- 2.) Baryogenesis is believed to occur at or before the Universe underwent electroweak phase transition~[\cite{Kolb:1990vq}] at a temperature $T\simeq 130$\, GeV, which generates the excess of baryon number compared to anti-baryon number in order to create the observed baryon number today.
+ 1.) The Big Bang Nucleosynthesis (BBN)~\cite{Pitrou:2018cgg,Kolb:1990vq,Dodelson:2003ft,Mukhanov:2005sc}  the synthesis of light elements of  e.g. D, $^3$He, $^4$He, and $^7$Li are produced at temperatures around $86\,\mathrm{keV}>T_{BBN}>50\,\mathrm{keV}$. 
+ 2.) Baryogenesis is believed to occur at or before the Universe underwent electroweak phase transition~\cite{Kolb:1990vq} at a temperature $T\simeq 130$\, GeV, which generates the excess of baryon number compared to anti-baryon number in order to create the observed baryon number today.
 
 When Universe expands and temperature cools down, the chemical non-equilibrium can be achieved by breaking the detailed balance between particle production reaction and annihilation/decay as follows:
 
