@@ -16,6 +16,9 @@
 %\usepackage{deluxetable} % Allows use of AASTEX deluxe tables
 \usepackage{aastex_hack} % Allows other AASTEX functionality.
 \usepackage{appendix}
+\usepackage{imakeidx}
+\makeindex
+
 \makesavenoteenv{tabular}
 \makesavenoteenv{table}
 \makesavenoteenv{figure}
@@ -111,7 +114,10 @@
 \listoffigures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliographystyle{spphys}
+\bibliographystyle{spphysJR}
 \bibliography{bibs/birrell-refs,bibs/steinmetz-refs,bibs/yang-refs,bibs/grayson-refs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printindex
 %%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

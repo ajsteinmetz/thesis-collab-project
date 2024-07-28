@@ -68,6 +68,9 @@ ENTRY
     url
     volume
     year
+    eprint
+    archivePrefix
+    primaryClass
   }
   {}
   { label }
@@ -144,6 +147,19 @@ FUNCTION {add.comma}
 { duplicate$ empty$
     'skip$
     { "," * add.blank }
+  if$
+}
+FUNCTION {add.stop}
+{ duplicate$ empty$
+    'skip$
+    { "." * add.blank }
+  if$
+}
+
+FUNCTION {add.arXiv}
+{ duplicate$ empty$
+    'skip$
+    {add.comma add.blank "arXiv" * add.blank }
   if$
 }
 
@@ -436,6 +452,7 @@ FUNCTION {format.url}
   if$
 }
 
+
 STRINGS  { bibinfo}
 INTEGERS { nameptr namesleft numnames }
 
@@ -660,6 +677,20 @@ FUNCTION {format.bvolume}
         { emphasize ", " * swap$ * }
       if$
       "volume and number" number either.or.check
+    }
+  if$
+}
+FUNCTION {format.archiv}
+{ primaryClass empty$
+    { "" }
+    {primaryClass "primaryClass" bibinfo.check}
+  if$
+}
+FUNCTION {format.archivprint}
+{ eprint empty$
+    { "" }
+    { eprint tie.or.space.prefix
+      "eprint" bibinfo.check * *
     }
   if$
 }
@@ -1060,6 +1091,8 @@ FUNCTION {article}
 { output.bibitem
   format.authors "author" output.check
   add.comma
+  format.title "title" output.check
+  add.stop
   crossref missing$
     {
       journal
@@ -1074,10 +1107,12 @@ FUNCTION {article}
     }
   if$
   format.doi output
-  new.block
+   new.block
   format.url output
   new.block
-  format.note output
+  format.note output  
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 FUNCTION {book}
@@ -1129,6 +1164,8 @@ FUNCTION {booklet}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1192,6 +1229,8 @@ FUNCTION {incollection}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 FUNCTION {inproceedings}
@@ -1278,6 +1317,8 @@ FUNCTION {mastersthesis}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1291,9 +1332,11 @@ FUNCTION {misc}
   format.date output
   format.doi output
   new.block
-  format.url output
+ format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
   empty.misc.check
 }
@@ -1313,6 +1356,8 @@ FUNCTION {phdthesis}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1372,6 +1417,8 @@ FUNCTION {techreport}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1386,6 +1433,8 @@ FUNCTION {unpublished}
   format.url output
   new.block
   format.note "note" output.check
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 

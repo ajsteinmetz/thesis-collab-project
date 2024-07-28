@@ -5,11 +5,11 @@ In this appendix we develop the geometric machinery which will be used to derive
 
 \subsection{Inducing Volume Forms on Submanifolds}
 
-Given a Riemannian manifold $(M,g)$ with volume form $dV_g$ and a  hypersurface $S$, the standard Riemannian hypersurface area form, $dA_g$, is defined on $S$ as the volume form of the pullback metric tensor on $S$.   Given vectors $v_1,...,v_k$ we define the interior product (i.e. contraction)  operator acting on a form $\omega$ of degree $n\geq k$ as the $n-k$ form 
+Given a Riemannian manifold $(M,g)$ with volume form $dV_g$ and a  hypersurface $S$, the standard Riemannian hypersurface area form, $dA_g$, is defined on $S$ as the volume form of the pullback metric tensor on $S$.   Given vectors $v_1,...,v_k$ we define the interior product\index{interior product} (i.e. contraction)  operator acting on a form $\omega$ of degree $n\geq k$ as the $n-k$ form 
 \begin{equation}
 i_{(v_1,...,v_k)}\omega=\omega(v_1,...,v_k,\cdot)\,.
 \end{equation}
- With this notation, the hypersurface area form can equivalently be computed as
+ With this notation, the hypersurface area form\index{hypersurface area form} can equivalently be computed as
 \begin{equation}
 dA_g=i_v dV_g\,,
 \end{equation}
@@ -24,7 +24,7 @@ Let $M$, $N$ be $m$ (resp. $n$)-dimensional smooth manifolds with volume forms $
 \begin{equation}\label{unit_volume}
 \Omega^N(F_*v_1,...,F_* v_n)=1\,.
 \end{equation}
-We call $\omega$ the {\bf volume form induced by $F:(M,\Omega^M)\rightarrow (N,\Omega^N)$}.
+We call $\omega$ the {\bf volume form induced by $F:(M,\Omega^M)\rightarrow (N,\Omega^N)$}\index{induced volume form}.
 \end{theorem}
 \begin{proof}
 $F_*$ is onto $T_{F(x)}N$ for any $x\in F^{-1}(c)$.  Hence there exists $\{v_i\}_1^n\subset T_xM$ such that $\Omega^N(F_*v_1,...,F_* v_n)=1$.  In particular, $F_* v_i$ is a basis for $T_{F(x)} N$.  Define $\omega_x=i_{(v_1,...,v_n)}\Omega_x$. This is obviously a nonzero $m-n$ form on $T_xF^{-1}(c)$ for each $x\in F^{-1}(c)$.  We must show that this definition is independent of the choice of $v_i$ and the result is smooth.
@@ -94,7 +94,7 @@ Therefore we obtain
 \end{equation}
 
 Just like in the (semi)-Riemannian case, the induced measure allows us to prove a coarea formula where we break integrals over $M$ into slices. In this theorem and the remainder of the section, we consider integration with respect to the density defined by any given volume form, i.e., we ignore the question of defining consistent orientations.
-\begin{theorem}[Coarea formula]\label{vol_form_coarea}
+\begin{theorem}[Coarea formula]\label{vol_form_coarea}\index{coarea formula}
 Let $M$ be a smooth manifold with volume form $\Omega^M$, $N$ a smooth manifold with volume form $\Omega^N$ and $F:M\rightarrow N$ be a smooth map.  If $F_*$ is surjective at a.e. $x\in M$ then for $f\in L^1(\Omega^M)\bigcup L^+(M)$ we have
 \begin{equation}\label{coarea_formula}
 \int_Mf(x) \Omega^M(dx)=\int_{N}\int_{F^{-1}(z)} f(y)\omega^M_z(dy) \Omega^N(dz)\,,
@@ -143,9 +143,9 @@ int_N_reg int F^{-1}(z).  Therefore they are equal.  QED
 \end{comment}
 \end{proof}
 \subsection{Comparison to Riemannian Coarea Formula}
-We now recall the classical coarea formula for semi-Riemannian metrics, see, e.g., \cite{chavel1995riemannian},  and give its relation to theorem \ref{vol_form_coarea}.
+We now recall the classical coarea formula for semi-Riemannian metrics, see, e.g., \cite{chavel1995riemannian},  and give its relation to Theorem \ref{vol_form_coarea}.
 \begin{definition}
-Let $F:(M,g)\rightarrow (N,h)$ be a smooth map between semi-Riemannian manifolds.  The {\bf normal Jacobian} of $F$ is
+Let $F:(M,g)\rightarrow (N,h)$ be a smooth map between semi-Riemannian manifolds.  The {\bf normal Jacobian}\index{normal Jacobian} of $F$ is
 \begin{equation}
 NJF(x)=|\det(F_*|_x(F_*|_x)^T)|^{1/2}\,,
 \end{equation}
@@ -167,7 +167,7 @@ NJF(x)=\left|\det\left(h_{ik}(F(x))\frac{\partial F^k}{\partial x^l}(x)g^{lm}(x)
 \end{lemma}
 
 Combining these lemmas with the rank theorem, one can prove the standard semi-Riemannian coarea formula
-\begin{theorem}[Coarea formula]
+\begin{theorem}[Coarea formula]\index{coarea formula!semi-Riemannian}
 Let $F:(M,g)\rightarrow (N,h)$ be a smooth map between semi-Riemannian manifolds such that $F_*$ is surjective at a.e. $x\in M$ and $g$ is nondegenerate on $F^{-1}(c)$ for a.e $c\in N$.  Then for $\phi\in L^1(dV_g)$ we have
 \begin{equation}
 \int_M\phi(x)dV_g=\int_{y\in N}\int_{x\in F^{-1}(y)}\frac{\phi(x)}{NJF(x)}dA_g dV_h\,,
@@ -178,7 +178,7 @@ where $dA_g$ is the volume measure induced on $F^{-1}(y)$ by pulling back the me
 \end{equation}
 \end{theorem}
 
-The relation between the Riemannian coarea theorem and Theorem \ref{vol_form_coarea} follows from the following theorem.
+The relation between the Riemannian coarea formula and Theorem \ref{vol_form_coarea} follows from the following theorem.
 \begin{theorem}
 Let $F:(M,g)\rightarrow (N,h)$  be a smooth map between semi-Riemannian manifolds and $c$ be a regular value.  Suppose $g$ is nondegenerate on $F^{-1}(c)$.  Let $\omega$ be the volume form on $F^{-1}(c)$ induced by $F:(M,dV_g)\rightarrow (N,dV_h)$.  Then
 \begin{equation}
@@ -221,7 +221,7 @@ In particular, this shows that even though $NJF$ and $dA_g$ are undefined indivi
 \subsection{Delta Function Supported on a Level Set}
  The induced measure defined above allows for a coordinate independent definition of a delta function supported on a regular level set.  Such an object is of great use in performing calculations in relativistic phase space.  We give the definition and prove several properties that justify several common formal manipulations that one would like to make with such an object.
 \begin{definition}
-Motivated by the coarea formula, we define the composition of the {\bf Dirac delta function} supported on $c\in N$ with a smooth map $F:M\rightarrow N$ such that $c$ is a regular value of $F$ by
+Motivated by the coarea formula, we define the composition of the {\bf Dirac delta function}\index{Dirac delta} supported on $c\in N$ with a smooth map $F:M\rightarrow N$ such that $c$ is a regular value of $F$ by
 \begin{equation}\label{delta_def}
  \delta_c(F(x))\Omega^M \equiv \omega^M
 \end{equation}
@@ -274,7 +274,7 @@ Let $c$ be a regular value of $F:(M,\Omega^M)\rightarrow (N,\Omega^N)$ and $\Phi
 
 We also have a version of Fubini's theorem.
 
-\begin{theorem}[Fubini's Theorem for Delta functions]
+\begin{theorem}[Fubini's Theorem for Delta functions]\index{Fubini's theorem for delta functions}
 Let $M_1,M_2,N$ be smooth manifolds with volume forms $\Omega_1,\Omega_2, \Omega^N$. Let $M\equiv M_1\times M_2$ and $\Omega\equiv \Omega_1\wedge\Omega_2$. Suppose that the set of $(x,y)\in F^{-1}(c)$ such that $F|_{M_1\times\{y\}}$ is not regular at $x$ has $\dim M_1+\dim M_2-\dim N$ dimensional Hausdorff measure zero in $M_1\times M_2$ (we denote the complement of this closed set by $U$).  Then for $f\in L^1(\omega)\bigcup L^+(F^{-1}(c))$ we have
 \begin{equation}\label{Fubini_eq}
 \int_Mf(x,y)\delta_c(F(x,y)) \Omega(dx,dy)=\int_{M_2}\left[\int_{U^y} f(x,y) \delta_c(F(x,y))\Omega_1(dx) \right]\Omega_2(dy)\,,

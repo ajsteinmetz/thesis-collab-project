@@ -559,7 +559,7 @@ for some $c_0,d_0,d_1$. Therefore, the vanishing of $R_0$ is equivalent to conse
 
 
 
-\subsection{Another Method for Computing Scattering Integrals}\label{app:dogov_method}
+\subsection{Comparison with an alternative Method for Computing Scattering Integrals}\label{app:dogov_method}
 As a comparison and consistency check for our method of computing the scattering integrals, in this appendix we analytically reduce the collision integral down to $3$ dimensions by a method adapted from \cite{Dolgov_Hansen}.  The only difference between our treatment in this section and theirs being that they solved the Boltzmann equation numerically on a grid in momentum space and not via a spectral method.  Therefore we must take an inner product of the collision operator with a basis function and hence we are integrating over all particle momenta, whereas they integrate over all momenta except that of particle one.  For completeness we give a detailed discussion of their method.
 
  Writing the conservation of four-momentum enforcing delta function
@@ -637,7 +637,7 @@ D_2=&\frac{\pi}{48}(-(p_1+p_2)^3-2p_3^3+2p_4^3+3(p_1+p_2)(p_3^2+p_4^2))\,,\notag
 D_3=&\frac{\pi}{240}(p_3^5-p_4^5-(p_1+p_2)^3(p_1^2-3p_1p_2+p_2^2)+5(p_1^3+p_2^3)p_3^2-5(p_1^2+p_2^2)p_3^3\notag\\
 &\hspace{7mm}+5(p_1^3+p_2^3-p_3^3)p_4^2+5(p_1^2+p_2^2+p_3^2)p_4^3)\,.\notag
 \end{align}
-We computed the remaining integrals numerically in several test cases for each of the reaction types in section \ref{nu_matrix_elements} and obtained agreement between this method and ours, up to the integration tolerance used.  However, the method we have developed in this Appendix has the distinct advantage of resulting in  smooth integrand.  The expressions obtained here are only piecewise smooth and therefore much costlier to integrate numerically.  Since the cost of numerically solving the Boltzmann equation is dominated by the cost of computing the collision integrals, our approach constitutes a  significant optimization.
+We computed the remaining integrals numerically in several test cases for each of the reaction types in section \ref{nu_matrix_elements} and obtained agreement between this method and ours, up to the integration tolerance used.  However, the method we have developed in this Appendix has the distinct advantage of resulting in  smooth integrand.  The expressions obtained here are only piecewise smooth and therefore much costlier to integrate numerically.  Since the cost of numerically solving the Boltzmann equation is dominated by the cost of computing the collision integrals, we find that our approach constitutes a  significant optimization in practice.
 
 
 

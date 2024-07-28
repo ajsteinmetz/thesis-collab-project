@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron plasma in BBN: damped-dynamic screening}\label{chap:bbn}
 
-In this Chapter, we discuss the application of the non-relativistic limit of the polarization tensor in Chapter \ref{chap:PlasmaSF} to the electron-positron plasma which existed during Big Bang nucleosynthesis (BBN) as found in \cite{Grayson:2023flr} and reproduced in Appendix \ref{appendixC}. The BBN Epoch occurred within the first 20 min after the Big Bang when the Universe was hot and dense enough for nuclear reactions to produce light elements up to lithium \cite{Pitrou:2018cgg}. BBN reactions typically take place within the temperature interval $86\, \mathrm{keV}>\mathrm{T_{BBN}}>50\, \mathrm{keV}$~\cite{Pitrou:2018cgg}. We refer to these elements produced in BBN as primordial light elements to distinguish them from those made later in the Universe's history. Primordial light element abundances are the most accessible probes of the early Universe before recombination. Though the current BBN model successfully predicts D, $^3$ He, $^4$ He abundances, well-documented discrepancies, such as $^7$Li, remain. Efforts to resolve the theoretical BBN model with present-day observations are discussed in detail in \cite{Pitrou:2021vqr,Bertulani:2022qly}.
+In this Chapter, we discuss the application of the non-relativistic limit of the polarization tensor in Chapter \ref{chap:PlasmaSF} to the electron-positron plasma which existed during Big Bang nucleosynthesis (BBN) as found in \cite{Grayson:2023flr}. The BBN Epoch occurred within the first 20 min after the Big Bang when the Universe was hot and dense enough for nuclear reactions to produce light elements up to lithium \cite{Pitrou:2018cgg}. BBN reactions typically take place within the temperature interval $86\, \mathrm{keV}>\mathrm{T_{BBN}}>50\, \mathrm{keV}$~\cite{Pitrou:2018cgg}. We refer to these elements produced in BBN as primordial light elements to distinguish them from those made later in the Universe's history. Primordial light element abundances are the most accessible probes of the early Universe before recombination. Though the current BBN model successfully predicts D, $^3$He, $^4$He abundances, well-documented discrepancies, such as $^7$Li, remain. Efforts to resolve the theoretical BBN model with present-day observations are discussed in detail in \cite{Pitrou:2021vqr,Bertulani:2022qly}.
 
 Huge electron-positron $e^-e^+$- number densities existed in the early Universe during Big Bang nucleosynthesis (BBN)~\cite{Wang:2010px,Hwang:2021kno,Rafelski:2023emw} are $10^2$ times larger than those present in the sun \cite{bahcall2001solar} and $10^4$ times normal atomic densities \cite{Grayson:2023flr}. Charge screening is an essential collective plasma effect that modifies the inter-nuclear potential $\phi(r)$ changing thermonuclear reaction rates during BBN. An electron cloud around an ion's charge effectively diminishes the influence of nuclear charges beyond their immediate vicinity, lowering the Coulomb barrier. In the context of nuclear reactions, a reduced Coulomb barrier leads to a higher likelihood of penetration, boosting thermonuclear reaction rates. Consequently, this process influences the abundance of light elements in the early universe by modifying their formation rates. Since the BBN temperature range is much less than the electron mass, we will use the non-relativistic limit of the polarization tensor derived in Chapter \ref{chap:PlasmaSF}. The screened potential relevant for thermonuclear reactions will be given by the longitudinal polarization function \req{eq:phi}.
 
@@ -119,7 +119,7 @@ The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in th
 This formula describes the characteristic length scale of screening in the plasma.
 
 \subsection{Longitudinal dispersion relation}
-As discussed in Chapter \ref{chap:PlasmaSF} the poles in the propagator or roots of the dispersion equation represent the plasma's propagating modes, often called `quasi-particles' or 'plasmons.' In the non-relativistic limit, one can solve the longitudinal part of the dispersion equation \req{eq:disp}, which is relevant for finding charge oscillation modes in the plasma
+As discussed in Chapter \ref{chap:PlasmaSF} the poles in the propagator or roots of the dispersion equation represent the plasma's propagating modes, often called `quasi-particles' or `plasmons.' In the non-relativistic limit, one can solve the longitudinal part of the dispersion equation \req{eq:disp}, which is relevant for finding charge oscillation modes in the plasma
 \begin{equation}
     1+ \frac{\Pi_\parallel( k)}{(p\cdot u)^2}= 1+ \frac{\Pi_\parallel(\omega, \boldsymbol{k})}{\omega^2}=\varepsilon_\parallel(\omega,\boldsymbol{k}) =0 \,,
 \end{equation}
@@ -206,11 +206,11 @@ This expansion is useful during BBN since the temperature is much lower than the
 \begin{equation}\label{eq:ddsint}
 \phi(t,\boldsymbol{x}) =\phi_{\text{stat}}(t,\boldsymbol{x})-Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)}\frac{i \boldsymbol{k}\cdot \boldsymbol{\beta_{\text{N}}} m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\,.
 \end{equation}
-The second term is the damped-dynamic screening correction which we refer to as $\Delta \phi$ where
+The second term is the damped-dynamic screening correction, which we refer to as $\Delta \phi$, where
 \begin{equation}\label{eq:pos_point}
 \phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x}) +\Delta \phi(t,\boldsymbol{x}) \,,
 \end{equation}
-and $\phi_{\text{stat}}$ is the standard static screening potential. The details of the integration of \req{eq:ddsint} can be found in \cite{Grayson:2023flr} in Appendix \ref{appendixC}, the result is
+and $\phi_{\text{stat}}$ is the standard static screening potential. The details of the integration of \req{eq:ddsint} can be found in \cite{Grayson:2023flr}, the result is
 % In order to perform this integration we first note that this expression can be re-written as the laboratory time derivative
 % \begin{equation}
 %  \Delta\phi(t,\boldsymbol{x}) = Ze\frac{d}{dt}\left[\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i|\boldsymbol{k}||\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t| \cos(\theta)}\frac{ m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\right] \,,
@@ -266,11 +266,11 @@ as constant over the integral in \req{eq:penprob} taking the value of \req{eq:po
 \begin{equation}
      H(0) = Z_1\phi_2(0) = Z_1 Z_2 \alpha \left(m_D - \frac{\beta_N m_D^2}{2 \kappa}\right)\,.
 \end{equation}
-Then the screening effect reduces to a constant shift in the relative energy $E \rightarrow E+H(0)$. In this approximation, the enhancement to reaction rates can be represented by a single factor \cite{Salpeter:1954nc,PhysRevC.89.015802}
+Then, the screening effect reduces to a constant shift in the relative energy $E \rightarrow E+H(0)$. In this approximation, the enhancement to reaction rates can be represented by a single factor \cite{Salpeter:1954nc,PhysRevC.89.015802}
 \begin{equation}\label{eq:DDSenhance}
    \mathcal{F} = \exp\left[\frac{H(0)}{T} \right]=\exp\left[\frac{Z_1 Z_2 \alpha}{T} \left(m_D - \frac{\beta_N m_D^2}{2 \kappa}\right)\right]\,.
 \end{equation}
-The first term is the normal weak field screening result, and the second is the contribution of damped-dynamic screening. Due to the large damping rate in comparison to the Debye mass and the small velocities of nuclei \req{eq:vel} during BBN, the correction due to damped dynamic screening is small, changing $H(0)$ by $10^{-5}$. 
+This result is only valid in the weak damping limit $\omega_p<\kappa$. The first term is the normal weak field screening result, and the second is the contribution of damped-dynamic screening. Due to the large damping rate in comparison to the Debye mass and the small velocities of nuclei \req{eq:vel} during BBN, the correction due to damped dynamic screening is small, changing $H(0)$ by $10^{-5}$. 
 % \subsection{Limitations of linear response: toy model}
 % \label{ssec:limitLR}
 % We now consider the equilibrium phase space distribution in the presence of a `strong' potential. In covariant form and not neglecting the magnitude of the 4-potential $A^\mu$ as compared to the energy-momentum $p^\mu$ of the particle in statistical ensemble, one obtains~\cite{Hakim:1967prd,DeGroot:1980dk}

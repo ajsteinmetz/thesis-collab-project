@@ -26,7 +26,7 @@ We first define a characteristic length between scatterings. Using the formula \
 \begin{align}
 \frac{\frac{d}{dt}(a^3 n)}{a^3n}=\frac{g_\nu}{2\pi^2n}\int C[f]p^2/Edp\,.
 \end{align}
-Here we don't want the net change, but rather to count the number of interactions.  For that reason, we imagine that only one direction of the process is operational and define the relaxation rate
+Here we don't want the net change, but rather to count the number of interactions.  For that reason, we imagine that only one direction of the process is operational and define the relaxation rate\index{relaxation rate}
 \begin{align}
 \Gamma\equiv\frac{g_\nu}{2\pi^2n}T^2\int \tilde C[f]zdz\,,
 \end{align}
@@ -36,11 +36,11 @@ where the one way collision is $\tilde C[f]$ is computed as in \req{coll} except
 \end{equation}
 If particle type $1$ also participates in the reverse of the reaction $1+2\rightarrow 3+4$ then a corresponding term for the reverse reaction must also be added.  The key difference is there is no minus sign; here we are counting reactions, not net particle number change.
 
-Using the average velocity, which for (effectively massless) neutrinos is $\bar v=c=1$, we obtain what we call the scattering length
+Using the average velocity, which for (effectively massless) neutrinos is $\bar v=c=1$, we obtain what we call the scattering length\index{scattering length}
 \begin{align}
 L_\Gamma&\equiv\frac{\bar v}{\Gamma}=\frac{\int_0^\infty\frac{1}{\Upsilon^{-1}e^z+1}z^2dz}{\int_0^\infty \tilde C[f] z^2/E dz}\,.
 \end{align}
-This can be compared to the Hubble length $L_H=c/H$ and the temperature at which $L_\Gamma=L_H$ we call the freeze-out temperature for that reaction.  Figure \ref{fig:scatt_length} shows the scattering length and $L_H$ for various types of neutrino reactions.  The solid line corresponds to the annihilation process $e^+e^-\rightarrow \nu\bar\nu$, the dashed line corresponds to the scattering $\nu e^\pm\rightarrow \nu e^\pm$, and the dot-dashed line corresponds to the combination of all processes involving only neutrinos.  The freeze-out temperatures in MeV are given in Table \ref{table:freeze-out_temp}.
+This can be compared to the Hubble length $L_H=c/H$\index{Hubble length} and the temperature at which $L_\Gamma=L_H$ we call the freeze-out temperature\index{freeze-out temperature} for that reaction.  Figure \ref{fig:scatt_length} shows the scattering length and $L_H$ for various types of neutrino reactions.  The solid line corresponds to the annihilation process $e^+e^-\rightarrow \nu\bar\nu$, the dashed line corresponds to the scattering $\nu e^\pm\rightarrow \nu e^\pm$, and the dot-dashed line corresponds to the combination of all processes involving only neutrinos.  The freeze-out temperatures in MeV are given in Table \ref{table:freeze-out_temp}.
 
 \begin{table}[ht]
 \centering 
@@ -65,13 +65,13 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-We now consider the the relaxation time for a given reaction, defined by $\tau=1/\Gamma$.  Suppose we have a time interval $t_f>t_i$  and corresponding temperature interval $T_f<T_i$ during which there is no reheating and the Universe is radiation dominated.  Normalizing time so $t=0$ corresponds to the temperature $T_i$ we have
+We now consider the the relaxation time\index{relaxation time} for a given reaction, defined by $\tau=1/\Gamma$.  Suppose we have a time interval $t_f>t_i$  and corresponding temperature interval $T_f<T_i$ during which there is no reheating and the Universe is radiation dominated.  Normalizing time so $t=0$ corresponds to the temperature $T_i$ we have
 \begin{equation}\label{ch6:H_eq}
-\dot a/a=-\dot T/T,\hspace{2mm} H=\frac{C}{2Ct+T_i^2}\propto T^2
+\dot a/a=-\dot T/T\,,\hspace{2mm} H=\frac{C}{2Ct+T_i^2}\propto T^2
 \end{equation}
 where $C$ is a constant that depends on the energy density and the Planck mass.  Its precise form will not be significant for us.  Note that \req{ch6:H_eq} implies
 \begin{equation}
-1/H(t)-1/H(0)=2t.
+1/H(t)-1/H(0)=2t\,.
 \end{equation}
 
 At $T\gg m_e$, the rates for reactions under consideration from Tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac} scale as $\Gamma\propto T^5$.  Therefore, supposing $H(T_f)/\Gamma(T_f)=1$ (which occurs at $T_f=O(1\MeV)$ as seen in the above figures), at any time $t_f>t>t_i$ we find 
@@ -81,17 +81,15 @@ At $T\gg m_e$, the rates for reactions under consideration from Tables \ref{tabl
 \end{align}
 Therefore, given any time $t_i<t_0<t_f$ we have
 \begin{equation}\label{ch6:tau_eq}
-\tau(t)<\tau(t_0)=\frac{2T_f^3}{T_0^3}\left(1-\frac{T_0^2}{T_i^2}\right)^{-1}\Delta t \text{ for all } t<t_0\,,
+\tau(t)<\tau(t_0)=\frac{2T_f^3}{T_0^3}\left(1-\frac{T_0^2}{T_i^2}\right)^{-1}\Delta t \text{ \,for all } t<t_0\,,
 \end{equation}
 where $\Delta t=t_0-t_i=t_0$.
 
- The first reheating period that precedes neutrino freeze-out is the disappearance of muons and pions around $O(100\MeV)$, as seen in figure \ref{fig:energy_frac}, and so we let $T_i=100\MeV$. \req{ch6:tau_eq} is minimized at $T_0\approx 77.5\MeV$ at which point we have 
+ The first reheating period that precedes neutrino freeze-out is the disappearance of muons and pions around $O(100\MeV)$, as seen in Figure \ref{fig:energy_frac}, and so we let $T_i=100\MeV$. \req{ch6:tau_eq} is minimized at $T_0\approx 77.5\MeV$ at which point we have 
 \begin{equation}
 \tau(t)<10^{-5} \Delta t_0 \text{ for } t<t_0.
 \end{equation}
-This shows that the relaxation time during the period between $100\MeV$ and $77.5\MeV$ is at least five orders of magnitude smaller than the corresponding time interval.  Therefore the system has sufficient time to relax back to equilibrium after any potential non-equilibrium aspects developed during the reheating period.  Thus justifies our assumption that the neutrino distribution has the equilibrium Fermi Dirac form at $T=O(10 \MeV)$ when we begin our numerical simulation.
-
-This can also be demonstrated numerically in Figure \ref{fig:relax}, where we have initialized the system at $T_\gamma=12\MeV$ with a non-equilibrium distribution of $\mu$ and $\tau$ neutrinos, giving them $\Upsilon=0.9$, and let them evolve under the Boltzmann-Einstein equation.  We see that after approximately $10^{-3}$ seconds the system relaxes back to equilibrium, well before neutrino freeze-out near $t=1$s.
+This shows that the relaxation time during the period between $100\MeV$ and $77.5\MeV$ is at least five orders of magnitude smaller than the corresponding time interval.  Therefore the system has sufficient time to relax back to equilibrium after any potential non-equilibrium aspects developed during the reheating period.  Thus justifies our assumption that the neutrino distribution has the equilibrium Fermi Dirac form at $T=O(10 \MeV)$ when we begin our numerical simulation. This can also be demonstrated numerically in Figure \ref{fig:relax}, where we have initialized the system at $T_\gamma=12\MeV$ with a non-equilibrium distribution of $\mu$ and $\tau$ neutrinos, giving them $\Upsilon=0.9$, and let them evolve under the Boltzmann-Einstein equation.  We see that after approximately $10^{-3}$ seconds the system relaxes back to equilibrium, well before neutrino freeze-out near $t=1$s.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
@@ -108,13 +106,13 @@ This can also be demonstrated numerically in Figure \ref{fig:relax}, where we ha
 
 
 
-TWe have omitted here a discussion of flavor neutrino oscillations. If it weren't for the differences between the matrix elements for the interactions between $e^\pm$ and $\nu_e$ on one hand and $e^\pm$ and $\nu_\mu,\nu_\tau$ on the other, oscillations would have no effect on the flow of entropy into neutrinos and hence no effect on $N_\nu^{\mathrm{eff}}$, but these differences do lead to a modification of $N_\nu^{\mathrm{eff}}$.  In \cite{Mangano2005} the impact of oscillations on neutrino freeze-out for the present day measured values of $\theta_W$ and $\eta$ was investigated.  It was found  that while oscillations redistributed energy amongst the neutrino flavors, the impact on $N_\nu^{\mathrm{eff}}$ was negligible. We have neglected oscillations in our study.
+We have omitted here a discussion of flavor neutrino oscillations. If it weren't for the differences between the matrix elements for the interactions between $e^\pm$ and $\nu_e$ on one hand and $e^\pm$ and $\nu_\mu,\nu_\tau$ on the other, oscillations would have no effect on the flow of entropy into neutrinos and hence no effect on $N_\nu^{\mathrm{eff}}$, but these differences do lead to a modification of $N_\nu^{\mathrm{eff}}$.  In \cite{Mangano2005} the impact of oscillations on neutrino freeze-out for the present day measured values of $\theta_W$ and $\eta$ was investigated.  It was found  that while oscillations redistributed energy amongst the neutrino flavors, the impact on $N_\nu^{\mathrm{eff}}$ was negligible. We have neglected oscillations in our study.
 
 
 
 \subsection{Weinberg Angle}
 
-The Weinberg angle is one of the key standard model parameters that impacts the neutrino freeze-out process.  More specifically, it is found in the matrix elements of weak force processes, including the reactions $e^+e^-\rightarrow \nu\bar\nu$ and $\nu e^\pm\rightarrow \nu e^\pm$ as found in Tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac}.  It is determined by the $SU(2)\times U(1)$ coupling constants $g$, $g^{'}$  by
+The Weinberg angle\index{Weinberg angle} is one of the key standard model parameters that impacts the neutrino freeze-out process.  More specifically, it is found in the matrix elements of weak force processes, including the reactions $e^+e^-\rightarrow \nu\bar\nu$ and $\nu e^\pm\rightarrow \nu e^\pm$ as found in Tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac}.  It is determined by the $SU(2)\times U(1)$ coupling constants $g$, $g^{'}$  by
 \begin{equation}
 \sin(\theta_W)=\frac{g^{'}}{\sqrt{g^2+(g^{'})^2}}\,.
 \end{equation}
@@ -136,13 +134,13 @@ In letting $\sin(\theta_W)$, and hence $g$ and $g^{'}$, vary we must fix the ele
 \begin{equation}
 H^2=\frac{\rho}{3}\,,\hspace{2mm}\dot\rho=-3H(\rho+P)\,.
 \end{equation}
- Since $e^\pm$ are the only (effectively) massive particles in the system, by scaling all energies, momenta, energy densities, pressures, and temperatures by $m_e$ we have removed all scale dependent parameters from the Einstein equations.  The Boltzmann equation becomes
+ Since $e^\pm$ are the only (effectively) massive particles in the system, by scaling all energies, momenta, energy densities, pressures, and temperatures by $m_e$ we have removed all scale dependent parameters from the Einstein equations.  The Boltzmann-Einstein equation becomes
 \begin{equation}\label{eta_def}
 \partial_tf-pH\partial_pf=\eta\frac{C[f]}{E}\,,\hspace{2mm}\eta\equiv M_p m_e^3G_F^2\,,
 \end{equation}
 where we have also factored out of $C[f]$ the $G_F^2$ term that is common to all of the neutrino interaction matrix elements. 
 
-Aside from the $\theta_W$ dependence of the matrix elements seen in Tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac}, the complete dependence on natural constants  is now contained in a single dimensionless interaction strength parameter $\eta$ with the vacuum present day value,
+Aside from the $\theta_W$ dependence of the matrix elements seen in Tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac}, the complete dependence on natural constants  is now contained in a single dimensionless neutrino interaction strength parameter\index{neutrino interaction strength} $\eta$ with the vacuum present day value,
 \begin{equation}\label{eta0_def}
 \eta_0\equiv \left.M_p m_e^3 G_F^2\right|_0  \approx 0.04421\, .
 \end{equation}

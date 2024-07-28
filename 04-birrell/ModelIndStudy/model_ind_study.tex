@@ -2,7 +2,7 @@
 
 The effective number of neutrinos, $N^{\text{eff}}_\nu$, quantifies the amount of radiation energy density, $\rho_r$, in the Universe prior to photon freeze-out and after $e^\pm$ annihilation.  $N^{\text{eff}}_\nu$ is a key comological observable that can be  measured by fitting to the distribution of CMB temperature fluctuations. The  Planck~\cite{Planck}  analysis gives $N^{\text{eff}}_{\nu}=3.36\pm 0.34$ (CMB only) and $N^{\text{eff}}_{\nu}=3.62\pm 0.25$ (CMB+$H_0$) ($68\%$ confidence levels), indicating a possible tension in the current understanding of $N^{\text{eff}}_\nu$.   This section, as well as in Section \ref{ch:param_studies}, works towards a detailed understanding of $N^{\text{eff}}_{\nu}$ with an eye towards this tension.
 
-Mathematically, $N^{\text{eff}}_\nu$ is defined by the relation
+Mathematically, $N^{\text{eff}}_\nu$ is defined by the relation\index{effective number of neutrinos}
 \begin{align}\label{eq:N_eff_def}
 \rho_r=\left(1+(7/8)R_\nu^{4}N^{\text{eff}}_\nu\right)\rho_\gamma\,,
 \end{align}
@@ -24,7 +24,7 @@ As the Universe expands and cools, the various components of the Universe transi
 
 
 
-At sufficiently high temperatures, such as existed in the early Universe, both particle creation and annihilation (i.e., chemical) processes and momentum exchanging (i.e., kinetic) scattering processes can occur sufficiently rapidly to establish complete thermal equilibrium of a given particle species. The  distribution function $f_{ch}^\pm$ of  fermions (+) and bosons (-) in both chemical and kinetic equilibrium is found by maximizing entropy subject to energy being conserved
+At sufficiently high temperatures, such as existed in the early Universe, both particle creation and annihilation (i.e., chemical) processes and momentum exchanging (i.e., kinetic) scattering processes can occur sufficiently rapidly to establish complete thermal equilibrium of a given particle species. The  distribution function $f_{ch}^\pm$ of  fermions (+) and bosons (-) in both chemical and kinetic equilibrium is found by maximizing entropy subject to energy being conserved\index{chemical equilibrium}
 \begin{equation}\label{ch_eq}
 f_{ch}^\pm=\frac{1}{\exp(E/T)\pm 1}\,, \hspace{2mm} T>T_{ch}\,,
 \end{equation}
@@ -32,7 +32,7 @@ where $E$ is the particle energy, $T$ the temperature, and $T_{ch}$ the chemical
 
 
 
-As temperature decreases, there will be a period where the temperature is greater than the kinetic freeze-out temperature, $T_k$, but below chemical freeze-out. During this period, momentum exchanging processes continue to maintain an equilibrium distribution of energy among the available particles, which we call kinetic equilibrium, but particle number changing processes no longer occur rapidly enough to keep the equilibrium particle number yield, i.e., for $T<T_{ch}$ the particle number changing processes have `frozen-out'. In this condition the momentum distribution, which is in kinetic equilibrium but chemical non-equilibrium, is obtained by maximizing  entropy subject to  particle number and energy constraints and thus two parameters appear
+As temperature decreases, there will be a period where the temperature is greater than the kinetic freeze-out temperature, $T_k$, but below chemical freeze-out. During this period, momentum exchanging processes continue to maintain an equilibrium distribution of energy among the available particles, which we call kinetic equilibrium, but particle number changing processes no longer occur rapidly enough to keep the equilibrium particle number yield, i.e., for $T<T_{ch}$ the particle number changing processes have `frozen-out'. In this condition the momentum distribution, which is in kinetic equilibrium but chemical non-equilibrium, is obtained by maximizing  entropy subject to  particle number and energy constraints and thus two parameters appear\index{kinetic equilibrium}\index{fugacity}
 \begin{equation}\label{k_eq}
 f_{k}^\pm=\frac{1}{\Upsilon^{-1} \exp(E/T)\pm 1}\,,\hspace{2mm} T_k<T\leq T_{ch}\,.
 \end{equation}
@@ -94,7 +94,7 @@ We emphasize here that $\rho_{tot}$ is the total energy density of the Universe,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Einstein-Vlasov Equation in FRW Spacetime}\label{sec:free_stream_sol}
-Once the temperature drops below the kinetic freeze-out temperature $T_k$ of a particular component of the Universe, we reach  the free streaming period where  particle scattering processes have completely frozen out. The   dynamics are therefore determined by the free-streaming Boltzmann-Einstein equation (\req{boltzmann_einstein} with $C[f]=0$), known as the Einstein-Vlasov equation, in a spatially flat FRW universe.  Due to the assumed homogeneity and isotropy, the particle distribution function depends on $t$ and $p^0=E$ only and so the Einstein-Vlasov equation becomes
+Once the temperature drops below the kinetic freeze-out temperature $T_k$ of a particular component of the Universe, we reach  the free streaming period where  particle scattering processes have completely frozen out. The   dynamics are therefore determined by the free-streaming Boltzmann-Einstein equation (\req{boltzmann_einstein} with $C[f]=0$), known as the Einstein-Vlasov equation, in a spatially flat FRW universe.  Due to the assumed homogeneity and isotropy, the particle distribution function depends on $t$ and $p^0=E$ only and so the Einstein-Vlasov equation becomes\index{Einstein-Vlasov equation}\index{free-streaming}
 \begin{equation}\label{VEeqFLR}
 E\partial_tf+(m^2-E^2)\frac{\partial_ta}{a}\partial_{E}f=0\,.
 \end{equation}
@@ -106,7 +106,7 @@ where $K$ is an arbitrary smooth function and $D$ is an arbitrary constant with 
 \begin{equation}\label{K_func}
 K(x)=\frac{1}{\Upsilon_\nu^{-1}e^{\sqrt{x+m^2/T_k^2}}+ 1}
 \end{equation}
-and $D=T_k a(t_k)$. The Fermi-Dirac-Einstein-Vlasov (FDEV) distribution function for neutrinos after freeze-out is then
+and $D=T_k a(t_k)$. The Fermi-Dirac-Einstein-Vlasov (FDEV) distribution function for neutrinos after freeze-out is then\index{Fermi-Dirac-Einstein-Vlasov distribution}
 \begin{equation}\label{neutrino_dist}
 f(t,E)=\frac{1}{\Upsilon_\nu^{-1}e^{\sqrt{(E^2-m^2)/T_\nu^2+m_\nu^2 /T_k^2}}+ 1}\,,
 \end{equation}
@@ -132,7 +132,7 @@ This proves that the particle number and entropy in a comoving volume are conser
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Neutrino Fugacity and Photon to Neutrino Temperature Ratio}\label{Tnugam}
-The instantaneous freeze-out assumption allows us to use conservation laws in \req{eq_dynamics} to characterize the neutrino fugacity and temperature in terms of the freeze-out temperature $T_k$.  We first outline the physics of the situation qualitatively. For $T_k<T<T_{ch}$, the evolution of the temperature of the common $e^\pm,\gamma,\nu$ plasma and the neutrino fugacity are determined by conservation of comoving neutrino number (since $T<T_{ch}$) and conservation of entropy.    As shown in Section \ref{sec:free_stream_sol}, after thermal freeze-out the neutrinos begin to free-stream and therefore $\Upsilon_\nu$ is constant, the neutrino temperature evolves as $1/a$, and the comoving neutrino entropy and neutrino number are exactly conserved.  The photon temperature then evolves to conserve the comoving entropy in photons, electrons, and positrons.  As annihilation occurs, entropy from $e^+e^-$ is fed into photons, leading to reheating.  We now make this analysis quantitative in order to derive a relation between the reheating temperature ratio and neutrino fugacity.
+The instantaneous freeze-out assumption allows us to use conservation laws in \req{eq_dynamics} to characterize the neutrino fugacity and temperature in terms of the freeze-out temperature $T_k$.  We first outline the physics of the situation qualitatively. For $T_k<T<T_{ch}$, the evolution of the temperature of the common $e^\pm,\gamma,\nu$ plasma and the neutrino fugacity are determined by conservation of comoving neutrino number (since $T<T_{ch}$) and conservation of entropy.    As shown in Section \ref{sec:free_stream_sol}, after thermal freeze-out the neutrinos begin to free-stream and therefore $\Upsilon_\nu$ is constant, the neutrino temperature evolves as $1/a$, and the comoving neutrino entropy and neutrino number are exactly conserved.  The photon temperature then evolves to conserve the comoving entropy within the coupled system of photons, electrons, and positrons.  As annihilation occurs, entropy from $e^+e^-$ is fed into photons, leading to reheating\index{reheating}.  We now make this analysis quantitative in order to derive a relation between the reheating temperature ratio and neutrino fugacity.
 
 Assuming $T_{ch}\gg m_e$, the entropy in a given comoving volume, $V(t_{ch})$, is the sum of relativistic neutrinos (with $\Upsilon_\nu=1$), electrons, positrons, and photons
 \begin{equation}
@@ -208,7 +208,7 @@ N^{\mathrm{eff}}_\nu=\frac{360}{7\pi^4}\frac{e^{-4b\sigma}}{(1+c\sigma^2)^4}\int
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Contribution to $N^{\text{eff}}_{\nu}$ of  Sub-eV  Mass Sterile Particles}\label{sec:Neff_QGP}
 
-Moving beyond neutrinos, we now study the effect on $N_\nu^{\text{eff}}$ of non-SM light weakly coupled  particle species, referred to here as a sterile particles (SP). Such hypothetical SPs would behave as `dark radiation'~\cite{Steigman:2013yua} rather than cold dark matter and would therefore impact $N_\nu^{\text{eff}}$ in a similar manner to neutrinos, though potentially with a vastly different freeze-out temperature.  This section is adapted from the work in \cite{Birrell:2014cja}.
+Moving beyond neutrinos, we now study the effect on $N_\nu^{\text{eff}}$ of non-SM light weakly coupled  particle species, referred to here as a sterile particles (SP)\index{sterile particles}. Such hypothetical SPs would behave as `dark radiation'~\cite{Steigman:2013yua} rather than cold dark matter and would therefore impact $N_\nu^{\text{eff}}$ in a similar manner to neutrinos, though potentially with a vastly different freeze-out temperature.  This section is adapted from the work in \cite{Birrell:2014cja}.
 
 
 The possibility that Goldstone bosons, one candidate for SPs,  could be mistaken for a fractional contribution to cosmic neutrinos was  identified in \cite{Weinberg:2013kea}.  Another viable candidate for SPs are sterile neutrinos. It has been shown that  three `new' right-handed neutrinos could fully account for the observed tension in the effective number of neutrinos, $N^{\text{eff}}_{\nu}$, if their freeze-out temperature    is in the vicinity of the quark gluon plasma (QGP) phase transition~\cite{Anchordoqui:2011nh,Anchordoqui:2012qu}.  If SPs originating in the QGP phase transition are interpreted as Goldstone bosons it would imply that in the deconfined phase there is  an additional hidden symmetry, weakly broken at hadronization.  For example, if this symmetry were to be part of the baryon conservation riddle, then we can expect that these Goldstone bosons will  couple to particles with baryon number, and possibly only in the domain where the vacuum is modified from its present day condition.  These considerations motivate  study of the contribution to 
@@ -222,7 +222,7 @@ We denote by $S$ the conserved `comoving' entropy in a volume element $dV$, whic
 \begin{equation}
 S=\frac{2\pi^2}{45}g^S_*T_\gamma^3 a^3\,.
 \end{equation} 
-For ideal Fermi and Bose gases
+For ideal fermion and boson gases
 \begin{equation}
 g_*^S=\!\!\!\!\sum_{i=\text{bosons}}\!\!\!\!g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^-+\frac{7}{8}\!\!\!\sum_{i=\text{fermions}}\!\!\!\! g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^+\,.
 \end{equation}
