@@ -27,6 +27,7 @@
 
 
 % Useful macros for equations and units
+\newcommand{\ts}{\textstyle}
 \newcommand*{\TeV}{\text{ TeV}}
 \newcommand*{\GeV}{\text{ GeV}}
 \newcommand*{\MeV}{\text{ MeV}}
@@ -37,6 +38,8 @@
 \newcommand*{\bb}{\boldsymbol}
 \newcommand*{\beqn}{\begin{equation}}
 \newcommand*{\eeqn}{\end{equation}}
+\newcommand{\beql}[1]{\begin{equation} \label{#1}}
+\newcommand{\eeql}[1]{\label{#1} \end{equation} }  
 \newcommand{\req}[1]{Eq.~(\ref{#1})}
 \newcommand{\rf}[1]{Fig.~{\ref{#1}}}
 \newcommand{\rt}[1]{Table~{\ref{#1}}}
@@ -86,9 +89,9 @@
 \include{02-yang/Chapter2}
 \include{00-hadron_rafelski/hadronuniverse}
 \include{02-yang/Chapter3}
+\include{03-yangsteinmetz/NeutronLifeTime}
 \include{02-yang/Chapter4}
 \include{02-yang/Chapter5}
-\include{03-yangsteinmetz/NeutronLifeTime}
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter from Andrew Steinmetz's dissertation
 \include{03-yangsteinmetz/magnetization}
@@ -104,6 +107,8 @@
 \include{05-grayson/chap03BBN}
 %%%%%%%%%%%%%%%%%%%%%%%%
 \include{04-birrell/NeutrinoDistributionToday/NuDistToday.tex}
+\include{07-outlook/outlook}
+%%%%%%%%%%%%%%%%%%%%%%%%
 % Appendix
 \appendix
 \include{06-appendix/vol_forms.tex}
