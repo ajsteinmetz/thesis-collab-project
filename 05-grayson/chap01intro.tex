@@ -55,7 +55,7 @@
 % }
 
 The interaction of electromagnetic fields within relativistic plasmas is of interest in astrophysics, intense laser interactions with matter, and quark-gluon plasma in relativistic heavy ion collisions. Quark-gluon plasma (QGP), a state of matter of deconfined quarks and gluons at extremely high temperatures $T>150$ MeV, is formed in the violent collision of heavy ions at relativistic speeds~\cite{Letessier:2002ony}. This deconfined state is also of astrophysical interest since it filled the early universe for the first few microseconds after the Big Bang~\cite{rafelski2013connecting}. Several methods have been introduced to study the linear response of a collisionless ultrarelativistic QGP following the seminal work by~\cite{Weldon:1982aq} by using semiclassical transport theory based on the Boltzmann equation~\cite{Mrowczynski:1987jr,Mrowczynski:1989np,Blaizot:1993zk,Kelly:1994ig,Kelly:1994dh}. However, applications of this formalism are restricted to dilute plasmas where collisions can be neglected~\cite{Blaizot:2001nr}. 
-Previously, the effects of collisions within the plasma were mainly studied to derive transport coefficients, such as the electrical conductivity, of interest to the study of plasma response to long-wavelength perturbations~\cite{Mrowczynski:1988xu,Heiselberg:1993cr,Ahonen:1996nq,Baym:1997gq,Ahonen:1998iz}. In quantum field theory, transport coefficients have also been calculated using effective propagators that re-sum thermal modifications to avoid infrared divergences~\cite{Heiselberg:1994ms,Arnold:2002zm,Arnold:2003zc}. Here, we will study semi-classical transport using the Vlasov-Boltzmann equation with momentum-averaged quantum collisions between particles, a topic discussed in numerous other works, such as \cite{DeGroot:1980dk,Cercignani2002,Hakim2011,Carrington:2003je,Schenke:2006xu}.
+Previously, the effects of collisions within the plasma were mainly studied to derive transport coefficients, such as the electrical conductivity, of interest to the study of plasma response to long-wavelength perturbations~\cite{Mrowczynski:1988xu,Heiselberg:1993cr,Ahonen:1996nq,Baym:1997gq,Ahonen:1998iz}. In quantum field theory, transport coefficients have also been calculated using effective propagators that re-sum thermal modifications to avoid infrared divergences~\cite{Heiselberg:1994ms,Arnold:2002zm,Arnold:2003zc}. Here, we will study semi-classical transport using the Vlasov-Boltzmann equation with momentum-averaged quantum collisions between particles, a topic discussed in numerous other works, such as \cite{DeGroot:1980dk,Cercignani:2002bk,Hakim:2011bk,Carrington:2003je,Schenke:2006xu}.
 
 
 The theoretical description of relativistic plasma is based on transport theory, i.e., the relativistic form of Liouville's equation. The one-particle phases space distribution function $f(x,p)$ undergoes Liouville flow,
@@ -91,7 +91,7 @@ The preceding sections will discuss obtaining exact solutions for the covariant 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Covariant kinetic theory}\label{sec:CKT}
-A full microscopic picture of plasma kinematics, useful in numerical simulations, is often more involved than what is required to understand changes in the macroscopic quantities of plasmas. A conventional simplification to the microscopic picture is to average over the discrete states to yield a distribution function $f(x,\boldsymbol{p})$, which describes the probability of finding some number of particles $dN$ in a small range of position $d\mathbf{r}^3$ and momentum $d\boldsymbol{p}^3$ or relativistically~\cite{Hakim2011}
+A full microscopic picture of plasma kinematics, useful in numerical simulations, is often more involved than what is required to understand changes in the macroscopic quantities of plasmas. A conventional simplification to the microscopic picture is to average over the discrete states to yield a distribution function $f(x,\boldsymbol{p})$, which describes the probability of finding some number of particles $dN$ in a small range of position $d\mathbf{r}^3$ and momentum $d\boldsymbol{p}^3$ or relativistically~\cite{Hakim:2011bk}
 \begin{equation}
     \int_{\Sigma}d\Sigma_{\mu}\int  d^4p\frac{p^\mu}{m}f(x,p) = N,
 \end{equation}
@@ -108,7 +108,7 @@ with the covariant integration, measure can be written as
 \end{equation}
 where $p^0 = p \cdot u$ in the rest frame of the plasma. The one particle distribution function is effectively the phase space density of the system. We will always refer to the 4-momentum as $p = (p_0, \, \boldsymbol{p})$ and the 3-momentum as $\boldsymbol{p}$.
 
-The kinetic equation describing the evolution of this distribution is the Vlasov-Boltzmann equation (VBE). The VBE is often derived in detail from heuristic arguments see \cite{DeGroot:1980dk,Cercignani2002}. Here, we will outline how it relates to Liouville's theorem. A similar derivation of the equilibrium distribution in the presence of electromagnetic fields is found in \cite{Hakim2011}.
+The kinetic equation describing the evolution of this distribution is the Vlasov-Boltzmann equation (VBE). The VBE is often derived in detail from heuristic arguments see \cite{DeGroot:1980dk,Cercignani:2002bk}. Here, we will outline how it relates to Liouville's theorem. A similar derivation of the equilibrium distribution in the presence of electromagnetic fields is found in \cite{Hakim:2011bk}.
 We derive the classical one-species Vlasov-Boltzmann equation from the Liouville theorem
 \begin{equation}
     \frac{d f(Q,P)}{d\tau} = \{H(Q,P), f(Q,P)\} = 0\,,
@@ -602,7 +602,7 @@ These quantities are discussed in detail and plotted in \cite{Formanek:2021blc}.
 
 The main result of \cite{Formanek:2021blc} is the polarization tensor \req{eq:pimunu} which is an appropriate solution for an infinite polarizable medium with damping due to collisions. Additionally, the analytic form of this tensor in phase space is found in the ultrarelativistic and non-relativistic limits. The addition of current conservation leads to a correction in the longitudinal portion of the polarization tensor compared to the one found using the Anderson-Witting collision term.
 
-Here, we only consider electrons and positrons, neglecting the effects of spin. Our framework would be improved by incorporating spin into our kinetic description of plasmas. This could be done by taking the classical limit of the quantum kinetic transport of the Wigner function as in \cite{hurst2014semiclassical}. This would be especially important in quark-gluon plasmas, where we study the magnetic field. Below, we will summarize a few areas of future work advancing the description of plasmas presented here. 
+Here, we only consider electrons and positrons, neglecting the effects of spin. Our framework would be improved by incorporating spin into our kinetic description of plasmas. This could be done by taking the classical limit of the quantum kinetic transport of the Wigner function as in \cite{Hurst:2014svf}. This would be especially important in quark-gluon plasmas, where we study the magnetic field. Below, we will summarize a few areas of future work advancing the description of plasmas presented here. 
 
 \subsection{Energy conserving collision term}
 The polarization tensor \req{eq:pimunu} conserves current but not explicitly energy. Energy conservation can be ensured by adding a correction to the collision term similar to \req{eq:collision} but involving the second moment of $\delta f$ which is related to energy-momentum density \cite{Rocha:2021zcw}
@@ -625,7 +625,7 @@ The projector operator$\mathcal{P}^{\mu \nu}(u)$ is
 \begin{equation}
     \mathcal{P}^{\mu \nu}(u) = g^{\mu \nu} -u^\mu u^\nu\,.
 \end{equation}
-We show in \cite{Grayson:2022asf} that the energy-momentum violation cancels in the current for a matter-antimatter plasma. Finding the polarization tensor, including energy-momentum conservation, is the subject of future work. The addition of this term in the current is studied in relativistic hydrodynamics in \cite{Singha:2023eia}. Instead of adding these complex correction terms, it may be better to use the Fokker-Planck equation or its simplified counterpart the LBO or Doughtery collision term \cite{Dougherty1964,Francisquez_Juno_Hakim_Hammett_Ernst_2022,Ong_Yu_1970}, which manifestly conserves energy-momentum and current, and is better suited to study electromagnetic grazing collisions. 
+We show in \cite{Grayson:2022asf} that the energy-momentum violation cancels in the current for a matter-antimatter plasma. Finding the polarization tensor, including energy-momentum conservation, is the subject of future work. The addition of this term in the current is studied in relativistic hydrodynamics in \cite{Singha:2023eia}. Instead of adding these complex correction terms, it may be better to use the Fokker-Planck equation or its simplified counterpart the LBO or Doughtery collision term \cite{Dougherty1964,Francisquez:2022imd,Ong:1970evs}, which manifestly conserves energy-momentum and current, and is better suited to study electromagnetic grazing collisions. 
 \subsection{Applications to other plasmas}
 The main motivation of this work was to derive a relativistic polarization tensor that could be used to describe quark-gluon plasma and other plasmas where damping is important. In Chapter \ref{chap:QCD} we discuss the application of the ultrarelativistic limit of the polarization tensor to study the electromagnetic properties of QGP. This polarization tensor is easy to generalize to other ultrarelativistic antimatter plasmas. Since the particles are massless, increasing the number of plasma particle species merely leads to an enhancement of the Debye mass \cite{Grayson:2022asf,Kapusta:1992fm}
 \begin{equation}\label{eq:Debyem}
@@ -658,7 +658,7 @@ We feel it should be possible to derive the electromagnetic field in plasma for 
 \begin{equation}
     f(x,p) = f_\text{eq}(x,p) + \delta f (x,p)\,,
 \end{equation}
-where in the Boltzmann limit the strong field equilibrium distribution is \cite{Hakim2011,Hakim:1967prd}
+where in the Boltzmann limit the strong field equilibrium distribution is \cite{Hakim:2011bk,Hakim:1967prd}
 \begin{equation}
      f_\text{eq}(x,p) = \exp \left(-u_{\mu}[p^{\mu}+q A^{\mu}(x)]/T\right)\,.
 \end{equation}
@@ -896,7 +896,7 @@ One can then use a separate collision rate to represent the collisions between d
 % \begin{equation}
 % \lim_{k\rightarrow 0}\sigma_L(0,k) \neq \lim_{\omega\rightarrow 0}\sigma_L(\omega,0)\,,
 % \end{equation}
-% which originates in the infinite extent of the plasma considered in this work. For finite systems, the longitudinal conductivity vanishes in the limit $\omega \rightarrow 0$ even in the $k = 0$ case \cite{PhysRevB.40.8169}.
+% which originates in the infinite extent of the plasma considered in this work. For finite systems, the longitudinal conductivity vanishes in the limit $\omega \rightarrow 0$ even in the $k = 0$ case \cite{Baranger:1989elt}.
 % %==================================================================================
 % \subsection{Dispersion Relations} \label{sec:disp}
 

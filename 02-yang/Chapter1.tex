@@ -1,7 +1,10 @@
 \section{Particles and plasma in the Universe} \label{Introduction}
 %{Introduction to cosmology and overview}
-In this chapter, we will introduce the fundamental concepts in cosmology for us to explore the properties of the Universe during the `first hour'. I will first present the standard cosmological Friedmann-Lemaitre-Robertson-Walker (FLRW) model, then introduce the general Fermi/Bose distribution with and its application in the early Universe. Finally I present an overview of Universe evolution from $300\,\mathrm{MeV}>T>0.02\,\mathrm{MeV}$.
-The Natural unit $c=\hbar=k_{B}=1$ is used throughout the thesis for discussion.
+In this chapter, we will introduce the fundamental concepts in cosmology necessary to explore the properties of the Universe during its 'first hour'. We will cover the general Fermi/Bose distribution and its application in the early Universe, as well as the thermodynamics of the early Universe. Throughout the thesis, we use natural units $c=\hbar=k_{B}=1$ for discussion.
+
+
+%We will first present the standard cosmological Friedmann-Lemaitre-Robertson-Walker (FLRW) model, then introduce the general Fermi/Bose distribution with and its application in the early Universe. Finally we present an overview of Universe evolution from $300\,\mathrm{MeV}>T>0.02\,\mathrm{MeV}$.
+%The Natural unit $c=\hbar=k_{B}=1$ is used throughout the thesis for discussion.
 %{Introduction\daggerfootnote{This chapter has been published previously as \citet{Gottbrath1999}.}}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -10,7 +13,7 @@ The Natural unit $c=\hbar=k_{B}=1$ is used throughout the thesis for discussion.
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \subsection{Approaching equilibrium: Fermi/Bose distributions}
-
+\index{Fermi/Bose distribution}
 In the early Universe, the reaction rates of particles in the cosmic plasma were much greater than the Universe expansion rate $H$. Therefore, the local thermal equilibrium has been maintained. Assuming the particles are in thermal equilibrium, the dynamical information can be obtained from the single-particle distribution function. The general relativistic covariant Fermi/Bose momentum distribution can be written as
 \begin{align}
 f_{F/B}(\Upsilon_i,p_i)=\frac{1}{\Upsilon^{-1}_i\exp{\left[(u\cdot p_i-\mu_i)/T\right]}\pm1}
@@ -45,7 +48,7 @@ The Boltzmann equation describes the evolution of distribution function f in pha
 \begin{align}
 \frac{\partial f}{\partial t}-\frac{\left(E^2-m^2\right)}{E}H\frac{\partial f}{\partial E}=\frac{1}{E}\sum_{q}\mathcal{C}_q[f],
 \end{align}
-where $H=\dot{a}/a$ is the Hubble parameter. Due to homogeneity and isotropy of the Universe, the distribution function depends on time $t$ and energy $E=\sqrt{p^2+m^2}$ only. The collision term $\sum_qC_q$ represents all elastic and inelastic interactions and $q$ labels the corresponding physical process. In general, the collision term is proportional to the relaxation time for given collision as follows \cite{ANDERSON1974466}
+where $H=\dot{a}/a$ is the Hubble parameter. Due to homogeneity and isotropy of the Universe, the distribution function depends on time $t$ and energy $E=\sqrt{p^2+m^2}$ only. The collision term $\sum_qC_q$ represents all elastic and inelastic interactions and $q$ labels the corresponding physical process. In general, the collision term is proportional to the relaxation time for given collision as follows \cite{Anderson:1974nyl}
 \begin{align}
 \frac{1}{E}\mathcal{C}_q[f]\propto\frac{1}{\tau_{rel}}
 \end{align}
@@ -64,7 +67,7 @@ As the Universe expands and the temperature drops, the rate of the inelastic sca
 \begin{equation}\label{equilibrium}
 f_{th}(t,E)=\frac{1}{\exp[(E-\mu)/T]+1},\qquad \text{ for } T(t)> T_{ch}.
 \end{equation}
-where $T_{ch}$ represents the chemical freeze-out temperature.
+where $T_{ch}$ represents the chemical freeze-out temperature.\index{chemical freeze-out}
 
 
 \item Kinetic freeze-out:\\
@@ -72,11 +75,11 @@ After chemical freeze-out, particles  still scatter elastically from other parti
 \begin{equation}\label{kinetic_equilib}
 f_k(t,E)=\frac{1}{\Upsilon^{-1}\exp[(E-\mu)/T]+1},\qquad \text{ for }T_f< T(t)< T_{ch},
 \end{equation}
-where $T_f$ represents the kinetic freeze-out temperature. The generalized fugacity $\Upsilon(t)$ controls the occupancy of phase space and is necessary once $T(t)<T_{ch}$ in order to conserve particle number.
+where $T_f$ represents the kinetic freeze-out temperature. The generalized fugacity $\Upsilon(t)$ controls the occupancy of phase space and is necessary once $T(t)<T_{ch}$ in order to conserve particle number.\index{kinetic freeze-out}
 
 
 \item{Free streaming:}\\
-After kinetic freeze-out, the particles have fully decoupled from the primordial plasma, and thereby ceased influencing the dynamics of the Universe and become free-streaming. The Einstein-Vlasov equation can be solved \cite{choquet2008general} and the free-streaming momentum distribution can be written as \cite{Birrell:2012gg}
+After kinetic freeze-out, the particles have fully decoupled from the primordial plasma, and thereby ceased influencing the dynamics of the Universe and become free-streaming. The Einstein-Vlasov equation can be solved \cite{Choquet-Bruhat:2009xil} and the free-streaming momentum distribution can be written as \cite{Birrell:2012gg}
 \begin{equation}\label{free_stream_dist}
 f_{fs}(t,E)=\frac{1}{\Upsilon^{-1}\exp{\left[\sqrt{\frac{E^2-m^2}{T_{fs}^2}+\frac{m^2}{T^2_f}}-\frac{\mu}{T_f}\right]+1}},\quad T_{fs}(t)=\frac{T_fa(t_k)}{a(t)},
 \end{equation}
@@ -96,7 +99,7 @@ The division of the freeze-out process into these three regimes is a simplificat
 \subsection{Thermodynamics of the Early Universe}
 In the case of local thermal equilibrium, the laws of thermodynamics can provide a framework for understanding the behavior of particle's energy density, pressure, number density and entropy in the early Universe.
 
-Using the relativistic covariant Fermi/Bose momentum distribution, the corresponding energy density, pressure, and number densities for particle species $i$ are given by
+Using the relativistic covariant Fermi/Bose momentum distribution, the corresponding energy density, pressure, and number densities for particle species $i$ are given by\index{energy density}\index{pressure}\index{number density}
 \begin{align}
 \rho_i&=g_i\int\!\!\frac{d^3p}{(2\pi)^3}Ef_{F/B}=\frac{g_i}{2\pi^2}\!\int_{m_i}^\infty\!\!\!dE\,\frac{E^2\left(E^2-m_i^2\right)^{1/2}}{\Upsilon_i^{-1}e^{(E-\mu_i)/T}\pm 1},\label{energy_density}\\[0.2cm]
 P_i&=g_i\int\!\!\frac{d^3p}{(2\pi)^3}\frac{p^2}{3E}f_{F/B}=\frac{g_i}{6\pi^2}\!\int_{m_i}^\infty\!\!\!dE\,\frac{\left(E^2-m_i^2\right)^{3/2}}{\Upsilon_i^{-1} e^{(E-\mu_i)/T}\pm 1},\label{Pressure_density}\\[0.2cm]
@@ -104,7 +107,7 @@ n_i&=g_i\int\!\!\frac{d^3p}{(2\pi)^3}f_{F/B}=\frac{g_i}{2\pi^2}\!\int_{m_i}^\inf
 \label{number_density}
 \end{align}
 where $g_i$ is the degeneracy of the particle species. By including the fugacity parameter $\Upsilon_i$ allows us to characterize particle properties in nonchemical equilibrium situations.
-On the other hand, the corresponding free-streaming energy density, pressure, and number densities can be written as
+On the other hand, the corresponding free-streaming energy density, pressure, and number densities can be written as\index{free-streaming!energy density}\index{free-streaming!pressure}\index{free-streaming!number density}
 \begin{align}
 \rho_i&=g_i\int\!\!\frac{d^3p}{(2\pi)^3}Ef_{fs}=\frac{g_i}{2\pi^2}\!\int_{m_i}^\infty\!\!\!dE\,\frac{E^2\left(E^2-m_i^2\right)^{1/2}}{\Upsilon_i^{-1}e^{\sqrt{p^2/T_{fs}^2+m_i^2 /T_f^2}-\mu_i/T_f}\pm 1},\label{free_energy_density}\\[0.2cm]
 P_i&=g_i\int\!\!\frac{d^3p}{(2\pi)^3}\frac{p^2}{3E}f_{fs}=\frac{g_i}{6\pi^2}\!\int_{m_i}^\infty\!\!\!dE\,\frac{\left(E^2-m_i^2\right)^{3/2}}{\Upsilon_i^{-1}e^{\sqrt{p^2/T_{fs}^2+m_i^2 /T_f^2}-\mu_i/T_f}\pm1},\label{free_Pressure_density}\\[0.2cm]
@@ -117,7 +120,7 @@ which are different from the thermal equilibrium Eq.~(\ref{energy_density}), Eq.
 
 
 
-Given the energy density, pressure, and number densities, the entropy density for particle species $i$ can be written as
+Given the energy density, pressure, and number densities, the entropy density for particle species $i$ can be written as \index{entropy density}
 \begin{align}\label{entropy}
 \sigma_i=\frac{S_i}{V}=\left(\frac{\rho_i+P_i}{T}-\frac{\mu_i}{T}\,n_i\right).
 \end{align}
@@ -126,7 +129,7 @@ In general the chemical potential is associated with the baryon number. Since th
 &\sigma=\sum_i\,\sigma_i=\frac{2\pi^2}{45}g^s_\ast\,T^3,\\
 &g^s_\ast=\sum_{i=\mathrm{bosons}}g_i\left({\frac{T_i}{T_\gamma}}\right)^3B\left(\frac{m_i}{T_i}\right)+\frac{7}{8}\sum_{i=\mathrm{fermions}}g_i\left({\frac{T_i}{T_\gamma}}\right)^3F\left(\frac{m_i}{T_i}\right),
 \end{align}
-where $g^s_\ast$ counts the effective number of `entropy' degrees of freedom. The functions $B(m_i/T)$ and $F(m_i/T)$ are defined as
+where $g^s_\ast$ counts the effective number of `entropy' degrees of freedom. The functions $B(m_i/T)$ and $F(m_i/T)$ are defined as \index{entropy degrees of freedom}
 \begin{align}
 &B\left(\frac{m_i}{T}\right)=\frac{45}{12\pi^4}\int^\infty_{m_i/T}\,dx\sqrt{x^2-\left(\frac{m_i}{T}\right)^2}\left[4x^2-\left(\frac{m_i}{T}\right)^2\right]\frac{1}{\Upsilon^{-1}_ie^x-1},\\
 &F\left(\frac{m_i}{T}\right)=\frac{45}{12\pi^4}\frac{8}{7}\int^\infty_{m_i/T}\,dx\sqrt{x^2-\left(\frac{m_i}{T}\right)^2}\left[4x^2-\left(\frac{m_i}{T}\right)^2\right]\frac{1}{\Upsilon^{-1}_ie^x+1}.
@@ -163,7 +166,7 @@ where $T_0$ and $t_0$ represent the initial temperature and time respectively, $
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$
 
 \subsubsection{The baryon-per-entropy density ratio}
-An important assumption allowing us to explore the early Universe evolution is that following on the era of matter genesis both baryon and entropy content is conserved in the comoving volume. Both baryon and entropy density scale with the third power of the expansion parameter $a(t)$. Therefore the ratio of baryon number density to visible matter entropy density remains constant throughout the evolution of universe. We have
+An important assumption allowing us to explore the early Universe evolution is that following on the era of matter genesis both baryon and entropy content is conserved in the comoving volume. Both baryon and entropy density scale with the third power of the expansion parameter $a(t)$. Therefore the ratio of baryon number density to visible matter entropy density remains constant throughout the evolution of universe. We have \index{baryon per entropy ratio}
 \begin{align}
 \frac{n_B-n_{\overline{B}}}{\sigma}= \left.\frac{n_B-n_{\overline{B}}}{ \sigma}\right|_{t_0}=\mathrm{Const.}\;
 \end{align}
@@ -198,7 +201,7 @@ Neutrino mass eigenvalues can be ordered in the normal mass hierarchy ($m_1\ll m
 
 \subsubsection{Nonequilibrium: departure from detailed balance}
 Thermal equilibrium implies both chemical equilibrium (particles abundances are balanced) and kinetic equilibrium (energy is evenly distributed). In chemical equilibrium, the rates of the forward and reverse reactions are equal, resulting in a balance between production and annihilation/decay rates, which is called detailed balance. The chemical non-equilibrium can be achieved by breaking this detailed balance and leading to change in particle abundance over time. On the other hand, kinetic equilibrium is usually established much quicker and has less impact on the actual particle abundances.
-The chemical nonequilibrium condition is more important than the kinetic equilibrium because it relates to the arrow of time for the particle reactions. 
+The chemical nonequilibrium condition is more important than the kinetic equilibrium because it relates to the arrow of time for the particle reactions. \index{chemical nonequilibrium}
 
 The chemical nonequilibrium conditions in the early Universe are of general interest: they are understood to be prerequisite for the arrow of time dependent processes to take hold in the Hubble expanding Universe. The arrow of time plays an important role in the evolution of the early Universe, for example:
  1.) The Big Bang Nucleosynthesis (BBN)~\cite{Pitrou:2018cgg,Kolb:1990vq,Dodelson:2003ft,Mukhanov:2005sc}  the synthesis of light elements of  e.g. D, $^3$He, $^4$He, and $^7$Li are produced at temperatures around $86\,\mathrm{keV}>T_{BBN}>50\,\mathrm{keV}$. 
