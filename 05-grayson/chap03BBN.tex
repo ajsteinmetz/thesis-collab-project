@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Electron-positron plasma in BBN: damped-dynamic screening}\label{chap:bbn}
+\subsection{Electron-positron plasma in BBN: damped-dynamic screening}\label{chap:bbn}
 
 In this Chapter, we discuss the application of the non-relativistic limit of the polarization tensor in Chapter \ref{chap:PlasmaSF} to the electron-positron plasma which existed during Big Bang nucleosynthesis (BBN) as found in \cite{Grayson:2023flr}. The BBN Epoch occurred within the first 20 min after the Big Bang when the Universe was hot and dense enough for nuclear reactions to produce light elements up to lithium \cite{Pitrou:2018cgg}. BBN reactions typically take place within the temperature interval $86\, \mathrm{keV}>\mathrm{T_{BBN}}>50\, \mathrm{keV}$~\cite{Pitrou:2018cgg}. We refer to these elements produced in BBN as primordial light elements to distinguish them from those made later in the Universe's history. Primordial light element abundances are the most accessible probes of the early Universe before recombination. Though the current BBN model successfully predicts D, $^3$He, $^4$He abundances, well-documented discrepancies, such as $^7$Li, remain. Efforts to resolve the theoretical BBN model with present-day observations are discussed in detail in \cite{Pitrou:2021vqr,Bertulani:2022qly}.
 
@@ -53,7 +53,7 @@ The influence of screening on nuclear reactions is a well-established field of s
 
 
 
-\subsection{Early Universe plasma: non-relativistic polarization tensor}\label{sec:kinetic_theory}
+\subsubsection{Early Universe plasma: non-relativistic polarization tensor}\label{sec:kinetic_theory}
 The properties of the BBN plasma are described by the relativistic Vlasov-Boltzmann transport equations \req{eq:VBEf}. Since photons do not couple directly to the electromagnetic field, they do not contribute to the polarization tensor at first order in $\delta f$ as indicated in Eq.\,(\ref{eq:VBEg}). We neglect photon influence on the electron-positron distribution through the scattering term since the rate of inverse Compton scattering $R_{e^{\pm}\gamma }$ shown in green in \reff{RelaxationRate_fig} is much smaller, in the BBN temperature range, than the total rate $\kappa$ shown as a black line. Each fermion Boltzmann equation \req{eq:VBEf} can be solved independently. Since the equations for electrons and positrons are equivalent, except for the charge sign, only one needs to be solved to understand the dynamics.
 
 %We do not consider the influence of light nuclei on the polarization tensor since their density during the BBN epoch is much smaller than that of electrons and positrons \reff{BBN_Electron}. One can see in \reff{MeanFreePath_fig} that the separation of baryons $n_B^{-1/3}$ in black is much larger than the size of the polarizing Debye sphere, so baryons do not participate significantly in screening.
@@ -118,7 +118,7 @@ The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in th
 \end{equation}
 This formula describes the characteristic length scale of screening in the plasma.
 
-\subsection{Longitudinal dispersion relation}
+\subsubsection{Longitudinal dispersion relation}
 As discussed in Chapter \ref{chap:PlasmaSF} the poles in the propagator or roots of the dispersion equation represent the plasma's propagating modes, often called `quasi-particles' or `plasmons.' In the non-relativistic limit, one can solve the longitudinal part of the dispersion equation \req{eq:disp}, which is relevant for finding charge oscillation modes in the plasma
 \begin{equation}
     1+ \frac{\Pi_\parallel( k)}{(p\cdot u)^2}= 1+ \frac{\Pi_\parallel(\omega, \boldsymbol{k})}{\omega^2}=\varepsilon_\parallel(\omega,\boldsymbol{k}) =0 \,,
@@ -158,7 +158,7 @@ Since the longitudinal dispersion relation is analytically solvable the full non
 
 
 
-\section{Effective internuclear potential}\label{sec:potential}
+\subsection{Effective internuclear potential}\label{sec:potential}
 We calculate the potential of light nuclei in the early Universe electron-positron plasma by Fourier transforming the screened scalar potential $\phi$ of a single traveling nuclei \req{eq:phi}
 \begin{equation}\label{eq:potent}
  \phi(t,\boldsymbol{x}) = \int \frac{d^4k}{(2\pi)^4} e^{-i\omega t+ i\boldsymbol{k}\cdot\boldsymbol{x}} \frac{\widetilde{\rho}_\text{ext}(\omega,\boldsymbol{k})}{\varepsilon_\parallel(\omega,\boldsymbol{k})(\boldsymbol{k}^2-\omega^2) }\,,
@@ -178,7 +178,7 @@ where $R$ is the Gaussian radius parameter.
 In non-relativistic approximation the Lorentz factor $\gamma \approx 1$ and we use the convention $\varepsilon_\parallel(-\boldsymbol{\beta_{\text{N}}} \cdot \boldsymbol{k},\boldsymbol{k})$ used in~\cite{Montgomery:1970jpp,Stenflo:1973,Shukla:2002ppcf,Shukla:1996ccc} which gives the correct causality for the potential. This ensures that, without damping, the wakefield occurs behind the moving nucleus.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Damped-dynamic screening}\label{sec:DDS}
+\subsubsection{Damped-dynamic screening}\label{sec:DDS}
 This section presents the effective nuclear potential for a light nucleus moving in the plasma at a constant velocity. This is done by Fourier transforming \req{eq:potentk}. The velocity of the nucleus is assumed to be the most probable velocity given by a Boltzmann distribution
 \begin{equation}\label{eq:vel}
  \beta_{\text{N}} = \sqrt{\frac{2T}{m_N}}\,. 
@@ -253,7 +253,7 @@ Figure \ref{fig:dynamiclinear} demonstrates that the damped-dynamic response in 
 
 Dynamic screening in both the damped and undamped cases predicts less screening behind and more in front of the moving nucleus than static screening. This is shown in the two-dimensional plot \reff{fig:numericalComp}, of the total potential in plasma at $T=76\,$keV This effect was previously observed for subsonic screening in electron-ion-dust plasmas ~\cite{Stenflo:1973,Shukla:2002ppcf,Lampe:2000pop}. As a result, a negative polarization charge builds up in front of the nucleus. The small negative potential in front alters the potential energy between light nuclei, possibly changing the equilibrium distribution of light elements in the early universe plasma. This effect is much larger in the undamped case and is known in some cases to lead to the formation of dust crystals~\cite{Shukla:1996ccc}. 
 
-\section{Reaction rate enhancement}
+\subsection{Reaction rate enhancement}
 We use the same argument as \cite{Salpeter:1954nc} to find the enhancement factor due to damped-dynamic screening. The enhancement of a nuclear reaction process by screening is related to the WKB probability of tunneling through the Coulomb barrier
 \begin{equation} \label{eq:penprob}
     P(E) = \exp{\left( - \frac{2\sqrt{2 \mu_r}}{\hbar c}\int_{R}^{r_c}dr \sqrt{U(r)-E}\right)}\,,

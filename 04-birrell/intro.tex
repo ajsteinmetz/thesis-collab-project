@@ -1,4 +1,4 @@
-\section{Boltzmann-Einstein Equation}
+\subsection{Boltzmann-Einstein Equation}
 We now begin a detailed study of the non-equilibrium properties of the neutrino freeze-out and it's impact on the effective number of neutrinos, an important cosmological observable. We model the dynamics of the neutrino freeze-out using the Boltzmann-Einstein equation\index{Boltzmann-Einstein equation}, also called the general relativistic Boltzmann equation, which describes the dynamics of a gas of particles that travel on geodesics in an general spacetime, with the only interactions being point collisions~\cite{Andreasson:2011ng,cercignani,Choquet-Bruhat:2009xil,ehlers},
 \begin{equation}\label{boltzmann_einstein}
 p^\alpha\partial_{x^\alpha}f-\sum_{j=1}^3\Gamma^j_{\mu\nu}p^\mu p^\nu\partial_{p^j}f=C[f]\,.
@@ -15,7 +15,7 @@ Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  
 d\pi&=\frac{\sqrt{-g}}{p_0}\frac{g_pd^3{\bf p}}{8\pi^3}\,,
 \end{align}
 where $d\pi$ is the volume element on the future mass shell, $g$ denotes the determinant of the metric tensor, $p_0=g_{0\alpha} p^\alpha$, non-bold $p$ are four-momenta while bold ${\bf p}$ denotes the spacial components, the upper signs are for fermions and the lower signs for bosons. See Appendix \ref{ch:vol_forms} for the derivation of the form of the volume element.
-\subsection{Collision Operator}
+\subsubsection{Collision Operator}
 We now elaborate on the form of the collision operator.  Our presentation is an expanded version of the survey in \cite{ehlers}.  Suppose we have a collection of  distinct particle and antiparticle types $\mathcal{C}$ with distribution functions $f_{C}$, $C\in\mathcal{C}$, and they partake in some number of reactions or interactions $I=n_{B_1} B_1, n_{B_2}B_2...\longrightarrow n_{A_1} A_1,n_{A_2}A_2...$, $A_i\in\mathcal{C}$ distinct and $B_j\in\mathcal{C}$ distinct, where $n_{A_i}$ is the number of particles of type $A_i$ occurring in the interaction (all nonzero) and similarly for $n_{B_i}$.  Given an interaction, $I$, we let $r(I)$ be the collection of particle types that are reactants in the interaction, $p(I)$ be the collection of particle types that are products, and we let $\overleftarrow{I}$ denote the reverse reaction, i.e., with reactants and products reversed.   We let $int$ denote the set of all interactions and, for any given species $A$, $int(A)$ be the set of all interactions involving $A$ as a   product.   We will assume that $\overleftarrow{I}\in int$ whenever $I\in int$.  With these conventions, the collision operator for particle type $A$ takes the form\index{collision operator}
 \begin{align}\label{collision_operator}
 &C[f_A]\\
@@ -46,7 +46,7 @@ where the $r$ and $p$ sub and superscripts stand for reactants and products resp
 
 In the following subsections we derive several important  properties of the equation \eqref{boltzmann_einstein}.  While in principle these properties are well known~\cite{Andreasson:2011ng,cercignani,Choquet-Bruhat:2009xil,ehlers}, here we prove them at a level of generality that, to the authors knowledge, is not available in other references, i.e., for a general collection of interactions as encapsulated in \req{collision_operator}.  We  note that Riemannian normal coordinates will a key tool   in these derivations.   These are coordinates centered at a chosen point, $x$, in spacetime wherein the geodesics through $x$ are straight lines in the coordinate system and the derivatives of the metric in the coordinate system vanish at $x$. In particular, the Christoffel symbols vanish at $x$; see, e.g., page 42 in \cite{Wald:1984rg} or pages 72-73 of \cite{o1983semi}.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Conserved Currents}
+\subsubsection{Conserved Currents}
 Suppose all the interactions of interest conserve some charge $b_A$, i.e.,
  \begin{align}\label{eq:conserved_charge}
 \sum_{A\in p(I)} n_Ab_A=\sum_{A\in r(I)} n_Ab_A
@@ -102,7 +102,7 @@ Combining this with \req{eq:conserved_charge} we find
 \end{align}
 Therefore  $B^\mu$ is a conserved current, as claimed.
 
-\subsection{Divergence Freedom of Stress Energy Tensor}
+\subsubsection{Divergence Freedom of Stress Energy Tensor}
 The Einstein equation implies that the total stress energy tensor of all matter coupled to gravity is divergence free.  Here we show that the relativistic Boltzmann stress energy tensor \req{Tmndef} has this property, and is therefore a natural candidate matter model for  coupling to gravity.  
 
 First use Riemannian normal coordinates to compute
@@ -142,7 +142,7 @@ due to the delta function $\delta(\Delta p)$ in the volume form $dV_I$.  Therefo
 \end{align}
 again because of $\delta(\Delta p)$ in the volume forms.  This shows $\nabla_\mu T^{\mu\nu}=0$, as claimed.
 
-\subsection{Entropy and Boltzmann's H-Theorem}\index{Boltzmann's H-theorem}
+\subsubsection{Entropy and Boltzmann's H-Theorem}\index{Boltzmann's H-theorem}
 Finally, we prove that the entropy four-current satisfies $\nabla_\mu s^\mu\geq 0$, known as Boltzmann's H-theorem. This result requires the additional assumption that the interactions are time-reversal symmetric,  i.e.,
 \begin{equation}\label{time_symmetry}
 W^I(p_{B_j}^l,p_{A_i}^k)=W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)

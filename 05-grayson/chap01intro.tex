@@ -41,7 +41,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Plasma response to electromagnetic fields}
+\subsection{Plasma response to electromagnetic fields}
 \label{chap:PlasmaSF}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,7 +90,7 @@ In this work, we generalize the BGK modification of the linearized collision ter
 The preceding sections will discuss obtaining exact solutions for the covariant polarization tensor in linear response limit via Fourier transform with the BGK collision term \req{eq:collision}. We will present the plasma's electromagnetic properties by using the polarization tensor to derive the electromagnetic fields.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Covariant kinetic theory}\label{sec:CKT}
+\subsection{Covariant kinetic theory}\label{sec:CKT}
 A full microscopic picture of plasma kinematics, useful in numerical simulations, is often more involved than what is required to understand changes in the macroscopic quantities of plasmas. A conventional simplification to the microscopic picture is to average over the discrete states to yield a distribution function $f(x,\boldsymbol{p})$, which describes the probability of finding some number of particles $dN$ in a small range of position $d\mathbf{r}^3$ and momentum $d\boldsymbol{p}^3$ or relativistically~\cite{Hakim:2011bk}
 \begin{equation}
     \int_{\Sigma}d\Sigma_{\mu}\int  d^4p\frac{p^\mu}{m}f(x,p) = N,
@@ -154,7 +154,7 @@ where
 $k,l = 1,2,...,N$ and $W_{ij|kl}$ is the transition rate for the respective collision.
 It is important to note that in this framework for a plasma forced by external fields, the collision term is the only way a particle species can impact the dynamics of the phase space distribution of another species.
 
-\subsection{The BGK collision term}
+\subsubsection{The BGK collision term}
 As discussed previously the integral in \req{eq:collisionMicro} vastly complicates solving the Vlasov-Boltzmann equation. Instead, we will use a simplified collision term that returns the distribution $f(x,p)$ to equilibrium at some characteristic rate $\kappa = 1/\tau$, reducing \req{eq:VBE} from an integro-differential equation to a differential equation. The relaxation rate or damping rate $\kappa$ is the sum of all possible collisions~\cite{Das:2021bkz}
 \begin{equation}
     \kappa_k(p) = \sum^N_{i=1}\sum^N_{j=1}\sum^N_{l=1} \frac{1}{2}\int\frac{d^3p_l}{(2 \pi)^3p_l^0}\frac{d^3p_i}{(2 \pi)^3p_i^0}\frac{d^3p_j}{(2 \pi)^3p_j^0}f_l^{\text{eq}}W_{kl|ij}\,
@@ -182,7 +182,7 @@ The first term should naturally vanish because the collisionless Vlasov equation
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{Linear response: electron-positron plasma}
+\subsection{Linear response: electron-positron plasma}
 The transport properties of electron-positron plasma are governed by three Vlasov-Boltzmann equations \cite{Grayson:2023flr}
 \begin{align}\label{eq:VBEf}
 (p \cdot \partial) f_\pm(x,p) + &q F^{\mu\nu} p_\nu \frac{\partial f_\pm(x,p)}{\partial p^\mu} = C_\pm(x,p)\,,\\
@@ -282,7 +282,7 @@ We can substitute this result back into (\ref{eq:deltaftilde}) to obtain an expl
 The right-hand side contains only known quantities. In the next section, we will use \req{eq:deltafsolution} to calculate the induced current in the plasma. Adding additional conservation laws requires further integrals to solve the Vlasov-Boltzmann equation involving higher moments of the fluctuation $\delta f$ as discussed in \cite{Rocha:2021zcw,Singha:2023eia}.
 
 %=====================================================================
-\subsection{Induced current}
+\subsubsection{Induced current}
 
 The induced charge current is the sum of the antiparticle distribution $\widetilde{f}_-$ and the particle distribution $\widetilde{f}_+$
 \begin{equation}\label{eq:perturbation1}
@@ -343,7 +343,7 @@ Note that we absorbed the factor $4e$ from the current (\ref{eq:perturbation2}) 
 % as expected.
 
 % %======================================================================
-\subsection{Covariant polarization tensor}
+\subsubsection{Covariant polarization tensor}
 
 To find the polarization tensor, we compare our result (\ref{eq:jmu}) to the covariant formulation of Ohm's law~\cite{Starke:2014tfa} which both describe the induced current in the momentum space
 \begin{equation}\label{eq:ohm}
@@ -398,7 +398,7 @@ This polarization tensor is also derived in \cite{Carrington:2003je} and \cite{S
 % \end{equation}
 % where $\widetilde{\chi}(k)$ is a Fourier transform of an arbitrary gauge function. This implies that if we multiply the polarization tensor from the right with $k^\nu$ it should vanish. This property is apparent in the covariant form of $H_\nu(k)$ (\ref{eq:Hnu}) and $R^\mu_\nu(k)$ (\ref{eq:Rmunu}). 
 
-\section{Self-consistent electromagnetic fields in a medium}\label{sec:Maxwell}
+\subsection{Self-consistent electromagnetic fields in a medium}\label{sec:Maxwell}
 To find the electromagnetic field in a plasma, we solve Maxwell's equations self-consistently in an infinite homogeneous and stationary polarizable medium. In this medium, Maxwell's equations take on the usual form \cite{melrose2008quantum}
 \begin{equation}
 \partial^{[\mu}F^{\nu \rho]}(x) =0, \quad \partial_{\mu}F^{\mu \nu}(x) = \mu_0 J^{\nu}(x)\,,
@@ -505,10 +505,10 @@ The first term $n=0$ is the vacuum field, and higher-order terms describe the ba
 Electromagnetic fields in a polarizable medium are often described using the electric displacement field $\mathbf{D}$, the magnetic fields $\mathbf{H}$, the polarization $\mathbf{P}$, and the magnetization $\mathbf{M}$. This formulation is only useful when the field or the medium's response is static or time-dependent. When introducing spatial and temporal dispersion, these definitions are no longer unique \cite{melrose2008quantum}. For instance, if the magnetization depends on space and time $\mathbf{M}(t,x)$ the time dependence of the magnetic field generated will lead to electric fields through Faraday's Law leading to ambiguity since the displacement field no longer depends on just polarization field $\mathbf{P}$.
 
 
-\section{General properties of EM fields in a plasma}
+\subsection{General properties of EM fields in a plasma}
 In the case of an infinite homogeneous plasma, its properties are completely described by two independent polarization functions $\Pi_\parallel(k)$ and $\Pi_\perp(k)$. In the framework presented here, the properties of these scalar functions are imparted on the electromagnetic fields via the poles in the Fourier transform of the propagators in \reqs{eq:phi}{eq:aperp}. After contour integration, one effectively gets a sum of different electromagnetic fields at each pole, the amplitude of which depends on the residue of the pole, and a spacetime dependence, leading to growth attenuation or propagation depending on the pole's location. An example of this process in done in \cite{Grayson:2022asf}, where we Fourier transform the magnetic field in the center of heavy ion collisions. 
 
-\subsection{Dispersion relation}
+\subsubsection{Dispersion relation}
 We can find the poles of the propagator or equivalently the zeros of the dispersion relation by inverting Maxwell's equations
 \begin{equation}
     -ik_{\mu}\widetilde{F}^{\mu \nu} = \mu_0( \widetilde{j}_{\mathrm{ind}}^{\nu}+\widetilde{j}_{\mathrm{ext}}^{\nu})\,.
@@ -556,7 +556,7 @@ Fourier transforming using the positive root in \req{eq:phi} gives the Debye-H\"
     \phi(r) = \frac{Z \alpha \hbar c \, e^{-r/\lambda_D}}{r}\,, \quad \text{with} \quad  \lambda_D = \frac{m_D}{\hbar c}\,.
 \end{equation}
 The Debye length $\lambda_D$ describes the size of the polarization cloud around a charge generated by the plasma.
-\subsection{Other useful descriptions of plasma response}
+\subsubsection{Other useful descriptions of plasma response}
 
 In most fields of applied physics the effects of a polarizable medium on electromagnetic fields are not described by the polarization functions $\Pi_\parallel$ and $\Pi_\perp$. It is instructive to connect these quantities to more commonplace definitions such as relative permittivity $\epsilon$, susceptibility $\chi$, and conductivity $\sigma$.
 
@@ -598,13 +598,13 @@ The Drude model is equivalent to solving the Vlasov-Boltzmann equation using the
 These quantities are discussed in detail and plotted in \cite{Formanek:2021blc}. While these quantities are useful for communicating the physics of plasma response, the limits of these quantities must be taken carefully to retain the causal properties of the field. Specifically, tacitly expanding these quantities in either $\omega$ and $\mathbf{k}$ and then inserting them into the self-consistent potentials \reqs{eq:phi}{eq:aperp} will not necessarily generate causal solutions. Instead of carefully expanding and taking limits of these quantities to ensure analyticity, it's often easier to expand the electromagnetic fields within their Fourier transforms as is done in Appendix B of \cite{Grayson:2022asf}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Advances in linear response: discussion and outlook}
+\subsection{Advances in linear response: discussion and outlook}
 
 The main result of \cite{Formanek:2021blc} is the polarization tensor \req{eq:pimunu} which is an appropriate solution for an infinite polarizable medium with damping due to collisions. Additionally, the analytic form of this tensor in phase space is found in the ultrarelativistic and non-relativistic limits. The addition of current conservation leads to a correction in the longitudinal portion of the polarization tensor compared to the one found using the Anderson-Witting collision term.
 
 Here, we only consider electrons and positrons, neglecting the effects of spin. Our framework would be improved by incorporating spin into our kinetic description of plasmas. This could be done by taking the classical limit of the quantum kinetic transport of the Wigner function as in \cite{Hurst:2014svf}. This would be especially important in quark-gluon plasmas, where we study the magnetic field. Below, we will summarize a few areas of future work advancing the description of plasmas presented here. 
 
-\subsection{Energy conserving collision term}
+\subsubsection{Energy conserving collision term}
 The polarization tensor \req{eq:pimunu} conserves current but not explicitly energy. Energy conservation can be ensured by adding a correction to the collision term similar to \req{eq:collision} but involving the second moment of $\delta f$ which is related to energy-momentum density \cite{Rocha:2021zcw}
 \begin{multline}
     C = - (p\cdot u) \kappa\bigg[\delta f(x,p) -\frac{\delta n(x) }{ \eq{n} } -\eq{\Gamma_1}(x,p)\frac{\int (dq) (q\cdot u)\eq{\Gamma_1}(q) \delta f(x,q) }{\int (dq) (q\cdot u) (\eq{\Gamma_1}(q))^2 \eq{f}(q) }...\\
@@ -626,7 +626,7 @@ The projector operator$\mathcal{P}^{\mu \nu}(u)$ is
     \mathcal{P}^{\mu \nu}(u) = g^{\mu \nu} -u^\mu u^\nu\,.
 \end{equation}
 We show in \cite{Grayson:2022asf} that the energy-momentum violation cancels in the current for a matter-antimatter plasma. Finding the polarization tensor, including energy-momentum conservation, is the subject of future work. The addition of this term in the current is studied in relativistic hydrodynamics in \cite{Singha:2023eia}. Instead of adding these complex correction terms, it may be better to use the Fokker-Planck equation or its simplified counterpart the LBO or Doughtery collision term \cite{Dougherty1964,Francisquez:2022imd,Ong:1970evs}, which manifestly conserves energy-momentum and current, and is better suited to study electromagnetic grazing collisions. 
-\subsection{Applications to other plasmas}
+\subsubsection{Applications to other plasmas}
 The main motivation of this work was to derive a relativistic polarization tensor that could be used to describe quark-gluon plasma and other plasmas where damping is important. In Chapter \ref{chap:QCD} we discuss the application of the ultrarelativistic limit of the polarization tensor to study the electromagnetic properties of QGP. This polarization tensor is easy to generalize to other ultrarelativistic antimatter plasmas. Since the particles are massless, increasing the number of plasma particle species merely leads to an enhancement of the Debye mass \cite{Grayson:2022asf,Kapusta:1992fm}
 \begin{equation}\label{eq:Debyem}
     {m_D}^2_{(\text{EM})} = \sum_{u,d,s} q^2_f T^2 \frac{N_c}{3} \equiv C_{\text{em}}T^2\,,
@@ -635,7 +635,7 @@ where $C_{\text{em}} =  2e^2/3$. We implement the non-relativistic solution to t
 
 If considering a plasma of particles of different masses, such as an electron-proton plasma, one needs only to find a polarization tensor for each particle species and then sum them up in the induced current \req{eq:perturbation1}.
 
-\subsection{Fully relativistic polarization tensor}
+\subsubsection{Fully relativistic polarization tensor}
 One can evaluate the integrals in \req{eq:pimunu} by assuming an appropriate equilibrium distribution to find the polarization tensor. As mentioned above this is done for the ultrarelativistic and the non-relativistic limits in \cite{Formanek:2021blc}. For the full relativistic calculation, relevant for plasma where the temperature is on the order of the mass of the plasma constituents $m\approx T$, one must integrate the relativistic Fermi function. This can be done by writing it in the series representation \cite{Letessier:2002ony}
 \begin{equation}
 \begin{split}
@@ -649,7 +649,7 @@ whose integral results in an infinite sum of Bessel functions of the second kind
 \end{equation}
 The modified Bessel functions of the second kind $K_2(x)$ with the $(-1)^{n+1}$ alternate between exponential growth and decay as $n$ increases. This complicates the calculation of the polarization tensor since the angular integrals and momentum integrals no longer factor out in $R^\mu_\nu$, $Q^\mu$, $H_\nu$, and $Q$. Such a calculation would be necessary to investigate the thermal mass of quarks in QGP.
 
-\subsection{Linear response in strong fields}
+\subsubsection{Linear response in strong fields}
 We are interested to see if we can generalize this framework to strong fields where the Coulomb interaction energy is close to the thermal energy
 \begin{equation}
     \frac{ qA(x)\cdot U}{T}\approx 1\,.
@@ -665,7 +665,7 @@ where in the Boltzmann limit the strong field equilibrium distribution is \cite{
 Of course, this assumes the strong field equilibrium solution is stable under electromagnetic perturbations. As of the writing of this document, it seems that the assumption of linear response is incompatible with strong fields, indicating that the plasma response in the strong fields cannot be described by a polarization tensor, as outlined in this chapter. A resolution to this topic requires further investigation.
 
 
-\subsection{Mixed-species collision term}
+\subsubsection{Mixed-species collision term}
 We also hope to generalize this framework to involve a Vlasov-Boltzmann equation system that represents each plasma species with a different collision term. In matrix form, this system of Boltzmann equations for an electron-positron plasma would look like
 \begin{equation}\label{eq:vectoreq}
 -i (p \cdot k) \left[\begin{matrix}
