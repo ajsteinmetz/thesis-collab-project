@@ -1481,9 +1481,7 @@ EXECUTE {begin.bib}
 EXECUTE {init.state.consts}
 ITERATE {call.type$}
 FUNCTION {end.bib}
-{ newline$
-  "\end{thebibliography}" write$ newline$
-}
+{newline$ "\end{thebibliography}" write$ newline$}
 EXECUTE {end.bib}
 %% End of customized bst file
 %%
