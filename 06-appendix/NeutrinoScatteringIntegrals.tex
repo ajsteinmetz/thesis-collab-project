@@ -277,7 +277,7 @@ $\nu_i+e^+\rightarrow\nu_i+e^+$ & $128G_F^2[g_R^2(p_1\cdot p_2)(p_3\cdot p_4)+\t
 In the following subsections, we will analytically simplify \req{M_simp} for each of these processes.
 
 
-\subsubsection{$\nu\nu\rightarrow\nu\nu$ }
+\paragraph{$\nu\nu\rightarrow\nu\nu$ }
 Using \req{Mandelstam}, the matrix elements for neutrino neutrino scattering can be simplified to
 \begin{align}
 \label{TA002}
@@ -314,7 +314,7 @@ where the tilde quantities are obtained by non-dimensionalizing via scaling by $
 
 
 
-\subsubsection{$\nu\bar\nu\rightarrow \nu\bar\nu$ }
+\paragraph{$\nu\bar\nu\rightarrow \nu\bar\nu$ }
 Using \req{Mandelstam}, the matrix elements for neutrino anti-neutrino scattering can be simplified to
 \begin{align}
 S|\mathcal{M}|^2=C\left(\frac{s+t}{2}\right)^2\,,
@@ -351,7 +351,7 @@ Therefore
 \end{align}
  If we want to emphasize the role of $C$ then we write $M_{\nu\bar\nu\rightarrow\nu\bar\nu}(C)$. Note that due to the polynomial form of the matrix element integral, the double integral in brackets breaks into a linear combination of products of one dimensional integrals, meaning that the nesting of integrals is again only three deep in  practice.
 
-\subsubsection{$\nu\bar{\nu}\rightarrow e^+e^-$}\label{nu_nubar_int}
+\paragraph{$\nu\bar{\nu}\rightarrow e^+e^-$}\label{nu_nubar_int}
 Using \req{Mandelstam}, the matrix elements for neutrino anti-neutrino annihilation into $e^\pm$ can be simplified to
 \begin{align}
 S|\mathcal{M}|^2=A\left(\frac{s+t-m_e^2}{2}\right)^2+B\left(\frac{m_e^2-t}{2}\right)^2+Cm_e^2\frac{s}{2}\,,
@@ -401,7 +401,7 @@ and hence
 where $\tilde{m_e}=m_e/T$.  If we want to emphasize the role of $A,B,C$ then we write $M_{\nu\bar\nu\rightarrow e^+e^-}(A,B,C)$.  Note that this expression is linear in $(A,B,C)\in\mathbb{R}^3$. Also note that, under our assumptions that the distributions of $e^+$ and $e^-$ are the same,  the $G_{ij}$ terms that contain the product of $e^\pm$ distributions are even functions. Hence the term involving the integral of $yz$ vanishes by antisymmetry.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{ $\nu e^\pm\rightarrow \nu e^\pm$}
+\paragraph{ $\nu e^\pm\rightarrow \nu e^\pm$}
  Using \req{Mandelstam}, the matrix elements for neutrino $e^\pm$ scattering can be simplified to
 \begin{align}
 S|\mathcal{M}|^2=A\left(\frac{s-m_e^2}{2}\right)^2+B\left(\frac{s+t-m_e^2}{2}\right)^2+Cm_e^2\frac{t}{2}
@@ -458,7 +458,7 @@ As above, after scaling all masses by $T$, we obtain a prefactor of $T^8$. If we
 
 
 
-\subsubsection{Total Collision Integral}
+\paragraph{Total Collision Integral}
 We now give the total collision integrals for neutrinos.    In the following, we indicate which distributions are used in each of the four types of scattering integrals discussed above by using the appropriate subscripts. For example, to compute $M_{\nu_e\bar\nu_\mu\rightarrow\nu_e\bar\nu_\mu}$  we set $G_{1,2}=\hat\psi_jf^1f^2$, $G_{3,4}=f_3f_4$, $f_1= f_{\nu_e}$, $f_3=f_{\nu_e}$, and $f_2=f_4=f_{\bar\nu_\mu}$ in the expression for $M_{\nu\bar\nu\rightarrow\nu\bar\nu}$ from Section \ref{nu_nubar_int} and then, to include the reverse direction of the process, we must {\emph subtract}  the analogous expression whose only difference is $G_{1,2}=\hat\psi_jf_1f_2$, $G_{3,4}=f^3f^4$.
 With this notation the collision integral for $\nu_e$ is
 \begin{align}\label{M_tot}
@@ -490,7 +490,7 @@ R_k=&2\pi^2T^{-3} M_{k,\nu_\mu}\,.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{ Neutrino Freeze-out Test}
+\paragraph{ Neutrino Freeze-out Test}
 Now that we have the above expressions for the neutrino scattering integrals, we can compare the chemical equilibrium and non-equilibrium methods on the problem of neutrino freeze-out using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann-Einstein equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor, \req{divTmn}, implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from Section \ref{app:QED_corr}.
 
 
