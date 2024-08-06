@@ -131,6 +131,89 @@ The primary insight of this work is that aside of protons, neutrons and other no
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Electron-positron plasma and BBN}
+\label{sec:density}
+
+We derive the electron-positron density and chemical potential to show that during the normal BBN temperature range $86.7\,\mathrm{keV}>\mathrm{T_{BBN}}>50\,\mathrm{keV}$~\cite{Pitrou:2018cgg} the Universe was filled with a dense electron-positron pair-plasma dotted with dispersed baryonic matter dust.  Before BBN, for temperatures $T>86.7\,$keV were high enough that any nuclei formed to be disassociated by the vast number of high energy photons present \cite{Pitrou:2018cgg}. 
+
+Once the temperature cooled to around $T<50\,$keV most of the nuclear reactions forming nuclei had already occurred. In this study, we can neglect the universe's expansion since, at this period, the time scale of expansion $H^{-1}$ is orders of magnitude larger than the time scale of BBN. We also note that at this point neutrinos have become free streaming \cite{Birrell:2012gg}.
+
+In Ref.\,\cite{Grayson:2022asf} we used the present-day baryon-to-photon ratio: $B/N_\gamma =n_B/n_\gamma= 6.05\times10^{-10}$ from Cosmic Microwave Background (CMB)~\cite{ParticleDataGroup:2022pth} and the charge neutrality of the universe to find the electron-positron chemical potential and density during BBN.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}  
+%\includegraphics[width=0.95\linewidth]{Chemical_Plasma}
+%\includegraphics[width=0.95\linewidth]{Density_Plasma002}
+\centerline{\includegraphics[width=0.90\linewidth]{plots/chap03BBN/May152023_EPDensity_Chemical}}
+\caption{\cccite{Grayson:2023flr}, adapted from Ref.~\cite{Grayson:2023flr} and thesis of C.T.\,Yang~\cite{Yang:2024ret}. Left axis: The chemical potential of electrons as a function of temperature. Right axis: the ratio of electron (positron) number density to baryon density as a function of temperature. The solid blue line is the electron density, the red dashed line is the positron density, and the green dotted line is the number density with $\mu_e=0$. When $T=20.3\,\mathrm{keV}$ (the purple vertical line) positron density decreases rapidly because of the annihilation. The vertical black dotted lines represent BBN temperature range $86\,\mathrm{keV}>\mathrm{T_{BBN}}>50\,\mathrm{keV}$}
+\label{BBN_Electron} 
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \rf{BBN_Electron} (left axis), we plot the electron chemical potential as a function of temperature. We can see the value of chemical potential is comparatively small $\mu_e/T\approx10^{-6}\sim10^{-7}$ during the BBN temperature range, implying an equal number of electrons and positrons in plasma. Thus, for the proceeding calculations, we will set $\mu =0$. When the temperature is around $T=70\,\mathrm{keV}$, the density of electrons and positrons is comparatively large $n_{e^\pm}\approx10^7\,n_B$. This indicates that we can assume the universe is filled mainly with electrons and positrons with light nuclei being a very small component of the plasma. Later when the temperature is around $T=20.3\,\mathrm{keV}$, the positron density decreases, transforming the pair-plasma to an electron-baryon plasma.
+
+
+We next obtain the dependence of electron chemical potential, and hence $e^+e^-$ density, as a function of the photon background temperature $T$ by employing the following physical principles:
+\begin{enumerate}
+\item Charge neutrality of the Universe:
+\begin{align}\label{neutrality}
+n_{e^-}-n_{{e^+}}=n_p-n_{\overline{p}}\approx\,n_p,
+\end{align}
+where $n_\ell$ denotes the number density of particle type $\ell$.
+\item Neutrinos decouple (freeze out) at a temperature $T_f\simeq 2$ MeV, after which they free stream through the Universe with an effective temperature~\cite{Birrell:2012gg}
+\begin{align}
+ T_\nu(t)=T_f\,\frac{a(t_f)}{a(t)},
+\end{align}
+where $a(t)$ is the--Friedmann--Lema\^{i}tre--Robertson--Walker (FLRW) Universe scale factor which is a function of cosmic time $t$, and $t_f$ represents the cosmic time when neutrino freezes out.
+\item Total comoving entropy is conserved. At $T\leq T_f$, the dominant contributors to entropy are photons, $e^+e^-$, and neutrinos. In addition, after neutrino freeze out, neutrino comoving entropy is independently conserved~\cite{Birrell:2012gg}. This implies that the combined comoving entropy in $e^+e^-\gamma$ is also conserved for $T\leq T_f$.
+\end{enumerate}
+
+Motivated by the fact that comoving entropy in $\gamma$, $e^+e^-$ is conserved after neutrino freezeout, we rewrite the charge neutrality condition, Eq.~(\ref{neutrality}), in the form
+\begin{align}\label{charge_neutral_cond2}
+n_{e^-}-n_{{e^+}}=X_p\frac{n_B}{s_{\gamma,e^\pm}} s_{\gamma,e^\pm},\qquad X_p\equiv\frac{n_p}{n_B},
+\end{align}
+where $n_B$ is the number density of baryons, $s_{\gamma,e^\pm}$ is the combined entropy density in photons, electrons, and positrons. During the Universe expansion, the comoving entropy and baryon number are conserved quantities; hence the ratio $n_B/s_{\gamma,e^\pm}$ is conserved. We have
+\begin{align}
+\frac{n_B}{s_{\gamma,e^\pm,}}=\left(\frac{n_B}{s_{\gamma,e^\pm}}\right)_{t_0}\!\!\!\!=\left(\frac{n_B}{s_{\gamma}}\right)_{t_0}\!\!\!\!=\left(\frac{n_B}{n_\gamma}\right)_{t_0}\left(\frac{n_\gamma}{s_{\gamma}}\right)_{t_0},
+\end{align}
+where the subscript $t_0$ denotes the present day value, and the second equality is obtained by observing that the present day $e^+e^-$-entropy density is negligible compared to the photon entropy density. We can evaluate the ratio by giving the present day baryon-to-photon ratio: $B/N_\gamma =n_B/n_\gamma= 0.605\times10^{-9}$ from Cosmic Microwave Background (CMB)~\cite{ParticleDataGroup:2022pth} and the entropy per particle for a massless boson: $(s/n)_{\mathrm{boson}}\approx 3.602$.
+
+The total entropy density of photons, electrons, and positrons can be written as
+\begin{align}\label{entropy_per_baryon}
+s_{\gamma,e^\pm}=\frac{2\pi^2}{45}g_\gamma\,T^3+\frac{\rho_{e^\pm}+P_{e^\pm}}{T}-\frac{\mu_e}{T}(n_{e^-}-n_{{e^+}}),
+ \end{align}
+where $ \rho_{e^\pm}=\rho_{e^-}+\rho_{e^+}$ and $P_{e^\pm}=P_{e^-}+P_{{e^+}}$ are the total energy density and pressure of electrons and positron respectively.
+
+By incorporating Eq.~(\ref{charge_neutral_cond2}) and Eq.~(\ref{entropy_per_baryon}), the charge neutrality condition can be expressed as
+\begin{align}\label{charge_neutral_cond3}
+ &\left[1+X_p\left(\frac{n_B}{n_\gamma}\right)_{t_0}\left(\frac{n_\gamma}{s_{\gamma}}\right)_{t_0}\frac{\mu_e}{T}\right]\frac{n_{e^-}-n_{{e^+}}}{T^3}\notag\\
+ &\qquad\qquad\qquad=X_p\left(\frac{n_B}{n_\gamma}\right)_{t_0}\left(\frac{n_\gamma}{s_{\gamma}}\right)_{t_0} \left(\frac{2\pi^2}{45}g_\gamma+\frac{\rho_{e^\pm}+P_{e^\pm}}{T^4}\right).
+\end{align}
+
+ Using Fermi distribution, the number density of electrons over positrons in the early Universe is given by
+\begin{align}\label{ee_density}
+n_{e^-}-n_{{e^+}}&=\frac{g_e}{2\pi^2}\left[\int_0^\infty\frac{p^2dp}{\exp{\left((E-\mu_e)\right)/T}+1}\right.\left.-\int_0^\infty\frac{p^2dp}{\exp{\left((E+\mu_e)/T\right)}+1}\right]\notag\\
+&=\frac{g_e}{2\pi^2}\,{T^3}\,\tanh(b_e)M_e^3\int_{1}^\infty \!\!\!\!\frac{ \eta \sqrt{\eta^2-1} d\eta}{1+\cosh(M_e\eta)/\cosh(b_e)},
+\end{align}
+where we have introduced the dimensionless variables as follows: 
+\begin{align}\label{Variables}
+\eta=\frac{E}{m_e},\qquad M_e=\frac{m_e}{T},\qquad b_e=\frac{\mu_e}{T}.
+\end{align}
+Substituting Eq.~(\ref{ee_density}) into Eq.~(\ref{charge_neutral_cond3}) and giving the value of $X_p$, then the charge neutrality condition can be solved to determine $\mu_e/T$ as a function of $M_e$ and $T$. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+% %\includegraphics[width=0.95\linewidth]{Chemical_Plasma}
+% %\includegraphics[width=0.95\linewidth]{Density_Plasma002}
+\centerline{\includegraphics[width=0.90\linewidth]{plots/chap03BBN/May152023_EPDensity_Chemical}}
+\caption{Left axis: The chemical potential of electrons as a function of temperature by numerically solving Eq. (\ref{charge_neutral_cond3}) with $n_p/n_B=0.878$ and $n_B/n_\gamma=6.05\times10^{-10}$. Right axis: the ratio of electron (positron) number density to baryon density as a function of temperature. The solid blue line is the electron density, the red dashed line is the positron density, and the green dotted line is the number density with $\mu_e=0$. When $T=20.3\,\mathrm{keV}$ (the purple vertical line) positron density decreases rapidly because of the annihilation. The vertical black dotted lines represent BBN temperature range $86\,\mathrm{keV}>\mathrm{T_{BBN}}>50\,\mathrm{keV}$}
+\label{BBN:Electron}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In Fig.~\ref{BBN:Electron} (left axis), we solve Eq.~(\ref{charge_neutral_cond3}) numerically and plot the electron chemical potential as a function of temperature with the following parameters: proton concentration $X_p=0.878$ from observation~\cite{ParticleDataGroup:2022pth} and $n_B/n_\gamma=6.05\times10^{-10}$ from CMB. We can see the value of chemical potential is comparatively small $\mu_e/T\approx10^{-6}\sim10^{-7}$ during the BBN temperature range, implying an equal number of electrons and positrons in plasma. The ratio of electron (positron) number density to baryon density shows that the Universe was filled with an electron-positron rich plasma during the accepted BBN temperature range. For example, when the temperature is around $T=70\,\mathrm{keV}$, the density of electrons and positrons is comparatively large $n_{e^\pm}\approx10^7\,n_B$. At $90$\,keV, the electron and positron density is near the solar core density, see Fig.~19 in Ref.~\cite{Rafelski:2023emw}. Later when the temperature is around $T=20.3\,\mathrm{keV}$, the positron density decreases, transforming the pair-plasma to an electron-baryon plasma.
+
+
 
 
 
