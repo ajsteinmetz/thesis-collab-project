@@ -43,9 +43,9 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure} 
 \centerline{\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_e_scattering_length_eta_0_23.eps}\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_mu_scattering_length_eta_0_23.eps}}
-\caption{\cccite{Birrell:2014uka}. Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes }\label{fig:scatt_length}
+\caption{Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes.  \cccite{Birrell:2014uka} }\label{fig:scatt_length}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -93,11 +93,9 @@ This shows that the relaxation time during the period between $100\MeV$ and $77.
 \paragraph{Dependence of effective neutrino number on PP-SM parameters}
 %\label{sec:param_char}
 
-Next we identify the key SM parameters that influence the effective number of neutrinos and study the effect that  their variation has on $N_\nu^{\mathrm{eff}}$.
+Only two key PP-SM parameters  influence the effective number of neutrinos, this is the Weinberg angle and the generalized interaction strength $\eta$. We explore in the following how  $N_\nu^{\mathrm{eff}}$ depends on these parameters.
 
-
-\paragraph{Weinberg Angle}
-
+%\paragraph{Weinberg Angle}
 The Weinberg angle\index{Weinberg angle} is one of the key standard model parameters that impacts the neutrino freeze-out process.  More specifically, it is found in the matrix elements of weak force processes, including the reactions $e^+e^-\rightarrow \nu\bar\nu$ and $\nu e^\pm\rightarrow \nu e^\pm$ as found in Tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac}.  It is determined by the $SU(2)\times U(1)$ coupling constants $g$, $g^{'}$  by
 \begin{equation}
 \sin(\theta_W)=\frac{g^{'}}{\sqrt{g^2+(g^{'})^2}}\,.
@@ -115,7 +113,8 @@ It has a measured value in vacuum $\theta_W\approx 30^\circ$, giving $\sin(\thet
 In letting $\sin(\theta_W)$, and hence $g$ and $g^{'}$, vary we must fix the electromagnetic coupling $e$ so as not to impact sensitive cosmological observables such as Big Bang Nucleosynthesis.  Fixing $v$, the smallest $M_W$ can become is when $\sin(\theta_W)=1$, yielding a reduction in $M_W$ by a factor of $2$.  This implies that $M_Z>M_W\gg |p|$ for neutrino momentum $p$ in the energy range of neutrino freeze-out, around $1\MeV$, even as we vary $\sin(\theta_W)$.  This approximation is inherent in the formulas for the matrix elements  in Tables  \ref{table:nu_e_reac} and \ref{table:nu_mu_reac} and continues to be valid here. We will characterize the dependence of $N_\nu^{\mathrm{eff}}$ on $\sin(\theta_W)$ in following, but first we identify the remaining parameter dependence in the Boltzmann-Einstein system
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Interaction Strength} Beyond the Weinberg angle, the remaining  dependence of the Boltzmann-Einstein system on dimensioned quantities during  neutrino freeze-out  can be combined in an overall interaction strength factor.   To show this, we now convert the system  to dimensionless form. Letting $m_e$ be the mass scale and $M_p/m_e^2$ be the time scale the Einstein equations take the form
+%\paragraph{Interaction Strength} 
+Beyond the Weinberg angle, the remaining dependence of the Boltzmann-Einstein system on dimensioned quantities during  neutrino freeze-out  can be combined in an overall interaction strength factor.   To show this, we now convert the system  to dimensionless form. Letting $m_e$ be the mass scale and $M_p/m_e^2$ be the time scale the Einstein equations take the form
 \begin{equation}
 H^2=\frac{\rho}{3}\,,\hspace{2mm}\dot\rho=-3H(\rho+P)\,.
 \end{equation}
@@ -130,9 +129,9 @@ Aside from the $\theta_W$ dependence of the matrix elements seen in Tables \ref{
 \eta_0\equiv \left.M_p m_e^3 G_F^2\right|_0  \approx 0.04421\, .
 \end{equation}
 
-
-
-\paragraph{QED Corrections to Equation of State}\label{app:QED_corr} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Impact of QED Corrections to Equation of State}
+%\label{app:QED_corr} 
 At the time of neutrino freeze-out, the universe is at sufficiently high temperature for photons and $e^\pm$ to be in chemical and kinetic equilibrium.  The temperature is also sufficiently high for QED corrections to the photon and $e^\pm$ equation of state to be non-negligible.  Therefore, in our study here we use the results given in \cite{Heckler:1994tv,Mangano:2001iu} to include these in our computation by modifying the combined photon, $e^\pm$ equation of state
 \begin{align}
 P=P^0+P^{int},\hspace{2mm} \rho=-P+T\frac{dP}{dT}\,,
@@ -144,34 +143,38 @@ P^{int}=&-\frac{1}{2\pi^2}\int_0^\infty\left[\frac{k^2}{E_k}\frac{\delta m_e^2}{
 \end{align}
 and $P^0$ is the pressure of a non-interacting gas of photons and $e^\pm$ in chemical equilibrium.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Dependence of Freeze-out Temperatures and effective neutrino number on SM parameters:}
 We now present the  dependence of the effective number of neutrinos, $N_\nu^{\mathrm{eff}}$, on  the SM parameters   $\sin^2(\theta_W)$ and $\eta$, as computed using the Boltzmann-Einstein equation method developed in Appendices \ref{ch:vol_forms}, \ref{ch:boltz_orthopoly}, and \ref{ch:coll_simp}. These results are shown in  Figure \ref{N_nu_params}, presented as a function of  Weinberg angle $\sin^2(\theta_W) $ for $\eta/\eta_0=1,2,5,10$. The effects of an increase in both parameters above the vacuum values generate a significant increase in  $N_\nu^{\mathrm{eff}}\to 3.5$.  The dependence of freeze-out temperatures on $\eta$ is shown in Figure \ref{fig:freezeoutT_eta} and the dependence on Weinberg angle is shown in Figure \ref{fig:freezeoutT_B}. The present day vacuum value of Weinberg angle puts the $\nu_\mu,\nu_\tau$ freeze-out temperature, seen in the right pane of Figure \ref{fig:freezeoutT_B},  near its maximum value.  This is why a comparatively large change in $\sin^2(\theta_W)$ is needed to produce a change in $N_\nu^{\mathrm{eff}}$ for $\sin^2(\theta_W)\approx0.23$.  
  
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[b]
-\centerline{\includegraphics[width=0.70\columnwidth]{04-birrell/ParametricStudies/Figures/N_eff2.eps}
-}
-\caption{Adapted from \cite{Birrell:2014uka}: Change in effective number of neutrinos  $N_\nu^{\mathrm{eff}}$ as a function of Weinberg angle for  several values of $\eta/\eta_0=1,2,5,10$. Vertical line is $\sin^2(\theta_W)=0.23$.}
+\begin{figure}
+\centerline{\includegraphics[width=0.90\columnwidth]{04-birrell/ParametricStudies/Figures/N_eff2.eps}}
+\caption{Change in effective number of neutrinos  $N_\nu^{\mathrm{eff}}$ as a function of Weinberg angle for  several values of $\eta/\eta_0=1,2,5,10$. Vertical line is $\sin^2(\theta_W)=0.23$. Adapted from \cite{Birrell:2014uka}}
 \label{N_nu_params}  
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%
+
 We performed a least squares fit of $N_\nu^{\mathrm{eff}}$ over the range $0\leq \sin^2(\theta_W)\leq 1$, $1\leq \eta/\eta_0\leq 10$ shown in figure \ref{N_nu_params}, obtaining a result with relative error less than $0.2\%$,
 \begin{align}
 N_\nu^{\mathrm{eff}}=&3.003-0.095\sin^2(\theta_W) +0.222\sin^4(\theta_W ) -0.164\sin^6(\theta_W )\notag\\
 +&\sqrt{\frac{\eta}{\eta_0}}\left(0.043+0.011\sin^2(\theta_W) +0.103\sin^4(\theta_W)\right)\,.
 \end{align}
 $N_\nu^{\mathrm{eff}}$ is monotonically increasing in $\eta/\eta_0$ with dominant behavior  scaling as $\sqrt{ \eta/\eta_0}$. Monotonicity is to be expected, as increasing $\eta$ decreases the freeze-out temperature and the longer neutrinos are able to remain coupled to $e^\pm$, the more energy and entropy from annihilation is transferred to neutrinos.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
 \centerline{\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_e_freezeout.eps}\hspace{5mm}\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_mu_freezeout.eps}}
-\caption{\cccite{Birrell:2014uka}.  Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of Weinberg angle. Vertical line is $\sin^2(\theta_W)=0.23$.}\label{fig:freezeoutT_B}
+\caption{Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of Weinberg angle. Vertical line is $\sin^2(\theta_W)=0.23$. \cccite{Birrell:2014uka}}
+\label{fig:freezeoutT_B}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
 \centerline{\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_e_freezeout_GF.eps}\hspace{5mm}\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_mu_freezeout_GF.eps}}
-\caption{\cccite{Birrell:2014uka}. Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of interaction strength.}\label{fig:freezeoutT_eta}
+\caption{Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of interaction strength. \cccite{Birrell:2014uka}}
+\label{fig:freezeoutT_eta}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -191,13 +194,14 @@ y\equiv  \sqrt{\frac{\eta}{\eta_0}}\,.
 \end{equation}%{align}
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}%[ht]
-\centerline{\includegraphics[width=\columnwidth]{04-birrell/ParametricStudies/Figures/region_plot_legend.eps}
+\begin{figure}
+\centerline{\includegraphics[width=0.9\columnwidth]{04-birrell/ParametricStudies/Figures/region_plot_legend.eps}
 }
-\caption{Adapted from \cite{Birrell:2014uka}: $N_\nu^{\mathrm{eff}}$ bounds in the $\eta/\eta_0, \sin^2(\theta_W)$ plane. Blue for $N_\nu^{\mathrm{eff}}\in (3.03,3.57)$ corresponding to Ref.~\cite{Planck:2013pxb} CMB+BAO analysis and green extends the region to $N_\nu^{\mathrm{eff}}<3.87$ i.e. to CMB+$H_0$. Dot-dashed line delimits the 1 standard-deviation lower boundary of the second analysis.}
+\caption{$N_\nu^{\mathrm{eff}}$ bounds in the $\eta/\eta_0, \sin^2(\theta_W)$ plane. Blue for $N_\nu^{\mathrm{eff}}\in (3.03,3.57)$ corresponding to Ref.~\cite{Planck:2013pxb} CMB+BAO analysis and green extends the region to $N_\nu^{\mathrm{eff}}<3.87$ i.e. to CMB+$H_0$. Dot-dashed line delimits the 1 standard-deviation lower boundary of the second analysis. Adapted from \cite{Birrell:2014uka}}
 \label{N_nu_domain}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%
+
 The bounds on $N_\nu^{\mathrm{eff}}$ from the Planck analysis \cite{Planck:2013pxb} can be  used to constrain time or temperature variation of $\sin^2(\theta_W)$ and $\eta$.  
 In  Figure \ref{N_nu_domain} the blue region shows the combined range of  variation of natural constants  compatible with CMB+BAO and the green region shows  the extension in the range of  variation of  natural constants for CMB+$H_0$, both at a $68\%$ confidence level. The dot-dashed line within the blue region delimits   this latter domain. The dotted line shows the limit of a 5\% change in $N_\nu^{\mathrm{eff}}$.    Any increase in  $\eta/\eta_0$ and/or $\sin^2(\theta_W)$ moves the value of $N_\nu^{\mathrm{eff}}$ into the domain favored by current experimental results.
 
