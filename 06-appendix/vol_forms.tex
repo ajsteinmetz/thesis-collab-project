@@ -1,5 +1,5 @@
-\section{Geometry Background: Volume Forms on Submanifolds}\label{ch:vol_forms}
-In this appendix we develop the geometric machinery which will be used to derive computationally efficient formulas for the scattering integrals. This facilitates the study  of the neutrino freeze-out using the Boltzmann-Einstein equation in Section \ref{ch:param_studies}.  This appendix is much more mathematical than the main text and, when standard, we use geometrical language and notation here without further explanation;  see, e.g., \cite{lee2003introduction,lee1997riemannian,o1983semi}.  We found this formalism to be useful for our development of an improved method for computing scattering integrals, as presented in Appendix \ref{ch:coll_simp}.  However, if one is content with simply using the results then this appendix is non-essential. See also   \cite{Birrell:2014uka}.
+\section{Geometry Background: Volume Forms on Submanifolds}\label{ch:vol:forms}
+In this appendix we develop the geometric machinery which will be used to derive computationally efficient formulas for the scattering integrals. This facilitates the study  of the neutrino freeze-out using the Boltzmann-Einstein equation in Section \ref{ch:param:studies}.  This appendix is much more mathematical than the main text and, when standard, we use geometrical language and notation here without further explanation;  see, e.g., \cite{lee2003introduction,lee1997riemannian,o1983semi}.  We found this formalism to be useful for our development of an improved method for computing scattering integrals, as presented in Appendix \ref{ch:coll:simp}.  However, if one is content with simply using the results then this appendix is non-essential. See also   \cite{Birrell:2014uka}.
 
 
 
@@ -142,7 +142,7 @@ The set K of $x\in M$ where $F_*$ is surjective is open in M by the rank theorem
 int_N_reg int F^{-1}(z).  Therefore they are equal.  QED
 \end{comment}
 \end{proof}
-\subsection{Comparison to Riemannian Coarea Formula}
+\paragraph{Comparison to Riemannian Coarea Formula}
 We now recall the classical coarea formula for semi-Riemannian metrics, see, e.g., \cite{chavel1995riemannian},  and give its relation to Theorem \ref{vol_form_coarea}.
 \begin{definition}
 Let $F:(M,g)\rightarrow (N,h)$ be a smooth map between semi-Riemannian manifolds.  The {\bf normal Jacobian}\index{normal Jacobian} of $F$ is
@@ -218,7 +218,7 @@ as densities.
 In particular, this shows that even though $NJF$ and $dA_g$ are undefined individually when $g$ is degenerate on $F^{-1}(c)$, one can make sense of their ratio in this situation as the induced volume form $\omega$.
 
 
-\subsection{Delta Function Supported on a Level Set}
+\paragraph{Delta Function Supported on a Level Set}
  The induced measure defined above allows for a coordinate independent definition of a delta function supported on a regular level set.  Such an object is of great use in performing calculations in relativistic phase space.  We give the definition and prove several properties that justify several common formal manipulations that one would like to make with such an object.
 \begin{definition}
 Motivated by the coarea formula, we define the composition of the {\bf Dirac delta function}\index{Dirac delta} supported on $c\in N$ with a smooth map $F:M\rightarrow N$ such that $c$ is a regular value of $F$ by
@@ -322,7 +322,7 @@ As we are integrating with respect to the densities defined by $\omega_{c,y}^1$ 
 
 Before moving on, we give a few more useful identities.
 
-\begin{theorem}\label{delta_associative}
+\begin{theorem}\label{delta:associative}
 Let $(c_1,c_2)$ be a regular value of $F\equiv F_1\times F_2:(M,\Omega^M)\rightarrow (N_1\times N_2,\Omega^{N_1}\wedge\Omega^{N_2})$.  Then $c_2$ is a regular value of $F_2$, $c_1$ is a regular value of $F_1|_{F_2^{-1}(c_2)}$ and we have
 \begin{equation}
 \delta(F)\Omega^M=\delta(F_1)(\delta(F_2)\Omega^M)\,.
@@ -515,12 +515,12 @@ We also point out another convention in common use where $h$ is replaced by $2h$
 \begin{equation}
 \omega=\frac{|g|^{1/2}}{2p_0}dp^1\wedge...\wedge dp^n
 \end{equation}
- is in common use and will be employed in the scattering integral computations in Appendix \ref{ch:coll_simp}.
+ is in common use and will be employed in the scattering integral computations in Appendix \ref{ch:coll:simp}.
 
 \paragraph{Relativistic Phase Space}
 Here we justify several manipulations that are useful for working with relativistic phase space integrals.
 
-\begin{lemma}\label{parallel_lemma}
+\begin{lemma}\label{parallel:lemma}
 Let $V$ be an $n$-dimensional vector space.  The subset of $\prod_1^N V\setminus\{0\}$ consisting of $N$-tuples of parallel vectors is an $n+N-1$ dimensional closed submanifold of $\prod_1^N V\setminus\{0\}$.
 \end{lemma}
 \begin{proof}
@@ -544,7 +544,7 @@ Let $N\geq 4$. Then
 where each $d^4p_i$ is the standard volume form on future directed vectors, $\{p:p^2\geq 0, p^0>0\}$, we give $\mathbb{R}$ its standard volume form, and $\Delta p=a^ip_i$, $a^i=1$, $i=1,...,l$, $a^i=-1$, $i=l,...,N$. 
 \end{lemma}
 \begin{proof}
-Let $F_1(p_i)=(p_1^2,...,p_N^2)$ and $F_2(p_i)=(\Delta p,F_1(p_i))$.  We need to show that $(m_1^2,...,m_N^2)$ is a regular value of $F_1$ and $(0,m_1^2,...,m_k^2)$ is a regular value of $F_2$.  The result then follows from Theorem \ref{delta_associative}.
+Let $F_1(p_i)=(p_1^2,...,p_N^2)$ and $F_2(p_i)=(\Delta p,F_1(p_i))$.  We need to show that $(m_1^2,...,m_N^2)$ is a regular value of $F_1$ and $(0,m_1^2,...,m_k^2)$ is a regular value of $F_2$.  The result then follows from Theorem \ref{delta:associative}.
 
 It holds for $F_1$ since each $p_i\neq 0$. For $F_2$, the differential is
 \begin{equation}
@@ -557,7 +557,7 @@ a^{1}I&a^{2}I&...& a^{N}I \\
 \end{equation}
 where $I$ is the $4$-by-$4$ identity.  The fact that $(F_1)_*$ is onto means that we need only show $(F_2)_*$ maps onto $\mathbb{R}^4\times(0,...,0)$.  
 
-By Lemma \ref{parallel_lemma} we assume there exists $i,j$ such that $p_i,p_j$ are not parallel. We are done if for each standard basis vector $e_k\in\mathbb{R}^4$ there exists $q\in\mathbb{R}^4$ such that
+By Lemma \ref{parallel:lemma} we assume there exists $i,j$ such that $p_i,p_j$ are not parallel. We are done if for each standard basis vector $e_k\in\mathbb{R}^4$ there exists $q\in\mathbb{R}^4$ such that
 \begin{equation}
 p_i\cdot q=\frac{1}{a^j}p_i\cdot e_k,\hspace{2mm} p_j\cdot q=0\,.
 \end{equation}
@@ -567,7 +567,7 @@ If $p_j$ is null then there is a $c$ such that $q=c p_j$ satisfies these conditi
 
 
 
-\subsection{Volume Form in Coordinates}\label{coord_comp}
+\paragraph{Volume Form in Coordinates}\label{coord_comp}
 Here we derive a useful formula for the volume form on the momentum bundle in a simple coordinate system.  We begin in a coordinate system $x^\alpha$ on $U\subset M$ and the induced coordinates $p^\alpha$ on $TM$ where our only assumption is that the $0$'th coordinate direction is future timelike, and so $g_{00}>0$.  For any $v^i\in \mathbb{R}^n$, let $v^0=-g_{0i}v^i/g_{00}$.  $v^\alpha$ is orthogonal to the $0$'th coordinate direction, and therefore spacelike. Hence 
 \begin{equation}
 0\geq g_{\alpha \beta}v^\alpha v^\beta=-(g_{0i}v^i)^2/g_{00}+g_{ij}v^iv^j\,.

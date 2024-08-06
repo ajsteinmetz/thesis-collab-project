@@ -1,7 +1,7 @@
-\section{Boltzmann-Einstein Equation Solver Adapted to Emergent Chemical Non-equilibrium}\label{ch:boltz_orthopoly}
+\section{Boltzmann-Einstein Equation Solver Adapted to Emergent Chemical Non-equilibrium}\label{ch:boltz:orthopoly}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Having completed the geometrical background in Appendix \ref{ch:vol_forms}, we now proceed to develop a numerical method for the Boltzmann-Einstein equation in an FRW universe.  This will allow us to efficiently study  non-equilibrium aspects of neutrino freeze-out. The analysis in Section \ref{ch:model_ind} was based on exact chemical and kinetic equilibrium and sharp freeze-out transitions at $T_{ch}$ and $T_k$, but these are  only approximations.  The  Boltzmann-Einstein equation is a more precise model of the dynamics of the freeze-out process and furthermore, given the collision dynamics it is capable of capturing in a {\em quantitative manner} the non-thermal distortions from equilibrium, for example the emergence of actual distributions and the approximate values  of $T_{ch}$, $T_k$, and $\Upsilon$.  Indeed,  in  such a dynamical description no hypothesis about the presence of kinetic or chemical (non) equilibrium needs to be made, as the distribution close to \req{k_eq} with   $\Upsilon\ne  1$ emerges naturally as the outcome of collision processes, even when the particle system approaches the freeze-out temperature domain  in chemical equilibrium.
+Having completed the geometrical background in Appendix \ref{ch:vol:forms}, we now proceed to develop a numerical method for the Boltzmann-Einstein equation in an FRW universe.  This will allow us to efficiently study  non-equilibrium aspects of neutrino freeze-out. The analysis in Section \ref{sec:model:ind} was based on exact chemical and kinetic equilibrium and sharp freeze-out transitions at $T_{ch}$ and $T_k$, but these are  only approximations.  The  Boltzmann-Einstein equation is a more precise model of the dynamics of the freeze-out process and furthermore, given the collision dynamics it is capable of capturing in a {\em quantitative manner} the non-thermal distortions from equilibrium, for example the emergence of actual distributions and the approximate values  of $T_{ch}$, $T_k$, and $\Upsilon$.  Indeed,  in  such a dynamical description no hypothesis about the presence of kinetic or chemical (non) equilibrium needs to be made, as the distribution close to \req{k_eq} with   $\Upsilon\ne  1$ emerges naturally as the outcome of collision processes, even when the particle system approaches the freeze-out temperature domain  in chemical equilibrium.
 
 Considering the natural way in which chemical non-equilibrium emerges from chemical equilibrium during freeze-out, it is striking that the literature on Boltzmann solvers does not reflect on the accommodation of emergent chemical non-equilibrium into the method of solution. For an all-numerical solver this may not be a necessary step as long as there are no constraints that preclude development of a general non-equilibrium solution. However, when strong chemical non-equilibrium is present either in the intermediate time period or/and at the end of the evolution, a brute force approach can be very costly in computer time. Motivated by this circumstance and past work with physical environments in which chemical non-equilibrium arises,  we introduce here a  spectral method for solving the Boltzmann-Einstein equation that utilizes a dynamical basis of orthogonal polynomials which is adapted to the case of emerging chemical non-equilibrium. We validate our method via a  model problem  that captures the essential physical characteristics of interest and use it to highlight the type of situation where this new method exhibits its advantages.
 
@@ -9,13 +9,13 @@ In the cosmological context, the Boltzmann-Einstein equation has been used to st
 
 The efficacy of the spectral method used in \cite{Esposito:2000hi,Mangano:2001iu} can largely be attributed to the fact that, under the conditions considered there, the true solution is very close to a chemical equilibrium distribution, \req{ch_eq}, where the temperature is controlled by the dilution of the system. However, as we have discussed, the Planck CMB results \cite{Planck:2013pxb} indicate the possibility that neutrinos participated in reheating to a greater degree than previously believed, leading to a more pronounced chemical non-equilibrium and reheating. Efficiently obtaining this emergent chemical non-equilibrium within the realm of kinetic theory motivates the development of a new numerical method that is adapted to this  circumstance.
 
-In Section \ref{boltzmann_basics} we give a basic overview of the Boltzmann-Einstein equation in an FRW Universe.  In section \ref{the_method} we discuss our modified spectral method in detail.  In Section \ref{free_stream_approach} we recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and in Section \ref{kinetic_eq_approach} we introduce our modified basis and characterize precisely the differences in the method  we propose. We compare these two bases in Section \ref{basis_comparison}. In Section \ref{dynamics_sec} we use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In Section \ref{validation} we validate the method using a model problem.  In Section \ref{orthopoly_app} we give further details on the construction of the parameterized family orthogonal polynomials we use to solve the Boltzmann-Einstein equation.  See also \cite{Birrell:2014gea}.
+First we give a basic overview of the Boltzmann-Einstein equation in an FRW Universe.  In Section \ref{the_method} we   recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and then introduce our modified basis and characterize precisely the differences between the method we propose and previous approaches.  In Section \ref{dynamics_sec} we use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In Section \ref{validation} we validate the method using a model problem.  In Section \ref{orthopoly_app} we give further details on the construction of the parameterized family orthogonal polynomials we use to solve the Boltzmann-Einstein equation.  See also \cite{Birrell:2014gea}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Boltzmann-Einstein Equation  in an FRW Universe}\label{boltzmann_basics}
+\paragraph{Boltzmann-Einstein Equation  in an FRW Universe}
 
-Recall the  Boltzmann-Einstein equation in a general spacetime, as introduced in Section \ref{ch:model_ind},
+Recall the  Boltzmann-Einstein equation in a general spacetime, as introduced in Section \ref{sec:Boltzmann_Einstein},
 \begin{equation}
 p^\alpha\partial_{x^\alpha}f-\Gamma^j_{\mu\nu}p^\mu p^\nu\partial_{p^j}f=C[f]\,.
 \end{equation}
@@ -35,7 +35,7 @@ The matrix element for a $2\leftrightarrow2$ reaction is some function of the Ma
 &u=(p_3-p_2)^2=(p_1-p_4)^2\,,\notag\\
 &s+t+u=\sum_i m_i^2\,.\notag
 \end{align}
-We will provide a detailed study of $2$-$2$ scattering kernels for neutrino processes in Appendix \ref{ch:coll_simp}.  In this section, when testing the numerical method presented below, we will use a simplified scattering model to avoid any application specific details.
+We will provide a detailed study of $2$-$2$ scattering kernels for neutrino processes in Appendix \ref{ch:coll:simp}.  In this section, when testing the numerical method presented below, we will use a simplified scattering model to avoid any application specific details.
 
 We now restrict our attention to  systems of fermions under the assumption of homogeneity and isotropy. We assume that the particle are effectively massless,  i.e. the temperature is much greater than the mass scale.  Homogeneity and isotropy imply that the distribution function of each particle species under consideration has the form $f=f(t,p)$ where $p$ is the magnitude of the spacial component of the four momentum.  In a flat FRW universe the Boltzmann-Einstein equation reduces to
 \begin{equation}\label{boltzmann_p}
@@ -43,17 +43,17 @@ We now restrict our attention to  systems of fermions under the assumption of ho
 \end{equation}
 
 The Boltzmann-Einstein equation \req{boltzmann_p} can be simplified by the method of characteristics. Writing $f(p, t)=g(a(t)p,t)$ and reverting back to call the new distribution $g\to f$, the 2nd term in \req{boltzmann_p} cancels out and the evolution in time can be studied directly.  Using the formulas for the moments of $f$ \req{moments}, this transformation implies for the rate of change in the   number density and energy density  
-\begin{align}\label{n_div}
+\begin{align}\label{n:div}
 \frac{1}{a^3}\frac{d}{dt}(a^3n_1)=&\frac{g_p}{(2\pi)^3}\int C[f_1] \frac{d^3p}{E}\,,\\
-\label{rho_div}
+\label{rho:div}
 \frac{1}{a^4}\frac{d}{dt}(a^4\rho_1)=&\frac{g_p}{(2\pi)^3}\int C[f_1] d^3p \,.
 \end{align} 
-For free-streaming particles the vanishing of the collision operator implies conservation of comoving particle number of the particle species. From the associated powers of $a$ in \req{n_div} and \req{rho_div} we see that the energy per free streaming particle as measured by an observer scales as $1/a$, a manifestation or redshift.
+For free-streaming particles the vanishing of the collision operator implies conservation of comoving particle number of the particle species. From the associated powers of $a$ in \req{n:div} and \req{rho:div} we see that the energy per free streaming particle as measured by an observer scales as $1/a$, a manifestation or redshift.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spectral Method}\label{the_method}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Orthogonal polynomials for systems close to kinetic and chemical equilibrium}\label{free_stream_approach}
+\paragraph{Orthogonal polynomials for systems close to kinetic and chemical equilibrium}
 Here we outline the approach for solving \req{a_vars} used in \cite{Esposito:2000hi,Mangano:2001iu} in order to contrast it with our approach as presented in Section \ref{kinetic_eq_approach}.  As just discussed, the Boltzmann-Einstein equation equation  is a first order partial differential equation and can be reduced using a new variable $y=a(t)p$  via the method of characteristics and exactly solved in the collision free ($C[f]=0)$ limit.   This motivates a change of variables from $p$ to $y$ which eliminates the momentum derivative, leaving the simplified equation
 \begin{equation}\label{a_vars}
 \partial_tf=\frac{1}{E} C[f]\,.
@@ -301,7 +301,7 @@ where $M$ is a constant with units of energy and we choose units in which it is 
 \begin{equation}\label{exact_sol}
 f(y,t)=\int_0^t\frac{e^{s-t}}{\Upsilon^{-1}\exp[y/(a(s)T_{eq}(s))]+1}ds+\frac{e^{-t}}{\exp[y/(a(0)T_{eq}(0))]+1}\,.
 \end{equation}
-We now transform to $z=p/T(t)$ where the temperature $T$ of the distribution $f$ is defined as in section \ref{dynamics_sec}.  Therefore, we have the exact solution to
+We now transform to $z=p/T(t)$ where the temperature $T$ of the distribution $f$ is defined as in Section \ref{dynamics_sec}.  Therefore, we have the exact solution to
 \begin{equation}\label{k_eq_toy}
 \partial_tf-z\left(H+\frac{\dot{T}}{T}\right)\partial_zf=\frac{1}{\Upsilon^{-1}e^{zT/T_{eq}}+1}-f(z,t)
 \end{equation}
