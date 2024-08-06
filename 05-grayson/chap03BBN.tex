@@ -1,59 +1,36 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Electron-positron plasma in BBN: damped-dynamic screening}\label{chap:bbn}
+\subsection{Electron-positron plasma in BBN}\label{chap:bbn}
 
-In this Chapter, we discuss the application of the non-relativistic limit of the polarization tensor in Chapter \ref{chap:PlasmaSF} to the electron-positron plasma which existed during Big Bang nucleosynthesis (BBN) as found in \cite{Grayson:2023flr}. The BBN Epoch occurred within the first 20 min after the Big Bang when the Universe was hot and dense enough for nuclear reactions to produce light elements up to lithium \cite{Pitrou:2018cgg}. BBN reactions typically take place within the temperature interval $86\, \mathrm{keV}>\mathrm{T_{BBN}}>50\, \mathrm{keV}$~\cite{Pitrou:2018cgg}. We refer to these elements produced in BBN as primordial light elements to distinguish them from those made later in the Universe's history. Primordial light element abundances are the most accessible probes of the early Universe before recombination. Though the current BBN model successfully predicts D, $^3$He, $^4$He abundances, well-documented discrepancies, such as $^7$Li, remain. Efforts to resolve the theoretical BBN model with present-day observations are discussed in detail in \cite{Pitrou:2021vqr,Bertulani:2022qly}.
 
-Huge electron-positron $e^-e^+$- number densities existed in the early Universe during Big Bang nucleosynthesis (BBN)~\cite{Wang:2010px,Hwang:2021kno,Rafelski:2023emw} are $10^2$ times larger than those present in the sun \cite{Bahcall:2001smc} and $10^4$ times normal atomic densities \cite{Grayson:2023flr}. Charge screening is an essential collective plasma effect that modifies the inter-nuclear potential $\phi(r)$ changing thermonuclear reaction rates during BBN. An electron cloud around an ion's charge effectively diminishes the influence of nuclear charges beyond their immediate vicinity, lowering the Coulomb barrier. In the context of nuclear reactions, a reduced Coulomb barrier leads to a higher likelihood of penetration, boosting thermonuclear reaction rates. Consequently, this process influences the abundance of light elements in the early universe by modifying their formation rates. Since the BBN temperature range is much less than the electron mass, we will use the non-relativistic limit of the polarization tensor derived in Chapter \ref{chap:PlasmaSF}. The screened potential relevant for thermonuclear reactions will be given by the longitudinal polarization function \req{eq:phi}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Electron positron plasma screening in BBN:}\label{sec:Discussion}
 
-The influence of screening on nuclear reactions is a well-established field of study. The concept of plasma screening effects on nuclear reactions was initially introduced in~\cite{Salpeter:1954nc}, who suggested determining the increase in nuclear reaction rates through the use of the static Debye-Hückel potential~\cite{Debye:1923,Salpeter:1969apj,Famiano:2016hhs}. Subsequent research expanded this framework to account for the thermal velocity of nuclei traversing the plasma~\cite{Hwang:2021kno,Carraro:1988apj,Gruzinov:1997as,Opher:1999jh,Yao:2016cjs}, introducing the concept of `dynamic' screening. In our current study, we address the high density of the $e^-e^+\gamma$ plasma by including collisional damping using the current conserving collision term developed in \cite{Formanek:2021blc} shown in \req{eq:collision}. The dense aspect of the BBN plasma has only recently been acknowledged by incorporating collision effects into numerical models \cite{Sasankan:2019oee,Kedia:2020xdc}. We will refer to this model of screening as 'damped-dynamic' screening. In \cite{Grayson:2023flr}, we find an analytic formula for the induced screening potential, which allows for estimating the enhancement of thermonuclear reaction rates.
+In this chapter, we review \cite{Grayson:2023flr}, which applies the non-relativistic longitudinal polarization function to study the dynamics of the electron-positron plasma in the early Universe. In particular, we discussed the damping rate, the electron-positron to baryon density ratio, and their potential implications for Big Bang Nucleosynthesis (BBN) through screening within linear response theory. We derived an approximate analytic formula for the potential of a moving heavy charge in a collisional plasma in \req{eq:pos_point_DDS} describing screening effects previously found only numerically \cite{Hwang:2021kno}. Our analytic formula can be readily used to estimate the effect of screening on thermonuclear reactions using \req{eq:DDSenhance}. The correction to thermonuclear reactions due to damped-dynamic screening is small due to the low velocity of nuclei and a large amount of collisional scattering. This is in line with the findings of \cite{Hwang:2021kno}, who conclude that even though the densities are large, they are not enough to modify the potential at short distances related to screening. The analytic expression we find for the nuclear reaction rate enhancement \req{eq:DDSenhance} in a collisional plasma could be useful in other fusion environments such as stellar fusion and laboratory fusion experiments, such as those discussed in ~\cite{Labaune:2013dla,Margarone:2022mdpi}.
+
+Overall we were very surprised to find that the screening effects in BBN were so small even in the static case, considering that the number densities present during BBN are $\sim 10^4$ times normal matter. If we compare this to screening effects on Earth, we can see that although plasmas occur at lower densities, they also occur in much colder environments. The strength of the screening effect is related to the Debye mass
+\begin{equation}
+m_D^2 \sim \frac{n_\text{eq} }{T}\,,
+\end{equation}
+which is on the order of a few keV during BBN. On earth, $n_\text{eq}$ is decreased by $\sim 10^4$, but T is decreased by $\sim 10^6$. Thus, we would expect to see similar, if not larger, screening effects on Earth. For instance, the Debye screening length in extracellular fluid in the body is 8 \AA ngstrom \cite{Wennerstrom:2020}, only a factor of $\sim 20$ times larger than the Debye length during BBN. We can have these large densities at low temperatures on earth due to gravity's agglomeration of matter in the universe.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{The short-range screening potential}
+In \cite{Grayson:2023flr}, a proposal is made to study the short-range potential relevant to quantum tunneling in thermonuclear reactions. Since the Gamow energy at which nuclei are most likely to tunnel is above the thermal energy, the portion of the screening potential relevant for tunneling does not satisfy the "weak-field" limit where the electromagnetic energy is small compared to the thermal energy
+\begin{equation}
+ \frac{q \phi(x)}{T} \ll 1\,.
+\end{equation}
+When this condition is not satisfied one must consider the full equilibrium distribution when calculating the short-range potential \cite{Hakim:1967prd,DeGroot:1980dk}
+\begin{equation}\label{eq:Boltz}
+ f_B^\pm(x,p) = e^{-(p_0\pm e\phi(x))/T}\,.
+\end{equation}
+The $e\phi$ term in the exponential accounts for the change in energy of a charge in the plasma due to its presence in an external field. For this equilibrium distribution, a linear response is no longer possible since the equilibrium distribution depends on the external electromagnetic field. In equilibrium one can find the static screening potential for strong electromagnetic fields using the nonlinear Poisson-Boltzmann equation,
+\begin{equation}\label{eq:Poisson-Boltz}
+ -\nabla^2 e\phi_{(\text{eq})}(x)/T +m_D^2\sinh\left[e\phi_{(\text{eq})}(x)/T\right] =e\rho_\mathrm{ext}(x)/T\,.
+ \end{equation}
+This equation has a well-known solution for an infinite sheet which we used to argue the importance of strong screening in BBN. 
+In a future publication, we will solve the Poisson-Boltzmann equation with strong screening to calculate the short-range screening potential in BBN. We note that the toy model in \cite{Grayson:2023flr} overestimates strong screening effects for two reasons: an infinite sheet has a constant electric field requiring more polarizing charge density to screen the field, and the Boltzmann distribution in \req{eq:Boltz} does not account for the stacking of electron-positron states when the density of electrons and positrons becomes very large near the nucleus. Both of these effects significantly reduce the effect of strong screening on reaction rates, but at the time of writing, it seems that strong screening will create a larger effect on nuclear reaction rates than damped-dynamic screening. Predicting enhanced screening may be relevant for the anomalous screening observed in the measurements of astrophysical S(E) factors \cite{Zhang:2020nuc}.
  
-% To improve the understanding of the internuclear screened Coulomb potential $\phi$ governing BBN reaction rates, this work expands the prior studies~\cite{Hwang:2021kno, Carraro:1988apj,Opher:1999jh, Yao:2016cjs} carried out in the linear response approximation applicable in the regime where the modification of the Coulomb potential is a small effect. We extend the 'dynamic screening' effort (and in particular that of Hwang et al~\cite{Hwang:2021kno} which introduced dynamic screening during BBN) to study `damped-dynamic' screening as follows:
-% \begin{enumerate}
-% \item 
-% We detail the scattering damping effect of plasma components in the temperature range beginning near $T\simeq m_ec^2=511$\,keV extending down to a temperature near $T_\mathrm{split}\simeq 20.3$\,keV where practically all $e^-e^+$-pairs disappeared.
-% \item 
-% We obtain analytical results for damped-dynamic screening applicable to the BBN epoch temperature range which demonstrates a connection between the BBN plasma and dusty plasma theory. 
-% \item 
-% We recognize and describe the limits of applicability of the linear response method to BBN by considering the full equilibrium distribution necessary in the presence of strong fields. We explore a one-dimensional toy model at distances a fraction of an \AA ngstrom in the quantum tunneling regime where the potential $\phi$ is large compared to the thermal collision energy $|\phi|/3T> 1$,  which predicts enhanced screening at small distances.
-% \end{enumerate}
-
-% Such effort to improve the BBN model through screening is well justified for the following reasons:
-% \begin{enumerate}
-% \item Currently, the most accessible path to observe the early Universe before recombination is through light element abundances. 
-% \item
-% Despite the great initial success of the BBN model regarding the prediction of the abundances of D, $^3$ He, $^4$ He, there remain well-documented discrepancies. Currently, substantial efforts are being directed toward reconciling the theoretical BBN model with present-day observations. For a more detailed discussion, see Refs.\,\cite{Pitrou:2021vqr,Bertulani:2022qly}.
-% \item
-% Enhanced production of light elements during the BBN era could help resolve two problems: a) Elements Beryllium and Boron cannot be produced in stellar burning processes while their high abundance suggests additional mechanisms of production beyond secondary processes after stellar explosions. b) Understanding the age of stars obtained using the abundance of light elements (metallicity) may be improved by adaptation of the BBN network to account for nuclear reactions in ultra-dense QED plasma.
-% \item
-% We note that screening effects are more pronounced for nuclei with greater charge $Z$ leading to stronger modification in predicted abundances, just where the most significant current disagreements exist ({\it e.g.\/} the abundance of $^7$Li). Inclusion of screening effects in our current models of the BBN reaction network could explain this discrepancy without the need to invoke more exotic modifications of the Coulomb internuclear potential. An example of such a modification would be the variation of $\alpha$, the fine-structure constant~\cite{Meissner:2023voo}.
-% \item 
-% Recent James Webb space telescope-Hubble space telescope (JWST-HST) observations implying early onset of galactic structure formation and/or presence of luminous objects as early as 300 million years after BBN~\cite{Haro:2023JWST,Sabti:2023xwo,Ilie:2023DM} could be seen as evidence supporting nuclear dust matter clustering in dense QED plasma.
-% \end{enumerate}
-
-
-% In the standard BBN model, thermonuclear reaction rates are evaluated using nuclear reactions specific to the vacuum state. In a high-precision BBN model, the effect of $e^-e^+$-pair-plasma screening of nuclear charges must be allowed. We describe in Section~\ref{sec:density} the presence of up to several millions of electron-positron ($e^-e^+$) pairs per every charged nucleon. This situation prompts an effort to reconsider BBN in an ultra dense plasma environment allowing for a dense $e^-e^+\gamma$ plasma medium.
-
-% We account for collisions between plasma components using the current-conserving Bhatnagar, Gross, and Krook (BGK) collision term~\cite{Bhatnagar:1954zz}, which allows us to study damping in the dynamic plasma. For an in-depth discussion presented in contemporary covariant notation and preserving current conservation, see Formanek et al.~\cite{Formanek:2021blc}. Our approach is different from Monte-Carlo simulation of two particle collisions~\cite{Sasankan:2019oee,Kedia:2020xdc} as in our case particles participating in scattering also experience simplified static screening which in terms of collision description would require more than two particle collisions. In addition, the simplified BGK collision term we employ allows us to obtain an analytic `damped-dynamic' internuclear potential relevant to the BBN reaction network in the linear response approximation. 
-
-% Several well known processes, including M\o ller, Bhabha, and inverse Compton scattering, characterize the damping in plasma. These textbook results will be adapted to the plasma environment: When studied in vacuum, electrons and positrons interact with each other by exchanging a massless photon. However, when a photon propagates through a plasma of electrons and positrons, its properties are modified by interactions with the medium. When evaluating Moller and Bhabha scattering, we include the temperature-dependent mass of the photon obtained in plasma theory without damping. We find that the total relaxation rate during BBN is much larger than the screening mass, which is the inverse of the Debye screening length $m_D = 1/\lambda_D$. This suggests that electromagnetic perturbations of the plasma will be overdamped.
-
-% Since, as noted above, the computed damping strength is the dominant scale, it is also the main parameter determining the photon mass. However, introducing the damping strength in the photon mass would make the calculation of the damping strength self-referential. The complexity of such a self-consistent evaluation of damping is beyond the scope of this work. This underscores the need to develop a self-consistent approach where both damping and photon properties in plasma are determined in a mutually consistent manner.
-
-% The QED $e^+e^-\gamma$-plasma present during BBN is perturbed by a variety of comparatively very heavy charged protons $p$ and even heavier isotopes and light elements. In calculating the electromagnetic potential $\phi$, we naturally view BBN active participants as heavier, higher charged impurities {\it i.e.\/} \lq\lq charged dust\rq\rq in the QED-plasma. Since theories of such a system have been developed by others working on charged dust grains in planetary and space plasma~\cite{Montgomery:1970jpp, Stenflo:1973, Shukla:2002ppcf, Lampe:2000pop} we can validate our results and adapt previously developed theoretical tools necessary for describing heavy charged impurities within a plasma of lighter particles.
-
-% We provide the first step in merging these two fields by including damping to analyze the electromagnetic potential during BBN, similar to work done by Stenflo in 1973 for dusty plasma~\cite{Stenflo:1973}. We advance this work by applying it to the BBN epoch, allowing for the finite size of the "dust grains," and by finding the short-distance behavior of the potential in the weak field limit. Using a general model of simplified collisional damping in linear response, we calculate the screened electromagnetic potential of light nuclei undergoing thermal motion subject to damping relying on previous work ~\cite{Formanek:2021blc,Grayson:2022asf}.
-
-% Our manuscript is organized as follows: In Section~\ref{sec:density} we derive the electron-positron density and chemical potential to show that during the normal BBN temperature range $86\,\mathrm{keV}>\mathrm{T_{BBN}}>50\,\mathrm{keV}$~\cite{Pitrou:2018cgg} the Universe was filled with a dense electron-positron pair-plasma dotted with dispersed baryonic matter dust. 
-% In Section~\ref{sec:relax}, we calculate the relaxation rate $\kappa= 1/\tau$, where $\tau$ is the mean time between collisions in the plasma. This is done by finding the average of the most relevant reaction rates for $2\leftrightarrow 2$ scattering: M{\o}ller, Bhabha, and inverse Compton scattering. 
-
-% We proceed in Section~\ref{sec:kinetic_theory} to solve the Vlasov-Boltzmann Equation (VBE) in the weak field limit with damping. Our approach considers small plasma perturbations in linear response to find the polarization tensor present during the BBN era. In Section~\ref{sec:potential}, we find an analytic expression for the damped-dynamic potential applicable to BBN and study the limitation of the linear response method. We show that additional strong field phenomena beyond linear response alter the behavior of the screened potential $\phi$. We discuss our results and describe their interdisciplinary importance in Section~\ref{sec:Discussion}. 
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-\subsubsection{Early Universe plasma: non-relativistic polarization tensor}\label{sec:kinetic_theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Early Universe plasma: non-relativistic polarization tensor}\label{sec:kinetic_theory}
 The properties of the BBN plasma are described by the relativistic Vlasov-Boltzmann transport equations \req{eq:VBEf}. Since photons do not couple directly to the electromagnetic field, they do not contribute to the polarization tensor at first order in $\delta f$ as indicated in Eq.\,(\ref{eq:VBEg}). We neglect photon influence on the electron-positron distribution through the scattering term since the rate of inverse Compton scattering $R_{e^{\pm}\gamma }$ shown in green in \reff{RelaxationRate_fig} is much smaller, in the BBN temperature range, than the total rate $\kappa$ shown as a black line. Each fermion Boltzmann equation \req{eq:VBEf} can be solved independently. Since the equations for electrons and positrons are equivalent, except for the charge sign, only one needs to be solved to understand the dynamics.
 
 %We do not consider the influence of light nuclei on the polarization tensor since their density during the BBN epoch is much smaller than that of electrons and positrons \reff{BBN_Electron}. One can see in \reff{MeanFreePath_fig} that the separation of baryons $n_B^{-1/3}$ in black is much larger than the size of the polarizing Debye sphere, so baryons do not participate significantly in screening.
@@ -103,14 +80,13 @@ In these expressions, the plasma frequency $\omega_p$ (defined as $m_L$ in~\cite
  \omega_p^2 = m_D^2\frac{T}{m}\,.
 \end{equation}
 
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[width=0.95\linewidth]{plots/chap03BBN/Distance_Plasma002.jpg}
-\caption{\textit{From \cite{Grayson:2023flr}; figure by C. T. Yang.} The average distance between baryons $n_B^{-1/3}$ and the Debye length $\lambda_D$ ($\mu_e \neq 0$) as a function of temperature (red solid line). During the BBN epoch (vertical dotted lines) $n_B^{-1/3}>\lambda_D$. For temperature below $T<32.76$ keV we have $n_B^{-1/3}<\lambda_D$. For comparison, the Debye length for zero chemical potential $\mu_e=0$ is also plotted as a blue dashed line.}
-\label{MeanFreePath_fig}
-\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} 
+\centerline{\includegraphics[width=0.90\linewidth]{plots/chap03BBN/Distance_Plasma002.jpg}}
+\caption{ The average distance between baryons $n_B^{-1/3}$ and the Debye length $\lambda_D$ ($\mu_e \neq 0$) as a function of temperature (red solid line). During the BBN epoch (vertical dotted lines) $n_B^{-1/3}>\lambda_D$. For temperature below $T<32.76$ keV we have $n_B^{-1/3}<\lambda_D$. For comparison, the Debye length for zero chemical potential $\mu_e=0$ is also plotted as a blue dashed line. Figure by C.T.\,Yang, appeared in~\cite{Grayson:2023flr}}
+\label{MeanFreePath_fig} 
 \end{figure}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in the plasma. Here we need only consider $\Pi_\parallel$ since the vector potential $\boldsymbol{A}(t,\boldsymbol{x})$ of the traveling ion will be small in the non-relativistic limit. This work does not consider the effect of a primordial magnetic field discussed in~\cite{Steinmetz:2023abc}. We note that Debye mass $m_D$ is related to the usual Debye screening length of the field in the plasma as
 \begin{equation}\label{eq:mL}
@@ -118,7 +94,8 @@ The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in th
 \end{equation}
 This formula describes the characteristic length scale of screening in the plasma.
 
-\subsubsection{Longitudinal dispersion relation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Longitudinal dispersion relation}
 As discussed in Chapter \ref{chap:PlasmaSF} the poles in the propagator or roots of the dispersion equation represent the plasma's propagating modes, often called `quasi-particles' or `plasmons.' In the non-relativistic limit, one can solve the longitudinal part of the dispersion equation \req{eq:disp}, which is relevant for finding charge oscillation modes in the plasma
 \begin{equation}
     1+ \frac{\Pi_\parallel( k)}{(p\cdot u)^2}= 1+ \frac{\Pi_\parallel(\omega, \boldsymbol{k})}{\omega^2}=\varepsilon_\parallel(\omega,\boldsymbol{k}) =0 \,,
@@ -156,28 +133,21 @@ Since the longitudinal dispersion relation is analytically solvable the full non
 %    \label{fig:plasma-freq}
 %\end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Damped-dynamic screening} 
+We discuss the application of the non-relativistic limit of the polarization tensor \rsec{chap:PlasmaSF} to the electron-positron plasma which existed during Big Bang nucleosynthesis (BBN)~\cite{Grayson:2023flr}. The BBN Epoch occurred within the first 20 min after the Big Bang when the Universe was hot and dense enough for nuclear reactions to produce light elements up to lithium \cite{Pitrou:2018cgg}. 
 
+The BBN nuclear reactions typically take place within the temperature interval $86\, \mathrm{keV}>\mathrm{T_{BBN}}>50\, \mathrm{keV}$~\cite{Pitrou:2018cgg}. We refer to these elements produced in BBN as primordial light elements to distinguish them from those made later in the Universe's history. Primordial light element abundances are the most accessible probes of the early Universe before recombination. Though the current BBN model successfully predicts D, $^3$He, $^4$He abundances, well-documented discrepancies, such as $^7$Li, remain. Efforts to resolve the theoretical BBN model with present-day observations are discussed in detail in \cite{Pitrou:2021vqr,Bertulani:2022qly}.
 
-\subsection{Effective internuclear potential}\label{sec:potential}
-We calculate the potential of light nuclei in the early Universe electron-positron plasma by Fourier transforming the screened scalar potential $\phi$ of a single traveling nuclei \req{eq:phi}
-\begin{equation}\label{eq:potent}
- \phi(t,\boldsymbol{x}) = \int \frac{d^4k}{(2\pi)^4} e^{-i\omega t+ i\boldsymbol{k}\cdot\boldsymbol{x}} \frac{\widetilde{\rho}_\text{ext}(\omega,\boldsymbol{k})}{\varepsilon_\parallel(\omega,\boldsymbol{k})(\boldsymbol{k}^2-\omega^2) }\,,
-\end{equation}
-where $\widetilde{\rho}_{\text{ext}}(\omega,\boldsymbol{k})$ is the Fourier-transformed charge distribution of nuclei traveling at a constant velocity, and $\varepsilon_\parallel(\omega,\boldsymbol{k})$ is the longitudinal relative permittivity. The relative permittivity can be written in terms of the polarization tensor as
-\begin{equation}\label{eq:epsilon}
- \varepsilon_\parallel(\omega,\boldsymbol{k})= \left(\frac{\Pi_{\parallel}(\omega,\boldsymbol{k})}{ \omega^2}+1\right)\,.
-\end{equation}
+A rather large electron-positron $e^-e^+$- number densities existed in the early Universe during Big Bang nucleosynthesis (BBN)~\cite{Wang:2010px,Hwang:2021kno,Rafelski:2023emw} are $10^2$ times larger than those present in the Sun \cite{Bahcall:2001smc} and $10^4$ times normal atomic densities \cite{Grayson:2023flr}. Charge screening is an essential collective plasma effect that modifies the inter-nuclear potential $\phi(r)$ changing thermonuclear reaction rates during BBN. An electron cloud around an ion's charge effectively diminishes the influence of nuclear charges beyond their immediate vicinity, lowering the Coulomb barrier. 
 
-In the linear response framework \req{eq:ohm}, the electromagnetic field still obeys the principle of superposition so the potential between two nuclei can be inferred simply from the potential of a single nucleus. 
+In the context of nuclear reactions, a reduced Coulomb barrier leads to a higher likelihood of penetration, boosting thermonuclear reaction rates. Consequently, this process influences the abundance of light elements in the early universe by modifying their formation rates. Since the BBN temperature range is much less than the electron mass, we will use the non-relativistic limit of the polarization tensor derived in Chapter \ref{chap:PlasmaSF}. The screened potential relevant for thermonuclear reactions will be given by the longitudinal polarization function \req{eq:phi}.
 
-We can perform the $\omega$ integration in \req{eq:potent} using the delta function in the definition of the external charge distribution, whose effect is to set $\omega = \boldsymbol{\beta_{\text{N}}}\cdot \boldsymbol{k}$ where $\boldsymbol{\beta}_N = \boldsymbol{v}_N/c$ is the nuclei velocity. Then we have
-\begin{equation}\label{eq:potentk}
- \phi(t,\boldsymbol{x}) = Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)} \frac{ e^{-\boldsymbol{k}^2\frac{R^2}{4}}}{\boldsymbol{k}^2\varepsilon_\parallel(-\boldsymbol{\beta_{\text{N}}} \cdot \boldsymbol{k},\boldsymbol{k}) }\,,
-\end{equation}
-where $R$ is the Gaussian radius parameter.
-In non-relativistic approximation the Lorentz factor $\gamma \approx 1$ and we use the convention $\varepsilon_\parallel(-\boldsymbol{\beta_{\text{N}}} \cdot \boldsymbol{k},\boldsymbol{k})$ used in~\cite{Montgomery:1970jpp,Stenflo:1973,Shukla:2002ppcf,Shukla:1996ccc} which gives the correct causality for the potential. This ensures that, without damping, the wakefield occurs behind the moving nucleus.
+The influence of screening on nuclear reactions is a well-established field of study. The concept of plasma screening effects on nuclear reactions was initially introduced in~\cite{Salpeter:1954nc}, who suggested determining the increase in nuclear reaction rates through the use of the static Debye-Hückel potential~\cite{Debye:1923,Salpeter:1969apj,Famiano:2016hhs}. Subsequent research expanded this framework to account for the thermal velocity of nuclei traversing the plasma~\cite{Hwang:2021kno,Carraro:1988apj,Gruzinov:1997as,Opher:1999jh,Yao:2016cjs}, introducing the concept of `dynamic' screening. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In our current study, we address the high density of the $e^-e^+\gamma$ plasma by including collisional damping using the current conserving collision term developed in \cite{Formanek:2021blc} shown in \req{eq:collision}. The dense aspect of the BBN plasma has only recently been acknowledged by incorporating collision effects into numerical models \cite{Sasankan:2019oee,Kedia:2020xdc}. We will refer to this model of screening as 'damped-dynamic' screening. In \cite{Grayson:2023flr}, we find an analytic formula for the induced screening potential, which allows for estimating the enhancement of thermonuclear reaction rates.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Damped-dynamic screening}\label{sec:DDS}
 This section presents the effective nuclear potential for a light nucleus moving in the plasma at a constant velocity. This is done by Fourier transforming \req{eq:potentk}. The velocity of the nucleus is assumed to be the most probable velocity given by a Boltzmann distribution
 \begin{equation}\label{eq:vel}
@@ -229,12 +199,14 @@ and $\phi_{\text{stat}}$ is the standard static screening potential. The details
 % \end{equation}
 % where $\psi$ is the angle between $\boldsymbol{x}-\boldsymbol{\beta}_N t$ and $\boldsymbol{\beta}_N$. After taking the derivative and using the above expression \req{eq:der_cos} one finds
 
-\begin{figure}[h!]
- \centering
- \includegraphics[width=.95\linewidth]{plots/chap03BBN/phidat_100_1_1_0_full_lin.pdf}
- \caption{ \cccite{Grayson:2023flr} . Plot of the total screening potential scaled with charge Z and distance along the direction of motion. We show a comparison of the following screening models plotted along the direction of motion of a nucleus $\boldsymbol{r}\cdot\hat{\boldsymbol{\beta}_{\text{N}}}$: static screening (black), dynamic screening (red dotted) from \cite{Hwang:2021kno}, damped-dynamic screening (blue dashed), and the approximate analytic solution of \req{eq:pos_point} (orange dashed). A black arrow indicates the direction of motion of the nucleus $\hat{\boldsymbol{\beta}_{\text{N}}}$. }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} 
+ \centerline{
+\includegraphics[width=.90\linewidth]{plots/chap03BBN/phidat_100_1_1_0_full_lin.pdf}}
+ \caption{ \cccite{Grayson:2023flr}. Plot of the total screening potential scaled with charge Z and distance along the direction of motion. We show a comparison of the following screening models plotted along the direction of motion of a nucleus $\boldsymbol{r}\cdot\hat{\boldsymbol{\beta}_{\text{N}}}$: static screening (black), dynamic screening (red dotted) from \cite{Hwang:2021kno}, damped-dynamic screening (blue dashed), and the approximate analytic solution of \req{eq:pos_point} (orange dashed). A black arrow indicates the direction of motion of the nucleus $\hat{\boldsymbol{\beta}_{\text{N}}}$.}
  \label{fig:dynamiclinear}
 \end{figure} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{multline}\label{eq:pos_point_DDS}
 \Delta \phi(t,\boldsymbol{x}) = \frac{Ze \beta_N \cos (\psi) m_D^2}{4 \pi \varepsilon_0 \kappa} \Bigg[\left(\frac{\nu_\tau^2}{m_D^2 r(t)^2} + \frac{\nu_\tau^2}{m_D r(t)}+\frac{1 + \nu_\tau^2}{2}\right)e^{-m_D r(t)} \\ -\frac{\nu_\tau^2}{m_D^2 r(t)^2}\Bigg]\,,
@@ -242,18 +214,40 @@ and $\phi_{\text{stat}}$ is the standard static screening potential. The details
 where $\psi$ is the angle between $\boldsymbol{x}-\boldsymbol{\beta}_N t$ and $\boldsymbol{\beta}_N$ and $r(t) = |\boldsymbol{x}-\boldsymbol{\beta}_N t|$.
 We introduce the ratio of the damping rate to the rate of oscillations in the plasma $\nu_\tau = \kappa/\omega_p$.  This expression is valid for large damping and slow motion of the nucleus or if the velocity of the nuclei is small. A similar result valid at large distances, which only includes the last term, was previously derived in~\cite{Stenflo:1973} for dusty (complex) plasmas. For large distances and large $\nu_\tau$, the last term in the second line is dominant, indicating that the overall potential would be over-damped. In this regime, the potential is heavily screened in the forward direction and unscreened in the backward direction relative to the motion of the nucleus. As $\nu_\tau$ becomes small, the $1/2$ in the first portion of the third term, proportional to $m_D^2/\kappa$, dominates. This flips the sign of the damped-dynamic screening contribution causing a wake potential to form behind the nuclei. This shift indicates the change from damped to undamped screening where \req{eq:pos_point_DDS} is no longer valid. 
 
-\begin{figure}[h!]
- \centering
- \includegraphics[width=.85\linewidth]{plots/chap03BBN/Pot_2DPlotFix.png}
- \caption{Two dimensional plot of the total potential \req{eq:pos_point} scaled with Z, at $T=74\,$keV. The potential is cylindrically symmetric about the direction of motion $\boldsymbol{\hat{z}}$, which is indicated by a black arrow. The direction transverse to the motion is $\rho$. The sign of the damped-dynamic correction \req{eq:pos_point_DDS} changes sign due to the cosine term.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} 
+ \centerline{\includegraphics[width=.90\linewidth]{plots/chap03BBN/Pot_2DPlotFix.png}}
+ \caption{Two dimensional plot of the total potential \req{eq:pos_point} scaled with Z, at $T=74\,$keV. The potential is cylindrically symmetric about the direction of motion $\boldsymbol{\hat{z}}$, which is indicated by a black arrow. The direction transverse to the motion is $\rho$. The sign of the damped-dynamic correction \req{eq:pos_point_DDS} changes sign due to the cosine term}
  \label{fig:numericalComp}
 \end{figure} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Figure \ref{fig:dynamiclinear} demonstrates that the damped-dynamic response in the analytic approximation \req{eq:pos_point_DDS} (shown as orange dashed line) is sufficient to approximate the full numerical solution (blue dashed line) found by numerical integration of \req{eq:potent}. The temperature $T = 100$\, keV, above our upper limit of BBN temperatures, is chosen to relate to the dynamic screening result found in~\cite{Hwang:2021kno}. Our analytic solution differs from the numerical result in Fig.~4 of \cite{Hwang:2021kno} by a factor of $\sqrt{2}$ and is horizontally flipped. This reflection is due to a difference in convention in the permittivity, as seen in \req{eq:potentk}. We can see that dynamic screening is slightly stronger at large distances than damped screening, as expected. Damped and undamped screening are very similar at short distances, which is relevant to thermonuclear reaction rates. 
+Figure~\ref{fig:dynamiclinear} demonstrates that the damped-dynamic response in the analytic approximation \req{eq:pos_point_DDS} (shown as orange dashed line) is sufficient to approximate the full numerical solution (blue dashed line) found by numerical integration of \req{eq:potent}. The temperature $T = 100$\, keV, above our upper limit of BBN temperatures, is chosen to relate to the dynamic screening result found in~\cite{Hwang:2021kno}. Our analytic solution differs from the numerical result in Fig.~4 of \cite{Hwang:2021kno} by a factor of $\sqrt{2}$ and is horizontally flipped. This reflection is due to a difference in convention in the permittivity, as seen in \req{eq:potentk}. We can see that dynamic screening is slightly stronger at large distances than damped screening, as expected. Damped and undamped screening are very similar at short distances, which is relevant to thermonuclear reaction rates. 
 
 Dynamic screening in both the damped and undamped cases predicts less screening behind and more in front of the moving nucleus than static screening. This is shown in the two-dimensional plot \reff{fig:numericalComp}, of the total potential in plasma at $T=76\,$keV This effect was previously observed for subsonic screening in electron-ion-dust plasmas ~\cite{Stenflo:1973,Shukla:2002ppcf,Lampe:2000pop}. As a result, a negative polarization charge builds up in front of the nucleus. The small negative potential in front alters the potential energy between light nuclei, possibly changing the equilibrium distribution of light elements in the early universe plasma. This effect is much larger in the undamped case and is known in some cases to lead to the formation of dust crystals~\cite{Shukla:1996ccc}. 
 
-\subsection{Reaction rate enhancement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Effective internuclear potential}\label{sec:potential}
+We calculate the potential of light nuclei in the early Universe electron-positron plasma by Fourier transforming the screened scalar potential $\phi$ of a single traveling nuclei \req{eq:phi}
+\begin{equation}\label{eq:potent}
+ \phi(t,\boldsymbol{x}) = \int \frac{d^4k}{(2\pi)^4} e^{-i\omega t+ i\boldsymbol{k}\cdot\boldsymbol{x}} \frac{\widetilde{\rho}_\text{ext}(\omega,\boldsymbol{k})}{\varepsilon_\parallel(\omega,\boldsymbol{k})(\boldsymbol{k}^2-\omega^2) }\,,
+\end{equation}
+where $\widetilde{\rho}_{\text{ext}}(\omega,\boldsymbol{k})$ is the Fourier-transformed charge distribution of nuclei traveling at a constant velocity, and $\varepsilon_\parallel(\omega,\boldsymbol{k})$ is the longitudinal relative permittivity. The relative permittivity can be written in terms of the polarization tensor as
+\begin{equation}\label{eq:epsilon}
+ \varepsilon_\parallel(\omega,\boldsymbol{k})= \left(\frac{\Pi_{\parallel}(\omega,\boldsymbol{k})}{ \omega^2}+1\right)\,.
+\end{equation}
+
+In the linear response framework \req{eq:ohm}, the electromagnetic field still obeys the principle of superposition so the potential between two nuclei can be inferred simply from the potential of a single nucleus. 
+
+We can perform the $\omega$ integration in \req{eq:potent} using the delta function in the definition of the external charge distribution, whose effect is to set $\omega = \boldsymbol{\beta_{\text{N}}}\cdot \boldsymbol{k}$ where $\boldsymbol{\beta}_N = \boldsymbol{v}_N/c$ is the nuclei velocity. Then we have
+\begin{equation}\label{eq:potentk}
+ \phi(t,\boldsymbol{x}) = Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)} \frac{ e^{-\boldsymbol{k}^2\frac{R^2}{4}}}{\boldsymbol{k}^2\varepsilon_\parallel(-\boldsymbol{\beta_{\text{N}}} \cdot \boldsymbol{k},\boldsymbol{k}) }\,,
+\end{equation}
+where $R$ is the Gaussian radius parameter.
+In non-relativistic approximation the Lorentz factor $\gamma \approx 1$ and we use the convention $\varepsilon_\parallel(-\boldsymbol{\beta_{\text{N}}} \cdot \boldsymbol{k},\boldsymbol{k})$ used in~\cite{Montgomery:1970jpp,Stenflo:1973,Shukla:2002ppcf,Shukla:1996ccc} which gives the correct causality for the potential. This ensures that, without damping, the wakefield occurs behind the moving nucleus.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Reaction rate enhancement}
 We use the same argument as \cite{Salpeter:1954nc} to find the enhancement factor due to damped-dynamic screening. The enhancement of a nuclear reaction process by screening is related to the WKB probability of tunneling through the Coulomb barrier
 \begin{equation} \label{eq:penprob}
     P(E) = \exp{\left( - \frac{2\sqrt{2 \mu_r}}{\hbar c}\int_{R}^{r_c}dr \sqrt{U(r)-E}\right)}\,,
@@ -323,7 +317,45 @@ This result is only valid in the weak damping limit $\omega_p<\kappa$. The first
 
 % To describe nonlinear screening beyond the presented toy model, in the context of light element screening during BBN, we need to solve \req{eq:Poisson-Boltz} with a realistic spherical charge distribution. That way the difference in asymptotic behavior will be captured for the solution at large distances. It turns out that even the simple first look at the 3D-static asymptotic Debye-type solution requires formidable numerical effort, let alone merging the short-range strong field limit with damped-dynamic linear response theory as developed here. Therefore the strong field screening will be addressed separately, opening the path to the computation of screened-BBN reaction rates.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% To improve the understanding of the internuclear screened Coulomb potential $\phi$ governing BBN reaction rates, this work expands the prior studies~\cite{Hwang:2021kno, Carraro:1988apj,Opher:1999jh, Yao:2016cjs} carried out in the linear response approximation applicable in the regime where the modification of the Coulomb potential is a small effect. We extend the 'dynamic screening' effort (and in particular that of Hwang et al~\cite{Hwang:2021kno} which introduced dynamic screening during BBN) to study `damped-dynamic' screening as follows:
+% \begin{enumerate}
+% \item 
+% We detail the scattering damping effect of plasma components in the temperature range beginning near $T\simeq m_ec^2=511$\,keV extending down to a temperature near $T_\mathrm{split}\simeq 20.3$\,keV where practically all $e^-e^+$-pairs disappeared.
+% \item 
+% We obtain analytical results for damped-dynamic screening applicable to the BBN epoch temperature range which demonstrates a connection between the BBN plasma and dusty plasma theory. 
+% \item 
+% We recognize and describe the limits of applicability of the linear response method to BBN by considering the full equilibrium distribution necessary in the presence of strong fields. We explore a one-dimensional toy model at distances a fraction of an \AA ngstrom in the quantum tunneling regime where the potential $\phi$ is large compared to the thermal collision energy $|\phi|/3T> 1$,  which predicts enhanced screening at small distances.
+% \end{enumerate}
 
-% \end{thebibliography}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Such effort to improve the BBN model through screening is well justified for the following reasons:
+% \begin{enumerate}
+% \item Currently, the most accessible path to observe the early Universe before recombination is through light element abundances. 
+% \item
+% Despite the great initial success of the BBN model regarding the prediction of the abundances of D, $^3$ He, $^4$ He, there remain well-documented discrepancies. Currently, substantial efforts are being directed toward reconciling the theoretical BBN model with present-day observations. For a more detailed discussion, see Refs.\,\cite{Pitrou:2021vqr,Bertulani:2022qly}.
+% \item
+% Enhanced production of light elements during the BBN era could help resolve two problems: a) Elements Beryllium and Boron cannot be produced in stellar burning processes while their high abundance suggests additional mechanisms of production beyond secondary processes after stellar explosions. b) Understanding the age of stars obtained using the abundance of light elements (metallicity) may be improved by adaptation of the BBN network to account for nuclear reactions in ultra-dense QED plasma.
+% \item
+% We note that screening effects are more pronounced for nuclei with greater charge $Z$ leading to stronger modification in predicted abundances, just where the most significant current disagreements exist ({\it e.g.\/} the abundance of $^7$Li). Inclusion of screening effects in our current models of the BBN reaction network could explain this discrepancy without the need to invoke more exotic modifications of the Coulomb internuclear potential. An example of such a modification would be the variation of $\alpha$, the fine-structure constant~\cite{Meissner:2023voo}.
+% \item 
+% Recent James Webb space telescope-Hubble space telescope (JWST-HST) observations implying early onset of galactic structure formation and/or presence of luminous objects as early as 300 million years after BBN~\cite{Haro:2023JWST,Sabti:2023xwo,Ilie:2023DM} could be seen as evidence supporting nuclear dust matter clustering in dense QED plasma.
+% \end{enumerate}
+
+
+% In the standard BBN model, thermonuclear reaction rates are evaluated using nuclear reactions specific to the vacuum state. In a high-precision BBN model, the effect of $e^-e^+$-pair-plasma screening of nuclear charges must be allowed. We describe in Section~\ref{sec:density} the presence of up to several millions of electron-positron ($e^-e^+$) pairs per every charged nucleon. This situation prompts an effort to reconsider BBN in an ultra dense plasma environment allowing for a dense $e^-e^+\gamma$ plasma medium.
+
+% We account for collisions between plasma components using the current-conserving Bhatnagar, Gross, and Krook (BGK) collision term~\cite{Bhatnagar:1954zz}, which allows us to study damping in the dynamic plasma. For an in-depth discussion presented in contemporary covariant notation and preserving current conservation, see Formanek et al.~\cite{Formanek:2021blc}. Our approach is different from Monte-Carlo simulation of two particle collisions~\cite{Sasankan:2019oee,Kedia:2020xdc} as in our case particles participating in scattering also experience simplified static screening which in terms of collision description would require more than two particle collisions. In addition, the simplified BGK collision term we employ allows us to obtain an analytic `damped-dynamic' internuclear potential relevant to the BBN reaction network in the linear response approximation. 
+
+% Several well known processes, including M\o ller, Bhabha, and inverse Compton scattering, characterize the damping in plasma. These textbook results will be adapted to the plasma environment: When studied in vacuum, electrons and positrons interact with each other by exchanging a massless photon. However, when a photon propagates through a plasma of electrons and positrons, its properties are modified by interactions with the medium. When evaluating Moller and Bhabha scattering, we include the temperature-dependent mass of the photon obtained in plasma theory without damping. We find that the total relaxation rate during BBN is much larger than the screening mass, which is the inverse of the Debye screening length $m_D = 1/\lambda_D$. This suggests that electromagnetic perturbations of the plasma will be overdamped.
+
+% Since, as noted above, the computed damping strength is the dominant scale, it is also the main parameter determining the photon mass. However, introducing the damping strength in the photon mass would make the calculation of the damping strength self-referential. The complexity of such a self-consistent evaluation of damping is beyond the scope of this work. This underscores the need to develop a self-consistent approach where both damping and photon properties in plasma are determined in a mutually consistent manner.
+
+% The QED $e^+e^-\gamma$-plasma present during BBN is perturbed by a variety of comparatively very heavy charged protons $p$ and even heavier isotopes and light elements. In calculating the electromagnetic potential $\phi$, we naturally view BBN active participants as heavier, higher charged impurities {\it i.e.\/} \lq\lq charged dust\rq\rq in the QED-plasma. Since theories of such a system have been developed by others working on charged dust grains in planetary and space plasma~\cite{Montgomery:1970jpp, Stenflo:1973, Shukla:2002ppcf, Lampe:2000pop} we can validate our results and adapt previously developed theoretical tools necessary for describing heavy charged impurities within a plasma of lighter particles.
+
+% We provide the first step in merging these two fields by including damping to analyze the electromagnetic potential during BBN, similar to work done by Stenflo in 1973 for dusty plasma~\cite{Stenflo:1973}. We advance this work by applying it to the BBN epoch, allowing for the finite size of the "dust grains," and by finding the short-distance behavior of the potential in the weak field limit. Using a general model of simplified collisional damping in linear response, we calculate the screened electromagnetic potential of light nuclei undergoing thermal motion subject to damping relying on previous work ~\cite{Formanek:2021blc,Grayson:2022asf}.
+
+%  
+% In Section~\ref{sec:relax}, we calculate the relaxation rate $\kappa= 1/\tau$, where $\tau$ is the mean time between collisions in the plasma. This is done by finding the average of the most relevant reaction rates for $2\leftrightarrow 2$ scattering: M{\o}ller, Bhabha, and inverse Compton scattering. 
+
+% We proceed in Section~\ref{sec:kinetic_theory} to solve the Vlasov-Boltzmann Equation (VBE) in the weak field limit with damping. Our approach considers small plasma perturbations in linear response to find the polarization tensor present during the BBN era. In Section~\ref{sec:potential}, we find an analytic expression for the damped-dynamic potential applicable to BBN and study the limitation of the linear response method. We show that additional strong field phenomena beyond linear response alter the behavior of the screened potential $\phi$. We discuss our results and describe their interdisciplinary importance in Section~\ref{sec:Discussion}. 
+ 
