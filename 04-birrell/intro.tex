@@ -47,8 +47,9 @@ dV_I&=\delta(\Delta p)\prod_idV_{A_i}\prod_jdV_{B_j}\,,\notag
 where the $r$ and $p$ sub and superscripts stand for reactants and products respectively.   See Appendix \ref{ch:vol_forms} for more information on the precise meaning and properties of the delta function factors.
 
 In the following subsections we derive several important  properties of the equation \eqref{boltzmann_einstein}.  While in principle these properties are well known~\cite{Andreasson:2011ng,cercignani,Choquet-Bruhat:2009xil,ehlers}, here we prove them at a level of generality that, to the authors knowledge, is not available in other references, i.e., for a general collection of interactions as encapsulated in \req{collision_operator}.  We  note that Riemannian normal coordinates will a key tool   in these derivations.   These are coordinates centered at a chosen point, $x$, in spacetime wherein the geodesics through $x$ are straight lines in the coordinate system and the derivatives of the metric in the coordinate system vanish at $x$. In particular, the Christoffel symbols vanish at $x$; see, e.g., page 42 in \cite{Wald:1984rg} or pages 72-73 of \cite{o1983semi}.  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Conserved Currents}
+\paragraph{Conserved Currents}
 Suppose all the interactions of interest conserve some charge $b_A$, i.e.,
  \begin{align}\label{eq:conserved_charge}
 \sum_{A\in p(I)} n_Ab_A=\sum_{A\in r(I)} n_Ab_A
@@ -105,7 +106,7 @@ Combining this with \req{eq:conserved_charge} we find
 Therefore  $B^\mu$ is a conserved current, as claimed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Divergence Freedom of Stress Energy Tensor}
+\paragraph{Divergence Freedom of Stress Energy Tensor}
 The Einstein equation implies that the total stress energy tensor of all matter coupled to gravity is divergence free.  Here we show that the relativistic Boltzmann stress energy tensor \req{Tmndef} has this property, and is therefore a natural candidate matter model for  coupling to gravity.  
 
 First use Riemannian normal coordinates to compute
@@ -145,7 +146,8 @@ due to the delta function $\delta(\Delta p)$ in the volume form $dV_I$.  Therefo
 \end{align}
 again because of $\delta(\Delta p)$ in the volume forms.  This shows $\nabla_\mu T^{\mu\nu}=0$, as claimed.
 
-\subsubsection{Entropy and Boltzmann's H-Theorem}\index{Boltzmann's H-theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Entropy and Boltzmann's H-Theorem}\index{Boltzmann's H-theorem}
 Finally, we prove that the entropy four-current satisfies $\nabla_\mu s^\mu\geq 0$, known as Boltzmann's H-theorem. This result requires the additional assumption that the interactions are time-reversal symmetric,  i.e.,
 \begin{equation}\label{time_symmetry}
 W^I(p_{B_j}^l,p_{A_i}^k)=W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)

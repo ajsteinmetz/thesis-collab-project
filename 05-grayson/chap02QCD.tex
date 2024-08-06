@@ -15,7 +15,7 @@ The distribution of the vacuum magnetic field given by the Li\'enard-Wiechert fi
 
 This magnetic field is treated as an external perturbation on the quark-gluon plasma, filling the overlap region between the two nuclei after they collide. For simplicity, the QGP is modeled as an infinite medium so that complications do not arise at the boundary. The temperature of QGP depends strongly on the collision energy of the nuclei. In \cite{Grayson:2022asf} we study Au+Au collisions at $\sqrt{s_{\text{NN}}}=200\,$GeV with QGP temperature $T=300$\,MeV.  After Heavy Ions collide, the conducting QGP medium generates long-range decaying tails or wakefields in the magnetic field that extend far beyond the collision time \cite{Tuchin:2010vs}. The conductivity of QGP determines the strength of these wakefields. We aim to model these fields in QGP using the formulation discussed in Chapter \ref{chap:PlasmaSF}.
 
-\subsection{EM conductivity of quark-gluon plasma}
+\paragraph{EM conductivity of quark-gluon plasma:}
 
 Past analytic calculations \cite{Tuchin:2010vs,Deng:2012pc,McLerran:2013hla,Tuchin:2013apa,Gursoy:2014aka,Li:2016tel,Roy:2015kma} solve Maxwell's equations in the presence of static electric conductivity 
 \begin{equation}
@@ -27,9 +27,9 @@ Numerical calculations \cite{Inghirami:2016iru,Inghirami:2019mkc} have incorpora
 
 
 
-\subsubsection{The Ultrarelativistic EM polarization tensor in QGP}\label{sec:linresp}
+\paragraph{The Ultrarelativistic EM polarization tensor in QGP:}\label{sec:linresp}
 
-In this Section, we review the ultrarelativistic polarization tensor, including damping, for the idealized case where the QGP is infinite, homogeneous, and stationary. This calculation differs from \cite{Formanek:2021blc} only in that we consider three quark species: up, down, and strange. We start with the Vlasov-Boltzmann equation for each quark flavor \req{eq:boltzmanncov} where we assume all quarks collide on a momentum-averaged time scale $\tau_{\text{rel}} = \kappa^{-1}$. The induced current $ j_{\mathrm{ind}}^\mu$ can be written in terms of the phase-space distribution of quarks and anti-quarks as
+Here we review the ultrarelativistic polarization tensor, including damping, for the idealized case where the QGP is infinite, homogeneous, and stationary. This calculation differs from \cite{Formanek:2021blc} only in that we consider three quark species: up, down, and strange. We start with the Vlasov-Boltzmann equation for each quark flavor \req{eq:boltzmanncov} where we assume all quarks collide on a momentum-averaged time scale $\tau_{\text{rel}} = \kappa^{-1}$. The induced current $ j_{\mathrm{ind}}^\mu$ can be written in terms of the phase-space distribution of quarks and anti-quarks as
 \begin{equation}\label{eq:current}
    j_{\mathrm{ind}}^\mu(x) = 2 N_c \int (dp)p^\mu \\ \times \sum_{u,d,s} q_f (f_{f}(x,p) - f_{\bar{f}}(x,p))=  4 N_Q e^2 \int (dp)p^\mu \delta f(x,p)\,,
 \end{equation}
@@ -55,11 +55,7 @@ The parallel and transverse polarization functions have the same form as in \cit
 where $C_{\text{em}} =  2e^2/3$. In the following, we will use $m_D$ as short-hand notation for the electromagnetic screening mass since we do not discuss color screening here.
 The transverse conductivity $\sigma_{\perp}$, which controls the response of the plasma to magnetic fields, is related to the imaginary part of the transverse polarization function as in \req{eq:sigmaperp}
 
-
-
-\subsubsection{QCD Damping rate in QGP}
-
-The strength of the plasma response to an external magnetic field depends on the quark damping rate $\kappa$ and the electromagnetic screening mass $m_D$. The scale of the collisional quark damping $\kappa$ is much larger than the electromagnetic Debye mass $m_D$ and electromagnetic damping $\kappa_{\text{EM}}$ because it depends on the strong coupling constant $\alpha_s$, not the electromagnetic coupling $\alpha$.
+\paragraph{QCD Damping rate in QGP:} The strength of the plasma response to an external magnetic field depends on the quark damping rate $\kappa$ and the electromagnetic screening mass $m_D$. The scale of the collisional quark damping $\kappa$ is much larger than the electromagnetic Debye mass $m_D$ and electromagnetic damping $\kappa_{\text{EM}}$ because it depends on the strong coupling constant $\alpha_s$, not the electromagnetic coupling $\alpha$.
 
 In \cite{Grayson:2022asf}, we use the first-order electromagnetic Debye mass \req{eq:DebyemQCD} to estimate the electromagnetic screening mass $m_D$. The collision rate $\kappa$ is related to the inverse of the mean-free time of quarks in QGP. We adopt a value for $\kappa$ from \cite{Mrowczynski:1988xu} where the mean-free time is given by the product of the parton density in the QGP and the quark-parton transport cross-section, leading to the expression 
 \begin{equation}\label{eq:kappadef}
@@ -117,8 +113,7 @@ These lattice-QCD results \cite{Amato:2013naa,Aarts:2014nba,Brandt:2015aqk,Astra
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Magnetic field in QGP during a nuclear collision}\label{sec:Maxwell2}
-Assuming that the QGP is an infinite homogeneous and stationary medium near equilibrium, we can solve Maxwell's equations for the self-consistent fields as in Section~\ref{sec:Maxwell}. Then the magnetic field is given by Fourier transforming the momentum space expressions given in \reqs{eq:aperp}{eq:ftfields} to position space
+\paragraph{Magnetic field in QGP during a nuclear collision:}\label{sec:Maxwell2} Assuming that the QGP is an infinite homogeneous and stationary medium near equilibrium, we can solve Maxwell's equations for the self-consistent fields as in Section~\ref{sec:Maxwell}. Then the magnetic field is given by Fourier transforming the momentum space expressions given in \reqs{eq:aperp}{eq:ftfields} to position space
 \begin{equation}\label{eq:magorgin}
    \boldsymbol{B}(t, z) = \int \frac{d^4k}{(2\pi)^4}  e^{-i\omega t+ik_z z}
  \frac{\mu_0 i \boldsymbol{k} \times\ft{j}_{\perp \text{ext}}(\omega, \boldsymbol{k})}{\boldsymbol{k}^2 - \omega^2 - \mu_0 \Pi_{\perp}(\omega, \boldsymbol{k})}\,.
@@ -477,10 +472,10 @@ As the QGP begins to hadronize at time $t_f$, one may expect hadrons to be stati
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Towards a more realistic QGP: discussion and outlook }\label{sec:ConclusionsQGP}
+\subsection{Towards a more realistic QGP }\label{sec:ConclusionsQGP}
 The work reviewed here calculates the magnetic field of two colliding nuclei in a stationary, homogeneous QGP using relativistic kinetic theory with collisional damping. Our first main finding in \cite{Grayson:2022asf} was that the response to the external magnetic field is controlled by the polarization function along the light-cone, $\Pi^\mu_\nu(\omega ,|\boldsymbol{k}|\approx\omega)$. This allowed us to derive an approximate analytic solution for the magnetic field that considers the dynamics of the medium's response. We also discussed how the late-time magnetic field at hadronization does not depend strongly on the collision energy. This gives the possibility that an experimental measurement of the magnetic field at different collision energies could permit a determination of the electrical conductivity of the QGP \cite{STAR:2023jdd}. We must also know how the freeze-out time depends on collision energy to make this measurement.
 
-\subsubsection{The QGP medium}
+\paragraph{The QGP medium:}
 This calculation can be improved in numerous ways. One of our main interests is to incorporate a finite size and a time-dependent onset in the QGP medium, which we describe here as infinite and homogenous. Boundary effects at the QGP surface are likely crucial for many collisions since the Debye sphere is not much smaller than the size of QGP, or similarly, the skin depth is probably large in comparison to the radius of QGP. Plasma skin effects could lead to novel electromagnetic phenomena at the QGP surface. We have begun some work on implementing an initial onset and formation time for QGP in the Vlasov-Boltzmann equation, effectively creating a boundary in time. This work should be extendable to studying plasma with a finite boundary in space which could be interesting with respect to the study of surface plasmons.
 
 QGP is also not stationary; peripheral heavy ion collisions are one of the most highly rotational systems ever observed \cite{Csernai:2013bq,Deng:2016vhi,Jiang:2016woz,Becattini:2020pvq}. This is due to the huge angular momentum of the colliding system. This rotation can be incorporated into the equilibrium distribution \cite{Hakim:2011bk}, which creates a temperature that depends on radius \cite{Chernikov:1964edr} changing our description of the magnetic field.
@@ -489,7 +484,7 @@ In \cite{Grayson:2022asf} it would have been simple to use the adiabatic expansi
 
 Many enhancements can be made that require numerical solutions of the linear response equations, such improvements would include a realistic space-time dependence of the medium (formation and hydrodynamical evolution), nonzero net baryon density, quark thermal mass corrections \cite{Weldon:1982bn}, and viscous corrections to the unperturbed phase-space distribution used to calculate the polarization tensor.
 
-\subsubsection{Electric field in QGP}
+\paragraph{Electric field in QGP:} Of course, we could have also studied electric fields in QGP which are in the same order as the magnetic fields $e|E| \approx m_\pi^2$. These fields are of interest in strong field QED since they are far beyond the Schwinger limit $e|E| \approx m_e^2$. Preliminary QGP electric field calculations are shown in \reff{fig:efcomp}. In QGP, the transverse electric field $E_y$ is screened while the eclectic field is enhanced in the direction of motion. The electric field is also interesting since it could do a significant amount of work on the QGP possibly reheating it after its formation through ohmic heating. 
 
 \phantom{Phantom text}
 \begin{figure}[ht]
@@ -501,11 +496,6 @@ Many enhancements can be made that require numerical solutions of the linear res
 %}
 \caption{Plots comparing the electric field in vacuum, shown as a black dashed line, to the electric field in QGP shown as the red points. The left plot shows the transverse electric field screened by the plasma. The plot on the right shows the electric field in the direction of motion enhanced by the plasma. We choose $T = 300$\,MeV and $Z=79$, for Au-AU collisions at $\sqrt{s} = 200$\,GeV at an impact parameter of half nuclear overlap $b = 1 R = 6.4\,$fm. The vertical line in the left plot indicates $ y = R$, approximately the transverse size of QGP. \label{fig:efcomp}}
 \end{figure}
-
-
-
-Of course, we could have also studied electric fields in QGP which are in the same order as the magnetic fields $e|E| \approx m_\pi^2$. These fields are of interest in strong field QED since they are far beyond the Schwinger limit $e|E| \approx m_e^2$. Preliminary QGP electric field calculations are shown in 
-\reff{fig:efcomp}. In QGP, the transverse electric field $E_y$ is screened while the eclectic field is enhanced in the direction of motion. The electric field is also interesting since it could do a significant amount of work on the QGP possibly reheating it after its formation through ohmic heating. 
 
 Additionally, we were interested in studying the distribution of electric charge around relativistic heavy nuclei in QGP. This can be found by Fourier transforming \req{eq:indch} for the external charge distribution \req{eq:rhoext}. The induced charge density for a single traveling nucleus at low $\gamma$ is shown in \reff{fig:efcomp}. The external charge distribution increases with the Lorentz factor $\gamma$, but the total induced charge, which is the integral of the red dashed line, remains constant but trails behind further at larger velocities.
 

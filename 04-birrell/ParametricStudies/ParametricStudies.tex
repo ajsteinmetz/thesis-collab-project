@@ -1,14 +1,10 @@
 \subsection{Study of Neutrino Freeze-out using  the Boltzmann-Einstein Equation}\label{ch:param_studies}
+%%%%%%%%%%%%%%%
 In this section we remove the instantaneous freeze-out assumption  and present a more precise study of  neutrino freeze-out, i.e., we do not assume that the distribution is either in chemical or kinetic equilibrium or is free-streaming.
 The required mathematical theory and numerical method is developed in Appendices \ref{ch:vol_forms}, \ref{ch:boltz_orthopoly}, and \ref{ch:coll_simp}.  Here we focus on the physical implications, in particular the dependence of the freeze-out process on natural constants. This allows us identify potential avenues by which the tension between observed and theoretical values of $N^{\mathrm{eff}}_\nu$ may be alleviated.   Our study also constrains the time and/or temperature variation of certain natural constants by comparing the results with measurements of $N_\nu^{\mathrm{eff}}$. Further details on this work can be found in \cite{Birrell:2014uka}. The topic of time variation of natural constants is a very active field with a long history; for a comprehensive review of this area, with which we make only slight contact,  see \cite{Uzan:2010pm}.  
 
-
-
-
-
-
-
-\subsubsection{Neutrino Freeze-Out Temperature and Relaxation Time} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Neutrino Freeze-Out Temperature and Relaxation Time} 
 To connect with the instantaneous freeze-out model from Section \ref{ch:model_ind}, we now give a definition of the kinetic freeze-out temperature that is applicable to the Boltzmann-Einstein equation model and use this to calculate the neutrino freeze-out temperature. Any such definition will be only approximate, as the freeze-out process is not a sharp transition.  Our definition is motivated in part the treatment in \cite{Kolb:1990vq}. 
 
 We first define a characteristic length between scatterings. Using the formula \req{n_div}, we obtain the fractional rate of change of comoving particle number
@@ -49,7 +45,7 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
 \centerline{\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_e_scattering_length_eta_0_23.eps}\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_mu_scattering_length_eta_0_23.eps}}
-\caption{\cccite{Birrell:2014uka}. Comparison of Hubble parameter to neutrino scattering length for various types of SM processes.  }\label{fig:scatt_length}
+\caption{\cccite{Birrell:2014uka}. Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes }\label{fig:scatt_length}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -89,17 +85,13 @@ This shows that the relaxation time during the period between $100\MeV$ and $77.
 \makebox[0.48\linewidth]%
 {\hspace{6mm}\includegraphics[height=5.5cm]{04-birrell/ParametricStudies/Figures/T_relax.eps}}
 \end{minipage}
-\caption{Starting at $12\MeV$, this figure shows the relaxation of a non-equilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the left frame while the temperatures are shown in the right frame.\label{fig:relax}}
+\caption{Starting at $12\MeV$, this figure shows the relaxation of a non-equilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the left frame while the temperatures are shown in the right frame\label{fig:relax}}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-
-
-
-\subsubsection{Dependence of effective neutrino number on SM parameters}\label{sec:param_char}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Dependence of effective neutrino number on PP-SM parameters}
+%\label{sec:param_char}
 
 Next we identify the key SM parameters that influence the effective number of neutrinos and study the effect that  their variation has on $N_\nu^{\mathrm{eff}}$.
 
@@ -120,9 +112,9 @@ e=2M_W\sin(\theta_W)/v=\frac{gg^{'}}{\sqrt{g^2+(g^{'})^2}}\,.
 \end{equation}
 It has a measured value in vacuum $\theta_W\approx 30^\circ$, giving $\sin(\theta_W)\approx 1/2$, but its value is not fixed within the Standard Model. For this reason, a time or temperature variation can be envisioned and this would have an observable impact on the neutrino freeze-out process, as measured by $N_\nu^{\mathrm{eff}}$.
 
-In letting $\sin(\theta_W)$, and hence $g$ and $g^{'}$, vary we must fix the electromagnetic coupling $e$ so as not to impact sensitive cosmological observables such as Big Bang Nucleosynthesis.  Fixing $v$, the smallest $M_W$ can become is when $\sin(\theta_W)=1$, yielding a reduction in $M_W$ by a factor of $2$.  This implies that $M_Z>M_W\gg |p|$ for neutrino momentum $p$ in the energy range of neutrino freeze-out, around $1\MeV$, even as we vary $\sin(\theta_W)$.  This approximation is inherent in the formulas for the matrix elements  in Tables  \ref{table:nu_e_reac} and \ref{table:nu_mu_reac} and continues to be valid here. We will characterize the dependence of $N_\nu^{\mathrm{eff}}$ on $\sin(\theta_W)$ in Section \ref{sec:param_char} below, but first we identify the remaining parameter dependence in the Boltzmann-Einstein system
+In letting $\sin(\theta_W)$, and hence $g$ and $g^{'}$, vary we must fix the electromagnetic coupling $e$ so as not to impact sensitive cosmological observables such as Big Bang Nucleosynthesis.  Fixing $v$, the smallest $M_W$ can become is when $\sin(\theta_W)=1$, yielding a reduction in $M_W$ by a factor of $2$.  This implies that $M_Z>M_W\gg |p|$ for neutrino momentum $p$ in the energy range of neutrino freeze-out, around $1\MeV$, even as we vary $\sin(\theta_W)$.  This approximation is inherent in the formulas for the matrix elements  in Tables  \ref{table:nu_e_reac} and \ref{table:nu_mu_reac} and continues to be valid here. We will characterize the dependence of $N_\nu^{\mathrm{eff}}$ on $\sin(\theta_W)$ in following, but first we identify the remaining parameter dependence in the Boltzmann-Einstein system
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Interaction Strength} Beyond the Weinberg angle, the remaining  dependence of the Boltzmann-Einstein system on dimensioned quantities during  neutrino freeze-out  can be combined in an overall interaction strength factor.   To show this, we now convert the system  to dimensionless form. Letting $m_e$ be the mass scale and $M_p/m_e^2$ be the time scale the Einstein equations take the form
 \begin{equation}
 H^2=\frac{\rho}{3}\,,\hspace{2mm}\dot\rho=-3H(\rho+P)\,.

@@ -30,7 +30,7 @@ This equation has a well-known solution for an infinite sheet which we used to a
 In a future publication, we will solve the Poisson-Boltzmann equation with strong screening to calculate the short-range screening potential in BBN. We note that the toy model in \cite{Grayson:2023flr} overestimates strong screening effects for two reasons: an infinite sheet has a constant electric field requiring more polarizing charge density to screen the field, and the Boltzmann distribution in \req{eq:Boltz} does not account for the stacking of electron-positron states when the density of electrons and positrons becomes very large near the nucleus. Both of these effects significantly reduce the effect of strong screening on reaction rates, but at the time of writing, it seems that strong screening will create a larger effect on nuclear reaction rates than damped-dynamic screening. Predicting enhanced screening may be relevant for the anomalous screening observed in the measurements of astrophysical S(E) factors \cite{Zhang:2020nuc}.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Early Universe plasma: non-relativistic polarization tensor}\label{sec:kinetic_theory}
+\paragraph{Early Universe plasma: non-relativistic polarization tensor:}\label{sec:kinetic_theory}
 The properties of the BBN plasma are described by the relativistic Vlasov-Boltzmann transport equations \req{eq:VBEf}. Since photons do not couple directly to the electromagnetic field, they do not contribute to the polarization tensor at first order in $\delta f$ as indicated in Eq.\,(\ref{eq:VBEg}). We neglect photon influence on the electron-positron distribution through the scattering term since the rate of inverse Compton scattering $R_{e^{\pm}\gamma }$ shown in green in \reff{RelaxationRate_fig} is much smaller, in the BBN temperature range, than the total rate $\kappa$ shown as a black line. Each fermion Boltzmann equation \req{eq:VBEf} can be solved independently. Since the equations for electrons and positrons are equivalent, except for the charge sign, only one needs to be solved to understand the dynamics.
 
 %We do not consider the influence of light nuclei on the polarization tensor since their density during the BBN epoch is much smaller than that of electrons and positrons \reff{BBN_Electron}. One can see in \reff{MeanFreePath_fig} that the separation of baryons $n_B^{-1/3}$ in black is much larger than the size of the polarizing Debye sphere, so baryons do not participate significantly in screening.
@@ -95,7 +95,7 @@ The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in th
 This formula describes the characteristic length scale of screening in the plasma.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Longitudinal dispersion relation}
+\paragraph{Longitudinal dispersion relation:}
 As discussed in Chapter \ref{chap:PlasmaSF} the poles in the propagator or roots of the dispersion equation represent the plasma's propagating modes, often called `quasi-particles' or `plasmons.' In the non-relativistic limit, one can solve the longitudinal part of the dispersion equation \req{eq:disp}, which is relevant for finding charge oscillation modes in the plasma
 \begin{equation}
     1+ \frac{\Pi_\parallel( k)}{(p\cdot u)^2}= 1+ \frac{\Pi_\parallel(\omega, \boldsymbol{k})}{\omega^2}=\varepsilon_\parallel(\omega,\boldsymbol{k}) =0 \,,
@@ -148,8 +148,8 @@ The influence of screening on nuclear reactions is a well-established field of s
 In our current study, we address the high density of the $e^-e^+\gamma$ plasma by including collisional damping using the current conserving collision term developed in \cite{Formanek:2021blc} shown in \req{eq:collision}. The dense aspect of the BBN plasma has only recently been acknowledged by incorporating collision effects into numerical models \cite{Sasankan:2019oee,Kedia:2020xdc}. We will refer to this model of screening as 'damped-dynamic' screening. In \cite{Grayson:2023flr}, we find an analytic formula for the induced screening potential, which allows for estimating the enhancement of thermonuclear reaction rates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Damped-dynamic screening}\label{sec:DDS}
-This section presents the effective nuclear potential for a light nucleus moving in the plasma at a constant velocity. This is done by Fourier transforming \req{eq:potentk}. The velocity of the nucleus is assumed to be the most probable velocity given by a Boltzmann distribution
+\paragraph{Nuclear potential:}\label{sec:DDS}
+We consider the effective nuclear potential for a light nucleus moving in the plasma at a constant velocity. This is done by Fourier transforming \req{eq:potentk}. The velocity of the nucleus is assumed to be the most probable velocity given by a Boltzmann distribution
 \begin{equation}\label{eq:vel}
  \beta_{\text{N}} = \sqrt{\frac{2T}{m_N}}\,. 
 \end{equation}
