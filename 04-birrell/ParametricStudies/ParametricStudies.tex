@@ -3,17 +3,6 @@ In this section we remove the instantaneous freeze-out assumption  and present a
 The required mathematical theory and numerical method is developed in Appendices \ref{ch:vol_forms}, \ref{ch:boltz_orthopoly}, and \ref{ch:coll_simp}.  Here we focus on the physical implications, in particular the dependence of the freeze-out process on natural constants. This allows us identify potential avenues by which the tension between observed and theoretical values of $N^{\mathrm{eff}}_\nu$ may be alleviated.   Our study also constrains the time and/or temperature variation of certain natural constants by comparing the results with measurements of $N_\nu^{\mathrm{eff}}$. Further details on this work can be found in \cite{Birrell:2014uka}. The topic of time variation of natural constants is a very active field with a long history; for a comprehensive review of this area, with which we make only slight contact,  see \cite{Uzan:2010pm}.  
 
 
-\subsubsection{QED Corrections to Equation of State}\label{app:QED_corr} 
-At the time of neutrino freeze-out, the universe is at sufficiently high temperature for photons and $e^\pm$ to be in chemical and kinetic equilibrium.  The temperature is also sufficiently high for QED corrections to the photon and $e^\pm$ equation of state to be non-negligible.  Therefore, in our study here we use the results given in \cite{Heckler:1994tv,Mangano:2001iu} to include these in our computation by modifying the combined photon, $e^\pm$ equation of state
-\begin{align}
-P=P^0+P^{int},\hspace{2mm} \rho=-P+T\frac{dP}{dT}\,,
-\end{align}
-where
-\begin{align}
-P^{int}=&-\frac{1}{2\pi^2}\int_0^\infty\left[\frac{k^2}{E_k}\frac{\delta m_e^2}{e^{E_k/T}+1}+\frac{k}{2}\frac{\delta m_\gamma^2}{e^{k/T}-1}\right]dk\,,\hspace{2mm} E_k=\sqrt{k^2+m_e^2}\,,\\
-\delta m_e^2=&\frac{2\pi\alpha^2}{3}+\frac{4\alpha}{\pi}\int_0^\infty \frac{k^2}{E_k}\frac{1}{e^{E_k/T}+1}dk\,,\hspace{2mm} \delta m_\gamma^2=\frac{8\alpha}{\pi}\int_0^\infty \frac{k^2}{E_k}\frac{1}{e^{E_k/T}+1}dk\,,
-\end{align}
-and $P^0$ is the pressure of a noninteracting gas of photons and $e^\pm$ in chemical equilibrium.
 
 
 
@@ -60,7 +49,7 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
 \centerline{\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_e_scattering_length_eta_0_23.eps}\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_mu_scattering_length_eta_0_23.eps}}
-\caption{\cccite{Birrell:2014uka}. Comparison of Hubble parameter to neutrino scattering length for various types of processes for $\sin^2(\theta_W)=.23$.  Previously published in \cite{Birrell:2014uka}.}\label{fig:scatt_length}
+\caption{\cccite{Birrell:2014uka}. Comparison of Hubble parameter to neutrino scattering length for various types of SM processes.  }\label{fig:scatt_length}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -93,12 +82,12 @@ This shows that the relaxation time during the period between $100\MeV$ and $77.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-
+%04-birrell/ParametricStudies/Figures/
 \begin{minipage}{\linewidth}
 \makebox[0.48\linewidth]%
-{\includegraphics[height=5.5cm]{01-introduction/Figures/Ups_relax.eps}}
+{\includegraphics[height=5.5cm]{04-birrell/ParametricStudies/Figures/Ups_relax.eps}}
 \makebox[0.48\linewidth]%
-{\hspace{6mm}\includegraphics[height=5.5cm]{01-introduction/Figures/T_relax.eps}}
+{\hspace{6mm}\includegraphics[height=5.5cm]{04-birrell/ParametricStudies/Figures/T_relax.eps}}
 \end{minipage}
 \caption{Starting at $12\MeV$, this figure shows the relaxation of a non-equilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the left frame while the temperatures are shown in the right frame.\label{fig:relax}}
  \end{figure}
@@ -106,11 +95,16 @@ This shows that the relaxation time during the period between $100\MeV$ and $77.
 
 
 
-We have omitted here a discussion of flavor neutrino oscillations. If it weren't for the differences between the matrix elements for the interactions between $e^\pm$ and $\nu_e$ on one hand and $e^\pm$ and $\nu_\mu,\nu_\tau$ on the other, oscillations would have no effect on the flow of entropy into neutrinos and hence no effect on $N_\nu^{\mathrm{eff}}$, but these differences do lead to a modification of $N_\nu^{\mathrm{eff}}$.  In \cite{Mangano:2005cc} the impact of oscillations on neutrino freeze-out for the present day measured values of $\theta_W$ and $\eta$ was investigated.  It was found  that while oscillations redistributed energy amongst the neutrino flavors, the impact on $N_\nu^{\mathrm{eff}}$ was negligible. We have neglected oscillations in our study.
 
 
 
-\subsubsection{Weinberg Angle}
+
+\subsubsection{Dependence of $N_\nu^{\mathrm{eff}}$ on Parameters}\label{sec:param_char}
+
+Next we identify the key SM parameters that influence the effective number of neutrinos and study the effect that  their variation has on $N_\nu^{\mathrm{eff}}$.
+
+
+\paragraph{Weinberg Angle}
 
 The Weinberg angle\index{Weinberg angle} is one of the key standard model parameters that impacts the neutrino freeze-out process.  More specifically, it is found in the matrix elements of weak force processes, including the reactions $e^+e^-\rightarrow \nu\bar\nu$ and $\nu e^\pm\rightarrow \nu e^\pm$ as found in Tables \ref{table:nu_e_reac} and \ref{table:nu_mu_reac}.  It is determined by the $SU(2)\times U(1)$ coupling constants $g$, $g^{'}$  by
 \begin{equation}
@@ -129,8 +123,7 @@ It has a measured value in vacuum $\theta_W\approx 30^\circ$, giving $\sin(\thet
 In letting $\sin(\theta_W)$, and hence $g$ and $g^{'}$, vary we must fix the electromagnetic coupling $e$ so as not to impact sensitive cosmological observables such as Big Bang Nucleosynthesis.  Fixing $v$, the smallest $M_W$ can become is when $\sin(\theta_W)=1$, yielding a reduction in $M_W$ by a factor of $2$.  This implies that $M_Z>M_W\gg |p|$ for neutrino momentum $p$ in the energy range of neutrino freeze-out, around $1\MeV$, even as we vary $\sin(\theta_W)$.  This approximation is inherent in the formulas for the matrix elements  in Tables  \ref{table:nu_e_reac} and \ref{table:nu_mu_reac} and continues to be valid here. We will characterize the dependence of $N_\nu^{\mathrm{eff}}$ on $\sin(\theta_W)$ in Section \ref{sec:param_char} below, but first we identify the remaining parameter dependence in the Boltzmann-Einstein system
 
 
-\subsubsection{Interaction Strength}
- In order to isolate the dependence of the Boltzmann-Einstein system for neutrino freeze-out on dimensioned quantities, we now convert it to dimensionless form. Letting $m_e$ be the mass scale and $M_p/m_e^2$ be the time scale the Einstein equations take the form
+\paragraph{Interaction Strength} Beyond the Weinberg angle, the remaining  dependence of the Boltzmann-Einstein system on dimensioned quantities during  neutrino freeze-out  can be combined in an overall interaction strength factor.   To show this, we now convert the system  to dimensionless form. Letting $m_e$ be the mass scale and $M_p/m_e^2$ be the time scale the Einstein equations take the form
 \begin{equation}
 H^2=\frac{\rho}{3}\,,\hspace{2mm}\dot\rho=-3H(\rho+P)\,.
 \end{equation}
@@ -144,17 +137,27 @@ Aside from the $\theta_W$ dependence of the matrix elements seen in Tables \ref{
 \begin{equation}\label{eta0_def}
 \eta_0\equiv \left.M_p m_e^3 G_F^2\right|_0  \approx 0.04421\, .
 \end{equation}
-In the following section we characterize the dependence of $N_\nu^{\mathrm{eff}}$ on this interaction strength.  
 
 
 
+\paragraph{QED Corrections to Equation of State}\label{app:QED_corr} 
+At the time of neutrino freeze-out, the universe is at sufficiently high temperature for photons and $e^\pm$ to be in chemical and kinetic equilibrium.  The temperature is also sufficiently high for QED corrections to the photon and $e^\pm$ equation of state to be non-negligible.  Therefore, in our study here we use the results given in \cite{Heckler:1994tv,Mangano:2001iu} to include these in our computation by modifying the combined photon, $e^\pm$ equation of state
+\begin{align}
+P=P^0+P^{int},\hspace{2mm} \rho=-P+T\frac{dP}{dT}\,,
+\end{align}
+where
+\begin{align}
+P^{int}=&-\frac{1}{2\pi^2}\int_0^\infty\left[\frac{k^2}{E_k}\frac{\delta m_e^2}{e^{E_k/T}+1}+\frac{k}{2}\frac{\delta m_\gamma^2}{e^{k/T}-1}\right]dk\,,\hspace{2mm} E_k=\sqrt{k^2+m_e^2}\,,\\
+\delta m_e^2=&\frac{2\pi\alpha^2}{3}+\frac{4\alpha}{\pi}\int_0^\infty \frac{k^2}{E_k}\frac{1}{e^{E_k/T}+1}dk\,,\hspace{2mm} \delta m_\gamma^2=\frac{8\alpha}{\pi}\int_0^\infty \frac{k^2}{E_k}\frac{1}{e^{E_k/T}+1}dk\,,
+\end{align}
+and $P^0$ is the pressure of a noninteracting gas of photons and $e^\pm$ in chemical equilibrium.
 
-\subsubsection{Dependence of $N_\nu^{\mathrm{eff}}$ on Parameters}\label{sec:param_char}
 
+\paragraph{Dependence of Freeze-out Temperatures and $N_\nu^{\mathrm{eff}}$ on Parameters}
 We now present the  dependence of the effective number of neutrinos, $N_\nu^{\mathrm{eff}}$, on  the SM parameters   $\sin^2(\theta_W)$ and $\eta$, as computed using the Boltzmann-Einstein equation method developed in Appendices \ref{ch:vol_forms}, \ref{ch:boltz_orthopoly}, and \ref{ch:coll_simp}. These results are shown in  Figure \ref{N_nu_params}, presented as a function of  Weinberg angle $\sin^2(\theta_W) $ for $\eta/\eta_0=1,2,5,10$. The effects of an increase in both parameters above the vacuum values generate a significant increase in  $N_\nu^{\mathrm{eff}}\to 3.5$.  The dependence of freeze-out temperatures on $\eta$ is shown in Figure \ref{fig:freezeoutT_eta} and the dependence on Weinberg angle is shown in Figure \ref{fig:freezeoutT_B}. The present day vacuum value of Weinberg angle puts the $\nu_\mu,\nu_\tau$ freeze-out temperature, seen in the right pane of Figure \ref{fig:freezeoutT_B},  near its maximum value.  This is why a comparatively large change in $\sin^2(\theta_W)$ is needed to produce a change in $N_\nu^{\mathrm{eff}}$ for $\sin^2(\theta_W)\approx0.23$.  
  
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}%[ht]
+\begin{figure}[b]
 \centerline{\includegraphics[width=0.70\columnwidth]{04-birrell/ParametricStudies/Figures/N_eff2.eps}
 }
 \caption{Adapted from \cite{Birrell:2014uka}: Change in effective number of neutrinos  $N_\nu^{\mathrm{eff}}$ as a function of Weinberg angle for  several values of $\eta/\eta_0=1,2,5,10$. Vertical line is $\sin^2(\theta_W)=0.23$.}
@@ -207,6 +210,9 @@ The bounds on $N_\nu^{\mathrm{eff}}$ from the Planck analysis \cite{Planck:2013p
 In  Figure \ref{N_nu_domain} the blue region shows the combined range of  variation of natural constants  compatible with CMB+BAO and the green region shows  the extension in the range of  variation of  natural constants for CMB+$H_0$, both at a $68\%$ confidence level. The dot-dashed line within the blue region delimits   this latter domain. The dotted line shows the limit of a 5\% change in $N_\nu^{\mathrm{eff}}$.    Any increase in  $\eta/\eta_0$ and/or $\sin^2(\theta_W)$ moves the value of $N_\nu^{\mathrm{eff}}$ into the domain favored by current experimental results.
 
 %%%%%%%%%%%%%%%%%%%%
+
+We have omitted here a discussion of flavor neutrino oscillations. If it weren't for the differences between the matrix elements for the interactions between $e^\pm$ and $\nu_e$ on one hand and $e^\pm$ and $\nu_\mu,\nu_\tau$ on the other, oscillations would have no effect on the flow of entropy into neutrinos and hence no effect on $N_\nu^{\mathrm{eff}}$, but these differences do lead to a modification of $N_\nu^{\mathrm{eff}}$.  In \cite{Mangano:2005cc} the impact of oscillations on neutrino freeze-out for the present day measured values of $\theta_W$ and $\eta$ was investigated.  It was found  that while oscillations redistributed energy amongst the neutrino flavors, the impact on $N_\nu^{\mathrm{eff}}$ was negligible. We have neglected oscillations in our study.
+
 
 
 \subsubsection{Primordial Variation of Natural Constants}

@@ -55,7 +55,6 @@ ENTRY
     institution
     journal
     key
-    keywords
     month
     note
     number
@@ -70,12 +69,8 @@ ENTRY
     volume
     year
     eprint
-    archive
     archivePrefix
     primaryClass
-    adsurl
-    adsnote
-    version
   }
   {}
   { label }
@@ -152,6 +147,19 @@ FUNCTION {add.comma}
 { duplicate$ empty$
     'skip$
     { "," * add.blank }
+  if$
+}
+FUNCTION {add.stop}
+{ duplicate$ empty$
+    'skip$
+    { "." * add.blank }
+  if$
+}
+
+FUNCTION {add.arXiv}
+{ duplicate$ empty$
+    'skip$
+    {add.comma add.blank "arXiv" * add.blank }
   if$
 }
 
@@ -444,6 +452,7 @@ FUNCTION {format.url}
   if$
 }
 
+
 STRINGS  { bibinfo}
 INTEGERS { nameptr namesleft numnames }
 
@@ -588,7 +597,7 @@ FUNCTION {n.separate}
 }
 FUNCTION {n.dashify}
 {
-%%  n.separate
+  n.separate
   't :=
   ""
     { t empty$ not }
@@ -668,6 +677,20 @@ FUNCTION {format.bvolume}
         { emphasize ", " * swap$ * }
       if$
       "volume and number" number either.or.check
+    }
+  if$
+}
+FUNCTION {format.archiv}
+{ primaryClass empty$
+    { "" }
+    {primaryClass "primaryClass" bibinfo.check}
+  if$
+}
+FUNCTION {format.archivprint}
+{ eprint empty$
+    { "" }
+    { eprint tie.or.space.prefix
+      "eprint" bibinfo.check * *
     }
   if$
 }
@@ -812,7 +835,7 @@ FUNCTION {format.journal.pages}
         {
           ", " *
           swap$
-          n.dashify
+          first.page
           "pages" bibinfo.check
           *
         }
@@ -881,9 +904,8 @@ FUNCTION {format.booktitle}
   booktitle "booktitle" bibinfo.check
   emphasize
 }
-
 FUNCTION {format.in.ed.booktitle}
-{format.booktitle duplicate$ empty$ 'skip$
+{ format.booktitle duplicate$ empty$ 'skip$
     {
       format.bvolume duplicate$ empty$ 'pop$
         { ", " swap$ * * }
@@ -1065,62 +1087,12 @@ FUNCTION {format.organization.address}
 { organization "organization" bibinfo.check format.org.or.pub
 }
 
-FUNCTION {format.softmisc.archive}
-{
-  archivePrefix empty$
-      { "" }
-      { "" }
-  if$           
-}
-
-FUNCTION {format.archive}
-{
-  archivePrefix empty$
-      { "" }
-      { archivePrefix ":" *}
-  if$           
-}
-
-FUNCTION {format.primaryClass}
-{
-  primaryClass empty$
-      { "" }
-      { "{[" primaryClass * "]}" *}
-  if$           
-}
-
-FUNCTION {format.eprint}
-{ eprint empty$
-     { ""}
-     { archive empty$
-          {"{\href{https://arxiv.org/abs/" eprint * "}" *
-             "{{" * format.archive * eprint * "}}}" *}
-          {"{\href{https://arxiv.org/abs/" eprint * "}" *
-             "{{" * format.archive * eprint * "}}}" *}
-       if$
-     }
-     if$
-}
-
-FUNCTION {format.softmisc.eprint}
-{ eprint empty$
-     { ""}
-     { archive empty$
-          {"{\href{https://ascl.net/" format.softmisc.archive * eprint * "}" *
-             "{{" * format.archive * eprint * "}}}" *}
-          {"{\href{https://ascl.net/" format.softmisc.archive * eprint * "}" *
-             "{{" * format.archive * eprint * "}}}" *}
-       if$
-     }
-     if$
-}
-
 FUNCTION {article}
 { output.bibitem
   format.authors "author" output.check
   add.comma
   format.title "title" output.check
-  new.block
+  add.stop
   crossref missing$
     {
       journal
@@ -1135,19 +1107,16 @@ FUNCTION {article}
     }
   if$
   format.doi output
-  new.block
+   new.block
   format.url output
   new.block
-  format.note output
+  format.note output  
   new.block
-  format.eprint output
-  add.blank
-  format.primaryClass output
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
-
 FUNCTION {book}
-{ output.bibitem
+{output.bibitem
   author empty$
     { format.editors "author and editor" output.check
     }
@@ -1167,7 +1136,6 @@ FUNCTION {book}
       format.number.series output
       new.sentence
       format.publisher.address output
-      format.pages output
     }
     {
       new.block
@@ -1196,6 +1164,8 @@ FUNCTION {booklet}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1259,15 +1229,15 @@ FUNCTION {incollection}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
-
 FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
   add.comma
-  format.btitle "title" output.check
-   crossref missing$
+  crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
       new.sentence
       publisher empty$
@@ -1276,6 +1246,7 @@ FUNCTION {inproceedings}
           format.publisher.address output
         }
       if$
+      format.bvolume output
       format.number.series output
       format.pages output
     }
@@ -1346,6 +1317,8 @@ FUNCTION {mastersthesis}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1359,33 +1332,14 @@ FUNCTION {misc}
   format.date output
   format.doi output
   new.block
-  format.url output
-  new.block
-  format.note output
-  fin.entry
-  empty.misc.check
-}
-
-FUNCTION {softmisc}
-{ output.bibitem
-  format.authors output
-  title howpublished new.block.checkb
-  format.title output
-  version output
-  howpublished new.block.checka
-  howpublished "howpublished" bibinfo.check output
-  format.date output
-  format.doi output
-  new.block
-  format.url output
+ format.url output
   new.block
   format.note output
   new.block
-  format.softmisc.eprint output
+  add.arXiv format.archiv format.archivprint output
   fin.entry
   empty.misc.check
 }
-
 FUNCTION {phdthesis}
 { output.bibitem
   format.authors "author" output.check
@@ -1402,6 +1356,8 @@ FUNCTION {phdthesis}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1461,6 +1417,8 @@ FUNCTION {techreport}
   format.url output
   new.block
   format.note output
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1475,6 +1433,8 @@ FUNCTION {unpublished}
   format.url output
   new.block
   format.note "note" output.check
+  new.block
+  add.arXiv format.archiv format.archivprint output
   fin.entry
 }
 
@@ -1510,22 +1470,18 @@ FUNCTION {begin.bib}
   write$ newline$
   "\providecommand{\urlprefix}{URL }"
   write$ newline$
-  %%"\expandafter\ifx\csname urlstyle\endcsname\relax"
-  %% write$ newline$
-  %%"  \providecommand{\doi}[1]{\discretionary{}{}{}#1}\else"
-  %%write$ newline$
-  %%"  \providecommand{\doi}{\discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi"
-  "\providecommand{\doi}[1]{\url{https://doi.org/#1}}"
+  "\expandafter\ifx\csname urlstyle\endcsname\relax"
   write$ newline$
-  "\bibcommenthead" write$ newline$
+  "  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else"
+  write$ newline$
+  "  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi"
+  write$ newline$
 }
 EXECUTE {begin.bib}
 EXECUTE {init.state.consts}
 ITERATE {call.type$}
 FUNCTION {end.bib}
-{ newline$
-  "\end{thebibliography}" write$ newline$
-}
+{newline$ "\end{thebibliography}" write$ newline$}
 EXECUTE {end.bib}
 %% End of customized bst file
 %%

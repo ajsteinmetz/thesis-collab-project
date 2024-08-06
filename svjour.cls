@@ -1237,5 +1237,6 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
 \fi
 \flushbottom
 \endinput
+
 %%
 %% End of file `svjour.cls'.

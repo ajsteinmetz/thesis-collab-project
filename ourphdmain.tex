@@ -14,6 +14,7 @@
 \usepackage{slashed}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{rotating}
 %\usepackage{deluxetable} % Allows use of AASTEX deluxe tables
 \usepackage{aastex_hack} % Allows other AASTEX functionality.
 \usepackage{appendix}
@@ -82,14 +83,11 @@
 \numberwithin{equation}{section}
 
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% Mostly JR
 \include{01-introduction/introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%
-% Chapters from Cheng Tao Yang's dissertation
-\include{02-yang/Chapter1}
+% Chapters from Cheng Tao Yang's dissertation SOME COMBINED and heavily edited JR
 \include{02-yang/Chapter2}
-\include{00-hadron_rafelski/hadronuniverse}
-\include{02-yang/Chapter3}
 \include{03-yangsteinmetz/NeutronLifeTime}
 \include{02-yang/Chapter4}
 \include{02-yang/Chapter5}
@@ -120,7 +118,8 @@
 \listoffigures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliographystyle{bst/sn-aps}
+\bibliographystyle{sn-aps}
+%\bibliographystyle{spphysJR}
 \bibliography{bibs/birrell-refs,bibs/steinmetz-refs,bibs/yang-refs,bibs/grayson-refs}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
