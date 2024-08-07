@@ -9,9 +9,11 @@ In the cosmological context, the Boltzmann-Einstein equation has been used to st
 
 The efficacy of the spectral method used in \cite{Esposito:2000hi,Mangano:2001iu} can largely be attributed to the fact that, under the conditions considered there, the true solution is very close to a chemical equilibrium distribution, \req{ch_eq}, where the temperature is controlled by the dilution of the system. However, as we have discussed, the Planck CMB results \cite{Planck:2013pxb} indicate the possibility that neutrinos participated in reheating to a greater degree than previously believed, leading to a more pronounced chemical non-equilibrium and reheating. Efficiently obtaining this emergent chemical non-equilibrium within the realm of kinetic theory motivates the development of a new numerical method that is adapted to this  circumstance.
 
-First we give a basic overview of the Boltzmann-Einstein equation in an FRW Universe.  In Section \ref{the_method} we   recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and then introduce our modified basis and characterize precisely the differences between the method we propose and previous approaches.  In Section \ref{dynamics_sec} we use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In Section \ref{validation} we validate the method using a model problem.  In Section \ref{orthopoly_app} we give further details on the construction of the parameterized family orthogonal polynomials we use to solve the Boltzmann-Einstein equation.  See also \cite{Birrell:2014gea}.
+First we give a basic overview of the Boltzmann-Einstein equation in an FRW Universe.  In Section \ref{the_method} we   recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and then introduce our modified basis and characterize precisely the differences between the method we propose and previous approaches.  We use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In Section \ref{validation} we validate the method using a model problem.  In Section \ref{orthopoly_app} we give further details on the construction of the parameterized family orthogonal polynomials we use to solve the Boltzmann-Einstein equation.  See also \cite{Birrell:2014gea}.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spectral Method for Boltzmann-Einstein Equation  in an FRW Universe}\label{the_method}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Boltzmann-Einstein Equation  in an FRW Universe}
 
@@ -50,11 +52,10 @@ The Boltzmann-Einstein equation \req{boltzmann_p} can be simplified by the metho
 \end{align} 
 For free-streaming particles the vanishing of the collision operator implies conservation of comoving particle number of the particle species. From the associated powers of $a$ in \req{n:div} and \req{rho:div} we see that the energy per free streaming particle as measured by an observer scales as $1/a$, a manifestation or redshift.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Spectral Method}\label{the_method}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Orthogonal polynomials for systems close to kinetic and chemical equilibrium}
-Here we outline the approach for solving \req{a_vars} used in \cite{Esposito:2000hi,Mangano:2001iu} in order to contrast it with our approach as presented in Section \ref{kinetic_eq_approach}.  As just discussed, the Boltzmann-Einstein equation equation  is a first order partial differential equation and can be reduced using a new variable $y=a(t)p$  via the method of characteristics and exactly solved in the collision free ($C[f]=0)$ limit.   This motivates a change of variables from $p$ to $y$ which eliminates the momentum derivative, leaving the simplified equation
+Here we outline the approach for solving \req{a_vars} used in \cite{Esposito:2000hi,Mangano:2001iu} in order to contrast it with our approach as presented below.  As just discussed, the Boltzmann-Einstein equation equation  is a first order partial differential equation and can be reduced using a new variable $y=a(t)p$  via the method of characteristics and exactly solved in the collision free ($C[f]=0)$ limit.   This motivates a change of variables from $p$ to $y$ which eliminates the momentum derivative, leaving the simplified equation
 \begin{equation}\label{a_vars}
 \partial_tf=\frac{1}{E} C[f]\,.
 \end{equation}
@@ -70,7 +71,7 @@ f=f_{ch}\chi\,,\qquad \chi=\sum_i d^i\hat\chi_i
 and derive evolution equations for the coefficients, leading to a spectral method\index{spectral method} for the Boltzmann-Einstein equation in a FRW universe.
 
 Using this ansatz  equation \req{a_vars} becomes
-\begin{equation}
+\begin{equation}\label{eq:ChemEquilibMethod}
 \dot{d}^k=\int_0^\infty\frac{1}{E}\hat{\chi}_k C[f]dy\,.
 \end{equation}
 We call this the chemical equilibrium method.
@@ -121,7 +122,7 @@ f_\Upsilon (y)=\frac{1}{\Upsilon^{-1}e^{y/(aT)}+1}\,,
  we can attempt to write it as a perturbation of the chemical equilibrium distribution,  
 \begin{equation}\label{chi_def}
 f_\Upsilon=f_{ch}\chi
-\end{equation} as we would need to when using the method of Section \ref{free_stream_approach}.  We expand $\chi=\sum_i d^i\hat\chi_i$ in the orthonormal basis generated by $f_{ch}$ and, using $N$ terms, form the $N$-mode approximation $f_\Upsilon^N$ to $f_\Upsilon$.  The $d^i$ are obtained by taking the $L^2(f_{ch}dy)$ inner product of $\chi$ with the basis function $\hat\chi_i$,
+\end{equation} as we would need to when using the method \req{eq:ChemEquilibMethod}.  We expand $\chi=\sum_i d^i\hat\chi_i$ in the orthonormal basis generated by $f_{ch}$ and, using $N$ terms, form the $N$-mode approximation $f_\Upsilon^N$ to $f_\Upsilon$.  The $d^i$ are obtained by taking the $L^2(f_{ch}dy)$ inner product of $\chi$ with the basis function $\hat\chi_i$,
 \begin{equation}
 d^i=\int\hat\chi_i \chi f_{ch}dy=\int\hat\chi_i  f_\Upsilon dy\,.
 \end{equation}
