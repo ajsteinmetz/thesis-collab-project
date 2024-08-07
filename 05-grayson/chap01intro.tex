@@ -423,7 +423,7 @@ Solving Maxwell's equations in the Lorentz gauge $k \cdot \widetilde{A}=0$ one f
 \end{equation}
 $\mu_0$ denotes the magnetic permittivity of the vacuum, and we have used \req{eq:ohm} to express the induced current. 
 
-We proceed by algebraically solving for the self-consistent potential. To do this, we first note that in a homogeneous medium, the response depends only on two independent scalar polarization functions $\Pi_\parallel$ and $\Pi_\perp$ describing polarization in the parallel and transverse directions relative to the wave-vector $\boldsymbol{k}$ \cite{Weldon:1982aq}. The polarization tensor may be written in terms of these polarization functions as
+\paragraph{Projection of plasma polarization tensor.} We proceed by algebraically solving for the self-consistent potential. To do this, we first note that in a homogeneous medium, the response depends only on two independent scalar polarization functions $\Pi_\parallel$ and $\Pi_\perp$ describing polarization in the parallel and transverse directions relative to the wave-vector $\boldsymbol{k}$ \cite{Weldon:1982aq}. The polarization tensor may be written in terms of these polarization functions as
 \begin{equation}\label{eq:poltensgen}
  \Pi^{\mu \nu}(k,u) = \Pi_\parallel(k) L^{\mu \nu}(k,u) + \Pi_\perp(k) S^{\mu \nu}(k,u)\,,
 \end{equation}
@@ -492,7 +492,7 @@ The gauge condition \req{eq:apar} gives the self-consistent potential $\widetild
 \end{equation}
 To obtain the electromagnetic fields in position space, one must Fourier transform \reqs{eq:phi}{eq:aperp}. If done analytically, this usually requires finding the poles in the denominator of these expressions, which equates to finding the poles of the thermal photon propagator. These poles represent propagating modes in the plasma. Modes will often be located at complex values in the $\omega, \mathbf{k}$ plane leading to finite lifetimes and spatial dispersion. 
 
-Here, we briefly mention an alternative to the self-consistent fields, which comes from assuming that the back reaction of the plasma due to the external fields is small compared to the external field. In this case, one can use the external field in the linear response equation instead of the total field
+\paragraph{Small back-reaction limit.} Here, we briefly mention an alternative to the self-consistent fields, which comes from assuming that the back reaction of the plasma due to the external fields is small compared to the external field. In this case, one can use the external field in the linear response equation instead of the total field
 \begin{equation}\label{eq:pert}
     \widetilde{j}_{\mathrm{ind}}^{\mu}(k) = {\Pi^{\mu}}_{\nu}(k) \widetilde{A}_\text{ext}^{\nu}(k)\,.
 \end{equation}
