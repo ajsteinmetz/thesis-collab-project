@@ -65,7 +65,8 @@ In \cite{Grayson:2022asf}, we use the first-order electromagnetic Debye mass \re
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\linewidth]{plots/chap02QCD/kappaDEBYE.png}
-    \caption{\textit{From \cite{Grayson:2022asf}.} Plot of the electromagnetic Debye mass and the QCD dampening rate $\kappa$ as a function of temperature. At temperature $T=300\,$MeV used here, $\kappa = 4.86\, m_D$.\label{fig:kappaDebye}}
+    \caption{Plot of the electromagnetic Debye mass and the QCD dampening rate $\kappa$ as a function of temperature. At temperature $T=300\,$MeV used here, $\kappa = 4.86\, m_D$. \cccite{Grayson:2022asf}}
+    \label{fig:kappaDebye}
 \end{figure}
 
 where $N_f$ is the number of flavors, $\zeta(x)$ denotes the Riemann zeta function, and $\alpha_s(T)$ is the running QCD coupling.  We model the running of the QCD coupling constant as a function of temperature in the range $T<5T_c$ using a fit provided in \cite{Letessier:2002ony}:
@@ -79,7 +80,7 @@ This is plotted along with the electromagnetic Debye mass in \reff{fig:kappaDeby
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\linewidth]{plots/chap02QCD/condcomp.png}
-    \caption{The black line shows the static conductivity $\sigma_0$ as a function of temperature predicted by \req{eq:condstat}, which is compared to lattice results adapted from \cite{Aarts:2020dda} for $T>T_c$. The factor of $C_{\text{em}}$, defined in \req{eq:DebyemQCD}, normalizes the conductivity by the charge of the plasma constituents, such that results using different numbers of dynamical quark flavors can be compared. We indicate each set of points by its arXiv reference: blue diamonds \cite{Amato:2013naa,Aarts:2014nba}, green circles \cite{Brandt:2015aqk}, and red triangles \cite{Astrakhantsev:2019zkr}.}
+    \caption{The black line shows the static conductivity $\sigma_0$ as a function of temperature predicted by \req{eq:condstat}, which is compared to lattice results adapted from \cite{Aarts:2020dda} for $T>T_c$. The factor of $C_{\text{em}}$, defined in \req{eq:DebyemQCD}, normalizes the conductivity by the charge of the plasma constituents, such that results using different numbers of dynamical quark flavors can be compared. We indicate each set of points by its arXiv reference: blue diamonds \cite{Amato:2013naa,Aarts:2014nba}, green circles \cite{Brandt:2015aqk}, and red triangles \cite{Astrakhantsev:2019zkr}}
     \label{fig:lattice comp}
 \end{figure}
 
@@ -113,7 +114,9 @@ These lattice-QCD results \cite{Amato:2013naa,Aarts:2014nba,Brandt:2015aqk,Astra
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\para{Magnetic field in QGP during a nuclear collision}\label{sec:Maxwell2} Assuming that the QGP is an infinite homogeneous and stationary medium near equilibrium, we can solve Maxwell's equations for the self-consistent fields as in Section~\ref{sec:Maxwell}. Then the magnetic field is given by Fourier transforming the momentum space expressions given in \reqs{eq:aperp}{eq:ftfields} to position space
+\label{sec:Maxwell2}
+\para{Magnetic field in QGP during a nuclear collision}
+Assuming that the QGP is an infinite homogeneous and stationary medium near equilibrium, we can solve Maxwell's equations for the self-consistent fields as in Section~\ref{sec:Maxwell}. Then the magnetic field is given by Fourier transforming the momentum space expressions given in \reqs{eq:aperp}{eq:ftfields} to position space
 \begin{equation}\label{eq:magorgin}
    \boldsymbol{B}(t, z) = \int \frac{d^4k}{(2\pi)^4}  e^{-i\omega t+ik_z z}
  \frac{\mu_0 i \boldsymbol{k} \times\ft{j}_{\perp \text{ext}}(\omega, \boldsymbol{k})}{\boldsymbol{k}^2 - \omega^2 - \mu_0 \Pi_{\perp}(\omega, \boldsymbol{k})}\,.
@@ -141,7 +144,7 @@ The numerical result for the position-space magnetic field found by Fourier tran
 \hspace{0.05\linewidth}
 \includegraphics[width=0.44\linewidth]{plots/chap02QCD/bf100lin.png}
 %}
-\caption{\textit{From \cite{Grayson:2022asf}.} The magnetic field at the collision center as a function of time, with $T = 300$\,MeV for Au-Au collisions ($Z=79$) at $\sqrt{s_\text{NN}} = 200$\,GeV and impact parameter $b = 6.4\,$fm. The left panel shows the magnetic field on a semi-logarithmic scale up to $ct = 5$\,fm. The right panel shows the early-time magnetic field on a linear scale. At the chosen temperature, the electromagnetic Debye mass is $m_D = 74\,$MeV, and the quark damping rate is $\kappa = 4.86\,m_D$. This gives a static conductivity of $\sigma_0 = 5.01\,$MeV. Comparing the different approximations, we see they all have similar asymptotic behavior. Only the Drude conductivity, the light-cone limit of the conductivity, and the full conductivity $\sigma_\perp(\omega,\boldsymbol{k})$ describe the field at early times. Note that the plasma is considered homogeneous and stationary here. In a more realistic situation, the field would become screened only after the QGP is formed in the collision.\label{fig:bfcomp}}
+\caption{The magnetic field at the collision center as a function of time, with $T = 300$\,MeV for Au-Au collisions ($Z=79$) at $\sqrt{s_\text{NN}} = 200$\,GeV and impact parameter $b = 6.4\,$fm. The left panel shows the magnetic field on a semi-logarithmic scale up to $ct = 5$\,fm. The right panel shows the early-time magnetic field on a linear scale. At the chosen temperature, the electromagnetic Debye mass is $m_D = 74\,$MeV, and the quark damping rate is $\kappa = 4.86\,m_D$. This gives a static conductivity of $\sigma_0 = 5.01\,$MeV. Comparing the different approximations, we see they all have similar asymptotic behavior. Only the Drude conductivity, the light-cone limit of the conductivity, and the full conductivity $\sigma_\perp(\omega,\boldsymbol{k})$ describe the field at early times. Note that the plasma is considered homogeneous and stationary here. In a more realistic situation, the field would become screened only after the QGP is formed in the collision. \cccite{Grayson:2022asf}\label{fig:bfcomp}}
 \end{figure}
 
 One of the important results of this paper was that the fields of the ions, traveling near the speed of light, probe the polarization tensor along the light cone. The transverse conductivity on the light cone is
@@ -175,7 +178,7 @@ Both these results illustrate that the late-time magnetic field has a finite lim
 \begin{figure}
 \centering
 \includegraphics[width=0.85\linewidth]{plots/chap02QCD/bfgaamacomp.png}
-    \caption{\textit{Adapted from \cite{Grayson:2022asf}.} Plot of the freeze-out magnetic field for $T= 150$\,MeV. We expect that around this temperature QGP will hadronize into a mixed phase \cite{Letessier:1992xd}. The approximate late time solution \req{eq:banalyticapp} shown as an orange dashed line is compared to numerical calculations using the full polarization tensor \req{eq:magorgin} and to the late time analytic expansion \req{eq:latetimeB}. The approximate solution does not fully match the ultrarelativistic limit until times $t > t_{\sigma} \approx 59$\,fm/c. The magnetic field is independent of the beam energy over a wide range of $\gamma$ but begins to diverge slowly from the ultrarelativistic case at around $\gamma \leq 15$ for the time window shown in the figure. Lower beam energies result in a somewhat larger field at late times.\label{fig:bcolcomp}}
+    \caption{Plot of the freeze-out magnetic field for $T= 150$\,MeV. We expect that around this temperature QGP will hadronize into a mixed phase \cite{Letessier:1992xd}. The approximate late time solution \req{eq:banalyticapp} shown as an orange dashed line is compared to numerical calculations using the full polarization tensor \req{eq:magorgin} and to the late time analytic expansion \req{eq:latetimeB}. The approximate solution does not fully match the ultrarelativistic limit until times $t > t_{\sigma} \approx 59$\,fm/c. The magnetic field is independent of the beam energy over a wide range of $\gamma$ but begins to diverge slowly from the ultrarelativistic case at around $\gamma \leq 15$ for the time window shown in the figure. Lower beam energies result in a somewhat larger field at late times. \radapt{Grayson:2022asf}\label{fig:bcolcomp}}
 \end{figure}
 The approximation used to derive this solution holds for $\gamma\beta \gg \sqrt{ \kappa/\sigma_0} \approx 12$. In Fig.~\ref{fig:bcolcomp} we compare \req{eq:banalyticapp} to the full numerical result to explore its dependence on $\gamma$.  One can see that the static case \req{eq:banalyticapp} (black solid line) begins to diverge from the numerical solution, shown as dashed colored lines at around $\gamma \approx 15$.  In Fig.~\ref{fig:bcolcomp} one can see that the late-time magnetic field has a very soft dependence on collision energy. The time at which hadronization occurs $t_f$, which varies with collision energy, has a much stronger effect on the magnitude of the freeze-out field. Since the remnant magnetic field at hadronization does not depend strongly on the collision energy, an experimental measurement of the magnetic field at different collision energies could permit a determination of the electrical conductivity of the QGP or a determination of the freeze-out time of QGP if the conductivity is assumed to be known. 
 
@@ -495,7 +498,7 @@ Of course, we could have also studied electric fields in QGP which are in the sa
 \hspace{0.05\linewidth}
 \includegraphics[width=0.45\linewidth]{plots/chap02QCD/Ezz.png}
 %}
-\caption{Plots comparing the electric field in vacuum, shown as a black dashed line, to the electric field in QGP shown as the red points. The left plot shows the transverse electric field screened by the plasma. The plot on the right shows the electric field in the direction of motion enhanced by the plasma. We choose $T = 300$\,MeV and $Z=79$, for Au-AU collisions at $\sqrt{s} = 200$\,GeV at an impact parameter of half nuclear overlap $b = 1 R = 6.4\,$fm. The vertical line in the left plot indicates $ y = R$, approximately the transverse size of QGP. \label{fig:efcomp}}
+\caption{Plots comparing the electric field in vacuum, shown as a black dashed line, to the electric field in QGP shown as the red points. The left plot shows the transverse electric field screened by the plasma. The plot on the right shows the electric field in the direction of motion enhanced by the plasma. We choose $T = 300$\,MeV and $Z=79$, for Au-AU collisions at $\sqrt{s} = 200$\,GeV at an impact parameter of half nuclear overlap $b = 1 R = 6.4\,$fm. The vertical line in the left plot indicates $ y = R$, approximately the transverse size of QGP \label{fig:efcomp}}
 \end{figure}
 
 Additionally, we were interested in studying the distribution of electric charge around relativistic heavy nuclei in QGP. This can be found by Fourier transforming \req{eq:indch} for the external charge distribution \req{eq:rhoext}. The induced charge density for a single traveling nucleus at low $\gamma$ is shown in \reff{fig:efcomp}. The external charge distribution increases with the Lorentz factor $\gamma$, but the total induced charge, which is the integral of the red dashed line, remains constant but trails behind further at larger velocities.
@@ -508,7 +511,7 @@ Additionally, we were interested in studying the distribution of electric charge
 \hspace{0.05\linewidth}
 \includegraphics[width=0.45\linewidth]{plots/chap02QCD/indchg5.png}
 %}
-\caption{The external (black), induced (red dashed), and total charge density (blue dashed) for a single nucleus traveling in the $+\boldsymbol{\hat{z}}$ direction at $\gamma = 1.2$ on the left and $\gamma = 5$ on the right. The induced charge distribution trails behind the nuclei. The external charge density increases with $\gamma$. The induced charge distribution trails behind the nuclei more for larger $\gamma$. \label{fig:potcomp}}
+\caption{The external (black), induced (red dashed), and total charge density (blue dashed) for a single nucleus traveling in the $+\boldsymbol{\hat{z}}$ direction at $\gamma = 1.2$ on the left and $\gamma = 5$ on the right. The induced charge distribution trails behind the nuclei. The external charge density increases with $\gamma$. The induced charge distribution trails behind the nuclei more for larger $\gamma$ \label{fig:potcomp}}
 \end{figure}
 
 As seen in \reff{fig:potcomp}, a wakefield of induced charge forms behind the traveling nucleus in QGP. In \reff{fig:chgwake}, we show a two-dimensional contour plot of the charged wake. The wakefield depicted in \reff{fig:chgwake} is damped at traverse distances instead of conical as in the collisionless case.
@@ -516,7 +519,7 @@ As seen in \reff{fig:potcomp}, a wakefield of induced charge forms behind the tr
 \centering
 \includegraphics[width=0.85\linewidth]{plots/chap02QCD/chwake.png}
 %}
-\caption{2D plot of the wake field of a single traveling gold nucleus $\gamma = 5$ in QGP. The blue arrow indicates the direction of motion and the grey disk represents the Lorentz contracted nucleus. Lines of constant charge density are shown as contours. \label{fig:chgwake}}
+\caption{2D plot of the wake field of a single traveling gold nucleus $\gamma = 5$ in QGP. The blue arrow indicates the direction of motion and the grey disk represents the Lorentz contracted nucleus. Lines of constant charge density are shown as contours \label{fig:chgwake}}
 \end{figure}
 
 

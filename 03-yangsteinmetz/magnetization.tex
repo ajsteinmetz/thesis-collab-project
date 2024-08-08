@@ -20,7 +20,7 @@ Magnetized baryon inhomogeneities which in turn would produce anisotropies in th
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.95\textwidth]{plots/chap04cosmo/pmf.png}
-    \caption{Qualitative plot of the primordial magnetic field strength over cosmic time. All figures are printed in temporal sequence in the expanding universe beginning with high temperatures (and early times) on the left and lower temperatures (and later times) on the right.}
+    \caption{Qualitative plot of the primordial magnetic field strength over cosmic time. All figures are printed in temporal sequence in the expanding universe beginning with high temperatures (and early times) on the left and lower temperatures (and later times) on the right. \cccite{Steinmetz:2023ucp}. \radapt{Rafelski:2023emw}}
     \label{fig:pmf}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,7 +42,7 @@ where electrodynamics is expected to display nonlinear characteristics and (b) t
 \begin{figure}[ht]
  \centering
 \includegraphics[width=0.95\textwidth]{plots/chap04cosmo/EEPlasmaDensityRatio_new01.jpg}
- \caption{Number density of electron $e^{-}$ and positron $e^{+}$ to baryon ratio $n_{e^{\pm}}/n_{B}$ as a function of photon temperature in the universe. See text for further details. In this work we measure temperature in units of energy (keV) thus we set the Boltzmann constant to $k_{B}=1$. Figure courtesy of Cheng Tao Yang.}
+ \caption{Number density of electron $e^{-}$ and positron $e^{+}$ to baryon ratio $n_{e^{\pm}}/n_{B}$ as a function of photon temperature in the universe. See \rsec{section_electron} for further details. In this work we measure temperature in units of energy (keV) thus we set the Boltzmann constant to $k_{B}=1$. \cccite{Steinmetz:2023nsc}}
  \label{fig:densityratio} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,7 +85,7 @@ where $n\in0,1,2,\ldots$ is the Landau orbital quantum number, $p_{z}$ is the mo
  positron: $\sigma=-1$ & $U_{\rm Mag}<0$ & $U_{\rm Mag}>0$ \TBstrut\\
  \cline{2-3}
  \end{tabular}\\
- \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the non-relativistic magnetic dipole energy $U_{\rm Mag}$ obtainable from~\req{cosmokgp}.}
+ \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the non-relativistic magnetic dipole energy $U_{\rm Mag}$ obtainable from~\req{cosmokgp}. \cccite{Steinmetz:2023nsc}}
  \label{fig:schematic}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -426,7 +426,7 @@ In presence of a magnetic field in the Boltzmann approximation, the charge neutr
 \begin{figure}[ht]
  \centering
  \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.0cm,width=0.95\linewidth]{plots/chap04cosmo/thesis_chempot_fixed.pdf}
- \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$.}
+ \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$. \cccite{Steinmetz:2023ucp}. \radapt{Steinmetz:2023nsc}}
  \label{fig:chemicalpotential}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -481,14 +481,7 @@ The scale ${B}_{C}$ is where electromagnetism is expected to become subject to n
 The total magnetization ${\mathfrak M}$ can be broken into the sum of magnetic moment parallel ${\mathfrak M}_{+}$ and magnetic moment anti-parallel ${\mathfrak M}_{-}$ contributions
 \begin{align}
 \label{g2mag}
-{\mathfrak M}&={\mathfrak M}_{+}+{\mathfrak M}_{-}\,,\\
-{\mathfrak M}_{\pm}&=\frac{e^2}{\pi^2}\frac{T^{2}}{m_{e}^{2}}\xi^{\pm1}\left[\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left\{c_{1}(x_{\pm})K_1(x_\pm)+c_{0}K_0(x_\pm)\right\}\,,\\
-x_{+}&=\frac{m_{e}}{T}\,,\qquad
-x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,,
-\end{align}
-where the coefficients are given by
-\begin{align}
-    c_{1}(x_{\pm}) &= \left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b^2_0}{12x^2_\pm}\right)\right]x_\pm\,,\qquad c_{0} = \left[\frac{1}{6}-\left(\frac{1}{4}\pm\frac{g}{8}\right)\right]b_0\,.
+{\mathfrak M}&={\mathfrak M}_{+}+{\mathfrak M}_{-}\,.
 \end{align}
 
 We note that the expression for the magnetization simplifies significantly for $g\!=\!2$ which is the `natural' gyro-magnetic factor~\cite{Evans:2022fsu,Rafelski:2022bsv} for Dirac particles. For illustration, the $g\!=\!2$ magnetization from \req{defmagetization} is then
@@ -497,7 +490,9 @@ We note that the expression for the magnetization simplifies significantly for $
  {\mathfrak M}_{+}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
  \label{g2magminus}
  -{\mathfrak M}_{-}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}
- \left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,.
+ \left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\\
+ x_{+}&=\frac{m_{e}}{T}\,,\qquad
+ x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
 \end{align}
 As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{Tiesinga:2021myr}, the above two expressions for ${\mathfrak M}_{+}$ and ${\mathfrak M}_{-}$ are only modified by a small amount because of anomalous magnetic moment (AMM) and would be otherwise invisible on our figures.
 
@@ -511,7 +506,7 @@ As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$
 \begin{figure}[ht]
  \centering
  \includegraphics[width=0.95\linewidth]{plots/chap04cosmo/thesis_mag.pdf}
- \caption{The magnetization ${\mathfrak M}$, with $g\!=\!2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature}
+ \caption{The magnetization ${\mathfrak M}$, with $g\!=\!2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. \cccite{Steinmetz:2023ucp}. \radapt{Rafelski:2023emw,Steinmetz:2023nsc}}
  \label{fig:magnet} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -536,7 +531,7 @@ Early universe conditions may also apply to some extreme stellar objects with ra
 \begin{figure}[ht]
  \centering
  \includegraphics[width=0.95\textwidth]{plots/chap04cosmo/thesis_gfac.pdf}
- \caption{The magnetization $\mathfrak M$ as a function of $g$-factor plotted for several temperatures with magnetic scale $b_{0}=10^{-3}$ and polarization fugacity $\xi=1$.}
+ \caption{The magnetization $\mathfrak M$ as a function of $g$-factor plotted for several temperatures with magnetic scale $b_{0}=10^{-3}$ and polarization fugacity $\xi=1$. \cccite{Steinmetz:2023ucp}. \radapt{Steinmetz:2023nsc}}
  \label{fig:gfac} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -582,7 +577,7 @@ Statistically, we expect the transverse expectation values to be zero. We emphas
 \begin{figure}[ht]
  \centering
  \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.0cm,width=0.95\textwidth]{plots/chap04cosmo/thesis_perlepton.png}
- \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis as a function of temperature}
+ \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis as a function of temperature. \cccite{Steinmetz:2023nsc}}
  \label{fig:momentperlepton}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -627,7 +622,7 @@ The natural scale of the $e^{+}e^{-}$ magnetization with only a small spin fugac
 \begin{figure}[ht]
  \centering
  \includegraphics[width=0.9\textwidth]{plots/chap04cosmo/Spinchemical_03.png}
- \caption{The spin potential $\eta$ and chemical potential $\mu$ are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma}
+ \caption{The spin potential $\eta$ and chemical potential $\mu$ are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma. \cccite{Steinmetz:2023nsc}}
  \label{fig:self} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -645,7 +640,7 @@ The result of the self-magnetization assumption in \req{selfmag} for the potenti
 \begin{figure}[ht]
  \centering
  \includegraphics[width=0.95\textwidth]{plots/chap04cosmo/ElectronDensity_SpinChemicalPotential004.jpg}
- \caption{The number density $n_{e^{\pm}}$ of polarized electrons and positrons under the self-magnetization model for differing values of $b_{0}$. Figure courtesy of Cheng Tao Yang.}
+ \caption{The number density $n_{e^{\pm}}$ of polarized electrons and positrons under the self-magnetization model for differing values of $b_{0}$. \cccite{Steinmetz:2023nsc}}
  \label{fig:polarswap} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
