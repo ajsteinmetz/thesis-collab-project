@@ -15,7 +15,7 @@ First we give a basic overview of the Boltzmann-Einstein equation in an FRW Univ
 \subsection{Spectral Method for Boltzmann-Einstein Equation  in an FRW Universe}\label{the_method}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Boltzmann-Einstein Equation  in an FRW Universe}
+\para{Boltzmann-Einstein Equation  in an FRW Universe}
 
 Recall the  Boltzmann-Einstein equation in a general spacetime, as introduced in Section \ref{sec:Boltzmann_Einstein},
 \begin{equation}
@@ -54,7 +54,7 @@ For free-streaming particles the vanishing of the collision operator implies con
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Orthogonal polynomials for systems close to kinetic and chemical equilibrium}
+\para{Orthogonal polynomials for systems close to kinetic and chemical equilibrium}
 Here we outline the approach for solving \req{a_vars} used in \cite{Esposito:2000hi,Mangano:2001iu} in order to contrast it with our approach as presented below.  As just discussed, the Boltzmann-Einstein equation equation  is a first order partial differential equation and can be reduced using a new variable $y=a(t)p$  via the method of characteristics and exactly solved in the collision free ($C[f]=0)$ limit.   This motivates a change of variables from $p$ to $y$ which eliminates the momentum derivative, leaving the simplified equation
 \begin{equation}\label{a_vars}
 \partial_tf=\frac{1}{E} C[f]\,.
@@ -85,7 +85,7 @@ n&=\frac{g_p}{2\pi^2 a^3}\sum_0^2 d^i\int_0^\infty f_{ch}\hat\chi_i y^2dy\,,\\
 Note that the sums truncate at $3$ and $4$ terms respectively, due to the fact that $\hat\chi_k$ is orthogonal to all polynomials of degree less than $k$. This implies that in general, at least four modes are required to capture both the particle number and energy flow. More modes are needed if the non-thermal distortions are large and the back reaction of higher modes on lower modes is significant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Polynomial basis for systems   far from chemical equilibrium}\label{kinetic_eq_approach}
+\para{Polynomial basis for systems   far from chemical equilibrium}\label{kinetic_eq_approach}
 Our primary interest is in solving \req{T_vars} for systems close to the kinetic equilibrium distribution \req{k_eq} but not necessarily in chemical equilibrium, a task for which the method in the previous section is not well suited. For a general kinetic equilibrium distribution, the temperature does not necessarily scale as $T\propto 1/a$ i.e. the temperature is not controlled solely by dilution.  For this reason, we will find it more useful to make the change of variables $z=p/T(t)$ rather than the scaling used in \req{a_vars}.  Here $T(t)$ is to be viewed as the time dependent effective temperature of the distribution $f$, a notion we will make precise later.  With this change of variables, the Boltzmann-Einstein equation becomes
 \begin{equation}\label{T_boltzmann}
 \partial_t f-z\left(H+\frac{\dot T}{T}\right)\partial_z f=\frac{1}{E}C[f]\,.
@@ -113,7 +113,7 @@ We emphasize that we have made three important changes as compared to  the chemi
 We note that the authors of \cite{Esposito:2000hi} did consider the case of fixed chemical potential imposed as an initial condition. This is not the same as an emergent chemical non-equilibrium, i.e. time dependent $\Upsilon$, that we study here, nor do they consider a $z^2$ factor in the weight. We borrowed the idea for the $z^2$ prefactor from   Ref.\cite{Wilkening2}, where it was found that including a $z^2$ factor along with the non-relativistic chemical equilibrium distribution in the weight improved the accuracy of their method. Fortuitously,  this will also allow us to capture the particle number and energy flow with fewer terms than required by the chemical equilibrium method. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Comparison of Bases}\label{basis_comparison}
+\para{Comparison of Bases}\label{basis_comparison}
 
 Before deriving the dynamical equations for the method outlined in Section \ref{kinetic_eq_approach}, we illustrate the error inherent in approximating the chemical non-equilibrium distribution \req{k_eq}  with a  chemical equilibrium distribution \req{ch_eq} whose temperature is $T=1/a$.   Given a chemical non-equilibrium distribution 
 \begin{equation}\label{zeroth_approx}
@@ -169,7 +169,7 @@ in the denominator of \req{zeroth_approx}, which comes from changing variables f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Dynamics}\label{dynamics_sec}
+\para{Non-equilibrium dynamics}\label{dynamics_sec}
 In this section we derive the dynamical equations for the chemical non-equilibrium method.  In particular, we identify physically motivated dynamics for the effective temperature and fugacity.  Using \req{T_boltzmann} and the definition of $\psi$ from \req{kinetic_approx} we have
 \begin{align}\label{near_equilib_eq}
 \partial_t \psi+\frac{1}{f_\Upsilon }\frac{\partial f_\Upsilon }{\partial\Upsilon}\dot\Upsilon\psi-\frac{z}{f_\Upsilon }\left(H+\frac{\dot{T}}{T}\right)\left(\psi\partial_zf_\Upsilon +f_\Upsilon \partial_z \psi\right)=\frac{1}{f_\Upsilon E}C[f_\Upsilon \psi]\,.
@@ -314,7 +314,7 @@ f(z,t)=&\int_0^t\frac{e^{s-t}}{\Upsilon^{-1}\exp[a(t)T(t)z/(a(s)T_{eq}(s))]+1}ds
 We use this to test the chemical equilibrium and chemical non-equilibrium methods under two different conditions. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Reheating Test}
+\para{Reheating Test}
 First we compare the chemical equilibrium and non-equilibrium methods in a scenario that exhibits reheating.  Motivated by applications to cosmology, we choose a scale factor evolving as in the radiation dominated era, a fugacity $\Upsilon=1$, and choose an equilibrium temperature that exhibits reheating like behavior with $aT_{eq}$ increasing for a period of time,
 \begin{align}\label{a_T_def}
 a(t)=\left(\frac{t+b}{b}\right)^{1/2}\,,\ \  \ \
@@ -451,7 +451,7 @@ In summary, in addition to the reduction in the computational cost when going fr
 \subsection{Orthogonal Polynomials}\label{orthopoly_app}
 In this section we give details regarding the construction of the orthogonal polynomials that are required for both the chemical equilibrium and non-equilibrium methods.\index{orthogonal polynomials}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Generalities}\label{ortho-general}
+\para{Generalities}\label{ortho-general}
 Let $w:(a,b)\rightarrow [0,\infty)$ be a weight function where $(a,b)$ is a (possibly unbounded) interval and consider the Hilbert space $L^2(w(x) dx)$.   We will consider weights such that $x^n\in L^2(w(x) dx)$ for all $n\in\mathbb{N}$. We denote the inner product by $\langle\cdot,\cdot\rangle$, the norm by $||\cdot||$, and for a vector $\psi\in L^2$ we let $\hat{\psi}\equiv \psi/||\psi||$.  The classical three term recurrence formula can be used to define a set of orthonormal polynomials $\hat{\psi}_i$ using this weight function, see, e.g.,  \cite{Olver},
 \begin{align}\label{poly_recursion}
 &\psi_0=1\,, \hspace{2mm} \psi_1=||\psi_0||(x-\langle x\hat\psi_0,\hat{\psi}_0\rangle)\hat{\psi}_0\,,\\
@@ -473,7 +473,7 @@ a_1^0=&\frac{||\psi_0||}{||\psi_1||}\,.\notag
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Parametrized Families of Orthogonal Polynomials}\label{ortho-polynom-fam}
+\para{Parametrized Families of Orthogonal Polynomials}\label{ortho-polynom-fam}
 The chemical non-equilibrium method requires not just a single set of orthogonal polynomials, but rather a parametrized family of orthogonal polynomial generated by a weight function $w_t(x)$ that is a $C^1$ function of both $x\in(a,b)$ and the parameter $t$. The corresponding time-dependent basis of orthogonal polynomials, also called a moving frame\index{moving frame}, is used to define the spectral method for solving the  Boltzmann-Einstein equation as outlined in Section \ref{dynamics_sec}.  To emphasize the time dependence, in this section we write $g_t(\cdot,\cdot)$ for the inner product $\langle\cdot,\cdot\rangle$ (not to be confused with the spacetime metric tensor).  We will assume that $\partial_t w$ is dominated by some $L^1(dx)$ function of $x$ only that decays exponentially as $x\rightarrow\pm\infty$ (if the interval is unbounded). In particular, this holds for the weight function \req{weight}.
 
 Given the above assumption about the decay of $\partial_t w$, the dominated convergence theorem implies that $\langle p,q\rangle$ is a $C^1$ function of $t$ for all polynomials $p$ and $q$ and justifies  differentiation under the integral sign. By induction, it also implies implies that the $\hat\psi_i$ have coefficients that are $C^1$ functions of $t$. Therefore, for any polynomials $p$, $q$ whose coefficients are $C^1$ functions of $t$ we have
@@ -500,7 +500,7 @@ g_t(\dot{\hat\psi}_i,\hat\psi_j)=-\dot{g}_t(\hat\psi_i,\hat\psi_j),\hspace{2mm} 
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Proof of Lower Triangularity}\label{lower_triang}
+\para{Proof of Lower Triangularity}\label{lower_triang}
 Here we prove that the matrices that define the dynamics of the mode coefficients $b^k$ are lower triangular.  Recall the definitions
 \begin{align}
 A^k_i(\Upsilon)\equiv&\langle\frac{z}{f_\Upsilon }\hat\psi_i\partial_zf_\Upsilon ,\hat\psi_k\rangle+\langle z\partial_z \hat\psi_i,\hat\psi_k\rangle\,,\\
