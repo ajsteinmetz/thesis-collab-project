@@ -23,7 +23,7 @@ The lightest charged leptons $e^\pm$ can persist via the reaction $\gamma\gamma\
 
 2. The Universe today is filled with magnetic fields at various scales and strengths, both within galaxies, and in deep extra-galactic space. The origin of these magnetic fields is currently unknown. In the early Universe, above temperature $T>20$\,keV, we have a dense nonrelativistic  $e^\pm$ plasma which could prove to be primordial origin of cosmic magnetism as we describe below~\cite{Steinmetz:2023ucp,Rafelski:2023emw,Steinmetz:2023nsc}. We will show that beyond electric currents the magnetic moments of electrons can contribute to spin based magnetization process.
 
-Understanding the abundances of $\mu^+\mu^-$ and $e^+e^-$-pair plasma provides essential insights into the evolution of the primordial Universe.  In the following we discuss the muon density down to their persistence temperature in section \ref{section_muon}, and explore the electron/positron plasma properties, including the microscope damping rate and self-consistence damping rate in section \ref{section_electron}.
+Understanding the abundances of $\mu^+\mu^-$ and $e^+e^-$-pair plasma provides essential insights into the evolution of the primordial Universe.  In the following we discuss the muon density down to their persistence temperature in section \ref{section_muon}, and explore the electron/positron plasma properties, including the QED plasma damping rate and damped dynamic screening in section \ref{section_electron}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Muon pairs in the early Universe}\label{section_muon}
@@ -378,14 +378,27 @@ We solve \req{Numerical_eq} numerically. In \rf{KappaSol:fig}, we plot the resul
 This first estimate of self-consistent plasma damping shows high sensitivity demonstrating the need for full self-consistent evaluation of damping  rate in plasma within context  of a well-defined, self-consistent approach, where both damping and photon properties in plasma are determined in a mutually consistent manner, a project which is well ahead of current state of the art and which is well beyond the scope of this report.  
 
 
+
+
 %Chris' Screening ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %\subsection{Electron-positron plasma in BBN}\label{chap:bbn}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Electron positron plasma screening in BBN}\label{sec:Discussion}
+At present, the observation of light element (e.g. D, $^3$He, $^4$He, and $^7$Li) abundances produced in Big-Bang nucleosynthesis (BBN) offers a reliable probe of the early Universe before the recombination. Much effort of the BBN study is currently being made to reconcile the discrepancies and tensions between theoretical predictions and observations of light element abundances, e.g. $^7$Li problem ~\cite{Pitrou:2018cgg}.
+Current models assume that the Universe was essentially void of anything but reacting light nucleons and electrons needed to keep the local baryon density charge-neutral, a situation similar to the experimental environment where empirical nuclear reaction rates are obtained.
 
-In this chapter, we review \cite{Grayson:2023flr}, which applies the non-relativistic longitudinal polarization function to study the dynamics of the electron-positron plasma in the early Universe. In particular, we discussed the damping rate, the electron-positron to baryon density ratio, and their potential implications for Big Bang Nucleosynthesis (BBN) through screening within linear response theory. We derived an approximate analytic formula for the potential of a moving heavy charge in a collisional plasma in \req{eq:pos_point_DDS} describing screening effects previously found only numerically \cite{Hwang:2021kno}. Our analytic formula can be readily used to estimate the effect of screening on thermonuclear reactions using \req{eq:DDSenhance}. The correction to thermonuclear reactions due to damped-dynamic screening is small due to the low velocity of nuclei and a large amount of collisional scattering. This is in line with the findings of \cite{Hwang:2021kno}, who conclude that even though the densities are large, they are not enough to modify the potential at short distances related to screening. The analytic expression we find for the nuclear reaction rate enhancement \req{eq:DDSenhance} in a collisional plasma could be useful in other fusion environments such as stellar fusion and laboratory fusion experiments, such as those discussed in ~\cite{Labaune:2013dla,Margarone:2022mdpi}.
+The electron-positron plasma influences light element abundances through electromagnetic screening of the nuclear potential. The electron cloud surrounding the charge of an ion screens other nuclear charges far from its own radius and reduces the Coulomb barrier. In nuclear reactions, the reduction of Coulomb barrier makes the penetration probability easier and enhance the thermonuclear reaction rates. In this case, the modification of the nuclei interaction due to the plasma screening effect may plays a key role in the formation of light element in the BBN. 
+
+The enhancement factor of thermonuclear reaction rates and screening potential are calculated by Salpeter in 1954~\cite{Salpeter:1954nc}, which describes the static screening effects for the thermonuclear reactions. In an isotropic and homogeneous plasma the Coulomb potential of a point-like particle with charge $Ze$ at rest is modified into~\cite{Salpeter:1954nc}
+\begin{align}
+\phi_\text{stat}(r)=\frac{Ze}{4\pi\epsilon_0 r}e^{-m_Dr},
+\end{align}
+where $m_D$ is the Debye mass. After that it has been exploited widely in BBN for static screening ~\cite{1969ApJ...155..183S,Famiano:2016hhs}. Subsequently, the study of dynamical screening for moving ions has been taken into account~[\cite{1988ApJ...331..565C,Gruzinov:1997as,Hwang:2021kno}]. When a test charge moves with a velocity that is enough to react with the background charge in plasma, the Coulomb potential is modified by the dynamical effect. However, the applications focus on the weakly interacting electron-positron plasma only. 
+
+
+In this section, we review \cite{Grayson:2023flr}, which applies the non-relativistic longitudinal polarization function to study the dynamics of the electron-positron plasma in the early Universe. In particular, we discussed the damping rate, the electron-positron to baryon density ratio, and their potential implications for Big Bang Nucleosynthesis (BBN) through screening within linear response theory. We derived an approximate analytic formula for the potential of a moving heavy charge in a collisional plasma in \req{eq:pos_point_DDS} describing screening effects previously found only numerically \cite{Hwang:2021kno}. Our analytic formula can be readily used to estimate the effect of screening on thermonuclear reactions using \req{eq:DDSenhance}. The correction to thermonuclear reactions due to damped-dynamic screening is small due to the low velocity of nuclei and a large amount of collisional scattering. This is in line with the findings of \cite{Hwang:2021kno}, who conclude that even though the densities are large, they are not enough to modify the potential at short distances related to screening. The analytic expression we find for the nuclear reaction rate enhancement \req{eq:DDSenhance} in a collisional plasma could be useful in other fusion environments such as stellar fusion and laboratory fusion experiments, such as those discussed in ~\cite{Labaune:2013dla,Margarone:2022mdpi}.
 
 Overall we were very surprised to find that the screening effects in BBN were so small even in the static case, considering that the number densities present during BBN are $\sim 10^4$ times normal matter. If we compare this to screening effects on Earth, we can see that although plasmas occur at lower densities, they also occur in much colder environments. The strength of the screening effect is related to the Debye mass
 \begin{equation}
@@ -469,7 +482,7 @@ In these expressions, the plasma frequency $\omega_p$ (defined as $m_L$ in~\cite
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in the plasma. Here we need only consider $\Pi_\parallel$ since the vector potential $\boldsymbol{A}(t,\boldsymbol{x})$ of the traveling ion will be small in the non-relativistic limit. This work does not consider the effect of a primordial magnetic field discussed in~\cite{Steinmetz:2023abc}. We note that Debye mass $m_D$ is related to the usual Debye screening length of the field in the plasma as
+The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in the plasma. Here we need only consider $\Pi_\parallel$ since the vector potential $\boldsymbol{A}(t,\boldsymbol{x})$ of the traveling ion will be small in the non-relativistic limit. This work does not consider the effect of a primordial magnetic field discussed in~\cite{Steinmetz:2023nsc}. We note that Debye mass $m_D$ is related to the usual Debye screening length of the field in the plasma as
 \begin{equation}\label{eq:mL}
 	1/\lambda_D^{2} = m_D^2= 4 \pi \alpha \left(\frac{2mT}{\pi}\right)^{3/2}\frac{e^{-m/T}}{2T}\,.
 \end{equation}

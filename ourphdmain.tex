@@ -12,6 +12,7 @@
 \usepackage{slashed}
 \usepackage{xcolor}
 \usepackage{xstring}
+\usepackage{xparse}
 %\usepackage[numbers,authoryear]{natbib}
 \usepackage{graphicx}
 \usepackage{rotating}
@@ -55,9 +56,8 @@
 \newcommand{\cccite}[1]{\textit{Published in Ref.~\cite{#1} under the \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}}
 \newcommand{\radapt}[1]{\textit{Adapted from Ref.~\cite{#1}}}
 \newcommand{\para}[1]{\paragraph{#1}\hfill\break\noindent}
-\newcommand{\allcite}[1]{\hyperlink{cite.#1}{\StrBefore{#1}{:}\ et. al. (\StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
-\newcommand{\allcitep}[1]{\hyperlink{cite.#1}{\StrBefore{#1}{:}\ et. al. (preprint \StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
-
+\NewDocumentCommand{\allcite}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ et. al. }{ and #2 }(\StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
+\NewDocumentCommand{\allcitep}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ et. al. }{ and #2 }(preprint \StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
 
 % Chris's commands
 \newcommand{\reff}[1]{Figure\,({\ref{#1}})}
