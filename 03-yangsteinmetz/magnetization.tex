@@ -1,175 +1,3 @@
-\subsubsection{Magnetization of the electron-positron plasma (ANDREW WORKING HERE)}
-
-\para{Electron-positron partition function}
-To study the statistical behavior of the $e^\pm$ system in a magnetic field, we utilize the general Fermion partition function~\cite{Elze:1980er}
-\begin{align}
- \label{PartFunc} \ln\mathcal{Z}=\sum_{\alpha}\ln\left(1+e^{-\beta(E-\eta)}\right)\,,
-\end{align}
-where $\beta=1/T$, $\alpha$ is the set of all quantum numbers in the system, and $\eta$ is the generalized chemical potential. In the case of a magnetized $e^{\pm}$ system, we consider it as a system of four quantum species: Particles and antiparticles, and spin aligned and anti-aligned. Taken together, we consider a system where electrons and positrons can be spin aligned or anti-aligned with the magnetic field $B$ and the partition function of the system can be written as\index{electron-positron plasma! partition function}
-\begin{align}\label{PartFuncB}
-%&\ln\mathcal{Z}_{tot}=&\frac{2eBV}{(2\pi)^2}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1/2}\sum_{n=0}^\infty\int^\infty_{0}dp_z\left[\ln\left(1+\Upsilon_{\sigma}^{s}(x)e^{-\beta E_{n}^{s}}\right)\right]\,\\
-\ln\mathcal{Z}_{tot}=\frac{2eBV}{(2\pi)^2}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1/2}\sum_{n=0}^\infty\int^\infty_{0}dp_z\left[\ln\left(1+\Upsilon(x)e^{(\sigma\eta_{e}+s\eta_s)/T}e^{-\beta E_{n}^{s}}\right)\right]\,,
-\end{align}
-where $n$ is the principle quantum number for the Landau levels. The parameter $\eta_{e}$ is the electron chemical potential and $\eta_s$ is the spin chemical potential~\cite{Steinmetz:2023nsc}. The parameter $\Upsilon(x)$ is the fugacity of the Fermi gas. In this thesis we will focus on the case $\Upsilon(x)=1$ and $\eta_s=0$ , 
-we leave the general case $\Upsilon(x)\neq1$ and $\eta_s\neq0$ for future work.
-
-
-
-In general, $\Upsilon=1$ represents the maximum entropy and corresponds to the normal Fermi distribution. The deviation of $\Upsilon\neq1$ represents the configurations of reduced entropy without pulling the system off a thermal temperature. This scenario is well studied for quarks in QGP. The situation for $e^\pm$ plasma is similar to the case of the quarks during QGP, but instead here the deviation is spatial rather than temporal. Inhomogeneity can arise from the influence of other forces on the gas such as gravitational forces. This is precisely the kind of behavior that may arise in the $e^{\pm}$ epoch as the dominant photon thermal bath keeps the Fermi gas in thermal equilibrium while spatial inequilibrium could spontaneously develop. 
-
-
-In the following, we will retain $\Upsilon(x)=1$ and consider the case $\eta_s/T\ll1$ for the first approximation. Then the partition function becomes
-\begin{align}
-\ln\mathcal{Z}_{tot}=\frac{2eBV}{(2\pi)^2}\sum_{s}^{\pm1/2}\sum_{n=0}^\infty\int^\infty_{0} \!\!dp_z\bigg[\ln\left(1+e^{-\beta(E_{n}^s-\eta_e)}\right)+\ln\left(1+e^{-\beta(E_{n}^s+\eta_e)}\right)\bigg].
-\end{align}
-Considering the $e^\pm$ plasma in a uniform magnetic field $B$ pointing along the $z$-axis, the energy $E_{n}^\pm$ of electron/positron system can be written as~\cite{Rafelski:2023emw}
-\begin{align}
-&E_{n}^\pm=\sqrt{p^2_z+\tilde m^2_\pm+2eBn},\qquad\tilde{m}^2_\pm=m^2_e+eB\left(1\mp\frac{g}{2}\right)\,,
-\end{align}
-where the $\pm$ script refers to spin aligned and anti-aligned eigenvalues. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. 
-
-To simplify the partition function, we consider the expansion of the logarithmic function as follows:
-\begin{align}
-\ln\left(1+x\right)=\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}x^k, \,\,\,\,\,\,\,\mathrm{for}\,|x|<1.
-\end{align}
-Then the partition function of electron/positron system can be written as
-\begin{align}
-\ln\mathcal{Z}_{tot}=&\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\int^\infty_{0} \!\!dp_z\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[e^{k\beta\mu_e}+e^{-k\beta\mu_e}\bigg]e^{-k\beta E_n^\pm}\notag\\
-&=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[2\cosh{(k\beta\mu_e)}\bigg]\int_0^\infty dp_z\,e^{-k\beta E_n^\pm}.
-\end{align}
-Using the general definition of Bessel function:
-\begin{align}
-K_\nu(\beta m)=\frac{\sqrt{\pi}}{\Gamma({\nu-1/2})}\frac{1}{m}\left(\frac{\beta}{2m}\right)^{\nu-1}\int_0^\infty\,dp\,p^{2\nu-2}e^{-\beta E} \,\,\,\,\,\,\,\mathrm{for}\,\nu>1/2,
-\end{align}
-the integral over $dp_z$ can be written as
-\begin{align}
-\int_0^\infty dp_z\,e^{-k\beta E_n^\pm}&=\frac{\Gamma{(1/2)}}{\sqrt{\pi}}\sqrt{\tilde{m}^2_\pm+2eBn}\,\,K_1\!\!\left({k\sqrt{\tilde{m}^2_\pm+2eBn}}/{T}\right)\notag\\&=\sqrt{\tilde{m}^2_\pm+2eBn}\,\,K_1\!\!\left({k\sqrt{\tilde{m}^2_\pm+2eBn}}/{T}\right).
-\end{align}
-In this case, the partition function becomes
-\begin{align}
-\ln\mathcal{Z}_{tot}&=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[2\cosh{(k\beta\mu_e)}\bigg]\sqrt{\tilde{m}^2_\pm+2eBn}\,\,K_1({k\sqrt{\tilde{m}^2_\pm+2eBn}}/{T})\notag\\
-&=\frac{2eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\bigg[2\cosh{(k\beta\mu_e)}\bigg]\sum_{n=0}^\infty W^\pm_1(n),
-\end{align}
-where we introduce the function $W^\pm_1(n)$ as follows
-\begin{align}
-W^\pm_1(n)\equiv\frac{k\sqrt{\tilde{m}^2_\pm+2eBn}}{T}\,\,K_1\!\!\left({k\sqrt{\tilde{m}^2_\pm+2eBn}}/{T}\right).
-\end{align}
-
-Considering the Euler-Maclaurin formula to replace the sum over Landau levels, we have \index{Euler-Maclaurin formula}
-\begin{align}
-\sum^{\infty}_{n=0}W^\pm_1(n)=\int^\infty_0\!\!dn\,W^\pm_1(n)&+\frac{1}{2}\bigg[W^\pm_1(\infty)+W^\pm_1(0)\bigg]\notag\\
-&\qquad+\frac{1}{12}\bigg[\left.\frac{\partial W^\pm_1}{\partial n}\right|_{\infty}-\left.\frac{\partial W^\pm_1}{\partial n}\right|_{0}\bigg]+R,
-\end{align}
-where $R$ is the error remainder which is defined by integrals over Bernoulli polynomials which is small and can be neglected~\cite{Elze:1980er}. Using the properties of Bessel function we have
-\begin{align}
-&\frac{\partial W^\pm_1}{\partial n}=-\frac{k^2eB}{T^2}K_0\left({k\sqrt{\tilde{m}^2_\pm+2eBn}}/{T}\right),\qquad W^\pm_1(\infty)=0,\\
-&\int^\infty_a\!\!dx\,x^2K_1(x)=a^2K_2(a),
-\end{align}
-then we obtain
-\begin{align}
-\sum^{\infty}_{n=0}W^\pm_1(n)
-&=\left(\frac{T^2}{k^2eB}\right)\left[\left(\frac{k\tilde{m}_\pm}{T}\right)^2K_2(k\tilde m_\pm/T)\right]+\frac{1}{2}\left[\left(\frac{k\tilde{m}_\pm}{T}\right)K_1(k\tilde m_\pm/T)\right]\notag\\
-&\qquad+\frac{1}{12}\left[\left(\frac{k^2eB}{T^2}\right)K_0(k\tilde m_\pm/T)\right].
-\end{align}
-Replacing the sum over Landau levels by the integral, the partition function becomes
-\begin{align}
-\ln\mathcal{Z}_{tot}=\ln\mathcal{Z}_{free}+\ln\mathcal{Z}_B\,,
-\end{align}
-where we define the partition functions as  
-\begin{align}
- \label{FreePart}&\ln\mathcal{Z}_{free}=\frac{T^3V}{2\pi^2}\left[2\cosh{\left(\frac{\eta_{e}}{T}\right)}\right]\sum_{i=\pm}x_i^2K_2\left(x_i\right)\,,\qquad x_i=\frac{\tilde{m}_i}{T}\\
- \label{MagPart}&\ln\mathcal{Z}_B=\frac{eBTV}{2\pi^2}\left[2\cosh{\left(\frac{\eta_{e}}{T}\right)}\right]\sum_{i=\pm}\bigg[\frac{x_i}{2}K_1\left(x_i\right)+\frac{b_0}{12}K_0\left(x_i\right)\bigg]\,.
-\end{align}
-The partition function $\ln(\mathcal{Z}_{free})$ in Eq.~(\ref{FreePart}) represents the general form of the Fermi partition function for $e^\pm$ with "effective mass" $\tilde{m}_\pm$ in our system. When the magnetic field $B=0$ the function $\ln(\mathcal{Z}_{free})$ will go back to the general form of the Fermi partition function without the external field. The partition function $\ln\mathcal{Z}_B$ gives us the partition with magnetic field effect to the order  $\mathcal{O}(eB)$ and  $\mathcal{O}(eB)^2$.
-
-
-In the temperature domain $ 200\,\mathrm{keV} > T > 20$ keV, we have $m_e\gg T$, and it suffices to consider the Boltzmann limit of the quantum distributions. Considering the Boltzmann approximation for non-relativistic electrons and positrons we can rewrite Eq.~(\ref{FreePart}) - Eq.~(\ref{MagPart}) and obtain
-\begin{align}
- \label{lnZ}
-&\ln\mathcal{Z}_{tot}\!=\!\frac{T^3V}{2\pi^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\sum_{i=\pm}\left\{x_i^{2} K_2\left(x_i\right)+\frac{b_0}{2}x_iK_1\left(x_i\right)+\frac{b^2_0}{12}K_0\left(x_i\right)\right\}.
-\end{align}
-Given the partition function Eq.~(\ref{lnZ}), we can explore the chemical potential and magnetization of $e^\pm$ plasma in the early Universe
-under the hypothesis of charge neutrality and entropy conservation.
-
-\para{Electron chemical potential under magnetic field}
-We explore the chemical potential of electron-positron plasma in a uniform magnetic field $B$ in the early Universe under the hypothesis of charge neutrality and entropy conservation. Considering the temperature after neutrino freeze-out, the charge neutrality condition can be written as
-\begin{align}
- \label{density_proton}
- \left(n_{e}-n_{\bar{e}}\right)=n_{p}=X_p\,\left(\frac{n_{B}}{s_{\gamma,e}}\right)\,s_{\gamma,e},\qquad X_p\equiv\frac{n_p}{n_B}\,,
-\end{align}
-where $n_{p}$ and $n_B$ is the number density of protons and baryons respectively. Using the partition function Eq.~(\ref{lnZ}), the net number density of electrons in Boltzmann approximation can be written as
-\begin{align}\label{NetElectron}
-\left(n_e-n_{\bar e}\right)&=\frac{T}{V}\frac{\partial}{\partial \eta_{e}}\ln\mathcal{Z}_{tot}\notag\\
-&=\frac{T^3}{2\pi^2}\left[2\sinh{(\eta_{e}/T)}\right]\sum_{i=\pm}\left[x_i^2K_2(x_i)+\frac{b_0}{2}x_i K_1(x_i)+\frac{b^2_0}{12}K_0(x_i)\right]\,.
-\end{align}
-Substituting Eq.~(\ref{NetElectron}) into the charge neutrality condition Eq.~(\ref{density_proton}), we can solve the chemical potential of electron $\eta_e/T$ numerically. We have
-\begin{align}\label{ChemicalPotential}
-\sinh{(\eta_{e}/T)}&=\frac{2\pi^2}{2T^3}\,\frac{X_p(n_B/s_{\gamma,e})s_{\gamma,e}}{\sum_{i=\pm}\left[x_i^2K_2(x_i)+\frac{b_0}{2}x_i K_1(x_i)+\frac{b^2_0}{12}K_0(x_i)\right]}\,,\\
-&\longrightarrow\frac{2\pi^2n_p}{2T^3}\,\frac{X_p(n_B/s_{\gamma,e})s_{\gamma,e}}{2x^2K_2(x)},\qquad x=m_e/T,\qquad \mathrm{for}\,\,b_0=0\label{ChemiticalPotential_000}.
-\end{align}
-We see in Eq.~(\ref{ChemiticalPotential_000}) that for the case $b_0=0$, the chemical potential agrees with the free particle result in~\cite{Grayson:2023flr}. In Fig.~\ref{ChemicalPotential_B} we plot the chemical potential of electron as a function of temperature with different value of $b_0$. It shows that the chemical potential is not sensitive to the magnetic field because the small value of $10^{-3}>b_0>10^{-11}$ can be neglected in Eq.~(\ref{ChemicalPotential}).
-%~~figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[width=\linewidth]{./plots/ChemicalPotential_new_survey}
-\caption{The chemical potential of electron as a function of temperature in the magnetic field $b_0$ with $X_p=0.878$ and $n_B/n_\gamma=6.05\times10^{-10}$. The red dashed line represents the magnetic field $b_0=1.1\times10^{-11}$ and blue line labels the magnetic field $b_0=5.5\times10^{-3}$}
-\label{ChemicalPotential_B}
-\end{center}
-\end{figure}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-\para{Electron-positron magnetization}
-%We consider the electron-positron plasma in the mean field approximation where the external field is representative of the \lq\lq bulk\rq\rq\ internal magnetization of the gas. Each particle is therefore responding to the averaged magnetic flux generated by its neighbors as well as any global external field contribution. 
-
-Considering the magnetized electron-positron partition function Eq.~(\ref{lnZ}), it is convenient to introduce the dimensionless magnetization $\overline{\mathcal{M}}$ and the critical field $B_c$ as follows \index{electron-positron plasma!magnetization}
-\begin{align}
-\label{Mdef}
-\overline{\mathcal{M}}\equiv\frac{M}{\mathcal{B}_{c}}=\frac{1}{\mathcal{B}_{c}}\left(\frac{T}{V}\frac{\partial \ln\mathcal{Z}_{tot}}{\partial B}\right)\,\qquad \mathcal{B}_{c}=\frac{m_{e}^{2}}{e}\,.
-\end{align}
-Substituting the partition function Eq.~(\ref{lnZ}) into Eq.~(\ref{Mdef}), the total magnetization ${\overline{\mathcal M}}$ can be broken into the sum of spin parallel $\overline{\mathcal M}_{+}$ and spin anti-parallel $\overline{\mathcal M}_{-}$ magnetization. We have
-\begin{align}\label{Magnetization}
-&{\overline{\mathcal M}}={\overline{\mathcal M}_+}+{\overline{\mathcal M}_-},\\
-&\overline{\mathcal M}_{\pm}=\frac{e^2T^{2}}{2\pi^2m_e^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left\{c_{1}(x_{\pm})K_1(x_i)+c_{0}K_0(x_\pm)\right\}\,,
-\end{align}
-where the coefficients are given by
-\begin{align}
-    c_{1}(x_{\pm}) &= \left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b^2_0}{12x^2_\pm}\right)\right]x_\pm\,,\qquad c_{0} = \left[\frac{1}{6}-\left(\frac{1}{4}\pm\frac{g}{8}\right)\right]b_0\,.
-\end{align}
-Substituting the chemical potential Eq.~(\ref{ChemicalPotential}) into Eq.~(\ref{Magnetization}), we can solve the magnetization numerically.
-%~Figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\textwidth]{./plots/Magnetization_Hc_new002.jpg}
-    \caption{The magnetization $\overline{\cal M}=\mathcal{M}/\mathcal{B}_C$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field strength ${\cal B}/{\cal B}_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity.}
-    \label{fig:magnet} 
-\end{figure}
-%~Figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In this thesis we focus on considering the case for $g=2$. In this case, the electron-positron magnetization can be written as 
-\begin{align}\label{Magnetization_g2}
-&{\overline{\mathcal M}}={\overline{\mathcal M}_+}+{\overline{\mathcal M}_-}\\
-&{\overline{\cal M}}_{+}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\eta_e}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
-&{\overline{\cal M}}_{-}=-\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\eta_e}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,
-\end{align}
-where $x_\pm$ are given by
-\begin{align}
-x_{+}=\frac{m_{e}}{T},\qquad   x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}
-\end{align}
-The discussion for the case $g\neq2$ can be found in~~\cite{Steinmetz:2023nsc}.
-
-In Fig.~\ref{fig:magnet}, we present the magnetization Eq.~(\ref{Magnetization_g2}) for the case $g=2$ as a function of temperature. It shows that the magnetization depends on the magnetic scale $b_0$ and the $e^{+}e^{-}$ plasma possesses an overall paramagnetic property, resulting in a positive magnetization $\overline{\mathcal{M}}$. This paramagnetic property is contrary to the conventional assumption that matter-antimatter plasmas lack significant inherent magnetic responses. However, the magnetization never exceeds the external field under the parameters considered, which shows a lack of ferromagnetic behavior. As the Universe cooled, the dropping magnetization slowed at $T_{\mathrm{split}}=20.3$ keV, where positrons vanished. Thereafter the remaining electron density diluted with cosmic expansion.
-
-In this section, we have explored the electron-positron plasma considering  external and self-magnetization fields  without spin potential $\eta_s/T\ll1$. However the nonzero spin potential $\eta_s\neq0$  would have an impact on the primordial $e^{+}e^{-}$ plasma. In general, the  magnetization is also a function of the spin potential $\eta_s$, and would be one important parameter that control the spin direction of primordial gas which allows for magnetization even in the absence of external magnetic fields. For further discussion see ~\cite{Steinmetz:2023nsc}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Matter-antimatter origin of cosmic magnetism}
-%\label{chap:cosmo}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent We investigate the hypothesis that the observed intergalactic magnetic fields (IGMF) are primordial in nature, predating the recombination epoch. Specifically, we explore the role of the extremely large electron-positron $(e^{+}e^{-})$ pair abundance in the temperature range of $2000\keV>T>20\keV$ which only disappeared after Big Bang nucleosynthesis (BBN). We review the status of cosmic magnetism in \rsec{sec:mag_universe} which motivates our study. \rsec{sec:abundance} discusses the extreme electron-positron abundance during this epoch. The statistical and thermodynamic theory of the electron-positron gas is described in \rsec{sec:theory}. \rsec{sec:magnetization} describes the relativistic paramagnetism of the electron-positron gas. We propose in \rsec{sec:ferro} a model of self-magnetization caused by spin polarization within the individual species in the gas.
-
-This chapter serves primarily as a review of our work in~\cite{Steinmetz:2023nsc,Steinmetz:2023ucp} and portions of~\cite{Rafelski:2023emw} where we propose that the early universe electron-positron plasma was a highly magnetized environment. We will use natural units $(c=\hbar=k_{B}=1)$ unless otherwise noted.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Magnetism in the Plasma Universe}\label{partX}
 \label{sec:mag_universe}
@@ -314,12 +142,12 @@ Higher order non-minimal magnetic contributions can be introduced to the Boltzma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent To obtain a quantitative description of the above evolution, we study the bulk properties of the relativistic charged/magnetic gasses in a nearly homogeneous and isotropic primordial universe via the thermal Fermi-Dirac or Bose distributions.
 
-The grand partition function for the relativistic Fermi-Dirac ensemble is given by the standard definition
+The grand partition function for the relativistic Fermi-Dirac ensemble is given by the standard definition~\cite{Elze:1980er}
 \begin{align}
     \label{part:1} \ln\mathcal{Z}_\mathrm{total} &= \sum_{\alpha}\ln\left(1+\Upsilon_{\alpha_{1}\ldots\alpha_{m}}\exp\left(-\frac{E_{\alpha}}{T}\right)\right)\,,\\
     \Upsilon_{\alpha_{1}\ldots\alpha_{m}} &= \lambda_{\alpha_{1}}\lambda_{\alpha_{2}}\ldots\lambda_{\alpha_{m}}\,,
 \end{align}
-where we are summing over the set all relevant quantum numbers $\alpha=(\alpha_{1},\alpha_{2},\ldots,\alpha_{m})$. We note here the generalized the fugacity $\Upsilon_{\alpha_{1}\ldots\alpha_{m}}$ allowing for any possible deformation caused by pressures effecting the distribution of any quantum numbers.
+where we are summing over the set all relevant quantum numbers $\alpha=(\alpha_{1},\alpha_{2},\ldots,\alpha_{m})$. We note here the generalized the fugacity $\Upsilon_{\alpha_{1}\ldots\alpha_{m}}$ allowing for any possible deformation caused by pressures effecting the distribution of any quantum numbers. In general, $\Upsilon=1$ represents the maximum entropy and corresponds to the normal Fermi distribution. The deviation of $\Upsilon\neq1$ represents the configurations of reduced entropy without pulling the system off a thermal temperature. Inhomogeneity can arise from the influence of other forces on the gas such as gravitational forces. This is precisely the kind of behavior that may arise in the $e^{\pm}$ epoch as the dominant photon thermal bath keeps the Fermi gas in thermal equilibrium while spatial non-equilibria could spontaneously develop.
 
 In the case of the Landau problem, there is an additional summation over $\widetilde{G}$ which represents the occupancy of Landau states~\cite{greiner2012thermodynamics} which are matched to the available phase space within $\Delta p_{x}\Delta p_{y}$. If we consider the orbital Landau quantum number $n$ to represent the transverse momentum $p_{T}^{2}=p_{x}^{2}+p_{y}^{2}$ of the system, then the relationship that defines $\widetilde{G}$ is given by
 \begin{alignat}{1}
@@ -438,6 +266,10 @@ As we will see in the proceeding section, this separation of the `free-like' par
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+To simplify the partition function, we consider the expansion of the logarithmic function
+\begin{align}
+\ln\left(1+x\right)=\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}x^k,\qquad\mathrm{for}\,|x|<1\,.
+\end{align}
 The partition function shown in equation \req{partition:1} can be rewritten removing the logarithm as
 \begin{gather}
 \label{partitionpower:1}
@@ -487,9 +319,26 @@ allowing us to rewrite the integral over momentum in \req{partitionpower:4} as
  \label{besselkint}
  \frac{1}{T}\int_{0}^{\infty}\!\!\mathrm{d}p_{z}\exp\!\left(\!{-\frac{k{\tilde m}_{s'}\varepsilon_{s'}^{n}}{T}}\!\right)\!=\!W_{1}\!\!\left(\frac{k{\tilde m}_{s'}\varepsilon_{s'}^{n}(0,{B})}{T}\right)\,.
 \end{align}
-The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=xK_{\nu}(x)$. The notation $\varepsilon(0,{B})$ in \req{besselkint} refers to the definition of dimensionless energy found in \req{effmass:2} with $p_{z}=0$. The standard Boltzmann distribution is obtained by summing only $k=1$ and neglecting the higher order terms.
+The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=xK_{\nu}(x)$. The notation $\varepsilon(0,{B})$ in \req{besselkint} refers to the definition of dimensionless energy found in \req{effmass:2} with $p_{z}=0$.
 
-We take advantage again of Euler-Maclaurin integration \req{eulermaclaurin} and integrate the partition function. After truncation of the series and error remainder, the partition function \req{partitionpower:1} can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind and cosmic magnetic scale $b_{0}$, yielding
+Summation over the auxillary function $W_{\nu}$ can be replaced via Euler-Maclaurin integration~\req{eulermaclaurin} as
+\begin{align}
+\sum^{\infty}_{n=0}W_1(n)=\int^\infty_0\!\!dn\,W_1(n)&+\frac{1}{2}\bigg[W_1(\infty)+W_1(0)\bigg]\notag\\
+&\qquad+\frac{1}{12}\bigg[\left.\frac{\partial W_1}{\partial n}\right|_{\infty}-\left.\frac{\partial W_1}{\partial n}\right|_{0}\bigg]+R(2),
+\end{align}
+Using the properties of Bessel function we have
+\begin{align}
+\frac{\partial W_1(s',n)}{\partial n}=-\frac{k^2eB}{T^2}K_0\left({\frac{k}{T}\sqrt{\tilde{m}^2_{s'}+2eBn}}\right),\qquad W_1(\infty)=0,\\
+\int^\infty_a\!\!dx\,x^2K_1(x)=a^2K_2(a)\,.
+\end{align}
+This yields
+\begin{align}
+    \sum^{\infty}_{n=0}W_1(s',n)
+    &=\left(\frac{T^2}{k^2eB}\right)\left[\left(\frac{k\tilde{m}_{s'}}{T}\right)^2K_2\left(\frac{k\tilde m_{s'}}{T}\right)\right]+\frac{1}{2}\left[\left(\frac{k\tilde{m}_{s'}}{T}\right)K_1\left(\frac{k\tilde m_{s'}}{T}\right)\right]\notag\\
+    &\qquad+\frac{1}{12}\left[\left(\frac{k^2eB}{T^2}\right)K_0\left(\frac{k\tilde m_{s'}}{T}\right)\right].
+\end{align}
+
+The standard Boltzmann distribution is obtained by summing only $k=1$ and neglecting the higher order terms. Therefore we can integrate the partition function over the summed Landau levels. After truncation of the series and error remainder (up to the first derivative $j=2$), the partition function \req{partitionpower:1} can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind and cosmic magnetic scale $b_{0}$, yielding
 \begin{gather}
     \label{boltzmann}
     \boxed{\ln\mathcal{Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]
@@ -497,7 +346,7 @@ We take advantage again of Euler-Maclaurin integration \req{eulermaclaurin} and 
     \label{xfunc}
     x_{s'}=\frac{{\tilde m}_{s'}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1-\frac{g}{2}s'\right)}\,.
 \end{gather}
-The latter two terms in \req{boltzmann} proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$ are the uniquely magnetic terms present in powers of magnetic scale \req{tbscale} containing both spin and Landau orbital influences in the partition function. The $K_{2}$ term is analogous to the free Fermi gas~\cite{greiner2012thermodynamics} being modified only by spin effects.
+The latter two terms in \req{boltzmann} proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$ are the uniquely magnetic terms present in powers of magnetic scale \req{tbscale} containing both spin and Landau orbital influences in the partition function. These are magnetic effects to order $\mathcal{O}(eB)$ and $\mathcal{O}(eB)^2$ respectively. The $K_{2}$ term is analogous to the free Fermi gas~\cite{greiner2012thermodynamics} being modified only by spin effects.
 
 This `separation of concerns' can be rewritten as
 \begin{gather}
@@ -552,7 +401,18 @@ allowing us to rewrite the partition function in \req{partitionpower:1} as
 \subsubsection{Electron-positron chemical potential}
 \label{sec:chem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent In presence of a magnetic field in the Boltzmann approximation, the charge neutrality condition \req{chargeneutrality} becomes
+\noindent Considering the temperature after neutrino freeze-out, the charge neutrality condition can be written as
+\begin{align}
+ \label{density_proton}
+ \left(n_{e^{-}}-n_{e^{+}}\right)=n_{p}=X_p\,\left(\frac{n_{B}}{s_{\gamma,e}}\right)\,s_{\gamma,e},\qquad X_p\equiv\frac{n_p}{n_B}\,,
+\end{align}
+where $n_{p}$ and $n_B$ is the number density of protons and baryons respectively. The parameter $s_{\gamma,e}$ is the entropy density which is primarily dominated by photons and electron(positrons) in this era. Due to the adiabatic expansion of the universe, the comoving entropy density is a conserved making the ratio
+\begin{align}
+    \frac{n_{B}}{s_{\gamma,e}} = \mathrm{const.}
+\end{align}
+a constant which can be measured today from the entropy content of the CMB today~\cite{Fromerth:2012fe}. The proton-to-baryon ratio is slightly offset by the presence of neutrons.
+
+In presence of a magnetic field in the Boltzmann approximation, the charge neutrality condition \req{chargeneutrality} and \req{density_proton} becomes
 \begin{gather}
  \label{chem}
  \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}
@@ -619,17 +479,23 @@ The scale ${B}_{C}$ is where electromagnetism is expected to become subject to n
 The total magnetization ${\mathfrak M}$ can be broken into the sum of magnetic moment parallel ${\mathfrak M}_{+}$ and magnetic moment anti-parallel ${\mathfrak M}_{-}$ contributions
 \begin{align}
 \label{g2mag}
-{\mathfrak M}={\mathfrak M}_{+}+{\mathfrak M}_{-}\,.
+{\mathfrak M}&={\mathfrak M}_{+}+{\mathfrak M}_{-}\,,\\
+{\mathfrak M}_{\pm}&=\frac{e^2}{\pi^2}\frac{T^{2}}{m_{e}^{2}}\xi^{\pm1}\left[\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left\{c_{1}(x_{\pm})K_1(x_\pm)+c_{0}K_0(x_\pm)\right\}\,,\\
+x_{+}&=\frac{m_{e}}{T}\,,\qquad
+x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,,
 \end{align}
+where the coefficients are given by
+\begin{align}
+    c_{1}(x_{\pm}) &= \left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b^2_0}{12x^2_\pm}\right)\right]x_\pm\,,\qquad c_{0} = \left[\frac{1}{6}-\left(\frac{1}{4}\pm\frac{g}{8}\right)\right]b_0\,.
+\end{align}
+
 We note that the expression for the magnetization simplifies significantly for $g\!=\!2$ which is the `natural' gyro-magnetic factor~\cite{Evans:2022fsu,Rafelski:2022bsv} for Dirac particles. For illustration, the $g\!=\!2$ magnetization from \req{defmagetization} is then
 \begin{align}
  \label{g2magplus}
  {\mathfrak M}_{+}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
  \label{g2magminus}
  -{\mathfrak M}_{-}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}
- \left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\\
- x_{+}&=\frac{m_{e}}{T}\,,\qquad
- x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
+ \left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,.
 \end{align}
 As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{Tiesinga:2021myr}, the above two expressions for ${\mathfrak M}_{+}$ and ${\mathfrak M}_{-}$ are only modified by a small amount because of anomalous magnetic moment (AMM) and would be otherwise invisible on our figures.
 
