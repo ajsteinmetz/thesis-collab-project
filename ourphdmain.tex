@@ -1,13 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag
 \documentclass[epjST]{svjour}
-%\documentclass[sn-aps]{sn-jnl}
 
 \usepackage{amsmath,amssymb}
 \usepackage{float}
-\usepackage[colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=magenta]{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=magenta]{hyperref}
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{footnote}
-%\usepackage{natbib}
 \usepackage{comment}
 \usepackage{doi}
 \usepackage{enumitem}
@@ -15,8 +13,7 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{rotating}
-%\usepackage{deluxetable} % Allows use of AASTEX deluxe tables
-\usepackage{aastex_hack} % Allows other AASTEX functionality.
+\usepackage{aastex_hack}
 \usepackage{appendix}
 \usepackage{imakeidx}
 \makeindex
@@ -24,9 +21,6 @@
 \makesavenoteenv{tabular}
 \makesavenoteenv{table}
 \makesavenoteenv{figure}
-%\makesavenoteenv{mdframed}
-%\usepackage[usenames,dvipsnames]{xcolor}
-
 
 % Useful macros for equations and units
 \newcommand{\ts}{\textstyle}
@@ -56,11 +50,7 @@
 \newcommand{\diag}{\mathrm{diag}}
 \newcommand{\cccite}[1]{\textit{Published in \cite{#1} under Creative Commons}}
 \newcommand{\para}[1]{\paragraph{#1}\hfill\break\noindent}
-% Write a command which takes in two references and says something like: "Published in [#] under CC-BY-4.0 and adapted from [#].
 % Chris's commands
-% Extra brackets to be removed.
-% Question marks in section 8.
-% Change figure captions and message Jan.
 \newcommand{\reff}[1]{Figure\,({\ref{#1}})}
 \newcommand{\wt}[1]{\widetilde{#1}}
 \newcommand{\eq}[1]{#1^{(\mathrm{eq})}}
@@ -74,8 +64,6 @@
 \newcommand{\jr}[1]{{\color{red}#1}}
 \newcommand{\cg}[1]{{\color{magenta}#1}}
 \newcommand{\mf}[1]{{\color{cyan}#1}}
-
-%\renewcommand*\contentsname{\thesubsection\ Contents}
 
 % Struts for tables 
 \newcommand\Tstrut{\rule{0pt}{2.6ex}}
