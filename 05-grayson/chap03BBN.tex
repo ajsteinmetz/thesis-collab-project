@@ -1,230 +1,230 @@
-\subsection{Electron-positron plasma in BBN}\label{chap:bbn}
+% \subsection{Electron-positron plasma in BBN}\label{chap:bbn}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Electron positron plasma screening in BBN:}\label{sec:Discussion}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \paragraph{Electron positron plasma screening in BBN:}\label{sec:Discussion}
 
-In this chapter, we review \cite{Grayson:2023flr}, which applies the non-relativistic longitudinal polarization function to study the dynamics of the electron-positron plasma in the early Universe. In particular, we discussed the damping rate, the electron-positron to baryon density ratio, and their potential implications for Big Bang Nucleosynthesis (BBN) through screening within linear response theory. We derived an approximate analytic formula for the potential of a moving heavy charge in a collisional plasma in \req{eq:pos_point_DDS} describing screening effects previously found only numerically \cite{Hwang:2021kno}. Our analytic formula can be readily used to estimate the effect of screening on thermonuclear reactions using \req{eq:DDSenhance}. The correction to thermonuclear reactions due to damped-dynamic screening is small due to the low velocity of nuclei and a large amount of collisional scattering. This is in line with the findings of \cite{Hwang:2021kno}, who conclude that even though the densities are large, they are not enough to modify the potential at short distances related to screening. The analytic expression we find for the nuclear reaction rate enhancement \req{eq:DDSenhance} in a collisional plasma could be useful in other fusion environments such as stellar fusion and laboratory fusion experiments, such as those discussed in ~\cite{Labaune:2013dla,Margarone:2022mdpi}.
+% In this chapter, we review \cite{Grayson:2023flr}, which applies the non-relativistic longitudinal polarization function to study the dynamics of the electron-positron plasma in the early Universe. In particular, we discussed the damping rate, the electron-positron to baryon density ratio, and their potential implications for Big Bang Nucleosynthesis (BBN) through screening within linear response theory. We derived an approximate analytic formula for the potential of a moving heavy charge in a collisional plasma in \req{eq:pos_point_DDS} describing screening effects previously found only numerically \cite{Hwang:2021kno}. Our analytic formula can be readily used to estimate the effect of screening on thermonuclear reactions using \req{eq:DDSenhance}. The correction to thermonuclear reactions due to damped-dynamic screening is small due to the low velocity of nuclei and a large amount of collisional scattering. This is in line with the findings of \cite{Hwang:2021kno}, who conclude that even though the densities are large, they are not enough to modify the potential at short distances related to screening. The analytic expression we find for the nuclear reaction rate enhancement \req{eq:DDSenhance} in a collisional plasma could be useful in other fusion environments such as stellar fusion and laboratory fusion experiments, such as those discussed in ~\cite{Labaune:2013dla,Margarone:2022mdpi}.
 
-Overall we were very surprised to find that the screening effects in BBN were so small even in the static case, considering that the number densities present during BBN are $\sim 10^4$ times normal matter. If we compare this to screening effects on Earth, we can see that although plasmas occur at lower densities, they also occur in much colder environments. The strength of the screening effect is related to the Debye mass
-\begin{equation}
-m_D^2 \sim \frac{n_\text{eq} }{T}\,,
-\end{equation}
-which is on the order of a few keV during BBN. On earth, $n_\text{eq}$ is decreased by $\sim 10^4$, but T is decreased by $\sim 10^6$. Thus, we would expect to see similar, if not larger, screening effects on Earth. For instance, the Debye screening length in extracellular fluid in the body is 8 \AA ngstrom \cite{Wennerstrom:2020}, only a factor of $\sim 20$ times larger than the Debye length during BBN. We can have these large densities at low temperatures on earth due to gravity's agglomeration of matter in the universe.
+% Overall we were very surprised to find that the screening effects in BBN were so small even in the static case, considering that the number densities present during BBN are $\sim 10^4$ times normal matter. If we compare this to screening effects on Earth, we can see that although plasmas occur at lower densities, they also occur in much colder environments. The strength of the screening effect is related to the Debye mass
+% \begin{equation}
+% m_D^2 \sim \frac{n_\text{eq} }{T}\,,
+% \end{equation}
+% which is on the order of a few keV during BBN. On earth, $n_\text{eq}$ is decreased by $\sim 10^4$, but T is decreased by $\sim 10^6$. Thus, we would expect to see similar, if not larger, screening effects on Earth. For instance, the Debye screening length in extracellular fluid in the body is 8 \AA ngstrom \cite{Wennerstrom:2020}, only a factor of $\sim 20$ times larger than the Debye length during BBN. We can have these large densities at low temperatures on earth due to gravity's agglomeration of matter in the universe.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{The short-range screening potential}
-In \cite{Grayson:2023flr}, a proposal is made to study the short-range potential relevant to quantum tunneling in thermonuclear reactions. Since the Gamow energy at which nuclei are most likely to tunnel is above the thermal energy, the portion of the screening potential relevant for tunneling does not satisfy the "weak-field" limit where the electromagnetic energy is small compared to the thermal energy
-\begin{equation}
- \frac{q \phi(x)}{T} \ll 1\,.
-\end{equation}
-When this condition is not satisfied one must consider the full equilibrium distribution when calculating the short-range potential \cite{Hakim:1967prd,DeGroot:1980dk}
-\begin{equation}\label{eq:Boltz}
- f_B^\pm(x,p) = e^{-(p_0\pm e\phi(x))/T}\,.
-\end{equation}
-The $e\phi$ term in the exponential accounts for the change in energy of a charge in the plasma due to its presence in an external field. For this equilibrium distribution, a linear response is no longer possible since the equilibrium distribution depends on the external electromagnetic field. In equilibrium one can find the static screening potential for strong electromagnetic fields using the nonlinear Poisson-Boltzmann equation,
-\begin{equation}\label{eq:Poisson-Boltz}
- -\nabla^2 e\phi_{(\text{eq})}(x)/T +m_D^2\sinh\left[e\phi_{(\text{eq})}(x)/T\right] =e\rho_\mathrm{ext}(x)/T\,.
- \end{equation}
-This equation has a well-known solution for an infinite sheet which we used to argue the importance of strong screening in BBN. 
-In a future publication, we will solve the Poisson-Boltzmann equation with strong screening to calculate the short-range screening potential in BBN. We note that the toy model in \cite{Grayson:2023flr} overestimates strong screening effects for two reasons: an infinite sheet has a constant electric field requiring more polarizing charge density to screen the field, and the Boltzmann distribution in \req{eq:Boltz} does not account for the stacking of electron-positron states when the density of electrons and positrons becomes very large near the nucleus. Both of these effects significantly reduce the effect of strong screening on reaction rates, but at the time of writing, it seems that strong screening will create a larger effect on nuclear reaction rates than damped-dynamic screening. Predicting enhanced screening may be relevant for the anomalous screening observed in the measurements of astrophysical S(E) factors \cite{Zhang:2020nuc}.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \paragraph{The short-range screening potential}
+% In \cite{Grayson:2023flr}, a proposal is made to study the short-range potential relevant to quantum tunneling in thermonuclear reactions. Since the Gamow energy at which nuclei are most likely to tunnel is above the thermal energy, the portion of the screening potential relevant for tunneling does not satisfy the "weak-field" limit where the electromagnetic energy is small compared to the thermal energy
+% \begin{equation}
+%  \frac{q \phi(x)}{T} \ll 1\,.
+% \end{equation}
+% When this condition is not satisfied one must consider the full equilibrium distribution when calculating the short-range potential \cite{Hakim:1967prd,DeGroot:1980dk}
+% \begin{equation}\label{eq:Boltz}
+%  f_B^\pm(x,p) = e^{-(p_0\pm e\phi(x))/T}\,.
+% \end{equation}
+% The $e\phi$ term in the exponential accounts for the change in energy of a charge in the plasma due to its presence in an external field. For this equilibrium distribution, a linear response is no longer possible since the equilibrium distribution depends on the external electromagnetic field. In equilibrium one can find the static screening potential for strong electromagnetic fields using the nonlinear Poisson-Boltzmann equation,
+% \begin{equation}\label{eq:Poisson-Boltz}
+%  -\nabla^2 e\phi_{(\text{eq})}(x)/T +m_D^2\sinh\left[e\phi_{(\text{eq})}(x)/T\right] =e\rho_\mathrm{ext}(x)/T\,.
+%  \end{equation}
+% This equation has a well-known solution for an infinite sheet which we used to argue the importance of strong screening in BBN. 
+% In a future publication, we will solve the Poisson-Boltzmann equation with strong screening to calculate the short-range screening potential in BBN. We note that the toy model in \cite{Grayson:2023flr} overestimates strong screening effects for two reasons: an infinite sheet has a constant electric field requiring more polarizing charge density to screen the field, and the Boltzmann distribution in \req{eq:Boltz} does not account for the stacking of electron-positron states when the density of electrons and positrons becomes very large near the nucleus. Both of these effects significantly reduce the effect of strong screening on reaction rates, but at the time of writing, it seems that strong screening will create a larger effect on nuclear reaction rates than damped-dynamic screening. Predicting enhanced screening may be relevant for the anomalous screening observed in the measurements of astrophysical S(E) factors \cite{Zhang:2020nuc}.
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Early Universe plasma: non-relativistic polarization tensor:}\label{sec:kinetic_theory}
-The properties of the BBN plasma are described by the relativistic Vlasov-Boltzmann transport equations \req{eq:VBEf}. Since photons do not couple directly to the electromagnetic field, they do not contribute to the polarization tensor at first order in $\delta f$ as indicated in Eq.\,(\ref{eq:VBEg}). We neglect photon influence on the electron-positron distribution through the scattering term since the rate of inverse Compton scattering $R_{e^{\pm}\gamma }$ shown in green in \reff{RelaxationRate_fig} is much smaller, in the BBN temperature range, than the total rate $\kappa$ shown as a black line. Each fermion Boltzmann equation \req{eq:VBEf} can be solved independently. Since the equations for electrons and positrons are equivalent, except for the charge sign, only one needs to be solved to understand the dynamics.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \paragraph{Early Universe plasma: non-relativistic polarization tensor:}\label{sec:kinetic_theory}
+% The properties of the BBN plasma are described by the relativistic Vlasov-Boltzmann transport equations \req{eq:VBEf}. Since photons do not couple directly to the electromagnetic field, they do not contribute to the polarization tensor at first order in $\delta f$ as indicated in Eq.\,(\ref{eq:VBEg}). We neglect photon influence on the electron-positron distribution through the scattering term since the rate of inverse Compton scattering $R_{e^{\pm}\gamma }$ shown in green in \reff{RelaxationRate:fig} is much smaller, in the BBN temperature range, than the total rate $\kappa$ shown as a black line. Each fermion Boltzmann equation \req{eq:VBEf} can be solved independently. Since the equations for electrons and positrons are equivalent, except for the charge sign, only one needs to be solved to understand the dynamics.
 
-%We do not consider the influence of light nuclei on the polarization tensor since their density during the BBN epoch is much smaller than that of electrons and positrons \reff{BBN_Electron}. One can see in \reff{MeanFreePath_fig} that the separation of baryons $n_B^{-1/3}$ in black is much larger than the size of the polarizing Debye sphere, so baryons do not participate significantly in screening.
+% %We do not consider the influence of light nuclei on the polarization tensor since their density during the BBN epoch is much smaller than that of electrons and positrons \reff{BBN_Electron}. One can see in \reff{MeanFreePath_fig} that the separation of baryons $n_B^{-1/3}$ in black is much larger than the size of the polarizing Debye sphere, so baryons do not participate significantly in screening.
 
-We take the equilibrium one particle distribution function $\eq{f_\pm}$ of electrons and positrons to be the relativistic Fermi-distribution
-\begin{equation}\label{eq:equildist}
-\eq{f}_\pm(p) = \frac{1}{\exp{\left(\frac{\sqrt{\boldsymbol{p}^2 + m^2}}{T}\right)}
-+1}\,,
-\end{equation}
-with chemical potential $\mu = 0 $. The electron and positron mass will be indicated by $m$ unless otherwise stated. At temperatures interesting for nucleosynthesis $T = 50-86$\,keV, we expect the plasma temperature to be much less than the mass of the plasma constituents. Only the non-relativistic form of Eq.\,(\ref{eq:equildist}) will be relevant at these temperature scales
-\begin{equation}
-\eq{f}_\pm(p) \approx \exp\left(- \frac{m}{T}\left(1+\frac{|\pmb{p}|^2}{2m^2}\right)\right)\,.
-\end{equation}
-Keeping terms up to quadratic order in $|\boldsymbol{p}|/m$ we solve the Vlasov-Boltzmann equation Eq.\,(\ref{eq:VBEf}) for the induced current and identify the polarization tensor. This is done in detail in our previous work in~\cite{Formanek:2021blc}.
-
-% First, we expand Eq.\,(\ref{eq:VBEf})
-% around small perturbations from equilibrium
-% \begin{equation}\label{eq:perturbation0}
-% f_\pm(x,p) = {\eq{f}_\pm}(p) + \delta f_\pm(x,p)\,,
+% We take the equilibrium one particle distribution function $\eq{f_\pm}$ of electrons and positrons to be the relativistic Fermi-distribution
+% \begin{equation}\label{eq:equildist}
+% \eq{f}_\pm(p) = \frac{1}{\exp{\left(\frac{\sqrt{\boldsymbol{p}^2 + m^2}}{T}\right)}
+% +1}\,,
 % \end{equation}
-% and solve \req{eq:VBEf} for $\delta f_\pm(x,p)$ in Fourier space. The induced current in Fourier space is given by
-% \begin{equation}\label{eq:perturbation1}
-% \tilde{j}_{\mathrm{ind}}^\mu(k) = 2\int \frac{d^4 p}{(2 \pi)^4}p^\mu 4\pi \delta_+(p^2-m^2) 
-% \sum_{i = \, +, \, -} q_i \tilde{f}_{i}(k,p)\,,
-% \end{equation}
-% with the factor of two accounting for spin.
-% After inserting \req{eq:perturbation0}, and specifying $q_\pm = \pm e$ the induced current is a function of the perturbation
-% \begin{multline}\label{eq:perturbation2}
-% \tilde{j}_{\mathrm{ind}}^\mu(k) = 2\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big( e \left[\eq{\tilde{f}}_+(k,p)-\eq{\tilde{f}}_-(k,p)\right]\\
-% + e\left[\delta\tilde{f}_+(k,p)-\delta\tilde{f}_-(k,p)\right]
-% \Big)
-% \\
-% =4 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \delta\tilde{f}(k,p)
-% \,,
-% \end{multline}
-% because the equilibrium currents cancel in the weak field limit and the perturbations add since they differ by the charge $\delta f_\pm=\pm e \delta f' $. This term is studied for finite chemical potential in~\cite{Wang:2010px}. We focus on the second term related to the polarization response of the plasma.
-
-% The polarization tensor can be obtained from \req{eq:perturbation2} by computing the 4-momentum integrals over $p$ in the rest frame of the plasma. Once integrated, the 4-potential $\widetilde{A}^{\nu}(k)$, coming from the electromagnetic field strength tensor $F^{\mu \nu}$ in \req{eq:VBEf}, factors out since it only depends on the 4-wavevector $k$ and \req{eq:perturbation2} attains the form of \req{eq:linresp}. For details, see Ref.~\cite{Formanek:2021blc}.
-
-In the infinite homogeneous plasma filling the early Universe, the polarization tensor only has two independent components: the longitudinal polarization function $\Pi_{\parallel}$ parallel to field wave-vector $\boldsymbol{k}$ in the rest frame of the plasma and the transverse polarization function $\Pi_{\perp}$ perpendicular to $\boldsymbol{k}$~\cite{melrose2008quantum}. In the non-relativistic limit, these functions are~\cite{Formanek:2021blc}
-\begin{align}\label{eq:polfuncs}
-	\Pi_\parallel(\omega,\boldsymbol{k}) &= -\omega_p^2\frac{\omega^2}{(\omega+ i \kappa)^2} \frac{1}{1-\frac{i\kappa}{\omega+ i \kappa}\left(1+\frac{ T |\boldsymbol{k}|^2}{m (\omega+ i \kappa)^2} \right)}\,,\\
-	\Pi_{\perp}(\omega) &= -\omega_p^2 \frac{\omega}{\omega+ i \kappa}\,.
-\end{align}
-In these expressions, the plasma frequency $\omega_p$ (defined as $m_L$ in~\cite{Formanek:2021blc}) is related to the Debye screening mass in the non-relativistic limit as
-\begin{equation}\label{eq:plasmafreq}
- \omega_p^2 = m_D^2\frac{T}{m}\,.
-\end{equation}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure} 
-\centerline{\includegraphics[width=0.90\linewidth]{plots/chap03BBN/Distance_Plasma002.jpg}}
-\caption{ The average distance between baryons $n_B^{-1/3}$ and the Debye length $\lambda_D$ ($\mu_e \neq 0$) as a function of temperature (red solid line). During the BBN epoch (vertical dotted lines) $n_B^{-1/3}>\lambda_D$. For temperature below $T<32.76$ keV we have $n_B^{-1/3}<\lambda_D$. For comparison, the Debye length for zero chemical potential $\mu_e=0$ is also plotted as a blue dashed line. Figure by C.T.\,Yang, appeared in~\cite{Grayson:2023flr}}
-\label{MeanFreePath_fig} 
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in the plasma. Here we need only consider $\Pi_\parallel$ since the vector potential $\boldsymbol{A}(t,\boldsymbol{x})$ of the traveling ion will be small in the non-relativistic limit. This work does not consider the effect of a primordial magnetic field discussed in~\cite{Steinmetz:2023abc}. We note that Debye mass $m_D$ is related to the usual Debye screening length of the field in the plasma as
-\begin{equation}\label{eq:mL}
-	1/\lambda_D^{2} = m_D^2= 4 \pi \alpha \left(\frac{2mT}{\pi}\right)^{3/2}\frac{e^{-m/T}}{2T}\,.
-\end{equation}
-This formula describes the characteristic length scale of screening in the plasma.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Longitudinal dispersion relation:}
-As discussed in Chapter \ref{chap:PlasmaSF} the poles in the propagator or roots of the dispersion equation represent the plasma's propagating modes, often called `quasi-particles' or `plasmons.' In the non-relativistic limit, one can solve the longitudinal part of the dispersion equation \req{eq:disp}, which is relevant for finding charge oscillation modes in the plasma
-\begin{equation}
-    1+ \frac{\Pi_\parallel( k)}{(p\cdot u)^2}= 1+ \frac{\Pi_\parallel(\omega, \boldsymbol{k})}{\omega^2}=\varepsilon_\parallel(\omega,\boldsymbol{k}) =0 \,,
-\end{equation}
-evaluated in the rest frame. Then we insert \req{eq:polfuncs} to find
-\begin{equation}
-   1- \frac{\omega_p^2}{(\omega+ i \kappa)^2} \frac{1}{1-\frac{i\kappa}{\omega+ i \kappa}\left(1+\frac{T |\boldsymbol{k}|^2}{m(\omega+ i \kappa)^2} \right)}=0 \,.
-\end{equation}
-We can simplify the above expression since this is only a function of $\omega' =\omega+i\kappa$
-\begin{equation}
-   1- \frac{\omega_p^2}{\omega'^2-i\kappa\omega'+\frac{i\kappa T |\boldsymbol{k}|^2}{m \omega'} }=0 \,.
-\end{equation}
-Then we get a cubic equation for $\omega'(|\boldsymbol{k}|)$
-\begin{equation}\label{eq:dispfact}
-   \frac{1}{\omega'^3-i\kappa\omega'^2+\frac{i\kappa T |\boldsymbol{k}|^2}{m} }
-    \left(\omega'^3-i\kappa\omega'^2 - \omega_p^2\omega'+\frac{i\kappa T |\boldsymbol{k}|^2}{m} \right)=0 \,.
-\end{equation}
-Cardano's formula gives the solutions to this cubic equation
-\begin{equation}\label{eq:cardano}
-\omega_n(\boldsymbol{k}) = \frac{1}{3}\left(i\kappa-\xi^n C-\frac{\Delta_0}{\xi^n C}\right), \qquad n \in \{0,1,2\} \,,
-\end{equation}
-with the quantities:
-\begin{align}\label{eq:delta}
-  \xi &=\frac{i\sqrt{3}-1}{2}\,,\\
-    C &= \sqrt[3]{\frac{\Delta_1 \pm \sqrt{\Delta_1^2 - 4 \Delta_0^3}}2}\,,\\
-    \Delta_0 &= -\kappa^2 + 3 \omega_p^2\,,\\
-\Delta_1 &= 2i\kappa^3 - 9 i\kappa \omega_p^2 + 27\frac{i\kappa T |\boldsymbol{k}|^2}{m}.
-\end{align}
-Since the longitudinal dispersion relation is analytically solvable the full non-relativistic potential can be found in position space using contour integration. The residue of each pole will lead to the strength of that mode, and the location of the pole will lead to space and time dependence, which in simple cases is exponential. In practice, factoring out these roots in the Fourier transform of the potential leads to five poles, which do not seem to lead to simple expressions in position space. We found using the approximate expression derived in \req{sec:potential} was more practical. Deriving the full expression is the subject of future work.
-
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[width=0.95\linewidth]{plasmafreq.png}
-%    \caption{Plot of the plasma frequencies $\omega_\pm$ in the complex plane as a function of $\kappa$. At $\kappa=2\omega_p$ both solutions become imaginary, one becoming more quickly damped and the other more slowly damped.}
-%    \label{fig:plasma-freq}
-%\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Damped-dynamic screening} 
-We discuss the application of the non-relativistic limit of the polarization tensor \rsec{chap:PlasmaSF} to the electron-positron plasma which existed during Big Bang nucleosynthesis (BBN)~\cite{Grayson:2023flr}. The BBN Epoch occurred within the first 20 min after the Big Bang when the Universe was hot and dense enough for nuclear reactions to produce light elements up to lithium \cite{Pitrou:2018cgg}. 
-
-The BBN nuclear reactions typically take place within the temperature interval $86\, \mathrm{keV}>\mathrm{T_{BBN}}>50\, \mathrm{keV}$~\cite{Pitrou:2018cgg}. We refer to these elements produced in BBN as primordial light elements to distinguish them from those made later in the Universe's history. Primordial light element abundances are the most accessible probes of the early Universe before recombination. Though the current BBN model successfully predicts D, $^3$He, $^4$He abundances, well-documented discrepancies, such as $^7$Li, remain. Efforts to resolve the theoretical BBN model with present-day observations are discussed in detail in \cite{Pitrou:2021vqr,Bertulani:2022qly}.
-
-A rather large electron-positron $e^-e^+$- number densities existed in the early Universe during Big Bang nucleosynthesis (BBN)~\cite{Wang:2010px,Hwang:2021kno,Rafelski:2023emw} are $10^2$ times larger than those present in the Sun \cite{Bahcall:2001smc} and $10^4$ times normal atomic densities \cite{Grayson:2023flr}. Charge screening is an essential collective plasma effect that modifies the inter-nuclear potential $\phi(r)$ changing thermonuclear reaction rates during BBN. An electron cloud around an ion's charge effectively diminishes the influence of nuclear charges beyond their immediate vicinity, lowering the Coulomb barrier. 
-
-In the context of nuclear reactions, a reduced Coulomb barrier leads to a higher likelihood of penetration, boosting thermonuclear reaction rates. Consequently, this process influences the abundance of light elements in the early universe by modifying their formation rates. Since the BBN temperature range is much less than the electron mass, we will use the non-relativistic limit of the polarization tensor derived in Chapter \ref{chap:PlasmaSF}. The screened potential relevant for thermonuclear reactions will be given by the longitudinal polarization function \req{eq:phi}.
-
-The influence of screening on nuclear reactions is a well-established field of study. The concept of plasma screening effects on nuclear reactions was initially introduced in~\cite{Salpeter:1954nc}, who suggested determining the increase in nuclear reaction rates through the use of the static Debye-Hückel potential~\cite{Debye:1923,Salpeter:1969apj,Famiano:2016hhs}. Subsequent research expanded this framework to account for the thermal velocity of nuclei traversing the plasma~\cite{Hwang:2021kno,Carraro:1988apj,Gruzinov:1997as,Opher:1999jh,Yao:2016cjs}, introducing the concept of `dynamic' screening. 
-
-In our current study, we address the high density of the $e^-e^+\gamma$ plasma by including collisional damping using the current conserving collision term developed in \cite{Formanek:2021blc} shown in \req{eq:collision}. The dense aspect of the BBN plasma has only recently been acknowledged by incorporating collision effects into numerical models \cite{Sasankan:2019oee,Kedia:2020xdc}. We will refer to this model of screening as 'damped-dynamic' screening. In \cite{Grayson:2023flr}, we find an analytic formula for the induced screening potential, which allows for estimating the enhancement of thermonuclear reaction rates.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Nuclear potential:}\label{sec:DDS}
-We consider the effective nuclear potential for a light nucleus moving in the plasma at a constant velocity. This is done by Fourier transforming \req{eq:potentk}. The velocity of the nucleus is assumed to be the most probable velocity given by a Boltzmann distribution
-\begin{equation}\label{eq:vel}
- \beta_{\text{N}} = \sqrt{\frac{2T}{m_N}}\,. 
-\end{equation}
-Since the poles of the \req{eq:potent} can be solved analytically, ideally, one would perform contour integration to get the position space field. Due to the intricacy of these poles $\omega_n(\boldsymbol{k})$, we find it insightful to look at the field in a series expansion around velocities of the light nuclei smaller than the thermal velocity of electrons and positrons and large damping.
-
+% with chemical potential $\mu = 0 $. The electron and positron mass will be indicated by $m$ unless otherwise stated. At temperatures interesting for nucleosynthesis $T = 50-86$\,keV, we expect the plasma temperature to be much less than the mass of the plasma constituents. Only the non-relativistic form of Eq.\,(\ref{eq:equildist}) will be relevant at these temperature scales
 % \begin{equation}
-% \beta_{\text{N}}\frac{m_D}{\kappa} = \frac{v_{\text{N}}}{c}\frac{m_D}{\kappa} \ll 1\,.
+% \eq{f}_\pm(p) \approx \exp\left(- \frac{m}{T}\left(1+\frac{|\pmb{p}|^2}{2m^2}\right)\right)\,.
 % \end{equation}
-\begin{equation}\label{eq:expansion}
-% (\boldsymbol{k}\cdot\boldsymbol{\beta}_{\text{N}})^2 \ll \boldsymbol{k}^2 \frac{T}{m} \ll \kappa^2\, 
-\frac{(\boldsymbol{k}\cdot\boldsymbol{\beta}_{\text{N}})^2}{\omega_p^2} \ll \frac{\boldsymbol{k}^2}{m_D^2} \ll \frac{\kappa^2}{\omega_p^2}\, .
-\end{equation}
+% Keeping terms up to quadratic order in $|\boldsymbol{p}|/m$ we solve the Vlasov-Boltzmann equation Eq.\,(\ref{eq:VBEf}) for the induced current and identify the polarization tensor. This is done in detail in our previous work in~\cite{Formanek:2021blc}.
 
-
-This expansion is useful during BBN since the temperature is much lower than the mass of light nuclei and the damping rate $\kappa$ is approximately twice the Debye mass $m_D$, as seen in Fig.~\ref{RelaxationRate_fig}. Applying this expansion to \req{eq:potentk} and evaluating this expression for a point charge $r \rightarrow 0$ we find
-% % \begin{multline} \label{eq:potexp}
-% % \phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x}) +\\ -Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)}\frac{i \boldsymbol{k}\cdot \boldsymbol{\beta_{\text{N}}} m_D^2 (\frac{\boldsymbol{k}^2}{\kappa} - \frac{m}{T} \kappa)}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2} e^{-\boldsymbol{k}^2\frac{R^2}{4}} \\ + O
-% % \left(\beta_{\text{N}}\frac{m_D}{\kappa}^2\right)\,.
+% % First, we expand Eq.\,(\ref{eq:VBEf})
+% % around small perturbations from equilibrium
+% % \begin{equation}\label{eq:perturbation0}
+% % f_\pm(x,p) = {\eq{f}_\pm}(p) + \delta f_\pm(x,p)\,,
+% % \end{equation}
+% % and solve \req{eq:VBEf} for $\delta f_\pm(x,p)$ in Fourier space. The induced current in Fourier space is given by
+% % \begin{equation}\label{eq:perturbation1}
+% % \tilde{j}_{\mathrm{ind}}^\mu(k) = 2\int \frac{d^4 p}{(2 \pi)^4}p^\mu 4\pi \delta_+(p^2-m^2) 
+% % \sum_{i = \, +, \, -} q_i \tilde{f}_{i}(k,p)\,,
+% % \end{equation}
+% % with the factor of two accounting for spin.
+% % After inserting \req{eq:perturbation0}, and specifying $q_\pm = \pm e$ the induced current is a function of the perturbation
+% % \begin{multline}\label{eq:perturbation2}
+% % \tilde{j}_{\mathrm{ind}}^\mu(k) = 2\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big( e \left[\eq{\tilde{f}}_+(k,p)-\eq{\tilde{f}}_-(k,p)\right]\\
+% % + e\left[\delta\tilde{f}_+(k,p)-\delta\tilde{f}_-(k,p)\right]
+% % \Big)
+% % \\
+% % =4 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \delta\tilde{f}(k,p)
+% % \,,
 % % \end{multline}
-% \begin{multline} \label{eq:potexp}
-%  \phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x})\\ -Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)}\frac{i \boldsymbol{k}\cdot \boldsymbol{\beta_{\text{N}}} m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa} e^{-\boldsymbol{k}^2\frac{R^2}{4}} \,.
-% \end{multline}
-% First, we focus on the second term evaluating for a point charge $R\rightarrow 0$
-\begin{equation}\label{eq:ddsint}
-\phi(t,\boldsymbol{x}) =\phi_{\text{stat}}(t,\boldsymbol{x})-Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)}\frac{i \boldsymbol{k}\cdot \boldsymbol{\beta_{\text{N}}} m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\,.
-\end{equation}
-The second term is the damped-dynamic screening correction, which we refer to as $\Delta \phi$, where
-\begin{equation}\label{eq:pos_point}
-\phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x}) +\Delta \phi(t,\boldsymbol{x}) \,,
-\end{equation}
-and $\phi_{\text{stat}}$ is the standard static screening potential. The details of the integration of \req{eq:ddsint} can be found in \cite{Grayson:2023flr}, the result is
-% In order to perform this integration we first note that this expression can be re-written as the laboratory time derivative
+% % because the equilibrium currents cancel in the weak field limit and the perturbations add since they differ by the charge $\delta f_\pm=\pm e \delta f' $. This term is studied for finite chemical potential in~\cite{Wang:2010px}. We focus on the second term related to the polarization response of the plasma.
+
+% % The polarization tensor can be obtained from \req{eq:perturbation2} by computing the 4-momentum integrals over $p$ in the rest frame of the plasma. Once integrated, the 4-potential $\widetilde{A}^{\nu}(k)$, coming from the electromagnetic field strength tensor $F^{\mu \nu}$ in \req{eq:VBEf}, factors out since it only depends on the 4-wavevector $k$ and \req{eq:perturbation2} attains the form of \req{eq:linresp}. For details, see Ref.~\cite{Formanek:2021blc}.
+
+% In the infinite homogeneous plasma filling the early Universe, the polarization tensor only has two independent components: the longitudinal polarization function $\Pi_{\parallel}$ parallel to field wave-vector $\boldsymbol{k}$ in the rest frame of the plasma and the transverse polarization function $\Pi_{\perp}$ perpendicular to $\boldsymbol{k}$~\cite{melrose2008quantum}. In the non-relativistic limit, these functions are~\cite{Formanek:2021blc}
+% \begin{align}\label{eq:polfuncs}
+% 	\Pi_\parallel(\omega,\boldsymbol{k}) &= -\omega_p^2\frac{\omega^2}{(\omega+ i \kappa)^2} \frac{1}{1-\frac{i\kappa}{\omega+ i \kappa}\left(1+\frac{ T |\boldsymbol{k}|^2}{m (\omega+ i \kappa)^2} \right)}\,,\\
+% 	\Pi_{\perp}(\omega) &= -\omega_p^2 \frac{\omega}{\omega+ i \kappa}\,.
+% \end{align}
+% In these expressions, the plasma frequency $\omega_p$ (defined as $m_L$ in~\cite{Formanek:2021blc}) is related to the Debye screening mass in the non-relativistic limit as
+% \begin{equation}\label{eq:plasmafreq}
+%  \omega_p^2 = m_D^2\frac{T}{m}\,.
+% \end{equation}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure} 
+% \centerline{\includegraphics[width=0.90\linewidth]{plots/chap03BBN/Distance_Plasma002.jpg}}
+% \caption{ The average distance between baryons $n_B^{-1/3}$ and the Debye length $\lambda_D$ ($\mu_e \neq 0$) as a function of temperature (red solid line). During the BBN epoch (vertical dotted lines) $n_B^{-1/3}>\lambda_D$. For temperature below $T<32.76$ keV we have $n_B^{-1/3}<\lambda_D$. For comparison, the Debye length for zero chemical potential $\mu_e=0$ is also plotted as a blue dashed line. Figure by C.T.\,Yang, appeared in~\cite{Grayson:2023flr}}
+% \label{MeanFreePath_fig} 
+% \end{figure}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The transverse response $\Pi_{\perp}$ relates to the dispersion of photons in the plasma. Here we need only consider $\Pi_\parallel$ since the vector potential $\boldsymbol{A}(t,\boldsymbol{x})$ of the traveling ion will be small in the non-relativistic limit. This work does not consider the effect of a primordial magnetic field discussed in~\cite{Steinmetz:2023abc}. We note that Debye mass $m_D$ is related to the usual Debye screening length of the field in the plasma as
+% \begin{equation}\label{eq:mL}
+% 	1/\lambda_D^{2} = m_D^2= 4 \pi \alpha \left(\frac{2mT}{\pi}\right)^{3/2}\frac{e^{-m/T}}{2T}\,.
+% \end{equation}
+% This formula describes the characteristic length scale of screening in the plasma.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \paragraph{Longitudinal dispersion relation:}
+% As discussed in Chapter \ref{chap:PlasmaSF} the poles in the propagator or roots of the dispersion equation represent the plasma's propagating modes, often called `quasi-particles' or `plasmons.' In the non-relativistic limit, one can solve the longitudinal part of the dispersion equation \req{eq:disp}, which is relevant for finding charge oscillation modes in the plasma
 % \begin{equation}
-%  \Delta\phi(t,\boldsymbol{x}) = Ze\frac{d}{dt}\left[\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i|\boldsymbol{k}||\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t| \cos(\theta)}\frac{ m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\right] \,,
+%     1+ \frac{\Pi_\parallel( k)}{(p\cdot u)^2}= 1+ \frac{\Pi_\parallel(\omega, \boldsymbol{k})}{\omega^2}=\varepsilon_\parallel(\omega,\boldsymbol{k}) =0 \,,
 % \end{equation}
-% where the dot products were replaced by their angular dependence.
-% The angular integration can be evaluated in spherical coordinates, see \ref{sec:static} for details,
+% evaluated in the rest frame. Then we insert \req{eq:polfuncs} to find
 % \begin{equation}
-%  \Delta\phi(t,\boldsymbol{x}) = 2 Ze\frac{d}{dt}\left[\int \frac{d\boldsymbol{k}}{(2\pi)^2} \frac{\sin(|\boldsymbol{k}||\boldsymbol{x}-\boldsymbol{\beta}_N t|)}{|\boldsymbol{k}||\boldsymbol{x}-\boldsymbol{\beta}_N t|}\,\frac{ m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\right] \,,
+%    1- \frac{\omega_p^2}{(\omega+ i \kappa)^2} \frac{1}{1-\frac{i\kappa}{\omega+ i \kappa}\left(1+\frac{T |\boldsymbol{k}|^2}{m(\omega+ i \kappa)^2} \right)}=0 \,.
 % \end{equation}
-% \begin{multline}
-%  \Delta\phi(t,\boldsymbol{x}) = \frac{Ze }{4\pi }\frac{m_D^2}{\kappa}\frac{d}{dt}\Bigg[\left(\frac{1+\nu_\tau^2}{ 2m_D}+\frac{\nu_\tau^2}{m_D^2 |\boldsymbol{x}-\boldsymbol{\beta}_N t|}\right)e^{-m_D |\boldsymbol{x}-\boldsymbol{\beta}_N t|}\\ - \frac{\nu_\tau^2}{m_D^2 |\boldsymbol{x}-\boldsymbol{\beta}_N t|} \Bigg]\,,
+% We can simplify the above expression since this is only a function of $\omega' =\omega+i\kappa$
+% \begin{equation}
+%    1- \frac{\omega_p^2}{\omega'^2-i\kappa\omega'+\frac{i\kappa T |\boldsymbol{k}|^2}{m \omega'} }=0 \,.
+% \end{equation}
+% Then we get a cubic equation for $\omega'(|\boldsymbol{k}|)$
+% \begin{equation}\label{eq:dispfact}
+%    \frac{1}{\omega'^3-i\kappa\omega'^2+\frac{i\kappa T |\boldsymbol{k}|^2}{m} }
+%     \left(\omega'^3-i\kappa\omega'^2 - \omega_p^2\omega'+\frac{i\kappa T |\boldsymbol{k}|^2}{m} \right)=0 \,.
+% \end{equation}
+% Cardano's formula gives the solutions to this cubic equation
+% \begin{equation}\label{eq:cardano}
+% \omega_n(\boldsymbol{k}) = \frac{1}{3}\left(i\kappa-\xi^n C-\frac{\Delta_0}{\xi^n C}\right), \qquad n \in \{0,1,2\} \,,
+% \end{equation}
+% with the quantities:
+% \begin{align}\label{eq:delta}
+%   \xi &=\frac{i\sqrt{3}-1}{2}\,,\\
+%     C &= \sqrt[3]{\frac{\Delta_1 \pm \sqrt{\Delta_1^2 - 4 \Delta_0^3}}2}\,,\\
+%     \Delta_0 &= -\kappa^2 + 3 \omega_p^2\,,\\
+% \Delta_1 &= 2i\kappa^3 - 9 i\kappa \omega_p^2 + 27\frac{i\kappa T |\boldsymbol{k}|^2}{m}.
+% \end{align}
+% Since the longitudinal dispersion relation is analytically solvable the full non-relativistic potential can be found in position space using contour integration. The residue of each pole will lead to the strength of that mode, and the location of the pole will lead to space and time dependence, which in simple cases is exponential. In practice, factoring out these roots in the Fourier transform of the potential leads to five poles, which do not seem to lead to simple expressions in position space. We found using the approximate expression derived in \req{sec:potential} was more practical. Deriving the full expression is the subject of future work.
+
+% %\begin{figure}[H]
+% %    \centering
+% %    \includegraphics[width=0.95\linewidth]{plasmafreq.png}
+% %    \caption{Plot of the plasma frequencies $\omega_\pm$ in the complex plane as a function of $\kappa$. At $\kappa=2\omega_p$ both solutions become imaginary, one becoming more quickly damped and the other more slowly damped.}
+% %    \label{fig:plasma-freq}
+% %\end{figure}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \paragraph{Damped-dynamic screening} 
+% We discuss the application of the non-relativistic limit of the polarization tensor \rsec{chap:PlasmaSF} to the electron-positron plasma which existed during Big Bang nucleosynthesis (BBN)~\cite{Grayson:2023flr}. The BBN Epoch occurred within the first 20 min after the Big Bang when the Universe was hot and dense enough for nuclear reactions to produce light elements up to lithium \cite{Pitrou:2018cgg}. 
+
+% The BBN nuclear reactions typically take place within the temperature interval $86\, \mathrm{keV}>\mathrm{T_{BBN}}>50\, \mathrm{keV}$~\cite{Pitrou:2018cgg}. We refer to these elements produced in BBN as primordial light elements to distinguish them from those made later in the Universe's history. Primordial light element abundances are the most accessible probes of the early Universe before recombination. Though the current BBN model successfully predicts D, $^3$He, $^4$He abundances, well-documented discrepancies, such as $^7$Li, remain. Efforts to resolve the theoretical BBN model with present-day observations are discussed in detail in \cite{Pitrou:2021vqr,Bertulani:2022qly}.
+
+% A rather large electron-positron $e^-e^+$- number densities existed in the early Universe during Big Bang nucleosynthesis (BBN)~\cite{Wang:2010px,Hwang:2021kno,Rafelski:2023emw} are $10^2$ times larger than those present in the Sun \cite{Bahcall:2001smc} and $10^4$ times normal atomic densities \cite{Grayson:2023flr}. Charge screening is an essential collective plasma effect that modifies the inter-nuclear potential $\phi(r)$ changing thermonuclear reaction rates during BBN. An electron cloud around an ion's charge effectively diminishes the influence of nuclear charges beyond their immediate vicinity, lowering the Coulomb barrier. 
+
+% In the context of nuclear reactions, a reduced Coulomb barrier leads to a higher likelihood of penetration, boosting thermonuclear reaction rates. Consequently, this process influences the abundance of light elements in the early universe by modifying their formation rates. Since the BBN temperature range is much less than the electron mass, we will use the non-relativistic limit of the polarization tensor derived in Chapter \ref{chap:PlasmaSF}. The screened potential relevant for thermonuclear reactions will be given by the longitudinal polarization function \req{eq:phi}.
+
+% The influence of screening on nuclear reactions is a well-established field of study. The concept of plasma screening effects on nuclear reactions was initially introduced in~\cite{Salpeter:1954nc}, who suggested determining the increase in nuclear reaction rates through the use of the static Debye-Hückel potential~\cite{Debye:1923,Salpeter:1969apj,Famiano:2016hhs}. Subsequent research expanded this framework to account for the thermal velocity of nuclei traversing the plasma~\cite{Hwang:2021kno,Carraro:1988apj,Gruzinov:1997as,Opher:1999jh,Yao:2016cjs}, introducing the concept of `dynamic' screening. 
+
+% In our current study, we address the high density of the $e^-e^+\gamma$ plasma by including collisional damping using the current conserving collision term developed in \cite{Formanek:2021blc} shown in \req{eq:collision}. The dense aspect of the BBN plasma has only recently been acknowledged by incorporating collision effects into numerical models \cite{Sasankan:2019oee,Kedia:2020xdc}. We will refer to this model of screening as 'damped-dynamic' screening. In \cite{Grayson:2023flr}, we find an analytic formula for the induced screening potential, which allows for estimating the enhancement of thermonuclear reaction rates.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \paragraph{Nuclear potential:}\label{sec:DDS}
+% We consider the effective nuclear potential for a light nucleus moving in the plasma at a constant velocity. This is done by Fourier transforming \req{eq:potentk}. The velocity of the nucleus is assumed to be the most probable velocity given by a Boltzmann distribution
+% \begin{equation}\label{eq:vel}
+%  \beta_{\text{N}} = \sqrt{\frac{2T}{m_N}}\,. 
+% \end{equation}
+% Since the poles of the \req{eq:potent} can be solved analytically, ideally, one would perform contour integration to get the position space field. Due to the intricacy of these poles $\omega_n(\boldsymbol{k})$, we find it insightful to look at the field in a series expansion around velocities of the light nuclei smaller than the thermal velocity of electrons and positrons and large damping.
+
+% % \begin{equation}
+% % \beta_{\text{N}}\frac{m_D}{\kappa} = \frac{v_{\text{N}}}{c}\frac{m_D}{\kappa} \ll 1\,.
+% % \end{equation}
+% \begin{equation}\label{eq:expansion}
+% % (\boldsymbol{k}\cdot\boldsymbol{\beta}_{\text{N}})^2 \ll \boldsymbol{k}^2 \frac{T}{m} \ll \kappa^2\, 
+% \frac{(\boldsymbol{k}\cdot\boldsymbol{\beta}_{\text{N}})^2}{\omega_p^2} \ll \frac{\boldsymbol{k}^2}{m_D^2} \ll \frac{\kappa^2}{\omega_p^2}\, .
+% \end{equation}
+
+
+% This expansion is useful during BBN since the temperature is much lower than the mass of light nuclei and the damping rate $\kappa$ is approximately twice the Debye mass $m_D$, as seen in Fig.~\ref{RelaxationRate:fig}. Applying this expansion to \req{eq:potentk} and evaluating this expression for a point charge $r \rightarrow 0$ we find
+% % % \begin{multline} \label{eq:potexp}
+% % % \phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x}) +\\ -Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)}\frac{i \boldsymbol{k}\cdot \boldsymbol{\beta_{\text{N}}} m_D^2 (\frac{\boldsymbol{k}^2}{\kappa} - \frac{m}{T} \kappa)}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2} e^{-\boldsymbol{k}^2\frac{R^2}{4}} \\ + O
+% % % \left(\beta_{\text{N}}\frac{m_D}{\kappa}^2\right)\,.
+% % % \end{multline}
+% % \begin{multline} \label{eq:potexp}
+% %  \phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x})\\ -Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)}\frac{i \boldsymbol{k}\cdot \boldsymbol{\beta_{\text{N}}} m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa} e^{-\boldsymbol{k}^2\frac{R^2}{4}} \,.
+% % \end{multline}
+% % First, we focus on the second term evaluating for a point charge $R\rightarrow 0$
+% \begin{equation}\label{eq:ddsint}
+% \phi(t,\boldsymbol{x}) =\phi_{\text{stat}}(t,\boldsymbol{x})-Ze\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i\boldsymbol{k}\cdot(\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t)}\frac{i \boldsymbol{k}\cdot \boldsymbol{\beta_{\text{N}}} m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\,.
+% \end{equation}
+% The second term is the damped-dynamic screening correction, which we refer to as $\Delta \phi$, where
+% \begin{equation}\label{eq:pos_point}
+% \phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x}) +\Delta \phi(t,\boldsymbol{x}) \,,
+% \end{equation}
+% and $\phi_{\text{stat}}$ is the standard static screening potential. The details of the integration of \req{eq:ddsint} can be found in \cite{Grayson:2023flr}, the result is
+% % In order to perform this integration we first note that this expression can be re-written as the laboratory time derivative
+% % \begin{equation}
+% %  \Delta\phi(t,\boldsymbol{x}) = Ze\frac{d}{dt}\left[\int \frac{d^3\boldsymbol{k}}{(2\pi)^3} e^{ i|\boldsymbol{k}||\boldsymbol{x}-\boldsymbol{\beta_{\text{N}}} t| \cos(\theta)}\frac{ m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\right] \,,
+% % \end{equation}
+% % where the dot products were replaced by their angular dependence.
+% % The angular integration can be evaluated in spherical coordinates, see \ref{sec:static} for details,
+% % \begin{equation}
+% %  \Delta\phi(t,\boldsymbol{x}) = 2 Ze\frac{d}{dt}\left[\int \frac{d\boldsymbol{k}}{(2\pi)^2} \frac{\sin(|\boldsymbol{k}||\boldsymbol{x}-\boldsymbol{\beta}_N t|)}{|\boldsymbol{k}||\boldsymbol{x}-\boldsymbol{\beta}_N t|}\,\frac{ m_D^4 (\frac{\boldsymbol{k}^2}{m_D^2} - \frac{\kappa^2}{\omega_p^2})}{\boldsymbol{k}^2(\boldsymbol{k}^2+m_D^2)^2\kappa}\right] \,,
+% % \end{equation}
+% % \begin{multline}
+% %  \Delta\phi(t,\boldsymbol{x}) = \frac{Ze }{4\pi }\frac{m_D^2}{\kappa}\frac{d}{dt}\Bigg[\left(\frac{1+\nu_\tau^2}{ 2m_D}+\frac{\nu_\tau^2}{m_D^2 |\boldsymbol{x}-\boldsymbol{\beta}_N t|}\right)e^{-m_D |\boldsymbol{x}-\boldsymbol{\beta}_N t|}\\ - \frac{\nu_\tau^2}{m_D^2 |\boldsymbol{x}-\boldsymbol{\beta}_N t|} \Bigg]\,,
+% % \end{multline}
+% % here we introduce the ratio of the damping rate to the rate of oscillations in the plasma $\nu_\tau = \kappa/\omega_p$. We can apply the time derivative; note that
+% % \begin{equation}\label{eq:der_cos}
+% %  \frac{d}{dt} |\boldsymbol{x}-\boldsymbol{\beta}_N t| = - \frac{\boldsymbol{\beta}_N \cdot (\boldsymbol{x}-\boldsymbol{\beta}_N t)}{|\boldsymbol{x}-\boldsymbol{\beta}_N t|}= -\beta_N \cos(\psi)\,,
+% % \end{equation}
+% % where $\psi$ is the angle between $\boldsymbol{x}-\boldsymbol{\beta}_N t$ and $\boldsymbol{\beta}_N$. After taking the derivative and using the above expression \req{eq:der_cos} one finds
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure} 
+%  \centerline{
+% \includegraphics[width=.90\linewidth]{plots/chap03BBN/phidat_100_1_1_0_full_lin.pdf}}
+%  \caption{ \cccite{Grayson:2023flr}. Plot of the total screening potential scaled with charge Z and distance along the direction of motion. We show a comparison of the following screening models plotted along the direction of motion of a nucleus $\boldsymbol{r}\cdot\hat{\boldsymbol{\beta}_{\text{N}}}$: static screening (black), dynamic screening (red dotted) from \cite{Hwang:2021kno}, damped-dynamic screening (blue dashed), and the approximate analytic solution of \req{eq:pos_point} (orange dashed). A black arrow indicates the direction of motion of the nucleus $\hat{\boldsymbol{\beta}_{\text{N}}}$.}
+%  \label{fig:dynamiclinear}
+% \end{figure} 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{multline}\label{eq:pos_point_DDS}
+% \Delta \phi(t,\boldsymbol{x}) = \frac{Ze \beta_N \cos (\psi) m_D^2}{4 \pi \varepsilon_0 \kappa} \Bigg[\left(\frac{\nu_\tau^2}{m_D^2 r(t)^2} + \frac{\nu_\tau^2}{m_D r(t)}+\frac{1 + \nu_\tau^2}{2}\right)e^{-m_D r(t)} \\ -\frac{\nu_\tau^2}{m_D^2 r(t)^2}\Bigg]\,,
 % \end{multline}
-% here we introduce the ratio of the damping rate to the rate of oscillations in the plasma $\nu_\tau = \kappa/\omega_p$. We can apply the time derivative; note that
-% \begin{equation}\label{eq:der_cos}
-%  \frac{d}{dt} |\boldsymbol{x}-\boldsymbol{\beta}_N t| = - \frac{\boldsymbol{\beta}_N \cdot (\boldsymbol{x}-\boldsymbol{\beta}_N t)}{|\boldsymbol{x}-\boldsymbol{\beta}_N t|}= -\beta_N \cos(\psi)\,,
-% \end{equation}
-% where $\psi$ is the angle between $\boldsymbol{x}-\boldsymbol{\beta}_N t$ and $\boldsymbol{\beta}_N$. After taking the derivative and using the above expression \req{eq:der_cos} one finds
+% where $\psi$ is the angle between $\boldsymbol{x}-\boldsymbol{\beta}_N t$ and $\boldsymbol{\beta}_N$ and $r(t) = |\boldsymbol{x}-\boldsymbol{\beta}_N t|$.
+% We introduce the ratio of the damping rate to the rate of oscillations in the plasma $\nu_\tau = \kappa/\omega_p$.  This expression is valid for large damping and slow motion of the nucleus or if the velocity of the nuclei is small. A similar result valid at large distances, which only includes the last term, was previously derived in~\cite{Stenflo:1973} for dusty (complex) plasmas. For large distances and large $\nu_\tau$, the last term in the second line is dominant, indicating that the overall potential would be over-damped. In this regime, the potential is heavily screened in the forward direction and unscreened in the backward direction relative to the motion of the nucleus. As $\nu_\tau$ becomes small, the $1/2$ in the first portion of the third term, proportional to $m_D^2/\kappa$, dominates. This flips the sign of the damped-dynamic screening contribution causing a wake potential to form behind the nuclei. This shift indicates the change from damped to undamped screening where \req{eq:pos_point_DDS} is no longer valid. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure} 
- \centerline{
-\includegraphics[width=.90\linewidth]{plots/chap03BBN/phidat_100_1_1_0_full_lin.pdf}}
- \caption{ \cccite{Grayson:2023flr}. Plot of the total screening potential scaled with charge Z and distance along the direction of motion. We show a comparison of the following screening models plotted along the direction of motion of a nucleus $\boldsymbol{r}\cdot\hat{\boldsymbol{\beta}_{\text{N}}}$: static screening (black), dynamic screening (red dotted) from \cite{Hwang:2021kno}, damped-dynamic screening (blue dashed), and the approximate analytic solution of \req{eq:pos_point} (orange dashed). A black arrow indicates the direction of motion of the nucleus $\hat{\boldsymbol{\beta}_{\text{N}}}$.}
- \label{fig:dynamiclinear}
-\end{figure} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure} 
+%  \centerline{\includegraphics[width=.90\linewidth]{plots/chap03BBN/Pot_2DPlotFix.png}}
+%  \caption{Two dimensional plot of the total potential \req{eq:pos_point} scaled with Z, at $T=74\,$keV. The potential is cylindrically symmetric about the direction of motion $\boldsymbol{\hat{z}}$, which is indicated by a black arrow. The direction transverse to the motion is $\rho$. The sign of the damped-dynamic correction \req{eq:pos_point_DDS} changes sign due to the cosine term}
+%  \label{fig:numericalComp}
+% \end{figure} 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{multline}\label{eq:pos_point_DDS}
-\Delta \phi(t,\boldsymbol{x}) = \frac{Ze \beta_N \cos (\psi) m_D^2}{4 \pi \varepsilon_0 \kappa} \Bigg[\left(\frac{\nu_\tau^2}{m_D^2 r(t)^2} + \frac{\nu_\tau^2}{m_D r(t)}+\frac{1 + \nu_\tau^2}{2}\right)e^{-m_D r(t)} \\ -\frac{\nu_\tau^2}{m_D^2 r(t)^2}\Bigg]\,,
-\end{multline}
-where $\psi$ is the angle between $\boldsymbol{x}-\boldsymbol{\beta}_N t$ and $\boldsymbol{\beta}_N$ and $r(t) = |\boldsymbol{x}-\boldsymbol{\beta}_N t|$.
-We introduce the ratio of the damping rate to the rate of oscillations in the plasma $\nu_\tau = \kappa/\omega_p$.  This expression is valid for large damping and slow motion of the nucleus or if the velocity of the nuclei is small. A similar result valid at large distances, which only includes the last term, was previously derived in~\cite{Stenflo:1973} for dusty (complex) plasmas. For large distances and large $\nu_\tau$, the last term in the second line is dominant, indicating that the overall potential would be over-damped. In this regime, the potential is heavily screened in the forward direction and unscreened in the backward direction relative to the motion of the nucleus. As $\nu_\tau$ becomes small, the $1/2$ in the first portion of the third term, proportional to $m_D^2/\kappa$, dominates. This flips the sign of the damped-dynamic screening contribution causing a wake potential to form behind the nuclei. This shift indicates the change from damped to undamped screening where \req{eq:pos_point_DDS} is no longer valid. 
+% Figure~\ref{fig:dynamiclinear} demonstrates that the damped-dynamic response in the analytic approximation \req{eq:pos_point_DDS} (shown as orange dashed line) is sufficient to approximate the full numerical solution (blue dashed line) found by numerical integration of \req{eq:potent}. The temperature $T = 100$\, keV, above our upper limit of BBN temperatures, is chosen to relate to the dynamic screening result found in~\cite{Hwang:2021kno}. Our analytic solution differs from the numerical result in Fig.~4 of \cite{Hwang:2021kno} by a factor of $\sqrt{2}$ and is horizontally flipped. This reflection is due to a difference in convention in the permittivity, as seen in \req{eq:potentk}. We can see that dynamic screening is slightly stronger at large distances than damped screening, as expected. Damped and undamped screening are very similar at short distances, which is relevant to thermonuclear reaction rates. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure} 
- \centerline{\includegraphics[width=.90\linewidth]{plots/chap03BBN/Pot_2DPlotFix.png}}
- \caption{Two dimensional plot of the total potential \req{eq:pos_point} scaled with Z, at $T=74\,$keV. The potential is cylindrically symmetric about the direction of motion $\boldsymbol{\hat{z}}$, which is indicated by a black arrow. The direction transverse to the motion is $\rho$. The sign of the damped-dynamic correction \req{eq:pos_point_DDS} changes sign due to the cosine term}
- \label{fig:numericalComp}
-\end{figure} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Figure~\ref{fig:dynamiclinear} demonstrates that the damped-dynamic response in the analytic approximation \req{eq:pos_point_DDS} (shown as orange dashed line) is sufficient to approximate the full numerical solution (blue dashed line) found by numerical integration of \req{eq:potent}. The temperature $T = 100$\, keV, above our upper limit of BBN temperatures, is chosen to relate to the dynamic screening result found in~\cite{Hwang:2021kno}. Our analytic solution differs from the numerical result in Fig.~4 of \cite{Hwang:2021kno} by a factor of $\sqrt{2}$ and is horizontally flipped. This reflection is due to a difference in convention in the permittivity, as seen in \req{eq:potentk}. We can see that dynamic screening is slightly stronger at large distances than damped screening, as expected. Damped and undamped screening are very similar at short distances, which is relevant to thermonuclear reaction rates. 
-
-Dynamic screening in both the damped and undamped cases predicts less screening behind and more in front of the moving nucleus than static screening. This is shown in the two-dimensional plot \reff{fig:numericalComp}, of the total potential in plasma at $T=76\,$keV This effect was previously observed for subsonic screening in electron-ion-dust plasmas ~\cite{Stenflo:1973,Shukla:2002ppcf,Lampe:2000pop}. As a result, a negative polarization charge builds up in front of the nucleus. The small negative potential in front alters the potential energy between light nuclei, possibly changing the equilibrium distribution of light elements in the early universe plasma. This effect is much larger in the undamped case and is known in some cases to lead to the formation of dust crystals~\cite{Shukla:1996ccc}. 
+% Dynamic screening in both the damped and undamped cases predicts less screening behind and more in front of the moving nucleus than static screening. This is shown in the two-dimensional plot \reff{fig:numericalComp}, of the total potential in plasma at $T=76\,$keV This effect was previously observed for subsonic screening in electron-ion-dust plasmas ~\cite{Stenflo:1973,Shukla:2002ppcf,Lampe:2000pop}. As a result, a negative polarization charge builds up in front of the nucleus. The small negative potential in front alters the potential energy between light nuclei, possibly changing the equilibrium distribution of light elements in the early universe plasma. This effect is much larger in the undamped case and is known in some cases to lead to the formation of dust crystals~\cite{Shukla:1996ccc}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Effective internuclear potential}\label{sec:potential}
