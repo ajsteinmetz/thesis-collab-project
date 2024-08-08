@@ -11,6 +11,8 @@
 \usepackage{enumitem}
 \usepackage{slashed}
 \usepackage{xcolor}
+\usepackage{xstring}
+%\usepackage[numbers,authoryear]{natbib}
 \usepackage{graphicx}
 \usepackage{rotating}
 \usepackage{aastex_hack}
@@ -48,9 +50,15 @@
 \newcommand{\ms}[1]{\rule[-#1mm]{0mm}{0mm}}
 \newcommand{\grad}{\operatorname{grad}}
 \newcommand{\diag}{\mathrm{diag}}
+
+% Andrew's commands
 \newcommand{\cccite}[1]{\textit{Published in Ref.~\cite{#1} under the \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}}
 \newcommand{\radapt}[1]{\textit{Adapted from Ref.~\cite{#1}}}
 \newcommand{\para}[1]{\paragraph{#1}\hfill\break\noindent}
+\newcommand{\allcite}[1]{\hyperlink{cite.#1}{\StrBefore{#1}{:}\ et. al. (\StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
+\newcommand{\allcitep}[1]{\hyperlink{cite.#1}{\StrBefore{#1}{:}\ et. al. (preprint \StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
+
+
 % Chris's commands
 \newcommand{\reff}[1]{Figure\,({\ref{#1}})}
 \newcommand{\wt}[1]{\widetilde{#1}}
@@ -71,6 +79,7 @@
 \newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}
 \newcommand{\TBstrut}{\Tstrut\Bstrut}
 
+% Equations numbered by section
 \numberwithin{equation}{section}
 
 \begin{document}
@@ -106,15 +115,16 @@
 \input{06-appendix/SpectralMethodBoltzmann/BoltzmannOrthopoly.tex}
 \input{06-appendix/NeutrinoScatteringIntegrals.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
 \listoffigures
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliographystyle{sn-aps}
+%%%%%%%%%%%%%%%%%%%%%%%%
 %\bibliographystyle{spphysJR}
+\bibliographystyle{sn-aps}
+%\bibliographystyle{unsrtnat}
 \bibliography{bibs/birrell-refs,bibs/steinmetz-refs,bibs/yang-refs,bibs/grayson-refs}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
 \printindex
 %%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
