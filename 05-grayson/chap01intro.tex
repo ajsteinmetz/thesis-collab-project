@@ -69,7 +69,7 @@ where $p$ is the canonical four-momentum, and $x$ is the canonical position. The
 \end{align}
 or equivalently, entropy generation. The collision term is necessary to describe systems where the mean free path of plasma constituents is less than or equal to the characteristic length scale of the plasma or when the mean free time $\tau$ is smaller than the characteristic oscillation time of the plasma. This pertains to systems with high density, low temperature, or strongly coupled systems.
 
-Solving the relativistic Vlasov-Boltzmann equation using the microscopic collision term \req{eq:collisionMicro} is difficult, even in the simplest cases; thus, approximate forms are often used. The relaxation-time approximation (RTA) for the collision term proposed by~\cite{Anderson:1974nyl} is a commonly made simplification to the Boltzmann equation, reducing it from an integrodifferential equation to a differential equation. The relativistic form of this collision term takes the form
+The Boltzmann-Einstein equation, see Section \ref{sec:Boltzmann_Einstein}, with a realistic collision operator, i.e., modeling scattering among neutrinos and $e^\pm$, was used in Section \ref{ch:param:studies} to  study the cosmological neutrino freeze-out. However, in many cases a detailed treatment of the microscopic collision term \req{eq:collisionMicro} is computationally prohibitive.  In this section our focus is on the interaction of electromagnetic fields within relativistic plasmas and so in place of the microscopic collision term we employ the relaxation-time approximation (RTA) technique, as proposed by~\cite{Anderson:1974nyl}. RTA is a commonly made simplification to the Boltzmann equation, reducing it from an integrodifferential equation to a differential equation. The relativistic form of this collision term takes the form
 \begin{equation}\label{eq:lincoll}
 C[f] = (p^\mu u_\mu) \kappa [ f_\mathrm{eq}(p) - f(x,p) ] \,,
 \end{equation}
@@ -107,7 +107,7 @@ with the covariant integration, measure can be written as
 \begin{equation}\label{eq:measure} 
  \frac{d^4p}{(2\pi)^4}4\pi \delta_+(p^2-m^2) = \left.\frac{d^3p}{(2\pi)^3p^0}\right|_{p^0 = \sqrt{|\boldsymbol{p}|^2 + m^2}} \,,
 \end{equation}
-where $p^0 = p \cdot u$ in the rest frame of the plasma. The one particle distribution function is effectively the phase space density of the system. We will always refer to the 4-momentum as $p = (p_0, \, \boldsymbol{p})$ and the 3-momentum as $\boldsymbol{p}$.
+where $p^0 = p \cdot u$ in the rest frame of the plasma; see Appendix \ref{ch:vol:forms} for a detailed discussion of the relativistic volume element. The one particle distribution function is effectively the phase space density of the system. We will always refer to the 4-momentum as $p = (p_0, \, \boldsymbol{p})$ and the 3-momentum as $\boldsymbol{p}$.
 
 The kinetic equation describing the evolution of this distribution is the Vlasov-Boltzmann equation (VBE). The VBE is often derived in detail from heuristic arguments see \cite{DeGroot:1980dk,Cercignani:2002bk}. Here, we will outline how it relates to Liouville's theorem. A similar derivation of the equilibrium distribution in the presence of electromagnetic fields is found in \cite{Hakim:2011bk}.
 We derive the classical one-species Vlasov-Boltzmann equation from the Liouville theorem

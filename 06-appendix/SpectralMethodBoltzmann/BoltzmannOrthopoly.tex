@@ -9,7 +9,92 @@ In the cosmological context, the Boltzmann-Einstein equation has been used to st
 
 The efficacy of the spectral method used in \cite{Esposito:2000hi,Mangano:2001iu} can largely be attributed to the fact that, under the conditions considered there, the true solution is very close to a chemical equilibrium distribution, \req{ch_eq}, where the temperature is controlled by the dilution of the system. However, as we have discussed, the Planck CMB results \cite{Planck:2013pxb} indicate the possibility that neutrinos participated in reheating to a greater degree than previously believed, leading to a more pronounced chemical non-equilibrium and reheating. Efficiently obtaining this emergent chemical non-equilibrium within the realm of kinetic theory motivates the development of a new numerical method that is adapted to this  circumstance.
 
-First we give a basic overview of the Boltzmann-Einstein equation in an FRW Universe.  In Section \ref{the_method} we   recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and then introduce our modified basis and characterize precisely the differences between the method we propose and previous approaches.  We use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In Section \ref{validation} we validate the method using a model problem.  In Section \ref{orthopoly_app} we give further details on the construction of the parameterized family orthogonal polynomials we use to solve the Boltzmann-Einstein equation.  See also \cite{Birrell:2014gea}.
+ First, in  Section \ref{orthopoly_app}  we give important general background on moving frames of orthogonal polynomials, deriving several formulas and properties that will be needed in our method for solving the Boltzmann-Einstein equation. In Section \ref{the_method} we develop the details of our method. We start with a basic overview of the Boltzmann-Einstein equation in an FRW Universe, then we recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and compare this with our modified basis moving frame method.  We use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In Section \ref{validation} we validate the method using a model problem.   This section is adapted from \cite{Birrell:2014ona,Birrell:2014gea,Birrell:2014uka}.
+
+
+
+
+
+\subsection{Orthogonal Polynomials}\label{orthopoly_app}
+In this section we give details regarding the construction of the moving frame of orthogonal polynomials\index{orthogonal polynomials} that will be required for our Boltzmann-Einstein equation solver.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\para{Generalities}\label{ortho-general}
+Let $w:(a,b)\rightarrow [0,\infty)$ be a weight function where $(a,b)$ is a (possibly unbounded) interval and consider the Hilbert space $L^2(w(x) dx)$.   We will consider weights such that $x^n\in L^2(w(x) dx)$ for all $n\in\mathbb{N}$. We denote the inner product by $\langle\cdot,\cdot\rangle$, the norm by $||\cdot||$, and for a vector $\psi\in L^2$ we let $\hat{\psi}\equiv \psi/||\psi||$.  The classical three term recurrence formula can be used to define a set of orthonormal polynomials $\hat{\psi}_i$ using this weight function, see, e.g.,  \cite{Olver},
+\begin{align}\label{poly_recursion}
+&\psi_0=1\,, \hspace{2mm} \psi_1=||\psi_0||(x-\langle x\hat\psi_0,\hat{\psi}_0\rangle)\hat{\psi}_0\,,\\
+&\psi_{n+1}=||\psi_n||\left[\left(x-\langle x\hat\psi_n,\hat\psi_n\rangle\right)\hat\psi_n-\langle x\hat\psi_n,\hat\psi_{n-1}\rangle\hat\psi_{n-1}\right]\,.\notag
+\end{align}
+One can also derive recursion relations for the derivatives of $\psi_n$ with respect to $x$, denoted with a prime,
+\begin{align}\label{deriv_rec}
+&\psi_0^{'}=0, \hspace{2mm} \hat{\psi}_1^{'}=\frac{||\psi_0||}{||\psi_1||}\hat\psi_0\,,\\
+&\hat{\psi}_{n+1}^{'}=\frac{||\psi_n||}{||\psi_{n+1}||}\left[\hat\psi_n+\left(x-\langle x\hat\psi_n,\hat\psi_n\rangle\right)\hat{\psi}_n^{'}-\langle x\hat\psi_n,\hat\psi_{n-1}\rangle\hat{\psi}_{n-1}^{'}\right]\,.\notag
+\end{align}
+Since $\hat{\psi}_n^{'}$ is a degree $n-1$ polynomial, we have the expansion 
+\begin{equation}
+\hat{\psi}_n^{'}=\sum_{k<n} a_n^k \hat{\psi}_k\,.
+\end{equation}
+Using \req{deriv_rec} we obtain a recursion relation for the $a_n^k$
+\begin{align}
+a_{n+1}^k=&\frac{||\psi_n||}{||\psi_{n+1}||}\left(\delta_{n,k}-\langle x\hat\psi_n,\hat\psi_{n}\rangle a_n^k-\langle x\hat\psi_n,\hat\psi_{n-1}\rangle a_{n-1}^k+\sum_{l<n}^la_n^l\langle x\hat\psi_l,\hat\psi_k\rangle\right)\,,\notag\\
+a_1^0=&\frac{||\psi_0||}{||\psi_1||}\,.\notag
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\para{Parametrized Families of Orthogonal Polynomials}\label{ortho-polynom-fam}
+Our method requires not just a single set of orthogonal polynomials, but rather a parametrized family of orthogonal polynomials that are generated by a weight function $w_t(x)$ that is a $C^1$ function of both $x\in(a,b)$ and the parameter $t$. The corresponding time-dependent basis of orthogonal polynomials, also called a moving frame\index{moving frame}, is used to define the spectral method for solving the  Boltzmann-Einstein equation as outlined in Section \ref{dynamics_sec}.  To emphasize the time dependence, in this section we write $g_t(\cdot,\cdot)$ for the inner product $\langle\cdot,\cdot\rangle$ (not to be confused with the spacetime metric tensor).  We will assume that $\partial_t w$ is dominated by some $L^1(dx)$ function of $x$ only that decays exponentially as $x\rightarrow\pm\infty$ (if the interval is unbounded). In particular, this holds for the weight function \req{weight}.
+
+Given the above assumption about the decay of $\partial_t w$, the dominated convergence theorem implies that $\langle p,q\rangle$ is a $C^1$ function of $t$ for all polynomials $p$ and $q$ and justifies  differentiation under the integral sign. By induction, it also implies implies that the $\hat\psi_i$ have coefficients that are $C^1$ functions of $t$. Therefore, for any polynomials $p$, $q$ whose coefficients are $C^1$ functions of $t$ we have
+\begin{equation}
+\frac{d}{dt}g_t( p,q)=\dot{g}_t(p,q)+g_t(\dot{p},q)+g_t( p,\dot{q})\,,
+\end{equation}
+where a dot denotes differentiation with respect to $t$ and we use $\dot{g}_t(\cdot,\cdot)$ to denote the inner product with respect to the weight $\dot{w}$.  
+
+\req{b_eq} for the mode coefficients requires us to compute $g(\dot{\hat\psi}_i,\hat\psi_j)$.  Differentiating the relation
+\begin{equation}
+\delta_{ij}=g_t(\hat\psi_i,\hat\psi_j)
+\end{equation}
+yields
+\begin{equation}\label{ortho_deriv_eq}
+0=\dot g_t(\hat\psi_i,\hat\psi_j)+g_t(\dot{\hat\psi}_i,\hat\psi_j)+g_t(\hat\psi_i,\dot{\hat\psi}_j)\,.
+\end{equation}
+For $i=j$ we obtain
+\begin{equation}\label{norm_deriv_eq}
+g_t(\dot{\hat\psi}_i,\hat\psi_i)=-\frac{1}{2}\dot{g}_t(\hat\psi_i,\hat\psi_i)\,.
+\end{equation}
+For $i<j$, $\dot{\hat\psi}_i$ is a degree $i$ polynomial and so it is orthogonal to $\hat\psi_j$. Therefore \req{ortho_deriv_eq} simplifies to
+\begin{equation}
+g_t(\dot{\hat\psi}_i,\hat\psi_j)=-\dot{g}_t(\hat\psi_i,\hat\psi_j),\hspace{2mm} i\neq j\,.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\para{Proof of Lower Triangularity}\label{lower_triang}
+Here we prove that the matrices that define the dynamics of the mode coefficients $b^k$ are lower triangular. This fact reduces the number of integrals that must be computed in practice.  Recall the definitions
+\begin{align}
+A^k_i(\Upsilon)\equiv&\langle\frac{z}{f_\Upsilon }\hat\psi_i\partial_zf_\Upsilon ,\hat\psi_k\rangle+\langle z\partial_z \hat\psi_i,\hat\psi_k\rangle\,,\\
+B^k_i(\Upsilon)\equiv &\Upsilon\left(\langle\frac{1}{f_\Upsilon }\frac{\partial f_\Upsilon }{\partial\Upsilon}\hat\psi_i,\hat\psi_k\rangle+\langle\frac{\partial\hat{\psi}_i}{\partial \Upsilon},\hat\psi_k\rangle\right)\,.\notag
+\end{align}
+Using integration by parts, we see that
+\begin{equation}
+A^k_i=-3\langle\hat\psi_i,\hat\psi_k\rangle-\langle \hat \psi_i,z\partial_z\hat\psi_k\rangle\,.
+\end{equation}
+Since $\hat\psi_i$ is orthogonal to all polynomials of degree less than $i$ we have $A^k_i=0$ for  $k<i$.  
+
+$B^k_i$ can be simplified as follows.  First differentiate 
+\begin{equation}
+\delta_{ik}=\langle \hat\psi_i,\hat\psi_j\rangle
+\end{equation}
+with respect to $\Upsilon$ to obtain
+\begin{align}
+0=&\int \hat\psi_i\hat\psi_k\partial_{\Upsilon}wdz+\langle \partial_{\Upsilon}\hat\psi_i,\hat\psi_k\rangle+\langle \hat\psi_i,\partial_{\Upsilon}\hat\psi_k\rangle\\
+=&\langle\frac{\hat\psi_i}{f_\Upsilon}\partial_{\Upsilon}f_\Upsilon,\hat\psi_k \rangle+\langle\partial_{\Upsilon}\hat\psi_i,\hat\psi_k\rangle+\langle \hat\psi_i,\partial_{\Upsilon}\hat\psi_k\rangle\,.\notag
+\end{align}
+Therefore 
+\begin{equation}
+B^k_i=-\Upsilon\langle\hat\psi_i,\partial_{\Upsilon}\hat\psi_k\rangle\,.
+\end{equation}
+$\partial_\Upsilon \hat\psi_k$ is a degree $k$ polynomial, hence $B_i^k=0$ for $k<i$ as desired.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spectral Method for Boltzmann-Einstein Equation  in an FRW Universe}\label{the_method}
@@ -114,7 +199,6 @@ We note that the authors of \cite{Esposito:2000hi} did consider the case of fixe
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Comparison of Bases}\label{basis_comparison}
-
 Before deriving the dynamical equations for the method outlined in Section \ref{kinetic_eq_approach}, we illustrate the error inherent in approximating the chemical non-equilibrium distribution \req{k_eq}  with a  chemical equilibrium distribution \req{ch_eq} whose temperature is $T=1/a$.   Given a chemical non-equilibrium distribution 
 \begin{equation}\label{zeroth_approx}
 f_\Upsilon (y)=\frac{1}{\Upsilon^{-1}e^{y/(aT)}+1}\,,
@@ -130,6 +214,15 @@ d^i=\int\hat\chi_i \chi f_{ch}dy=\int\hat\chi_i  f_\Upsilon dy\,.
 \begin{equation}
 \text{error}_N=\frac{\int_0^\infty |f_\Upsilon -f_\Upsilon ^N|dy}{\int_0^\infty |f_\Upsilon |dy}\,.
 \end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_5.pdf}}
+\caption{Errors in expansion of \req{zeroth_approx} as a function of number of modes, $\Upsilon=0.5$. \radapt{Birrell:2014gea}.}\label{fig:free_stream_f0_approx_Ups_5}
+ \centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_1_5.pdf}}
+\caption{Errors in  expansion of \req{zeroth_approx} as a function of number of modes, $\Upsilon=1.5$. \radapt{Birrell:2014gea}.}\label{fig:free_stream_f0_approx_Ups_1_5}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 We note the appearance of the reheating ratio
 \begin{equation}\label{reheat}
@@ -137,34 +230,16 @@ We note the appearance of the reheating ratio
 \end{equation}
 in the denominator of \req{zeroth_approx}, which comes from changing variables from $z=p/T$ in \req{weight} to $y=ap$ in order to compare with \req{free_stream_weight}.  Physically, $R$ is the ratio of the physical temperature $T$ to the dilution controlled temperature scaling  of $1/a$.   In physical situations, including cosmology, $R$ can vary from unity when dimensioned energy scales influence dynamical equations for $a$. From the error plots we see that for $R$ sufficiently close to $1$, the approximation performs well with a small number of terms, even with $\Upsilon\neq 1$.  
 
+
+
+
+ In the case of large reheating, we find that when $R$ approaches and surpasses $2$, large spurious oscillations begin to appear in the expansion and they persist even when a large number of terms are used, as seen in Figures  \ref{fig:free_stream_f0_approx_Ups_1_T_r_1_85} and \ref{fig:free_stream_f0_approx_Ups_1_T_r_2}, where we compare $f_\Upsilon/f_{ch}^{1/2}$ with $f_{\Upsilon}^N/f_{ch}^{1/2}$ for $\Upsilon=1$ and $N=20$. See Ref.~\cite{Birrell:2014gea} for further discussion of the origin of these oscillations. This demonstrates that the chemical equilibrium method with dilution temperature scaling will  perform extremely poorly in situations that experience a large degree of reheating. For $R\approx 1$, the benefit of including fugacity is not as striking, as the chemical equilibrium basis is able to approximate \req{zeroth_approx} reasonably well.  However, for more stringent error tolerances including $\Upsilon$ can reduce the number of required modes in cases where the degree of chemical non-equilibrium is large.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
-\begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_5.eps}}
-\caption{Errors in expansion of \req{zeroth_approx} as a function of number of modes, $\Upsilon=0.5$.}\label{fig:free_stream_f0_approx_Ups_5}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_1_5.eps}}
-\caption{Errors in  expansion of \req{zeroth_approx} as a function of number of modes, $\Upsilon=1.5$.}\label{fig:free_stream_f0_approx_Ups_1_5}
-\end{minipage}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
- In the case of large reheating, we find that when $R$ approaches and surpasses $2$, large spurious oscillations begin to appear in the expansion and they persist even when a large number of terms are used, as seen in figures  \ref{fig:free_stream_f0_approx_Ups_1_T_r_1_85} and \ref{fig:free_stream_f0_approx_Ups_1_T_r_2}, where we compare $f_\Upsilon/f_{ch}^{1/2}$ with $f_{\Upsilon}^N/f_{ch}^{1/2}$ for $\Upsilon=1$ and $N=20$. See Ref.~\cite{Birrell:2014gea} for further discussion of the origin of these oscillations. This demonstrates that the chemical equilibrium method with dilution temperature scaling will  perform extremely poorly in situations that experience a large degree of reheating. For $R\approx 1$, the benefit of including fugacity is not as striking, as the chemical equilibrium basis is able to approximate \req{zeroth_approx} reasonably well.  However, for more stringent error tolerances including $\Upsilon$ can reduce the number of required modes in cases where the degree of chemical non-equilibrium is large.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_1_T_r_1_85_n_20.eps}}
-\caption{Approximation to \req{zeroth_approx} for $\Upsilon=1$ and $R=1.85$ using the first $20$ basis elements generated by \req{free_stream_weight}.}\label{fig:free_stream_f0_approx_Ups_1_T_r_1_85}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_1_T_r_2_n_20.eps}}
-\caption{Approximation to \req{zeroth_approx} for $\Upsilon=1$ and $R=2$ using the first $20$ basis elements generated by \req{free_stream_weight}.}\label{fig:free_stream_f0_approx_Ups_1_T_r_2}
-\end{minipage}
+\centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_1_T_r_1_85_n_20.pdf}}
+\caption{Approximation to \req{zeroth_approx} for $\Upsilon=1$ and $R=1.85$ using the first $20$ basis elements generated by \req{free_stream_weight}. \radapt{Birrell:2014gea}.}\label{fig:free_stream_f0_approx_Ups_1_T_r_1_85}
+ \centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_f0_approx_Ups_1_T_r_2_n_20.pdf}}
+\caption{Approximation to \req{zeroth_approx} for $\Upsilon=1$ and $R=2$ using the first $20$ basis elements generated by \req{free_stream_weight}. \radapt{Birrell:2014gea}.}\label{fig:free_stream_f0_approx_Ups_1_T_r_2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -200,7 +275,7 @@ B^k_i(\Upsilon)\equiv& C_i^k(\Upsilon)+D_i^k(\Upsilon),\hspace{2mm} C_i^k\equiv\
 \begin{align}\label{b_eq}
 \dot b^k=& \left(H+\frac{\dot{T}}{T}\right)\sum_i A_i^k(\Upsilon)b^i-\frac{\dot{\Upsilon}}{\Upsilon}\sum_i B_i^k(\Upsilon)b^i+\langle\frac{1}{f_\Upsilon E}C[f],\hat\psi_k\rangle\,.
 \end{align}
- See Section \ref{ortho-general} for details on how to recursively construct the $\partial_z\hat\psi_i$. We show how to compute the inner products $\langle\hat\psi_k,\partial_{\Upsilon}\hat\psi_k\rangle$ in  Section \ref{ortho-polynom-fam}. In Section \ref{lower_triang} we prove that that both $A$ and $B$ are lower triangular and show that the only inner products involving the $\partial_\Upsilon\hat{\psi}_i$ that are required in order to compute $A$ and $B$ are those the above mentioned diagonal elements, $\langle\hat\psi_k,\partial_{\Upsilon}\hat\psi_k\rangle$.
+ See Section \ref{ortho-general} for details on how to recursively construct the $\partial_z\hat\psi_i$. We showed how to compute the inner products $\langle\hat\psi_k,\partial_{\Upsilon}\hat\psi_k\rangle$ in  Section \ref{ortho-polynom-fam}. In Section \ref{lower_triang} we proved that that both $A$ and $B$ are lower triangular and show that the only inner products involving the $\partial_\Upsilon\hat{\psi}_i$ that are required in order to compute $A$ and $B$ are those the above mentioned diagonal elements, $\langle\hat\psi_k,\partial_{\Upsilon}\hat\psi_k\rangle$.
 
 
 We fix the dynamics of $T$ and $\Upsilon$ by imposing the conditions
@@ -331,33 +406,21 @@ We solved \req{free_stream_toy} using the chemical equilibrium method, with the 
 
 
 In Figures \ref{fig:free_stream_num_err} and  \ref{fig:free_stream_E_err} we show the maximum relative error in the number densities and energy densities respectively over the time interval $[0,10]$ for various numbers of computed modes.  The particle number density and energy density are accurate, up to the integration tolerance level, for $3$ or more and $4$ or more modes respectively. This is consistent with \req{free_stream_moments} which shows the number of modes required to capture each of these quantities. However, fewer modes than these minimum values lead to a large error in the corresponding moment of the distribution function.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.0cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_num_err.eps}}
-\caption{Maximum relative error in particle number density.}\label{fig:free_stream_num_err}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.0cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_E_err.eps}}
-\caption{Maximum relative error in energy density.}\label{fig:free_stream_E_err}
-\end{minipage}
+\begin{figure}
+\centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_num_err.pdf}}
+\caption{Maximum relative error in particle number density. \radapt{Birrell:2014gea}.}\label{fig:free_stream_num_err}
+\centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_E_err.pdf}}
+\caption{Maximum relative error in energy density. \radapt{Birrell:2014gea}.}\label{fig:free_stream_E_err}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
-\begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_b_err.eps}}
-\caption{Maximum error in mode coefficients.}\label{fig:free_stream_b_err}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.0cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_L1_err.eps}}
-\caption{Maximum ratio  of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution.}\label{fig:free_stream_L1_err}
-\end{minipage}
+\centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_b_err.pdf}}
+\caption{Maximum error in mode coefficients. \radapt{Birrell:2014gea}.}\label{fig:free_stream_b_err}
+\centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_L1_err.pdf}}
+\caption{Maximum ratio  of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution. \radapt{Birrell:2014gea}.}\label{fig:free_stream_L1_err}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -369,25 +432,19 @@ To show that the numerical integration accurately captures the mode coefficients
 
 
 
-In figure  \ref{fig:free_stream_L1_err} we show the error between the exact solution $f$, and the numerical solution $f^N$ computed using $N=2,...,10$ modes over the solution time interval, where we define the error by
+In Figure  \ref{fig:free_stream_L1_err} we show the error between the exact solution $f$, and the numerical solution $f^N$ computed using $N=2,...,10$ modes over the solution time interval, where we define the error by
 \begin{equation}\label{f_err}
 \text{error}_N=\max_{t} \frac{\int |f-f^N|dy}{\int |f|dy}\,.
 \end{equation}
-For $R=1$ and $R=1.4$  the chemical equilibrium method works reasonably well (as long as the number of modes is at least 4, so that the energy and number densities are properly captured) but for $R=2$ the approximate solution exhibits spurious oscillations, as seen in Figure \ref{fig:free_stream_approx_T_r_2}, and has significantly degraded $L^1$ error;  this behavior is expected based on the results in Section \ref{basis_comparison}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
-\begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_approx_T_r_2.eps}}
-\caption{Approximate and exact solution for a reheating ratio $R=2$ and $N=10$ modes.}\label{fig:free_stream_approx_T_r_2}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_L1_err_time.eps}}
-\caption{$L^1$ error ratio as a function of time for $N=10$ modes.}\label{fig:free_stream_L1_err_time}
-\end{minipage}
+\centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_approx_T_r_2.pdf}}
+\caption{Approximate and exact solution for a reheating ratio $R=2$ and $N=10$ modes. \radapt{Birrell:2014gea}.}\label{fig:free_stream_approx_T_r_2}
+ \centerline{\includegraphics[width=0.8\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/free_stream_L1_err_time.pdf}}
+\caption{$L^1$ error ratio as a function of time for $N=10$ modes. \radapt{Birrell:2014gea}.}\label{fig:free_stream_L1_err_time}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Further clarifying the behavior, in Figure \ref{fig:free_stream_L1_err_time}  we show the $L^1$ error ratio as a function of time for $N=10$ modes. In the $R=2$ case we see that the error increases as the reheating ratio approaches its asymptotic value of $R=2$ as $t\rightarrow\infty$.  As we will see, our methods achieves a much higher accuracy for a small number of terms in the case of large reheating ratio due to the replacement of dilution temperature scaling with the dynamical effective temperature $T$.  
+For $R=1$ and $R=1.4$  the chemical equilibrium method works reasonably well (as long as the number of modes is at least 4, so that the energy and number densities are properly captured) but for $R=2$ the approximate solution exhibits spurious oscillations, as seen in Figure \ref{fig:free_stream_approx_T_r_2}, and has significantly degraded $L^1$ error;  this behavior is expected based on the results in Section \ref{basis_comparison}. Further clarifying the behavior, in Figure \ref{fig:free_stream_L1_err_time}  we show the $L^1$ error ratio as a function of time for $N=10$ modes. In the $R=2$ case we see that the error increases as the reheating ratio approaches its asymptotic value of $R=2$ as $t\rightarrow\infty$.  As we will see, our methods achieves a much higher accuracy for a small number of terms in the case of large reheating ratio due to the replacement of dilution temperature scaling with the dynamical effective temperature $T$.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -395,15 +452,10 @@ Further clarifying the behavior, in Figure \ref{fig:free_stream_L1_err_time}  we
 We now solve  \req{free_stream_toy} using the chemical non-equilibrium method, with the orthonormal basis defined by the weight function \req{weight} for $N=2,...,10$ modes, a prescribed numerical integration tolerance of $10^{-13}$, and asymptotic reheating ratios of $R=1.1$, $R=1.4$, and $R=2$.  Recall that we are referring to $T$ and $\Upsilon$ as the first two modes ($n=0$ and $n=1$). 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
-\begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_num_err.eps}}
-\caption{Maximum relative error in particle number density.}\label{fig:keq_num_err}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[b]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_E_err.eps}}
-\caption{Maximum relative error in energy density.}\label{fig:keq_E_err}
-\end{minipage}
+\centerline{\includegraphics[width=0.9\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/keq_num_err.pdf}}
+\caption{Maximum relative error in particle number density. \radapt{Birrell:2014gea}.}\label{fig:keq_num_err}
+ \centerline{\includegraphics[width=0.9\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/keq_E_err.pdf}}
+\caption{Maximum relative error in energy density. \radapt{Birrell:2014gea}.}\label{fig:keq_E_err}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In Figures \ref{fig:keq_num_err} and  \ref{fig:keq_E_err} we show the maximum relative error over the time interval $[0,10]$ in the number densities and energy densities respectively for various numbers of computed modes. Even for only $2$ modes, the number and energy densities are accurate up to the integration tolerance level.  This is in agreement with the analytical expressions in \req{th_eq_moments}.
@@ -412,118 +464,26 @@ In Figures \ref{fig:keq_num_err} and  \ref{fig:keq_E_err} we show the maximum re
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
-\begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_b_err.eps}}
-\caption{Maximum error in mode coefficients.}\label{fig:keq_b_err}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.1cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_L1_err.eps}}
-\caption{Maximum ratio of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution.}\label{fig:keq_L1_err}
-\end{minipage}
+\centerline{\includegraphics[width=0.9\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/keq_b_err.pdf}}
+\caption{Maximum error in mode coefficients. \radapt{Birrell:2014gea}.}\label{fig:keq_b_err}
+\centerline{\includegraphics[width=0.9\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/keq_L1_err.pdf}}
+\caption{Maximum ratio of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution. \radapt{Birrell:2014gea}.}\label{fig:keq_L1_err}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-To show that the numerical integration accurately captures the mode coefficients of the exact solution, \req{exact_sol}, in Figure \ref{fig:keq_b_err} we show the error in the computed mode coefficients \req{mode_err_def}, where the evolution of the system was computed using $N=10$ modes. In Figure \ref{fig:keq_L1_err} we show the error between the approximate and exact solutions, computed as in \req{f_err} for $N=2,...,10$ and $R=1.1$, $R=1.4$, and $R=2$ respectively.  For most mode numbers and $R$ values, the error using $2$ modes is substantially less than the error from the chemical equilibrium method using $4$ modes.  The result is most dramatic for the case of large reheating, $R=2$, where the spurious oscillations from the chemical equilibrium solution are absent in our method, as seen in Figure \ref{fig:keq_approx_Tr_2}, as compared to the chemical equilibrium method in Figure \ref{fig:free_stream_approx_T_r_2}.  Note that we plot from $z\in [0,15]$ in comparison to $y\in[0,30]$ in figure \ref{fig:keq_approx_Tr_2} due to the relation $z=y/R$ as discussed in Section \ref{basis_comparison}. Additionally, the error no longer increases as $t\rightarrow\infty$, as it did for the chemical equilibrium method, see figure \ref{fig:keq_L1_err_time}.  In fact it decreases since the exact solution approaches chemical equilibrium at a reheated temperature and hence can be better approximated by $f_\Upsilon$. 
+To show that the numerical integration accurately captures the mode coefficients of the exact solution, \req{exact_sol}, in Figure \ref{fig:keq_b_err} we show the error in the computed mode coefficients \req{mode_err_def}, where the evolution of the system was computed using $N=10$ modes. In Figure \ref{fig:keq_L1_err} we show the error between the approximate and exact solutions, computed as in \req{f_err} for $N=2,...,10$ and $R=1.1$, $R=1.4$, and $R=2$ respectively.  For most mode numbers and $R$ values, the error using $2$ modes is substantially less than the error from the chemical equilibrium method using $4$ modes.  The result is most dramatic for the case of large reheating, $R=2$, where the spurious oscillations from the chemical equilibrium solution are absent in our method, as seen in Figure \ref{fig:keq_approx_Tr_2}, as compared to the chemical equilibrium method in Figure \ref{fig:free_stream_approx_T_r_2}.  Note that we plot from $z\in [0,15]$ in comparison to $y\in[0,30]$ in Figure \ref{fig:keq_approx_Tr_2} due to the relation $z=y/R$ as discussed in Section \ref{basis_comparison}. Additionally, the error no longer increases as $t\rightarrow\infty$, as it did for the chemical equilibrium method, see Figure \ref{fig:keq_L1_err_time}.  In fact it decreases since the exact solution approaches chemical equilibrium at a reheated temperature and hence can be better approximated by $f_\Upsilon$. 
 
 In summary, in addition to the reduction in the computational cost when going from $4$ to $2$ modes, we also reduce the error compared to the chemical equilibrium method, all while accurately capturing the number and energy densities. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
-\begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_approx_T_r_2.eps}}
-\caption{Approximate and exact solution for $R=2$ obtained with two modes.}\label{fig:keq_approx_Tr_2}
- \end{minipage}
- \hspace{0.5cm}
- \begin{minipage}[t]{0.5\linewidth}
-\centerline{\includegraphics[height=6.2cm]{06-appendix/SpectralMethodBoltzmann/Figures/keq_L1_err_time.eps}}
-\caption{$L^1$ error ratio as a function of time for $n=10$ modes.}\label{fig:keq_L1_err_time}
-\end{minipage}
+\centerline{\includegraphics[width=0.9\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/keq_approx_T_r_2.pdf}}
+\caption{Approximate and exact solution for $R=2$ obtained with two modes. \radapt{Birrell:2014gea}.}\label{fig:keq_approx_Tr_2}
+\centerline{\includegraphics[width=0.9\linewidth]{06-appendix/SpectralMethodBoltzmann/Figures/keq_L1_err_time.pdf}}
+\caption{$L^1$ error ratio as a function of time for $n=10$ modes. \radapt{Birrell:2014gea}.}\label{fig:keq_L1_err_time}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-
-
-\subsection{Orthogonal Polynomials}\label{orthopoly_app}
-In this section we give details regarding the construction of the orthogonal polynomials that are required for both the chemical equilibrium and non-equilibrium methods.\index{orthogonal polynomials}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\para{Generalities}\label{ortho-general}
-Let $w:(a,b)\rightarrow [0,\infty)$ be a weight function where $(a,b)$ is a (possibly unbounded) interval and consider the Hilbert space $L^2(w(x) dx)$.   We will consider weights such that $x^n\in L^2(w(x) dx)$ for all $n\in\mathbb{N}$. We denote the inner product by $\langle\cdot,\cdot\rangle$, the norm by $||\cdot||$, and for a vector $\psi\in L^2$ we let $\hat{\psi}\equiv \psi/||\psi||$.  The classical three term recurrence formula can be used to define a set of orthonormal polynomials $\hat{\psi}_i$ using this weight function, see, e.g.,  \cite{Olver},
-\begin{align}\label{poly_recursion}
-&\psi_0=1\,, \hspace{2mm} \psi_1=||\psi_0||(x-\langle x\hat\psi_0,\hat{\psi}_0\rangle)\hat{\psi}_0\,,\\
-&\psi_{n+1}=||\psi_n||\left[\left(x-\langle x\hat\psi_n,\hat\psi_n\rangle\right)\hat\psi_n-\langle x\hat\psi_n,\hat\psi_{n-1}\rangle\hat\psi_{n-1}\right]\,.\notag
-\end{align}
-One can also derive recursion relations for the derivatives of $\psi_n$ with respect to $x$, denoted with a prime,
-\begin{align}\label{deriv_rec}
-&\psi_0^{'}=0, \hspace{2mm} \hat{\psi}_1^{'}=\frac{||\psi_0||}{||\psi_1||}\hat\psi_0\,,\\
-&\hat{\psi}_{n+1}^{'}=\frac{||\psi_n||}{||\psi_{n+1}||}\left[\hat\psi_n+\left(x-\langle x\hat\psi_n,\hat\psi_n\rangle\right)\hat{\psi}_n^{'}-\langle x\hat\psi_n,\hat\psi_{n-1}\rangle\hat{\psi}_{n-1}^{'}\right]\,.\notag
-\end{align}
-Since $\hat{\psi}_n^{'}$ is a degree $n-1$ polynomial, we have the expansion 
-\begin{equation}
-\hat{\psi}_n^{'}=\sum_{k<n} a_n^k \hat{\psi}_k\,.
-\end{equation}
-Using \req{deriv_rec} we obtain a recursion relation for the $a_n^k$
-\begin{align}
-a_{n+1}^k=&\frac{||\psi_n||}{||\psi_{n+1}||}\left(\delta_{n,k}-\langle x\hat\psi_n,\hat\psi_{n}\rangle a_n^k-\langle x\hat\psi_n,\hat\psi_{n-1}\rangle a_{n-1}^k+\sum_{l<n}^la_n^l\langle x\hat\psi_l,\hat\psi_k\rangle\right)\,,\notag\\
-a_1^0=&\frac{||\psi_0||}{||\psi_1||}\,.\notag
-\end{align}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\para{Parametrized Families of Orthogonal Polynomials}\label{ortho-polynom-fam}
-The chemical non-equilibrium method requires not just a single set of orthogonal polynomials, but rather a parametrized family of orthogonal polynomial generated by a weight function $w_t(x)$ that is a $C^1$ function of both $x\in(a,b)$ and the parameter $t$. The corresponding time-dependent basis of orthogonal polynomials, also called a moving frame\index{moving frame}, is used to define the spectral method for solving the  Boltzmann-Einstein equation as outlined in Section \ref{dynamics_sec}.  To emphasize the time dependence, in this section we write $g_t(\cdot,\cdot)$ for the inner product $\langle\cdot,\cdot\rangle$ (not to be confused with the spacetime metric tensor).  We will assume that $\partial_t w$ is dominated by some $L^1(dx)$ function of $x$ only that decays exponentially as $x\rightarrow\pm\infty$ (if the interval is unbounded). In particular, this holds for the weight function \req{weight}.
-
-Given the above assumption about the decay of $\partial_t w$, the dominated convergence theorem implies that $\langle p,q\rangle$ is a $C^1$ function of $t$ for all polynomials $p$ and $q$ and justifies  differentiation under the integral sign. By induction, it also implies implies that the $\hat\psi_i$ have coefficients that are $C^1$ functions of $t$. Therefore, for any polynomials $p$, $q$ whose coefficients are $C^1$ functions of $t$ we have
-\begin{equation}
-\frac{d}{dt}g_t( p,q)=\dot{g}_t(p,q)+g_t(\dot{p},q)+g_t( p,\dot{q})\,,
-\end{equation}
-where a dot denotes differentiation with respect to $t$ and we use $\dot{g}_t(\cdot,\cdot)$ to denote the inner product with respect to the weight $\dot{w}$.  
-
-\req{b_eq} for the mode coefficients requires us to compute $g(\dot{\hat\psi}_i,\hat\psi_j)$.  Differentiating the relation
-\begin{equation}
-\delta_{ij}=g_t(\hat\psi_i,\hat\psi_j)
-\end{equation}
-yields
-\begin{equation}\label{ortho_deriv_eq}
-0=\dot g_t(\hat\psi_i,\hat\psi_j)+g_t(\dot{\hat\psi}_i,\hat\psi_j)+g_t(\hat\psi_i,\dot{\hat\psi}_j)\,.
-\end{equation}
-For $i=j$ we obtain
-\begin{equation}\label{norm_deriv_eq}
-g_t(\dot{\hat\psi}_i,\hat\psi_i)=-\frac{1}{2}\dot{g}_t(\hat\psi_i,\hat\psi_i)\,.
-\end{equation}
-For $i<j$, $\dot{\hat\psi}_i$ is a degree $i$ polynomial and so it is orthogonal to $\hat\psi_j$. Therefore \req{ortho_deriv_eq} simplifies to
-\begin{equation}
-g_t(\dot{\hat\psi}_i,\hat\psi_j)=-\dot{g}_t(\hat\psi_i,\hat\psi_j),\hspace{2mm} i\neq j\,.
-\end{equation}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\para{Proof of Lower Triangularity}\label{lower_triang}
-Here we prove that the matrices that define the dynamics of the mode coefficients $b^k$ are lower triangular.  Recall the definitions
-\begin{align}
-A^k_i(\Upsilon)\equiv&\langle\frac{z}{f_\Upsilon }\hat\psi_i\partial_zf_\Upsilon ,\hat\psi_k\rangle+\langle z\partial_z \hat\psi_i,\hat\psi_k\rangle\,,\\
-B^k_i(\Upsilon)\equiv &\Upsilon\left(\langle\frac{1}{f_\Upsilon }\frac{\partial f_\Upsilon }{\partial\Upsilon}\hat\psi_i,\hat\psi_k\rangle+\langle\frac{\partial\hat{\psi}_i}{\partial \Upsilon},\hat\psi_k\rangle\right)\,.\notag
-\end{align}
-Using integration by parts, we see that
-\begin{equation}
-A^k_i=-3\langle\hat\psi_i,\hat\psi_k\rangle-\langle \hat \psi_i,z\partial_z\hat\psi_k\rangle\,.
-\end{equation}
-Since $\hat\psi_i$ is orthogonal to all polynomials of degree less than $i$ we have $A^k_i=0$ for  $k<i$.  
-
-$B^k_i$ can be simplified as follows.  First differentiate 
-\begin{equation}
-\delta_{ik}=\langle \hat\psi_i,\hat\psi_j\rangle
-\end{equation}
-with respect to $\Upsilon$ to obtain
-\begin{align}
-0=&\int \hat\psi_i\hat\psi_k\partial_{\Upsilon}wdz+\langle \partial_{\Upsilon}\hat\psi_i,\hat\psi_k\rangle+\langle \hat\psi_i,\partial_{\Upsilon}\hat\psi_k\rangle\\
-=&\langle\frac{\hat\psi_i}{f_\Upsilon}\partial_{\Upsilon}f_\Upsilon,\hat\psi_k \rangle+\langle\partial_{\Upsilon}\hat\psi_i,\hat\psi_k\rangle+\langle \hat\psi_i,\partial_{\Upsilon}\hat\psi_k\rangle\,.\notag
-\end{align}
-Therefore 
-\begin{equation}
-B^k_i=-\Upsilon\langle\hat\psi_i,\partial_{\Upsilon}\hat\psi_k\rangle\,.
-\end{equation}
-$\partial_\Upsilon \hat\psi_k$ is a degree $k$ polynomial, hence $B_i^k=0$ for $k<i$ as desired.
-
+\clearpage

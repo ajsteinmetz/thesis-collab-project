@@ -25,7 +25,7 @@ Using the average velocity, which for (effectively massless) neutrinos is $\bar 
 \begin{align}
 L_\Gamma&\equiv\frac{\bar v}{\Gamma}=\frac{\int_0^\infty\frac{1}{\Upsilon^{-1}e^z+1}z^2dz}{\int_0^\infty \tilde C[f] z^2/E dz}\,.
 \end{align}
-This can be compared to the Hubble length $L_H=c/H$\index{Hubble length} and the temperature at which $L_\Gamma=L_H$ we call the freeze-out temperature\index{freeze-out temperature} for that reaction.  Figure \ref{fig:scatt_length} shows the scattering length and $L_H$ for various types of neutrino reactions.  The solid line corresponds to the annihilation process $e^+e^-\rightarrow \nu\bar\nu$, the dashed line corresponds to the scattering $\nu e^\pm\rightarrow \nu e^\pm$, and the dot-dashed line corresponds to the combination of all processes involving only neutrinos.  The freeze-out temperatures in MeV are given in Table \ref{table:freeze-out_temp}.
+This can be compared to the Hubble length $L_H=c/H$\index{Hubble!length} and the temperature at which $L_\Gamma=L_H$ we call the freeze-out temperature\index{freeze-out! temperature} for that reaction.  Figure \ref{fig:scatt_length} shows the scattering length and $L_H$ for various types of neutrino reactions.  The solid line corresponds to the annihilation process $e^+e^-\rightarrow \nu\bar\nu$, the dashed line corresponds to the scattering $\nu e^\pm\rightarrow \nu e^\pm$, and the dot-dashed line corresponds to the combination of all processes involving only neutrinos.  The freeze-out temperatures in MeV are given in Table \ref{table:freeze-out_temp}.
 
 \begin{table}[ht]
 \centering 
@@ -44,7 +44,7 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_e_scattering_length_eta_0_23.eps}\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_mu_scattering_length_eta_0_23.eps}}
+\centerline{\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_e_scattering_length_eta_0_23.pdf}\includegraphics[height=6cm]{04-birrell/ParametricStudies/Figures/nu_mu_scattering_length_eta_0_23.pdf}}
 \caption{Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes.  \cccite{Birrell:2014uka} }\label{fig:scatt_length}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,6 +69,14 @@ Therefore, given any time $t_i<t_0<t_f$ we have
 \tau(t)<\tau(t_0)=\frac{2T_f^3}{T_0^3}\left(1-\frac{T_0^2}{T_i^2}\right)^{-1}\Delta t \text{ \,for all } t<t_0\,,
 \end{equation}
 where $\Delta t=t_0-t_i=t_0$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} 
+\centerline{\includegraphics[width=0.90\linewidth]{04-birrell/ParametricStudies/Figures/Ups_relax.pdf}}
+\centerline{\includegraphics[width=0.90\linewidth]{04-birrell/ParametricStudies/Figures/T_relax.pdf}}
+\caption{Starting at $12\MeV$, this figure shows the relaxation of a non-equilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the top frame while the temperatures are shown in the bottom frame}
+\label{fig:relax}
+ \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  The first reheating period that precedes neutrino freeze-out is the disappearance of muons and pions around $O(100\MeV)$, as seen in Figure \ref{fig:energy:frac}, and so we let $T_i=100\MeV$. \req{ch6:tau_eq} is minimized at $T_0\approx 77.5\MeV$ at which point we have 
 \begin{equation}
@@ -76,19 +84,7 @@ where $\Delta t=t_0-t_i=t_0$.
 \end{equation}
 This shows that the relaxation time during the period between $100\MeV$ and $77.5\MeV$ is at least five orders of magnitude smaller than the corresponding time interval.  Therefore the system has sufficient time to relax back to equilibrium after any potential non-equilibrium aspects developed during the reheating period.  Thus justifies our assumption that the neutrino distribution has the equilibrium Fermi Dirac form at $T=O(10 \MeV)$ when we begin our numerical simulation. This can also be demonstrated numerically in Figure \ref{fig:relax}, where we have initialized the system at $T_\gamma=12\MeV$ with a non-equilibrium distribution of $\mu$ and $\tau$ neutrinos, giving them $\Upsilon=0.9$, and let them evolve under the Boltzmann-Einstein equation.  We see that after approximately $10^{-3}$ seconds the system relaxes back to equilibrium, well before neutrino freeze-out near $t=1$s.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure} 
-%04-birrell/ParametricStudies/Figures/
-\begin{minipage}{\linewidth}
-\makebox[0.48\linewidth]%
-{\includegraphics[height=5.5cm]{04-birrell/ParametricStudies/Figures/Ups_relax.eps}}
-\makebox[0.48\linewidth]%
-{\hspace{6mm}\includegraphics[height=5.5cm]{04-birrell/ParametricStudies/Figures/T_relax.eps}}
-\end{minipage}
-\caption{Starting at $12\MeV$, this figure shows the relaxation of a non-equilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the left frame while the temperatures are shown in the right frame}
-\label{fig:relax}
- \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Dependence of effective neutrino number on PP-SM parameters}%\label{sec:param_char}
@@ -125,7 +121,7 @@ H^2=\frac{\rho}{3}\,,\hspace{2mm}\dot\rho=-3H(\rho+P)\,.
 \end{equation}
 where we have also factored out of $C[f]$ the $G_F^2$ term that is common to all of the neutrino interaction matrix elements. 
 
-Aside from the $\theta_W$ dependence of the matrix elements seen in Tables \ref{table:nu:e:reac} and \ref{table:nu:mu:reac}, the complete dependence on natural constants  is now contained in a single dimensionless neutrino interaction strength parameter\index{neutrino interaction strength} $\eta$ with the vacuum present day value,
+Aside from the $\theta_W$ dependence of the matrix elements seen in Tables \ref{table:nu:e:reac} and \ref{table:nu:mu:reac}, the complete dependence on natural constants  is now contained in a single dimensionless neutrino interaction strength parameter\index{neutrino!interaction strength} $\eta$ with the vacuum present day value,
 \begin{equation}\label{eta0_def}
 \eta_0\equiv \left.M_p m_e^3 G_F^2\right|_0  \approx 0.04421\, .
 \end{equation}
@@ -151,7 +147,7 @@ We now present the  dependence of the effective number of neutrinos, $N_\nu^{\ma
  
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.90\columnwidth]{04-birrell/ParametricStudies/Figures/N_eff2.eps}}
+\centerline{\includegraphics[width=0.90\columnwidth]{04-birrell/ParametricStudies/Figures/N_eff2.pdf}}
 \caption{Change in effective number of neutrinos  $N_\nu^{\mathrm{eff}}$ as a function of Weinberg angle for  several values of $\eta/\eta_0=1,2,5,10$. Vertical line is $\sin^2(\theta_W)=0.23$. \radapt{Birrell:2014uka}}
 \label{N_nu_params}  
  \end{figure}
@@ -166,7 +162,7 @@ $N_\nu^{\mathrm{eff}}$ is monotonically increasing in $\eta/\eta_0$ with dominan
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_e_freezeout.eps}\hspace{5mm}\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_mu_freezeout.eps}}
+\centerline{\includegraphics[height=5.8cm]{04-birrell/ParametricStudies/Figures/nu_e_freezeout.pdf}\includegraphics[height=5.8cm]{04-birrell/ParametricStudies/Figures/nu_mu_freezeout.pdf}}
 \caption{Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of Weinberg angle. Vertical line is $\sin^2(\theta_W)=0.23$. \cccite{Birrell:2014uka}}
 \label{fig:freezeoutT_B}
  \end{figure}
@@ -174,7 +170,7 @@ $N_\nu^{\mathrm{eff}}$ is monotonically increasing in $\eta/\eta_0$ with dominan
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_e_freezeout_GF.eps}\hspace{5mm}\includegraphics[height=6.3cm]{04-birrell/ParametricStudies/Figures/nu_mu_freezeout_GF.eps}}
+\centerline{\includegraphics[height=5.8cm]{04-birrell/ParametricStudies/Figures/nu_e_freezeout_GF.pdf}\includegraphics[height=5.8cm]{04-birrell/ParametricStudies/Figures/nu_mu_freezeout_GF.pdf}}
 \caption{Freeze-out temperatures for electron neutrinos (left) and $\mu$, $\tau$ neutrinos (right) for various types of processes, as functions of interaction strength. \cccite{Birrell:2014uka}}
 \label{fig:freezeoutT_eta}
  \end{figure}
@@ -197,7 +193,7 @@ y\equiv  \sqrt{\frac{\eta}{\eta_0}}\,.
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.9\columnwidth]{04-birrell/ParametricStudies/Figures/region_plot_legend.eps}
+\centerline{\includegraphics[width=0.9\columnwidth]{04-birrell/ParametricStudies/Figures/region_plot_legend.pdf}
 }
 \caption{$N_\nu^{\mathrm{eff}}$ bounds in the $\eta/\eta_0, \sin^2(\theta_W)$ plane. Blue for $N_\nu^{\mathrm{eff}}\in (3.03,3.57)$ corresponding to Ref.~\cite{Planck:2013pxb} CMB+BAO analysis and green extends the region to $N_\nu^{\mathrm{eff}}<3.87$ i.e. to CMB+$H_0$. Dot-dashed line delimits the 1 standard-deviation lower boundary of the second analysis. \radapt{Birrell:2014uka}}
 \label{N_nu_domain}
