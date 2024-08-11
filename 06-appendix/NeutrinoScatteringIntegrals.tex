@@ -17,7 +17,7 @@ Note that $R_k$ only uses information about the distributions at a single spacet
 \eta_{\alpha\beta}=\diag(1,-1,-1,-1)\,.
 \end{equation}
 
-From \req{collision:integrals}, we see that a crucial input into the chemical non-equilibrium spectral method with $2 \leftrightarrow 2$ reactions is the ability to efficiently compute a numerical approximation to integrals of the form
+From \req{collision:integrals}, we see that a crucial input into the chemical nonequilibrium spectral method with $2 \leftrightarrow 2$ reactions is the ability to efficiently compute a numerical approximation to integrals of the form
 \begin{align}\label{coll_ip}
 &M\equiv\int G(p_1,p_2,p_3,p_4) S |\mathcal{M}|^2(s,t) (2\pi)^4\delta(\Delta p)\prod_{i=1}^4 \delta_0(p_i^2-m_i^2)\frac{d^4p_i}{(2\pi)^3}\,,\\
 &G(p_1,p_2,p_3,p_4)=g_1(p_1)g_2(p_2)g_3(p_3)g_4(p_4)\,,\notag
@@ -488,7 +488,7 @@ R_k=&2\pi^2T^{-3} M_{k,\nu_\mu}\,.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \para{Neutrino Freeze-out Test}
-Now that we have the above expressions for the neutrino scattering integrals, we can compare the chemical equilibrium and non-equilibrium methods on the problem of neutrino freeze-out using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann-Einstein equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from  \rsec{ch:param:studies}\index{QED!Corrections EOS}.%{app:QED_corr}.
+Now that we have the above expressions for the neutrino scattering integrals, we can compare the chemical equilibrium and nonequilibrium methods on the problem of neutrino freeze-out using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann-Einstein equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from  \rsec{ch:param:studies}\index{QED!Corrections EOS}.%{app:QED_corr}.
 
 To compare our results with Ref.~\cite{Mangano:2005cc}, where neutrino freeze-out was simulated using $\sin^2(\theta_W)=0.23$ and $\eta=\eta_0$, in table \ref{table:method:comp} we present $N_\nu$ together with the following quantities
 \begin{align}
@@ -502,7 +502,7 @@ For coupled neutrinos, one expects this value to be slightly reduced, due to the
 
  $\rho_{\nu0}$ is the energy density of a massless fermion with two degrees of freedom and temperature equal to the free-streaming temperature.  In other words, it is the energy density of a single neutrino species, assuming it decoupled before reheating. Consequently, $\delta\bar\rho_\nu$ is the fractional increase in the energy density of a coupled neutrino species, due to its participation in reheating.
 
-We compute the above using both the chemical equilibrium and non-equilibrium methods. For the following results, we used $\sin^2(\theta_W)=0.23$ and $\eta=\eta_0$. 
+We compute the above using both the chemical equilibrium and nonequilibrium methods. For the following results, we used $\sin^2(\theta_W)=0.23$ and $\eta=\eta_0$. 
 \begin{table}[ht]\label{table:method:comp}
 \centering 
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -517,7 +517,7 @@ Chemical Non-Eq& 3&1.39785&0.009230 & 0.003791&3.044264 \\
 \hline
 \end{tabular}
 \end{table}
-We see that $\Delta N_\nu\equiv N_\nu-3$ agrees to $2$ digits and $4$ digits when using $2$ and $3$ modes respectively for the chemical non-equilibrium method, and similar behavior holds for the other quantities. Due to the reduction in the required number of modes, the chemical non-equilibrium method with the minimum number of required modes ($2$ modes) is more than $20\times$ faster than the chemical equilibrium method with its minimum number of required modes ($4$ modes), a very significant speed-up when the minimum number of modes meets the required precision.  The value of $N_\nu$ we obtain agrees with that found by \cite{Mangano:2005cc}, up to their cited error tolerance of $\pm 0.002$.
+We see that $\Delta N_\nu\equiv N_\nu-3$ agrees to $2$ digits and $4$ digits when using $2$ and $3$ modes respectively for the chemical nonequilibrium method, and similar behavior holds for the other quantities. Due to the reduction in the required number of modes, the chemical nonequilibrium method with the minimum number of required modes ($2$ modes) is more than $20\times$ faster than the chemical equilibrium method with its minimum number of required modes ($4$ modes), a very significant speed-up when the minimum number of modes meets the required precision.  The value of $N_\nu$ we obtain agrees with that found by \cite{Mangano:2005cc}, up to their cited error tolerance of $\pm 0.002$.
 
 \para{Conservation Laws and Scattering Integrals}
 For some processes, various of the $R_k$'s vanish exactly, as we now show. First consider processes in which $f_1=f_3$ and $f_2=f_4$, such as in kinetic scattering processes. Since $m_1=m_3$ and $m_2=m_4$ we have $r=r^{\prime}$, $q^0=(q^{\prime})^0$.  The scattering terms are all two dimensional integrals of some function of $s$ and $p$ multiplied by the quantity
