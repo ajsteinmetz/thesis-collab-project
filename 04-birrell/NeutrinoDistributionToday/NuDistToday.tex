@@ -7,11 +7,11 @@ We end our exploration of neutrino freeze-out by studying the distribution of fr
 The neutrino background and the cosmic microwave background (CMB) were in equilibrium until decoupling (called freeze-out) at $T_k\simeq {\cal O}{\rm (MeV)}$, hence one surmises that an observer would have the same relative velocity relative to the relic neutrino background  as with CMB. As a particular example in considering the spectrum, we present in more detail the case of an observer comoving with  Earth velocity $v_\oplus=300$\,km/s relative to the CMB,  modulated by orbital velocity ($\pm29.8$\,km/s).  We will write velocities in units of $c$, though our specific results will be presented in km/s.
 
 In the cosmological setting, for $T<T_k$ the neutrino spectrum evolves according to the well known Fermi-Dirac-Einstein-Vlasov (FDEV) free-streaming  distribution~\cite{Langacker:1982ih,Choquet-Bruhat:2009xil,Wong:2011ip,Birrell:2012gg}.  By casting it in a relativistically invariant form we can then make a transformation to the rest frame of an observer moving with relative velocity $v_{\text{rel}}$ and obtain
-\begin{align}\label{neutrino_dist_B}
+\begin{align}\label{eq:neutrinoDistB}
 f(p^\mu)=&\frac{1}{\Upsilon^{-1} e^{\sqrt{(p^\mu U_\mu)^2-m_\nu^2}/T_\nu}+1}\,.
 \end{align}
 The 4-vector characterizing the rest frame of the neutrino FDEV distribution is
-\begin{equation}\label{4_vel}
+\begin{equation}
 U^\mu=(\gamma,0,0,v_{\text{rel}}\gamma)\,,\hspace{2mm} \gamma={1}/{\sqrt{1-v_{\text{rel}}^2}}\,,
 \end{equation} 
 where we have chosen coordinates so that the relative motion is in the $z$-direction. 
@@ -24,7 +24,7 @@ There are several available bounds on neutrino masses. Neutrino energy and press
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \para{Velocity, Energy, and Wavelength Distributions}
-Using \req{neutrino_dist_B}, the normalized FDEV velocity distribution for an observer in relative motion has the form
+Using \req{eq:neutrinoDistB}, the normalized FDEV velocity distribution for an observer in relative motion has the form
 \begin{align} \label{fvdistrib}
 &f_v=\frac{g_\nu}{n_\nu 4\pi^2}\!\!\!\int_0^\pi \!\!\!\!\frac{ p^2dp/dv\sin(\phi) d\phi}{\Upsilon^{-1}e^{\sqrt{( E-v_{\text{rel}} p \cos(\phi))^2\gamma^2-m_\nu^2}/T_\nu}+1}\,,\notag\\
 &p(v)=\frac{m_\nu v}{\sqrt{1-v^2}}\,,\qquad \frac{dp}{dv}=\frac{m_\nu}{(1-v^2)^{3/2}}\,.
@@ -35,14 +35,14 @@ n_\nu=[-0.3517(\delta N_\nu^{\mathrm{eff}})^2+6.717\delta N_\nu^{\mathrm{eff}}+5
 \end{equation}
 ($\delta N_\nu^{\mathrm{eff}}\equiv N_\nu^{\mathrm{eff}}-3$), compare to Eq.(55) in Ref.~\cite{Birrell:2012gg}.
 
-We show $f_v$ in Figure \ref{fig:rel_v_dist_300}   for several values of the neutrino mass, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). As expected, the lighter the neutrino, the more $f_v$  is weighted towards higher velocities with the velocity becoming visibly peaked about $v_{\text{rel}}$ for $m_\nu=2$ eV. 
+We show $f_v$ in Figure \ref{fig:RelvDist300}   for several values of the neutrino mass, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). As expected, the lighter the neutrino, the more $f_v$  is weighted towards higher velocities with the velocity becoming visibly peaked about $v_{\text{rel}}$ for $m_\nu=2$ eV. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centerline{\includegraphics[width=0.9\linewidth]{04-birrell/NeutrinoDistributionToday/Figures/rel_v_dist_300.pdf}}
 \caption{Normalized neutrino FDEV velocity distribution in the Earth frame. We show the distribution for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). \cccite{Birrell:2014qna}}
-\label{fig:rel_v_dist_300}
+\label{fig:RelvDist300}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -50,13 +50,13 @@ A similar procedure produces the normalized FDEV energy distribution $f_E$.  In 
 \begin{equation}
 p(E)=\sqrt{E^2-m_\nu^2},\qquad \frac{dp}{dE}=\frac{E}{p}.
 \end{equation}
-We show $f_E$ in Figure \ref{fig:E_dist_300}  for several values of the neutrino mass, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). The width of the FDEV energy distribution is on the micro-eV scale and the kinetic energy $T=E-m_\nu$ is peaked about $T=\frac{1}{2}m_\nu v_{\text{rel}}^2$, implying that the relative velocity between the Earth and the CMB is the dominant factor for $m_\nu>0.1$ eV.
+We show $f_E$ in Figure \ref{fig:EDist300}  for several values of the neutrino mass, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). The width of the FDEV energy distribution is on the micro-eV scale and the kinetic energy $T=E-m_\nu$ is peaked about $T=\frac{1}{2}m_\nu v_{\text{rel}}^2$, implying that the relative velocity between the Earth and the CMB is the dominant factor for $m_\nu>0.1$ eV.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centerline{\includegraphics[width=0.9\linewidth]{04-birrell/NeutrinoDistributionToday/Figures/E_dist_300.pdf}}
 \caption{Neutrino FDEV energy distribution in the Earth frame. We show the distribution for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines). \cccite{Birrell:2014qna}}
-\label{fig:E_dist_300}
+\label{fig:EDist300}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -64,7 +64,7 @@ By multiplying $f_E$ by the neutrino velocity and number density for a single ne
  \begin{equation}
  \frac{dJ}{dE}\equiv\frac{dn}{dAdtdE}\,,
 \end{equation} 
-shown in Figure \ref{fig:flux_dist}. We show the result for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). The flux is normalized in these cases to a local denisty $56.36$~cm${}^{-3}$ and $60.10$~cm${}^{-3}$ respectively. 
+shown in Figure \ref{fig:fluxDist}. We show the result for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). The flux is normalized in these cases to a local denisty $56.36$~cm${}^{-3}$ and $60.10$~cm${}^{-3}$ respectively. 
 
 The precise neutrino flux in the Earth frame is significant for efforts to detect relic neutrinos, such as the PTOLEMY experiment~\cite{Betts:2013uya}. The energy dependence of the flux shows a large sensitivity to the mass. However, the maximal fluxes do not vary significantly with $m$. In fact the maximum values are independent of $m$ when $v_{\text{rel}}=0$, as follows from the fact that $v=p/E=dE/dp$.  In the Earth frame, where $0<v_\oplus\ll c$, this translates into only a small variation in the maximal flux.
 
@@ -72,7 +72,7 @@ The precise neutrino flux in the Earth frame is significant for efforts to detec
 \begin{figure}
 \centerline{\includegraphics[width=0.9\linewidth]{04-birrell/NeutrinoDistributionToday/Figures/flux_dist.pdf}}
 \caption{Neutrino flux density in the Earth frame. We show the result for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines) for an observer moving with $v_\oplus=300$\,km/s. \cccite{Birrell:2014qna}}
-\label{fig:flux_dist}
+\label{fig:fluxDist}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -81,7 +81,7 @@ Using $\lambda=2\pi/p$ we find  the normalized FDEV de Broglie wavelength distri
 %\frac{dn}{d\lambda}
 f_\lambda=\frac{ 2\pi g_\nu}{n_\nu\lambda^4}\!\!\int_0^\pi\!\!\! \!\frac{\sin(\phi) d\phi}{\Upsilon^{-1}e^{\sqrt{( E-v_{\text{rel}} p \cos(\phi))^2\gamma^2-m_\nu^2}/T_\nu}\!\!+\!1}\,,
 \end{equation}
-shown in Figure \ref{fig:deBrogle_300} for $v_{\text{rel}}=300$ km/s and for several values $m_\nu$ comparing  $N_\nu^{\mathrm{eff}}=3.046$ with $N_\nu^{\mathrm{eff}}=3.62$. %  While the FDEV distributions are peaked at the millimeter wavelength scale, to discriminate dependence on neutrino masses it is necessary to consider somewhat larger wavelengths. 
+shown in Figure \ref{fig:deBrogle300} for $v_{\text{rel}}=300$ km/s and for several values $m_\nu$ comparing  $N_\nu^{\mathrm{eff}}=3.046$ with $N_\nu^{\mathrm{eff}}=3.62$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
@@ -91,7 +91,7 @@ shown in Figure \ref{fig:deBrogle_300} for $v_{\text{rel}}=300$ km/s and for sev
 \makebox[0.5\linewidth]%
 {\includegraphics[height=5.4cm]{04-birrell/NeutrinoDistributionToday/Figures/f_ratio.pdf}}
 \end{minipage}
-\caption{Neutrino  FDEV de Broglie wavelength  distribution in the Earth frame. We show in left panel the distribution for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines) and in right panel their ratio. \cccite{Birrell:2014qna}.  }\label{fig:deBrogle_300}
+\caption{Neutrino  FDEV de Broglie wavelength  distribution in the Earth frame. We show in left panel the distribution for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines) and in right panel their ratio. \cccite{Birrell:2014qna}.  }\label{fig:deBrogle300}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -106,12 +106,12 @@ where $R$ is the linear size of the detector.
 When the detector size is smaller than the quantum de Broglie wavelength of the neutrino, all scattering centers are added coherently to for the target effective `charge' $N_c$.  $\rho_{N_c}$ is the charge density, and C=O(1) and is depending on material composition of the object. Such considerations are of interest both for scattering from terrestrial detectors, as well as for ultra-dense objects of neutron star matter density, e.g.   strangelet  CUDOS~\cite{Rafelski:2011bby} - recall that such nuclear matter fragments with $R<\lambda$  despite their small size would have a mass rivaling that of large meteors. We find $V_0\simeq 10^{-13}$ eV for normal matter densities, but for nuclear target density a potential well with $V_0\simeq {\cal O}(10 {\rm eV})$.  
 
 We consider relic neutrino potential scattering to obtain the average momentum transfer to the target and hence the drag force. The particle flux per unit volume in momentum space is
-\begin{equation}\label{dn_quantum}
+\begin{equation}\label{dnQuantum}
 \frac{dn}{dtd Ad^3{\bf p}}({\bf p})=\frac{2}{(2\pi)^3}f({\bf p})p/m_\nu\,,\hspace{2mm} p\equiv |{\bf p}|\,,
 \end{equation}
 where the factor of two comes from combining neutrinos and anti-neutrinos of a given flavor. 
 
-Our use of nonrelativistic velocity is justified by  \rf{fig:rel_v_dist_300}.  The recoil change in detector momentum per unit time is  
+Our use of nonrelativistic velocity is justified by  \rf{fig:RelvDist300}.  The recoil change in detector momentum per unit time is  
 \begin{align}
 \frac{d{\bf p}}{dt}=& \int  {\bf q}A \frac{dn}{dtdAd^3p}({\bf p})d^3p\,,\\
 {\bf q}A\equiv &\int ({\bf p}-{\bf p_f})\frac{d\sigma}{ d\Omega}({\bf p_f},{\bf p})d\Omega\,.
@@ -128,7 +128,7 @@ The only angular dependence in the neutrino distribution is in ${\bf p}\cdot {\b
 g(p)\equiv& \int_0^\pi(1-\cos(\phi))\frac{d\sigma}{ d\Omega}(p,\phi)\sin(\phi)d\phi\,.\label{geq}
 \end{align}
 
-For the case of normal density matter, the Born approximation is valid due to the weakness of the potential compared to the neutrino energy seen in Figure \ref{fig:E_dist_300}. To obtain an order of magnitude estimate, we take a Gaussian potential \begin{equation}
+For the case of normal density matter, the Born approximation is valid due to the weakness of the potential compared to the neutrino energy seen in Figure \ref{fig:EDist300}. To obtain an order of magnitude estimate, we take a Gaussian potential \begin{equation}
 V(r)=V_0e^{-r^2/R^2}
 \end{equation}
 for which the differential cross section in the Born approximation can be analytically evaluated
@@ -143,10 +143,10 @@ g(p)=&\pi m_\nu^2V_0^2R^6\frac{1-(2R^2p^2+1)e^{-2R^2p^2}}{4R^4p^4}\,.
 \end{align}
  In the long and short wavelength limit we have 
 \begin{align}
-\label{long_wave_drag}
+\label{longWaveDrag}
 &g(p)\simeq\frac{\pi}{2} m_\nu^2V_0^2R^6\,,\quad pR\ll 1\,,\\
 &F_L\simeq \frac{m_\nu V_0^2R^6}{2} \int p^4 f(p,\tilde\phi) \cos(\tilde\phi) \sin(\tilde\phi) dpd\tilde\phi\,,\notag\\
-\label{short_wave_drag}
+\label{shortWaveDrag}
 &g(p)\simeq\frac{\pi m_\nu^2V_0^2R^2}{4p^4}\,, 
 \quad pR\gg 1\,,\\
 &F_S\simeq \frac{ m_\nu V_0^2R^2}{4} \int f(p,\tilde\phi) \cos(\tilde\phi) \sin(\tilde\phi) dpd\tilde\phi\notag\,.
@@ -157,8 +157,8 @@ Inserting \req{V0} we see that this force is $O(G_F^2)$, see also \cite{Shvartsm
 
 This results in an enhancement of the force by a factor of $N_c$ over the incoherent scattering case, due to $V_0^2$ scaling with $N_c^2$. This effect exactly parallels the proposed detection of supernovae MeV energy scale neutrinos by means of collisions with the entire atomic nucleus~\cite{Divari:2012zz}.  
 
-Fits to the integrals in the above force formulas \req{long_wave_drag} and \req{short_wave_drag} can be obtained in the region $0.005 \text{eV}\leq m_\nu\leq 0.25\text{eV}$, $v_\text{rel}\leq 300$km/s, yielding
-\begin{align}\label{F_L}
+Fits to the integrals in the above force formulas \req{longWaveDrag} and \req{shortWaveDrag} can be obtained in the region $0.005 \text{eV}\leq m_\nu\leq 0.25\text{eV}$, $v_\text{rel}\leq 300$km/s, yielding
+\begin{align}\label{FL}
 F_L\!=&8\,10^{-34}{\rm N}\!\left(\!\frac{m_\nu}{0.1 \text{eV}}\!\right)^{\!\!2}\!\! \left(\!\frac{V_0}{1\text{peV}}\!\right)^{\!\!2}\!\!\left(\!\frac{R}{1\text{mm}}\!\right)^{\!\! 6} \!\!\frac{v_{\text{rel}}}{v_\oplus},\\[0.2cm]
 F_S=&2\, 10^{-35}{\rm N}\!\left(\!\frac{m_\nu}{0.1\text{eV}}\!\right)^{\!\!2}\! \left(\!\frac{V_0}{1\text{peV}}\!\right)^{\!\!2}\!\!\left(\!\frac{R}{1\text{mm}}\!\right)^{\!\!2}\times\notag \\
 &\hspace*{1.5cm}\times\frac{v_{\text{rel}}}{v_\oplus}\!\left(\!1\!-\!0.2\frac{m_\nu}{0.1\text{eV}}\frac{v_{\text{rel}}}{v_\oplus}\right).
@@ -167,7 +167,7 @@ We emphasize that they are not valid in the limit as $m_\nu\rightarrow 0$. Consi
 
 We now consider scattering from nuclear matter density $\rho_N\simeq 3 \, 10^{8}{\rm kg/mm}^3$ objects where $V_0={\cal O}(10\text{eV})$ is effectively infinite compared to the neutrino energy unless the object velocity relative to the neutrino background is ultra-relativistic.  Therefore we are in the hard `ball' scattering limit. As with the analysis for normal matter density, we will investigate both the long and short wavelength limits. 
 
-In the long wavelength limit, only the S-wave contributes to hard sphere scattering and $d\sigma/d\Omega=R^2$, independent of angle. Using \req{drag} and a similar fit to \req{F_L} gives
+In the long wavelength limit, only the S-wave contributes to hard sphere scattering and $d\sigma/d\Omega=R^2$, independent of angle. Using \req{drag} and a similar fit to \req{FL} gives
 \begin{align}\label{FLHard}
 F_L=&\frac{2\pi^2R^2}{\pi m_\nu} \int p^4 f(p,\tilde\phi) \cos(\tilde\phi) \sin(\tilde\phi) dpd\tilde\phi\notag\\
 \simeq &\, 2\, 10^{-22}{\rm N}\left(\frac{R}{1\text{mm}}\right)^2\frac{v_{\text{rel}}}{v_\oplus}\,.
@@ -186,14 +186,14 @@ which suggests that the compact object produced early on in stellar evolution re
 The last case to consider is the short wavelength hard sphere scattering limit.  This limit is classical and so we no longer treat it as quantum mechanical potential scattering, but rather as elastic scattering of point particle neutrinos from a hard sphere of radius $R$.  
 
 For a single scattering event where the component of the momentum normal to the sphere is ${\bf p}^\perp=({\bf p}\cdot \hat {\bf r}) \hat {\bf r}$, the change in particle momentum is  $\Delta {\bf p}=-2{\bf p}^\perp$. The particle flux per unit volume in momentum space at a point ${\bf r}$ on a radius $R$ sphere $S_R^2$ and inward pointing momentum ${\bf p}$ (i.e. ${\bf p}\cdot \hat{\bf  r}<0$) is
-\begin{equation}\label{dn_classical}
+\begin{equation}\label{dnClassical}
 \frac{dn}{dtd Ad^3{\bf p}}({\bf x},{\bf p})=\frac{2}{(2\pi)^3}f({\bf p})|{\bf v}\cdot \hat{\bf r}|\,,
 \end{equation}
 where the factor of two comes from combining neutrinos and anti-neutrinos of a given flavor.  
 
-Note that for point particles the flux is proptional to the normal component of the velocity, as opposed to wave scattering where it is proportional to the magnitude of the velocity, seen in \req{dn_quantum}.
+Note that for point particles the flux is proptional to the normal component of the velocity, as opposed to wave scattering where it is proportional to the magnitude of the velocity, seen in \req{dnQuantum}.
 
-Using \req{dn_classical}, the recoil change in momentum per unit time is  
+Using \req{dnClassical}, the recoil change in momentum per unit time is  
 \begin{equation}
 \frac{d{\bf p}}{dt}= -\frac{2}{(2\pi)^3}\int_{{\bf p}\cdot \hat{\bf r}<0} \!\!\!\!\!\!\Delta {\bf p}  f({\bf p}) \frac{1}{m_\nu}|{\bf p}\cdot \hat{\bf r}| d^3{\bf p}R^2d\Omega\,.
 \end{equation}
@@ -209,14 +209,14 @@ We perform this integration in spherical coordinates for ${\bf r}$ and in the sp
 &\hat{\bf r}_\phi=\cos \theta \cos \phi\,\hat{\bf x}+\sin \theta \cos \phi \,\hat{\bf y}-\sin \phi \, \hat{\bf z}\notag\,.
 \end{align}
 Therefore the force per unit surface area is
-\begin{align}\label{drag_eq}
+\begin{align}
 \frac{1}{A}\frac{d{\bf p}}{dt}=&-\frac{1}{4\pi^3 m_\nu}\int_0^\pi\!\!\int_{p_r<0}\!\!\!\!\!\!\!\! f({\bf p}) p_r^2  d^3{\bf p}\cos \phi \sin \phi  d\phi\hat{\bf z}\,,\notag\\
 f({\bf}p)=&\frac{1}{  \Upsilon^{-1}e^{\sqrt{( E-V_\oplus {\bf p}\cdot \hat {\bf z})^2\gamma^2-m_\nu^2}/T_\nu}+1 }\,,\\
           &{\bf p}\cdot\hat{\bf z}=p_r\cos \phi-p_\phi\sin\phi \,.\notag
 \end{align}
 
 We obtain an approximation over the range $v_{\text{rel}}\leq v_\oplus ;\ 0.05\text{eV}\leq m_\nu\leq 0.25\text{eV}$ given by
-\begin{align}\label{drag_fit}
+\begin{align}
 &F_S =  4\,10^{-23} \text{N}\left(\frac{R}{1{\rm mm}}\right)^2\frac{v_{\text{rel}}}{ v_\oplus}\,.
 \end{align}
 This is a similar result to the long wavelength hard sphere limit \req{FLHard}, but the fact that it is only applicable to objects larger than the neutrino wavelength means that the acceleration it generates is negligible on the timescale of the Universe.

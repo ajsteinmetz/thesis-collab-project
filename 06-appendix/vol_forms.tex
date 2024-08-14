@@ -19,9 +19,9 @@ However, there are many situations where one would like to define a natural volu
 
 Let $M$, $N$ be smooth manifolds, $c$ be a regular value of a smooth function $F:M\rightarrow N$, and $\Omega^M$ and $\Omega^N$ be volume forms on $M$ and $N$ respectively.  Using this data, we will be able to induce a natural volume form on the level set $F^{-1}(c)$.  The absence of a metric on $M$ is made up for by the additional information that the function $F$ and volume form $\Omega^N$ on $N$ provide. The following theorem makes our definition precises and proves the existence and uniqueness of the induced volume form.
 
-\begin{theorem}\label{induced_vol_form}
+\begin{theorem}\label{inducedVolForm}
 Let $M$, $N$ be $m$ (resp. $n$)-dimensional smooth manifolds with volume forms $\Omega^M$ (resp. $\Omega^N$). Let $F:M\rightarrow N$ be smooth and $c$ be a regular value.  Then there is a unique volume form $\omega$  (also denoted $\omega^M$) on $F^{-1}(c)$ such that $\omega_x=i_{(v_1,...,v_n)}\Omega^M_x$ whenever $v_i\in T_xM$ are such that 
-\begin{equation}\label{unit_volume}
+\begin{equation}\label{unitVolume}
 \Omega^N(F_*v_1,...,F_* v_n)=1\,.
 \end{equation}
 We call $\omega$ the {\bf volume form induced by $F:(M,\Omega^M)\rightarrow (N,\Omega^N)$}\index{induced volume form}.
@@ -29,12 +29,12 @@ We call $\omega$ the {\bf volume form induced by $F:(M,\Omega^M)\rightarrow (N,\
 \begin{proof}
 $F_*$ is onto $T_{F(x)}N$ for any $x\in F^{-1}(c)$.  Hence there exists $\{v_i\}_1^n\subset T_xM$ such that $\Omega^N(F_*v_1,...,F_* v_n)=1$.  In particular, $F_* v_i$ is a basis for $T_{F(x)} N$.  Define $\omega_x=i_{(v_1,...,v_n)}\Omega_x$. This is obviously a nonzero $m-n$ form on $T_xF^{-1}(c)$ for each $x\in F^{-1}(c)$.  We must show that this definition is independent of the choice of $v_i$ and the result is smooth.
 
- Suppose $F_*v_i$ and $F_*w_i$ both satisfy \req{unit_volume}.  Then $F_*v_i=A_i^jF_*w_j$ for $A\in SL(n)$. Therefore $v_i-A_i^jw_j\in \ker F_{*x}$.  This implies
+ Suppose $F_*v_i$ and $F_*w_i$ both satisfy \req{unitVolume}.  Then $F_*v_i=A_i^jF_*w_j$ for $A\in SL(n)$. Therefore $v_i-A_i^jw_j\in \ker F_{*x}$.  This implies
 \begin{equation}
 i_{(v_1,...,v_n)}\Omega^M_x=\Omega^M_x(A_1^{j_1}w_{j_1},...,A_n^{j_n}w_{j_n},\cdot)
 \end{equation}
 since the terms involving $\ker F_*$ will vanish on $T_x F^{-1}(c)=\ker F_{*x}$.  Therefore
-\begin{align}\label{ind_of_v_proof}
+\begin{align}\label{indOfvProof}
 i_{(v_1,...,v_n)}\Omega^M_x&=A_1^{j_1}...A_n^{j_n}\Omega^M_x(w_{j_1},...,w_{j_n},\cdot)\\
 &=\sum_{\sigma\in S_n} \pi(\sigma)A_1^{\sigma(1)}...A_n^{\sigma(n)}\Omega^M_x(w_1,...,w_n,\cdot)\notag\\
 &=\det(A)i_{(w_1,...,w_n)}\Omega^M_x\notag\\
@@ -44,11 +44,11 @@ This proves that $\omega$ is independent of the choice of $v_i$.  If we can show
 \begin{equation}
 i_{(v_1,...,v_n)}\Omega^M_x=\Omega^N(F_*v_1,...,F_*v_n)\omega_x\,.
 \end{equation}
-To see this, take $w_i$ satisfying \req{unit_volume}.  Then $F_*v_i=A_i^j F_*w_j$. This determinant can be computed from
+To see this, take $w_i$ satisfying \req{unitVolume}.  Then $F_*v_i=A_i^j F_*w_j$. This determinant can be computed from
 \begin{align}
 \Omega^N(F_*v_1,...,F_*v_n)=\det(A)\Omega^N(F_*w_1,...,F_*w_n)=\det(A)\,.
 \end{align}
- Therefore, the same computation as \req{ind_of_v_proof} gives
+ Therefore, the same computation as \req{indOfvProof} gives
 \begin{align}
 i_{(v_1,...,v_n)}\Omega^M_x=\det(A)\omega_x=\Omega^N(F_*v_1,...,F_*v_n)\omega_x
 \end{align}
@@ -59,9 +59,9 @@ as desired.  To prove that $\omega$ is smooth, take a smooth basis of vector fie
 which is smooth.
 \end{proof}
 
-\begin{corollary}\label{induced_vol_eq}
+\begin{corollary}\label{inducedVolEq}
 For any  $v_i\in T_xM$ the following holds
-\begin{equation}\label{vol_formula1}
+\begin{equation}\label{volFormula1}
 i_{(v_1,...,v_n)}\Omega^M_x=\Omega^N(F_*v_1,...,F_*v_n)\omega_x\,.
 \end{equation}
 \end{corollary}
@@ -76,7 +76,7 @@ If $\phi:M\rightarrow\mathbb{R}$ is smooth and $c$ is a regular value then by eq
 where $v\in T_xM$ is any vector satisfying $d\phi(v)=1$.
 \end{corollary}
 
-It is useful to translate  \req{vol_formula1} into a form that is more readily applicable to computations in coordinates.  Choose arbitrary coordinates $y^i$ on $N$ and write $\Omega^N=h^N(y) dy^n$. Choose coordinates $x^i$ on $M$ such that $F^{-1}(c)$ is the coordinate slice
+It is useful to translate  \req{volFormula1} into a form that is more readily applicable to computations in coordinates.  Choose arbitrary coordinates $y^i$ on $N$ and write $\Omega^N=h^N(y) dy^n$. Choose coordinates $x^i$ on $M$ such that $F^{-1}(c)$ is the coordinate slice
 \begin{equation}
 F^{-1}(c)=\{x:x^1=...=x^n=0\}
 \end{equation}
@@ -89,24 +89,24 @@ and
 i_{(\partial_{x^1},...,\partial_{x^n})}\Omega^M=h^M(x) dx^{n+1}...dx^m\,.
 \end{equation}
 Therefore we obtain
-\begin{equation}\label{vol_form_coords}
+\begin{equation}\label{volFormCoords}
 \omega_x=\frac{h^M(x)}{h^N(F(x))}\det \left(\frac{\partial F^i}{\partial x^j}\right)^{-1}_{i,j=1..n}dx^{n+1}...dx^m\,.
 \end{equation}
 
 Just like in the (semi)-Riemannian case, the induced measure allows us to prove a coarea formula where we break integrals over $M$ into slices. In this theorem and the remainder of the section, we consider integration with respect to the density defined by any given volume form, i.e., we ignore the question of defining consistent orientations.
-\begin{theorem}[Coarea formula]\label{vol_form_coarea}\index{coarea formula}
+\begin{theorem}[Coarea formula]\label{volFormCoarea}\index{coarea formula}
 Let $M$ be a smooth manifold with volume form $\Omega^M$, $N$ a smooth manifold with volume form $\Omega^N$ and $F:M\rightarrow N$ be a smooth map.  If $F_*$ is surjective at a.e. $x\in M$ then for $f\in L^1(\Omega^M)\bigcup L^+(M)$ we have
-\begin{equation}\label{coarea_formula}
+\begin{equation}\label{coareaFormula}
 \int_Mf(x) \Omega^M(dx)=\int_{N}\int_{F^{-1}(z)} f(y)\omega^M_z(dy) \Omega^N(dz)\,,
 \end{equation}
-where $\omega^M_z$ is the volume form induced on $F^{-1}(z)$ as in Lemma \ref{induced_vol_form}.
+where $\omega^M_z$ is the volume form induced on $F^{-1}(z)$ as in Lemma \ref{inducedVolForm}.
 \end{theorem}
 \begin{proof}
 First suppose $F$ is a submersion. By the rank theorem there exists a countable collection of charts $(U_i,\Phi_i)$ that cover $M$ and corresponding charts $(V_i,\Psi_i)$ on $N$ such that 
 \begin{align}
 \Psi_i\circ F\circ \Phi_i^{-1}(y^1,...,y^{m-n},z^1,...,z^n)=(z^1,...,z^n)\,.
 \end{align}
-Let $\sigma_i$ be a partition of unity subordinate to $U_i$.  For each $i$ and $z$ we have $\Phi_i(U_i\cap F^{-1}(z))=\left(\mathbb{R}^{m-n}\times\{\Psi_i(z)\}\right)\cap \Phi_i(U_i)$.  We can assume that the $\Phi_i(U_i)=U_i^1\times U_i^2\subset \mathbb{R}^{m-n}\times \mathbb{R}^n$ and therefore each $\Phi_i$ is a slice chart for $F^{-1}(z)$ for all $y$ such that $F^{-1}(z)\cap U_i\neq \emptyset$.  In other words, $\Phi_i(U_i\cap F^{-1}(z))= U_i^1\times \{\Psi(z)\}$.  This lets us compute the left and right hand sides of \req{coarea_formula} for $f\in L^+(M)$:
+Let $\sigma_i$ be a partition of unity subordinate to $U_i$.  For each $i$ and $z$ we have $\Phi_i(U_i\cap F^{-1}(z))=\left(\mathbb{R}^{m-n}\times\{\Psi_i(z)\}\right)\cap \Phi_i(U_i)$.  We can assume that the $\Phi_i(U_i)=U_i^1\times U_i^2\subset \mathbb{R}^{m-n}\times \mathbb{R}^n$ and therefore each $\Phi_i$ is a slice chart for $F^{-1}(z)$ for all $y$ such that $F^{-1}(z)\cap U_i\neq \emptyset$.  In other words, $\Phi_i(U_i\cap F^{-1}(z))= U_i^1\times \{\Psi(z)\}$.  This lets us compute the left and right hand sides of \req{coareaFormula} for $f\in L^+(M)$:
 \begin{align}
 \int_Mf(x) \Omega^M(dx)&=\sum_i\int_{U_i}(\sigma_if)(x) \Omega^M(dx)\\
 &=\sum_i\int_{\Phi_i(U_i)}(\sigma_if)\circ \Phi^{-1}(y,z) \Phi^{-1*}\Omega^M(dy,dz)\notag\\
@@ -123,27 +123,15 @@ and
 =&\sum_i \int_{U_i^2}\left[\int_{U_i^1\times \{z\}} (\sigma_if)\circ\Phi_i^{-1}(y,z)|g^M_z(y)| dy^{m-n}\right] |g^N(z)| dz^n\,,\notag\\
 &\text{where }\omega^M_z=g^M_z dy^1\wedge...\wedge dy^{m-n} \text{ and }\Omega^N=g^N dz^1\wedge...\wedge dz^n \text{ for } g_1^M,g_N>0\,.\notag
 \end{align}
-\begin{comment}
-Here we used that if \pi_1\circ \Phi is the chart on F^{-1}(z) then the inverse is y->\Phi^{-1}(y,Psi(z)) since \pi_2\circ\Phi(x)=\Psi(z)
-for any x\in F^{-1}(z)
-\end{comment}
-Therefore, if we can show $|g^M(y,z)|=|g_z^M(y)g^N(z)|$ on $U_i^1\times U_i^2$ we are done. From Corollary \ref{induced_vol_eq} we have
+Therefore, if we can show $|g^M(y,z)|=|g_z^M(y)g^N(z)|$ on $U_i^1\times U_i^2$ we are done. From Corollary \ref{inducedVolEq} we have
 \begin{align}
 &(-1)^{n(m-n)} g^M(y,z)\\
 =&\Omega^M(\partial_{z^1},...,\partial_{z^n},\partial_{y^1},...,\partial_{y^{m-n}})=\Omega^N(F_*\partial_{z^n},...,F_*\partial_{z^n})g_z^M(y)\,.\notag
 \end{align}
 Since $\Psi\circ F\circ\Phi^{-1}=\pi_2$ we have $F_*\partial_{z^j}=\partial_{z_j}$ and so $\Omega^N(F_*\partial_{z^n},...,F_*\partial_{z^n})=g^N$ which completes the proof in the case where $F$ is a submersion.  The generalization to the case where $F_*$ is surjective a.e. follows from Sard's theorem and the fact that the set of $x\in M$ at which $F_*$ is surjective is open.
-
-\begin{comment}
-The set K of $x\in M$ where $F_*$ is surjective is open in M by the rank theorem and by assumption, its complement has M-measure zero.  Therefore the lhs equal int_K f dOmega^M. F is a submersion on $K$ so   int_K f dOmega^M=int_N int_F|K^{-1}(z) f omega^M_z Omega^N.  Split this into an integral over regular values of $F:M->N$ and crit values.  The int over crit values is zero by Sard.  For z a regular value, F|_K^{-1}(z)=F^{-1}(z) Hence the lhs is int_N_ref int_F^{-1}(z) f omega^M_z Omega^N. 
-
-  Split the rhs into integral over critical  values of F:M->N and regular values.  The integral over crit values is
- zero by sard, hence the rhs is
-int_N_reg int F^{-1}(z).  Therefore they are equal.  QED
-\end{comment}
 \end{proof}
 \para{Comparison to Riemannian Coarea Formula}
-We now recall the classical coarea formula for semi-Riemannian metrics, see, e.g., \cite{chavel1995riemannian},  and give its relation to Theorem \ref{vol_form_coarea}.
+We now recall the classical coarea formula for semi-Riemannian metrics, see, e.g., \cite{chavel1995riemannian},  and give its relation to Theorem \ref{volFormCoarea}.
 \begin{definition}
 Let $F:(M,g)\rightarrow (N,h)$ be a smooth map between semi-Riemannian manifolds.  The {\bf normal Jacobian}\index{normal Jacobian} of $F$ is
 \begin{equation}
@@ -178,7 +166,7 @@ where $dA_g$ is the volume measure induced on $F^{-1}(y)$ by pulling back the me
 \end{equation}
 \end{theorem}
 
-The relation between the Riemannian coarea formula and Theorem \ref{vol_form_coarea} follows from the following theorem.
+The relation between the Riemannian coarea formula and Theorem \ref{volFormCoarea} follows from the following theorem.
 \begin{theorem}
 Let $F:(M,g)\rightarrow (N,h)$  be a smooth map between semi-Riemannian manifolds and $c$ be a regular value.  Suppose $g$ is nondegenerate on $F^{-1}(c)$.  Let $\omega$ be the volume form on $F^{-1}(c)$ induced by $F:(M,dV_g)\rightarrow (N,dV_h)$.  Then
 \begin{equation}
@@ -187,7 +175,7 @@ Let $F:(M,g)\rightarrow (N,h)$  be a smooth map between semi-Riemannian manifold
 as densities.
 \end{theorem}
 \begin{proof}
-By Corollary \ref{induced_vol_eq}, for any  $v_i\in T_xM$ we have
+By Corollary \ref{inducedVolEq}, for any  $v_i\in T_xM$ we have
 \begin{equation}
 i_{(v_1,...,v_n)}\Omega^M_x=dV_h(F_*v_1,...,F_*v_n)\omega_x\,.
 \end{equation}
@@ -222,7 +210,7 @@ In particular, this shows that even though $NJF$ and $dA_g$ are undefined indivi
  The induced measure defined above allows for a coordinate independent definition of a delta function supported on a regular level set.  Such an object is of great use in performing calculations in relativistic phase space.  We give the definition and prove several properties that justify several common formal manipulations that one would like to make with such an object.
 \begin{definition}
 Motivated by the coarea formula, we define the composition of the {\bf Dirac delta function}\index{Dirac delta} supported on $c\in N$ with a smooth map $F:M\rightarrow N$ such that $c$ is a regular value of $F$ by
-\begin{equation}\label{delta_def}
+\begin{equation}\label{deltaDef}
  \delta_c(F(x))\Omega^M \equiv \omega^M
 \end{equation}
 on $F^{-1}(c)$.  This is just convenient shorthand, but it commonly used in the physics literature (typically without the justification presented above or in the following results).   For $f\in L^1(\omega^M)$ we will write 
@@ -243,22 +231,17 @@ More generally, if the subset of $F^{-1}(c)$ consisting of critical points, a cl
 This holds, for example, if $U^c$ is contained in a submanifold of dimension less than  $\dim M-\dim N$.  
 
 Equivalently, we can replace $U$ in this definition with any {\bf open} subset of $U$ whose complement still has $\dim M-\dim N$ dimensional Hausdorff measure zero. In this situation, we will say $c$ is a regular value except for a lower dimensional exceptional set.  Note that while Hausdorff measure depends on a choice of Riemannian metric on $M$, the measure zero subsets are the same for each choice.
-\begin{comment}
-Hausdorff measures commutes with restriction to subspaces (w/subspace metric)
-Hausdorff measure on a submanifold induced by pullback metric tensor equals that induced by restriction of distance metric from ambient space.
-Hausdorff measure of subsets of a manifold being zero is well defined (i.e. ind of choice of metric) so we can define k-dimensional measure zero for any k (integer or not). This follows since vol forms are abs cont wrt hausdorff measure of that dim
-\end{comment}
 \end{definition}
 
-Using \req{vol_form_coords}, along with the coordinates described there, we can (at least locally) write the integral with respect to the delta function in the more readily usable form
-\begin{equation}\label{delta_integral_coords}
+Using \req{volFormCoords}, along with the coordinates described there, we can (at least locally) write the integral with respect to the delta function in the more readily usable form
+\begin{equation}\label{deltaIntegralCoords}
 \int_M f(x)\delta_c(F(x))\Omega^M=\int_{F^{-1}(c)} f(x)\frac{h^M(x)}{h^N(F(x))}\bigg|\det \left(\frac{\partial F^i}{\partial x^j}\right)^{-1}\bigg|dx^{n+1}...dx^m\,.
 \end{equation}
 The absolute value comes from the fact that we use $\delta_c(F(x))\Omega^M$ to define the orientation on $F^{-1}(c)$.
 
 
 As expected, such an operation behaves well under diffeomorphisms.
-\begin{lemma}\label{diffeo_property}
+\begin{lemma}\label{diffeoProperty}
 Let $c$ be a regular value of $F:M\rightarrow N$ and $\Phi:M^{'}\rightarrow M$ be a diffeomorphism.  Then the delta functions induced by $F:(M,\Omega^M)\rightarrow (N,\Omega^N)$ and $F\circ\Phi:(M^{'},\Phi^*\Omega^M)\rightarrow  (N,\Omega^N)$ satisfy
 \begin{equation}
 \delta_c(F\circ\Phi)(\Phi^*\Omega^M)=\Phi^*(\delta_c(F)\Omega^M)\,.
@@ -273,20 +256,15 @@ Let $c$ be a regular value of $F:(M,\Omega^M)\rightarrow (N,\Omega^N)$ and $\Phi
 \end{lemma}
 
 We also have a version of Fubini's theorem.
-
 \begin{theorem}[Fubini's Theorem for Delta functions]\index{Fubini's theorem for delta functions}
 Let $M_1,M_2,N$ be smooth manifolds with volume forms $\Omega_1,\Omega_2, \Omega^N$. Let $M\equiv M_1\times M_2$ and $\Omega\equiv \Omega_1\wedge\Omega_2$. Suppose that the set of $(x,y)\in F^{-1}(c)$ such that $F|_{M_1\times\{y\}}$ is not regular at $x$ has $\dim M_1+\dim M_2-\dim N$ dimensional Hausdorff measure zero in $M_1\times M_2$ (we denote the complement of this closed set by $U$).  Then for $f\in L^1(\omega)\bigcup L^+(F^{-1}(c))$ we have
-\begin{equation}\label{Fubini_eq}
+\begin{equation}\label{FubiniEq}
 \int_Mf(x,y)\delta_c(F(x,y)) \Omega(dx,dy)=\int_{M_2}\left[\int_{U^y} f(x,y) \delta_c(F(x,y))\Omega_1(dx) \right]\Omega_2(dy)\,,
 \end{equation}
 where $U^y=\{x\in M_1:(x,y)\in U\}$.
 \end{theorem}
 \begin{proof}
-Our assumption about $F|_{M_1\times\{y\}}$ implies that $c$ is a regular value of $F:M_1\times M_2\rightarrow N$ except for the lower dimensional exceptional set $U^c$
-\begin{comment}
-U is a subset of the set given in the condition.  Both are closed
-\end{comment}
-and for $y\in M_2$, $c$ is also a regular value of $F|_{U^y\times\{y\}}$, hence both sides of \req{Fubini_eq} are well defined.  Rewriting \req{Fubini_eq} without the delta function, we then need to show that 
+Our assumption about $F|_{M_1\times\{y\}}$ implies that $c$ is a regular value of $F:M_1\times M_2\rightarrow N$ except for the lower dimensional exceptional set $U^c$ and for $y\in M_2$, $c$ is also a regular value of $F|_{U^y\times\{y\}}$, hence both sides of \req{FubiniEq} are well defined.  Rewriting \req{FubiniEq} without the delta function, we then need to show that 
 \begin{equation}
 \int_{F|_U^{-1}(c)} f(x,y) d\omega=\int_{M_2}\left[\int_{F|_{U^y\times\{y\}}^{-1}(c)} f(x,y) \omega^1_{c,y}(dx)\right]\Omega_2(dy)\,,
 \end{equation}
@@ -371,7 +349,7 @@ Therefore, by definition
 Therefore they agree as densities.
 \end{proof}
 
-\begin{theorem}\label{delta_product}
+\begin{theorem}\label{deltaProduct}
 Let $F_i:M_i\rightarrow N_i$ and $g:N_1\times N_2\rightarrow K$ be smooth.  Let $\Omega^{M_i}$, $\Omega^{N_1}$, $\Omega^K$ be volume forms on $M_i$, $N_1$, $K$ respectively.  Suppose $c$ is a regular value of $F_1$ and $d$ is a regular value of $g(c,F_2)$ and of $g\circ F_1\times F_2$. Then 
 \begin{equation}
 \delta_c(F_1)\left[\delta_d( g\circ F_1\times F_2)\left(\Omega^{M_1}\wedge\Omega^{M_2}\right)\right]=\left(\delta_c(F_1)\Omega^{M_1}\right)\wedge\left(\delta_d(g(c, F_2))\Omega^{M_2}\right)\,.
@@ -406,7 +384,7 @@ since the other terms all contain a $m_1-n_1+l$ form on the $m_1-n_1$-dimensiona
 \end{proof}
 
 Sometimes it is convenient to use the delta function to introduce ``dummy integration variables", by which we mean utilizing the following simple corollary of the coarea formula.
-\begin{corollary}\label{dummy_int}
+\begin{corollary}\label{dummyInt}
 Let $\Omega^M$ be a volume form on $M$, $F:M\rightarrow (N,\Omega^N)$ be smooth, and $f:N\times M\rightarrow \mathbb{R}$  such that $f(F(\cdot),\cdot)\in L^1(\Omega^M)\bigcup L^+(M)$.  If $F_*$ is surjective at a.e. $x\in M$ then
 \begin{equation}
 \int_M f(F(x),x)\Omega^M(dx)=\int_N\int_{F^{-1}(z)} f(z,x)\delta_z(F)\Omega^M(dx) \Omega^N(dz)\,.
@@ -417,7 +395,7 @@ Let $\Omega^M$ be a volume form on $M$, $F:M\rightarrow (N,\Omega^N)$ be smooth,
 
 
 \subsection{Applications}
-\para{Relativistic Volume Element}\label{rel_vol_form}
+\para{Relativistic Volume Element}
 We now discuss an application of the above results to the single particle phase space volume element. We first define it in the massive case, where the semi-Riemannian method of defining volume forms is applicable.  The massless case is often handled via a limiting argument \cite{tsamparlis}.  We will show that   our method is able to handle both the massive and massless case in a unified manner.
 
  Given a time oriented $n+1$ dimensional semi-Riemannian manifold $(M,g)$, there is a natural induced metric $\tilde{g}$ on the tangent bundle, called the diagonal lift.  At a given point $(x,p)\in TM$ its coordinate independent definition is
@@ -429,7 +407,7 @@ where $\gamma_v$ is any curve in $TM$ with tangent $v$ at $x$, $\pi:TM\longright
 \tilde{g}_{(x^\alpha,p^\alpha)}=g_{\beta,\delta}(x^\alpha)dx^\beta\otimes dx^\delta +g_{\beta,\delta}(x^{\alpha})\epsilon^\beta\otimes \epsilon^\delta, \hspace{2mm} \epsilon^\beta=dp^\beta+p^\sigma\Gamma^\beta_{\sigma\eta}(x^{\alpha})dx^\eta\,.
 \end{equation}
 The vertical and horizontal subspaces are spanned by
-\begin{equation}\label{horizontal_subspace}
+\begin{equation}\label{horizontalSubspace}
 V_\alpha=\partial_{p^\alpha}, \hspace{2mm} H_\alpha=\partial_{x^\alpha}-p^\sigma\Gamma_{\sigma\alpha}^\beta\partial_{p^\beta}
 \end{equation}
 respectively.  The horizontal vector fields satisfy
@@ -447,7 +425,7 @@ Of primary interest in kinetic theory for a particle of mass $m\geq 0$ is the ma
 P_m=\{p\in TM :g(p,p)=m^2,\hspace{1mm}  p\text{ future directed}\}
 \end{equation}
 and it will be necessary to have a volume form on $P_m$.  $P_m$ is a connected component of the zero set of the of the smooth map 
-\begin{equation}\label{defining_function}
+\begin{equation}\label{definingFunction}
 h:TM\setminus \{0_x:x\in M\}\longrightarrow \mathbb{R},\hspace{2mm} h(x,p)= \frac{1}{2}(g_x(p,p)-m^2)\,.  
 \end{equation} 
 We remove the image of the zero section to avoid problems when $m=0$.  Its differential is
@@ -475,11 +453,11 @@ Therefore, for $m\neq 0$, $P_m$ has a unit normal $N=\grad h/m$ and so it is a s
 \begin{equation}
 \widetilde{dV}_m=i_N \widetilde{dV}=\frac{|g|}{m}dx^0\wedge...\wedge dx^n\wedge\left(\sum_\alpha (-1)^\alpha p^\alpha dp^0\wedge...\wedge\widehat{dp^\alpha}\wedge...\wedge dp^n\right)\,,
 \end{equation}
-where $i_N$ denotes the interior product (or contraction) and a hat denotes an omitted term.  We are also interested in the volume form on $P_{m,x}$ the fiber of $P_m$ over a point $x\in M$.  We obtain this by contracting $\widetilde{dV}$ with an orthonormal basis of vector fields normal to $P_{m,x}$. Such a basis is composed of $N$ together with an orthonormalization of the basis of horizontal fields, $W_\alpha=\Lambda^\beta_\alpha H_\beta$, where $H_\beta$ are defined in \req{horizontal_subspace}. Therefore we have
+where $i_N$ denotes the interior product (or contraction) and a hat denotes an omitted term.  We are also interested in the volume form on $P_{m,x}$ the fiber of $P_m$ over a point $x\in M$.  We obtain this by contracting $\widetilde{dV}$ with an orthonormal basis of vector fields normal to $P_{m,x}$. Such a basis is composed of $N$ together with an orthonormalization of the basis of horizontal fields, $W_\alpha=\Lambda^\beta_\alpha H_\beta$, where $H_\beta$ are defined in \req{horizontalSubspace}. Therefore we have
 \begin{equation}
 \widetilde{dV}_{m,x}=i_{W_0}...i_{W_n}\widetilde{dV}_m\,.
 \end{equation}
- We can simplify these expressions by defining a coordinate system on the momentum bundle, writing $p^0$ as a function of the $p^i$.  The details, which are standard, are carried  out in Appendix  \ref{coord_comp}.  The results are
+ We can simplify these expressions by defining a coordinate system on the momentum bundle, writing $p^0$ as a function of the $p^i$.  The details, which are standard, are carried  out in Appendix  \ref{coordComp}.  The results are
 \begin{equation}
 \widetilde{dV}_m=\frac{m|g|}{p_0}dx^0\wedge...\wedge dx^n\wedge dp^1\wedge...\wedge dp^n\,,
 \end{equation}
@@ -490,13 +468,13 @@ We define $\pi$ and $\pi_x$ by
 \begin{equation}
 \pi=\frac{1}{m}\widetilde{dV}_m=\frac{|g|}{p_0}dx^0\wedge...\wedge dx^n\wedge dp^1\wedge...\wedge dp^n\,,
 \end{equation}
-\begin{equation}\label{pi_x}
+\begin{equation}\label{pi:x}
 \pi_x=\frac{1}{m}\widetilde{dV}_{m,x}=\frac{|g|^{1/2}}{p_0}dp^1\wedge...\wedge dp^n\,.
 \end{equation}
 We will typically omit the subscript $x$ and let the context distinguish whether we are integrating over the full momentum bundle (i.e. both over spacetime and momentum variables) or just momentum space at a single point in spacetime.  \\
 
 \noindent{\bf Massless Case:}\\
-When $m=0$ the above construction fails.  However, we can use Theorem \ref{induced_vol_form} to induce a volume form using the map \req{defining_function} defined above. Here we carry out the construction for the induced volume form on $P_{m,x}$ for any $m\geq 0$. The volume form on each tangent space $T_xM$ is
+When $m=0$ the above construction fails.  However, we can use Theorem \ref{inducedVolForm} to induce a volume form using the map \req{definingFunction} defined above. Here we carry out the construction for the induced volume form on $P_{m,x}$ for any $m\geq 0$. The volume form on each tangent space $T_xM$ is
 \begin{equation}
 \tilde{dV}_x=|g(x)|^{1/2}dp^0\wedge...\wedge dp^n\,.
 \end{equation}
@@ -504,12 +482,12 @@ We assume that the coordinates are chosen so that the vector field $\partial_{p^
 \begin{equation}
 dh(\partial_{p^0})=g_{\alpha 0}p^\alpha\neq 0
 \end{equation}
-on $P_{m,x}$.  Therefore, by Corollary \ref{induced_vol_eq} the induced volume form is
-\begin{align}\label{mass_shell_vol}
+on $P_{m,x}$.  Therefore, by Corollary \ref{inducedVolEq} the induced volume form is
+\begin{align}\label{massShellVol}
 \omega=&\frac{1}{dh(\partial_{p^0})} i_{\partial_{p^0}} \tilde{dV}_x
 =\frac{|g|^{1/2}}{p_0}dp^1\wedge...\wedge dp^n\,.
 \end{align}
-We can also pull this back under the coordinate chart on $P_{m,x}$ defined in Appendix \ref{coord_comp} and obtain the same expression in coordinates. This result agrees with our prior definition of \req{pi_x} in the case where $m>0$ but is also able to handle the massless case in a uniform manner, without resorting to a limiting argument as $m\rightarrow 0$.
+We can also pull this back under the coordinate chart on $P_{m,x}$ defined in Appendix \ref{coordComp} and obtain the same expression in coordinates. This result agrees with our prior definition of \req{pi:x} in the case where $m>0$ but is also able to handle the massless case in a uniform manner, without resorting to a limiting argument as $m\rightarrow 0$.
 
 We also point out another convention in common use where $h$ is replaced by $2h$.  This leads to an additional factor of $1/2$ in the volume element, distinguishing this definition from the one based on semi-Riemannian geometry.  However, the convention
 \begin{equation}
@@ -567,7 +545,7 @@ If $p_j$ is null then there is a $c$ such that $q=c p_j$ satisfies these conditi
 
 
 
-\para{Volume Form in Coordinates}\label{coord_comp}
+\para{Volume Form in Coordinates}\label{coordComp}
 Here we derive a useful formula for the volume form on the momentum bundle in a simple coordinate system.  We begin in a coordinate system $x^\alpha$ on $U\subset M$ and the induced coordinates $p^\alpha$ on $TM$ where our only assumption is that the $0$'th coordinate direction is future timelike, and so $g_{00}>0$.  For any $v^i\in \mathbb{R}^n$, let $v^0=-g_{0i}v^i/g_{00}$.  $v^\alpha$ is orthogonal to the $0$'th coordinate direction, and therefore spacelike. Hence 
 \begin{equation}
 0\geq g_{\alpha \beta}v^\alpha v^\beta=-(g_{0i}v^i)^2/g_{00}+g_{ij}v^iv^j\,.
@@ -596,11 +574,11 @@ Therefore
 \end{equation}
 
 To compute the volume form on $P_{m,x}$, recall  that 
-\begin{equation}\label{contract_horiz}
+\begin{equation}\label{contractHoriz}
 \widetilde{dV}_{m,x}=i_{W_0}...i_{W_n}\widetilde{dV}_m\,.
 \end{equation}
-Where $W_i$ is an orthonormalization of the basis of horizontal fields, $W_\alpha=\Lambda^\beta_\alpha H_\beta$, where $H_\beta$ are defined in \req{horizontal_subspace}. All of the contractions in \req{contract_horiz} that involve the $dp^\alpha$'s will be zero when restricted to $P_{m,x}$ since the $dx^\alpha$ are zero there. Hence we obtain
-\begin{align}\label{dV_x}
+Where $W_i$ is an orthonormalization of the basis of horizontal fields, $W_\alpha=\Lambda^\beta_\alpha H_\beta$, where $H_\beta$ are defined in \req{horizontalSubspace}. All of the contractions in \req{contractHoriz} that involve the $dp^\alpha$'s will be zero when restricted to $P_{m,x}$ since the $dx^\alpha$ are zero there. Hence we obtain
+\begin{align}\label{dVx}
 \widetilde{dV}_{m,x}=&\frac{|g|}{m}\left(p^0-\sum_{j}p^j \partial_{p^j}(p^0) \right)dx^0\wedge...\wedge dx^n\left(W_0,...,W_n)\right) dp^1\wedge...\wedge dp^n\\
 =&\frac{|g|\det(\Lambda)}{m}\left(p^0-\sum_{j}p^j \partial_{p^j}(p^0) \right)dx^0\wedge...\wedge dx^n\left(H_0,...,H_n)\right) dp^1\wedge...\wedge dp^n\notag\\
 =&\frac{|g|^{1/2}}{m}\left(p^0-\sum_{j}p^j \partial_{p^j}(p^0) \right) dp^1\wedge...\wedge dp^n\,,\notag

@@ -69,7 +69,7 @@ where $p$ is the canonical four-momentum, and $x$ is the canonical position. The
 \end{align}
 or equivalently, entropy generation. The collision term is necessary to describe systems where the mean free path of plasma constituents is less than or equal to the characteristic length scale of the plasma or when the mean free time $\tau$ is smaller than the characteristic oscillation time of the plasma. This pertains to systems with high density, low temperature, or strongly coupled systems.
 
-The Boltzmann-Einstein equation, see Section \ref{sec:Boltzmann_Einstein}, with a realistic collision operator, i.e., modeling scattering among neutrinos and $e^\pm$, was used in Section \ref{ch:param:studies} to  study the cosmological neutrino freeze-out. However, in many cases a detailed treatment of the microscopic collision term \req{eq:collisionMicro} is computationally prohibitive.  In this section our focus is on the interaction of electromagnetic fields within relativistic plasmas and so in place of the microscopic collision term we employ the relaxation-time approximation (RTA) technique, as proposed by~\cite{Anderson:1974nyl}. RTA is a commonly made simplification to the Boltzmann equation, reducing it from an integrodifferential equation to a differential equation. The relativistic form of this collision term takes the form
+The Boltzmann-Einstein equation, see Section \ref{sec:BoltzmannEinstein}, with a realistic collision operator, i.e., modeling scattering among neutrinos and $e^\pm$, was used in Section \ref{ch:param:studies} to  study the cosmological neutrino freeze-out. However, in many cases a detailed treatment of the microscopic collision term \req{eq:collisionMicro} is computationally prohibitive.  In this section our focus is on the interaction of electromagnetic fields within relativistic plasmas and so in place of the microscopic collision term we employ the relaxation-time approximation (RTA) technique, as proposed by~\cite{Anderson:1974nyl}. RTA is a commonly made simplification to the Boltzmann equation, reducing it from an integrodifferential equation to a differential equation. The relativistic form of this collision term takes the form
 \begin{equation}\label{eq:lincoll}
 C[f] = (p^\mu u_\mu) \kappa [ f_\mathrm{eq}(p) - f(x,p) ] \,,
 \end{equation}
@@ -631,7 +631,7 @@ The main motivation of this work was to derive a relativistic polarization tenso
 \begin{equation}\label{eq:Debyem}
     {m_D}^2_{(\text{EM})} = \sum_{u,d,s} q^2_f T^2 \frac{N_c}{3} \equiv C_{\text{em}}T^2\,,
 \end{equation}
-where $C_{\text{em}} =  2e^2/3$. We implement the nonrelativistic solution to the polarization tensor to study the screening of thermonuclear reactions in BBN by electron-positron plasma. This discussion can be found in Chapter \ref{section_electron}.
+where $C_{\text{em}} =  2e^2/3$. We implement the nonrelativistic solution to the polarization tensor to study the screening of thermonuclear reactions in BBN by electron-positron plasma. This discussion can be found in~\rsec{section:electron}.
 
 If considering a plasma of particles of different masses, such as an electron-proton plasma, one needs only to find a polarization tensor for each particle species and then sum them up in the induced current \req{eq:perturbation1}.
 

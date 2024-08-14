@@ -26,7 +26,7 @@ Using the average velocity, which for (effectively massless) neutrinos is $\bar 
 \begin{align}
 L_\Gamma&\equiv\frac{\bar v}{\Gamma}=\frac{\int_0^\infty\frac{1}{\Upsilon^{-1}e^z+1}z^2dz}{\int_0^\infty \tilde C[f] z^2/E dz}\,.
 \end{align}
-This can be compared to the Hubble length $L_H=c/H$\index{Hubble!length} and the temperature at which $L_\Gamma=L_H$ we call the freeze-out temperature\index{freeze-out! temperature} for that reaction. Figure \ref{fig:scatt_length} shows the scattering length and $L_H$ for various types of neutrino reactions. The solid line corresponds to the annihilation process $e^+e^-\rightarrow \nu\bar\nu$, the dashed line corresponds to the scattering $\nu e^\pm\rightarrow \nu e^\pm$, and the dot-dashed line corresponds to the combination of all processes involving only neutrinos. The freeze-out temperatures in MeV are given in Table \ref{table:freeze-out_temp}.
+This can be compared to the Hubble length $L_H=c/H$\index{Hubble!length} and the temperature at which $L_\Gamma=L_H$ we call the freeze-out temperature\index{freeze-out! temperature} for that reaction. Figure \ref{fig:scattLength} shows the scattering length and $L_H$ for various types of neutrino reactions. The solid line corresponds to the annihilation process $e^+e^-\rightarrow \nu\bar\nu$, the dashed line corresponds to the scattering $\nu e^\pm\rightarrow \nu e^\pm$, and the dot-dashed line corresponds to the combination of all processes involving only neutrinos. The freeze-out temperatures in MeV are given in Table \ref{table:freezeoutTemp}.
 
 \begin{table}[ht]
 \centering 
@@ -40,34 +40,34 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 \hline
 \end{tabular}
 \caption{Freeze-out temperatures in MeV for electron neutrinos and for $\mu$,$\tau$ neutrinos.}
-\label{table:freeze-out_temp}
+\label{table:freezeoutTemp}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
 \centerline{\includegraphics[width=0.82\linewidth]{04-birrell/ParametricStudies/Figures/nu_e_scattering_length_eta_0_23.pdf}}
 \centerline{\includegraphics[width=0.82\linewidth]{04-birrell/ParametricStudies/Figures/nu_mu_scattering_length_eta_0_23.pdf}}
-\caption{Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes, top for electron neutrino $\nu_e$ and bottom for the other two flavors $\nu_\mu$, $\nu_\tau$. \cccite{Birrell:2014uka} }\label{fig:scatt_length}
+\caption{Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes, top for electron neutrino $\nu_e$ and bottom for the other two flavors $\nu_\mu$, $\nu_\tau$. \cccite{Birrell:2014uka} }\label{fig:scattLength}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 We now consider the the relaxation time\index{relaxation time} for a given reaction, defined by $\tau=1/\Gamma$. Suppose we have a time interval $t_f>t_i$ and corresponding temperature interval $T_f<T_i$ during which there is no reheating and the Universe is radiation dominated. Normalizing time so $t=0$ corresponds to the temperature $T_i$ we have
-\begin{equation}\label{ch6:H_eq}
+\begin{equation}\label{ch6:Heq}
 \dot a/a=-\dot T/T\,,\hspace{2mm} H=\frac{C}{2Ct+T_i^2}\propto T^2
 \end{equation}
-where $C$ is a constant that depends on the energy density and the Planck mass. Its precise form will not be significant for us. Note that \req{ch6:H_eq} implies
+where $C$ is a constant that depends on the energy density and the Planck mass. Its precise form will not be significant for us. Note that \req{ch6:Heq} implies
 \begin{equation}
 1/H(t)-1/H(0)=2t\,.
 \end{equation}
 
 At $T\gg m_e$, the rates for reactions under consideration from Tables \ref{table:nu:e:reac} and \ref{table:nu:mu:reac} scale as $\Gamma\propto T^5$. Therefore, supposing $H(T_f)/\Gamma(T_f)=1$ (which occurs at $T_f=O(1\MeV)$ as seen in the above figures), at any time $t_f>t>t_i$ we find 
-\begin{align}\label{relax_time}
+\begin{align}\label{relaxTime}
 \tau(t)/t=&\frac{2}{\Gamma(t)}\left(\frac{1}{H(t)}-\frac{1}{H(0)}\right)^{-1}=\frac{2T_f^5}{\Gamma(T_f)T^5}\left(\frac{T_f^2}{H(T_f)T^2}-\frac{T_f^2}{H(T_f)T_i^2}\right)^{-1}\\
 =&\frac{2T_f^3}{T^3}\left(1-\frac{T^2}{T_i^2}\right)^{-1}\,.
 \end{align}
 Therefore, given any time $t_i<t_0<t_f$ we have
-\begin{equation}\label{ch6:tau_eq}
+\begin{equation}\label{ch6:tauEq}
 \tau(t)<\tau(t_0)=\frac{2T_f^3}{T_0^3}\left(1-\frac{T_0^2}{T_i^2}\right)^{-1}\Delta t \text{ \,for all } t<t_0\,,
 \end{equation}
 where $\Delta t=t_0-t_i=t_0$.
@@ -81,7 +81,7 @@ where $\Delta t=t_0-t_i=t_0$.
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- The first reheating period that precedes neutrino freeze-out is the disappearance of muons and pions around $O(100\MeV)$, as seen in Figure \ref{fig:energy:frac}, and so we let $T_i=100\MeV$. \req{ch6:tau_eq} is minimized at $T_0\approx 77.5\MeV$ at which point we have 
+ The first reheating period that precedes neutrino freeze-out is the disappearance of muons and pions around $O(100\MeV)$, as seen in Figure \ref{fig:energy:frac}, and so we let $T_i=100\MeV$. \req{ch6:tauEq} is minimized at $T_0\approx 77.5\MeV$ at which point we have 
 \begin{equation}
 \tau(t)<10^{-5} \Delta t_0 \text{ for } t<t_0.
 \end{equation}
@@ -90,7 +90,7 @@ This shows that the relaxation time during the period between $100\MeV$ and $77.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\para{Dependence of effective neutrino number on PP-SM parameters}%\label{sec:param_char}
+\para{Dependence of effective neutrino number on PP-SM parameters}
 Only two key PP-SM parameters influence the effective number of neutrinos, this is the Weinberg angle and the generalized interaction strength $\eta$. We explore in the following how $N_\nu^{\mathrm{eff}}$ depends on these parameters.
 
 %\para{Weinberg Angle}
@@ -117,19 +117,18 @@ Beyond the Weinberg angle, the remaining dependence of the Boltzmann-Einstein sy
 H^2=\frac{\rho}{3}\,,\hspace{2mm}\dot\rho=-3H(\rho+P)\,.
 \end{equation}
  Since $e^\pm$ are the only (effectively) massive particles in the system, by scaling all energies, momenta, energy densities, pressures, and temperatures by $m_e$ we have removed all scale dependent parameters from the Einstein equations. The Boltzmann-Einstein equation becomes
-\begin{equation}\label{eta_def}
+\begin{equation}\label{etaDef}
 \partial_tf-pH\partial_pf=\eta\frac{C[f]}{E}\,,\hspace{2mm}\eta\equiv M_p m_e^3G_F^2\,,
 \end{equation}
 where we have also factored out of $C[f]$ the $G_F^2$ term that is common to all of the neutrino interaction matrix elements. 
 
 Aside from the $\theta_W$ dependence of the matrix elements seen in Tables \ref{table:nu:e:reac} and \ref{table:nu:mu:reac}, the complete dependence on natural constants is now contained in a single dimensionless neutrino interaction strength parameter\index{neutrino!interaction strength} $\eta$ with the vacuum present day value\index{neutrino!decoupling strength $\eta$}
-\begin{equation}\label{eta0_def}
+\begin{equation}\label{eta0Def}
 \eta_0\equiv \left.M_p m_e^3 G_F^2\right|_0 \approx 0.04421\, .
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Impact of QED Corrections to Equation of State}
-%\label{app:QED_corr} 
 \index{QED!Corrections EoS}
 At the time of neutrino freeze-out, the universe is at sufficiently high temperature for photons and $e^\pm$ to be in chemical and kinetic equilibrium. The temperature is also sufficiently high for QED corrections to the photon and $e^\pm$ equation of state to be non-negligible. Therefore, in our study here we use the results given in \cite{Heckler:1994tv,Mangano:2001iu} to include these in our computation by modifying the combined photon, $e^\pm$ equation of state
 \begin{align}
@@ -144,16 +143,16 @@ and $P^0$ is the pressure of a non-interacting gas of photons and $e^\pm$ in che
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Freeze-out T and effective neutrino number dependence on PP-SM}\index{neutrino!effective number}
-We now present the dependence of the effective number of neutrinos, $N_\nu^{\mathrm{eff}}$, on the SM parameters $\sin^2(\theta_W)$ and $\eta$, as computed using the Boltzmann-Einstein equation method developed in Appendices \ref{ch:vol:forms}, \ref{ch:boltz:orthopoly}, and \ref{ch:coll:simp}. These results are shown in Figure \ref{N_nu_params}, presented as a function of Weinberg angle $\sin^2(\theta_W) $ for $\eta/\eta_0=1,2,5,10$. The effects of an increase in both parameters above the vacuum values can generate a significant increase in $N_\nu^{\mathrm{eff}}\to 3.5$.
+We now present the dependence of the effective number of neutrinos, $N_\nu^{\mathrm{eff}}$, on the SM parameters $\sin^2(\theta_W)$ and $\eta$, as computed using the Boltzmann-Einstein equation method developed in Appendices \ref{ch:vol:forms}, \ref{ch:boltz:orthopoly}, and \ref{ch:coll:simp}. These results are shown in Figure \ref{NnuParams}, presented as a function of Weinberg angle $\sin^2(\theta_W) $ for $\eta/\eta_0=1,2,5,10$. The effects of an increase in both parameters above the vacuum values can generate a significant increase in $N_\nu^{\mathrm{eff}}\to 3.5$.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centerline{\includegraphics[width=0.90\linewidth]{04-birrell/ParametricStudies/Figures/N_eff2.pdf}}
 \caption{Change in effective number of neutrinos $N_\nu^{\mathrm{eff}}$ as a function of Weinberg angle for several values of $\eta/\eta_0=1,2,5,10$. Vertical line is $\sin^2(\theta_W)=0.23$. \radapt{Birrell:2014uka}}
-\label{N_nu_params} 
+\label{NnuParams} 
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 
-We performed a least squares fit of $N_\nu^{\mathrm{eff}}$ over the range $0\leq \sin^2(\theta_W)\leq 1$, $1\leq \eta/\eta_0\leq 10$ shown in figure \ref{N_nu_params}, obtaining a result with relative error less than $0.2\%$,
+We performed a least squares fit of $N_\nu^{\mathrm{eff}}$ over the range $0\leq \sin^2(\theta_W)\leq 1$, $1\leq \eta/\eta_0\leq 10$ shown in figure \ref{NnuParams}, obtaining a result with relative error less than $0.2\%$,
 \begin{align}
 N_\nu^{\mathrm{eff}}=&3.003-0.095\sin^2(\theta_W) +0.222\sin^4(\theta_W ) -0.164\sin^6(\theta_W )\notag\\
 +&\sqrt{\frac{\eta}{\eta_0}}\left(0.043+0.011\sin^2(\theta_W) +0.103\sin^4(\theta_W)\right)\,.
@@ -178,12 +177,12 @@ y\equiv \sqrt{\frac{\eta}{\eta_0}}\,.
 \centerline{\includegraphics[width=0.99\linewidth]{04-birrell/ParametricStudies/Figures/region_plot_legend.pdf}
 }
 \caption{$N_\nu^{\mathrm{eff}}$ bounds in the $\eta/\eta_0, \sin^2(\theta_W)$ plane. Blue for $N_\nu^{\mathrm{eff}}\in (3.03,3.57)$ corresponding to Ref.~\cite{Planck:2013pxb} CMB+BAO analysis and green extends the region to $N_\nu^{\mathrm{eff}}<3.87$ i.e. to CMB+$H_0$. Dot-dashed line delimits the 1 standard-deviation lower boundary of the second analysis. \radapt{Birrell:2014uka}}
-\label{N_nu_domain}
+\label{NnuDomain}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 
 The bounds on $N_\nu^{\mathrm{eff}}$ from the Planck analysis \cite{Planck:2013pxb} can be used to constrain time or temperature variation of $\sin^2(\theta_W)$ and $\eta$. 
-In Figure \ref{N_nu_domain} the blue region shows the combined range of variation of natural constants compatible with CMB+BAO and the green region shows the extension in the range of variation of natural constants for CMB+$H_0$, both at a $68\%$ confidence level. The dot-dashed line within the blue region delimits this latter domain. The dotted line shows the limit of a 5\% change in $N_\nu^{\mathrm{eff}}$. Any increase in $\eta/\eta_0$ and/or $\sin^2(\theta_W)$ moves the value of $N_\nu^{\mathrm{eff}}$ into the domain favored by current experimental results.
+In Figure \ref{NnuDomain} the blue region shows the combined range of variation of natural constants compatible with CMB+BAO and the green region shows the extension in the range of variation of natural constants for CMB+$H_0$, both at a $68\%$ confidence level. The dot-dashed line within the blue region delimits this latter domain. The dotted line shows the limit of a 5\% change in $N_\nu^{\mathrm{eff}}$. Any increase in $\eta/\eta_0$ and/or $\sin^2(\theta_W)$ moves the value of $N_\nu^{\mathrm{eff}}$ into the domain favored by current experimental results.
 
 %%%%%%%%%%%%%%%%%%%
 We have omitted here a discussion of flavor neutrino oscillations. If it weren't for the differences between the matrix elements for the interactions between $e^\pm$ and $\nu_e$ on one hand and $e^\pm$ and $\nu_\mu,\nu_\tau$ on the other, oscillations would have no effect on the flow of entropy into neutrinos and hence no effect on $N_\nu^{\mathrm{eff}}$, but these differences do lead to a modification of $N_\nu^{\mathrm{eff}}$. In \cite{Mangano:2005cc} the impact of oscillations on neutrino freeze-out for the present day measured values of $\theta_W$ and $\eta$ was investigated. It was found that while oscillations redistributed energy amongst the neutrino flavors, the impact on $N_\nu^{\mathrm{eff}}$ was negligible. We have neglected oscillations in our study.
@@ -192,7 +191,7 @@ We have omitted here a discussion of flavor neutrino oscillations. If it weren't
 \para{Primordial Variation of Natural Constants}\index{Natural constants!variation}
 We end our study of neutrino freeze-out by exploring what neutrino decoupling in the early Universe can tell us about the values of natural constants when the Universe was about one second old and at an ambient temperature near to 1 MeV (11.6 billion degrees K). Our results were presented assuming that the Universe contains no other effectively massless particles but the three left handed neutrinos and three corresponding right handed anti-neutrinos. 
 
-In \rf{N_nu_params} we see that, near the present day value of the Weinberg angle $\sin^2(\theta_W)\simeq 0.23$, the effect of changing $\sin^2(\theta_W)$ on the decoupling of neutrinos is relatively small. The dominant variance is due to the change in the coupling strength $\eta/\eta_0$, \req{eta_def} and \req{eta0_def}. The dotted line in Figure \ref{N_nu_domain} shows that in order to achieve a change in $N_\nu^{\mathrm{eff}}$ at the level of up to 5\%, i.e., $N_\nu^{\mathrm{eff}}\lesssim 3.2 $, $\eta/\eta_0$ must change significantly, e.g., increasing by an order of magnitude.
+In \rf{NnuParams} we see that, near the present day value of the Weinberg angle $\sin^2(\theta_W)\simeq 0.23$, the effect of changing $\sin^2(\theta_W)$ on the decoupling of neutrinos is relatively small. The dominant variance is due to the change in the coupling strength $\eta/\eta_0$, \req{etaDef} and \req{eta0Def}. The dotted line in Figure \ref{NnuDomain} shows that in order to achieve a change in $N_\nu^{\mathrm{eff}}$ at the level of up to 5\%, i.e., $N_\nu^{\mathrm{eff}}\lesssim 3.2 $, $\eta/\eta_0$ must change significantly, e.g., increasing by an order of magnitude.
 
 It is not possible to exclude with certainty such a large scale in the primordial Universe as we will now argue considering the natural constants contributing to $\eta$ and their required
 modification:
@@ -210,7 +209,7 @@ One could further argue that any value of $\sin^2(\theta_W)$ is possible at time
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Lepton number and effective number of neutrinos}\label{sec:N_eff_intro}
+\subsection{Lepton number and effective number of neutrinos}\label{sec:NeffIntro}
 
 \para{Invisible lepton number: relic neutrinos}
 Neutrinos decoupled from the cosmic plasma in the early Universe at a temperature of $T=\mathcal{O}(2\mathrm{MeV})$ and became free-streaming. However, after freeze-out neutrinos still continue to play a significant role in the evolution of the Universe and have a impact on cosmological observations such as Big-Bang Nucleosynthesis (BBN), the Cosmic Microwave Background (CMB), and the matter spectrum for large scale structure. This is due to the sensitivity of the Hubble parameter to the total energy density in the Universe. Besides photons, neutrinos are the most abundant species and contribute significantly to the relativistic energy density throughout the early Universe, affecting the Hubble expansion rate significantly. 
@@ -221,7 +220,7 @@ N_\nu^{\mathrm{eff}}\equiv\frac{\rho^{\mathrm{tot}}_\nu}{\frac{7\pi^2}{120}\left
 \end{align}
 where $\rho_\nu^{\mathrm{tot}}$ is the total energy density in neutrinos and $T_\gamma$ is the photon temperature. $N_\nu^{\mathrm{eff}}$ is defined such that three neutrino flavors with zero participation of neutrinos in reheating during $e^+e^-$ annihilation results in $N_\nu^{\mathrm{eff}}=3$. The factor of $\left(4/11\right)^{1/3}$ relates the photon temperature to the free-streaming neutrinos temperature, under the assumption of zero neutrino reheating after $e^+e^-$ annihilation. The currently accepted theoretical value is $N_\nu^{\mathrm{eff}}=3.046$, after including the slight effect of neutrino reheating \cite{Mangano:2005cc,Birrell:2014uka}. The favored value of $N_\nu^{\mathrm{eff}}$ can be found by fitting to CMB data. In 2013 the Planck collaboration found $N_\nu^{\mathrm{eff}}=3.36\pm0.34$ (CMB only) and $N_\nu^{\mathrm{eff}}= 3.62\pm0.25$ (CMB and $H_0$)~\cite{Planck:2013pxb}.
 
-To explain the experimental value of $N_\nu^{\mathrm{eff}}$, many studies aim to improve the calculation of neutrino decoupling in the early Universe, including exploring the dependence of freeze-out on natural constants~\cite{Birrell:2014uka}, the entropy transfer from $e^+e^-$ annihilation and finite temperature correction~\cite{Dicus:1982bz,Heckler:1994tv,Fornengo:1997wa}, neutrino decoupling with flavor oscillations~\cite{Mangano:2001iu,Mangano:2005cc}, and investigating nonstandard neutrino interactions \cite{Morgan:1981zy,Fukugita:1987uy,Elmfors:1997tt,Vogel:1989iv,Mangano:2006ar,Giunti:2008ve,Mangano:2006ar}.% However, the effective number of neutrino $N_\nu^{\mathrm{eff}}$ can be a consequence of fundamental physics principle.
+To explain the experimental value of $N_\nu^{\mathrm{eff}}$, many studies aim to improve the calculation of neutrino decoupling in the early Universe, including exploring the dependence of freeze-out on natural constants~\cite{Birrell:2014uka}, the entropy transfer from $e^+e^-$ annihilation and finite temperature correction~\cite{Dicus:1982bz,Heckler:1994tv,Fornengo:1997wa}, neutrino decoupling with flavor oscillations~\cite{Mangano:2001iu,Mangano:2005cc}, and investigating nonstandard neutrino interactions \cite{Morgan:1981zy,Fukugita:1987uy,Elmfors:1997tt,Vogel:1989iv,Mangano:2006ar,Giunti:2008ve,Mangano:2006ar}.
 
 
 The standard cosmological model assumes that the lepton asymmetry $L\equiv  [N_\mathrm{L}-N_{\overline{\mathrm{L}}}] /N_\gamma $  (normalized with the photon number) 
@@ -236,19 +235,19 @@ where $\sigma=+1(-1)$ denotes particles (antiparticles) and we define the effect
 
 Since the freeze-out temperature $T_f\gg m_\nu$ and also neutrino temperature $T_\nu\gg m_\nu$ in the domain of our analysis, we consider the massless limit in Eq.\;(\ref{fnudef}). Under this approximation, the total neutrino energy density can be written as
 \begin{align}
-\label{Energy_Density}
+\label{EnergyDensity}
 \rho_\nu^{\mathrm{tot}}
 &=\frac{g_\nu\,T_\nu^4}{2\pi^2}\left[\frac{7\pi^4}{60}+\frac{\pi^2}{2}\left(\frac{\mu_\nu}{T_f}\right)^{\!\!2}+\frac{1}{4}\left(\frac{\mu_\nu}{T_f}\right)^{\!\!4}\right].
 \end{align}
-Substituting Eq.\;(\ref{Energy_Density}) into the definition of the effective number of neutrinos Eq.~(\ref{Neff}), we obtain 
+Substituting Eq.\;(\ref{EnergyDensity}) into the definition of the effective number of neutrinos Eq.~(\ref{Neff}), we obtain 
 \begin{align}
-\label{Neff_002}
+\label{Neff002}
 N_\nu^{\mathrm{eff}}\!\!
 =\!3\!\left(\frac{11}{4}\right)^{\!\!\frac{4}{3}}\!\!\left(\frac{T_\nu}{T_\gamma}\right)^{\!\!4}\!
 \left[1\!+\!\frac{30}{7\pi^2}\!\!\left(\frac{\mu_\nu}{T_f}\right)^{\!\!2} 
 \!\!+\frac{15}{7\pi^4}\!\!\left(\frac{\mu_\nu}{T_f}\right)^{\!\!4}\right].
 \end{align}
-From Eq.\;(\ref{Neff_002}) we have for the standard photon reheating ratio $T_\nu/T_\gamma=(4/11)^{1/3}$ \cite{Kolb:1990vq} and degeneracy $g_\nu=3$ (flavor), the relation between the effective number of neutrinos and the chemical potential at freeze-out
+From Eq.\;(\ref{Neff002}) we have for the standard photon reheating ratio $T_\nu/T_\gamma=(4/11)^{1/3}$ \cite{Kolb:1990vq} and degeneracy $g_\nu=3$ (flavor), the relation between the effective number of neutrinos and the chemical potential at freeze-out
 \begin{align}
 \label{NeffPotential}
 N_\nu^{\mathrm{eff}}=3\left[1+\frac{30}{7\pi^2}\left(\frac{\mu_\nu}{T_f}\right)^{\!\!2}+ \frac{15}{7\pi^4} \left(\frac{\mu_\nu}{T_f}\right)^{\!\!4}\right].
@@ -258,16 +257,16 @@ To solve the neutrino chemical potential $\mu_\nu/T_f$ as a function of the effe
 \frac{\mu_\nu}{T_f}=\pm\sqrt{\frac{7\pi^2}{30}\left(\frac{N_\nu^{\mathrm{eff}}}{3}-1\right)}.
 %=&\pm \pi\sqrt{\sqrt{1+\frac{7}{15}\left(\frac{N_\nu^{\mathrm{eff}}}{3}-1\right)}-1}%\approx
 \end{align}
-In Fig.\;\ref{Chemical_Potential_Neff} we plot the free-streaming neutrino chemical potential $|\mu_\nu|/T_f$ as a function of the effective number of neutrinos $N_\nu^{\mathrm{eff}}$. For comparison, the solid (blue) line is the exact solution of $|\mu_\nu|/T_f$ by solving Eq.~(\ref{NeffPotential}) numerically, and the (red) dashed line is the approximate solution Eq.~(\ref{Solution}) by neglecting the $(\mu_\nu/T_f)^4$ in calculation. In the parameter range of interest, we show that the term $(\mu_\nu/T_f)^4$ only contributes $\approx 2\%$ to the calculation and henceforth we neglect it, and use the approximation Eq.\;(\ref{Solution}). 
+In Fig.\;\ref{ChemicalPotentialNeff} we plot the free-streaming neutrino chemical potential $|\mu_\nu|/T_f$ as a function of the effective number of neutrinos $N_\nu^{\mathrm{eff}}$. For comparison, the solid (blue) line is the exact solution of $|\mu_\nu|/T_f$ by solving Eq.~(\ref{NeffPotential}) numerically, and the (red) dashed line is the approximate solution Eq.~(\ref{Solution}) by neglecting the $(\mu_\nu/T_f)^4$ in calculation. In the parameter range of interest, we show that the term $(\mu_\nu/T_f)^4$ only contributes $\approx 2\%$ to the calculation and henceforth we neglect it, and use the approximation Eq.\;(\ref{Solution}). 
 
-The SM value of the effective number of neutrinos, $N_\nu^{\mathrm{eff}}=3$, is obtained under the assumption that the neutrino chemical potentials are not essential, {\it i.e.\/}, $\mu_\nu\ll T_f$. From Fig.\;\ref{Chemical_Potential_Neff}, to interpret the literature values $N_\nu^{\mathrm{eff}}=3.36\pm0.34$ (CMB only) and $N_\nu^{\mathrm{eff}}= 3.62\pm0.25$ (CMB and $H_0$), we require $0.52\leqslant\mu_\nu/T_f\leqslant0.69$. These values suggest  a possible neutrino-antineutrino asymmetry at freeze-out, {\it i.e.\/} a difference between the number densities of neutrinos and antineutrinos.
+The SM value of the effective number of neutrinos, $N_\nu^{\mathrm{eff}}=3$, is obtained under the assumption that the neutrino chemical potentials are not essential, {\it i.e.\/}, $\mu_\nu\ll T_f$. From Fig.\;\ref{ChemicalPotentialNeff}, to interpret the literature values $N_\nu^{\mathrm{eff}}=3.36\pm0.34$ (CMB only) and $N_\nu^{\mathrm{eff}}= 3.62\pm0.25$ (CMB and $H_0$), we require $0.52\leqslant\mu_\nu/T_f\leqslant0.69$. These values suggest  a possible neutrino-antineutrino asymmetry at freeze-out, {\it i.e.\/} a difference between the number densities of neutrinos and antineutrinos.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{./plots/Chemical_Potential_Neff}
 \caption{The free-streaming neutrino chemical potential $|\mu_\nu|/T_f$ as a function of the effective number of neutrinos $N_\nu^{\mathrm{eff}}$. The solid (blue) line is the exact solution and the (red) dashed line is the approximate solution neglecting the $(\mu_\nu/T_f)^4$ term; the maximum difference in the domain shown is about $2\%$. \radapt{Yang:2024ret}}
-\label{Chemical_Potential_Neff}
+\label{ChemicalPotentialNeff}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -276,7 +275,7 @@ The SM value of the effective number of neutrinos, $N_\nu^{\mathrm{eff}}=3$, is 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Dependence of effective number of neutrinos on lepton asymmetry}
-We now obtain the relation between neutrino chemical potential and the baryon to lepton ratio. Let us consider the neutrino freeze-out temperature $T_f\simeq 2.0$\,MeV; here we treat neutrino freeze-out as occurring instantaneously and prior to $e^+e^-$ annihilation (implying zero neutrino reheating). Comoving lepton (and baryon) number is conserved after the epoch of leptogenesis (baryogenesis, respectively) which precedes the epoch  under consideration in this work ($T\lesssim 2$\;MeV). %However, the photon number $N_\gamma$ changes due to reheating, and accommodates the large number of photons originating from $e^+e^-$-annihilation.% We present results in terms of the current epoch photon number. 
+We now obtain the relation between neutrino chemical potential and the baryon to lepton ratio. Let us consider the neutrino freeze-out temperature $T_f\simeq 2.0$\,MeV; here we treat neutrino freeze-out as occurring instantaneously and prior to $e^+e^-$ annihilation (implying zero neutrino reheating). Comoving lepton (and baryon) number is conserved after the epoch of leptogenesis (baryogenesis, respectively) which precedes the epoch  under consideration in this work ($T\lesssim 2$\;MeV). 
 
 The lepton-density asymmetry $\ell $ at neutrino freeze-out can be written as\index{lepton asymmetry}
 \begin{align}
@@ -288,43 +287,43 @@ where we use the subscript $f$ to indicate that the quantities should be evaluat
 \end{align}
 Furthermore, neutrino oscillation implies that neutrino number is freely exchanged between flavors; {\it i.e.\/}, $\nu_e\rightleftharpoons\nu_\mu\rightleftharpoons\nu_\tau$, and we can assume that all neutrino flavors share the same population. Under these assumptions, the lepton-density asymmetry can be written as
 \begin{align}
-\label{L_asymmetry} 
+\label{Lasymmetry}  
 \ell_f=\big(n_e-n_{\overline{e}}\big)_f+\big(n_{\nu}-n_{\overline{\nu}}\big)_f,
 \end{align}
 where the three flavors are accounted for by taking the degeneracy $g_\nu=3$ in the last term. The difference in yield of neutrinos and antineutrinos can be written as
 \begin{align}
-\label{Excess_Neutrino}
+\label{ExcessNeutrino}
 \left(n_\nu-n_{\overline{\nu}}\right)_f=\frac{g_\nu}{6\pi^2}T^3_f\bigg[\pi^2\left(\frac{\mu_\nu}{T_f}\right)+\left(\frac{\mu_\nu}{T_f}\right)^{\!\!3}\bigg].
 \end{align}
 
 
 On the other hand, the baryon-density asymmetry $b$ at neutrino freeze-out is given by
 \begin{align}
-\label{B_asymmetry}
+\label{Basymmetry}
 b_f \equiv\big(n_p-n_{\overline{p}}\big)_f+\big(n_n-n_{\overline{n}}\big)_f \approx \big(n_p+n_n\big)_f,
 \end{align}
 where $n_{\overline{n}}$ and $n_{\overline{p}}$ are negligible in the temperature range we consider here. Taking the ratio $\ell_f/b_f$, using charge neutrality, and introducing the entropy density we obtain
-\begin{align}\label{Lf_Bf}
+\begin{align}\label{LfBf}
 \left(\frac{\ell_f}{b_f}\right)  
 \approx\left(\frac{n_p}{n_B} \right)_f+\left(n_{\nu}-n_{\overline{\nu}}\right)_f \left(\frac{s}{n_B}\right)_f \frac{1}{s_f},\qquad n_B=(n_p+n_n),
 \end{align}
 where we introduce the notation $n_B$ for the baryon number density. The proton concentration at neutrino freeze-out is given by
 \begin{align}
-\label{X_proton}
+\label{X:proton}
 \left(\frac{n_p}{n_B}\right)_f&=\frac{1}{1+(n_n/n_p)_f}=\frac{1}{1+\exp{\big[-\left(Q+\mu_\nu\right)/T_f\big]}},
 \end{align}
 with $Q=m_n-m_p=1.293\,\mathrm{MeV}$. We neglect the electron chemical potential in the last step because the $e^+e^-$ asymmetry is determined by the proton density, and at energies of order a few MeV, the proton density is small, {\it i.e.\/}, $\mu_e\ll T_f$. 
 
-However, as we will see, for our study of $N_\nu^{\mathrm{eff}}$ we will be interested in the case of a large lepton-to-baryon ratio. From Eq.\;(\ref{X_proton}) it is apparent that this can only be achieved through the second term in Eq.\;(\ref{Lf_Bf}), with the first term then being negligible, as it is smaller than $1$. So we further approximate
-\begin{align}\label{L_B_ratio}
+However, as we will see, for our study of $N_\nu^{\mathrm{eff}}$ we will be interested in the case of a large lepton-to-baryon ratio. From Eq.\;(\ref{X:proton}) it is apparent that this can only be achieved through the second term in Eq.\;(\ref{LfBf}), with the first term then being negligible, as it is smaller than $1$. So we further approximate
+\begin{align}\label{LB:ratio}
 \left(\frac{\ell_f}{b_f}\right)  
 \approx\left(n_{\nu}-n_{\overline{\nu}}\right)_f \left(\frac{s}{n_B}\right)_f \frac{1}{s_f}.
 \end{align}
-We retained the full expression Eq.\;(\ref{X_proton}) in our above discussion to show that the presence of a chemical potential $\mu_\nu\simeq 0.2\,Q$ could lead to small, perhaps noticeable, effects on pre-BBN proton and neutron abundance. We defer this unrelated discussion to a separate future work. Note that for large $|\mu_\nu|$, Eq.\;(\ref{L_B_ratio}) implies that the signs of $\mu_\nu$ and $\ell_f$ are the same. However, for very small $\mu_\nu$ the sign of $\ell_f$ is determined by the interplay between (anti)electrons and (anti)neutrinos; {\it i.e.\/}, there is competition between the two terms in Eq.\;(\ref{L_asymmetry}).
+We retained the full expression Eq.\;(\ref{X:proton}) in our above discussion to show that the presence of a chemical potential $\mu_\nu\simeq 0.2\,Q$ could lead to small, perhaps noticeable, effects on pre-BBN proton and neutron abundance. We defer this unrelated discussion to a separate future work. Note that for large $|\mu_\nu|$, Eq.\;(\ref{LB:ratio}) implies that the signs of $\mu_\nu$ and $\ell_f$ are the same. However, for very small $\mu_\nu$ the sign of $\ell_f$ is determined by the interplay between (anti)electrons and (anti)neutrinos; {\it i.e.\/}, there is competition between the two terms in Eq.\;(\ref{Lasymmetry} ).
 
 In general, the total entropy density at freeze-out can be written
 \begin{align}
-\label{Entropy_density}
+\label{eq:EntropyDensity}
 s_f=\frac{2\pi^2}{45}g^s_\ast(T_f)\,T_f^3,
 \end{align}
 where the $g^s_\ast$ counts the degree of freedom for relativistic particles~\cite{Kolb:1990vq}. At $T_f\simeq 2\mathrm{MeV}$, the relativistic species in the early Universe are photons, electron/positrons, and $3$ neutrino species. We have
@@ -338,24 +337,24 @@ where the degrees of freedom are given by $g_\gamma=2$, $g_{e^\pm}=4$, and $g_{\
 \begin{center}
 \includegraphics[width=0.9\linewidth]{./plots/Ratio_BL}
 \caption{The ratio $B/|L|$ between the net baryon number and the net lepton number as a function of $N^{\mathrm{eff}}_\nu$: The solid blue line shows $B/|L|$. The vertical (red) dotted lines represent the values $3.36\leqslant N_\nu^{\mathrm{eff}}\leqslant3.62$, which correspond to $1.16 \times 10^{-9}\leqslant B/|L|\leqslant 1.51 \times 10^{-9}$ (horizontal dashed lines). \radapt{Yang:2024ret}}
-\label{BL_Ratio}
+\label{fig:BLRatio}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Finally, since the entropy-per-baryon from neutrino freeze-out up to the present epoch is constant, we can obtain this value by considering the Universe's entropy content today~\cite{Fromerth:2012fe}. For $T\ll1\,\mathrm{MeV}$, the entropy content today is carried by photons and neutrinos, yielding
 \begin{align}
-\label{Nb_S}
+\label{NbS}
 \left(\frac{s}{n_B}\right)_{t_0}&=\frac{\sum_i\,s_i}{n_B}=\frac{n_\gamma}{n_B}\,\bigg(\frac{s_\gamma}{n_\gamma}+\frac{s_\nu}{n_\gamma}+\frac{s_{\bar{\nu}}}{n_\gamma}\bigg)\;\\
 &=\left(\frac{1}{B}\right)_{\!\!t_0}\!\!\left[\frac{s_\gamma}{n_\gamma}+\frac{4}{3T_\nu}\frac{\rho_\nu^{\mathrm{tot}}}{n_\gamma}-\frac{\mu_\nu}{T_f}\left(\frac{n_\nu-n_{\bar{\nu}}}{n_\gamma}\right)\right]_{t_0}\;,
 \end{align}
 where $t_0$ denotes the present day values, we have $B=n_B/n_\gamma= 0.605\times10^{-9}$ (CMB)~\cite{ParticleDataGroup:2016lqr} from today's observation. The entropy per particle for a massless boson at zero chemical potential is $(s/n)_{\mathrm{boson}}\approx 3.602$.
 
-Substituting Eq.\;(\ref{Excess_Neutrino}) and Eq.\;(\ref{Entropy_density}) into Eq.\;(\ref{L_B_ratio}) yields the lepton-to-baryon ratio\index{lepton-to-baryon number ratio}
-\begin{align}\label{L_B_ratio_final}
+Substituting Eq.\;(\ref{ExcessNeutrino}) and Eq.\;(\ref{eq:EntropyDensity}) into Eq.\;(\ref{LB:ratio}) yields the lepton-to-baryon ratio\index{lepton-to-baryon number ratio}
+\begin{align}\label{LBratioFinal}
 &\frac{L}{B}=\frac{45}{4\pi^4}\frac{\pi^2(\mu_\nu/T_f)+(\mu_\nu/T_f)^3}{10.75+{45}(\mu_\nu/T_f)^2/{4\pi^2}}\left(\frac{s}{n_B}\right)_{\!\!t_0}\;,
 \end{align}
-in terms of $\mu_\nu/T_f$ which is given by Eq.(\ref{Solution}) and the present day entropy-per-baryon ratio. In Fig.\;\ref{BL_Ratio} we show the ratio between the net baryon number and the net lepton number as a function of the effective number of neutrino species $N^{\mathrm{eff}}_\nu$ with the parameter $ B|_{t_0} =0.605\times 10^{-9}$(CMB). We find that the values $N_\nu^{\mathrm{eff}}=3.36\pm0.34$ and $N_\nu^{\mathrm{eff}}= 3.62\pm0.25$ require the ratio between baryon number and lepton number to be $1.16 \times 10^{-9} \leqslant\, B/|L| \leqslant 1.51\times 10^{-9}$. These values are close to the baryon-to-photon ratio $0.57 \times 10^{-9} \leqslant B  \leqslant 0.67\times 10^{-9}$. 
+in terms of $\mu_\nu/T_f$ which is given by Eq.(\ref{Solution}) and the present day entropy-per-baryon ratio. In Fig.\;\ref{fig:BLRatio} we show the ratio between the net baryon number and the net lepton number as a function of the effective number of neutrino species $N^{\mathrm{eff}}_\nu$ with the parameter $ B|_{t_0} =0.605\times 10^{-9}$(CMB). We find that the values $N_\nu^{\mathrm{eff}}=3.36\pm0.34$ and $N_\nu^{\mathrm{eff}}= 3.62\pm0.25$ require the ratio between baryon number and lepton number to be $1.16 \times 10^{-9} \leqslant\, B/|L| \leqslant 1.51\times 10^{-9}$. These values are close to the baryon-to-photon ratio $0.57 \times 10^{-9} \leqslant B  \leqslant 0.67\times 10^{-9}$. 
 
 
 The large lepton asymmetry from cosmic neutrino can also affect the neutron lifespan in cosmic plasma which is one of the important parameter controlling BBN element abundances. 
@@ -388,7 +387,7 @@ In Fig.~\ref{ExtraNeutrinoRate} we plot the thermal reaction rate per volume for
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Given the thermal reaction rate, the dynamic equation describing the relic neutrino abundance after freeze-out can be expressed as:
-\begin{align}\label{ExtraNeutrio_eq}
+\begin{align}\label{ExtraNeutrioEq}
 \frac{dn_\nu}{dt}+3Hn_\nu=R_{e\overline{e}\to\nu\overline{\nu}}(T_{\gamma,e^\pm})-R_{\nu\overline{\nu}\to e\overline{e}}(T_\nu),
 \end{align}
 where $n_\nu$ is the number density of neutrinos and $H$ is the Hubble parameter. The parameter $T_{\gamma,e^\pm}$ is the equilibrium temperature between photons and $e^\pm$ and $T_\nu$ is the temperature for free-streaming neutrinos: 
@@ -411,7 +410,7 @@ In Fig.~\ref{DimensionlessRatio} we plot the temperature ratio $T_\nu/T_{\gamma,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Solving the dynamic equation of neutrino abundance Eq.(\ref{ExtraNeutrio_eq}), the general solution can be written as
+Solving the dynamic equation of neutrino abundance Eq.(\ref{ExtraNeutrioEq}), the general solution can be written as
 \begin{align}
 n_\nu(T)=n_\mathrm{relic}(T)+n_\mathrm{extra}(T),\qquad T=T_{\gamma,e^\pm},
 \end{align}

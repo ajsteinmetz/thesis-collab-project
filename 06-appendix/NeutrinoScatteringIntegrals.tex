@@ -3,7 +3,7 @@
 
 
 \subsection{Collision Integral Inner Products}
-Having detailed our method for solving the Boltzmann-Einstein equation in Appendix \ref{ch:boltz:orthopoly}, in this appendix we address the computation of  collision integrals for neutrino processes; see also \cite{Birrell:2014uka}. To solve for the mode coefficients using \req{b_eq}, we must evaluate the collision operator inner products
+Having detailed our method for solving the Boltzmann-Einstein equation in Appendix \ref{ch:boltz:orthopoly}, in this appendix we address the computation of  collision integrals for neutrino processes; see also \cite{Birrell:2014uka}. To solve for the mode coefficients using \req{bEq}, we must evaluate the collision operator inner products
 \begin{align}\label{collision:integrals}
 R_k\equiv&\langle\frac{1}{f_\Upsilon E_1}C[f_1],\hat\psi_k\rangle=\int_0^\infty \hat\psi_k(z_1)C[f_1](z_1) \frac{z_1^2}{E_1}dz_1\\
 =&\frac{1}{2}\int \hat\psi_k(z_1)\int\left[f_3(p_3)f_4(p^4)f^1(p_1)f^2(p_2)-f_1(p_1)f_2(p_2)f^3(p_3)f^4(p^4)\right]\notag\\
@@ -18,13 +18,13 @@ Note that $R_k$ only uses information about the distributions at a single spacet
 \end{equation}
 
 From \req{collision:integrals}, we see that a crucial input into the chemical nonequilibrium spectral method with $2 \leftrightarrow 2$ reactions is the ability to efficiently compute a numerical approximation to integrals of the form
-\begin{align}\label{coll_ip}
+\begin{align}\label{coll:Ip}
 &M\equiv\int G(p_1,p_2,p_3,p_4) S |\mathcal{M}|^2(s,t) (2\pi)^4\delta(\Delta p)\prod_{i=1}^4 \delta_0(p_i^2-m_i^2)\frac{d^4p_i}{(2\pi)^3}\,,\\
 &G(p_1,p_2,p_3,p_4)=g_1(p_1)g_2(p_2)g_3(p_3)g_4(p_4)\,,\notag
 \end{align}
-for some functions $g_i$. Even after eliminating the delta functions in \req{coll_ip}, we are still left with an $8$ dimensional integral.  To facilitate numerical computation, we must analytically reduce this expression down to fewer dimensions.  Fortunately, the systems we are interested in have a large amount of symmetry that  can be utilized for this purpose.  
+for some functions $g_i$. Even after eliminating the delta functions in \req{coll:Ip}, we are still left with an $8$ dimensional integral.  To facilitate numerical computation, we must analytically reduce this expression down to fewer dimensions.  Fortunately, the systems we are interested in have a large amount of symmetry that  can be utilized for this purpose.  
 
-The distribution functions we are concerned with are isotropic in some frame defined  by a unit timelike vector $U$, i.e. they depend only on the four-momentum only through $p_i\cdot U$.  The same is true of the basis functions $\hat\psi_k$, and hence the  $g_i$ depend only on $p_i\cdot U$ as well.  In \cite{Hannestad:1995rs,Dolgov:1997mb,Dolgov:1998sf} approaches are outlined that reduce integrals of this type down to $3$ dimensions.  We outline the method from \cite{Dolgov:1997mb,Dolgov:1998sf}, as applied to our spectral method solver, in appendix \ref{app:dogov_method}.  However, the integrand one obtains from these methods is only piecewise smooth or has an integration domain with a complicated geometry.  This presents difficulties for the integration routine we employ, which utilizes adaptive mesh refinement to ensure the desired error tolerance.  We take an alternative approach that, for the scattering kernels found in $e^\pm$, neutrino interactions, reduces the problem nested integrals  of depth three while also resulting in an integrand with better smoothness properties.  In our comparison with the method in \cite{Dolgov:1997mb,Dolgov:1998sf}, the resulting formula evaluates significantly faster under the numerical integration scheme we used.   The derivation presented here expands on what is found in \cite{Letessier:2002ony}.
+The distribution functions we are concerned with are isotropic in some frame defined  by a unit timelike vector $U$, i.e. they depend only on the four-momentum only through $p_i\cdot U$.  The same is true of the basis functions $\hat\psi_k$, and hence the  $g_i$ depend only on $p_i\cdot U$ as well.  In \cite{Hannestad:1995rs,Dolgov:1997mb,Dolgov:1998sf} approaches are outlined that reduce integrals of this type down to $3$ dimensions.  We outline the method from \cite{Dolgov:1997mb,Dolgov:1998sf}, as applied to our spectral method solver, in appendix \ref{app:dogovMethod}.  However, the integrand one obtains from these methods is only piecewise smooth or has an integration domain with a complicated geometry.  This presents difficulties for the integration routine we employ, which utilizes adaptive mesh refinement to ensure the desired error tolerance.  We take an alternative approach that, for the scattering kernels found in $e^\pm$, neutrino interactions, reduces the problem nested integrals  of depth three while also resulting in an integrand with better smoothness properties.  In our comparison with the method in \cite{Dolgov:1997mb,Dolgov:1998sf}, the resulting formula evaluates significantly faster under the numerical integration scheme we used.   The derivation presented here expands on what is found in \cite{Letessier:2002ony}.
 
 \para{Simplifying the Collision Integral}\label{coll:simp:sec}
 Our strategy for simplifying the collision integrals is as follows.  We first make a change of variables designed to put the 4-momentum conserving delta function in a particularly simple form, allowing for the integral to be reduced from $16$ to $12$ dimensions.  The remaining four delta functions, which impose the mass shell constraints, are then seen to reduce to integration over a product of spheres.  The simple form of the submanifold that these delta function restrict us to allows us to use the method in chapter \ref{ch:vol:forms} to analytically evaluate all four of the remaining delta functions simultaneously.  During this process, the isotropy of the system in the frame given by the 4-vector $U$ allows for further reduction of the dimensionality  by analytically evaluating several of the angular integrals. 
@@ -33,8 +33,8 @@ The change of variables that simplifies the 4-momentum conserving delta function
 \begin{equation}
 p=p_1+p_2\,,\hspace{2mm} q=p_1-p_2\,, \hspace{2mm} p^{\prime}=p_3+p_4\,, \hspace{2mm} q^{\prime}=p_3-p_4\,.
 \end{equation}
-The Jacobian of this transformation is $1/2^{8}$.  Therefore using Lemma \ref{diffeo_property} we find
-\begin{align}\label{M_eq1}
+The Jacobian of this transformation is $1/2^{8}$.  Therefore using Lemma \ref{diffeoProperty} we find
+\begin{align}\label{Meq1}
 M=&\frac{1}{256(2\pi)^8 }\int   G((p+q)\cdot U/2,(p-q)\cdot  U/2,(p^{\prime}+q^{\prime})\cdot U/2, (p^{\prime}-q^{\prime})\cdot U/2)\notag\\ 
 &\times S |\mathcal{M}|^2  \delta(p-p^{\prime})\delta((p+q)^2/4-m_1^2)\delta((p-q)^2/4-m_2^2)\delta((p^{\prime}+q^{\prime})^2/4-m_3^2)\notag\\
 &\times\delta((p^{\prime}-q^{\prime})^2/4-m_4^2)1_{p^0>|q^0|} 1_{(p^{\prime})^0>|(q^{\prime})^0|}d^4pd^4qd^4p^{\prime}d^4q^{\prime}\,.
@@ -44,7 +44,7 @@ Next eliminate the integration over $p^{\prime}$ using $\delta(p-p^{\prime})$
 using associative property
 \end{comment}
  and then use Fubini's theorem to write
-\begin{align}\label{use_fubini}
+\begin{align}\label{useFubini}
 M=\frac{1}{256(2\pi)^8 }\int &\bigg[ \int G((p+q)\cdot U/2,(p-q)\cdot  U/2,(p^{\prime}+q^{\prime})\cdot U/2, (p^{\prime}-q^{\prime})\cdot U/2)\notag\\ 
 &\times  1_{p^0>|q^0|} 1_{p^0>|(q^{\prime})^0|}S |\mathcal{M}|^2 \delta((p+q)^2/4-m_1^2)\delta((p-q)^2/4-m_2^2)\notag\\
 &\times \delta((p+q^{\prime})^2/4-m_3^2)\delta((p-q^{\prime})^2/4-m_4^2)d^4qd^4q^{\prime}\bigg]d^4p\,.
@@ -52,8 +52,8 @@ M=\frac{1}{256(2\pi)^8 }\int &\bigg[ \int G((p+q)\cdot U/2,(p-q)\cdot  U/2,(p^{\
 Subsequent computations will justify this use of Fubini's theorem.
 
 
-Since $p^0>0$ we have $dp\neq 0$ and so we can use Corollary \ref{dummy_int} of the coarea formula to decompose this into an integral over the center of mass energy $s=p^2$,
-\begin{align}\label{M_eq2}
+Since $p^0>0$ we have $dp\neq 0$ and so we can use Corollary \ref{dummyInt} of the coarea formula to decompose this into an integral over the center of mass energy $s=p^2$,
+\begin{align}\label{Meq2}
 &M=\frac{1}{256(2\pi)^8 }\!\int_{s_0}^\infty\!\!\int \!\bigg[\int 1_{p^0>|q^0|} 1_{p^0>|(q^{\prime})^0|}  S |\mathcal{M}|^2  F(p,q,q^{\prime}) \delta((p+q)^2/4-m_1^2)\\
 &\!\times\delta((p-q)^2/4-m_2^2)\delta((p+q^{\prime})^2/4-m_3^2)\delta((p-q^{\prime})^2/4-m_4^2)d^4qd^4q^{\prime}\bigg]\delta(p^2-s) d^4pds\,,\notag\\
 &F(p,q,q^{\prime})=G((p+q)\cdot U/2,(p-q)\cdot  U/2,(p+q^{\prime})\cdot U/2, (p-q^{\prime})\cdot U/2)\,,\notag\\
@@ -65,8 +65,8 @@ p^2=m_1^2+m_2^2+2p_1\cdot p_2\geq m_1^2+m_2^2+2m_1m_2=(m_1+m_2)^2\,.
 \end{equation}
 The other inequality is obtained by using $p=p^{\prime}$. 
 
-Note that the integral in brackets in \req{M_eq2} is invariant under $SO(3)$ rotations of $p$ in the frame defined by $U$.  Therefore we obtain
-\begin{align}\label{K_def}
+Note that the integral in brackets in \req{Meq2} is invariant under $SO(3)$ rotations of $p$ in the frame defined by $U$.  Therefore we obtain
+\begin{align}\label{Kdef}
 M=&\frac{1}{256(2\pi)^8 }\int_{s_0}^\infty\int_0^\infty K(s,p)\frac{4\pi |\vec p|^2}{2p^0}d|\vec p|ds\,,\hspace{2mm} p^0=p\cdot U=\sqrt{|\vec p|^2+s}\,,\\
 K(s,p)=&\int\! 1_{p^0>|q^0|} 1_{p^0>|(q^{\prime})^0|}  S |\mathcal{M}|^2  F(p,q,q^{\prime}) \delta((p+q)^2/4-m_1^2)\delta((p-q)^2/4-m_2^2)\notag\\
 &\times\delta((p+q^{\prime})^2/4-m_3^2)\delta((p-q^{\prime})^2/4-m_4^2)d^4qd^4q^{\prime}\,,\notag
@@ -92,7 +92,7 @@ and must compute the solution set $\Phi(q,q^{\prime})=0$. Adding and subtracting
 \frac{s+q^2}{2}=m_1^2+m_2^2\,,\hspace{2mm} p\cdot q=m_1^2-m_2^2\,, \hspace{2mm}\frac{s+(q^{\prime})^2}{2}=m_3^2+m_4^2\,,\hspace{2mm} p\cdot q^{\prime}=m_3^2-m_4^2\,.
 \end{align}
 If we let $(q^0,\vec{q})$, $((q^{\prime})^0,\vec{q}^{\prime})$ denote the spacial components in the frame defined by $p=(\sqrt{s},0,0,0)$ we have another set of equivalent conditions
-\begin{align}\label{coord_conditions}
+\begin{align}\label{coordConditions}
 &q^{0}=\frac{m_1^2-m_2^2}{\sqrt{s}}\,,\hspace{2mm} |\vec{q}|^2=\frac{(m_1^2-m_2^2)^2}{s}+s-2(m_1^2+m_2^2)\,,\\
 &(q^{\prime})^{0}=\frac{m_3^2-m_4^2}{\sqrt{s}}\,, \hspace{2mm} |\vec{q}^{\prime}|^2=\frac{(m_3^2-m_4^2)^2}{s}+s-2(m_3^2+m_4^2)\,.\notag
 \end{align}
@@ -102,7 +102,7 @@ Note that if these hold then using $s\geq s_0$ we obtain
 \end{equation}
 and similarly for $q^{\prime}$.  Hence the conditions in the indicator functions are satisfied and we can drop them from the formula for $K(s,p)$.
 
-The conditions \req{coord_conditions} imply that our solution set is a product of spheres in $\vec{q}$ and $\vec{q}^{\prime}$, as long as the conditions are consistent i.e. so long as $|\vec{q}|,|\vec{q}^{\prime}|>0$. To see that this holds for almost every $s$, first note
+The conditions \req{coordConditions} imply that our solution set is a product of spheres in $\vec{q}$ and $\vec{q}^{\prime}$, as long as the conditions are consistent i.e. so long as $|\vec{q}|,|\vec{q}^{\prime}|>0$. To see that this holds for almost every $s$, first note
 \begin{equation}
 \frac{d}{ds}|\vec{q}|^2=1-\frac{(m_1^2-m_2^2)^2}{s^2}>0
 \end{equation}
@@ -141,9 +141,9 @@ Similar results hold for $q^{\prime}$.  Therefore we have the determinant
 \det\left( \begin{array}{cccc}
 D\Phi(\partial_{q^0}) & D\Phi(\partial_{r}) & D\Phi(\partial_{(q^{\prime})^0}) & D\Phi(\partial_{r^{\prime}}) \end{array} \right)=\frac{s}{4}rr^{\prime}.
 \end{equation}
-Note that this determinant being nonzero implies that our use of Fubini's theorem in \req{use_fubini} was justified.
+Note that this determinant being nonzero implies that our use of Fubini's theorem in \req{useFubini} was justified.
 
-By \req{vol_form_coords} and \req{delta_def}, the above computations imply that the induced volume measure is
+By \req{volFormCoords} and \req{deltaDef}, the above computations imply that the induced volume measure is
 \begin{align}
 &\delta((p+q)^2/4-m_1^2)\delta((p-q)^2/4-m_2^2)\delta((p+q^{\prime})^2/4-m_3^2)\delta((p-q^{\prime})^2/4-m_4^2)d^4qd^4q^{\prime}\\
 &=\frac{4}{srr^{\prime}}i_{(\partial_{q^0},\partial_{r},\partial _{(q^{\prime})^0},\partial_{r^{\prime}})}\left(r^2\sin(\phi)dq^0drd\theta d\phi\right)\wedge\left((r^{\prime})^2\sin(\phi^{\prime})d(q^{\prime})^0dr^{\prime}d\theta^{\prime}d\phi^{\prime}\right)\notag\\
@@ -167,7 +167,7 @@ q\cdot U=q^0\alpha-r\delta\cos(\phi)
 \end{equation}
 and similarly for $q^{\prime}$.
 To compute
-\begin{align}\label{K_angular1}
+\begin{align}\label{KAngular1}
 K(s,p)=\frac{4rr^{\prime}}{s}\int \left[\int S |\mathcal{M}|^2 (s,t) G_{34}\sin(\phi^{\prime})d\theta^{\prime} d\phi^{\prime}\right] G_{12}\sin(\phi)d\theta d\phi
 \end{align}
 first recall 
@@ -175,7 +175,7 @@ first recall
 t=&(p_1-p_3)^2=\frac{1}{4}(q- q^{\prime})^2=\frac{1}{4}(q^2+(q^{\prime})^2-2(q^0(q^{\prime})^0-\vec{q}\cdot \vec{q}^{\prime}))\,,\\
 \vec{q}\cdot\vec{q}^{\prime}&=rr^{\prime}(\cos(\theta-\theta^{\prime})\sin(\phi)\sin(\phi^{\prime})+\cos(\phi)\cos(\phi^{\prime}))\,.\notag
 \end{align}
-Together, these imply that the integral in brackets in  \req{K_angular1} equals
+Together, these imply that the integral in brackets in  \req{KAngular1} equals
 \begin{align}
 &\int_0^\pi\int_0^{2\pi} S |\mathcal{M}|^2 (s,t(\cos(\theta-\theta^{\prime})\sin(\phi)\sin(\phi^{\prime})+\cos(\phi)\cos(\phi^{\prime})))\\
 &\hspace{15mm}\times G_{34}((q^{\prime})^0\alpha-r^{\prime}\delta\cos(\phi^{\prime}))\sin(\phi^{\prime})d\theta^{\prime} d\phi^{\prime}\notag\\
@@ -200,12 +200,12 @@ In this section, we further simplify the various integrals of the scattering mat
 \begin{align}\label{M:simp}
 M=\frac{1}{256(2\pi)^7 }\int_{s_0}^\infty&\int_0^\infty K(s,p)\frac{ p^2}{p^0}dpds\,,
 \end{align}
-\begin{align}\label{matrix_elem_int}
+\begin{align}\label{matrixElemInt}
 K(s,p)=&\frac{8\pi rr^{\prime}}{s}\int_{-1}^1 \left[\int_{-1}^1\left(\int_0^{2\pi} S |\mathcal{M}|^2 (s,t(\cos(\psi)\sqrt{1-y^2}\sqrt{1-z^2}+yz))d\psi\right)\right.\\
 &\hspace{26mm}\times G_{34}((q^{\prime})^0\alpha-r^{\prime}\delta y) dy\bigg] G_{12}(q^0\alpha-r\delta z)dz\,.\notag
 \end{align}
 where
-\begin{align}\label{t_def}
+\begin{align}\label{tDef}
 p^0=&\sqrt{p^2+s}\,,\hspace{2mm} \alpha=\frac{p^0}{\sqrt{s}}\,, \hspace{2mm} \delta=\frac{p}{\sqrt{s}}\,,\hspace{2mm}q^{0}=\frac{m_1^2-m_2^2}{\sqrt{s}}\,,\hspace{2mm}(q^{\prime})^{0}=\frac{m_3^2-m_4^2}{\sqrt{s}}\,,\\
 r=&\frac{1}{\sqrt{s}}\sqrt{(s-(m_1+m_2)^2)(s-(m_1-m_2)^2)}\,,\notag\\
  r^{\prime}=&\frac{1}{\sqrt{s}}\sqrt{(s-(m_3+m_4)^2)(s-(m_3-m_4)^2)}\,,\notag\\
@@ -342,13 +342,13 @@ Using this we find
 &K(s,p)=\frac{\pi^2C}{2}s^2\int_{-1}^1 \left[\int_{-1}^1q(y,z)G_{34}(p^0,-p y) dy\right] G_{12}(p^0,-p z)dz\,.\notag
 \end{align}
 Therefore
-\begin{align}
+\begin{align}\label{eq:M:nu:nubar}
 &M_{\nu\bar\nu\rightarrow\nu\bar\nu}=\frac{C}{2048(2\pi)^5 }T^8\!\!\!\int_0^\infty\!\!\!\!\int_0^\infty\!\!\! \tilde{s}^2\bigg[\int_{-1}^1\!\int_{-1}^1q(y,z)\tilde{G}_{34}(\tilde p^0,-\tilde{p} y)\notag\\
 &\hspace{58mm}\tilde{G}_{12}(\tilde p^0,-\tilde{p} z)dydz\bigg]\frac{\tilde{p}^2}{\tilde{p}^0}d\tilde{p}d\tilde{s}\,.\notag
 \end{align}
  If we want to emphasize the role of $C$ then we write $M_{\nu\bar\nu\rightarrow\nu\bar\nu}(C)$. Note that due to the polynomial form of the matrix element integral, the double integral in brackets breaks into a linear combination of products of one dimensional integrals, meaning that the nesting of integrals is again only three deep in  practice.
 
-\para{Neutrino-antineutrino annihilation to electron-positrons}\label{nu_nubar_int}
+\para{Neutrino-antineutrino annihilation to electron-positrons}
 Using \req{Mandelstam}, the matrix elements for leptonic neutrino antineutrino annihilation $\nu\bar{\nu}\rightarrow e^+e^-$ can be simplified to
 \begin{align}
 S|\mathcal{M}|^2=A\left(\frac{s+t-m_e^2}{2}\right)^2+B\left(\frac{m_e^2-t}{2}\right)^2+Cm_e^2\frac{s}{2}\,,
@@ -456,16 +456,16 @@ As above, after scaling all masses by $T$, we obtain a prefactor of $T^8$. If we
 
 
 \para{Total Collision Integral}
-We now give the total collision integrals for neutrinos.    In the following, we indicate which distributions are used in each of the four types of scattering integrals discussed above by using the appropriate subscripts. For example, to compute $M_{\nu_e\bar\nu_\mu\rightarrow\nu_e\bar\nu_\mu}$  we set $G_{1,2}=\hat\psi_jf^1f^2$, $G_{3,4}=f_3f_4$, $f_1= f_{\nu_e}$, $f_3=f_{\nu_e}$, and $f_2=f_4=f_{\bar\nu_\mu}$ in the expression for $M_{\nu\bar\nu\rightarrow\nu\bar\nu}$ from Section \ref{nu_nubar_int} and then, to include the reverse direction of the process, we must {\emph subtract}  the analogous expression whose only difference is $G_{1,2}=\hat\psi_jf_1f_2$, $G_{3,4}=f^3f^4$.
+We now give the total collision integrals for neutrinos.    In the following, we indicate which distributions are used in each of the four types of scattering integrals discussed above by using the appropriate subscripts. For example, to compute $M_{\nu_e\bar\nu_\mu\rightarrow\nu_e\bar\nu_\mu}$  we set $G_{1,2}=\hat\psi_jf^1f^2$, $G_{3,4}=f_3f_4$, $f_1= f_{\nu_e}$, $f_3=f_{\nu_e}$, and $f_2=f_4=f_{\bar\nu_\mu}$ in the expression \req{eq:M:nu:nubar} for $M_{\nu\bar\nu\rightarrow\nu\bar\nu}$  and then, to include the reverse direction of the process, we must {\emph subtract}  the analogous expression whose only difference is $G_{1,2}=\hat\psi_jf_1f_2$, $G_{3,4}=f^3f^4$.
 With this notation the collision integral for $\nu_e$ is
-\begin{align}\label{M_tot}
+\begin{align}\label{Mtot}
 M_{\nu_e}=&[M_{\nu_e\nu_e\rightarrow\nu_e\nu_e}+M_{\nu_e\nu_\mu\rightarrow\nu_e\nu_\mu}+M_{\nu_e\nu_\tau\rightarrow\nu_e\nu_\tau}]\\
 &+[M_{\nu_e\bar\nu_e\rightarrow\nu_e\bar\nu_e}+M_{\nu_e\bar\nu_e\rightarrow\nu_\mu\bar\nu_\mu}+M_{\nu_e\bar\nu_e\rightarrow\nu_\tau\bar\nu_\tau}+M_{\nu_e\bar\nu_\mu\rightarrow\nu_e\bar\nu_\mu}+M_{\nu_e\bar\nu_\tau\rightarrow\nu_e\bar\nu_\tau}]\notag\\
 &+M_{\nu_e\bar\nu_e\rightarrow e^+e^-}+[M_{\nu_e e^-\rightarrow\nu_e e^-}+M_{\nu_e e^+\rightarrow\nu_e e^+}]\,.\notag
 \end{align}
 
 
-Symmetry among the interactions implies that the distributions of $\nu_\mu$ and $\nu_\tau$ are equal.  We also neglect the small matter anti-matter asymmetry and so we take the distribution of each particle to be equal to that of the corresponding antiparticle.  Therefore there are only three independent distributions, $f_{\nu_e}$, $f_{\nu_\mu}$, and $f_e$. This allows us to combine several of the terms in \req{M_tot} to obtain
+Symmetry among the interactions implies that the distributions of $\nu_\mu$ and $\nu_\tau$ are equal.  We also neglect the small matter anti-matter asymmetry and so we take the distribution of each particle to be equal to that of the corresponding antiparticle.  Therefore there are only three independent distributions, $f_{\nu_e}$, $f_{\nu_\mu}$, and $f_e$. This allows us to combine several of the terms in \req{Mtot} to obtain
 \begin{align}
 M_{\nu_e}=&M_{\nu_e\nu_e\rightarrow\nu_e\nu_e}(64G_F^2)+M_{\nu_e\nu_\mu\rightarrow\nu_e\nu_\mu}(2\times 32 G_F^2)+M_{\nu_e\bar\nu_e\rightarrow\nu_e\bar\nu_e}(128G_F^2)  \\
 &+M_{\nu_e\bar\nu_e\rightarrow\nu_\mu\bar\nu_\mu}(2\times 32G_F^2)+M_{\nu_e\bar\nu_\mu\rightarrow\nu_e\bar\nu_\mu}(2\times 32 G_F^2)\notag\\
@@ -554,7 +554,7 @@ for some $c_0,d_0,d_1$. Therefore, the vanishing of $R_0$ is equivalent to conse
 
 
 
-\subsection{Comparison with an alternative Method for Computing Scattering Integrals}\label{app:dogov_method}
+\subsection{Comparison with an alternative Method for Computing Scattering Integrals}\label{app:dogovMethod}
 As a comparison and consistency check for our method of computing the scattering integrals, in this appendix we analytically reduce the collision integral down to $3$ dimensions by a method adapted from \cite{Dolgov:1997mb,Dolgov:1998sf}.  The only difference between our treatment in this section and theirs being that they solved the Boltzmann equation numerically on a grid in momentum space and not via a spectral method.  Therefore we must take an inner product of the collision operator with a basis function and hence we are integrating over all particle momenta, whereas they integrate over all momenta except that of particle one.  For completeness we give a detailed discussion of their method.
 
  Writing the conservation of four-momentum enforcing delta function
@@ -578,7 +578,7 @@ From Tables \ref{table:nu:e:reac} and \ref{table:nu:mu:reac} we see that the mat
 p_1\cdot p_2,\hspace{2mm} p_1\cdot p_3,\hspace{2mm}(p_1\cdot p_4)(p_2\cdot p_3), \hspace{2mm} (p_1\cdot p_2)(p_3\cdot p_4),\hspace{2mm} (p_1\cdot p_3)(p_2\cdot p_4).
 \end{equation}
 Therefore we must compute the angular integral term $K$ with $S|\mathcal{M}|^2$ replaced by elements from the following list
-\begin{align}\label{matrix_element_pieces}
+\begin{align}\label{matrixElementPieces}
 &1,\hspace{2mm}\vec p_1 \cdot\vec p_2,\hspace{2mm}\vec p_1 \cdot\vec p_3,\hspace{2mm}\vec p_1 \cdot\vec p_4 \,,\hspace{2mm}\vec p_2\cdot\vec p_3,\hspace{2mm}\vec p_2\cdot\vec p_4 \,,\hspace{2mm}\vec p_3\cdot\vec p_4 \,,\\
 & (\vec p_1 \cdot\vec p_2)(\vec p_3\cdot\vec p_4 ),\hspace{2mm}(\vec p_1 \cdot\vec p_4 )(\vec p_2\cdot\vec p_3),\hspace{2mm} (\vec p_1 \cdot\vec p_3)(\vec p_2\cdot\vec p_4 )\,,\notag
 \end{align}
@@ -587,7 +587,7 @@ producing $K_0$, $K_{12}$, $K_{13}$,...,$K_{1324}$.  All of these are rotational
 K=\frac{p_1p_2p_3p_4}{(4\pi)^4}\int S|\mathcal{M}|^2(s,t)e^{iz \hat z\cdot\Delta\vec p}\prod_{i=1}^4d\Omega_i\,.
 \end{equation}
 
-The remaining angular integrals are straightforward to evaluate analytically for each expression in \req{matrix_element_pieces}
+The remaining angular integrals are straightforward to evaluate analytically for each expression in \req{matrixElementPieces}
 \begin{align}
 &K_0=\prod_{i=1}^4\frac{\sin(p_iz)}{z}\,,\\
 &K_{12}=-\frac{(\sin(p_1z)-p_1z\cos(p_1z))(\sin(p_2z)-p_2z\cos(p_2z))\sin(p_3z)\sin(p_4z)}{z^6}\,,\notag\\
