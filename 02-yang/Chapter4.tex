@@ -113,9 +113,10 @@ The coupling coefficients $C_L$ and $C_V$ are defined as
 \begin{align}
 &C_L=c_V+c_A,\,\,\,\,\,C_R=c_V-c_A,
 \end{align}
-where the coupling constants for neutrino scattering with proton, neutron, and electron are given by Table.~\ref{Table_coupling}. The coupling constants for  $\nu_{\mu,\tau}$ are the same as for the $\nu_e$, excepting  the absence  of a charged current in neutrino-electron scattering.
+where the coupling constants for neutrino scattering with proton, neutron, and electron are given by \rt{Table_coupling}. The coupling constants for  $\nu_{\mu,\tau}$ are the same as for the $\nu_e$, excepting  the absence  of a charged current in neutrino-electron scattering.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[ht]
+\begin{table}
 \begin{tabular}[c]{c|c|c|c|c}
 \hline\hline
 & Electron ($Z^0$ boson) & Electron ($W^\pm$ boson) & Proton (uud) & Neutron (udd)\\
@@ -180,14 +181,8 @@ Next, we consider the nonrelativistic electron neutrino $\nu_e$ scattering off a
 |\mathcal{M}_{\mathrm{atom}}|^2&=8\,G^2_F\,M_a\,E_\nu^2\left[\left(3Z-A\right)^2\left(1+\frac{|p_\nu|^2}{E^2_\nu}\cos\theta\right)+3\left(3Z-A\right)^2\left(1-\frac{|p_\nu|^2}{3E_\nu^2}\cos\theta\right)\right]\notag\\
 &\approx32\,G^2_F\,M_a\,E_\nu^2\left(3Z-A\right)^2,
 \end{align}
-where we neglect the angular dependence because of the nonrelativistic limit, and the coefficient $\left(3Z-A\right)^2$ for different target atoms are given in Table.(\ref{Table001}). On the other hand, for nonrelativistic $\nu_{\mu,\tau}$, the scattering matrix is given by
-\begin{align}
-\label{Probability_mt}
-|\mathcal{M}_{\mathrm{atom}}|^2&=8\,G^2_F\,M_a\,E_\nu^2\left[\left(A-Z\right)^2\left(1+\frac{|p_\nu|^2}{E^2_\nu}\cos\theta\right)+3\left(A-Z\right)^2\left(1-\frac{|p_\nu|^2}{3E_\nu^2}\cos\theta\right)\right]\notag\\
-&\approx32\,G^2_F\,M_a\,E_\nu^2\left(Z-A\right)^2,
-\end{align}
-where the coefficient $\left(Z-A\right)^2$ different target atoms are given in Table.(\ref{Table001}). The transition matrix for $\nu_e$ differs from that of $\nu_{\mu,\tau}$; this is due to the charged current reaction with the atomic electrons. Furthermore, the neutral current interaction for the electron and proton will cancel each other because of the opposite weak isospin $I_3$ and charge $\mathcal{Q}$. As a result, the coherent neutrino scattering from an atom is sensitive to the method of the neutrino-electron coupling.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where we neglect the angular dependence because of the nonrelativistic limit, and the coefficient $\left(3Z-A\right)^2$ for different target atoms are given in \rt{Table001}. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[ht]
 \centering
@@ -214,6 +209,15 @@ ${}^{12}_{{}6}C(A=12, Z=6)$  & $36$& $36$\\
 \label{Table001}  
 \end{table}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For nonrelativistic $\nu_{\mu,\tau}$, the scattering matrix is given by
+\begin{align}
+\label{Probability_mt}
+|\mathcal{M}_{\mathrm{atom}}|^2&=8\,G^2_F\,M_a\,E_\nu^2\left[\left(A-Z\right)^2\left(1+\frac{|p_\nu|^2}{E^2_\nu}\cos\theta\right)+3\left(A-Z\right)^2\left(1-\frac{|p_\nu|^2}{3E_\nu^2}\cos\theta\right)\right]\notag\\
+&\approx32\,G^2_F\,M_a\,E_\nu^2\left(Z-A\right)^2,
+\end{align}
+where the coefficient $\left(Z-A\right)^2$ different target atoms are given in \rt{Table001}. The transition matrix for $\nu_e$ differs from that of $\nu_{\mu,\tau}$; this is due to the charged current reaction with the atomic electrons. Furthermore, the neutral current interaction for the electron and proton will cancel each other because of the opposite weak isospin $I_3$ and charge $\mathcal{Q}$. As a result, the coherent neutrino scattering from an atom is sensitive to the method of the neutrino-electron coupling.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Mean field potential for neutrino coherent scattering}
@@ -297,33 +301,24 @@ Considering the Universe with temperature $T\approx\mathcal{O}$(MeV), the   part
 \mathrm{Particle\,\,species\,\, in \,\,plasma:}
 \left\{\gamma,\, l^-,\,l^+,\, \nu_e,\, \nu_\mu,\, \nu_\tau,\, \bar{\nu}_e,\, \bar{\nu}_\mu,\, \bar{\nu}_\tau\right\},
 \end{align}
- where $l^\pm$ represents the charged leptons. In this case, neutrinos can interact with all these particles via weak interactions and remain in equilibrium. In Table.~\ref{T005} and Table.~\ref{T006} we present the matrix elements $|M|^2$ for different weak interaction processes in the early Universe.
+where $l^\pm$ represents the charged leptons. In this case, neutrinos can interact with all these particles via weak interactions and remain in equilibrium. In~\rt{T005} and \rt{T006} we present the matrix elements $|M|^2$ for different weak interaction processes in the early Universe.
 
-In the calculation of transition amplitude, we use the low energy approximation for $W^\pm$ and $Z^0$ massive propagators, i.e.
-\begin{align}
-&\mbox{$Z^0$ boson}:\frac{-i\left[g_{\mu\nu}-\frac{q_\mu q_\nu}{M^2_z}\right]}{q^2-M^2_z}\approx\frac{ig_{\mu\nu}}{M^2_z},\quad
-&\mbox{$W^\pm$ boson}:\frac{-i\left[g_{\mu\nu}-\frac{q_\mu q_\nu}{M^2_w}\right]}{q^2-M^2_w}\approx\frac{ig_{\mu\nu}}{M^2_w},
-\end{align}
-and consider the tree-level Feynman diagram contributions only. Then, following the Feynman rules of weak interaction~\cite{Griffiths:2008zz}, we obtain the matrix elements $|M|^2$ for different interaction processes.\index{neutrino!incoherent scattering}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[ht]
+\begin{table} 
 \centering
-\begin{tabular}{lp{8cm}lp{8cm}l}
+\begin{tabular}{p{0.21\textwidth}p{0.79\textwidth}}
 \hline\hline
-Annihilation/Production \\
-\hline\hline
-Scattering Process & Transition Amplitude $|M|^2$ \\
+Annihilation   \\
+\& Production  & Transition Amplitude $|M|^2$ \\
 \hline
-$l^-+l^+\longrightarrow\nu_l+\bar{\nu}_l$ &$ 32G^2_F\bigg[\left(1+2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$
-
-$+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_3\right)\left(p_2\cdot p_4\right)$
-
+$l^-+l^+\longrightarrow\nu_l+\bar{\nu}_l$&$ 32G^2_F\bigg[\left(1+2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_3\right)\left(p_2\cdot p_4\right)$
+%
 $+2\sin^2\theta_w\left(1+2\sin^2\theta_w\right)m^2_l\left(p_3\cdot p_4\right)\bigg]$ \\
 \hline
 $l^{\prime-}+l^{\prime+}\longrightarrow\nu_l+\bar{\nu}_l$ & $32G^2_F\bigg[\left(1-2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$
-
+%
 $+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_3\right)\left(p_2\cdot p_4\right)$
-
+%
 $-2\sin^2\theta_w\left(1-2\sin^2\theta_w\right)m^2_{l^\prime}\left(p_3\cdot p_4\right)\bigg]$ \\
 \hline
 $\nu_l+\bar{\nu}_l\longrightarrow\nu_l+\bar{\nu}_l$ &
@@ -337,46 +332,45 @@ $32G^2_F\bigg[\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)\bigg]$ \\
 \label{T005}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the calculation of transition amplitude, we use the low energy approximation for $W^\pm$ and $Z^0$ massive propagators, i.e.
+\begin{align}
+&\mbox{$Z^0$ boson}:\frac{-i\left[g_{\mu\nu}-\frac{q_\mu q_\nu}{M^2_z}\right]}{q^2-M^2_z}\approx\frac{ig_{\mu\nu}}{M^2_z},\quad
+&\mbox{$W^\pm$ boson}:\frac{-i\left[g_{\mu\nu}-\frac{q_\mu q_\nu}{M^2_w}\right]}{q^2-M^2_w}\approx\frac{ig_{\mu\nu}}{M^2_w},
+\end{align}
+and consider the tree-level Feynman diagram contributions only. Then, following the Feynman rules of weak interaction~\cite{Griffiths:2008zz}, we obtain the matrix elements $|M|^2$ for different interaction processes.\index{neutrino!incoherent scattering}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[ht]
+\begin{table} 
 \centering
-\begin{tabular}{lp{8cm}lp{8cm}l}
+\begin{tabular}{p{0.21\textwidth}p{0.79\textwidth}}
 \hline\hline
-Elastic Scattering Process ($\nu_e$) \\
-\hline\hline
+Elastic ($\nu_e$) \\
 Scattering Process & Transition Amplitude $|M|^2$\\
 \hline
 $\nu_l+l^-\longrightarrow\nu_l+l^-$ & 
 $ 32G^2_F\bigg[
-   \left(1+2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)$
-   
-   $+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$
-   
-   $-2\sin^2\theta_w\left(1+2\sin^2\theta_w\right)m^2_l\left(p_1\cdot p_3\right)\bigg]$ \\
+   \left(1+2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$ 
+%
+ $-2\sin^2\theta_w\left(1+2\sin^2\theta_w\right)m^2_l\left(p_1\cdot p_3\right)\bigg]$ \\
 \hline
 $\nu_l+l^+\longrightarrow\nu_l+l^+$ &
 $ 32G^2_F\bigg[
-   \left(1+2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$
-   
-   $+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)$
-   
-   $-2\sin^2\theta_w\left(1+2\sin^2\theta_w\right)m^2_l\left(p_1\cdot p_3\right)\bigg]$ \\
+   \left(1+2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)$ 
+%   
+ $-2\sin^2\theta_w\left(1+2\sin^2\theta_w\right)m^2_l\left(p_1\cdot p_3\right)\bigg]$ \\
 \hline
 $\nu_l+l^{\prime-}\longrightarrow\nu_l+l^{\prime-}$ &
 $ 32G^2_F\bigg[
-   \left(1-2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)$
-   
-  $+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$
-  
-  $+2\sin^2\theta_w\left(1-2\sin^2\theta_w\right)m^2_{l^\prime}\left(p_1\cdot p_3\right)\bigg]$ \\
+   \left(1-2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$\hfill
+%  
+  \hspace{1cm}$+2\sin^2\theta_w\left(1-2\sin^2\theta_w\right)m^2_{l^\prime}\left(p_1\cdot p_3\right)\bigg]$ \\
 \hline
 $\nu_l+l^{\prime+}\longrightarrow\nu_l+l^{\prime+}$ &
 $ 32G^2_F\bigg[
-   \left(1-2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)$
-   
-   $+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)$
-   
-   $+2\sin^2\theta_w\left(1-2\sin^2\theta_w\right)m^2_{l^\prime}\left(p_1\cdot p_3\right)\bigg]$ \\
+   \left(1-2\sin^2\theta_w\right)^2\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)+\left(2\sin^2\theta_w\right)^2\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)$ 
+%   
+    $+2\sin^2\theta_w\left(1-2\sin^2\theta_w\right)m^2_{l^\prime}\left(p_1\cdot p_3\right)\bigg]$ \\
 \hline
 $\nu_l+\nu_l\longrightarrow\nu_l+\nu_l$ &
 $\frac{1}{2!}\frac{1}{2!}\times32G^2_F\bigg[4\left(p_1\cdot p_2\right)\left(p_3\cdot p_4\right)\bigg]$ \\
