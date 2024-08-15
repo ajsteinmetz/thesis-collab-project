@@ -4,7 +4,7 @@
 \label{chap:PlasmaSF}
 
 The interaction of electromagnetic fields within relativistic plasmas is of interest in astrophysics, intense laser interactions with matter, and quark-gluon plasma in relativistic heavy ion collisions. Quark-gluon plasma (QGP), a state of matter of deconfined quarks and gluons at extremely high temperatures $T>150$ MeV, is formed in the violent collision of heavy ions at relativistic speeds. This deconfined state is also of astrophysical interest since it filled the early universe for the first few microseconds after the Big-Bang\index{Big-Bang}. Several methods have been introduced to study the linear response of a collisionless ultrarelativistic QGP following the seminal work by~\cite{Weldon:1982aq} by using semiclassical transport theory based on the Boltzmann equation~\cite{Mrowczynski:1987jr,Mrowczynski:1989np,Blaizot:1993zk,Kelly:1994ig,Kelly:1994dh}. However, applications of this formalism are restricted to dilute plasmas where collisions can be neglected~\cite{Blaizot:2001nr}. 
-Previously, the effects of collisions within the plasma were mainly studied to derive transport coefficients, such as the electrical conductivity, of interest to the study of plasma response to long-wavelength perturbations~\cite{Mrowczynski:1988xu,Heiselberg:1993cr,Ahonen:1996nq,Baym:1997gq,Ahonen:1998iz}. In quantum field theory, transport coefficients have also been calculated using effective propagators that re-sum thermal modifications to avoid infrared divergences~\cite{Heiselberg:1994ms,Arnold:2002zm,Arnold:2003zc}. Here, we will study semi-classical transport using the Vlasov-Boltzmann equation with momentum-averaged quantum collisions between particles, a topic discussed in numerous other works, such as \cite{DeGroot:1980dk,Cercignani:2002bk,Hakim:2011bk,Carrington:2003je,Schenke:2006xu}.
+Previously, the effects of collisions within the plasma were mainly studied to derive transport coefficients, such as the electrical conductivity, of interest to the study of plasma response to long-wavelength perturbations~\cite{Mrowczynski:1988xu,Heiselberg:1993cr,Ahonen:1996nq,Baym:1997gq,Ahonen:1998iz}. In quantum field theory, transport coefficients have also been calculated using effective propagators that re-sum thermal modifications to avoid infrared divergences~\cite{Heiselberg:1994ms,Arnold:2002zm,Arnold:2003zc}. Here, we will study semi-classical transport using the Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation} with momentum-averaged quantum collisions between particles, a topic discussed in numerous other works, such as \cite{DeGroot:1980dk,Cercignani:2002bk,Hakim:2011bk,Carrington:2003je,Schenke:2006xu}.
 
 
 The theoretical description of relativistic plasma is based on transport theory, i.e., the relativistic form of Liouville's equation. The one-particle phases space distribution function $f(x,p)$ undergoes Liouville flow,
@@ -56,7 +56,7 @@ with the covariant integration, measure can be written as
 \end{equation}
 where $p^0 = p \cdot u$ in the rest frame of the plasma; see Appendix \ref{ch:vol:forms} for a detailed discussion of the relativistic volume element. The one particle distribution function is effectively the phase space density of the system. We will always refer to the 4-momentum as $p = (p_0, \, \boldsymbol{p})$ and the 3-momentum as $\boldsymbol{p}$.
 
-The kinetic equation describing the evolution of this distribution is the Vlasov-Boltzmann equation (VBE). The VBE is often derived in detail from heuristic arguments see \cite{DeGroot:1980dk,Cercignani:2002bk}. Here, we will outline how it relates to Liouville's theorem. A similar derivation of the equilibrium distribution in the presence of electromagnetic fields is found in \cite{Hakim:2011bk}.
+The kinetic equation describing the evolution of this distribution is the Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation} (VBE). The VBE is often derived in detail from heuristic arguments see \cite{DeGroot:1980dk,Cercignani:2002bk}. Here, we will outline how it relates to Liouville's theorem. A similar derivation of the equilibrium distribution in the presence of electromagnetic fields is found in \cite{Hakim:2011bk}.
 We derive the classical one-species Vlasov-Boltzmann equation from the Liouville theorem
 \begin{equation}
     \frac{d f(Q,P)}{d\tau} = \{H(Q,P), f(Q,P)\} = 0\,,
@@ -103,7 +103,7 @@ $k,l = 1,2,...,N$ and $W_{ij|kl}$ is the transition rate for the respective coll
 It is important to note that in this framework for a plasma forced by external fields, the collision term is the only way a particle species can impact the dynamics of the phase space distribution of another species.
 
 \para{The BGK collision term}
-As discussed previously the integral in \req{eq:collisionMicro} vastly complicates solving the Vlasov-Boltzmann equation. Instead, we will use a simplified collision term that returns the distribution $f(x,p)$ to equilibrium at some characteristic rate $\kappa = 1/\tau$, reducing \req{eq:VBE} from an integro-differential equation to a differential equation. The relaxation rate or damping rate $\kappa$ is the sum of all possible collisions~\cite{Das:2021bkz}
+As discussed previously the integral in \req{eq:collisionMicro} vastly complicates solving the Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation} . Instead, we will use a simplified collision term that returns the distribution $f(x,p)$ to equilibrium at some characteristic rate $\kappa = 1/\tau$, reducing \req{eq:VBE} from an integro-differential equation to a differential equation. The relaxation rate or damping rate $\kappa$ is the sum of all possible collisions~\cite{Das:2021bkz}
 \begin{equation}
     \kappa_k(p) = \sum^N_{i=1}\sum^N_{j=1}\sum^N_{l=1} \frac{1}{2}\int\frac{d^3p_l}{(2 \pi)^3p_l^0}\frac{d^3p_i}{(2 \pi)^3p_i^0}\frac{d^3p_j}{(2 \pi)^3p_j^0}f_l^{\text{eq}}W_{kl|ij}\,
 \end{equation}
@@ -181,7 +181,7 @@ In this case, the equilibrium distribution becomes the usual
 \begin{equation}\label{eq:equilibriumFD}
 f^\mathrm{eq}_\pm(x,p) \equiv \frac{1}{e^{(p^{\mu}  u_\mu\pm \mu_q)/T} + 1}\,.
 \end{equation}
-An explicit solution of the Vlasov-Boltzmann equation can be obtained more easily in momentum space after a Fourier transformation.  We define the Fourier transform $\widetilde{g}(k^\mu)$ of a general function $g(x^\mu)$ of space-time coordinates as 
+An explicit solution of the Vlasov-Boltzmann\index{Vlasov-Boltzmann equation}  equation can be obtained more easily in momentum space after a Fourier transformation.  We define the Fourier transform $\widetilde{g}(k^\mu)$ of a general function $g(x^\mu)$ of space-time coordinates as 
 
 \begin{equation}\label{eq:ftdef}
 g(x) = \int \frac{d^4k}{(2\pi)^4} \, e^{-i k \cdot x} \, \widetilde{g}(k)\,.
@@ -243,7 +243,7 @@ After expanding in linear response \req{eq:perturbation}, and specifying $q_\pm 
 =4 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \delta\tilde{f}(k,p)
 \,.
 \end{align}
-The equilibrium currents cancel in the weak field limit for zero chemical potential, and the perturbations add since they differ by the charge $\delta f_\pm=\pm e \delta f' $. For finite chemical potential $\mu_q$, the equilibrium terms can be combined with hyperbolic trig-identities
+The equilibrium currents cancel in the weak field limit for zero chemical potential\index{chemical potential}, and the perturbations add since they differ by the charge $\delta f_\pm=\pm e \delta f' $. For finite chemical potential $\mu_q$, the equilibrium terms can be combined with hyperbolic trig-identities
 \begin{equation}
 \begin{split}
 \tilde{j}_{\mathrm{ind}}^\mu(k) 
@@ -500,7 +500,7 @@ with the static conductivity given by
 \begin{equation}\label{eq:condstat}
    \sigma_0 = \frac{m_D^2}{3\kappa}\,.
 \end{equation} 
-The Drude model is equivalent to solving the Vlasov-Boltzmann equation using the Anderson-Witting collision term \req{eq:lincoll} and neglecting spatial dispersion.
+The Drude model is equivalent to solving the Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation}  using the Anderson-Witting collision term \req{eq:lincoll} and neglecting spatial dispersion.
 
 These quantities are discussed in detail and plotted in \cite{Formanek:2021blc}. While these quantities are useful for communicating the physics of plasma response, the limits of these quantities must be taken carefully to retain the causal properties of the field. Specifically, tacitly expanding these quantities in either $\omega$ and $\mathbf{k}$ and then inserting them into the self-consistent potentials \reqs{eq:phi}{eq:aperp} will not necessarily generate causal solutions. Instead of carefully expanding and taking limits of these quantities to ensure analyticity, it's often easier to expand the electromagnetic fields within their Fourier transforms as is done in Appendix B of \cite{Grayson:2022asf}.
 
@@ -573,7 +573,7 @@ Of course, this assumes the strong field equilibrium solution is stable under el
 
 
 \para{Mixed-species collision term}
-We also hope to generalize this framework to involve a Vlasov-Boltzmann equation system that represents each plasma species with a different collision term. In matrix form, this system of Boltzmann equations for an electron-positron plasma would look like
+We also hope to generalize this framework to involve a Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation}  system that represents each plasma species with a different collision term. In matrix form, this system of Boltzmann equations for an electron-positron plasma would look like
 \begin{equation}\label{eq:vectoreq}
 -i (p \cdot k) \left[\begin{matrix}
 \wt{\delta f}_- \\ \wt{\delta f}_+ 

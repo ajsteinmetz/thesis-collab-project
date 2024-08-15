@@ -3,7 +3,7 @@
 
 
 \subsection{Collision Integral Inner Products}
-Having detailed our method for solving the Boltzmann-Einstein equation in Appendix \ref{ch:boltz:orthopoly}, in this appendix we address the computation of  collision integrals for neutrino processes; see also \cite{Birrell:2014uka}. To solve for the mode coefficients using \req{bEq}, we must evaluate the collision operator inner products
+Having detailed our method for solving the Boltzmann-Einstein equation in Appendix \ref{ch:boltz:orthopoly}, in this appendix we address the computation of collision integrals\index{collision operator} for neutrino processes; see also \cite{Birrell:2014uka}. To solve for the mode coefficients using \req{bEq}, we must evaluate the collision operator inner products
 \begin{align}\label{collision:integrals}
 R_k\equiv&\langle\frac{1}{f_\Upsilon E_1}C[f_1],\hat\psi_k\rangle=\int_0^\infty \hat\psi_k(z_1)C[f_1](z_1) \frac{z_1^2}{E_1}dz_1\\
 =&\frac{1}{2}\int \hat\psi_k(z_1)\int\left[f_3(p_3)f_4(p^4)f^1(p_1)f^2(p_2)-f_1(p_1)f_2(p_2)f^3(p_3)f^4(p^4)\right]\notag\\
@@ -52,7 +52,7 @@ M=\frac{1}{256(2\pi)^8 }\int &\bigg[ \int G((p+q)\cdot U/2,(p-q)\cdot  U/2,(p^{\
 Subsequent computations will justify this use of Fubini's theorem.
 
 
-Since $p^0>0$ we have $dp\neq 0$ and so we can use Corollary \ref{dummyInt} of the coarea formula to decompose this into an integral over the center of mass energy $s=p^2$,
+Since $p^0>0$ we have $dp\neq 0$ and so we can use Corollary \ref{dummyInt} of the coarea formula\index{coarea formula} to decompose this into an integral over the center of mass energy $s=p^2$,
 \begin{align}\label{Meq2}
 &M=\frac{1}{256(2\pi)^8 }\!\int_{s_0}^\infty\!\!\int \!\bigg[\int 1_{p^0>|q^0|} 1_{p^0>|(q^{\prime})^0|}  S |\mathcal{M}|^2  F(p,q,q^{\prime}) \delta((p+q)^2/4-m_1^2)\\
 &\!\times\delta((p-q)^2/4-m_2^2)\delta((p+q^{\prime})^2/4-m_3^2)\delta((p-q^{\prime})^2/4-m_4^2)d^4qd^4q^{\prime}\bigg]\delta(p^2-s) d^4pds\,,\notag\\
@@ -488,7 +488,7 @@ R_k=&2\pi^2T^{-3} M_{k,\nu_\mu}\,.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \para{Neutrino Freeze-out Test}
-Now that we have the above expressions for the neutrino scattering integrals, we can compare the chemical equilibrium and nonequilibrium methods on the problem of neutrino freeze-out using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann-Einstein equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from  \rsec{ch:param:studies}\index{QED!Corrections EOS}.%{app:QED_corr}.
+Now that we have the above expressions for the neutrino scattering integrals, we can compare the chemical equilibrium\index{chemical equilibrium} and nonequilibrium methods on the problem of neutrino freeze-out using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann-Einstein equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor\index{stress-energy tensor} implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from  \rsec{ch:param:studies}\index{QED!Corrections EOS}.%{app:QED_corr}.
 
 To compare our results with Ref.~\cite{Mangano:2005cc}, where neutrino freeze-out was simulated using $\sin^2(\theta_W)=0.23$ and $\eta=\eta_0$, in table \ref{table:method:comp} we present $N_\nu$ together with the following quantities
 \begin{align}

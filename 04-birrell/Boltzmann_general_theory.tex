@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Boltzmann-Einstein Equation}\label{sec:BoltzmannEinstein}
-We now begin a detailed study of the nonequilibrium properties of the neutrino freeze-out and it's impact on the effective number of neutrinos, an important cosmological observable. We model the dynamics of the neutrino freeze-out using the Boltzmann-Einstein equation\index{Boltzmann-Einstein equation}, also called the general relativistic Boltzmann equation, which describes the dynamics of a gas of particles that travel on geodesics in an general spacetime, with the only interactions being point collisions~\cite{Andreasson:2011ng,cercignani,Choquet-Bruhat:2009xil,ehlers},
+We now begin a detailed study of the nonequilibrium properties of the neutrino freeze-out and it's impact on the effective number of neutrinos\index{neutrino!effective number}, an important cosmological observable. We model the dynamics of the neutrino freeze-out using the Boltzmann-Einstein equation\index{Boltzmann-Einstein equation}, also called the general relativistic Boltzmann equation, which describes the dynamics of a gas of particles that travel on geodesics in an general spacetime, with the only interactions being point collisions~\cite{Andreasson:2011ng,cercignani,Choquet-Bruhat:2009xil,ehlers},
 \begin{equation}\label{eq:BoltzmannEinstein}
 p^\alpha\partial_{x^\alpha}f-\sum_{j=1}^3\Gamma^j_{\mu\nu}p^\mu p^\nu\partial_{p^j}f=C[f]\,.
 \end{equation}
@@ -8,7 +8,7 @@ Here $ \Gamma^\alpha_{\mu\nu}$ is the affine connection (Christoffel symbols) co
  \begin{equation}
 g_{\alpha\beta}p^\alpha p^\beta=m^2\,.
 \end{equation}
-Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  $C[f]$ is the collision operator and encodes all information about point interactions between particles.  If $C[f]$ vanishes then the equation is called the Vlasov equation and describes particles that move on geodesics (or free stream).  At this point, we are  not invoking the assumption that the distribution function has a kinetic equilibrium form, nor are we assuming a FRW universe; in this section we will discuss  general properties of \req{eq:BoltzmannEinstein} before turning to the study of neutrino freeze-out in subsequent sections.   We will need the following definitions of entropy current $s^\mu$, stress-energy tensor ${T}^{\mu\nu}$, and number current $n^\mu$,\index{entropy!current}\index{stress-energy tensor}\index{number current}
+Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  $C[f]$ is the collision operator\index{collision operator} and encodes all information about point interactions between particles.  If $C[f]$ vanishes then the equation is called the Vlasov equation and describes particles that move on geodesics (or free stream).  At this point, we are  not invoking the assumption that the distribution function has a kinetic equilibrium form, nor are we assuming a FLRW\index{cosmology!FLRW} universe; in this section we will discuss  general properties of \req{eq:BoltzmannEinstein} before turning to the study of neutrino freeze-out in subsequent sections.   We will need the following definitions of entropy current $s^\mu$, stress-energy tensor ${T}^{\mu\nu}$, and number current $n^\mu$,\index{entropy!current}\index{stress-energy tensor}\index{number current}
 \begin{align}
 \label{smdef} s^\mu&=-\int \left(f\ln(f)\pm(1\mp f)\ln(1\mp f)\right)p^\mu d\pi\,,\\
 \label{Tmndef}{T}^{\mu\nu}&=\int p^\mu p^\nu f d\pi\,,\\
@@ -106,7 +106,7 @@ Therefore  $B^\mu$ is a conserved current, as claimed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Divergence Freedom of Stress Energy Tensor}
-The Einstein equation implies that the total stress energy tensor of all matter coupled to gravity is divergence free.  Here we show that the relativistic Boltzmann stress energy tensor \req{Tmndef} has this property, and is therefore a natural candidate matter model for  coupling to gravity.  
+The Einstein equation implies that the total stress energy tensor\index{stress-energy tensor} of all matter coupled to gravity is divergence free.  Here we show that the relativistic Boltzmann stress energy tensor \req{Tmndef} has this property, and is therefore a natural candidate matter model for  coupling to gravity.  
 
 First use Riemannian normal coordinates to compute
 \begin{align}
