@@ -22,8 +22,8 @@
 \makeindex
 
 % Draft number lines on pages
-\usepackage{lineno}
-\linenumbers
+%\usepackage{lineno}
+%\linenumbers
 
 \makesavenoteenv{tabular}
 \makesavenoteenv{table}
@@ -134,15 +134,19 @@
 \input{06-appendix/NeutrinoScatteringIntegrals.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{List of Figures}
 \listoffigures
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{References}
 %\bibliographystyle{spphysJR}
 \bibliographystyle{sn-aps}
 %\bibliographystyle{unsrtnat}
 \bibliography{bibs/birrell-refs,bibs/steinmetz-refs,bibs/yang-refs,bibs/grayson-refs}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{Index}
 \printindex
 %%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
