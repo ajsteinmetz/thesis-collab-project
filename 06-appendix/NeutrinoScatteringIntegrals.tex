@@ -43,7 +43,7 @@ Next eliminate the integration over $p^{\prime}$ using $\delta(p-p^{\prime})$
  \begin{comment} 
 using associative property
 \end{comment}
- and then use Fubini's theorem to write
+ and then use Fubini's theorem\index{Dirac delta!Fubini's theorem} to write
 \begin{align}\label{useFubini}
 M=\frac{1}{256(2\pi)^8 }\int &\bigg[ \int G((p+q)\cdot U/2,(p-q)\cdot  U/2,(p^{\prime}+q^{\prime})\cdot U/2, (p^{\prime}-q^{\prime})\cdot U/2)\notag\\ 
 &\times  1_{p^0>|q^0|} 1_{p^0>|(q^{\prime})^0|}S |\mathcal{M}|^2 \delta((p+q)^2/4-m_1^2)\delta((p-q)^2/4-m_2^2)\notag\\
@@ -141,7 +141,7 @@ Similar results hold for $q^{\prime}$.  Therefore we have the determinant
 \det\left( \begin{array}{cccc}
 D\Phi(\partial_{q^0}) & D\Phi(\partial_{r}) & D\Phi(\partial_{(q^{\prime})^0}) & D\Phi(\partial_{r^{\prime}}) \end{array} \right)=\frac{s}{4}rr^{\prime}.
 \end{equation}
-Note that this determinant being nonzero implies that our use of Fubini's theorem in \req{useFubini} was justified.
+Note that this determinant being nonzero implies that our use of Fubini's theorem\index{Dirac delta!Fubini's theorem} in \req{useFubini} was justified.
 
 By \req{volFormCoords} and \req{deltaDef}, the above computations imply that the induced volume measure is
 \begin{align}
@@ -488,13 +488,13 @@ R_k=&2\pi^2T^{-3} M_{k,\nu_\mu}\,.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \para{Neutrino Freeze-out Test}
-Now that we have the above expressions for the neutrino scattering integrals, we can compare the chemical equilibrium\index{chemical equilibrium} and nonequilibrium methods on the problem of neutrino freeze-out using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann-Einstein equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor\index{stress-energy tensor} implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from  \rsec{ch:param:studies}\index{QED!Corrections EOS}.%{app:QED_corr}.
+Now that we have the above expressions for the neutrino scattering integrals, we can compare the chemical equilibrium\index{chemical equilibrium} and nonequilibrium methods on the problem of neutrino freeze-out\index{neutrino!freeze-out} using the full $2$-$2$ scattering kernels for neutrino processes.  We solve the Boltzmann-Einstein equation, \req{boltzmann}, for both the electron neutrino distribution and the combined $\mu$, $\tau$ neutrino distribution, including all of the  processes outlined above in the scattering operator, together with the Hubble equation for $a(t)$, \req{Hubble_eq}.  The total energy density  appearing in the Hubble equation consists of the contributions from both independent neutrino distributions as well as chemical equilibrium $e^\pm$ and photon distributions at some common temperature $T_\gamma$, all computed using \req{moments}.  The dynamics of $T_\gamma$ are fixed by the divergence freedom condition of the total stress energy tensor\index{stress-energy tensor} implied by Einstein's equations.  In addition, we include the QED corrections to the $e^\pm$ and photon equations of state from  \rsec{ch:param:studies}\index{QED!Corrections EOS}.%{app:QED_corr}.
 
 To compare our results with Ref.~\cite{Mangano:2005cc}, where neutrino freeze-out was simulated using $\sin^2(\theta_W)=0.23$ and $\eta=\eta_0$, in table \ref{table:method:comp} we present $N_\nu$ together with the following quantities
 \begin{align}
  z_{fin}=T_\gamma a,\hspace{2mm}  \rho_{\nu 0}=\frac{7}{120}\pi^2a^{-4}, \hspace{2mm}  \delta\bar\rho_{\nu}= \frac{\rho_\nu}{\rho_{\nu 0}}-1.
 \end{align}
-This quantities were introduced in Ref.~\cite{Mangano:2005cc}, but some additional discussion of their significance is in order.  The normalization of the scale factor $a$ is chosen so that at the start of the computation $T_\gamma=1/a$.  This means that $1/a$ is the temperature of a (hypothetical) particle species that is completely decoupled throughout the computation.  Here we will call it the free-streaming temperature.   $z_{fin}$ is the ratio of photon temperature to the free-streaming temperature.  It is a measure of the amount of reheating that photons underwent due to the annihilation of $e^\pm$.  For completely decoupled neutrinos, whose temperature is the free-streaming temperature, the well known value can be computed from conservation of entropy
+This quantities were introduced in Ref.~\cite{Mangano:2005cc}, but some additional discussion of their significance is in order.  The normalization of the scale factor $a$ is chosen so that at the start of the computation $T_\gamma=1/a$.  This means that $1/a$ is the temperature of a (hypothetical) particle species that is completely decoupled throughout the computation. Here we will call it the free-streaming\index{free-streaming} temperature. $z_{fin}$ is the ratio of photon temperature to the free-streaming temperature.  It is a measure of the amount of reheating that photons underwent due to the annihilation of $e^\pm$.  For completely decoupled neutrinos, whose temperature is the free-streaming temperature, the well known value can be computed from conservation of entropy
 \begin{equation}
 z_{fin}=(11/4)^{1/3}\approx 1.401.
 \end{equation}

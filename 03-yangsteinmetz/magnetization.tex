@@ -90,7 +90,7 @@ where $n\in0,1,2,\ldots$ is the Landau orbital quantum number\index{Landau level
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The reason \req{cosmokgp} distinguishes between electrons and positrons is to ensure the correct nonrelativistic limit for the magnetic dipole energy is reached. Following the conventions found in \cite{Tiesinga:2021myr}, we set the gyro-magnetic factor $g\equiv g_{e^{+}}=-g_{e^{-}}>0$ such that electrons and positrons have opposite $g$-factors and opposite magnetic moments relative to their spin; see \rf{fig:schematic}.
+The reason \req{cosmokgp} distinguishes between electrons and positrons is to ensure the correct nonrelativistic limit for the magnetic dipole energy is reached. Following the conventions found in \cite{Tiesinga:2021myr}, we set the gyro-magnetic\index{g-factor} factor $g\equiv g_{e^{+}}=-g_{e^{-}}>0$ such that electrons and positrons have opposite $g$-factors and opposite magnetic moments relative to their spin; see \rf{fig:schematic}.
 
 We recall the conventions established in \rsec{sec:flrw}. As the Universe undergoes the isotropic expansion, the temperature gradually decreases as $T\propto1/a(t)$, where $a(t)$ represents the scale factor\index{scale factor}. The assumption is made that the magnetic flux\index{magnetic!flux} is conserved over comoving surfaces, implying that the primordial relic field is expected to dilute as  $B\propto1/a(t)^{2}$~\cite{Rafelski:2023emw}. Conservation of magnetic flux requires that the magnetic field through a comoving surface $L_{0}^{2}$ remain unchanged. The magnetic field strength under expansion~\cite{Durrer:2013pga} starting at some initial time $t_{0}$ is then given by\index{magnetic!cosmic field scaling}
 \begin{gather}
@@ -144,7 +144,7 @@ Higher order non-minimal magnetic contributions can be introduced to the Boltzma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent To obtain a quantitative description of the above evolution, we study the bulk properties of the relativistic charged/magnetic gasses in a nearly homogeneous and isotropic primordial universe via the thermal Fermi-Dirac or Bose distributions\index{Bose!distribution}\index{Fermi!distribution} .
 
-The grand partition function\index{partition function} for the relativistic Fermi-Dirac\index{Fermi-Dirac distribution} distribution is given by the standard definition~\cite{Elze:1980er}
+The grand partition function\index{partition function} for the relativistic Fermi-Dirac distribution is given by the standard definition~\cite{Elze:1980er}
 \begin{align}
     \label{part:1} \ln\mathcal{Z}_\mathrm{total} &= \sum_{\alpha}\ln\left(1+\Upsilon_{\alpha_{1}\ldots\alpha_{m}}\exp\left(-\frac{E_{\alpha}}{T}\right)\right)\,,\\
     \Upsilon_{\alpha_{1}\ldots\alpha_{m}} &= \lambda_{\alpha_{1}}\lambda_{\alpha_{2}}\ldots\lambda_{\alpha_{m}}\,,
@@ -176,7 +176,7 @@ of electrons and positrons of both polarizations $(\uparrow\downarrow)$. The cha
 \end{gather}
 where the energy eigenvalues $E_{\sigma,s}^{n}$ are given in \req{cosmokgp}. The index $\sigma$ in \req{partition:1} is a sum over electron and positron states while $s$ is a sum over polarizations. The index $s$ refers to the spin along the field axis: parallel $(\uparrow;\ s=+1)$ or anti-parallel $(\downarrow;\ s=-1)$ for both particle and antiparticle species.
 
-We are explicitly interested in small asymmetries such as baryon excess over antibaryons, or one polarization over another. These are described by \req{partition:2} as the following two fugacities:
+We are explicitly interested in small asymmetries such as baryon excess over antibaryons, or one polarization over another. These are described by \req{partition:2} as the following two fugacities\index{fugacity!polarization}:
 \begin{itemize}%[nosep]
  \item[(a)] Chemical fugacity $\lambda_{\sigma}$
  \item[(b)] Polarization fugacity $\xi_{\sigma,s}$
@@ -196,7 +196,7 @@ We can then parameterize the chemical potential of the $e^{+}e^{-}$ plasma as a 
 \end{align}
 In \req{chargeneutrality}, $n_{p}$ is the observed total number density of protons in all baryon species. The chemical potential defined in \req{cpotential} is obtained from the requirement that the positive charge of baryons (protons, $\alpha$ particles, light nuclei produced after BBN) is exactly and locally compensated by a tiny net excess of electrons over positrons.
 
-We then introduce a novel polarization fugacity $\xi_{\sigma,s}$ and polarization potential $\eta_{\sigma,s}=\sigma s\eta$. We propose the polarization potential follows analogous expressions as seen in \req{cpotential} obeying
+We then introduce a novel polarization fugacity\index{fugacity!polarization} $\xi_{\sigma,s}$ and polarization potential $\eta_{\sigma,s}=\sigma s\eta$. We propose the polarization potential follows analogous expressions as seen in \req{cpotential} obeying
 \begin{align}
  \label{spotential}
  \eta\equiv\eta_{+,+}=\eta_{-,-}\,,\quad\eta=-\eta_{\pm,\mp}\,,\quad\xi_{\sigma,s}\equiv\exp{\frac{\eta_{\sigma,s}}{T}}\,.
@@ -207,12 +207,12 @@ An imbalance in polarization within a region of volume $V$ results in a nonzero 
 \para{Euler-Maclaurin integration}
 \label{sec:eulermac}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Before we proceed with the Boltzmann distribution\index{Boltzmann!distribution} approximation which makes up the bulk of our analysis, we will comment on the full Fermi-Dirac\index{Fermi!distribution} distribution analysis. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels $n$ into an integration given by
+\noindent Before we proceed with the Boltzmann distribution\index{Boltzmann!distribution} approximation which makes up the bulk of our analysis, we will comment on the full Fermi-Dirac\index{Fermi!distribution} distribution analysis. The Euler-Maclaurin\index{Euler-Maclaurin integration} formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels $n$ into an integration given by
 \begin{multline}
     \label{eulermaclaurin}\sum^{b}_{n=a}f(n)-\int^{b}_{a}f(x)dx = \frac{1}{2}\left(f(b)+f(a)\right)\\
     +\sum_{i=1}^{j}\frac{b_{2i}}{(2i)!}\left(f^{(2i-1)}(b)-f^{(2i-1)}(a)\right)+R(j)\,,
 \end{multline}
-where $b_{2i}$ are the Bernoulli numbers and $R(j)$ is the error remainder defined by integrals over Bernoulli polynomials. The integer $j$ is chosen for the level of approximation that is desired. Euler-Maclaurin integration\index{Euler-Maclaurin integration} is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder is small and bounded; see~\cite{greiner2012thermodynamics} for the nonrelativistic case. In this analysis, we keep the zeroth and first order terms in the Euler-Maclaurin formula. We note that regularization of the excess terms in \req{eulermaclaurin} is done in the context of strong field QED~\cite{greiner2008quantum} though that is outside our scope.
+where $b_{2i}$ are the Bernoulli numbers and $R(j)$ is the error remainder defined by integrals over Bernoulli polynomials. The integer $j$ is chosen for the level of approximation that is desired. Euler-Maclaurin integration is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder is small and bounded; see~\cite{greiner2012thermodynamics} for the nonrelativistic case. In this analysis, we keep the zeroth and first order terms in the Euler-Maclaurin formula. We note that regularization of the excess terms in \req{eulermaclaurin} is done in the context of strong field QED~\cite{greiner2008quantum} though that is outside our scope.
 
 Using \req{eulermaclaurin} allows us to convert the sum over $n$ quantum numbers in \req{partition:1} into an integral. Defining
 \begin{alignat}{1}
@@ -230,7 +230,7 @@ It will be useful to rearrange \req{cosmokgp} by pulling the spin dependency and
  \label{effmass:2}
  \varepsilon_{\sigma,s}^{n}(p_{z},{B})=\frac{E_{\sigma,s}^{n}}{{\tilde m}_{\sigma,s}}\,,\qquad{\tilde m}_{\sigma,s}^{2}=m_{e}^{2}+e{B}\left(1+\frac{g}{2}\sigma s\right)\,,
 \end{gather}
-where we introduced the dimensionless energy $\varepsilon^{n}_{\sigma,s}$ and effective polarized mass ${\tilde m}_{\sigma,s}$ which is distinct for each spin alignment and is a function of magnetic field strength ${B}$. The effective polarized mass ${\tilde m}_{\sigma,s}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering the plasma's thermodynamic properties.\index{plasma!spin ferromagnetism}
+where we introduced the dimensionless energy $\varepsilon^{n}_{\sigma,s}$ and effective polarized mass ${\tilde m}_{\sigma,s}$ which is distinct for each spin alignment and is a function of magnetic field strength ${B}$. The effective polarized mass ${\tilde m}_{\sigma,s}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering the plasma's thermodynamic properties.
 
 With the energies written in this fashion, we recognize the first term in \req{PartFuncTwo} as mathematically equivalent to the free particle fermion partition function with a re-scaled mass $m_{\sigma,s}$. The phase-space relationship between transverse momentum and Landau orbits in \req{phase:1} and \req{phase:2} can be succinctly described by
 \begin{gather}
@@ -323,7 +323,7 @@ allowing us to rewrite the integral over momentum in \req{partitionpower:4} as
 \end{align}
 The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=xK_{\nu}(x)$. The notation $\varepsilon(0,{B})$ in \req{besselkint} refers to the definition of dimensionless energy found in \req{effmass:2} with $p_{z}=0$.
 
-Summation over the auxillary function $W_{\nu}$ can be replaced via Euler-Maclaurin integration~\req{eulermaclaurin} as
+Summation over the auxillary function $W_{\nu}$ can be replaced via Euler-Maclaurin\index{Euler-Maclaurin integration} integration~\req{eulermaclaurin} as
 \begin{align}
 \sum^{\infty}_{n=0}W_1(n)=\int^\infty_0\!\!dn\,W_1(n)&+\frac{1}{2}\bigg[W_1(\infty)+W_1(0)\bigg]\notag\\
 &\qquad+\frac{1}{12}\bigg[\left.\frac{\partial W_1}{\partial n}\right|_{\infty}-\left.\frac{\partial W_1}{\partial n}\right|_{0}\bigg]+R(2),
@@ -404,12 +404,12 @@ allowing us to rewrite the partition function in \req{partitionpower:1} as
 \para{Electron-positron chemical potential}
 \label{sec:chem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Considering the temperature after neutrino freeze-out, the charge neutrality\index{charge neutrality} condition can be written as
+\noindent Considering the temperature after neutrino freeze-out\index{neutrino!freeze-out}, the charge neutrality\index{charge neutrality} condition can be written as
 \begin{align}
  \label{density_proton}
  \left(n_{e^{-}}-n_{e^{+}}\right)=n_{p}=X_p\,\left(\frac{n_{B}}{s_{\gamma,e}}\right)\,s_{\gamma,e},\qquad X_p\equiv\frac{n_p}{n_B}\,,
 \end{align}
-where $n_{p}$ and $n_B$ is the number density of protons and baryons\index{baryon!entropy ratio} respectively. The parameter $s_{\gamma,e}$ is the entropy density which is primarily dominated by photons and electron(positrons) in this era. Due to the adiabatic expansion of the universe, the comoving entropy density is a conserved making the ratio
+where $n_{p}$ and $n_B$ is the number density of protons and baryons\index{baryon!entropy ratio} respectively. The parameter $s_{\gamma,e}$ is the entropy density\index{entropy!density} which is primarily dominated by photons and electron(positrons) in this era. Due to the adiabatic expansion of the universe, the comoving entropy density is a conserved making the ratio
 \begin{align}
     \frac{n_{B}}{s_{\gamma,e}} = \mathrm{const.}
 \end{align}
@@ -421,7 +421,7 @@ In presence of a magnetic field in the Boltzmann approximation, the charge neutr
  \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}
  \left[\sum_{s'}^{\pm1}\xi_{s'}\!\left(\!x_{s'}^{2}K_{2}(x_{s'})\!+\!\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})\!+\!\frac{b_{0}^{2}}{12}K_{0}(x_{s'}\!)\!\right)\!\right]^{-1}\!.
 \end{gather}
-\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\eta=0$ implying no external bias to the number of polarizations except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
+\req{chem} is fully determined by the right-hand-side expression if the polarization fugacity\index{fugacity!polarization} is set to unity $\eta=0$ implying no external bias to the number of polarizations except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
@@ -455,7 +455,7 @@ The profound insensitivity of the chemical potential to these parameters justifi
  \label{totalmag}
  {B}_\mathrm{total} = {B} + \mathcal{M}\,.
 \end{align}
-For the simplest mediums without ferromagnetic or hysteresis considerations, the relationship can be parameterized by the susceptibility\index{magnetic!susceptibility} $\chi$ of the medium as
+For the simplest mediums without ferromagnetic\index{ferromagnetism} or hysteresis considerations, the relationship can be parameterized by the susceptibility\index{magnetic!susceptibility} $\chi$ of the medium as
 \begin{align}
  \label{susceptibility}
  {B}_\mathrm{total} = (1+\chi){B}\,,\qquad \mathcal{M} = \chi{B}\,,\qquad \chi\equiv\frac{\partial\mathcal{M}}{\partial{B}}\,,
@@ -485,7 +485,7 @@ The total magnetization ${\mathfrak M}$ can be broken into the sum of magnetic m
 {\mathfrak M}&={\mathfrak M}_{+}+{\mathfrak M}_{-}\,.
 \end{align}
 
-We note that the expression for the magnetization simplifies significantly for $g\!=\!2$ which is the `natural' gyro-magnetic factor~\cite{Evans:2022fsu,Rafelski:2022bsv}\index{g-factor} for Dirac particles. For illustration, the $g\!=\!2$ magnetization from \req{defmagetization} is then
+We note that the expression for the magnetization simplifies significantly for $g\!=\!2$ which is the `natural' gyro-magnetic\index{g-factor} factor~\cite{Evans:2022fsu,Rafelski:2022bsv} for Dirac particles. For illustration, the $g\!=\!2$ magnetization from \req{defmagetization} is then
 \begin{align}
  \label{g2magplus}
  {\mathfrak M}_{+}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
@@ -554,7 +554,7 @@ In \rf{fig:gfac}, we plot the magnetization as a function of $g$-factor between 
 
 It is not surprising for there to be a transition between diamagnetism and paramagnetism given that the partition function (see \req{spin} and \req{spinorbit}) contained elements of both. With that said, the transition point presented at $g\approx1.15$ should not be taken as exact because of the approximations used to obtain the above results. 
 
-It is likely that the exact transition point has been altered by our taking of the Boltzmann approximation and Euler-Maclaurin integration steps. It is known that the Klein-Gordon-Pauli solutions to the Landau problem in \req{cosmokgp} have periodic behavior~\cite{Steinmetz:2018ryf,Evans:2022fsu,Rafelski:2022bsv} for $|g|=k/2$ (where $k\in1,2,3\ldots$).
+It is likely that the exact transition point has been altered by our taking of the Boltzmann approximation and Euler-Maclaurin\index{Euler-Maclaurin integration} integration steps. It is known that the Klein-Gordon-Pauli solutions to the Landau problem in \req{cosmokgp} have periodic behavior~\cite{Steinmetz:2018ryf,Evans:2022fsu,Rafelski:2022bsv} for $|g|=k/2$ (where $k\in1,2,3\ldots$).
 
 These integer and half-integer points represent when the two Landau towers of orbital levels match up exactly. Therefore, we propose a more natural transition between the spinless diamagnetic gas of $g=0$ and a paramagnetic gas is $g=1$. A more careful analysis is required to confirm this, but that our numerical value is close to unity is suggestive.
 
@@ -591,7 +591,7 @@ If the field strength is held constant, then the average magnetic moment per lep
 \subsection{Polarization potential and ferromagnetism}
 \label{sec:ferro}\index{ferromagnetism}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization given in \req{arbg:1} and \req{arbg:2} is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding up to first order $\mathcal{O}(b_{0})$ in magnetic scale
+\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization given in \req{arbg:1} and \req{arbg:2} is entirely controlled by the polarization fugacity\index{fugacity!polarization} $\xi$ asymmetry generated by the spin potential $\eta$ yielding up to first order $\mathcal{O}(b_{0})$ in magnetic scale
 \begin{multline}
  \label{ferro}
  \lim_{m_{e}^{2}/T^{2}\gg b_0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\\
@@ -599,7 +599,7 @@ If the field strength is held constant, then the average magnetic moment per lep
  +\mathcal{O}\left(b_{0}^{2}\right)
 \end{multline}
 
-Given \req{ferro}, we can understand the spin potential as a kind of `ferromagnetic' influence on the primordial gas which allows for magnetization even in the absence of external magnetic fields. This interpretation is reinforced by the fact the leading coefficient is $g/2$. We suggest that a variety of physics could produce a small nonzero $\eta$ within a domain of the gas. Such asymmetries could also originate statistically as while the expectation value of free gas polarization is zero, the variance is likely not.
+Given \req{ferro}, we can understand the spin potential as a kind of `ferromagnetic'\index{ferromagnetism} influence on the primordial gas which allows for magnetization even in the absence of external magnetic fields. This interpretation is reinforced by the fact the leading coefficient is $g/2$. We suggest that a variety of physics could produce a small nonzero $\eta$ within a domain of the gas. Such asymmetries could also originate statistically as while the expectation value of free gas polarization is zero, the variance is likely not.
 
 As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alignment of the magnetization. In the high temperature limit \req{ferro} with strictly $b_{0}=0$ assumes a form of to lowest order for brevity
 \begin{align}
@@ -610,6 +610,7 @@ As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alig
 While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it is noteworthy that the high temperature (and $m\rightarrow0$) limit of Fermi-Dirac\index{Fermi!distribution} distributions only differs from the Boltzmann result by a proportionality factor. The natural scale of the $e^{+}e^{-}$ magnetization with only a small spin fugacity ($\eta<1\eV$) fits easily within the bounds of the predicted magnetization during this era if the IGMF measured today was of primordial origin. The reason for this is that the magnetization seen in \req{g2magplus}, \req{g2magminus} and \req{ferro} are scaled by $\alpha{B}_{C}$ where $\alpha$ is the fine structure constant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\index{ferromagnetism}
 \para{Hypothesis of ferromagnetic self-magnetization}
 \label{sec:self}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,7 +1,7 @@
 \section{Boltzmann-Einstein Equation Solver Adapted to Emergent Chemical Nonequilibrium}\label{ch:boltz:orthopoly}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Having completed the geometrical background in Appendix \ref{ch:vol:forms}, we now proceed to develop a numerical method for the Boltzmann-Einstein equation in an FLRW\index{cosmology!FLRW} universe.  This will allow us to efficiently study  nonequilibrium aspects of neutrino freeze-out. The analysis in Section \ref{sec:model:ind} was based on exact chemical and kinetic equilibrium and sharp freeze-out transitions at $T_{ch}$ and $T_k$, but these are  only approximations.  The  Boltzmann-Einstein equation is a more precise model of the dynamics of the freeze-out process and furthermore, given the collision dynamics it is capable of capturing in a {\em quantitative manner} the non-thermal distortions from equilibrium, for example the emergence of actual distributions and the approximate values  of $T_{ch}$, $T_k$, and $\Upsilon$.  Indeed,  in  such a dynamical description no hypothesis about the presence of kinetic or chemical (non) equilibrium needs to be made, as the distribution close to \req{eq:kEq} with   $\Upsilon\ne  1$ emerges naturally as the outcome of collision processes, even when the particle system approaches the freeze-out temperature domain  in chemical equilibrium\index{chemical equilibrium}.
+Having completed the geometrical background in Appendix \ref{ch:vol:forms}, we now proceed to develop a numerical method for the Boltzmann-Einstein equation in an FLRW\index{cosmology!FLRW} universe.  This will allow us to efficiently study  nonequilibrium aspects of neutrino freeze-out\index{neutrino!freeze-out}. The analysis in Section \ref{sec:model:ind} was based on exact chemical and kinetic equilibrium and sharp freeze-out transitions at $T_{ch}$ and $T_k$, but these are  only approximations.  The  Boltzmann-Einstein equation is a more precise model of the dynamics of the freeze-out process and furthermore, given the collision dynamics it is capable of capturing in a {\em quantitative manner} the non-thermal distortions from equilibrium, for example the emergence of actual distributions and the approximate values  of $T_{ch}$, $T_k$, and $\Upsilon$.  Indeed,  in  such a dynamical description no hypothesis about the presence of kinetic or chemical (non) equilibrium needs to be made, as the distribution close to \req{eq:kEq} with   $\Upsilon\ne  1$ emerges naturally as the outcome of collision processes, even when the particle system approaches the freeze-out temperature domain  in chemical equilibrium\index{chemical equilibrium}.
 
 Considering the natural way in which chemical nonequilibrium emerges from chemical equilibrium during freeze-out, it is striking that the literature on Boltzmann solvers does not reflect on the accommodation of emergent chemical nonequilibrium into the method of solution. For an all-numerical solver this may not be a necessary step as long as there are no constraints that preclude development of a general nonequilibrium solution. However, when strong chemical nonequilibrium is present either in the intermediate time period or/and at the end of the evolution, a brute force approach can be very costly in computer time. Motivated by this circumstance and past work with physical environments in which chemical nonequilibrium arises,  we introduce here a  spectral method for solving the Boltzmann-Einstein equation that utilizes a dynamical basis of orthogonal polynomials which is adapted to the case of emerging chemical nonequilibrium. We validate our method via a  model problem  that captures the essential physical characteristics of interest and use it to highlight the type of situation where this new method exhibits its advantages.
 
@@ -9,7 +9,7 @@ In the cosmological context, the Boltzmann-Einstein equation has been used to st
 
 The efficacy of the spectral method used in \cite{Esposito:2000hi,Mangano:2001iu} can largely be attributed to the fact that, under the conditions considered there, the true solution is very close to a chemical equilibrium distribution, \req{eq:ChEq}, where the temperature is controlled by the dilution of the system. However, as we have discussed, the Planck CMB results \cite{Planck:2013pxb} indicate the possibility that neutrinos participated in reheating to a greater degree than previously believed, leading to a more pronounced chemical nonequilibrium and reheating. Efficiently obtaining this emergent chemical nonequilibrium within the realm of kinetic theory motivates the development of a new numerical method that is adapted to this  circumstance.
 
- First, in  Section \ref{sec:orthopolyApp}  we give important general background on moving frames of orthogonal polynomials, deriving several formulas and properties that will be needed in our method for solving the Boltzmann-Einstein equation. In Section \ref{sec:theMethod} we develop the details of our method. We start with a basic overview of the Boltzmann-Einstein equation in an FLRW\index{cosmology!FLRW} Universe, then we recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and compare this with our modified basis moving frame method.  We use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity.  In Section \ref{validation} we validate the method using a model problem.   This section is adapted from \cite{Birrell:2014ona,Birrell:2014gea,Birrell:2014uka}.
+ First, in  Section \ref{sec:orthopolyApp}  we give important general background on moving frames of orthogonal polynomials, deriving several formulas and properties that will be needed in our method for solving the Boltzmann-Einstein equation. In Section \ref{sec:theMethod} we develop the details of our method. We start with a basic overview of the Boltzmann-Einstein equation in an FLRW\index{cosmology!FLRW} Universe, then we recall the orthogonal polynomial basis used in \cite{Esposito:2000hi,Mangano:2001iu} and compare this with our modified basis moving frame method.  We use the Boltzmann-Einstein equation to derive the dynamics of the mode coefficients and identify physically motivated evolution equations for the effective temperature and fugacity. In Section \ref{validation} we validate the method using a model problem. This section is adapted from \cite{Birrell:2014ona,Birrell:2014gea,Birrell:2014uka}.
 
 
 
@@ -178,7 +178,7 @@ Our primary interest is in solving \req{Tvars} for systems close to the kinetic 
 \end{equation}
 
 
-To model a distribution close to kinetic equilibrium at temperature $T$ and fugacity $\Upsilon$, we assume
+To model a distribution close to kinetic equilibrium at temperature $T$ and fugacity\index{fugacity} $\Upsilon$, we assume
 \begin{equation}\label{kineticApprox}
 f(t,z)= f_\Upsilon (t,z)\psi(t,z)\,,\hspace{2mm} f_\Upsilon(z)=\frac{1}{\Upsilon^{-1}e^z+1}\,,
 \end{equation}
@@ -246,7 +246,7 @@ in the denominator of \req{zerothApprox}, which comes from changing variables fr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Nonequilibrium dynamics}\label{dynamicsSec}
-In this section we derive the dynamical equations for the chemical nonequilibrium method.  In particular, we identify physically motivated dynamics for the effective temperature and fugacity.  Using \req{TBoltzmann} and the definition of $\psi$ from \req{kineticApprox} we have
+In this section we derive the dynamical equations for the chemical nonequilibrium method. In particular, we identify physically motivated dynamics for the effective temperature and fugacity. Using \req{TBoltzmann} and the definition of $\psi$ from \req{kineticApprox} we have
 \begin{align}\label{nearEquilibEq}
 \partial_t \psi+\frac{1}{f_\Upsilon }\frac{\partial f_\Upsilon }{\partial\Upsilon}\dot\Upsilon\psi-\frac{z}{f_\Upsilon }\left(H+\frac{\dot{T}}{T}\right)\left(\psi\partial_zf_\Upsilon +f_\Upsilon \partial_z \psi\right)=\frac{1}{f_\Upsilon E}C[f_\Upsilon \psi]\,.
 \end{align}
@@ -335,7 +335,7 @@ When the collision term becomes small, \req{freeStreamSol} motivates another cha
 \begin{equation}
 \dot\epsilon=\frac{1+\epsilon}{(Ab)^1}\left((Bb)^1\dot{\Upsilon}/\Upsilon-\langle\frac{1}{f_\Upsilon E}C[f],\hat\psi_1\rangle\right).
 \end{equation}
-Solving this in place of \req{Teq} when the collision terms are small avoids having to numerically track the free-streaming evolution.  In particular this will ensure conservation of comoving particle number, which equals a function of $\Upsilon$ multiplied by $(aT)^3$, to much greater precision in this regime as well as resolve the freeze-out temperatures more accurately.\\
+Solving this in place of \req{Teq} when the collision terms are small avoids having to numerically track the free-streaming evolution. In particular this will ensure conservation of comoving particle number, which equals a function of $\Upsilon$ multiplied by $(aT)^3$, to much greater precision in this regime as well as resolve the freeze-out temperatures more accurately.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent{\bf Projected Dynamics are Well-defined:}\\
@@ -370,7 +370,7 @@ We will validate our numerical method on an exactly solvable model problem
 \begin{equation}\label{toyEq}
 \partial_t f-pH \partial_p f=M\left(\frac{1}{\Upsilon^{-1}e^{p/T_{eq}}+1}-f(p,t)\right)\,, \hspace{2mm} f(p,0)=\frac{1}{e^{p/T_{eq}(0)}+1}\,,
 \end{equation}
-where $M$ is a constant with units of energy and we choose units in which it is equal to $1$. This model describes a distribution that is attracted to a given equilibrium distribution at a prescribed time dependent temperature $T_{eq}(t)$ and fugacity $\Upsilon$. This type of an idealized scattering operator, without fugacity, was first introduced in \cite{Anderson:1974nyl}. By changing coordinates $y=a(t)p$ we find
+where $M$ is a constant with units of energy and we choose units in which it is equal to $1$. This model describes a distribution that is attracted to a given equilibrium distribution at a prescribed time dependent temperature $T_{eq}(t)$ and fugacity\index{fugacity} $\Upsilon$. This type of an idealized scattering operator, without fugacity, was first introduced in \cite{Anderson:1974nyl}. By changing coordinates $y=a(t)p$ we find
 \begin{equation}\label{freeStreamToy}
 \partial_tf(y,t)=\frac{1}{\Upsilon^{-1}\exp[y/(a(t)T_{eq}(t))]+1}-f(y,t)\,.
 \end{equation}

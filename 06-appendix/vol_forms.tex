@@ -15,7 +15,7 @@ dA_g=i_v dV_g\,,
 \end{equation}
 where $v$ is a unit normal vector to $S$.  This method extends to submanifolds of codimension greater than one as well as to semi-Riemannian manifolds, as long as the metric restricted to the submanifold is non-degenerate. 
 
-However, there are many situations where one would like to define a natural volume form on a submanifold that is induced by a volume form in the ambient space, but where the above method is inapplicable, such as defining a natural volume form on the light cone or other more complicated degenerate submanifolds in general relativity. In this section, we will describe a method for inducing volume forms on regular level sets of a function that is applicable in cases where there is no metric structure and show its relation to more widely used semi-Riemannian case.  We prove analogues of the coarea formula and Fubini's theorem in this setting. 
+However, there are many situations where one would like to define a natural volume form on a submanifold that is induced by a volume form in the ambient space, but where the above method is inapplicable, such as defining a natural volume form on the light cone or other more complicated degenerate submanifolds in general relativity. In this section, we will describe a method for inducing volume forms on regular level sets of a function that is applicable in cases where there is no metric structure and show its relation to more widely used semi-Riemannian case.  We prove analogues of the coarea formula\index{coarea formula} and Fubini's theorem\index{Dirac delta!Fubini's theorem} in this setting. 
 
 Let $M$, $N$ be smooth manifolds, $c$ be a regular value of a smooth function $F:M\rightarrow N$, and $\Omega^M$ and $\Omega^N$ be volume forms on $M$ and $N$ respectively.  Using this data, we will be able to induce a natural volume form on the level set $F^{-1}(c)$.  The absence of a metric on $M$ is made up for by the additional information that the function $F$ and volume form $\Omega^N$ on $N$ provide. The following theorem makes our definition precises and proves the existence and uniqueness of the induced volume form.
 
@@ -256,7 +256,7 @@ Let $c$ be a regular value of $F:(M,\Omega^M)\rightarrow (N,\Omega^N)$ and $\Phi
 \end{lemma}
 
 We also have a version of Fubini's theorem.
-\begin{theorem}[Fubini's Theorem for Delta functions]\index{Fubini's theorem for delta functions}
+\begin{theorem}[Fubini's Theorem for Delta functions]\index{Dirac delta!Fubini's theorem}
 Let $M_1,M_2,N$ be smooth manifolds with volume forms $\Omega_1,\Omega_2, \Omega^N$. Let $M\equiv M_1\times M_2$ and $\Omega\equiv \Omega_1\wedge\Omega_2$. Suppose that the set of $(x,y)\in F^{-1}(c)$ such that $F|_{M_1\times\{y\}}$ is not regular at $x$ has $\dim M_1+\dim M_2-\dim N$ dimensional Hausdorff measure zero in $M_1\times M_2$ (we denote the complement of this closed set by $U$).  Then for $f\in L^1(\omega)\bigcup L^+(F^{-1}(c))$ we have
 \begin{equation}\label{FubiniEq}
 \int_Mf(x,y)\delta_c(F(x,y)) \Omega(dx,dy)=\int_{M_2}\left[\int_{U^y} f(x,y) \delta_c(F(x,y))\Omega_1(dx) \right]\Omega_2(dy)\,,
