@@ -17,7 +17,7 @@ where $v$ is a unit normal vector to $S$.  This method extends to submanifolds o
 
 However, there are many situations where one would like to define a natural volume form on a submanifold that is induced by a volume form in the ambient space, but where the above method is inapplicable, such as defining a natural volume form on the light cone or other more complicated degenerate submanifolds in general relativity. In this section, we will describe a method for inducing volume forms on regular level sets of a function that is applicable in cases where there is no metric structure and show its relation to more widely used semi-Riemannian case.  We prove analogues of the coarea formula\index{coarea formula} and Fubini's theorem\index{Dirac delta!Fubini's theorem} in this setting. 
 
-Let $M$, $N$ be smooth manifolds, $c$ be a regular value of a smooth function $F:M\rightarrow N$, and $\Omega^M$ and $\Omega^N$ be volume forms on $M$ and $N$ respectively.  Using this data, we will be able to induce a natural volume form on the level set $F^{-1}(c)$.  The absence of a metric on $M$ is made up for by the additional information that the function $F$ and volume form $\Omega^N$ on $N$ provide. The following theorem makes our definition precises and proves the existence and uniqueness of the induced volume form.
+Let $M$, $N$ be smooth manifolds, $c$ be a regular value of a smooth function $F:M\rightarrow N$, and $\Omega^M$ and $\Omega^N$ be volume forms on $M$ and $N$ respectively.  Using this data, we will be able to induce a natural volume form on the level set $F^{-1}(c)$.  The absence of a metric on $M$ is made up for by the additional information that the function $F$ and volume form $\Omega^N$ on $N$ provide. The following theorem makes our definition precises and proves the existence and uniqueness of the induced volume form\index{induced volume form}.
 
 \begin{theorem}\label{inducedVolForm}
 Let $M$, $N$ be $m$ (resp. $n$)-dimensional smooth manifolds with volume forms $\Omega^M$ (resp. $\Omega^N$). Let $F:M\rightarrow N$ be smooth and $c$ be a regular value.  Then there is a unique volume form $\omega$  (also denoted $\omega^M$) on $F^{-1}(c)$ such that $\omega_x=i_{(v_1,...,v_n)}\Omega^M_x$ whenever $v_i\in T_xM$ are such that 
@@ -203,7 +203,7 @@ Therefore
 \end{equation}
 as densities.
 \end{proof}
-In particular, this shows that even though $NJF$ and $dA_g$ are undefined individually when $g$ is degenerate on $F^{-1}(c)$, one can make sense of their ratio in this situation as the induced volume form $\omega$.
+In particular, this shows that even though $NJF$ and $dA_g$ are undefined individually when $g$ is degenerate on $F^{-1}(c)$, one can make sense of their ratio in this situation as the induced volume form\index{induced volume form} $\omega$.
 
 
 \para{Delta Function Supported on a Level Set}
@@ -268,7 +268,7 @@ Our assumption about $F|_{M_1\times\{y\}}$ implies that $c$ is a regular value o
 \begin{equation}
 \int_{F|_U^{-1}(c)} f(x,y) d\omega=\int_{M_2}\left[\int_{F|_{U^y\times\{y\}}^{-1}(c)} f(x,y) \omega^1_{c,y}(dx)\right]\Omega_2(dy)\,,
 \end{equation}
-where $\omega^1_{c,y}$ is the induced volume form on $F|_{U^y\times\{y\}}^{-1}(c)$.  
+where $\omega^1_{c,y}$ is the induced volume form\index{induced volume form} on $F|_{U^y\times\{y\}}^{-1}(c)$.  
 
 Consider the projection map restricted to the $c$-level set, $\pi_2:F|_U^{-1}(c)\rightarrow M_2$.  By assumption, $F|_{M_1\times\{y\}}$ is regular at $x$ for all $(x,y)\in F|_U^{-1}(c)$. For such an $(x,y)$, take a basis $w_i\in T_yM_2$. Since $F|_{M_1\times\{y\}}$ has full rank at $x$, for each $i$ there exists $v_i\in T_xM_1$ such that $F(\cdot,y)_*v_i=F_*(0,w_i)$.  Therefore $(-v_i,w_i)\in \ker F_*|_{(x,y)}=T_{(x,y)}F|_U^{-1}(c)$.  Hence $w_i\in\pi_{2*} T_{(x,y)}F^{-1}(c)$ and so $\pi_2:F|_U^{-1}(c)\rightarrow M_2$ is regular at $(x,y)$.  
 
@@ -453,7 +453,7 @@ Therefore, for $m\neq 0$, $P_m$ has a unit normal $N=\grad h/m$ and so it is a s
 \begin{equation}
 \widetilde{dV}_m=i_N \widetilde{dV}=\frac{|g|}{m}dx^0\wedge...\wedge dx^n\wedge\left(\sum_\alpha (-1)^\alpha p^\alpha dp^0\wedge...\wedge\widehat{dp^\alpha}\wedge...\wedge dp^n\right)\,,
 \end{equation}
-where $i_N$ denotes the interior product (or contraction) and a hat denotes an omitted term.  We are also interested in the volume form on $P_{m,x}$ the fiber of $P_m$ over a point $x\in M$.  We obtain this by contracting $\widetilde{dV}$ with an orthonormal basis of vector fields normal to $P_{m,x}$. Such a basis is composed of $N$ together with an orthonormalization of the basis of horizontal fields, $W_\alpha=\Lambda^\beta_\alpha H_\beta$, where $H_\beta$ are defined in \req{horizontalSubspace}. Therefore we have
+where $i_N$ denotes the interior product\index{interior product} (or contraction) and a hat denotes an omitted term.  We are also interested in the volume form on $P_{m,x}$ the fiber of $P_m$ over a point $x\in M$.  We obtain this by contracting $\widetilde{dV}$ with an orthonormal basis of vector fields normal to $P_{m,x}$. Such a basis is composed of $N$ together with an orthonormalization of the basis of horizontal fields, $W_\alpha=\Lambda^\beta_\alpha H_\beta$, where $H_\beta$ are defined in \req{horizontalSubspace}. Therefore we have
 \begin{equation}
 \widetilde{dV}_{m,x}=i_{W_0}...i_{W_n}\widetilde{dV}_m\,.
 \end{equation}
@@ -474,7 +474,7 @@ We define $\pi$ and $\pi_x$ by
 We will typically omit the subscript $x$ and let the context distinguish whether we are integrating over the full momentum bundle (i.e. both over spacetime and momentum variables) or just momentum space at a single point in spacetime.  \\
 
 \noindent{\bf Massless Case:}\\
-When $m=0$ the above construction fails.  However, we can use Theorem \ref{inducedVolForm} to induce a volume form using the map \req{definingFunction} defined above. Here we carry out the construction for the induced volume form on $P_{m,x}$ for any $m\geq 0$. The volume form on each tangent space $T_xM$ is
+When $m=0$ the above construction fails.  However, we can use Theorem \ref{inducedVolForm} to induce a volume form using the map \req{definingFunction} defined above. Here we carry out the construction for the induced volume\index{induced volume form} form on $P_{m,x}$ for any $m\geq 0$. The volume form on each tangent space $T_xM$ is
 \begin{equation}
 \tilde{dV}_x=|g(x)|^{1/2}dp^0\wedge...\wedge dp^n\,.
 \end{equation}
