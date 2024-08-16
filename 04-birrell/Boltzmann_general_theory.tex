@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Boltzmann-Einstein Equation}\label{sec:BoltzmannEinstein}
-We now begin a detailed study of the nonequilibrium properties of the neutrino freeze-out\index{neutrino!freeze-out} and it's impact on the effective number of neutrinos\index{neutrino!effective number}, an important cosmological observable. We model the dynamics of the neutrino freeze-out using the Boltzmann-Einstein equation\index{Boltzmann-Einstein equation}, also called the general relativistic Boltzmann equation, which describes the dynamics of a gas of particles that travel on geodesics in an general spacetime, with the only interactions being point collisions~\cite{Andreasson:2011ng,cercignani,Choquet-Bruhat:2009xil,ehlers},
+We now begin a detailed study of the nonequilibrium properties of the neutrino freeze-out\index{neutrino!freeze-out} and its impact on the effective number of neutrinos\index{neutrino!effective number}, an important cosmological observable. We model the dynamics of the neutrino freeze-out using the Boltzmann-Einstein equation\index{Boltzmann-Einstein equation}, also called the general relativistic Boltzmann equation, which describes the dynamics of a gas of particles that travel on geodesics in an general spacetime, with the only interactions being point collisions~\cite{Andreasson:2011ng,cercignani,Choquet-Bruhat:2009xil,ehlers},
 \begin{equation}\label{eq:BoltzmannEinstein}
 p^\alpha\partial_{x^\alpha}f-\sum_{j=1}^3\Gamma^j_{\mu\nu}p^\mu p^\nu\partial_{p^j}f=C[f]\,.
 \end{equation}
@@ -8,11 +8,11 @@ Here $ \Gamma^\alpha_{\mu\nu}$ is the affine connection (Christoffel symbols) co
  \begin{equation}
 g_{\alpha\beta}p^\alpha p^\beta=m^2\,.
 \end{equation}
-Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  $C[f]$ is the collision operator\index{collision operator} and encodes all information about point interactions between particles.  If $C[f]$ vanishes then the equation is called the Vlasov equation and describes particles that move on geodesics (or free stream).  At this point, we are  not invoking the assumption that the distribution function has a kinetic equilibrium form\index{kinetic equilibrium}, nor are we assuming a FLRW\index{cosmology!FLRW} universe; in this section we will discuss  general properties of \req{eq:BoltzmannEinstein} before turning to the study of neutrino freeze-out in subsequent sections. We will need the following definitions of entropy current $s^\mu$, stress-energy tensor ${T}^{\mu\nu}$, and number current $n^\mu$,\index{entropy!current}\index{stress-energy tensor}\index{number current}
+Here and in the following,  repeated Greek indices are summed from $0$ to $3$.  $C[f]$ is the collision operator\index{collision operator} and encodes all information about point interactions between particles.  If $C[f]$ vanishes then the equation is called the Vlasov equation and describes particles that move on geodesics (or free stream).  At this point, we are  not invoking the assumption that the distribution function has a kinetic equilibrium form\index{kinetic equilibrium}, nor are we assuming a FLRW\index{cosmology!FLRW} universe; in this section we will discuss  general properties of \req{eq:BoltzmannEinstein} before turning to the study of neutrino freeze-out in subsequent sections. We will need the following definitions of entropy current $S^\mu$, stress-energy tensor ${T}^{\mu\nu}$, and number current $N^\mu$,\index{entropy!current}\index{stress-energy tensor}\index{number current}
 \begin{align}
-\label{smdef} s^\mu&=-\int \left(f\ln(f)\pm(1\mp f)\ln(1\mp f)\right)p^\mu d\pi\,,\\
+\label{smdef} S^\mu&=-\int \left(f\ln(f)\pm(1\mp f)\ln(1\mp f)\right)p^\mu d\pi\,,\\
 \label{Tmndef}{T}^{\mu\nu}&=\int p^\mu p^\nu f d\pi\,,\\
-\label{nmdef} n^\nu&=\int f p^\nu d\pi\,,\\
+\label{nmdef} N^\nu&=\int f p^\nu d\pi\,,\\
 d\pi&=\frac{\sqrt{-g}}{p_0}\frac{g_pd^3{\bf p}}{8\pi^3}\,,
 \end{align}
 where $d\pi$ is the volume element on the future mass shell, $g$ denotes the determinant of the metric tensor, $p_0=g_{0\alpha} p^\alpha$, non-bold $p$ are four-momenta while bold ${\bf p}$ denotes the spacial components, the upper signs are for fermions and the lower signs for bosons. See Appendix \ref{ch:vol:forms} for the derivation of the form of the volume element.
@@ -64,7 +64,7 @@ For any point $x$ in spacetime,  by transforming to Riemannian normal coordinate
 \nabla_\mu N_A^\mu=\int p^\mu \partial_{x^\mu} f d\pi_A=\int C[f_A] d\pi_A
 \end{equation}
 at $x$. The left and right hand sides are scalars   and therefore they are equal in any coordinate system. Noting this, we can then calculate
-\begin{align}
+\begin{align}\label{eq:charge_current_div}
 \nabla_\mu B^\mu=&\sum_A b_A\int C[f_A]d\pi_A=\sum_A\sum_{I\in int(A)} \frac{n_Ab_A}{n_I}\int\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
 &\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)\widehat{dV}_I d\pi_A\notag\\
 =&\sum_A\sum_{I\in int(A)} \frac{n_Ab_A}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\notag\\
@@ -148,7 +148,7 @@ again because of $\delta(\Delta p)$ in the volume forms.  This shows $\nabla_\mu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \index{Boltzmann!H-theorem}
 \para{Entropy and Boltzmann's H-Theorem}
-Finally, we prove that the entropy four-current satisfies $\nabla_\mu s^\mu\geq 0$, known as Boltzmann's H-theorem. This result requires the additional assumption that the interactions are time-reversal symmetric,  i.e.,
+Finally, we prove that the entropy four-current satisfies $\nabla_\mu S^\mu\geq 0$, known as Boltzmann's H-theorem. This result requires the additional assumption that the interactions are time-reversal symmetric,  i.e.,
 \begin{equation}\label{timeSymmetry}
 W^I(p_{B_j}^l,p_{A_i}^k)=W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)
 \end{equation}
@@ -156,12 +156,12 @@ for all $I$.
 
 Working in Riemannian normal coordinates once again, we can compute
 \begin{align}
-\nabla_\mu s^\mu=&-\sum_A\int p^\mu \partial_{x^\mu}\left(f_A\ln\left(f_A\right)\pm\left(1\mp f_A\right)\ln\left(1\mp f_A\right)\right)d\pi_A\\
+\nabla_\mu S^\mu=&-\sum_A\int p^\mu \partial_{x^\mu}\left(f_A\ln\left(f_A\right)\pm\left(1\mp f_A\right)\ln\left(1\mp f_A\right)\right)d\pi_A\\
 =&\sum_A\int\ln\left(1/f_A\mp 1\right)C[f_A]d\pi_A\,.\notag
 \end{align}
 Similar reasoning to the above two subsections then gives
 \begin{align}
-\nabla_\mu s^\mu=&\sum_{I\in int}\frac{1}{n_I}\sum_\ell\sum_{a=1}^{n_{A_\ell}}\int\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp1\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+\nabla_\mu S^\mu=&\sum_{I\in int}\frac{1}{n_I}\sum_\ell\sum_{a=1}^{n_{A_\ell}}\int\ln\left(1/f_{A_\ell}(p_{A_\ell}^a)\mp1\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
 &\left. -f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV_I\,.\notag
 \end{align}
 Once again, we break the summation into a sum over symmetric processes and two other sums over forward and backward asymmetric processes respectively. Each symmetric process contributes a term of the form
@@ -186,10 +186,10 @@ A pair of forward and backward asymmetric interactions combine to give a term of
 &\left.\qquad\qquad\qquad-\sum_{\tilde\ell}\sum_{c=1}^{n_{B_{\tilde\ell}}} \ln\left(1/f_{B_{\tilde\ell}}(p_{B_{\tilde\ell}}^c)\mp 1\right)\right)f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{I}(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\\
 \end{align}
 where  to obtain the first equality we  used  the time-reversal property  \eqref{timeSymmetry}.  Combining the symmetric and asymmetric cases we find
-\begin{align}
-\nabla_\mu s^\mu=&\sum_{I\in int_s} \frac{1}{2n_I}\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left( f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\\
+\begin{align}\label{eq:entropy_current}
+\nabla_\mu S^\mu=&\sum_{I\in int_s} \frac{1}{2n_I}\int\ln\left(\frac{f^{p,I}(p_{A_i}^k)f_{r,I}(p_{B_j}^l)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left( f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\\
 &\left.- f_{p,I}(p_{A_j}^l)f^{r,I}(p_{B_i}^k)\right)W^I(p_{B_j}^l,p_{A_i}^k) dV_I\notag\\
 &+\sum_{I\in \overrightarrow{int}}\frac{1}{n_I}\int\ln\left(\frac{f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)}{f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)}\right)\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)\right.\notag\\
 &\left.-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)\right)W^I(p_{B_j}^l,p_{A_i}^k)  dV_I\notag\,.
 \end{align}
-Each term in either sum is the integral of a non-negative quantity $W^{I}$ times a quantity of the form $(a-b)\ln(a/b)$, $a,b>0$, which is easily seen to be non-negative.  Therefore we obtain the claimed result $\nabla_\mu s^\mu\geq 0$.  The entropy four current is future directed, due to the volume element being supported on the future mass shell. Therefore, given any splitting of spacetime into space and time $M=S\times T$,   Boltzmann's H-theorem implies that the total entropy  is non-decreasing on $T$.
+Each term in either sum is the integral of a non-negative quantity $W^{I}$ times a quantity of the form $(a-b)\ln(a/b)$, $a,b>0$, which is easily seen to be non-negative.  Therefore we obtain the claimed result $\nabla_\mu S^\mu\geq 0$.  The entropy four current is future directed, due to the volume element being supported on the future mass shell. Therefore, given any splitting of spacetime into space and time $M=S\times T$,   Boltzmann's H-theorem implies that the total entropy  is non-decreasing on $T$.

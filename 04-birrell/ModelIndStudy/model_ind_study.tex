@@ -7,7 +7,7 @@
 \para{Instantaneous Freeze-out Model}
 Neutrino freeze-out\index{neutrino!freeze-out} is, as far as we know, the unique era in the history of the Universe when a significant matter fraction froze out at the same time that a reheating period was beginning due to the onset of the $e^+e^-$ annihilation process. It is this coincidence involving the last reheating period that makes neutrino freeze-out a rich and complicated period to study as compared to the many other reheating periods in the history of the Universe.
 
-We introduce the effective number of neutrinos\index{neutrino!effective number}, $N^{\text{eff}}_\nu$. This quantity quantifies the amount of radiation energy density, $\rho_r$, in the Universe prior to photon freeze-out and after $e^\pm$ annihilation. $N^{\text{eff}}_\nu$ is a key cosmological observable that can be measured by fitting to the distribution of CMB\index{CMB} temperature fluctuations. The early Planck~\cite{Planck:2013pxb} analysis found $N^{\text{eff}}_{\nu}=3.36\pm 0.34$ (CMB only) and $N^{\text{eff}}_{\nu}=3.62\pm 0.25$ (CMB+$H_0$) ($68\%$ confidence levels), indicating a possible tension in the current understanding of $N^{\text{eff}}_\nu$ though this tension has lessened with further analysis from Planck~\cite{Planck:2015fie,Planck:2018vyg} This section, as well as in Section \ref{ch:param:studies}, works towards a detailed understanding of $N^{\text{eff}}_{\nu}$ with an eye towards this tension.
+A key cosmological observable that is impacted by the dynamics of neutrino freeze-out is the effective number of neutrinos\index{neutrino!effective number}, $N^{\text{eff}}_\nu$, which quantifies the amount of radiation energy density, $\rho_r$, in the Universe prior to photon freeze-out and after $e^\pm$ annihilation. $N^{\text{eff}}_\nu$  can be measured by fitting to the distribution of CMB\index{CMB} temperature fluctuations. The early Planck~\cite{Planck:2013pxb} analysis found $N^{\text{eff}}_{\nu}=3.36\pm 0.34$ (CMB only) and $N^{\text{eff}}_{\nu}=3.62\pm 0.25$ (CMB+$H_0$) ($68\%$ confidence levels), indicating a possible tension in the current understanding of $N^{\text{eff}}_\nu$ though this tension has lessened with further analysis from Planck~\cite{Planck:2015fie,Planck:2018vyg} This section, as well as in Section \ref{ch:param:studies}, works towards a detailed understanding of $N^{\text{eff}}_{\nu}$ with an eye towards this tension.
 
 Mathematically, $N^{\text{eff}}_\nu$ is defined by the relation\index{neutrino!effective number}
 \begin{align}\label{eq:NeffDef}
@@ -15,7 +15,7 @@ Mathematically, $N^{\text{eff}}_\nu$ is defined by the relation\index{neutrino!e
 \end{align}
 where $\rho_r$ is the radiation component of the Universe energy density, $\rho_\gamma$ is the photon energy density and $R_\nu\equiv T_\nu/T_\gamma=({4}/{11})^{1/3}$ is the photon to neutrino temperature ratio in the limit where the annihilating $e^\pm$ pairs do not transfer any entropy to Standard Model (SM) left-handed neutrinos, i.e., under the assumption that neutrinos have completely frozen out at the time of $e^\pm$ annihilation. The factor 7/8 is the ratio of Fermi to Bose reference normalization in $\rho$ and the neutrino to photon temperature ratio $R_\nu$ is the result of the transfer of $e^\pm$ entropy into photons after neutrino freeze-out\index{neutrino!freeze-out}. 
 
-The definition \ref{eq:NeffDef} is constructed such that if photons and SM left-handed neutrinos are the only significant massless particle species in the Universe between the freeze-out of left-handed neutrinos at $T_\gamma=\mathcal{O}(1)$ MeV and photon freeze-out at $T_\gamma=0.25$ eV, and assuming zero reheating of neutrinos, then $N^{\text{eff}}_{\nu}=3$, corresponding to the number of SM neutrino flavors. Detailed numerical study of the neutrino freeze-out process within the SM gives $N^{\text{eff}}_{\nu}=3.046$~\cite{Mangano:2005cc}, a value close to the number of flavors, indicating only a small amount of neutrino reheating. 
+The definition \eqref{eq:NeffDef} is constructed such that if photons and SM left-handed neutrinos are the only significant massless particle species in the Universe between the freeze-out of left-handed neutrinos at $T_\gamma=\mathcal{O}(1)$ MeV and photon freeze-out at $T_\gamma=0.25$ eV, and assuming zero reheating of neutrinos, then $N^{\text{eff}}_{\nu}=3$, corresponding to the number of SM neutrino flavors. Detailed numerical study of the neutrino freeze-out process within the SM gives $N^{\text{eff}}_{\nu}=3.046$~\cite{Mangano:2005cc}, a value close to the number of flavors, indicating only a small amount of neutrino reheating. 
  We emphasize that $N^{\text{eff}}_\nu$ is named after neutrinos as they are the only significant contributor in SM cosmology. However, $N^{\text{eff}}_\nu$ could be impacted by non SM particles.
 
 First we study how $N^{\text{eff}}_{\nu}$ is impacted by non-SM neutrino dynamics by characterizing its dependence on the neutrino freeze-out temperature within an instantaneous freeze-out model. This model, based on the work in \cite{Birrell:2013gpa,Birrell:2012gg}, allows us study $N^{\text{eff}}_{\nu}$ without requiring a detailed description of the underlying non-SM interactions; the latter will be considered later in Section \ref{ch:param:studies}. In addition, we explore the possibility of non-SM neutrino contributions to $N^{\text{eff}}_\nu$; the latter is based on \cite{Birrell:2014cja}.
@@ -37,15 +37,59 @@ f_{k}^\pm=\frac{1}{\Upsilon^{-1} \exp(E/T)\pm 1}\,,\hspace{2mm} T_k<T\leq T_{ch}
 \end{equation}
 The need to preserve the total particle number within the distribution introduces an additional parameter $\Upsilon$ called fugacity. 
 
-The fugacity, $\Upsilon(t)\equiv e^{\sigma(t)}$, controls the occupancy of phase space and is necessary once $T(t)<T_{ch}$ in order to conserve particle number. A fugacity different from $1$ implies an over-abundance ($\Upsilon>1$) or under-abundance ($\Upsilon<1$) of particles compared to chemical equilibrium and in either of these situations one speaks of chemical nonequilibrium. 
+The fugacity, $\Upsilon(t)$, controls the occupancy of phase space and is necessary once $T(t)<T_{ch}$ in order to conserve particle number. A fugacity different from $1$ implies an over-abundance ($\Upsilon>1$) or under-abundance ($\Upsilon<1$) of particles compared to chemical equilibrium and in either of these situations one speaks of chemical nonequilibrium. 
 
-The effect of $\sigma$ is similar after that of chemical potential\index{chemical potential} $\mu$, except that $\sigma$ is equal for particles and antiparticles, and not opposite. This means $\sigma>0$ ($\Upsilon>1$) increases the density of both particles and antiparticles, rather than increasing one and decreasing the other as is common when the chemical potential is associated with conserved quantum numbers. Similarly, $\sigma<0$ $(\Upsilon<1)$ decreases both. The fact that $\sigma$ is not opposite for particles and antiparticles reflects the fact that both the number of particles and the number of antiparticles are conserved after chemical freeze-out, and not just their difference. Ignoring the small particle antiparticle asymmetry their equality reflects the fact that any process that modifies the distribution would affect both particle and antiparticle distributions in the same fashion. Such an asymmetry would be incorporated by replacing $\Upsilon\rightarrow \Upsilon e^{\pm\mu/T}$ where $\mu$ is the chemical potential, but we ignore it in this work as the matter antimatter asymmetry is on the order of $1$ part in $10^9$.
+The effect of $\ln(\Upsilon)$ is similar after that of chemical potential\index{chemical potential} $\mu$, except that $\ln(\Upsilon)$ is equal for particles and antiparticles, and not opposite. This means $\Upsilon>1$ increases the density of both particles and antiparticles, rather than increasing one and decreasing the other as is common when the chemical potential is associated with conserved quantum numbers. Similarly,  $\Upsilon<1$ decreases both. The fact that $\ln(\Upsilon)$ is not opposite for particles and antiparticles reflects the fact that both the number of particles and the number of antiparticles are conserved after chemical freeze-out, and not just their difference. Ignoring the small particle antiparticle asymmetry their equality reflects the fact that any process that modifies the distribution would affect both particle and antiparticle distributions in the same fashion. Such an asymmetry would be incorporated by replacing $\Upsilon\rightarrow \Upsilon e^{\pm\mu/T}$ where $\mu$ is the chemical potential, but we ignore it in this work as the matter antimatter asymmetry is on the order of $1$ part in $10^9$.
 
  We also emphasize that the fugacity is time dependent and not just an initial condition. At high temperatures $\Upsilon=1$ and we will find that $\Upsilon<1$ emerges dynamically as a result of the freeze-out process. The importance of fugacity was first introduced in \cite{Rafelski:1982pu} in the context of quark-gluon plasma. Its presence in cosmology was noted in \cite{Bernstein:1985th,Dolgov:1992wf} but its importance has been largely forgotten and the consequences unexplored in the literature. 
 
+{\color{blue}
+\para{Comoving Entropy and Particle Number in an FRW Spacetime}
+In an FRW spacetime, and assuming the particle distributions have the kinetic equilibrium form \req{eq:kEq} with fugacities $\Upsilon_{A}$, we can use the general formalism from Section \ref{sec:BoltzmannEinstein} to compute the rate of change of comoving particle number and entropy; later we will apply these results to study neutrino freeze-out.
 
+The number density of particle species $A$ in an FRW universe is given by $N_A^0$ and so comoving particle number can be written in terms of the divergence of the number current, \req{nmdef}, as follows
+\begin{align}
+\frac{d}{dt}(a^3N^0_A)=a^{3} \nabla_\mu N_A^\mu\,.  
+\end{align}
+By a similar computation to \eqref{eq:charge_current_div} we obtain
+\begin{align}\label{eq:FRWcomovingNumGen}
+a^{-3}\frac{d}{dt}(a^3N^0_A)=&\sum_{I\in int(A)} \frac{n_A}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
+&\left. \qquad-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right)  dV.\notag
+\end{align}
+The kinetic equilibrium distribution satisfies
+\begin{equation}
+f_A=\Upsilon_A e^{-E_A/T}f^A
+\end{equation}
+where $E=p_A^0$. Substituting this into \req{eq:FRWcomovingNumGen} and simplifying we find
+\begin{align}\label{eq:comovingPartNumFRWfinal}
+&a^{-3}\frac{d}{dt}(a^3N_A^0)\\
+=&\sum_{I\in int(A)}\frac{n_A}{n_I}\left(\int \prod_j\left(\Upsilon_{B_j}^{n_{B_j}}e^{-\sum_{l=1}^{n_{B_j}}E_{B_j}^l/T}\right)f^{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^I(p_{B_j}^l,p_{A_i}^k)dV\right.\notag\\
+&\left. -\int \prod_i\left(\Upsilon_{A_i}^{n_{A_i}}e^{-\sum_{k=1}^{n_{A_i}}E_{A_i}^k/T}\right)f^{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)dV\right)\notag\\
+=&\sum_{I\in int(A)}\left(\prod_j\Upsilon_{B_j}^{n_{B_j}}- \prod_i\Upsilon_{A_i}^{n_{A_i}}\right){n_A}R_I\,,\notag\\
+&R_I\equiv \frac{1}{n_I}\int\left(e^{-\sum_j\sum_{l=1}^{n_{B_j}}E_{B_j}^l/T}\right) f^{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^I(p_{B_j}^l,p_{A_i}^k)dV\notag\,,
+\end{align}
+where $j$ indexes the reactants of $I$ and $i$ the products. To obtain this result we have assumed time-reversal symmetry of the scatting kernel \req{timeSymmetry} and used conservation of 4-momentum, $\Delta p=0$.    In particular, if all particle species are in chemical equilibrium then the rate of change of comoving particle number is zero. The non-negative quantity $R_I$ can be viewed as quantifying the strength of the interaction $I$. Finally, note the terms corresponding to symmetric interactions vanish. 
 
+We can also use \req{eq:comovingPartNumFRWfinal} to obtain a formula for the  comoving total entropy of a collection of particles in kinetic equilibrium in an FRW universe. Denoting the total entropy current  $S^\mu\equiv\sum_A S_A^\mu$, with $S_A^\mu$ defined as in \req{smdef}, and noting that the entropy density in an FRW universe  is given by $\sigma=S^0$, we can   combine \req{S:n:eq} with \req{eq:comovingPartNumFRWfinal} to compute
+\begin{align}
+&a^{-3}\frac{d}{dt}(a^3\sigma)=-\sum_A \ln(\Upsilon_A) \frac{d}{dt}(a^3N_A^0)\\
+&=-\sum_A \ln(\Upsilon_A)\sum_{I\in int(A)} \left(\prod_j\Upsilon_{B_j}^{n_{B_j}}- \prod_i\Upsilon_{A_i}^{n_{A_i}}\right)n_A R_I\notag\\
+&=\sum_{I\in int} \left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)R_I\sum_{A\in p(I)}n_A \ln(\Upsilon_A)\notag\\
+&=\sum_{I\in \overrightarrow{int}} \left[\left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)R_I\sum_{A\in p(I)}n_A \ln(\Upsilon_A)\right.\notag\\
+&\left.\qquad\qquad+\left( \prod_j\Upsilon_{B_j}^{n_{B_j}}-\prod_j\Upsilon_{A_i}^{n_{A_i}}\right)R_I\sum_{B\in r(I)}n_B \ln(\Upsilon_B)\right]\notag\\
+&=\sum_{I\in \overrightarrow{int}} \left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)\left(\sum_i n_{A_i}\ln(\Upsilon_{A_i})-\sum_jn_{B_j}\ln(\Upsilon_{B_j})\right)R_I\,,\notag
+\end{align}
+where $j$ indexes the reactants of $I$ and $i$ the products.  Again, there is no contribution from symmetric interactions.  Observing that 
+ \begin{align}
+     \sum_in_{A_i}\ln(\Upsilon_{A_i})\geq \sum_jn_{B_j} \ln(\Upsilon_{B_j}) \text{ if and only if }\prod_i \Upsilon^{n_{A_i}}_{A_i}\geq\prod_j\Upsilon^{n_{B_j}}_{B_j}
+ \end{align} 
+ we can conclude 
+\begin{equation}
+\frac{d}{dt}(a^3\sigma)\geq 0
+\end{equation}
+with strict inequality if the particle species are not all in chemical equilibrium.  In particular, we have re-derived the H-Theorem in the case where all the distributions have the kinetic equilibrium form \eqref{eq:kEq}.
 
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \index{cosmology!FLRW}
 \para{Einstein-Vlasov Equation in FLRW Spacetime}
@@ -76,18 +120,18 @@ T_\nu(t)=\frac{T_ka(t_k)}{a(t)}\,.
 \end{equation}
 We will call $T_\nu$ in \req{eq:TneutrinoDist} the neutrino background temperature, even though the distribution of free streaming particles has a thermal shape only for $m=0$ and hence $T_{\nu}$ will differ from the temperature of the photon background. The shape seen in  \req{eq:NeutrinoDist} describes a gas of neutrinos that is free streaming in an expanding universe following the freeze-out temperature $T_\nu(t_k)=T_k$. 
 
-The energy, pressure, number density, and entropy density\index{entropy!density} of the free-streaming distribution can be computed using \eqref{Tmndef}, \eqref{nmdef}, and \eqref{smdef}\index{free-streaming!energy density}\index{free-streaming!pressure}\index{free-streaming!number density}
+The energy, pressure, number, and entropy densities\index{entropy!density}, denoted by $\rho$, $P$, $n$, and $\sigma$ respectively, of the free-streaming distribution \req{eq:NeutrinoDist} can be computed using \eqref{Tmndef}, \eqref{nmdef}, and \eqref{smdef}\index{free-streaming!energy density}\index{free-streaming!pressure}\index{free-streaming!number density}
 \begin{align}
 \rho&=\frac{g_\nu}{2\pi^2}\!\int_0^\infty\!\!\!\frac{\left(m_\nu^2+p^2\right)^{1/2}p^2dp }{\Upsilon_\nu^{-1}e^{\sqrt{p^2/T_\nu^2+m_\nu^2/T_k^2}}+ 1}\,,\label{eq:NeutrinoRho}\\[0.2cm]
 P&=\frac{g_\nu}{6\pi^2}\!\int_0^\infty\!\!\!\frac{\left(m_\nu^2+p^2\right)^{-1/2}p^4dp }{\Upsilon_\nu^{-1} e^{\sqrt{p^2/T_\nu^2+m_\nu^2/T_k^2}}+ 1}\,,\label{eq:NeutrinoP}\\[0.2cm]
 n&=\frac{g_\nu}{2\pi^2}\!\int_0^\infty\!\!\!\frac{p^2dp }{\Upsilon_\nu^{-1}e^{\sqrt{p^2/T_\nu^2+m_\nu^2/T_k^2}}+ 1}\,,\label{eq:NumDensity}\\[0.3cm]
-s&=-\frac{g_\nu}{2\pi^2}\!\int_0^\infty\!\!\!H(p^2/T_\nu^2)p^2dp\,,\,\,\,H\equiv K\ln K +(1-K)\ln(1-K)\,,\label{eq:EntropyIntegrand}
+\sigma&=-\frac{g_\nu}{2\pi^2}\!\int_0^\infty\!\!\!H(p^2/T_\nu^2)p^2dp\,,\,\,\,H\equiv K\ln K +(1-K)\ln(1-K)\,,\label{eq:EntropyIntegrand}
 \end{align}
 where $g_\nu$ is the neutrino degeneracy (not to be confused with the metric factor $\sqrt{-g}=a^3)$.
 
 Comparing these results to the corresponding quantities in Minkowski space, we see that they differ by the replacement $m\rightarrow m T_\nu(t)/T_k$ in the exponential factor {\em only}. Changing variables to $u=p/T_\nu$, one sees that both $n$ and $s$ are proportional to $T_\nu^3$. The neutrino free-streaming temperature, $T_\nu$, is inversely proportional to $a$, hence we see that
 \begin{equation}\label{eq:ConstEntropy}
-a^3n=\text{constant}\text{ and } a^3s=\text{constant}.
+a^3n=\text{constant}\text{ and } a^3\sigma=\text{constant}\,.
 \end{equation}
 This proves that the particle number and entropy in a comoving volume are conserved, irrespective of the form of $K$ that defines the shape of the momentum distribution at freeze-out. It should be noted that this conservation of entropy in free-streaming neutrinos relies on the Boltzmann equation model, and its corresponding entropy current\index{entropy!current} \eqref{smdef}, an approximation which may break down in later epochs of the evolution of the Universe. 
 
@@ -97,11 +141,11 @@ The instantaneous freeze-out assumption allows us to use conservation laws in \r
 
 The photon temperature then evolves to conserve the comoving entropy within the coupled system of photons, electrons, and positrons. As annihilation occurs, entropy from $e^+e^-$ is fed into photons, leading to reheating\index{reheating}. We now make this analysis quantitative in order to derive a relation between the reheating temperature ratio and neutrino fugacity\index{fugacity}.
 
-Assuming $T_{ch}\gg m_e$, the entropy in a given comoving volume, $V(t_{ch})$, is the sum of relativistic neutrinos (with $\Upsilon_\nu=1$), electrons, positrons, and photons
+Assuming $T_{ch}\gg m_e$, the entropy, $S$, in a given comoving volume, $V$, is the sum of relativistic neutrinos (with $\Upsilon_\nu=1$), electrons, positrons, and photons
 \begin{equation}
 S(T_{ch})=\left(\frac{7}{8}g_\nu+\frac{7}{8}g_{e^\pm} +g_\gamma \right)\frac{2\pi^2}{45} T_{ch}^3V(t_{ch})\,,
 \end{equation}
-where $T_1$ is the common neutrino, $e^+e^-$, and $\gamma$ temperature. 
+where $T_{ch}$ is the common neutrino, $e^+e^-$, and $\gamma$ temperature at chemical freeze-out. 
 
 The number of neutrinos and anti-neutrinos in this same volume is
 \begin{equation}
@@ -109,7 +153,7 @@ The number of neutrinos and anti-neutrinos in this same volume is
 \end{equation}
 The particle-antiparticle, flavor, and spin-helicity statistical factors are $g_\nu=6$, $g_{e^\pm}=4$, $g_\gamma=2$.
 
-Distinct chemical and thermal freeze-out temperatures lead to a nonequilibrium modification of the neutrino distribution in the form of a fugacity factor $\Upsilon_\nu$ when $T_k<T<T_{ch}$. This leads to the following expressions for neutrino entropy and number at $T=T_k$ in the comoving volume
+Distinct chemical and thermal freeze-out temperatures lead to a nonequilibrium modification of the neutrino distribution in the form of a fugacity factor $\Upsilon_\nu$ when $T_k<T<T_{ch}$. This leads to the following expressions for, respectively, neutrino entropy and number at $T=T_k$ in the comoving volume
 \begin{align}
 S(T_k)=&\left(\frac{2\pi^2}{45}g_\gamma T_k^3+S_{e^\pm}(T_k)+S_{\nu}(T_k)\right)V(t_k)\,,\\
 \mathcal{N}_{\nu}(T_k)=&\frac{g_\nu}{2\pi^2}\int_0^\infty \frac{u^2 du}{\Upsilon_\nu^{-1}(T_k)e^u+1}T_k^3V(t_k)\,.\notag
@@ -143,16 +187,16 @@ These relations allow one to solve for the fugacity, reheating ratio, and effect
  \frac{S_{\nu}(T_k)/T_k^3+S_{e^\pm}(T_k)/T_k^3+\frac{2\pi^2}{45}g_\gamma }{\left(\frac{7}{8}g_\nu+\frac{7}{8}g_{e^\pm} +g_\gamma \right)\frac{2\pi^2}{45} }=\frac{2}{3\zeta(3)}\int_0^\infty \frac{u^2 du}{\Upsilon_\nu^{-1}(T_k)e^u+1}.
 \end{align}
 
-This can be solved numerically to compute $\Upsilon_\nu(T_k)$. One can also use these relations to analytically derive the following expansion for the photon to neutrino temperature ratio after $e^\pm$ annihilation (see \cite{Birrell:2012gg}):
+This can be solved numerically to compute $\Upsilon_\nu(T_k)$. One can also use these relations to analytically derive the following expansion for the photon to neutrino temperature ratio after $e^\pm$ annihilation (see \cite{Birrell:2012gg}), where here we define $\delta=\ln(\Upsilon)$:
 \begin{align}\label{eq:UpsilonRatio}
-&\frac{T_\gamma}{T_\nu}=a\Upsilon^{b}\left(1+c\sigma^2+O(\sigma^3)\right),\\
+&\frac{T_\gamma}{T_\nu}=a\Upsilon^{b}\left(1+c\delta^2+O(\delta^3)\right),\\
 \label{value_a}
 &a=\left(1+\frac{7}{8}\frac{g_{e^\pm}}{g_\gamma}\right)^{1/3}=\left(\frac{11}{4}\right)^{1/3}\,,\,\,\,b\approx 0.367\,, \,\,\,c\approx -0.0209\,.\notag
 \end{align}
 
-An approximate power law fit was first obtained numerically in \cite{Birrell:2013gpa}. A relation between the fugacity\index{fugacity} $\Upsilon=e^\sigma$ and the effective number of neutrinos \eqref{eq:NeffDef} was also derived in \cite{Birrell:2012gg} using these methods:
+An approximate power law fit was first obtained numerically in \cite{Birrell:2013gpa}. A relation between the fugacity\index{fugacity} $\Upsilon=e^\delta$ and the effective number of neutrinos \eqref{eq:NeffDef} was also derived in \cite{Birrell:2012gg} using these methods:
 \begin{equation}\label{eq:NnuApprox}
-N^{\mathrm{eff}}_\nu=\frac{360}{7\pi^4}\frac{e^{-4b\sigma}}{(1+c\sigma^2)^4}\int_0^\infty \frac{u^3}{e^{u-\sigma}+1}du\left(1+O(\sigma^3)\right)\,.
+N^{\mathrm{eff}}_\nu=\frac{360}{7\pi^4}\frac{e^{-4b\delta}}{(1+c\delta^2)^4}\int_0^\infty \frac{u^3}{e^{u-\delta}+1}du\left(1+O(\delta^3)\right)\,.
 \end{equation}
 
 

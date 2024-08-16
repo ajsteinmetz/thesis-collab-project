@@ -296,13 +296,13 @@ After chemical freeze-out, at yet lower temperature inn expanding Universe parti
 
 Once chemical freeze-out takes hold, the distribution function has the kinetic equilibrium\index{kinetic equilibrium} form with pair abundance typically below maximum yield~$\Upsilon \le 1$
 \begin{equation}\label{kinetic_equilib}
-f_\mathrm{F}(t,E)=\frac{1}{\Upsilon^{-1}\exp[(E-\mu)/T]+1},\qquad \text{ for }T_\mathrm{F}< T(t)< T_\mathrm{ch},
+f_\mathrm{k}(t,E)=\frac{1}{\Upsilon^{-1}\exp[(E-\mu)/T]+1},\qquad \text{ for }T_\mathrm{F}< T(t)< T_\mathrm{ch},
 \end{equation}
 where $T_\mathrm{F}$ represents the kinetic freeze-out temperature. The generalized fugacity\index{fugacity} $\Upsilon(t)$ controls the occupancy of phase space and is necessary once $T(t)<T_\mathrm{ch}$ in order to conserve particle number.
 %
 \item \underline{\it Free streaming:\/}
 After kinetic freeze-out, all particles have fully decoupled from the primordial plasma, and thereby ceased influencing the dynamics of the Universe and become free-streaming\index{free-streaming}. The Einstein-Vlasov momentum evolution equation can be solved~\cite{Choquet-Bruhat:2009xil} and the free-streaming momentum distribution can be written\index{Einstein-Vlasov equation} as~\cite{Birrell:2012gg}\index{free-streaming!quantum distribution}
-\begin{equation}\label{free_stream_dist}
+\begin{equation}\label{freeStreamDist}
 f_\mathrm{fs}(t,E)=\frac{1}{\Upsilon^{-1}\exp{\left[\sqrt{\frac{E^2-m^2}{T_\mathrm{fs}^2}+\frac{m^2}{T^2_\mathrm{F}}}-\frac{\mu}{T_\mathrm{F}}\right]+1}},\quad T_\mathrm{fs}(t)=\frac{T_\mathrm{F}a(t_k)}{a(t)},
 \end{equation}
 where the free-streaming effective temperature $T_\mathrm{fs}$ is obtained by redshifting the temperature at kinetic freeze-out. If a massive particle (e.g. dark matter) freeze-out from cosmic plasma in the nonrelativistic regime, $m\gg T_\mathrm{F}$. We can use the
@@ -340,8 +340,10 @@ n_i&=g_i\int\!\!\frac{d^3p}{(2\pi)^3}f_{F/B}=\frac{g_i}{2\pi^2}\!\int_{m_i}^\inf
 \end{align}
 where $g_i$ is the degeneracy of the particle species `$i$'. Inclusion of the fugacity parameter $\Upsilon_i$ allows us to characterize particle properties in chemical nonequilibrium situations. Given the energy density, pressure, and number densities, the entropy density for particle species $i$ can be written as \index{entropy!density}
 \begin{align}\label{entropy}
-\sigma_i=\frac{S_i}{V}=\left(\frac{\rho_i+P_i}{T}-\frac{\mu_i}{T}\,n_i\right).
+\sigma_i=\frac{S_i}{V}=\left(\frac{\rho_i+P_i}{T}-\frac{\tilde \mu_i}{T}\,n_i\right)\,,\qquad
+\tilde \mu_i=T\ln \Upsilon_i +\mu_i\,,
 \end{align}
+where the chemical potential associated with charge, baryon number, etc., changes sign between particles and antiparticles, while $\Upsilon_i$ does not.
 
 Once full decoupling is achieved, the corresponding free-streaming energy density, pressure, number density and entropy arising from the solution of the Boltzmann-Einstein equation\index{Boltzmann-Einstein equation} differ from the thermal equilibrium \req{energy_density}, \req{Pressure_density}, \req{number_density}, and~\req{entropy} by replacing the mass by a time dependant effective mass $m\,T_\mathrm{fs}(t)/T_\mathrm{F}$ in the exponential, and other related changes which will be derived in~\rsec{sec:model:ind}, see \req{eq:NeutrinoRho}, \req{eq:NeutrinoP}, \req{eq:NumDensity}, and \req{eq:EntropyIntegrand}. Once decoupled, the free streaming particles maintain their comoving number and entropy density, see~\req{eq:ConstEntropy}.
 
@@ -519,51 +521,51 @@ The parameter $q$ and thus time evolution of $H$ according to~\req{eq:Hdot} is d
 We note that in FLRW Universe according to~\req{eq:Hdot1} the second derivative of scale parameter $a$ changes sign when the sign of $q$ changes: the Universe decelerates (hence name of $q>0$) initially slowing down due to gravity action. The Universe will reverse this and accelerate under influence of dark energy as $q$ changes sign. even so, the Hubble parameter according to~\req{qparam} keeps its sign since even when dark energy dominates we approach asymptotically $q=-1$, that is according to~\req{EpsLam} $P=-\rho$. In the dark energy dominated Universe pressure approaches this condition without ever reaching it as normal matter remains within the Universe inventory: In the FLRW Universe $\dot H=0$ is impossible, $H(t)$ is continuously decreasing in its value, we cannot have a minimum in the value of $H$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\para{Universe dynamics and conservation laws}
+\para{Conservation laws}
 In a flat FLRW universe, the spatial components of the divergence of the stress energy tensor automatically vanish, leaving the single condition
 \begin{equation}\label{stress_energy_eq}
 \nabla_\mu \mathcal{T}^{\mu 0}=\dot{\rho}+3\left(\rho+P\right)\frac{\dot{a}}{a}=0\,.
 \end{equation}
 If the set of particles can be portioned into subsets such that there is no interaction between the different subsets then this condition applies independently to each and leads to an independent temperature for each such subset. We will focus on a single such group and use~\req{stress_energy_eq} to derive an equivalent condition involving entropy and particle number, which illustrate how the entropy of the universe evolves in time. 
 
-Consider a collection of particles in kinetic equilibrium\index{kinetic equilibrium} at a common temperature $T$, with distinct fugacity\index{fugacity} $\Upsilon_i$, and which satisfy~\req{stress_energy_eq}. For the following derivation, it is useful to define $\mu_i=\sigma_i T$. This gives the expressions a familiar thermodynamic form with $\mu$ playing the role of chemical potential\index{chemical potential} and helps with the calculations, but should not be confused with a chemical potential as discussed above. The expressions for the energy density, pressure\index{pressure}, number density, and entropy density\index{entropy!density} of a particle of mass $m$ with momentum distribution $f$ are
+Consider a collection of particles with    distributions  $f_i$ that are in kinetic equilibrium\index{kinetic equilibrium} \req{kinetic_equilib}  at a common temperature $T$, with zero chemical potentials and distinct fugacities\index{fugacity} $\Upsilon_i$, and which satisfy~\req{stress_energy_eq}. For the purpose of the following derivation, it is useful to rewrite the fugacities as if they came from chemical potentials, i.e., define  $\hat{\mu}_i$ by $\Upsilon_i=e^{\hat{\mu}_i/T}$. This gives the expressions a familiar thermodynamic form with $\hat{\mu}_i$ playing the role of chemical potential\index{chemical potential} and helps with the calculations, but should not be confused with a chemical potential as discussed above. The  energy density, pressure\index{pressure}, number density, and entropy density\index{entropy!density} of a particle of mass $m$ with momentum distribution $f$ are, respectively, given by
 \begin{align}\label{moments}
 \rho=&\frac{g_p}{(2\pi)^3}\int f(t,p)Ed^3p\,, \hspace{2mm} E=\sqrt{m^2+p^2}\,,\\
 P=&\frac{g_p}{(2\pi)^3}\int f(t,p)\frac{p^2}{3E}d^3p\,,\\
 n=&\frac{g_p}{(2\pi)^3}\int f(t,p) d^3p\,,\\
-s=&-\frac{g_p}{(2\pi)^3}\int (f\ln(f)\pm(1\mp f)\ln(1\mp f)) d^3p\,,
+\sigma=&-\frac{g_p}{(2\pi)^3}\int (f\ln(f)\pm(1\mp f)\ln(1\mp f)) d^3p\,,
 \end{align}
-where $g_p$ is the degeneracy of the particle.
+where $g_p$ is the degeneracy of the particle, the upper signs are for fermions, and the lower signs for bosons.
 
-Integration by parts establishes the following identities when $f=f_i$ is the kinetic equilibrium distribution~\req{eq:kEq} for the $i$'th component:
+Integration by parts establishes the following identities when $f=f_i$ is a kinetic equilibrium distribution for the $i$'th component:
 \begin{equation}\label{identities}
-s_i=\frac{\partial P_i}{\partial T}=(P_i+\rho_i-\mu_i n_i)/T, \hspace{3mm} n_i=\frac{\partial P_i}{\partial \mu_i}.
+\sigma_i=\frac{\partial P_i}{\partial T}=(P_i+\rho_i-\hat{\mu}_i n_i)/T, \hspace{3mm} n_i=\frac{\partial P_i}{\partial \hat{\mu}_i}\,,
 \end{equation}
-Combining~\req{stress_energy_eq} with the identities in~\req{identities} we can obtain the rate of change of the total comoving entropy as follows. Letting $s=\sum_i s_i$ be the total entropy density, first compute
-\begin{align}\frac{1}{a^3}\frac{d}{dt}(a^3sT)&=\frac{1}{a^{3}}\frac{d}{dt}\left(a^3\left(P+\rho-\sum_i \mu_i n_i\right)\right)\\
-&=\dot{P}+\dot{\rho}-\sum_i \left(\dot{\mu_i}n_i+\mu_i\dot{n_i}\right)+3\left(P+\rho-\sum_i \mu_i n_i\right)\dot{a}/a\notag\\
-&=\frac{\partial P}{\partial T} \dot{T}+\sum_i\frac{\partial P_i}{\partial \mu_i} \dot{\mu_i}-\sum_i \left(\dot{\mu_i}n_i+\mu_i\dot{n_i}+3\mu_i n_i \dot{a}/a\right)+\nabla_\mu \mathcal{T}^{\mu 0}\notag\\
-&=s\dot{T}-\sum_i \left(\mu_i\dot{n_i}+3\mu_i n_i \dot{a}/a\right)\notag\\
-&=s\dot{T}- a^{-3}\sum_i\mu_i\frac{d}{dt}(a^3n_i)\,.\notag
+which is consistent with \req{entropy}. Combining~\req{stress_energy_eq} with the identities in~\req{identities} we can obtain the rate of change of the total comoving entropy as follows. Letting $\sigma=\sum_i \sigma_i$ be the total entropy density, first compute
+\begin{align}\frac{1}{a^3}\frac{d}{dt}(a^3\sigma T)&=\frac{1}{a^{3}}\frac{d}{dt}\left(a^3\left(P+\rho-\sum_i \hat{\mu}_i n_i\right)\right)\\
+&=\dot{P}+\dot{\rho}-\sum_i \left(\dot{\hat{\mu}_i}n_i+\hat{\mu}_i\dot{n_i}\right)+3\left(P+\rho-\sum_i \hat{\mu}_i n_i\right)\dot{a}/a\notag\\
+&=\frac{\partial P}{\partial T} \dot{T}+\sum_i\frac{\partial P_i}{\partial \hat{\mu}_i} \dot{\hat{\mu}_i}-\sum_i \left(\dot{\hat{\mu}_i}n_i+\hat{\mu}_i\dot{n_i}+3\hat{\mu}_i n_i \dot{a}/a\right)+\nabla_\mu \mathcal{T}^{\mu 0}\notag\\
+&=\sigma\dot{T}-\sum_i \left(\hat{\mu}_i\dot{n_i}+3\hat{\mu}_i n_i \dot{a}/a\right)\notag\\
+&=\sigma\dot{T}- a^{-3}\sum_i\hat{\mu}_i\frac{d}{dt}(a^3n_i)\,.\notag
 \end{align}
 Therefore we find
-\begin{align}\label{S_n_eq}
-\frac{d}{dt}(a^3s)=&\frac{1}{T}\frac{d}{dt}(a^3sT)-a^3s\frac{\dot T}{T}=-\sum_i\sigma_i\frac{d}{dt}(a^3n_i)\,.
+\begin{align}\label{S:n:eq}
+\frac{d}{dt}(a^3\sigma )=&\frac{1}{T}\frac{d}{dt}(a^3\sigma T)-a^3\sigma \frac{\dot T}{T}=-\sum_i\ln(\Upsilon_i)\frac{d}{dt}(a^3n_i)\,.
 \end{align}
 From this we can conclude that comoving entropy in conserved as long as each particle satisfies one of the following conditions:
 \begin{enumerate}
 \item
-The particle is in chemical equilibrium\index{chemical equilibrium}, {\it i.e.\/}, $\sigma_i= 0$;
+The particle is in chemical equilibrium\index{chemical equilibrium}, {\it i.e.\/}, $\Upsilon_i= 1$;
 \item
 The particle has frozen out chemically and thus has conserved comoving particle number, {\it i.e.\/}, $\frac{d}{dt}(a^3n_i)$. 
 \end{enumerate}
-Therefore, under the instantaneous freeze-out assumption, we can conclude conservation of comoving entropy. 
+Therefore, under the instantaneous freeze-out assumptions, we can conclude conservation of comoving entropy during all three eras, \eqref{equilibrium}~-~\eqref{freeStreamDist}, of the evolution of a distribution. 
 
 These observations provide an alternative characterization of the dynamics of a FLRW universe that is composed of entirely of particles in chemical or kinetic equilibrium. The dynamical quantities are the scale factor $a(t)$, the common temperature $T(t)$, and the fugacity of each particle species $\Upsilon_i(t)$ that is not in chemical equilibrium. 
 
 The dynamics are given by the Einstein equation, conservation of the total comoving entropy of all particle species, and conservation of comoving particle number for each species not in chemical equilibrium (otherwise $\Upsilon_i=1$ is constant),
 \begin{equation}\label{eq_dynamics}
-H^2=\frac{\rho_{tot}}{3M_p^2}\,, \qquad \frac{d}{dt}(a^3s)=0\,,\qquad \frac{d}{dt}(a^3n_i)=0 \,\text{ when } \Upsilon_i\neq 1\,.
+H^2=\frac{\rho_{tot}}{3M_p^2}\,, \qquad \frac{d}{dt}(a^3\sigma )=0\,,\qquad \frac{d}{dt}(a^3n_i)=0 \,\text{ when } \Upsilon_i\neq 1\,.
 \end{equation}
 We emphasize here that $\rho_{tot}$ is the total energy density of the Universe, which may be composed of contributions from multiple particle groupings with cross group interactions being absent. In such case, each grouping has its own temperature and independently conserves its comoving entropy. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
