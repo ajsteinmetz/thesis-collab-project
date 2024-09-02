@@ -103,7 +103,7 @@ $k,l = 1,2,...,N$ and $W_{ij|kl}$ is the transition rate for the respective coll
 It is important to note that in this framework for a plasma forced by external fields, the collision term is the only way a particle species can impact the dynamics of the phase space distribution of another species.
 
 \para{The BGK collision term}
-As discussed previously the integral in \req{eq:collisionMicro} vastly complicates solving the Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation} . Instead, we will use a simplified collision term that returns the distribution $f(x,p)$ to equilibrium at some characteristic rate $\kappa = 1/\tau$, reducing \req{eq:VBE} from an integro-differential equation to a differential equation. The relaxation rate or damping rate $\kappa$ is the sum of all possible collisions~\cite{Das:2021bkz}
+As discussed previously, the integral in \req{eq:collisionMicro} vastly complicates solving the Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation}. Instead, we will use a simplified collision term that returns the distribution $f(x,p)$ to equilibrium at some characteristic rate $\kappa = 1/\tau$, reducing \req{eq:VBE} from an integro-differential equation to a differential equation. The relaxation rate or damping rate $\kappa$ is the sum of all possible collisions~\cite{Das:2021bkz}
 \begin{equation}
     \kappa_k(p) = \sum^N_{i=1}\sum^N_{j=1}\sum^N_{l=1} \frac{1}{2}\int\frac{d^3p_l}{(2 \pi)^3p_l^0}\frac{d^3p_i}{(2 \pi)^3p_i^0}\frac{d^3p_j}{(2 \pi)^3p_j^0}f_l^{\text{eq}}W_{kl|ij}\,
 \end{equation}
@@ -319,7 +319,7 @@ $k=(\omega, \boldsymbol{k})$ is the 4-wavevector of the electromagnetic field. T
 \end{equation}
 The induced current $\widetilde{j}_{\mathrm{ind}}^{\mu}$, to leading order, is given by the polarization tensor through \req{eq:ohm}. Though the induced current is linear with respect to the self-consistent field $\widetilde{A}^{\nu}$, the field itself is intrinsically nonlinear regarding plasma response as we shall see when solving for the self-consistent fields \reqs{eq:phi}{eq:aperp}. Nonlinear response comes from higher-order terms involving nested convolution integrals of the polarization tensor and the self-consistent potential and is required when the polarization current is on the order of the external current.
 
-Solving Maxwell's equations in the Lorentz gauge $k \cdot \widetilde{A}=0$ one finds the usual expression
+Solving Maxwell's equations in the Lorentz gauge $k \cdot \widetilde{A}=0$, one finds the usual expression
 \begin{equation}\label{eq:Amu}
 \begin{split}
 \widetilde{A}^{\mu}(k)&= -\frac{\mu_0}{k^2}\left(\widetilde{j}_{\mathrm{ext}}^{\mu}(k)+ \widetilde{j}_{\mathrm{ind}}^{\mu}(k)\right)\\
@@ -351,7 +351,7 @@ These projections are equivalent to ones defined in \cite{Weldon:1982aq} up to a
 \end{array}
 \right]\,.
 \end{equation}
-Utilizing this decomposition, we can immediately see that the transverse polarization function will be related to the $\Pi^1_1 = \Pi^2_2 = \Pi_\perp$ component of the polarization tensor defined in \req{eq:pimunu}. Analogously the longitudinal portion of the polarization tensor is given by calculating the $\Pi^3_3 = \Pi_\parallel$ component. The spatial component of the potential $\widetilde{\boldsymbol{A}}$  in these coordinates can be expressed as
+Utilizing this decomposition, we can immediately see that the transverse polarization function will be related to the $\Pi^1_1 = \Pi^2_2 = \Pi_\perp$ component of the polarization tensor defined in \req{eq:pimunu}. Analogously, the longitudinal portion of the polarization tensor is given by calculating the $\Pi^3_3 = \Pi_\parallel$ component. The spatial component of the potential $\widetilde{\boldsymbol{A}}$  in these coordinates can be expressed as
 \begin{equation}
 \widetilde{\boldsymbol{A}} = \widetilde{A}_\parallel \hat{\boldsymbol{k}} + \widetilde{\boldsymbol{A}}_\perp\,,
 \end{equation}
@@ -395,7 +395,7 @@ The gauge condition \req{eq:apar} gives the self-consistent potential $\widetild
 \begin{equation}\label{eq:ftfields}
 \widetilde{\boldsymbol{B}}(\omega,\boldsymbol{k}) = i\boldsymbol{k} \times \widetilde{\boldsymbol{A}}_\perp\,, \quad \widetilde{\boldsymbol{E}}(\omega,\boldsymbol{k}) = -i \boldsymbol{k} \widetilde{\phi} + i \omega \widetilde{\boldsymbol{A}}\,.
 \end{equation}
-To obtain the electromagnetic fields in position space, one must Fourier transform \reqs{eq:phi}{eq:aperp}. If done analytically, this usually requires finding the poles in the denominator of these expressions, which equates to finding the poles of the thermal photon propagator. These poles represent propagating modes in the plasma. Modes will often be located at complex values in the $\omega, \mathbf{k}$ plane leading to finite lifetimes and spatial dispersion. 
+To obtain the electromagnetic fields in position space, one must Fourier transform \reqs{eq:phi}{eq:aperp}. If done analytically, this usually requires finding the poles in the denominator of these expressions, which equates to finding the poles of the thermal photon propagator. These poles represent propagating modes in the plasma. Modes will often be located at complex values in the $\omega, \mathbf{k}$ plane, leading to finite lifetimes and spatial dispersion. 
 
 \para{Small back-reaction limit}
 Here, we briefly mention an alternative to the self-consistent fields, which comes from assuming that the back reaction of the plasma due to the external fields is small compared to the external field. In this case, one can use the external field in the linear response equation instead of the total field
@@ -413,10 +413,10 @@ Electromagnetic fields in a polarizable medium are often described using the ele
 
 
 \subsection{General properties of EM fields in a plasma}
-In the case of an infinite homogeneous plasma, its properties are completely described by two independent polarization functions $\Pi_\parallel(k)$ and $\Pi_\perp(k)$. In the framework presented here, the properties of these scalar functions are imparted on the electromagnetic fields via the poles in the Fourier transform of the propagators in \reqs{eq:phi}{eq:aperp}. After contour integration, one effectively gets a sum of different electromagnetic fields at each pole, the amplitude of which depends on the residue of the pole, and a spacetime dependence, leading to growth attenuation or propagation depending on the pole's location. An example of this process in done in \cite{Grayson:2022asf}, where we Fourier transform the magnetic field in the center of heavy-ion collisions. 
+In the case of an infinite homogeneous plasma, its properties are completely described by two independent polarization functions $\Pi_\parallel(k)$ and $\Pi_\perp(k)$. In the framework presented here, the properties of these scalar functions are imparted on the electromagnetic fields via the poles in the Fourier transform of the propagators in \reqs{eq:phi}{eq:aperp}. After contour integration, one effectively gets a sum of different electromagnetic fields at each pole, the amplitude of which depends on the residue of the pole and a spacetime dependence, leading to growth attenuation or propagation depending on the pole's location. An example of this process in done in \cite{Grayson:2022asf}, where we Fourier transform the magnetic field in the center of heavy-ion collisions. 
 
 \para{Dispersion relation}
-We can find the poles of the propagator or equivalently the zeros of the dispersion relation by inverting Maxwell's equations
+We can find the poles of the propagator or, equivalently the zeros of the dispersion relation by inverting Maxwell's equations
 \begin{equation}
     -ik_{\mu}\widetilde{F}^{\mu \nu} = \mu_0( \widetilde{j}_{\mathrm{ind}}^{\nu}+\widetilde{j}_{\mathrm{ext}}^{\nu})\,.
 \end{equation}
@@ -434,13 +434,13 @@ The poles of $D^\mu_\nu(k)$ are given by the dispersion equation~\cite{melrose20
 \end{equation}
 The transverse mode has duplicate solutions as it describes modes in a plane perpendicular to $\boldsymbol{k}$.
 
-The dispersion \req{eq:disp} can be solved for numerous choices of variables describing the modes such as frequency, phase velocity, or wavevector. We chose to solve for the modes of the plasma in terms of frequency $\omega_m (\mathbf{k})$ which can be thought of as a quasi-particle $m$ with energy $\omega$ and momentum $\mathbf{k}$ analogous to the usual momentum energy relation 
+The dispersion \req{eq:disp} can be solved for numerous choices of variables describing the modes, such as frequency, phase velocity, or wavevector. We chose to solve for the modes of the plasma in terms of frequency $\omega_m (\mathbf{k})$, which can be thought of as a quasi-particle $m$ with energy $\omega$ and momentum $\mathbf{k}$ analogous to the usual momentum energy relation 
 \begin{equation}
     E^2 = \boldsymbol{p}^2 +m^2\, ,
 \end{equation}
-with $c=1$. This is not always the best choice for simplifying the solutions of \req{eq:disp}, but these modes are often the easiest to interpret. A study of the modes for the general polarization tensor is not the most informative process unless one is looking for general behavior which can be found in most plasma physics textbooks. Usually, in looking at these modes $\omega_m(\mathbf{k})$, one must first assume the external field's shape or some flow distribution in the plasma by specifying the equilibrium momentum distribution to yield interesting effects in the modes such as plasma instabilities.
+with $c=1$. This is not always the best choice for simplifying the solutions of \req{eq:disp}, but these modes are often the easiest to interpret. A study of the modes for the general polarization tensor is not the most informative process unless one is looking for general behavior, which can be found in most plasma physics textbooks. Usually, in looking at these modes $\omega_m(\mathbf{k})$, one must first assume the external field's shape or some flow distribution in the plasma by specifying the equilibrium momentum distribution to yield interesting effects in the modes such as plasma instabilities.
 
-When the plasma is perturbed in time in a way that doesn't depend on space, such as for a plane wave, one can take $k \to 0$ for both the transverse and longitudinal roots of the dispersion relation which reduces the frequency of plasma oscillations \cite{Formanek:2021blc,Grayson:2022asf}
+When the plasma is perturbed in time in a way that doesn't depend on space, such as for a plane wave, one can take $k \to 0$ for both the transverse and longitudinal roots of the dispersion relation, which reduces the frequency of plasma oscillations \cite{Formanek:2021blc,Grayson:2022asf}
 \begin{equation}\label{plasmafreq}
     \omega_{\pm} = -\frac{i\kappa}{2} \pm \sqrt{\omega_p^2 - \frac{\kappa}{4}^2}\,,
 \end{equation}
@@ -452,7 +452,7 @@ with
 \begin{equation}
     m_D^2 = \frac{e^2 T}{3}\,.
 \end{equation}
-The Debye screening mass $m_D$ describes the strength of polarization in the plasma. The plasma frequency $\omega_p$ is the characteristic response frequency of the plasma. For an external field which is an oscillatory wave of the form $E=E_0e^{-i\omega t}$, one would find that the response is weakly-damped or over-damped depending on the size of $\kappa$ according to \req{eq:plasmafreq}. Waves are weakly damped for $\kappa \ll \omega_p$, and since the square root is imaginary for $\kappa > 2\omega_p$, waves become over-damped. These general statements are subject to the spacetime dependence of the external perturbation. For instance, if a particle moves through the plasma at a constant velocity, the field will not experience much damping if the velocity is much less than the speed of sound in the plasma.
+The Debye screening mass $m_D$ describes the strength of polarization in the plasma. The plasma frequency $\omega_p$ is the characteristic response frequency of the plasma. For an external field, which is an oscillatory wave of the form $E=E_0e^{-i\omega t}$, one would find that the response is weakly-damped or over-damped depending on the size of $\kappa$ according to \req{eq:plasmafreq}. Waves are weakly damped for $\kappa \ll \omega_p$, and since the square root is imaginary for $\kappa > 2\omega_p$, waves become over-damped. These general statements are subject to the spacetime dependence of the external perturbation. For instance, if a particle moves through the plasma at a constant velocity, the field will not experience much damping if the velocity is much less than the speed of sound in the plasma.
 
 In the static limit $\omega \rightarrow 0$ the zeros in the longitudinal dispersion relation take on the form
 \begin{equation}
@@ -465,7 +465,7 @@ Fourier transforming using the positive root in \req{eq:phi} gives the Debye-H\"
 The Debye length $\lambda_D$ describes the size of the polarization cloud around a charge generated by the plasma.
 
 \para{Permittivity, susceptibility, and conductivity}
-In most fields of applied physics the effects of a polarizable medium on electromagnetic fields are not described by the polarization functions $\Pi_\parallel$ and $\Pi_\perp$. It is instructive to connect these quantities to more commonplace definitions such as relative permittivity $\epsilon$, susceptibility $\chi$, and conductivity $\sigma$.
+In most fields of applied physics, the effects of a polarizable medium on electromagnetic fields are not described by the polarization functions $\Pi_\parallel$ and $\Pi_\perp$. It is instructive to connect these quantities to more commonplace definitions such as relative permittivity $\epsilon$, susceptibility $\chi$, and conductivity $\sigma$.
 
 The dielectric and susceptibility tensors are related to the spatial portion of the polarization tensor $\Pi^i_j$ ~\cite{Starke:2014tfa,melrose2008quantum},
 \begin{equation}\label{dielten}
@@ -502,7 +502,7 @@ with the static conductivity given by
 \end{equation} 
 The Drude model is equivalent to solving the Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation}  using the Anderson-Witting collision term \req{eq:lincoll} and neglecting spatial dispersion.
 
-These quantities are discussed in detail and plotted in \cite{Formanek:2021blc}. While these quantities are useful for communicating the physics of plasma response, the limits of these quantities must be taken carefully to retain the causal properties of the field. Specifically, tacitly expanding these quantities in either $\omega$ and $\mathbf{k}$ and then inserting them into the self-consistent potentials \reqs{eq:phi}{eq:aperp} will not necessarily generate causal solutions. Instead of carefully expanding and taking limits of these quantities to ensure analyticity, it's often easier to expand the electromagnetic fields within their Fourier transforms as is done in Appendix B of \cite{Grayson:2022asf}.
+These quantities are detailed and plotted in \cite{Formanek:2021blc}. While these quantities are useful for communicating the physics of plasma response, the limits of these quantities must be taken carefully to retain the causal properties of the field. Specifically, tacitly expanding these quantities in either $\omega$ and $\mathbf{k}$ and then inserting them into the self-consistent potentials \reqs{eq:phi}{eq:aperp} will not necessarily generate causal solutions. Instead of carefully expanding and taking limits of these quantities to ensure analyticity, it's often easier to expand the electromagnetic fields within their Fourier transforms as is done in Appendix B of \cite{Grayson:2022asf}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Advances in linear response: discussion and outlook}
@@ -532,7 +532,7 @@ The projector operator$\mathcal{P}^{\mu \nu}(u)$ is
 \begin{equation}
     \mathcal{P}^{\mu \nu}(u) = g^{\mu \nu} -u^\mu u^\nu\,.
 \end{equation}
-We show in \cite{Grayson:2022asf} that the energy-momentum violation cancels in the current for a matter-antimatter plasma. Finding the polarization tensor, including energy-momentum conservation, is the subject of future work. The addition of this term in the current is studied in relativistic hydrodynamics in \cite{Singha:2023eia}. Instead of adding these complex correction terms, it may be better to use the Fokker-Planck equation or its simplified counterpart the LBO or Doughtery collision term \cite{Dougherty1964,Francisquez:2022imd,Ong:1970evs}, which manifestly conserves energy-momentum and current, and is better suited to study electromagnetic grazing collisions. 
+In \cite{Grayson:2022asf}, we show that the energy-momentum violation cancels in the current for a matter-antimatter plasma. Finding the polarization tensor, including energy-momentum conservation, is the subject of future work. The addition of this term in the current is studied in relativistic hydrodynamics in \cite{Singha:2023eia}. Instead of adding these complex correction terms, it may be better to use the Fokker-Planck equation or its simplified counterpart the LBO or Doughtery collision term \cite{Dougherty1964,Francisquez:2022imd,Ong:1970evs}, which manifestly conserves energy-momentum and current, and is better suited to study electromagnetic grazing collisions. 
 \para{Applications to other plasmas}
 The main motivation of this work was to derive a relativistic polarization tensor that could be used to describe quark-gluon plasma and other plasmas where damping is important. In Chapter \ref{chap:QCD} we discuss the application of the ultrarelativistic limit of the polarization tensor to study the electromagnetic properties of QGP. This polarization tensor is easy to generalize to other ultrarelativistic antimatter plasmas. Since the particles are massless, increasing the number of plasma particle species merely leads to an enhancement of the Debye mass \cite{Grayson:2022asf,Kapusta:1992fm}
 \begin{equation}\label{eq:Debyem}
@@ -543,14 +543,14 @@ where $C_{\text{em}} =  2e^2/3$. We implement the nonrelativistic solution to th
 If considering a plasma of particles of different masses, such as an electron-proton plasma, one needs only to find a polarization tensor for each particle species and then sum them up in the induced current \req{eq:perturbation1}.
 
 \para{Fully relativistic polarization tensor}
-One can evaluate the integrals in \req{eq:pimunu} by assuming an appropriate equilibrium distribution to find the polarization tensor. As mentioned above this is done for the ultrarelativistic and the nonrelativistic limits in \cite{Formanek:2021blc}. For the full relativistic calculation, relevant for plasma where the temperature is on the order of the mass of the plasma constituents $m\approx T$, one must integrate the relativistic Fermi function. This can be done by writing it in the series representation \cite{Letessier:2002ony}
+One can evaluate the integrals in \req{eq:pimunu} by assuming an appropriate equilibrium distribution to find the polarization tensor. As mentioned above, this is done for the ultrarelativistic and the nonrelativistic limits in \cite{Formanek:2021blc}. For the full relativistic calculation, relevant for plasma where the temperature is on the order of the mass of the plasma constituents $m\approx T$, one must integrate the relativistic Fermi function. This can be done by writing it in the series representation \cite{Letessier:2002ony}
 \begin{equation}
 \begin{split}
      f_\mathrm{eq}(|\pmb{p}|) &= \frac{1}{e^{\sqrt{|\boldsymbol{p}|^2+ m^2}/T} + 1} \\
      &= \sum_{n=1}^{\infty} (-1)^{n+1}\left( e^{-\sqrt{|\boldsymbol{p}|^2+ m^2}/T}\right)^n\,,
     \end{split}
 \end{equation}
-whose integral results in an infinite sum of Bessel\index{Bessel function} functions of the second kind, for instance when calculating the equilibrium density one finds
+whose integral results in an infinite sum of Bessel\index{Bessel function} functions of the second kind for instance when calculating the equilibrium density, one finds
 \begin{equation}
     n_\mathrm{eq}=\frac{1}{\pi^2}T^3\sum_{n=1}^{\infty}g^2\frac{ (-1)^{n+1} K_2\left(\frac{n}{m}\right)}{ n}\,.
 \end{equation}
@@ -565,7 +565,7 @@ We feel it should be possible to derive the electromagnetic field in plasma for 
 \begin{equation}
     f(x,p) = f_\text{eq}(x,p) + \delta f (x,p)\,,
 \end{equation}
-where in the Boltzmann limit the strong field equilibrium distribution is \cite{Hakim:2011bk,Hakim:1967prd}
+where in the Boltzmann limit, the strong field equilibrium distribution is \cite{Hakim:2011bk,Hakim:1967prd}
 \begin{equation}
      f_\text{eq}(x,p) = \exp \left(-u_{\mu}[p^{\mu}+q A^{\mu}(x)]/T\right)\,.
 \end{equation}
@@ -573,7 +573,7 @@ Of course, this assumes the strong field equilibrium solution is stable under el
 
 
 \para{Mixed-species collision term}
-We also hope to generalize this framework to involve a Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation}  system that represents each plasma species with a different collision term. In matrix form, this system of Boltzmann equations for an electron-positron plasma would look like
+We also hope to generalize this framework to involve a Vlasov-Boltzmann equation\index{Vlasov-Boltzmann equation} system representing each plasma species with a different collision term. In matrix form, this system of Boltzmann equations for an electron-positron plasma would look like
 \begin{equation}\label{eq:vectoreq}
 -i (p \cdot k) \left[\begin{matrix}
 \wt{\delta f}_- \\ \wt{\delta f}_+ 
