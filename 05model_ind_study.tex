@@ -129,7 +129,7 @@ n&=\frac{g_\nu}{2\pi^2}\!\int_0^\infty\!\!\!\frac{p^2dp }{\Upsilon_\nu^{-1}e^{\s
 \end{align}
 where $g_\nu$ is the neutrino degeneracy (not to be confused with the metric factor $\sqrt{-g}=a^3)$.
 
-Comparing these results to the corresponding quantities in Minkowski space, we see that they differ by the replacement $m\rightarrow m T_\nu(t)/T_k$ in the exponential factor {\em only}. Changing variables to $u=p/T_\nu$, one sees that both $n$ and $s$ are proportional to $T_\nu^3$. The neutrino free-streaming temperature, $T_\nu$, is inversely proportional to $a$, hence we see that
+Comparing these to the  formulas for the corresponding quantities in kinetic equilibrium, we see that they differ by the replacement $m\rightarrow m T_\nu(t)/T_k$ in the exponential factor {\em only}. Changing variables to $u=p/T_\nu$, one sees that both $n$ and $s$ are proportional to $T_\nu^3$. The neutrino free-streaming temperature, $T_\nu$, is inversely proportional to $a$, hence we see that
 \begin{equation}\label{eq:ConstEntropy}
 a^3n=\text{constant}\text{ and } a^3\sigma=\text{constant}\,.
 \end{equation}
@@ -141,27 +141,26 @@ The instantaneous freeze-out assumption allows us to use conservation laws in \r
 
 The photon temperature then evolves to conserve the comoving entropy within the coupled system of photons, electrons, and positrons. As annihilation occurs, entropy from $e^+e^-$ is fed into photons, leading to reheating\index{reheating}. We now make this analysis quantitative in order to derive a relation between the reheating temperature ratio and neutrino fugacity\index{fugacity}.
 
-Assuming $T_{ch}\gg m_e$, the entropy, $S$, in a given comoving volume, $V$, is the sum of relativistic neutrinos (with $\Upsilon_\nu=1$), electrons, positrons, and photons
+Assuming $T_{ch}\gg m_e$, the entropy, $S$, in a given comoving volume, $V$,  at chemical freeze-outis the sum of relativistic neutrinos (with $\Upsilon_\nu=1$), electrons, positrons, and photons
 \begin{equation}
 S(T_{ch})=\left(\frac{7}{8}g_\nu+\frac{7}{8}g_{e^\pm} +g_\gamma \right)\frac{2\pi^2}{45} T_{ch}^3V(t_{ch})\,,
 \end{equation}
-where $T_{ch}$ is the common neutrino, $e^+e^-$, and $\gamma$ temperature at chemical freeze-out. 
-
-The number of neutrinos and anti-neutrinos in this same volume is
+where $T_{ch}$ is the common neutrino, $e^+e^-$, and $\gamma$ temperature at chemical freeze-out and $t_{ch}$ is the time at which chemical freeze-out occurs. The number of neutrinos and anti-neutrinos at chemical freeze-out in this same volume is
 \begin{equation}
-\mathcal{N}_\nu(T_{ch})=\frac{3g_\nu}{4\pi^2}\zeta(3)T_1^3V(t_{ch})\,.
+\mathcal{N}_\nu(T_{ch})=\frac{3g_\nu}{4\pi^2}\zeta(3)T_{ch}^3V(t_{ch})\,.
 \end{equation}
 The particle-antiparticle, flavor, and spin-helicity statistical factors are $g_\nu=6$, $g_{e^\pm}=4$, $g_\gamma=2$.
 
 Distinct chemical and thermal freeze-out temperatures lead to a nonequilibrium modification of the neutrino distribution in the form of a fugacity factor $\Upsilon_\nu$ when $T_k<T<T_{ch}$. This leads to the following expressions for, respectively, neutrino entropy and number at $T=T_k$ in the comoving volume
 \begin{align}
 S(T_k)=&\left(\frac{2\pi^2}{45}g_\gamma T_k^3+S_{e^\pm}(T_k)+S_{\nu}(T_k)\right)V(t_k)\,,\\
-\mathcal{N}_{\nu}(T_k)=&\frac{g_\nu}{2\pi^2}\int_0^\infty \frac{u^2 du}{\Upsilon_\nu^{-1}(T_k)e^u+1}T_k^3V(t_k)\,.\notag
+\mathcal{N}_{\nu}(T_k)=&\frac{g_\nu}{2\pi^2}\int_0^\infty \frac{u^2 du}{\Upsilon_\nu^{-1}(T_k)e^u+1}T_k^3V(t_k)\,,\notag
 \end{align}
+where $t_k$ is the time at which kinetic freeze-out occurs.
 
 After neutrino freeze-out\index{neutrino!freeze-out} and when $T_{\gamma}\ll m_e$, the entropy in neutrinos is conserved independently of the other particle species and the $e^+e^-$ entropy is nearly all transferred to photons:
 \begin{equation}
-S_{\gamma}(T_\gamma)=\frac{2 \pi^2}{45}g_\gamma T_{\gamma}^3 V(t).
+S_{\gamma}(T_\gamma)=\frac{2 \pi^2}{45}g_\gamma T_{\gamma}^3 V\,.
 \end{equation}
  Note that we must now distinguish between the neutrino and photon temperatures.
 

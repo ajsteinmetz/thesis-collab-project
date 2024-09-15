@@ -21,17 +21,18 @@ Let us remind the reasons why the dynamics of particles and plasma in the primor
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Higgs equilibrium abundance in QGP} 
-We would like to show that it is of interest to study the Higgs\index{Higgs} particle dynamics at relatively late stage of Universe evolution. This is an ongoing project which is described here for the first time. We are now considering in the primordial Universe the temperature range $10\,\mathrm{GeV}>T>1\,\mathrm{GeV}$, and recall the mass of the Higgs particle $m_H\simeq 125\GeV$. Therefore the number density of the Higgs can be written using the relativistic Boltzmann\index{Boltzmann!approximation} approximation
-\begin{align}
-n_{H}=\frac{\Upsilon_H}{2\pi^2}T^3\left(\frac{m_H}{T}\right)^2 K_2(m_H/T)\,.
+We would like to show that it is of interest to study the Higgs\index{Higgs} particle dynamics at relatively late stage of Universe evolution. This is an ongoing project which is described here for the first time. We are now considering in the primordial Universe the temperature range $10\,\mathrm{GeV}>T>1\,\mathrm{GeV}$, and recall the mass of the Higgs particle $m_h\simeq 125\GeV$. Therefore the number density of the Higgs can be written using the relativistic Boltzmann\index{Boltzmann!approximation} approximation
+\begin{align}\label{DensityH}
+n_{h}=\frac{\Upsilon_h}{2\pi^2}T^3W(m_h/T)\,\qquad W(m_h/T)=\left(\frac{m_h}{T}\right)^2 K_2(m_h/T)
 \end{align}\index{Higgs!particle abundance}
+where $K_2$ is the modified Bessel function of integer '$2$'.
 
 We are interested to compare the abundance of the Higgs particle to the net abundance of baryon excess over antibaryons\index{baryon!antibaryon} to determine at which temperature the Higgs particle yield drops below this tiny Universe asymmetry. Our interest derives from the question how far down in temperature a baryon number breaking Higgs decay could be of relevance. Clearly, once the Higgs yield falls far below baryon asymmetry it would be difficult to argue it can contribute to grow the baryon asymmetry in the Universe. Moreover, comparing to baryon asymmetry seems to be a reliable measure of more general physical relevance, after all, our present Universe structure derives from this small asymmetry probably developed in the primordial epoch we explore here. 
  
 The density between Higgs and baryon asymmetry (quark-antiquark asymmetry) can be written as
 \begin{align}
-\frac{n_H}{(n_B-n_{\bar{B}})}=\frac{n_{H}}{s_{tot}}\,\left(\frac{s_{tot}}{n_B-n_{\bar{B}}}\right)=
-\frac{n_{H}}{s_{tot}}\left[\frac{s_{\gamma,\nu}}{n_B-n_{\bar{B}}}\right]_{t_0}\,.
+\frac{n_h}{(n_B-n_{\bar{B}})}=\frac{n_{h}}{s_{tot}}\,\left(\frac{s_{tot}}{n_B-n_{\bar{B}}}\right)=
+\frac{n_{h}}{s_{tot}}\left[\frac{s_{\gamma,\nu}}{n_B-n_{\bar{B}}}\right]_{t_0}\,.
 \end{align}
 Assuming no `late' baryon genesis and entropy conserving Universe expansion, we introduce in \req{BaryonEntropyRatio} in the last equality the present day value of baryon per entropy ratio\index{baryon!entropy ratio}. The entropy density\index{entropy!density} $s_{tot}$ in QGP can be obtained employing the entropic degrees of freedom $g^s_\ast$, \req{eq:entg} and~\rf{EntropyDOF:Fig}
 \begin{align}
@@ -41,12 +42,14 @@ The entropy content to a good approximation is dominated by all effectively mass
 
 The baryon-to-photon density ratio $\eta$ today is bracketed by $5.8\times10^{-10} \leqslant\eta\leqslant6.5\times10^{-10}$ \cite{ParticleDataGroup:2018ovx}, a more precise value $\eta=(6.12\pm0.04)\times10^{-10}$~\cite{ParticleDataGroup:2022pth} is used in our study. This observed value is the evidence of baryon asymmetry and quantifies the matter-antimatter asymmetry in the Universe.\index{baryon!per photon ratio}
 
-The density ratio between Higgs\index{Higgs} and baryon asymmetry for the case of chemical equilibrium $\Upsilon_H=1$ is seen in~\rf{HiggsDensity:fig}. At temperature $T=5.7\GeV$ this ratio is equal to unity. This implies that Higgs decay processes could populate and influence the baryon asymmetry down to this relatively low temperature scale. 
+The density ratio between Higgs\index{Higgs} and baryon asymmetry for the case of chemical equilibrium $\Upsilon_h=1$ is seen in~\rf{HiggsDensity:fig}. At temperature $T=5.7\GeV$ this ratio is equal to unity. This implies that Higgs decay processes could populate and influence the baryon asymmetry down to this relatively low temperature scale. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.9\linewidth]{./plots/HiggsDensityRatio}}
-\caption{The ratio between Higgs density $n_H$ and baryon asymmetry density $n_B-n_{\bar B}$ as a function of temperature $T$ assuming chemical Higgs equilibrium $\Upsilon_H=1$ and present day entropy per baryon. Both densities are equal (horizontal line) at the temperature $T=5.7\GeV$. \radapt{Yang:2024ret}}
+%\centerline{\includegraphics[width=0.9\linewidth]{./plots/HiggsDensityRatio}}
+\centerline{\includegraphics[width=0.9\linewidth]{./plots/ni_over_nb_vs_T-new}}
+\caption{{\color{blue} New figure for Referee request. The thermal equilibrium density ratio between heavy particle and baryon asymmetry as a function of temperature. It shows that the $n_i/(n_B-n_{\bar{B}})=1$ at temperature $T=7.0$ GeV for top quark, $T=5.7$ GeV for Higgs, $T=3.9$ for Z boson, and $T=3.3$ GeV for W boson. \radapt{Yang:2024ret}}}
+%The ratio between Higgs density $n_H$ and baryon asymmetry density $n_B-n_{\bar B}$ as a function of temperature $T$ assuming chemical Higgs equilibrium $\Upsilon_H=1$ and present day entropy per baryon. Both densities are equal (horizontal line) at the temperature $T=5.7\GeV$. \radapt{Yang:2024ret}}
 \label{HiggsDensity:fig} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,12 +63,16 @@ The precise epoch responsible for the observed matter genesis $\eta$ in the prim
 In following we present arguments that the Sakharov conditions~\cite{Sakharov:1967dj} for matter asymmetry to form also could appear during the QGP era: several heavy particles such as bottom quarks and including the Higgs as described above can fulfill nonequilibrium requirement. We will study below in more detail the bottom case and argue for the Higgs case. Other cases are possible.
 
 In 1967, Andrei Sakharov formulated the three conditions necessary to permit baryogenesis in the primordial Universe~\cite{Sakharov:1967dj} and in 1991 he refined the three conditions as follows~\cite{Sakharov:1988vdp}:
-\begin{itemize}
- \item Absence of baryonic charge conservation 
- \item Violation of CP-invariance\index{CP violation}
- \item Non-stationary conditions in absence of local thermodynamic equilibrium
-\end{itemize}
- 
+{\color{blue}
+\begin{subequations}\label{Sakharov}
+\begin{align}
+ &\text{Absence of baryonic charge conservation}\\
+ &\text{Violation of CP-invariance}\index{CP
+ violation}\\
+&\text{Non-stationary conditions in absence of local thermodynamic equilibrium}
+\end{align}
+\end{subequations}
+}
 In regard to first Sakharov condition: By assumption there is no initial asymmetry in baryon number in the Universe. Toady it is argued that an initial asymmetry could not survive the inflationary expansion. Furthermore ad-hoc Big-Bang baryon-antibaryon inherent asymmetry seems less attractive. In short we believe that the asymmetry between baryons and antibaryons we observe requires dynamic process and the presence of baryon number non-conserving reactions. 
 
 The other option, an interaction which favors agglomerations of same `sign' baryonic matter creating large domains in the Universe with small baryon-antibaryon\index{baryon!antibaryon} asymmetry has never taken hold: We recall that the laws of physics favor opposite outcome, the elementary antimatter is eclectically attracted to matter. Neutral composite baryonic particles present in era in which antimatter is present (e.g. neutrons, $\Lambda(uds)$, charmed baryons etc., emerging just after QGP hadronization) deserve a second look on this account.
@@ -85,19 +92,19 @@ We believe that the presence of chemical (abundance) nonequilibrium is a require
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Production and decay of Higgs in QGP}
-The Higgs\index{Higgs} particle is unique among heavy PP-SM particles also due to its stability: The total width is $\Gamma_H\simeq 2.5\,10^{-5}M_H$. This combines with the unexpected low value of $T=5.7\GeV$ of interest where the Higgs yield equals to the baryon asymmetry in the Universe. This motivates us to examine here in qualitative manner the dynamical abundance of the Higgs particle in the QGP epoch, seeking eventual non-stationary condition needed for baryogenesis 
+The Higgs\index{Higgs} particle is unique among heavy PP-SM particles also due to its stability: The total width is $\Gamma_h\simeq 2.5\times\,10^{-5}M_h$. This combines with the unexpected low value of $T=5.7\GeV$ of interest where the Higgs yield equals to the baryon asymmetry in the Universe. This motivates us to examine here in qualitative manner the dynamical abundance of the Higgs particle in the QGP epoch, seeking eventual non-stationary condition needed for baryogenesis 
 
 The Higgs predominantly decays via the $W,Z$ decay channels as follows:
 \begin{align}
-H\longrightarrow WW^\ast\,. ZZ^\ast\longrightarrow\mathrm{anything}\,.
+h\longrightarrow WW^\ast\,. ZZ^\ast\longrightarrow\mathrm{anything}\,.
 \end{align}
 Here $W^\ast,Z^\ast$ represent the production of virtual off-mass-shell gauge bosons decaying rapidly into relevant particle pairs. Therefore once Higgs decays via this channel at least four particles are ultimately formed and there is no path back for $T\ll m_H$. This is so since the spectral energy of produced particles, $31\GeV$ is highly epithermal compared to the ambient plasma at the low temperature of interest near to $T\simeq 6\GeV$. Therefore a back-reaction production of Higgs cannot be in balance for chemical equilibrium yield. 
 
 In the QGP epoch, the dominant production of the Higgs boson is the bottom quark pair fusion reaction: 
 \begin{align}
-b+\overline{b}\longrightarrow H\,,
+b+\overline{b}\longrightarrow h\,,
 \end{align}
-which is the inverse to the important but by far not dominant decay process of $H\to b+\overline{b}$. This means that in first approximation the detailed balance Higgs yield is reached well below the chemical equilibrium.
+which is the inverse to the important but by far not dominant decay process of $h\to b+\overline{b}$. This means that in first approximation the detailed balance Higgs yield is reached well below the chemical equilibrium.
 
 However, there could be considerable deviation from kinetic momentum equilibrium as well. This is so since bottom fusion will in general produce a Higgs particle out of kinetic momentum equilibrium. A heavy particle immersed into a plasma of lighter particles requires many, many collisions to equilibrate the momentum distribution. This is a well known kinetic theory result. Moreover, the Higgs particle interacts weakly with all lower mass particles in QGP present at $T<10\GeV$. 
 
@@ -254,7 +261,7 @@ where $R^{\mathrm{Source}}_{b}$ and $R^{\mathrm{Decay}}_{b}$ are the thermal rea
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
 \centerline{\includegraphics[width=0.9\linewidth]{./plots/BQuarkReactionTime003}}
-\caption{Characteristic production, decay, times of bottom quark as a function of temperature $T$ for $0.3\,\mathrm{GeV}>T> 0.15\MeV$. Near the top of figure $1/H$ (brown solid line) and $\tau_T$ (brown dashed line); other horizontal lines are bottom-quark (in QGP) weak interaction lifetimes $\tau_b$ for the three different masses: $m_b=4.2\,\mathrm{GeV}$ (blue dotted line), $m_b=4.7\,\mathrm{GeV}$ (black solid line), $m_b=5.2\,\mathrm{GeV}$ (red dashed line), and the vacuum lifespan $\tau_B$ of the B$_c$ meson (green solid line). The relaxation time for strong interaction bottom production $g+g, q+\bar q\rightarrow b+\bar{b}$ is shown with three different bottom masses and same type-color coding as weak interaction decay rate. At bottom of figure the in plasma formation process (dashed lines, purple) $b+c\rightarrow \mathrm{B}_c+g$ with cross section range $\sigma=0.1,10\,\mathrm{mb}$. \radapt{Yang:2024ret}}
+\caption{Characteristic production, decay times of bottom quark as a function of temperature  $0.3\,\mathrm{GeV}>T> 0.15\MeV$. Near the top of figure $1/H$ (brown solid line) and $\tau_T$ (brown dashed line); other horizontal lines are bottom-quark (in QGP) weak interaction lifetimes $\tau_b$ for the three different masses: $m_b=4.2\,\mathrm{GeV}$ (blue dotted line), $m_b=4.7\,\mathrm{GeV}$ (black solid line), $m_b=5.2\,\mathrm{GeV}$ (red dashed line), and the vacuum lifespan $\tau_B$ of the B$_c$ meson (green solid line). The relaxation time for strong interaction bottom production $g+g, q+\bar q\rightarrow b+\bar{b}$ is shown with three different bottom masses and same type-color coding as weak interaction decay rate. At bottom of figure the in plasma formation process (dashed lines, purple) $b+c\rightarrow \mathrm{B}_c+g$ with cross section range $\sigma=0.1,10\,\mathrm{mb}$. \radapt{Yang:2024ret}}
 \label{ReactionTime}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -402,7 +409,7 @@ In chemical equilibrium\index{chemical equilibrium} the ratio of bottom quark\in
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Example of bottom-catalyzed matter genesis}
-Given that the nonequilibrium non-stationary component of bottom flavor arises at relatively low QGP temperature, this Sakharov condition is available around QGP hadronization. Let us now look back and see how different requirements are fulfilled
+Given that the nonequilibrium non-stationary component of bottom flavor arises at relatively low QGP temperature, {\color{blue}this Sakharov condition Eq.~(\ref{Sakharov}) is available around QGP hadronization.\index{Sakharov conditions!baryogenesis}} Let us now look back and see how different requirements are fulfilled
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item
@@ -461,7 +468,7 @@ where we employ the phase-space function $F_i$ for sets of nucleon $N$, kaons $K
 &F_K=\sum_{K_i}\,g_{K_i}W(m_{K_i}/T)\;, \quad K_i=K^0, \overline{K^0}, K^\pm, K^\ast(892),\\
 &F_Y=\sum_{Y_i}\,g_{Y_i}W(m_{Y_i}/T)\;, \quad Y_i=\Lambda, \Sigma^0,\Sigma^\pm, \Sigma(1385),
 \end{align}
-$g_{N_i,K_i,Y_i}$ are the degeneracy factors, $W(x)=x^2K_2(x)$ with $K_2$ is the modified Bessel\index{Bessel function} functions of integer order `$2$'. 
+$g_{N_i,K_i,Y_i}$ are the degeneracy factors, and function $W(x)=x^2K_2(x)$ is defined in Eq.~(\ref{DensityH}).
 
 Considering the massive particle number density in the Boltzmann\index{Boltzmann!approximation} approximation we obtain
 \begin{align}
