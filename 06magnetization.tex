@@ -172,7 +172,7 @@ of electrons and positrons of both polarizations $(\uparrow\downarrow)$. The cha
      \label{partition:1}
      \ln\mathcal{Z}_{e^{+}e^{-}}=\frac{e{B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1}\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}\mathrm{d}p_{z}\left[\ln\left(1+\lambda_{\sigma}\xi_{\sigma,s}\exp\left(-\frac{E_{\sigma,s}^{n}}{T}\right)\right)\right]\,\\
     \label{partition:2}    
-    \Upsilon_{\sigma,s} =\lambda_{\sigma}\xi_{\sigma,s} = \exp{\frac{\mu_{\sigma}+\eta_{\sigma,s}}{T}}\,,
+    \Upsilon_{\sigma,s} =\lambda_{\sigma}\xi_{\sigma,s} = \exp{\frac{\mu_{\sigma}+\zeta_{\sigma,s}}{T}}\,,
 \end{gather}
 where the energy eigenvalues $E_{\sigma,s}^{n}$ are given in \req{cosmokgp}. The index $\sigma$ in \req{partition:1} is a sum over electron and positron states while $s$ is a sum over polarizations. The index $s$ refers to the spin along the field axis: parallel $(\uparrow;\ s=+1)$ or anti-parallel $(\downarrow;\ s=-1)$ for both particle and antiparticle species.
 
@@ -196,12 +196,12 @@ We can then parameterize the chemical potential of the $e^{+}e^{-}$ plasma as a 
 \end{align}
 In \req{chargeneutrality}, $n_{p}$ is the observed total number density of protons in all baryon species. The chemical potential defined in \req{cpotential} is obtained from the requirement that the positive charge of baryons (protons, $\alpha$ particles, light nuclei produced after BBN) is exactly and locally compensated by a tiny net excess of electrons over positrons.
 
-We then introduce a novel polarization fugacity\index{fugacity!polarization} $\xi_{\sigma,s}$ and polarization potential $\eta_{\sigma,s}=\sigma s\eta$. We propose the polarization potential follows analogous expressions as seen in \req{cpotential} obeying
+We then introduce a novel polarization fugacity\index{fugacity!polarization} $\xi_{\sigma,s}$ and polarization potential $\zeta_{\sigma,s}=\sigma s\zeta$. We propose the polarization potential follows analogous expressions as seen in \req{cpotential} obeying
 \begin{align}
  \label{spotential}
- \eta\equiv\eta_{+,+}=\eta_{-,-}\,,\quad\eta=-\eta_{\pm,\mp}\,,\quad\xi_{\sigma,s}\equiv\exp{\frac{\eta_{\sigma,s}}{T}}\,.
+ \zeta\equiv\zeta_{+,+}=\zeta_{-,-}\,,\quad\zeta=-\zeta_{\pm,\mp}\,,\quad\xi_{\sigma,s}\equiv\exp{\frac{\zeta_{\sigma,s}}{T}}\,.
 \end{align}
-An imbalance in polarization within a region of volume $V$ results in a nonzero polarization potential $\eta\neq0$: {\color{blue}Please note that $\eta$ in this Chapter should not be confused with $\eta_\gamma$, the ratio of baryons to photons, and the interaction strength parameter introduced in \req{etaCTY}, both $\eta$-s used elsewhere in this review but not in this Chapter}. Conveniently since antiparticles have opposite signs of charge and magnetic moment, the same magnetic moment is associated with opposite spin orientations. A completely particle-antiparticle symmetric magnetized plasma will have therefore zero total angular momentum.
+An imbalance in polarization within a region of volume $V$ results in a nonzero polarization potential $\zeta\neq0$: {\color{blue}Please note that $\zeta$ in this Chapter should not be confused with $\zeta_\gamma$, the ratio of baryons to photons, and the interaction strength parameter introduced in \req{etaCTY}, both $\zeta$-s used elsewhere in this review but not in this Chapter}. Conveniently since antiparticles have opposite signs of charge and magnetic moment, the same magnetic moment is associated with opposite spin orientations. A completely particle-antiparticle symmetric magnetized plasma will have therefore zero total angular momentum.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Euler-Maclaurin integration}
@@ -258,12 +258,12 @@ As we will see in the proceeding section, this separation of the `free-like' par
  & \multicolumn{1}{c}{aligned: $s=+1$}
  & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
  \cline{2-3}
- electron: $\sigma=+1$ & $+\mu+\eta$ & $+\mu-\eta$ \TBstrut\\
+ electron: $\sigma=+1$ & $+\mu+\zeta$ & $+\mu-\zeta$ \TBstrut\\
  \cline{2-3}
- positron: $\sigma=-1$ & $-\mu-\eta$ & $-\mu+\eta$ \TBstrut\\
+ positron: $\sigma=-1$ & $-\mu-\zeta$ & $-\mu+\zeta$ \TBstrut\\
  \cline{2-3}
  \end{tabular}\\\,\Bstrut\\
- \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the chemical $\mu$ and polarization $\eta$ potentials as seen in~\req{partitionpower:2}. Companion to \rt{fig:schematic}.}
+ \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the chemical $\mu$ and polarization $\zeta$ potentials as seen in~\req{partitionpower:2}. Companion to \rt{fig:schematic}.}
  \label{fig:org}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -276,18 +276,18 @@ The partition function shown in equation \req{partition:1} can be rewritten remo
 \begin{gather}
 \label{partitionpower:1}
 \ln{\mathcal{Z}_{e^{+}e^{-}}}=\frac{e{B}V}{(2\pi)^{2}}\sum_{\sigma,s}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}\mathrm{d}p_{z}
-\frac{(-1)^{k+1}}{k}\exp\left({k\frac{\sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon^{n}_{\sigma,s}}{T}}\right)\,,\\
+\frac{(-1)^{k+1}}{k}\exp\left({k\frac{\sigma\mu+\sigma s\zeta-{\tilde m}_{\sigma,s}\varepsilon^{n}_{\sigma,s}}{T}}\right)\,,\\
 \label{bapprox} 
-\sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon_{\sigma,s}^{n}<0\,,
+\sigma\mu+\sigma s\zeta-{\tilde m}_{\sigma,s}\varepsilon_{\sigma,s}^{n}<0\,,
 \end{gather}
 which is well behaved as long as the factor in \req{bapprox} remains negative. We evaluate the sums over $\sigma$ and $s$ as
 \begin{multline}
     \label{partitionpower:2}
     \ln{\mathcal{Z}_{e^{+}e^{-}}}=\frac{e{B}V}{(2\pi)^{2}}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}\mathrm{d}p_{z}\frac{(-1)^{k+1}}{k}\times\\
-    \left(\ \exp\left(k\frac{+\mu+\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{+,+}\varepsilon_{+,+}^{n}}{T}\right)\right.
-    +\exp\left(k\frac{+\mu-\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{+,-}\varepsilon_{+,-}^{n}}{T}\right)\qquad\\
-    +\exp\left(k\frac{-\mu-\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,+}\varepsilon_{-,+}^{n}}{T}\right)
-    +\left.\exp\left(k\frac{-\mu+\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,-}\varepsilon_{-,-}^{n}}{T}\right)\right)
+    \left(\ \exp\left(k\frac{+\mu+\zeta}{T}\right)\exp\left(-k\frac{{\tilde m}_{+,+}\varepsilon_{+,+}^{n}}{T}\right)\right.
+    +\exp\left(k\frac{+\mu-\zeta}{T}\right)\exp\left(-k\frac{{\tilde m}_{+,-}\varepsilon_{+,-}^{n}}{T}\right)\qquad\\
+    +\exp\left(k\frac{-\mu-\zeta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,+}\varepsilon_{-,+}^{n}}{T}\right)
+    +\left.\exp\left(k\frac{-\mu+\zeta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,-}\varepsilon_{-,-}^{n}}{T}\right)\right)
 \end{multline}
 We note from \rf{fig:schematic} that the first and forth terms and the second and third terms share the same energies via
 \begin{align}
@@ -303,10 +303,10 @@ We note from \rf{fig:schematic} that the first and forth terms and the second an
     \ln{\mathcal{Z}_{e^{+}e^{-}}}=\frac{e{B}V}{(2\pi)^{2}}\sum_{s'}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}\mathrm{d}p_{z}\frac{(-1)^{k+1}}{k}\\
     \left[2\xi_{s'}\cosh\frac{k\mu}{T}\right]\exp\left(-k\frac{{\tilde m}_{s'}\varepsilon_{s'}^{n}}{T}\right)
 \end{multline}
-with dimensionless energy $\varepsilon_{s'}^{n}$, polarization mass $\tilde{m}_{s'}$, and polarization $\eta_{s'}$ redefined in terms of the moment orientation quantum number $s'$
+with dimensionless energy $\varepsilon_{s'}^{n}$, polarization mass $\tilde{m}_{s'}$, and polarization $\zeta_{s'}$ redefined in terms of the moment orientation quantum number $s'$
 \begin{gather}
     {\tilde m}_{s'}^{2}=m_{e}^{2}+e{B}\left(1-\frac{g}{2}s'\right)\,,\\
-    \eta\equiv\eta_{+}=-\eta_{-}\qquad\xi\equiv\xi_{+}=\xi_{-}^{-1}\,,\qquad\xi_{s'}=\xi^{\pm1}=\exp\left(\pm\frac{\eta}{T}\right)\,.
+    \zeta\equiv\zeta_{+}=-\zeta_{-}\qquad\xi\equiv\xi_{+}=\xi_{-}^{-1}\,,\qquad\xi_{s'}=\xi^{\pm1}=\exp\left(\pm\frac{\zeta}{T}\right)\,.
 \end{gather}
 
 We introduce the modified Bessel function\index{Bessel function} $K_{\nu}$ (see Ch. 10 of~\cite{Letessier:2002ony}) of the second kind
@@ -389,11 +389,11 @@ The spin anti-aligned states in the nonrelativistic (NR) limit reduce to
 \end{align}
 This shift in energies is otherwise not influenced by summation over Landau quantum number $n$, therefore we can interpret this energy shift as a shift in the polarization potential from \req{spotential}. The polarization potential is then
 \begin{align}
-  \label{SpinChem} \eta_{e}^{\pm}=\eta_{e}\pm\frac{eB}{2m_{e}}\,,
+  \label{SpinChem} \zeta_{e}^{\pm}=\zeta_{e}\pm\frac{eB}{2m_{e}}\,,
 \end{align}
 allowing us to rewrite the partition function in \req{partitionpower:1} as
 \begin{gather}
-  \label{PartTotalNR} \ln\mathcal{Z}_{e^{-}}\vert_{NR}=\frac{eBV}{(2\pi)^{2}}\sum_{s'}^{\pm}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}dp_{z}\frac{(-1)^{k+1}}{k}2\cosh(k\beta\eta_{e}^{s'})\lambda^{k}\exp(-k\epsilon_{n}/T)\,,\\
+  \label{PartTotalNR} \ln\mathcal{Z}_{e^{-}}\vert_{NR}=\frac{eBV}{(2\pi)^{2}}\sum_{s'}^{\pm}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}dp_{z}\frac{(-1)^{k+1}}{k}2\cosh(k\beta\zeta_{e}^{s'})\lambda^{k}\exp(-k\epsilon_{n}/T)\,,\\
   \label{NREnergy} \epsilon_{n}=m_{e}+\frac{p_{z}^{2}}{2m_{e}}+\frac{eB}{2m_{e}}\left(n+1\right)\,.
 \end{gather}
 
@@ -421,13 +421,13 @@ In presence of a magnetic field\index{magnetic!fields} in the Boltzmann approxim
  \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}
  \left[\sum_{s'}^{\pm1}\xi_{s'}\!\left(\!x_{s'}^{2}K_{2}(x_{s'})\!+\!\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})\!+\!\frac{b_{0}^{2}}{12}K_{0}(x_{s'}\!)\!\right)\!\right]^{-1}\!.
 \end{gather}
-\req{chem} is fully determined by the right-hand-side expression if the polarization fugacity\index{fugacity!polarization} is set to unity $\eta=0$ implying no external bias to the number of polarizations except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
+\req{chem} is fully determined by the right-hand-side expression if the polarization fugacity\index{fugacity!polarization} is set to unity $\zeta=0$ implying no external bias to the number of polarizations except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
  \centering
  \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.0cm,width=0.95\linewidth]{plots/thesis_chempot_fixed.pdf}
- \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$. \cccite{Steinmetz:2023ucp}. \radapt{Steinmetz:2023nsc}}
+ \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\zeta$ and magnetic scale $b_{0}$. \cccite{Steinmetz:2023ucp}. \radapt{Steinmetz:2023nsc}}
  \label{fig:chemicalpotential}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -435,12 +435,12 @@ In presence of a magnetic field\index{magnetic!fields} in the Boltzmann approxim
 \req{chem} simplifies if there is no external magnetic field $b_{0}=0$ into
 \begin{align}
     \label{simpchem:1}
-    \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}\left[2\cosh\frac{\eta}{T}\left(\frac{m_{e}}{T}\right)^{2}K_{2}\left(\frac{m_{e}}{T}\right)\right]^{-1}\,.
+    \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}\left[2\cosh\frac{\zeta}{T}\left(\frac{m_{e}}{T}\right)^{2}K_{2}\left(\frac{m_{e}}{T}\right)\right]^{-1}\,.
 \end{align}
 
-In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ in \req{chem} and \req{simpchem:1} which characterizes the importance of the charged lepton asymmetry\index{lepton!asymmetry} as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density which is seen explicitly in \rf{fig:densityratio}. The black line corresponds to the $b_{0}=0$ and $\eta=0$ case. 
+In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ in \req{chem} and \req{simpchem:1} which characterizes the importance of the charged lepton asymmetry\index{lepton!asymmetry} as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density which is seen explicitly in \rf{fig:densityratio}. The black line corresponds to the $b_{0}=0$ and $\zeta=0$ case. 
 
-The para-diamagnetic contribution from \req{spinorbit} does not appreciably influence $\mu/T$ until the magnetic scales involved become incredibly large well outside the observational bounds defined in \req{igmf} and \req{tbscale} as seen by the dotted blue curves of various large values $b_{0}=\{25,\ 50,\ 100,\ 300\}$. The chemical potential is also insensitive to forcing by the spin potential until $\eta$ reaches a significant fraction of the electron mass $m_{e}$ in size. The chemical potential for large values of spin potential $\eta=\{100,\ 200,\ 300,\ 400,\ 500\}\,\keV$ are also plotted as dashed black lines with $b_{0}=0$.
+The para-diamagnetic contribution from \req{spinorbit} does not appreciably influence $\mu/T$ until the magnetic scales involved become incredibly large well outside the observational bounds defined in \req{igmf} and \req{tbscale} as seen by the dotted blue curves of various large values $b_{0}=\{25,\ 50,\ 100,\ 300\}$. The chemical potential is also insensitive to forcing by the spin potential until $\zeta$ reaches a significant fraction of the electron mass $m_{e}$ in size. The chemical potential for large values of spin potential $\zeta=\{100,\ 200,\ 300,\ 400,\ 500\}\,\keV$ are also plotted as dashed black lines with $b_{0}=0$.
 
 It is interesting to note that there are crossing points where a given chemical potential can be described as either an imbalance in spin-polarization or presence of external magnetic field. While spin potential suppresses the chemical potential at low temperatures, external magnetic fields only suppress the chemical potential at high temperatures.
 
@@ -591,23 +591,23 @@ If the field strength is held constant, then the average magnetic moment per lep
 \subsection{Polarization potential and ferromagnetism}
 \label{sec:ferro}\index{ferromagnetism}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization given in \req{arbg:1} and \req{arbg:2} is entirely controlled by the polarization fugacity\index{fugacity!polarization} $\xi$ asymmetry generated by the spin potential $\eta$ yielding up to first order $\mathcal{O}(b_{0})$ in magnetic scale
+\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\zeta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization given in \req{arbg:1} and \req{arbg:2} is entirely controlled by the polarization fugacity\index{fugacity!polarization} $\xi$ asymmetry generated by the spin potential $\zeta$ yielding up to first order $\mathcal{O}(b_{0})$ in magnetic scale
 \begin{multline}
  \label{ferro}
- \lim_{m_{e}^{2}/T^{2}\gg b_0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\\
- +b_{0}\left(g^{2}-\frac{4}{3}\right)\frac{e^{2}}{8\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}K_{0}\left(\frac{m_{e}}{T}\right)
+ \lim_{m_{e}^{2}/T^{2}\gg b_0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\zeta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\\
+ +b_{0}\left(g^{2}-\frac{4}{3}\right)\frac{e^{2}}{8\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\zeta}{T}}\cosh{\frac{\mu}{T}}K_{0}\left(\frac{m_{e}}{T}\right)
  +\mathcal{O}\left(b_{0}^{2}\right)
 \end{multline}
 
-Given \req{ferro}, we can understand the spin potential as a kind of `ferromagnetic'\index{ferromagnetism} influence on the primordial gas which allows for magnetization even in the absence of external magnetic fields. This interpretation is reinforced by the fact the leading coefficient is $g/2$. We suggest that a variety of physics could produce a small nonzero $\eta$ within a domain of the gas. Such asymmetries could also originate statistically as while the expectation value of free gas polarization is zero, the variance is likely not.
+Given \req{ferro}, we can understand the spin potential as a kind of `ferromagnetic'\index{ferromagnetism} influence on the primordial gas which allows for magnetization even in the absence of external magnetic fields. This interpretation is reinforced by the fact the leading coefficient is $g/2$. We suggest that a variety of physics could produce a small nonzero $\zeta$ within a domain of the gas. Such asymmetries could also originate statistically as while the expectation value of free gas polarization is zero, the variance is likely not.
 
-As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alignment of the magnetization. In the high temperature limit \req{ferro} with strictly $b_{0}=0$ assumes a form of to lowest order for brevity
+As $\sinh{\zeta/T}$ is an odd function, the sign of $\zeta$ also controls the alignment of the magnetization. In the high temperature limit \req{ferro} with strictly $b_{0}=0$ assumes a form of to lowest order for brevity
 \begin{align}
  \label{hiTferro}
- \lim_{m_{e}/T\rightarrow0}{\mathfrak M}\vert_{b_{0}=0}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\frac{\eta}{T}\,,
+ \lim_{m_{e}/T\rightarrow0}{\mathfrak M}\vert_{b_{0}=0}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\frac{\zeta}{T}\,,
 \end{align}
 
-While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it is noteworthy that the high temperature (and $m\rightarrow0$) limit of Fermi-Dirac\index{Fermi!distribution} distributions only differs from the Boltzmann result by a proportionality factor. The natural scale of the $e^{+}e^{-}$ magnetization with only a small spin fugacity ($\eta<1\eV$) fits easily within the bounds of the predicted magnetization during this era if the IGMF measured today was of primordial origin. The reason for this is that the magnetization\index{magnetization} seen in \req{g2magplus}, \req{g2magminus} and \req{ferro} are scaled by $\alpha{B}_{C}$ where $\alpha$ is the fine structure constant.
+While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it is noteworthy that the high temperature (and $m\rightarrow0$) limit of Fermi-Dirac\index{Fermi!distribution} distributions only differs from the Boltzmann result by a proportionality factor. The natural scale of the $e^{+}e^{-}$ magnetization with only a small spin fugacity ($\zeta<1\eV$) fits easily within the bounds of the predicted magnetization during this era if the IGMF measured today was of primordial origin. The reason for this is that the magnetization\index{magnetization} seen in \req{g2magplus}, \req{g2magminus} and \req{ferro} are scaled by $\alpha{B}_{C}$ where $\alpha$ is the fine structure constant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \index{ferromagnetism}
@@ -620,7 +620,7 @@ While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it
 \begin{figure}[ht]
  \centering
  \includegraphics[width=0.9\linewidth]{plots/Spinchemical_03.png}
- \caption{The spin potential $\eta$ and chemical potential\index{chemical potential} $\mu$ are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma. \cccite{Steinmetz:2023nsc}}
+ \caption{The spin potential $\zeta$ and chemical potential\index{chemical potential} $\mu$ are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma. \cccite{Steinmetz:2023nsc}}
  \label{fig:self} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -630,9 +630,9 @@ This would obey the following assumption of
  \label{selfmag}
  {\mathfrak M}(b_{0})=\frac{\mathcal{M}(b_0)}{{B}_{C}}\longleftrightarrow\frac{B}{{B}_{C}}=b_{0}\frac{T^{2}}{m_{e}^{2}}\,,
 \end{align}
-which sets the total magnetization as a function of itself. The spin polarization described by $\eta\rightarrow\eta(b_{0},T)$ then becomes a fixed function of the temperature and magnetic scale. The underlying assumption would be the preservation of the homogeneous field would be maintained by scattering within the gas (as it is still in thermal equilibrium) modulating the polarization to conserve total magnetic flux.
+which sets the total magnetization as a function of itself. The spin polarization described by $\zeta\rightarrow\zeta(b_{0},T)$ then becomes a fixed function of the temperature and magnetic scale. The underlying assumption would be the preservation of the homogeneous field would be maintained by scattering within the gas (as it is still in thermal equilibrium) modulating the polarization to conserve total magnetic flux.
 
-The result of the self-magnetization assumption in \req{selfmag} for the potentials is plotted in \rf{fig:self}. The solid lines indicate the curves for $\eta/T$ for differing values of $b_{0}=\{10^{-11},\ 10^{-7},\ 10^{-5},\ 10^{-3}\}$ which become dashed above $T\!=\!300\keV$ to indicate that the Boltzmann approximation is no longer appropriate though the general trend should remain unchanged.
+The result of the self-magnetization assumption in \req{selfmag} for the potentials is plotted in \rf{fig:self}. The solid lines indicate the curves for $\zeta/T$ for differing values of $b_{0}=\{10^{-11},\ 10^{-7},\ 10^{-5},\ 10^{-3}\}$ which become dashed above $T\!=\!300\keV$ to indicate that the Boltzmann approximation is no longer appropriate though the general trend should remain unchanged.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
@@ -643,18 +643,18 @@ The result of the self-magnetization assumption in \req{selfmag} for the potenti
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The dotted lines are the curves for the chemical potential $\mu/T$. At high temperatures we see that a relatively small $\eta/T$ is needed to produce magnetization owing to the large densities present. \rf{fig:self} also shows that the chemical potential does not deviate from the free particle case until the spin polarization becomes sufficiently high which indicates that this form of self-magnetization would require the annihilation of positrons to be incomplete even at lower temperatures.
+The dotted lines are the curves for the chemical potential $\mu/T$. At high temperatures we see that a relatively small $\zeta/T$ is needed to produce magnetization owing to the large densities present. \rf{fig:self} also shows that the chemical potential does not deviate from the free particle case until the spin polarization becomes sufficiently high which indicates that this form of self-magnetization would require the annihilation of positrons to be incomplete even at lower temperatures.
 
-This is seen explicitly in~\rf{fig:polarswap} where we plot the numerical density of particles as a function of temperature for spin aligned $(+\eta)$ and spin anti-aligned $(-\eta)$ species for both positrons $(-\mu)$ and electrons $(+\mu)$. Various self-magnetization strengths are also plotted to match those seen in~\rf{fig:self}. The nature of $T_{\rm split}$ changes under this model since antimatter and polarization states can be extinguished separately. Positrons persist where there is insufficient electron density to maintain the magnetic flux. Polarization asymmetry therefore appears physical only in the domain where there is a large number of matter-antimatter pairs.
+This is seen explicitly in~\rf{fig:polarswap} where we plot the numerical density of particles as a function of temperature for spin aligned $(+\zeta)$ and spin anti-aligned $(-\zeta)$ species for both positrons $(-\mu)$ and electrons $(+\mu)$. Various self-magnetization strengths are also plotted to match those seen in~\rf{fig:self}. The nature of $T_{\rm split}$ changes under this model since antimatter and polarization states can be extinguished separately. Positrons persist where there is insufficient electron density to maintain the magnetic flux. Polarization asymmetry therefore appears physical only in the domain where there is a large number of matter-antimatter pairs.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Matter inhomogeneities in the cosmic plasma}
 \label{sec:inhomogeneous}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent In general, an additional physical constraint is required to fully determine $\mu$ and $\eta$ simultaneously as both potentials have mutual dependency (see \rsec{sec:ferro}). We note that spin polarizations are not required to be in balanced within a single species to preserve angular momentum.
+\noindent In general, an additional physical constraint is required to fully determine $\mu$ and $\zeta$ simultaneously as both potentials have mutual dependency (see \rsec{sec:ferro}). We note that spin polarizations are not required to be in balanced within a single species to preserve angular momentum.
 
 The CMB\index{CMB}~\cite{Planck:2018vyg}\index{CMB} indicates that the early universe was home to domains of slightly higher and lower baryon densities which resulted in the presence of galactic super-clusters, cosmic filaments, and great voids seen today. However, the CMB, as measured today, is blind to the localized inhomogeneities required for gravity to begin galaxy and supermassive black hole formation.
 
-Such acute inhomogeneities distributed like a dust~\cite{Grayson:2023flr} in the plasma would make the proton density sharply and spatially dependant $n_{p}\rightarrow n_{p}(x)$ which would directly affect the potentials $\mu(x)$ and $\eta(x)$ and thus the density of electrons and positrons locally. This suggests that $e^{+}e^{-}$ may play a role in the initial seeding of gravitational collapse. If the plasma were home to such localized magnetic domains, the nonzero local angular momentum within these domains would provide a natural mechanism for the formation of rotating galaxies today.
+Such acute inhomogeneities distributed like a dust~\cite{Grayson:2023flr} in the plasma would make the proton density sharply and spatially dependant $n_{p}\rightarrow n_{p}(x)$ which would directly affect the potentials $\mu(x)$ and $\zeta(x)$ and thus the density of electrons and positrons locally. This suggests that $e^{+}e^{-}$ may play a role in the initial seeding of gravitational collapse. If the plasma were home to such localized magnetic domains, the nonzero local angular momentum within these domains would provide a natural mechanism for the formation of rotating galaxies today.
 
 Recent measurements by the James Webb Space Telescope (JWST)~\cite{Yan:2022sxd,adams2023discovery,arrabal2023spectroscopic} indicate that galaxy formation began surprisingly early at large redshift values of $z\gtrsim10$ within the first 500 million years of the universe requiring gravitational collapse to begin in a hotter environment than expected. The observation of supermassive black holes already present~\cite{CEERSTeam:2023qgy} in this same high redshift period (with millions of solar masses) indicates the need for local high density regions in the early universe whose generation is not yet explained and likely need to exist long before the recombination epoch.
