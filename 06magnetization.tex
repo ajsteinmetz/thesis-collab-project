@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Magnetism in the Plasma Universe}\label{partX}
+\section{Magnetism in the Plasma Universe}%\label{partX}
 \label{sec:mag:universe}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Overview of primordial magnetism}
@@ -102,7 +102,7 @@ where $B_{0}$ is the comoving value obtained from the contemporary value of the 
 From \req{tscale} and \req{bscale} there emerges a natural ratio of interest which is conserved over cosmic expansion 
 \begin{gather}
  \label{tbscale}
- \boxed{b\equiv\frac{e{B}(t)}{T^{2}(t)}=\frac{e{B}_{0}}{T_{0}^{2}}\equiv b_0={\rm\ const.}}\\
+ b\equiv\frac{e{B}(t)}{T^{2}(t)}=\frac{e{B}_{0}}{T_{0}^{2}}\equiv b_0={\rm\ const.}\\
  10^{-3}>b_{0}>10^{-11}\,,
 \end{gather}
 given in natural units\index{natural units} ($c=\hbar=k_{B}=1$). We computed the bounds for this cosmic magnetic scale ratio by using the present day IGMF observations given by \req{igmf} and the present CMB\index{CMB} temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\cite{Planck:2018vyg}.
@@ -201,7 +201,7 @@ We then introduce a novel polarization fugacity\index{fugacity!polarization} $\x
  \label{spotential}
  \eta\equiv\eta_{+,+}=\eta_{-,-}\,,\quad\eta=-\eta_{\pm,\mp}\,,\quad\xi_{\sigma,s}\equiv\exp{\frac{\eta_{\sigma,s}}{T}}\,.
 \end{align}
-An imbalance in polarization within a region of volume $V$ results in a nonzero polarization potential $\eta\neq0$. Conveniently since antiparticles have opposite signs of charge and magnetic moment, the same magnetic moment is associated with opposite spin orientations. A completely particle-antiparticle symmetric magnetized plasma will have therefore zero total angular momentum.
+An imbalance in polarization within a region of volume $V$ results in a nonzero polarization potential $\eta\neq0$: {\color{blue}Please note that $\eta$ in this Chapter should not be confused with $\eta_\gamma$, the ratio of baryons to photons, and the interaction strength parameter introduced in \req{etaCTY}, both $\eta$-s used elsewhere in this review but not in this Chapter}. Conveniently since antiparticles have opposite signs of charge and magnetic moment, the same magnetic moment is associated with opposite spin orientations. A completely particle-antiparticle symmetric magnetized plasma will have therefore zero total angular momentum.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Euler-Maclaurin integration}
@@ -343,8 +343,8 @@ This yields
 The standard Boltzmann distribution\index{Boltzmann!distribution} is obtained by summing only $k=1$ and neglecting the higher order terms. Therefore we can integrate the partition function over the summed Landau levels. After truncation of the series and error remainder (up to the first derivative $j=2$), the partition function \req{partitionpower:1} can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind and cosmic magnetic scale $b_{0}$, yielding
 \begin{gather}
     \label{boltzmann}
-    \boxed{\ln\mathcal{Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]
-    \left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)}\,,\\
+    \ln\mathcal{Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]
+    \left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,\\
     \label{xfunc}
     x_{s'}=\frac{{\tilde m}_{s'}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1-\frac{g}{2}s'\right)}\,.
 \end{gather}
@@ -404,14 +404,14 @@ allowing us to rewrite the partition function in \req{partitionpower:1} as
 \para{Electron-positron chemical potential}
 \label{sec:chem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Considering the temperature after neutrino freeze-out\index{neutrino!freeze-out}, the charge neutrality\index{charge neutrality} condition can be written as
+\noindent We refer to developments present \rsec{section:electron}: Considering the temperature after neutrino freeze-out\index{neutrino!freeze-out}, the charge neutrality\index{charge neutrality} condition can be written as
 \begin{align}
  \label{density_proton}
- \left(n_{e^{-}}-n_{e^{+}}\right)=n_{p}=X_p\,\left(\frac{n_{B}}{s_{\gamma,e}}\right)\,s_{\gamma,e},\qquad X_p\equiv\frac{n_p}{n_B}\,,
+ \left(n_{e^{-}}-n_{e^{+}}\right)=n_{p}=X_p\,\left(\frac{n_{B}}{\sigma_{\gamma,e}}\right)\,\sigma_{\gamma,e},\qquad X_p\equiv\frac{n_p}{n_B}\,,
 \end{align}
 where $n_{p}$ and $n_B$ is the number density of protons and baryons\index{baryon!entropy ratio} respectively. The parameter $s_{\gamma,e}$ is the entropy density\index{entropy!density} which is primarily dominated by photons and electron(positrons) in this era. Due to the adiabatic expansion of the universe, the comoving entropy density is a conserved making the ratio
 \begin{align}
-    \frac{n_{B}}{s_{\gamma,e}} = \mathrm{const.}
+    \frac{n_{B}}{\sigma_{\gamma,e}} = \mathrm{const.}
 \end{align}
 a constant which can be measured today from the entropy content of the CMB\index{CMB} today~\cite{Fromerth:2012fe}. The proton-to-baryon\index{baryon!per proton ratio} ratio is slightly offset by the presence of neutrons.
 

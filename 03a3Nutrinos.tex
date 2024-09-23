@@ -5,7 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Instantaneous Freeze-out Model}
-Neutrino freeze-out\index{neutrino!freeze-out} is, as far as we know, the unique era in the history of the Universe when a significant matter fraction froze out at the same time that a reheating period was beginning due to the onset of the $e^+e^-$ annihilation process. It is this coincidence involving the last reheating period that makes neutrino freeze-out a rich and complicated period to study as compared to the many other reheating periods in the history of the Universe.
+Neutrino freeze-out\index{neutrino!freeze-out} is, as far as we know, the unique era in the history of the Universe when a significant matter fraction froze out at the same time that a reheating period was beginning, due to the onset of the $e^+e^-$ annihilation process. It is this coincidence involving the last reheating period that makes neutrino freeze-out a rich and complicated period to study as compared to the many other reheating periods in the history of the Universe.
 
 A key cosmological observable that is impacted by the dynamics of neutrino freeze-out is the effective number of neutrinos\index{neutrino!effective number}, $N^{\text{eff}}_\nu$, which quantifies the amount of radiation energy density, $\rho_r$, in the Universe prior to photon freeze-out and after $e^\pm$ annihilation. $N^{\text{eff}}_\nu$  can be measured by fitting to the distribution of CMB\index{CMB} temperature fluctuations. The early Planck~\cite{Planck:2013pxb} analysis found $N^{\text{eff}}_{\nu}=3.36\pm 0.34$ (CMB only) and $N^{\text{eff}}_{\nu}=3.62\pm 0.25$ (CMB+$H_0$) ($68\%$ confidence levels), indicating a possible tension in the current understanding of $N^{\text{eff}}_\nu$ though this tension has lessened with further analysis from Planck~\cite{Planck:2015fie,Planck:2018vyg} This section, as well as in Section \ref{ch:param:studies}, works towards a detailed understanding of $N^{\text{eff}}_{\nu}$ with an eye towards this tension.
 
@@ -18,36 +18,30 @@ where $\rho_r$ is the radiation component of the Universe energy density, $\rho_
 The definition \eqref{eq:NeffDef} is constructed such that if photons and SM left-handed neutrinos are the only significant massless particle species in the Universe between the freeze-out of left-handed neutrinos at $T_\gamma=\mathcal{O}(1)$ MeV and photon freeze-out at $T_\gamma=0.25$ eV, and assuming zero reheating of neutrinos, then $N^{\text{eff}}_{\nu}=3$, corresponding to the number of SM neutrino flavors. Detailed numerical study of the neutrino freeze-out process within the SM gives $N^{\text{eff}}_{\nu}=3.046$~\cite{Mangano:2005cc}, a value close to the number of flavors, indicating only a small amount of neutrino reheating. 
  We emphasize that $N^{\text{eff}}_\nu$ is named after neutrinos as they are the only significant contributor in SM cosmology. However, $N^{\text{eff}}_\nu$ could be impacted by non SM particles.
 
-First we study how $N^{\text{eff}}_{\nu}$ is impacted by non-SM neutrino dynamics by characterizing its dependence on the neutrino freeze-out temperature within an instantaneous freeze-out model. This model, based on the work in \cite{Birrell:2013gpa,Birrell:2012gg}, allows us study $N^{\text{eff}}_{\nu}$ without requiring a detailed description of the underlying non-SM interactions; the latter will be considered later in Section \ref{ch:param:studies}. In addition, we explore the possibility of non-SM neutrino contributions to $N^{\text{eff}}_\nu$; the latter is based on \cite{Birrell:2014cja}.
+First we study how $N^{\text{eff}}_{\nu}$ is impacted by non-SM neutrino dynamics by characterizing its dependence on the neutrino freeze-out temperature within an instantaneous freeze-out model. This model, based on the work in \cite{Birrell:2013gpa,Birrell:2012gg}, allows us to study $N^{\text{eff}}_{\nu}$ without requiring a detailed description of the underlying non-SM interactions; the latter will be considered later in Section \ref{ch:param:studies}. In addition, we explore the possibility of non-SM neutrino contributions to $N^{\text{eff}}_\nu$; the latter is based on \cite{Birrell:2014cja}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Chemical and Kinetic Equilibrium}
-As the Universe expands and cools, the various components of the Universe transition from equilibrium to non-interacting. This process is governed by two key temperatures: 1) The chemical freeze-out temperature, $T_{ch}$, above which the particles are kept in chemical equilibrium\index{chemical equilibrium} by number changing interactions. 2) The kinetic freeze-out temperature, above which the particles are kept in thermal equilibrium, i.e., equilibrium momentum distribution. In reality, these are not sharp transitions, but we approximate them as such in this section. The insights gained here will be important when studying the more detailed model of neutrino freeze-out in later sections.
+As the Universe expands and cools, the various components of the Universe transition from equilibrium to non-interacting free-streaming. This process is governed by two key temperatures: 1) The chemical freeze-out temperature, $T_{ch}$, above which the particles are kept in chemical equilibrium\index{chemical equilibrium} by number changing interactions. 2) The kinetic freeze-out temperature $T_k$, above which the particles are kept in thermal equilibrium, i.e., equilibrium momentum distribution. In reality, these are not sharp transitions, but we approximate them as such in this section.  Our arguments follow the discussion presented earlier, see \req{equilibrium} and \req{kinetic_equilib}. The insights gained here will be important when studying the more detailed model of neutrino freeze-out in later sections.
 
-At sufficiently high temperatures, such as existed in the early Universe, both particle creation and annihilation (i.e., chemical) processes and momentum exchanging (i.e., kinetic) scattering processes can occur sufficiently rapidly to establish complete thermal equilibrium of a given particle species. The distribution function $f_{ch}^\pm$ of fermions (+) and bosons (-) in both chemical and kinetic equilibrium\index{kinetic equilibrium} is found by maximizing entropy subject to energy being conserved
-\begin{equation}\label{eq:ChEq}
-f_{ch}^\pm=\frac{1}{\exp(E/T)\pm 1}\,, \hspace{2mm} T>T_{ch}\,,
-\end{equation}
-where $E$ is the particle energy, $T$ the temperature, and $T_{ch}$ the chemical freeze-out temperature. 
+At sufficiently high temperatures, such as existed in the early Universe, both particle creation and annihilation (i.e., chemical) processes and momentum exchanging (i.e., kinetic) scattering processes can occur sufficiently rapidly to establish complete thermal equilibrium of a given particle species. The distribution function $f_{ch}^\pm$ of fermions (+) and bosons (-) in both chemical and kinetic equilibrium\index{kinetic equilibrium} is found by maximizing entropy subject to energy being conserved and is given by \req{equilibrium}.
+ 
+As temperature decreases, there will be a period where the temperature is greater than the kinetic freeze-out temperature, $T_k$, but below chemical freeze-out. During this period, momentum exchanging processes continue to maintain an equilibrium distribution of energy among the available particles, which we call kinetic equilibrium, but particle number changing processes no longer occur rapidly enough to keep the equilibrium particle number yield, i.e., for $T<T_{ch}$ the particle number changing processes have `frozen-out'. In this condition the momentum distribution, which is in kinetic equilibrium but chemical nonequilibrium, is obtained by maximizing entropy subject to particle number and energy constraints and thus two parameters appear\index{kinetic equilibrium}\index{fugacity}, see \req{kinetic_equilib}. The need to preserve the total particle number within the distribution introduces an additional parameter $\Upsilon$ called fugacity. 
 
-As temperature decreases, there will be a period where the temperature is greater than the kinetic freeze-out temperature, $T_k$, but below chemical freeze-out. During this period, momentum exchanging processes continue to maintain an equilibrium distribution of energy among the available particles, which we call kinetic equilibrium, but particle number changing processes no longer occur rapidly enough to keep the equilibrium particle number yield, i.e., for $T<T_{ch}$ the particle number changing processes have `frozen-out'. In this condition the momentum distribution, which is in kinetic equilibrium but chemical nonequilibrium, is obtained by maximizing entropy subject to particle number and energy constraints and thus two parameters appear\index{kinetic equilibrium}\index{fugacity}
-\begin{equation}\label{eq:kEq}
-f_{k}^\pm=\frac{1}{\Upsilon^{-1} \exp(E/T)\pm 1}\,,\hspace{2mm} T_k<T\leq T_{ch}\,.
-\end{equation}
-The need to preserve the total particle number within the distribution introduces an additional parameter $\Upsilon$ called fugacity. 
+The time dependent fugacity, $\Upsilon(t)$, controls the occupancy of phase space and is necessary once $T(t)<T_{ch}$ in order to conserve particle number. A fugacity different from $1$ implies an over-abundance ($\Upsilon>1$) or under-abundance ($\Upsilon<1$) of particles compared to chemical equilibrium and in either of these situations one speaks of chemical nonequilibrium. 
 
-The fugacity, $\Upsilon(t)$, controls the occupancy of phase space and is necessary once $T(t)<T_{ch}$ in order to conserve particle number. A fugacity different from $1$ implies an over-abundance ($\Upsilon>1$) or under-abundance ($\Upsilon<1$) of particles compared to chemical equilibrium and in either of these situations one speaks of chemical nonequilibrium. 
+The effect of $\ln(\Upsilon)$ is similar after that of chemical potential\index{chemical potential} $\mu$, except that $\ln(\Upsilon)$ is equal for particles and antiparticles, and not opposite. This means $\Upsilon>1$ increases the density of both particles and antiparticles, rather than increasing one and decreasing the other as is common when the chemical potential is associated with conserved quantum numbers. Similarly,  $\Upsilon<1$ decreases both. The fact that $\ln(\Upsilon)$ is not opposite for particles and antiparticles reflects the fact that both the number of particles and the number of antiparticles are conserved after chemical freeze-out, and not just their difference. 
 
-The effect of $\ln(\Upsilon)$ is similar after that of chemical potential\index{chemical potential} $\mu$, except that $\ln(\Upsilon)$ is equal for particles and antiparticles, and not opposite. This means $\Upsilon>1$ increases the density of both particles and antiparticles, rather than increasing one and decreasing the other as is common when the chemical potential is associated with conserved quantum numbers. Similarly,  $\Upsilon<1$ decreases both. The fact that $\ln(\Upsilon)$ is not opposite for particles and antiparticles reflects the fact that both the number of particles and the number of antiparticles are conserved after chemical freeze-out, and not just their difference. Ignoring the small particle antiparticle asymmetry their equality reflects the fact that any process that modifies the distribution would affect both particle and antiparticle distributions in the same fashion. Such an asymmetry would be incorporated by replacing $\Upsilon\rightarrow \Upsilon e^{\pm\mu/T}$ where $\mu$ is the chemical potential, but we ignore it in this work as the matter antimatter asymmetry is on the order of $1$ part in $10^9$.
+Ignoring the small particle antiparticle asymmetry, their equality reflects the fact that any process that modifies the distribution would affect both particle and antiparticle distributions in the same fashion. Such an asymmetry would be incorporated by replacing $\Upsilon\rightarrow \Upsilon e^{\pm\mu/T}$ where $\mu$ is the chemical potential, but we ignore it in this work as the matter antimatter asymmetry is on the order of $1$ part in $10^9$.
 
  We also emphasize that the fugacity is time dependent and not just an initial condition. At high temperatures $\Upsilon=1$ and we will find that $\Upsilon<1$ emerges dynamically as a result of the freeze-out process. The importance of fugacity was first introduced in \cite{Rafelski:1982pu} in the context of quark-gluon plasma. Its presence in cosmology was noted in \cite{Bernstein:1985th,Dolgov:1992wf} but its importance has been largely forgotten and the consequences unexplored in the literature. 
 
 {\color{blue}
 \para{Comoving Entropy and Particle Number in an FRW Spacetime}
-In an FRW spacetime, and assuming the particle distributions have the kinetic equilibrium form \req{eq:kEq} with fugacities $\Upsilon_{A}$, we can use the general formalism from Section \ref{sec:BoltzmannEinstein} to compute the rate of change of comoving particle number and entropy; later we will apply these results to study neutrino freeze-out.
+In an FRW spacetime, and assuming the particle distributions have the kinetic equilibrium form \req{kinetic_equilib} with fugacities $\Upsilon_{A}$, we can use the general formalism from Section \ref{sec:BoltzmannEinstein} to compute the rate of change of comoving particle number and entropy; later we will apply these results to study neutrino freeze-out.
 
-The number density of particle species $A$ in an FRW universe is given by $N_A^0$ and so comoving particle number can be written in terms of the divergence of the number current, \req{nmdef}, as follows
+The number density of particle species $A$ in an FRW Universe is given by $N_A^0$ and so the comoving particle number can be written in terms of the divergence of the number current, \req{nmdef}, as follows
 \begin{align}
 \frac{d}{dt}(a^3N^0_A)=a^{3} \nabla_\mu N_A^\mu\,.  
 \end{align}
@@ -70,7 +64,7 @@ where $E=p_A^0$. Substituting this into \req{eq:FRWcomovingNumGen} and simplifyi
 \end{align}
 where $j$ indexes the reactants of $I$ and $i$ the products. To obtain this result we have assumed time-reversal symmetry of the scatting kernel \req{timeSymmetry} and used conservation of 4-momentum, $\Delta p=0$.    In particular, if all particle species are in chemical equilibrium then the rate of change of comoving particle number is zero. The non-negative quantity $R_I$ can be viewed as quantifying the strength of the interaction $I$. Finally, note the terms corresponding to symmetric interactions vanish. 
 
-We can also use \req{eq:comovingPartNumFRWfinal} to obtain a formula for the  comoving total entropy of a collection of particles in kinetic equilibrium in an FRW universe. Denoting the total entropy current  $S^\mu\equiv\sum_A S_A^\mu$, with $S_A^\mu$ defined as in \req{smdef}, and noting that the entropy density in an FRW universe  is given by $\sigma=S^0$, we can   combine \req{S:n:eq} with \req{eq:comovingPartNumFRWfinal} to compute
+We can also use \req{eq:comovingPartNumFRWfinal} to obtain a formula for the  comoving total entropy of a collection of particles in kinetic equilibrium in an FRW Universe. Denoting the total entropy current  $S^\mu\equiv\sum_A S_A^\mu$, with $S_A^\mu$ defined as in \req{smdef}, and noting that the entropy density in an FRW Universe  is given by $\sigma=S^0$, we can   combine \req{S:n:eq} with \req{eq:comovingPartNumFRWfinal} to compute
 \begin{align}
 &a^{-3}\frac{d}{dt}(a^3\sigma)=-\sum_A \ln(\Upsilon_A) \frac{d}{dt}(a^3N_A^0)\\
 &=-\sum_A \ln(\Upsilon_A)\sum_{I\in int(A)} \left(\prod_j\Upsilon_{B_j}^{n_{B_j}}- \prod_i\Upsilon_{A_i}^{n_{A_i}}\right)n_A R_I\notag\\
@@ -87,13 +81,12 @@ where $j$ indexes the reactants of $I$ and $i$ the products.  Again, there is no
 \begin{equation}
 \frac{d}{dt}(a^3\sigma)\geq 0
 \end{equation}
-with strict inequality if the particle species are not all in chemical equilibrium.  In particular, we have re-derived the H-Theorem in the case where all the distributions have the kinetic equilibrium form \eqref{eq:kEq}.
-
+with strict inequality if the particle species are not all in chemical equilibrium.  In particular, we have re-derived the H-Theorem in the case where all the distributions have the kinetic equilibrium form \eqref{kinetic_equilib}.
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\index{cosmology!FLRW}
 \para{Einstein-Vlasov Equation in FLRW Spacetime}
-Once the temperature drops below the kinetic freeze-out temperature $T_k$ of a particular component of the Universe, we reach the free streaming period where all particle scattering processes have completely frozen out. The dynamics are therefore determined by the free-streaming\index{free-streaming} Boltzmann-Einstein\index{Boltzmann-Einstein equation} equation, \req{eq:BoltzmannEinstein} with $C[f]=0$, known as the Einstein-Vlasov equation, in a spatially flat FLRW universe.\index{Einstein-Vlasov equation}
+Once\index{cosmology!FLRW}\index{Einstein-Vlasov equation} the temperature drops below the kinetic freeze-out temperature $T_k$ of a particular component of the Universe, we reach the free streaming period where all particle scattering processes have completely frozen out. The dynamics are therefore determined by the free-streaming\index{free-streaming} Boltzmann-Einstein\index{Boltzmann-Einstein equation} equation, \req{eq:BoltzmannEinstein} with $C[f]=0$, known as the Einstein-Vlasov equation, in a spatially flat FLRW Universe.\index{Einstein-Vlasov equation}
 
 Due to the assumed homogeneity and isotropy, the particle distribution function depends on $t$ and $p^0=E$ only and so the Einstein-Vlasov equation becomes\index{free-streaming}
 \begin{equation}\label{VEeqFLR}
@@ -104,21 +97,21 @@ The general solution to \req{VEeqFLR} can be found in, {\it e.g.\/}, ~\cite{Choq
 f(t,E)=K(x)\,,\qquad
 x\equiv\frac{a(t)^2}{D^2}(E^2-m^2)\,,
 \end{equation}
-where $K$ is an arbitrary smooth function and $D$ is an arbitrary constant with units of mass. To continue the evolution beyond thermal freeze-out we choose $K$ to match the kinetic equilibrium\index{kinetic equilibrium} distribution \req{eq:kEq} at the freeze-out time $t_k$. This is accomplished by setting
+where $K$ is an arbitrary smooth function and $D$ is an arbitrary constant with units of mass. To continue the evolution beyond thermal freeze-out we choose $K$ to match the kinetic equilibrium\index{kinetic equilibrium} distribution \req{kinetic_equilib} at the freeze-out time $t_k$. This is accomplished by setting
 \begin{equation}
 K(x)=\frac{1}{\Upsilon_\nu^{-1}e^{\sqrt{x+m^2/T_k^2}}+ 1}
 \end{equation}
 and $D=T_k a(t_k)$. 
 
-The Fermi-Dirac-Einstein-Vlasov (FDEV) distribution function for neutrinos after freeze-out is then\index{Fermi!Einstein-Vlasov distribution}
+The free-streaming Fermi-Dirac-Einstein-Vlasov (FDEV) distribution function for neutrinos after freeze-out is then\index{Fermi!Einstein-Vlasov distribution}\index{neutrino!free-streaming}
 \begin{equation}\label{eq:NeutrinoDist}
 f(t,E)=\frac{1}{\Upsilon_\nu^{-1}e^{\sqrt{(E^2-m^2)/T_\nu^2+m_\nu^2 /T_k^2}}+ 1}\,,
 \end{equation}
-where 
+where subscript $\nu$ is used here to indicate a neutrino, but the result is of general nature, and 
 \begin{equation}\label{eq:TneutrinoDist}
 T_\nu(t)=\frac{T_ka(t_k)}{a(t)}\,. 
 \end{equation}
-We will call $T_\nu$ in \req{eq:TneutrinoDist} the neutrino background temperature, even though the distribution of free streaming particles has a thermal shape only for $m=0$ and hence $T_{\nu}$ will differ from the temperature of the photon background. The shape seen in  \req{eq:NeutrinoDist} describes a gas of neutrinos that is free streaming in an expanding universe following the freeze-out temperature $T_\nu(t_k)=T_k$. 
+We will call $T_\nu$ in \req{eq:TneutrinoDist} the neutrino background temperature, even though the distribution of free streaming particles has a thermal shape only for $m=0$ and hence $T_{\nu}$ will differ from the temperature of the photon background. The shape seen in  \req{eq:NeutrinoDist} describes a gas of neutrinos that is free streaming in an expanding Universe following the freeze-out temperature $T_\nu(t_k)=T_k$. 
 
 The energy, pressure, number, and entropy densities\index{entropy!density}, denoted by $\rho$, $P$, $n$, and $\sigma$ respectively, of the free-streaming distribution \req{eq:NeutrinoDist} can be computed using \eqref{Tmndef}, \eqref{nmdef}, and \eqref{smdef}\index{free-streaming!energy density}\index{free-streaming!pressure}\index{free-streaming!number density}
 \begin{align}
@@ -137,7 +130,7 @@ This proves that the particle number and entropy in a comoving volume are conser
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \para{Neutrino Fugacity and Photon to Neutrino Temperature Ratio}
-The instantaneous freeze-out assumption allows us to use conservation laws in \req{eq_dynamics} to characterize the neutrino fugacity\index{fugacity!neutrino} and temperature in terms of the freeze-out temperature $T_k$. We first outline the physics of the situation qualitatively. For $T_k<T<T_{ch}$, the evolution of the temperature of the common $e^\pm,\gamma,\nu$ plasma and the neutrino fugacity are determined by conservation of comoving neutrino number (since $T<T_{ch}$) and conservation of entropy. As shown above, after thermal freeze-out the neutrinos begin to free-stream and therefore $\Upsilon_\nu$ is constant, the neutrino temperature evolves as $1/a$, and the comoving neutrino entropy and neutrino number are exactly conserved. 
+The instantaneous freeze-out assumption allows us to use conservation laws in \req{eq_dynamics} to characterize the neutrino fugacity\index{fugacity!neutrino} and temperature in terms of the (kinetic) freeze-out temperature $T_k$. We first outline the physics of the situation qualitatively. For $T_k<T<T_{ch}$, the evolution of the temperature of the common $e^\pm,\gamma,\nu$ plasma and the neutrino fugacity are determined by conservation of comoving neutrino number (since $T<T_{ch}$) and conservation of entropy. As shown above, after thermal freeze-out the neutrinos begin to free-stream and therefore $\Upsilon_\nu$ is constant, the neutrino temperature evolves as $1/a$, and the comoving neutrino entropy and neutrino number are exactly conserved. 
 
 The photon temperature then evolves to conserve the comoving entropy within the coupled system of photons, electrons, and positrons. As annihilation occurs, entropy from $e^+e^-$ is fed into photons, leading to reheating\index{reheating}. We now make this analysis quantitative in order to derive a relation between the reheating temperature ratio and neutrino fugacity\index{fugacity}.
 
@@ -229,11 +222,11 @@ We denote by $S$ the conserved `comoving' entropy in a volume element $dV$, whic
 \begin{equation}
 S=\frac{2\pi^2}{45}g^S_*T_\gamma^3 a^3\,.
 \end{equation} 
-For ideal fermion and boson gases
+For ideal fermion and boson gases, 
 \begin{equation}
 g_*^S=\!\!\!\!\sum_{i=\text{bosons}}\!\!\!\!g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^-+\frac{7}{8}\!\!\!\sum_{i=\text{fermions}}\!\!\!\! g_i \left(\frac{T_i}{T_\gamma}\right)^3\!\!\!f_i^+\,.
 \end{equation}
-The $g_i$ are degeneracies, $f_i^\pm$ are known functions, valued in $(0,1)$, that turn off the various species as the temperature drops below their mass; compare to the analogous Eqs. (2.3) and (2.4) in~\cite{Blennow:2012de}. 
+The $g_i$ are degeneracies, $f_i^\pm$ are known functions, valued in $(0,1)$ (see \req{eq:entg002} for details), that turn off the various species as the temperature drops below their mass; compare to the analogous Eqs. (2.3) and (2.4) in~\cite{Blennow:2012de}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -74,6 +74,7 @@
 \newcommand{\radapt}[1]{\textit{Adapted from Ref.~\cite{#1}}}
 \newcommand{\para}[1]{\paragraph{#1}\hfill\break\noindent}
 \NewDocumentCommand{\allcite}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ et. al. }{ and #2 }(\StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
+\NewDocumentCommand{\aucite}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ }{ and #2 }(\StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
 \NewDocumentCommand{\allcitep}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ et. al. }{ and #2 }(preprint \StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
 
 % Chris's commands
@@ -100,38 +101,32 @@
 \numberwithin{equation}{section}
 
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%% Mostly JR
-\include{01introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapters from Cheng Tao Yang's dissertation SOME COMBINED and heavily edited JR
-\input{02quarkhadron.tex}
-\input{03neutrinoplasma.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapters from Jeremiah Birrell's dissertation
-\input{04Boltzmann_general_theory.tex}
-\input{05model_ind_study.tex}
-\input{06ParametricStudies.tex}
-\input{07NuDistToday.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%
-%%%%%Cheng Tao Leptons, neutrons
-\input{08leptons.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapters from Christopher Grayson's dissertation
-\input{09plasmamethods.tex}
-\input{10dynamicQCD.tex}
-\input{11BBN.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapter from Andrew Steinmetz's dissertation
-\input{12magnetization.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%
-\input{13outlook.tex}
+%%%%%%%%%%%%%%%%%%%%%%%% 
+%\include{01introduction} 
+\input{01introduction.tex} 
+\input{02z123quarkhadron.tex}  
+\input{02z450dynamicQCD.tex} 
+\input{02z600StrangeHadrons.tex} \input{03a1neutrinoplasma.tex}
+\input{03a2BoltzmnEinst.tex}
+\input{03a3Nutrinos.tex}
+\input{03a4ParametricStudies.tex}
+\input{03a5NuDistToday.tex}
+\input{04plasmamethods.tex}
+\input{05z1z2leptons.tex}  
+\input{05z3BBNscreened.tex}  
+\input{05z4neutronLife.tex}  
+\input{06magnetization.tex} 
+%\include{10appReader}
+\input{07outlook.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Appendix
 \appendix
-\include{14vol_forms}
-\input{15BoltzmannOrthopoly.tex}
-\input{16NeutrinoScatteringIntegrals.tex}
+%\include{10app1Reader}
+\input{10app1Reader.tex}
+%\include{10appAvol_forms}
+\input{10appAvol_forms.tex}
+\input{10appBoltzmannOrthopoly.tex}
+\input{10appCNeutrinoScatteringIntegrals.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{section}{List of Figures}
