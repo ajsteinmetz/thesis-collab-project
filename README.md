@@ -8,6 +8,15 @@ We describe in the context of the particle physics (PP) standard model (SM) `PP-
 <a
 id="cy-effective-orcid-url"
 class="underline"
+href="https://orcid.org/0000-0001-8217-1484"
+target="orcid.widget"
+rel="me noopener noreferrer"
+style="vertical-align: top"><img
+src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+style="width: 1em; margin-inline-start: 0.5em"
+alt="ORCID iD icon"/> Johann Rafelski</a>, <a
+id="cy-effective-orcid-url"
+class="underline"
 href="https://orcid.org/0000-0002-2289-4856"
 target="orcid.widget"
 rel="me noopener noreferrer"
@@ -24,15 +33,6 @@ style="vertical-align: top"><img
 src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
 style="width: 1em; margin-inline-start: 0.5em"
 alt="ORCID iD icon"/> Christopher Grayson</a>, <a
-id="cy-effective-orcid-url"
-class="underline"
-href="https://orcid.org/0000-0001-8217-1484"
-target="orcid.widget"
-rel="me noopener noreferrer"
-style="vertical-align: top"><img
-src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-style="width: 1em; margin-inline-start: 0.5em"
-alt="ORCID iD icon"/> Johann Rafelski</a>, <a
 id="cy-effective-orcid-url"
 class="underline"
 href="https://orcid.org/0000-0001-5474-2649"
@@ -53,10 +53,10 @@ style="width: 1em; margin-inline-start: 0.5em"
 alt="ORCID iD icon"/> Cheng Tao Yang</a>
 
 ## cite as
-Birrell, J., Grayson, C., Rafelski, J., Steinmetz, A., Yang, C. T. Quarks to Cosmos: Particles and Plasma in Cosmological Evolution. arXiv (2024).
+Rafelski, J., Birrell, J., Grayson, C., Steinmetz, A., Yang, C. T. Quarks to Cosmos: Particles and Plasma in Cosmological evolution. arXiv (2024).
 
 ## doi/arXiv id
 * TBD
 
 ## license
-Copyright © 2024, the authors, under exclusive licence to Springer Science Business Media, LLC, part of Springer Nature
+Copyright © 2024, the authors, under exclusive licence to Springer Science Business Media, LLC, part of Springer Nature.
