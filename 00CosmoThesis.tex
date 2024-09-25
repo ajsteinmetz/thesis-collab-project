@@ -78,7 +78,7 @@
 \NewDocumentCommand{\allcitep}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ et. al. }{ and #2 }(preprint \StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
 
 % Chris's commands
-\newcommand{\reff}[1]{Figure\,({\ref{#1}})}
+%\newcommand{\reff}[1]{Figure\,({\ref{#1}})}
 \newcommand{\wt}[1]{\widetilde{#1}}
 \newcommand{\eq}[1]{#1^{(\mathrm{eq})}}
 \newcommand{\peq}[1]{#1^{'(\mathrm{eq})}}
@@ -113,20 +113,18 @@
 \input{03a5NuDistToday.tex}
 \input{04plasmamethods.tex}
 \input{05z1z2leptons.tex}  
-\input{05z3BBNscreened.tex}  
-\input{05z4neutronLife.tex}  
+\input{05z3neutronLife.tex}  
+\input{05z4BBNscreened.tex}  
 \input{06magnetization.tex} 
 %\include{10appReader}
 \input{07outlook.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Appendix
 \appendix
-%\include{10app1Reader}
-\input{10app1Reader.tex}
-%\include{10appAvol_forms}
-\input{10appAvol_forms.tex}
-\input{10appBoltzmannOrthopoly.tex}
-\input{10appCNeutrinoScatteringIntegrals.tex}
+\input{10appAReader.tex}
+\input{10appBvol_forms.tex}
+\input{10appCBoltzmannOrthopoly.tex}
+\input{10appDNeutrinoScatteringIntegrals.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{section}{List of Figures}
