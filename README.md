@@ -57,8 +57,9 @@ alt="ORCID iD icon"/> Cheng Tao Yang</a>
 ## cite as
 Rafelski, J., Birrell, J., Grayson, C., Steinmetz, A., Yang, C. T. Quarks to Cosmos: Particles and Plasma in Cosmological evolution. In press EPJ ST. arXiv:2409.19031 [hep-ph] (2024).
 
-## doi/arXiv id
+## doi/arXiv/GitHub
 * https://arxiv.org/abs/2409.19031
+* https://github.com/ajsteinmetz/thesis-collab-project
 
 ## license
 Copyright © 2024, the authors, under exclusive licence to Springer Science Business Media, LLC, part of Springer Nature.
