@@ -53,9 +53,9 @@ a^{-3}\frac{d}{dt}(a^3N^0_A)=&\sum_{I\in int(A)} \frac{n_A}{n_I}\int\left(f_{r,I
 \end{align}
 The kinetic equilibrium distribution satisfies
 \begin{equation}
-f_A=\Upsilon_A e^{-E_A/T}f^A
+f_A=\Upsilon_A e^{-E_A/T}f^A\,,
 \end{equation}
-where $E=p_A^0$. 
+where $E_A=p_A^0$. 
 
 {\color{black}
 Substituting this into \req{eq:FRWcomovingNumGen} and simplifying we find
@@ -185,7 +185,7 @@ The conservation laws \req{eq:dynamics} and \req{eq:ConstEntropy} then imply the
 
 These relations allow one to solve for the fugacity, reheating ratio, and effective number of neutrinos\index{neutrino!effective number} in terms of the kinetic freeze-out temperature, irrespective of the details of the dynamics that leads to a particular freeze-out temperature. Specifically, combining \req{modindeq1} and \req{modindeq2} one obtains
 \begin{align}
- \frac{S_{\nu}(T_k)/T_k^3+S_{e^\pm}(T_k)/T_k^3+\frac{2\pi^2}{45}g_\gamma }{\left(\frac{7}{8}g_\nu+\frac{7}{8}g_{e^\pm} +g_\gamma \right)\frac{2\pi^2}{45} }=\frac{2}{3\zeta(3)}\int_0^\infty \frac{u^2 du}{\Upsilon_\nu^{-1}(T_k)e^u+1}.
+ \frac{S_{\nu}(T_k)/T_k^3+S_{e^\pm}(T_k)/T_k^3+\frac{2\pi^2}{45}g_\gamma }{\left(\frac{7}{8}g_\nu+\frac{7}{8}g_{e^\pm} +g_\gamma \right)\frac{2\pi^2}{45} }=\frac{2}{3\zeta(3)}\int_0^\infty \frac{u^2 du}{\Upsilon_\nu^{-1}(T_k)e^u+1}\,.
 \end{align}
 
 This can be solved numerically to compute $\Upsilon_\nu(T_k)$. One can also use these relations to analytically derive the following expansion for the photon to neutrino temperature ratio after $e^\pm$ annihilation (see \cite{Birrell:2012gg}), where here we define $\delta=\ln(\Upsilon)$:

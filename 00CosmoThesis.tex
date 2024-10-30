@@ -76,8 +76,8 @@
 \newcommand{\diag}{\mathrm{diag}}
 
 % Andrew's commands
-\newcommand{\cccite}[1]{\textit{Published in Ref.~\cite{#1} under the \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}}
-\newcommand{\radapt}[1]{\textit{Adapted from Ref.~\cite{#1}}}
+\newcommand{\cccite}[1]{Published in Ref.~\cite{#1} under the \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}
+\newcommand{\radapt}[1]{Adapted from Ref.~\cite{#1}}
 \newcommand{\para}[1]{\paragraph{#1}\hfill\break\noindent}
 \NewDocumentCommand{\allcite}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ et. al. }{ and #2 }(\StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}
 \NewDocumentCommand{\aucite}{m o}{\nocite{#1}\hyperlink{cite.#1}{\StrBefore{#1}{:}\IfNoValueTF{#2}{ }{ and #2 }(\StrBehind{#1}{:}[\temp]\StrLeft{\temp}{4})}}

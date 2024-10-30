@@ -220,7 +220,7 @@ d^i=\int\hat\chi_i \chi f_{ch}dy=\int\hat\chi_i  f_\Upsilon dy\,.
 \end{equation}
  Figure~\ref{fig:freeStreamf0approxUps5} 
  %and \ref{fig:freeStreamf0approxUps15} 
- shows for two values of $\Upsilon=0.5,\ =1.5$ the normalized $L^1(dx)$ errors between $f_\Upsilon^N$ and $f_\Upsilon$, computed via
+ shows for two values of $\Upsilon=0.5,\ \Upsilon=1.5$ the normalized $L^1(dx)$ errors between $f_\Upsilon^N$ and $f_\Upsilon$, computed via
 \begin{equation}
 \text{error}_N=\frac{\int_0^\infty |f_\Upsilon -f_\Upsilon ^N|dy}{\int_0^\infty |f_\Upsilon |dy}\,.
 \end{equation}
@@ -413,7 +413,7 @@ We solved \req{freeStreamToy} and \req{kEqToy} numerically using the chemical eq
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent{\bf Chemical equilibrium method}\\
-We solved \req{freeStreamToy} using the chemical equilibrium method, with the orthonormal basis defined by the weight function \req{freeStreamWeight} for $N=2,...,10$ modes (mode numbers $n=0,...,N-1$) and prescribed  single step relative and absolute error tolerances of $10^{-13}$ for the numerical integration, and with asymptotic reheating ratios of $R=1.1$, $R=1.4$, and $R=2$.   
+We solved \req{freeStreamToy} using the chemical equilibrium method, with the orthonormal basis defined by the weight function \req{freeStreamWeight} for $N=2,...,10$ modes (mode numbers $n=0,...,N-1$) and prescribed  single step relative and absolute error tolerances of $10^{-13}$ for the numerical integration, and with asymptotic reheating ratios of $R=1.1$, $R=1.4$, and $R=2$ and will here compare various aspects of the numerical solution with the  exact solution, \req{exactSol}.
 
 In  \rf{fig:freeStreamNumErr} 
 %and  \rf{fig:freeStreamEerr} 
@@ -428,29 +428,29 @@ we show the maximum relative error in the number densities and energy densities 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  
-To show that the numerical integration accurately captures the mode coefficients of the exact solution, \req{exactSol}, in \rf{fig:freeStreambErr} on left we show the error between the computed coefficients and actual coefficients, denoted by $\tilde b_n$ and $b_n$ respectively,
+To show that the numerical integration accurately captures the mode coefficients, in \rf{fig:freeStreambErr} on the left we show the difference between the computed coefficients and actual coefficients, denoted by $\tilde b_n$ and $b_n$ respectively, as measured by the $L^\infty$-error 
 \begin{equation}\label{modeErrDef}
-\text{error}_n=\max_{t} |\tilde{b}_n(t)-b_n(t)|\,,
+\text{error}_{L^\infty}(n)=\max_{t} |\tilde{b}_n(t)-b_n(t)|\,.
 \end{equation}
- where the evolution of the system was computed using $N=10$ modes.
+The error is shown as a function of mode number $n$; here the evolution of the system was computed using a total of $N=10$ modes.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centerline{\includegraphics[width=0.5\linewidth]{plots/free_stream_b_err.pdf}\hspace*{-0.5cm}
 \includegraphics[width=0.5\linewidth]{plots/free_stream_L1_err.pdf}}
-\caption{On left: Maximum error in mode coefficients. On right: Maximum ratio  of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution. \radapt{Birrell:2014gea}.}\label{fig:freeStreambErr}
+\caption{On left: Mode coefficient $L^\infty$-error. On right: Maximum ratio  of $L^1$ error between computed and exact solutions to $L^1$ norm of the exact solution. \radapt{Birrell:2014gea}.}\label{fig:freeStreambErr}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In  \rf{fig:freeStreambErr} on right we show the error between the exact solution $f$, and the numerical solution $f^N$ computed using $N=2,...,10$ modes over the solution time interval, where we define the error by
+In  \rf{fig:freeStreambErr} on  the right we show the difference between the exact solution $f$, and the numerical solution $f^N$ computed using a total number of $N=2,...,10$ modes, as measured by the maximum relative $L^1$ error  
 \begin{equation}\label{fErr}
-\text{error}_N=\max_{t} \frac{\int |f-f^N|dy}{\int |f|dy}\,.
+\text{error}_{L^1}(N)=\max_{t} \frac{\int |f-f^N|dy}{\int |f|dy}\,.
 \end{equation}
 
-For $R=1$ and $R=1.4$  the chemical equilibrium method works reasonably well (as long as the number of modes is at least 4, so that the energy and number densities are properly captured) but for $R=2$ the approximate solution exhibits spurious oscillations, as seen in \rf{fig:freeStreamApproxTr2} on left hand side, and has significantly degraded $L^1$ error;  this behavior is expected based on the results we did present earlier in this Appendix.
+For $R=1$ and $R=1.4$ we see that the chemical equilibrium method works reasonably well (as long as the number of modes is at least 4, so that the energy and number densities are properly captured) but for $R=2$ the  $L^1$ error  is large (see  \rf{fig:freeStreambErr}, right) and the approximate solution exhibits spurious oscillations as  seen in \rf{fig:freeStreamApproxTr2}  (left). This behavior is expected based on the results we did present earlier in this Appendix.
 %in Section \ref{basisComparison}. 
-Further clarifying the behavior, in  \rf{fig:freeStreamApproxTr2} on left hand side
+Further clarifying the behavior, in  \rf{fig:freeStreamApproxTr2} on the right hand side
 %{fig:freeStreamL1errTime}  
 we show the $L^1$ error ratio as a function of time for $N=10$ modes. In the $R=2$ case we see that the error increases as the reheating ratio approaches its asymptotic value of $R=2$ as $t\rightarrow\infty$.  As we will see, our methods achieves a much higher accuracy for a small number of terms in the case of large reheating ratio due to the replacement of dilution temperature scaling with the dynamical effective temperature $T$.\\ 
 
@@ -465,7 +465,7 @@ we show the $L^1$ error ratio as a function of time for $N=10$ modes. In the $R=
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent{\bf Chemical non-equilibrium method}\\
-We now solve  \req{freeStreamToy} using the chemical nonequilibrium method, with the orthonormal basis defined by the weight function, \req{weight}, for $N=2,...,10$ modes, a prescribed numerical integration tolerance of $10^{-13}$, and asymptotic reheating ratios of $R=1.1$, $R=1.4$, and $R=2$.  Recall that we are referring to $T$ and $\Upsilon$ as the first two modes ($n=0$ and $n=1$). 
+We now solve  \req{freeStreamToy} using the chemical nonequilibrium method, with the orthonormal basis defined by the weight function, \req{weight}, for $N=2,...,10$ modes, a prescribed numerical integration tolerance of $10^{-13}$, and asymptotic reheating ratios of $R=1.1$, $R=1.4$, and $R=2$ and will again compare with the exact solution, \req{exactSol}.  Recall that we are referring to $T$ and $\Upsilon$ as the first two modes ($n=0$ and $n=1$). 
 
  
 In  \rf{fig:keqNumErr} 
@@ -481,8 +481,8 @@ we show the maximum relative error over the time interval $[0,10]$ in the number
 \end{figure}
 %%%%%%%%%%%%%%%%
 
-To show that the numerical integration accurately captures the mode coefficients of the exact solution, \req{exactSol}, in \rf{fig:keqL1Err} on right hand side %old \rf{fig:keqbErr} 
-we show the error in the computed mode coefficients \req{modeErrDef}, where the evolution of the system was computed using $N=10$ modes. In \rf{fig:keqL1Err} on right hand side we show the error between the approximate and exact solutions, computed as in \req{fErr} for $N=2,...,10$ and $R=1.1$, $R=1.4$, and $R=2$ respectively.  For most mode numbers and $R$ values, the error using $2$ modes is substantially less than the error from the chemical equilibrium\index{chemical equilibrium} method using $4$ modes.  The result is most dramatic for the case of large reheating, $R=2$, where the spurious oscillations from the chemical equilibrium solution are absent in our method, as seen in  \rf{fig:keqApproxTr2} on the left hand side, as compared to the chemical equilibrium method in \rf{fig:freeStreamApproxTr2} on left hand side.  Note that due to the relation $z=y/R$ as discussed in before in this Appendix we plot from $z\in [0,15]$ in comparison to $y\in[0,30]$ in  \rf{fig:keqApproxTr2}.
+To show that the numerical integration accurately captures the mode coefficients, in \rf{fig:keqL1Err} on left hand side %old \rf{fig:keqbErr} 
+we show the error \req{modeErrDef}, where the evolution of the system was computed using a total of $N=10$ modes. In \rf{fig:keqL1Err} on right hand side we show the error between the approximate and exact solutions, computed as in \req{fErr} for $N=2,...,10$ and $R=1.1$, $R=1.4$, and $R=2$ respectively.  For most mode numbers and $R$ values, the error using $2$ modes is substantially less than the error from the chemical equilibrium\index{chemical equilibrium} method using $4$ modes.  The result is most dramatic for the case of large reheating, $R=2$, where the spurious oscillations from the chemical equilibrium solution are absent in our method, as seen in  \rf{fig:keqApproxTr2} on the left hand side, as compared to the chemical equilibrium method in \rf{fig:freeStreamApproxTr2} on left hand side.  Note that due to the relation $z=y/R$ as discussed in before in this Appendix we plot from $z\in [0,15]$ in comparison to $y\in[0,30]$ in  \rf{fig:keqApproxTr2}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -502,11 +502,11 @@ In fact it decreases since the exact solution approaches chemical equilibrium at
 \begin{figure}
 \centerline{\includegraphics[width=0.5\linewidth]{plots/keq_approx_T_r_2.pdf}\hspace*{-0.5cm}
 \includegraphics[width=0.5\linewidth]{plots/keq_L1_err_time.pdf}}
-\caption{On left: Approximate and exact solution for $R=2$ obtained with two modes. On right: $L^1$ error ratio as a function of time for $n=10$ modes.  \radapt{Birrell:2014gea}.}\label{fig:keqApproxTr2}
+\caption{On left: Approximate and exact solution for $R=2$ obtained with two modes. On right: $L^1$ error ratio as a function of time for $N=10$ modes.  \radapt{Birrell:2014gea}.}\label{fig:keqApproxTr2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-In summary, in addition to the reduction in the computational cost when going from $4$ to $2$ modes, we also reduce the error compared to the chemical equilibrium method, all while accurately capturing the number and energy densities. 
+In summary, in addition to the reduction in the computational cost when going from $4$ to $2$ modes, our method also reduces the error as compared to the chemical equilibrium method, all while accurately capturing the number and energy densities. 
 
 %\clearpage
