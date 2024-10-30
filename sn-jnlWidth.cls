@@ -244,10 +244,10 @@
     headheight={12pt},
     headsep={5.15mm},
 %    text={160mm,216mm},
-    text={174mm,251.5mm},
+    text={204mm,251.5mm},
     marginparsep=5mm,
     marginparwidth=12mm,
-    bindingoffset=6mm,
+    bindingoffset=10mm,
     footskip=10.13mm,twocolumn]{geometry}%
 %
 \renewcommand\footnoterule{%
@@ -264,11 +264,10 @@
     top={26mm},
     headheight={5.5pt},
     headsep={5.6mm},
-%    text={31pc,194.25mm},
-    text={174mm,251.5mm},
+    text={31pc,229.75mm},
     marginparsep=5mm,
     marginparwidth=12mm,
-    bindingoffset=6mm,
+    bindingoffset=10mm,
     footskip=10mm]{geometry}
 %
     \setlength\maxdepth{0pt}%

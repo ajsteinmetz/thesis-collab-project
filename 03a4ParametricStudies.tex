@@ -24,7 +24,7 @@ When the particle type being considered appears in both directions of a reaction
 
 Using the average velocity, which for (effectively massless) neutrinos is $\bar v=c=1$, we obtain what we call the scattering length\index{scattering length}
 \begin{align}
-L_\Gamma&\equiv\frac{\bar v}{\Gamma}=\frac{\int_0^\infty\frac{1}{\Upsilon^{-1}e^z+1}z^2dz}{\int_0^\infty \tilde C[f] z^2/E dz}\,.
+L_\Gamma&\equiv\displaystyle\frac{\bar v}{\Gamma}=\displaystyle\frac{\int_0^\infty\displaystyle\frac{1}{\Upsilon^{-1}e^z+1}z^2dz}{\int_0^\infty \tilde C[f] z^2/E dz}\,.
 \end{align}
 This can be compared to the Hubble length $L_H=c/H$\index{Hubble!length} and the temperature at which $L_\Gamma=L_H$ we call the freeze-out temperature\index{freeze-out!temperature} for that reaction. Figure \ref{fig:scattLength} shows the scattering length and $L_H$ for various types of neutrino reactions. The solid line corresponds to the annihilation process $e^+e^-\rightarrow \nu\bar\nu$, the dashed line corresponds to the scattering $\nu e^\pm\rightarrow \nu e^\pm$, and the dot-dashed line corresponds to the combination of all processes involving only neutrinos. The freeze-out temperatures in MeV are given in Table \ref{table:freezeoutTemp}.
 
@@ -47,9 +47,9 @@ $\nu_{\mu,\tau}$ &3.83 & 1.78& 0.903\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[width=0.82\linewidth]{plots/nu_e_scattering_length_eta_0_23.pdf}}
-\centerline{\includegraphics[width=0.82\linewidth]{plots/nu_mu_scattering_length_eta_0_23.pdf}}
-\caption{Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes, top for electron neutrino $\nu_e$ and bottom for the other two flavors $\nu_\mu$, $\nu_\tau$. \cccite{Birrell:2014uka} }\label{fig:scattLength}
+\centerline{\includegraphics[width=0.5\linewidth]{plots/nu_e_scattering_length_eta_0_23.pdf}
+\includegraphics[width=0.5\linewidth]{plots/nu_mu_scattering_length_eta_0_23.pdf}}
+\caption{Comparison of Hubble parameter to neutrino scattering length for various types of PP-SM processes, left hand frame for electron neutrino $\nu_e$ and right hand frame for the other two flavors $\nu_\mu$, $\nu_\tau$. \cccite{Birrell:2014uka} }\label{fig:scattLength}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -76,9 +76,9 @@ where $\Delta t=t_0-t_i=t_0$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[width=0.90\linewidth]{plots/Ups_relax.pdf}}
-\centerline{\includegraphics[width=0.90\linewidth]{plots/T_relax.pdf}}
-\caption{Starting at $12\MeV$, this figure shows the relaxation of a nonequilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the top frame while the temperatures are shown in the bottom frame}
+\centerline{\includegraphics[width=0.52\linewidth]{plots/Ups_relax.pdf}\hspace*{-0.7cm}
+\includegraphics[width=0.52\linewidth]{plots/T_relax.pdf}}
+\caption{Starting at $12\MeV$, this figure shows the relaxation of a nonequilibrium $\mu,\tau$-neutrino distribution towards equilibrium. The fugacities are shown in the left hand frame while the temperatures are shown in the right hand frame}
 \label{fig:relax}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,7 +145,7 @@ and $P^0$ is the pressure of a non-interacting gas of photons and $e^\pm$ in che
 We now present the dependence of the effective number of neutrinos\index{neutrino!effective number}, $N_\nu^{\mathrm{eff}}$, on the SM parameters $\sin^2(\theta_W)$ and $\eta$, as computed using the Boltzmann-Einstein equation method developed in Appendices \ref{ch:vol:forms}, \ref{ch:boltz:orthopoly}, and \ref{ch:coll:simp}. These results are shown in \rf{NnuParams}, presented as a function of Weinberg angle $\sin^2(\theta_W) $ for $\eta/\eta_0=1,2,5,10$. The effects of an increase in both parameters above the vacuum values can generate a significant increase in $N_\nu^{\mathrm{eff}}\to 3.5$.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.90\linewidth]{plots/N_eff2.pdf}}
+\centerline{\includegraphics[width=0.80\linewidth]{plots/N_eff2.pdf}}
 \caption{Change in the effective number of neutrinos $N_\nu^{\mathrm{eff}}$ as a function of the Weinberg angle for several values of $\eta/\eta_0=1,2,5,10$. Vertical line is $\sin^2(\theta_W)=0.23$. \radapt{Birrell:2014uka}}
 \label{NnuParams} 
  \end{figure}
@@ -173,7 +173,7 @@ y\equiv \sqrt{\frac{\eta}{\eta_0}}\,.
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.99\linewidth]{plots/region_plot_legend.pdf}
+\centerline{\includegraphics[width=0.95\linewidth]{plots/region_plot_legend.pdf}
 }
 \caption{$N_\nu^{\mathrm{eff}}$ bounds in the $\eta/\eta_0, \sin^2(\theta_W)$ plane. Blue for $N_\nu^{\mathrm{eff}}\in (3.03,3.57)$ corresponding to Ref.~\cite{Planck:2013pxb} CMB+BAO analysis\index{CMB} and green extends the region to $N_\nu^{\mathrm{eff}}<3.87$ i.e. to CMB+$H_0$. Dot-dashed line delimits the 1 standard-deviation lower boundary of the second analysis. \radapt{Birrell:2014uka}}
 \label{NnuDomain}
@@ -260,7 +260,7 @@ To solve the neutrino chemical potential $\mu_\nu/T_f$ as a function of the effe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=0.9\linewidth]{./plots/Chemical_Potential_Neff}
+\includegraphics[width=0.8\linewidth]{./plots/Chemical_Potential_Neff}
 \caption{The free-streaming neutrino chemical potential $|\mu_\nu|/T_f$ as a function of the effective number of neutrinos $N_\nu^{\mathrm{eff}}$. The solid (blue) line is the exact solution and the (red) dashed line is the approximate solution neglecting the $(\mu_\nu/T_f)^4$ term; the maximum difference in the domain shown is about $2\%$. \radapt{Yang:2024ret}}
 \label{ChemicalPotentialNeff}
 \end{center}
@@ -336,7 +336,7 @@ where the degrees of freedom are given by $g_\gamma=2$, $g_{e^\pm}=4$, and $g_{\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.9\linewidth]{./plots/Ratio_BL}
+\includegraphics[width=0.8\linewidth]{./plots/Ratio_BL}
 \caption{The ratio $B/|L|$ between the net baryon number and the net lepton number as a function of $N^{\mathrm{eff}}_\nu$: The solid blue line shows $B/|L|$. The vertical (red) dotted lines represent the values $3.36\leqslant N_\nu^{\mathrm{eff}}\leqslant3.62$, which correspond to $1.16 \times 10^{-9}\leqslant B/|L|\leqslant 1.51 \times 10^{-9}$ (horizontal dashed lines). \radapt{Yang:2024ret}}
 \label{fig:BLRatio}
 \end{center}
@@ -379,7 +379,7 @@ In \rf{ExtraNeutrinoRate} we show the thermal reaction rate per volume for relev
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.9\linewidth]{./plots/Extra_neutrino_rate_volume}
+\includegraphics[width=0.8\linewidth]{./plots/Extra_neutrino_rate_volume}
 \caption{The thermal reaction rates per volume for $\gamma\gamma\to e^-e^+$ top line (blue) and $e^-e^+\to\nu\bar{\nu}$ bottom line (red) as a function of temperature $2\MeV>T>0.05\MeV$. . \radapt{Yang:2024ret}.}
 \label{ExtraNeutrinoRate}
 \end{center}
@@ -403,7 +403,7 @@ In  \rf{DimensionlessRatio} we show the temperature ratio $T_\nu/T_{\gamma,e^\pm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \begin{figure} 
 \begin{center}
-\includegraphics[width=0.9\linewidth]{./plots/DimensionlessRatio_ExtraNeutrino}
+\includegraphics[width=0.8\linewidth]{./plots/DimensionlessRatio_ExtraNeutrino}
 \caption{The temperature ratio $T_\nu/T_{\gamma,e^\pm}$ (blue line), the rate ratio $R_{\nu\overline{\nu}\rightarrow e\overline{e}}/ R_{e\overline{e}\rightarrow\nu\overline{\nu}}$ (red line) and $(R_{e\overline{e}\rightarrow\nu\overline{\nu}}-R_{\nu\overline{\nu}\rightarrow e\overline{e}})/ R_{e\overline{e}\rightarrow\nu\overline{\nu}}$ (green line) as a function of temperature. It shows that the reaction $\nu\overline{\nu}\rightarrow e\overline{e}$ is small compare to the reaction $e\overline{e}\rightarrow\nu\overline{\nu}$ as temperature cooling down. \radapt{Yang:2024ret}.}
 \label{DimensionlessRatio}
 \end{center}
@@ -427,7 +427,7 @@ n_\mathrm{extra}=-&\exp\left(3\int_{T_i}^T\frac{dT^\prime}{T^\prime}(1+\mathcal{
 %%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.9\linewidth]{./plots/ExtraNeutrinoRatio}
+\includegraphics[width=0.8\linewidth]{./plots/ExtraNeutrinoRatio}
 \caption{the ratio between $n_{extra}/n_{relic}$ as a function of temperature with different neutrino freeze-out temperature $T_f$. \radapt{Yang:2024ret}.}
 \label{ExtraNeutrinoRatio}
 \end{center}

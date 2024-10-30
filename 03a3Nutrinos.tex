@@ -47,8 +47,9 @@ The number density of particle species $A$ in an FRW Universe is given by $N_A^0
 \end{align}
 By a similar computation to \req{eq:charge_current_div} we obtain
 \begin{align}\label{eq:FRWcomovingNumGen}
-a^{-3}\frac{d}{dt}(a^3N^0_A)=&\sum_{I\in int(A)} \frac{n_A}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) \right.\\
-&\left. \qquad-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right) dV.\notag
+a^{-3}\frac{d}{dt}(a^3N^0_A)=&\sum_{I\in int(A)} \frac{n_A}{n_I}\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) 
+%\right.\\&\left. \qquad
+-f_{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)\right) dV.
 \end{align}
 The kinetic equilibrium distribution satisfies
 \begin{equation}
@@ -59,22 +60,25 @@ where $E=p_A^0$.
 {\color{black}
 Substituting this into \req{eq:FRWcomovingNumGen} and simplifying we find
 \begin{align}\label{eq:comovingPartNumFRWfinal}
-&a^{-3}\frac{d}{dt}(a^3N_A^0)\\
+a^{-3}\frac{d}{dt}(a^3N_A^0)
 =&\sum_{I\in int(A)}\frac{n_A}{n_I}\left(\int \prod_j\left(\Upsilon_{B_j}^{n_{B_j}}e^{-\sum_{l=1}^{n_{B_j}}E_{B_j}^l/T}\right)f^{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^I(p_{B_j}^l,p_{A_i}^k)dV\right.\notag\\
 &\left. -\int \prod_i\left(\Upsilon_{A_i}^{n_{A_i}}e^{-\sum_{k=1}^{n_{A_i}}E_{A_i}^k/T}\right)f^{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^{\overleftarrow{I}}(p_{A_i}^k,p_{B_j}^l)dV\right)\notag\\
-=&\sum_{I\in int(A)}\left(\prod_j\Upsilon_{B_j}^{n_{B_j}}- \prod_i\Upsilon_{A_i}^{n_{A_i}}\right){n_A}R_I\,,\notag\\
+=&\sum_{I\in int(A)}\left(\prod_j\Upsilon_{B_j}^{n_{B_j}}- \prod_i\Upsilon_{A_i}^{n_{A_i}}\right){n_A}R_I\,,
+\\
 &R_I\equiv \frac{1}{n_I}\int\left(e^{-\sum_j\sum_{l=1}^{n_{B_j}}E_{B_j}^l/T}\right) f^{p,I}(p_{A_i}^k)f^{r,I}(p_{B_j}^l)W^I(p_{B_j}^l,p_{A_i}^k)dV\notag\,,
 \end{align}
 where $j$ indexes the reactants of $I$ and $i$ the products. To obtain this result we have assumed time-reversal symmetry of the scatting kernel \req{timeSymmetry} and used conservation of 4-momentum, $\Delta p=0$. In particular, if all particle species are in chemical equilibrium then the rate of change of comoving particle number is zero. The non-negative quantity $R_I$ can be viewed as quantifying the strength of the interaction $I$. Finally, note the terms corresponding to symmetric interactions vanish. 
 
 We can also use \req{eq:comovingPartNumFRWfinal} to obtain a formula for the comoving total entropy of a collection of particles in kinetic equilibrium in an FRW Universe. Denoting the total entropy current $S^\mu\equiv\sum_A S_A^\mu$, with $S_A^\mu$ defined as in \req{smdef}, and noting that the entropy density in an FRW Universe is given by $\sigma=S^0$, we can combine \req{S:n:eq} with \req{eq:comovingPartNumFRWfinal} to compute
 \begin{align}
-&a^{-3}\frac{d}{dt}(a^3\sigma)=-\sum_A \ln(\Upsilon_A) \frac{d}{dt}(a^3N_A^0)\\
-&=-\sum_A \ln(\Upsilon_A)\sum_{I\in int(A)} \left(\prod_j\Upsilon_{B_j}^{n_{B_j}}- \prod_i\Upsilon_{A_i}^{n_{A_i}}\right)n_A R_I\notag\\
+&a^{-3}\frac{d}{dt}(a^3\sigma)=-\sum_A \ln(\Upsilon_A) \frac{d}{dt}(a^3N_A^0)
+%\\&
+=-\sum_A \ln(\Upsilon_A)\sum_{I\in int(A)} \left(\prod_j\Upsilon_{B_j}^{n_{B_j}}- \prod_i\Upsilon_{A_i}^{n_{A_i}}\right)n_A R_I\notag\\
 &=\sum_{I\in int} \left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)R_I\sum_{A\in p(I)}n_A \ln(\Upsilon_A)\notag\\
-&=\sum_{I\in \overrightarrow{int}} \left[\left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)R_I\sum_{A\in p(I)}n_A \ln(\Upsilon_A)\right.\notag\\
-&\left.\qquad\qquad+\left( \prod_j\Upsilon_{B_j}^{n_{B_j}}-\prod_j\Upsilon_{A_i}^{n_{A_i}}\right)R_I\sum_{B\in r(I)}n_B \ln(\Upsilon_B)\right]\notag\\
-&=\sum_{I\in \overrightarrow{int}} \left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)\left(\sum_i n_{A_i}\ln(\Upsilon_{A_i})-\sum_jn_{B_j}\ln(\Upsilon_{B_j})\right)R_I\,,\notag
+&=\sum_{I\in \overrightarrow{int}} \left[\left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)R_I\sum_{A\in p(I)}n_A \ln(\Upsilon_A)
+%\right.\notag\\&\left.\qquad\qquad
++\left( \prod_j\Upsilon_{B_j}^{n_{B_j}}-\prod_j\Upsilon_{A_i}^{n_{A_i}}\right)R_I\sum_{B\in r(I)}n_B \ln(\Upsilon_B)\right]\notag\\
+&=\sum_{I\in \overrightarrow{int}} \left( \prod_i\Upsilon_{A_i}^{n_{A_i}}-\prod_j\Upsilon_{B_j}^{n_{B_j}}\right)\left(\sum_i n_{A_i}\ln(\Upsilon_{A_i})-\sum_jn_{B_j}\ln(\Upsilon_{B_j})\right)R_I\,, 
 \end{align}
 where $j$ indexes the reactants of $I$ and $i$ the products. Again, there is no contribution from symmetric interactions. Observing that 
  \begin{align}
@@ -169,10 +173,9 @@ The conservation laws \req{eq:dynamics} and \req{eq:ConstEntropy} then imply the
 \begin{equation}\label{modindeq1}
 \frac{T_{ch}^3V(t_{ch})}{T_k^3V(t_k)}=\frac{2}{3\zeta(3)}\int_0^\infty \frac{u^2 du}{\Upsilon_\nu^{-1}(T_k)e^u+1}.
 \end{equation}
-\item Conservation of the entropy in $e^\pm$, $\gamma$, and neutrinos prior to neutrino freeze-out:
+\item Conservation of entropy in $e^\pm$, $\gamma$, and neutrinos prior to neutrino freeze-out:
 \begin{align}\label{modindeq2}
-&\left(\frac{7}{8}g_\nu+\frac{7}{8}g_{e^\pm} +g_\gamma \right)\frac{2\pi^2}{45} T_{ch}^3V(t_{ch})=\\
-&\left(S_{\nu}(T_k)+S_{e^\pm}(T_k)+\frac{2\pi^2}{45}g_\gamma T_k^3\right)V(t_k)\,.\notag
+&\left(\frac{7}{8}g_\nu+\frac{7}{8}g_{e^\pm} +g_\gamma \right)\frac{2\pi^2}{45} T_{ch}^3V(t_{ch})=\left(S_{\nu}(T_k)+S_{e^\pm}(T_k)+\frac{2\pi^2}{45}g_\gamma T_k^3\right)V(t_k)\,.
 \end{align}
 \item Conservation of the entropy in $e^\pm$ and $\gamma$ between neutrino freeze-out and $e^\pm$ annihilation:
 \begin{equation}\label{modindeq3}
@@ -200,9 +203,9 @@ N^{\mathrm{eff}}_\nu=\frac{360}{7\pi^4}\frac{e^{-4b\delta}}{(1+c\delta^2)^4}\int
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.90\linewidth]{plots/N_eff.pdf}}
-\centerline{\includegraphics[width=0.90\linewidth]{plots/Upsilon_q.pdf}}
-\caption{Dependence of the effective number of neutrinos (top) and neutrino fugacity\index{fugacity!neutrino} (bottom) on the neutrino kinetic freeze-out temperature. We also show the evolution of the deceleration parameter through the freeze-out period (bottom)}
+\centerline{\includegraphics[width=0.51\linewidth]{plots/N_eff.pdf}\hspace{-0.95cm}
+\includegraphics[width=0.50\linewidth]{plots/Upsilon_q.pdf}}
+\caption{Dependence of the effective number of neutrinos (left hand frame) and neutrino fugacity\index{fugacity!neutrino} (right hand frame) on the neutrino kinetic freeze-out temperature. We also show the evolution of the deceleration parameter through the freeze-out period (right hand frame)}
 \label{fig:Tk_dependence}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -236,7 +239,7 @@ The $g_i$ are degeneracies, $f_i^\pm$ are known functions, valued in $(0,1)$ (se
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.9\linewidth]{plots/gS_T_ratio.pdf}}
+\centerline{\includegraphics[width=0.8\linewidth]{plots/gS_T_ratio.pdf}}
 \caption{Left axis: Effective number of entropy-DoF, including lattice QCD effects applying~\cite{Borsanyi:2013bia} (solid line) and~\cite{HotQCD:2014kol} (circles), compared to the earlier results~\cite{Bazavov:2009zn} (triangles) used by~\cite{Anchordoqui:2011nh}, and the ideal gas model of~\cite{Coleman:2003hs} (dashed line) as functions of temperature $T$. Right axis: Photon to SP temperature ratio, $T_\gamma/T_s$, as a function of SP decoupling temperature (dash-dotted (blue) line). The vertical dotted lines at $T=142\MeV$ and $T=163\MeV$ delimit the QGP transformation region. \cccite{Birrell:2014cja}\label{fig:gS}}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -262,7 +265,7 @@ where $T_{d,s}$ is the decoupling temperature of the SP and $T_{\gamma}$ is any 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.9\linewidth]{plots/Neff_Td_combined.pdf}}
+\centerline{\includegraphics[width=0.75\linewidth]{plots/Neff_Td_combined.pdf}}
 \caption{Solid lines: Increase in $\delta N_{\text{eff}}$ due to the effect of $1,\dots,6$ light sterile boson DoF ($g_s=1,\dots,6$, bottom to top curves) as a function of freeze-out temperature $T_{d,s}$. Dashed lines: Increase in $\delta N_{\text{eff}}$ due to the effect of $1,\dots,6$ light sterile fermion DoF ($g_s=7/8\times 1,\dots,7/8\times 6$, bottom to top curves) as a function of freeze-out temperature $T_{d,s}$. The horizontal dotted lines correspond to $\delta N_{\text{eff}}+0.046=0.36,0.62,1$. The vertical dotted lines show the reported range of QGP transformation temperatures $T_c=142-163\MeV$. \cccite{Birrell:2014cja}\label{fig:NeffTdZoom}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

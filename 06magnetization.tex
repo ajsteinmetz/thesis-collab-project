@@ -22,7 +22,7 @@ Magnetized baryon inhomogeneities which in turn could produce anisotropies in th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
  \centering
- \includegraphics[width=0.90\linewidth]{plots/pmf.png}
+ \includegraphics[width=0.99\linewidth]{plots/pmf.jpg}
  \caption{Qualitative plot of the primordial magnetic field strength over cosmic time. All figures are printed in temporal sequence in the expanding Universe beginning with high temperatures (and early times) on the left and lower temperatures (and later times) on the right. \cccite{Steinmetz:2023ucp}. \radapt{Rafelski:2023emw}}\index{primordial!magnetic field}
  \label{fig:pmf}
 \end{figure}
@@ -41,7 +41,7 @@ where electrodynamics is expected to display nonlinear characteristics and (b) t
 As the primordial Universe cooled below temperature $T\!=\!m_{e}$ (the electron mass), the thermal electron and positron\index{plasma!electron-positron} comoving density depleted by over eight orders of magnitude. At $T_\mathrm{split}=20.3\keV$, the charged lepton asymmetry\index{lepton!asymmetry} (mirrored by baryon asymmetry\index{baryon!asymmetry} and enforced by charge neutrality)\index{charge neutrality} became evident as the surviving excess electrons persisted while positrons vanished entirely from the particle inventory of the primordial Universe due to annihilation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
  \centering
 \includegraphics[width=0.90\linewidth]{plots/EEPlasmaDensityRatio_new01.jpg}
  \caption{Number density of electron $e^{-}$ and positron $e^{+}$ to baryon ratio $n_{e^{\pm}}/n_{B}$ as a function of photon temperature in the primordial Universe. See \rsec{section:electron} for further details. In this work we measure temperature in units of energy (keV) thus we set the Boltzmann constant to $k_{B}=1$. \cccite{Steinmetz:2023nsc}}
@@ -75,7 +75,7 @@ where $n\in0,1,2,\ldots$ is the Landau orbital quantum number\index{Landau level
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
  \centering
- \includegraphics[width=0.95\linewidth]{plots/schematic.png}\Bstrut\\
+ \includegraphics[width=0.8\linewidth]{plots/schematic.png}\Bstrut\\
  \begin{tabular}{ r|c|c| }
  \multicolumn{1}{r}{}
  & \multicolumn{1}{c}{aligned: $s=+1$}
@@ -132,9 +132,9 @@ In comparison, the Boltzmann factor for the DP energy eigenvalues are given by
  \label{xscaledp:1} x_{\sigma,s}^{n}\vert_\mathrm{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{eB}{T^{2}}\left(2n+1+\sigma s\right)}+\frac{eB}{2m_{e}T}\left(\frac{g}{2}-1\right)\sigma s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
 \end{alignat}
 which scales during FLRW\index{cosmology!FLRW} expansion as
-\begin{multline}
- \label{xscaledp:2} x_{\sigma,s}^{n}(a(t))\vert_\mathrm{DP} =\\ \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T_{0}^{2}}\frac{a(t)^{2}}{a_{0}^{2}}+\frac{eB_{0}}{T_{0}^{2}}\left(2n+1+\sigma s\right)}+\frac{eB_{0}}{2m_{e}T_{0}}\frac{a_{0}}{a(t)}\left(\frac{g}{2}-1\right)\sigma s\right)^{2}+\frac{p_{z,0}^{2}}{T_{0}^{2}}}\,.
-\end{multline}
+\begin{equation}
+ \label{xscaledp:2} x_{\sigma,s}^{n}(a(t))\vert_\mathrm{DP} =  \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T_{0}^{2}}\frac{a(t)^{2}}{a_{0}^{2}}+\frac{eB_{0}}{T_{0}^{2}}\left(2n+1+\sigma s\right)}+\frac{eB_{0}}{2m_{e}T_{0}}\frac{a_{0}}{a(t)}\left(\frac{g}{2}-1\right)\sigma s\right)^{2}+\frac{p_{z,0}^{2}}{T_{0}^{2}}}\,.
+\end{equation}
 While the above expression is rather complicated, we note that the KGP~\req{xscale:1} and DP~\req{xscaledp:1} Boltzmann factors both reduce to the Schroedinger-Pauli limit as $a(t)\rightarrow\infty$, thereby demonstrating that the total magnetic moment is protected under the adiabatic expansion of the primordial Universe.
 
 Higher order non-minimal magnetic contributions can be introduced to the Boltzmann factor such as $\sim(e/m)^{2}B^{2}/T^{2}$. The reasoning above suggests that these terms are suppressed over cosmological time driving the system into minimal electromagnetic coupling with the exception of the anomalous magnetic moment. It is interesting to note that cosmological expansion then serves to `smooth out' the characteristics of more complex electrodynamics, erasing them from a statistical perspective in favor of minimal-like dynamics.
@@ -209,10 +209,10 @@ An imbalance in polarization within a region of volume $V$ results in a nonzero 
 \label{sec:eulermac}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent Before we proceed with the Boltzmann distribution\index{Boltzmann!distribution} approximation which makes up the bulk of our analysis, we will comment on the full Fermi-Dirac\index{Fermi!distribution} distribution analysis. The Euler-Maclaurin\index{Euler-Maclaurin integration} formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels $n$ into an integration given by
-\begin{multline}
- \label{eulermaclaurin}\sum^{b}_{n=a}f(n)-\int^{b}_{a}f(x)dx = \frac{1}{2}\left(f(b)+f(a)\right)\\
+\begin{equation}
+ \label{eulermaclaurin}\sum^{b}_{n=a}f(n)-\int^{b}_{a}f(x)dx = \frac{1}{2}\left(f(b)+f(a)\right) 
  +\sum_{i=1}^{j}\frac{b_{2i}}{(2i)!}\left(f^{(2i-1)}(b)-f^{(2i-1)}(a)\right)+R(j)\,,
-\end{multline}
+\end{equation}
 where $b_{2i}$ are the Bernoulli numbers and $R(j)$ is the error remainder defined by integrals over Bernoulli polynomials. The integer $j$ is chosen for the level of approximation that is desired. Euler-Maclaurin integration is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder is small and bounded; see~\cite{greiner2012thermodynamics} for the nonrelativistic case. In this analysis, we keep the zeroth and first order terms in the Euler-Maclaurin formula. We note that regularization of the excess terms in \req{eulermaclaurin} is done in the context of strong field QED~\cite{greiner2008quantum} though that is outside our scope.
 
 Using \req{eulermaclaurin} allows us to convert the sum over $n$ quantum numbers in \req{partition:1} into an integral. Defining
@@ -220,10 +220,10 @@ Using \req{eulermaclaurin} allows us to convert the sum over $n$ quantum numbers
  \label{Func} f_{\sigma,s}^{n}=\ln\left(1+\Upsilon_{\sigma,s}\exp\left(-\frac{E_{\sigma,s}^{n}}{T}\right)\right)\,,
 \end{alignat}
 \req{partition:1} for $j=1$ becomes
-\begin{multline}
- \label{PartFuncTwo} \ln\mathcal{Z}_{e^{+}e^{-}} = \frac{e{B}V}{(2\pi)^{2}}\sum_{\sigma,s}^{\pm1}\int_{-\infty}^{+\infty}dp_{z}\\
+\begin{equation}
+ \label{PartFuncTwo} \ln\mathcal{Z}_{e^{+}e^{-}} = \frac{e{B}V}{(2\pi)^{2}}\sum_{\sigma,s}^{\pm1}\int_{-\infty}^{+\infty}dp_{z}
  \left(\int_{0}^{+\infty}dn f_{\sigma,s}^{n} + \frac{1}{2}f_{\sigma,s}^{0} + \frac{1}{12}\frac{\partial f_{\sigma,s}^{n}}{\partial n}\bigg\rvert_{n=0} + R(1)\right)
-\end{multline}
+\end{equation}
 It will be useful to rearrange \req{cosmokgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
 \begin{gather}
  \label{effmass:1}
@@ -298,11 +298,10 @@ We note from \rf{fig:schematic} that the first and fourth terms and the second a
  \varepsilon_{+,-}^{n}<\varepsilon_{+,+}^{n}\,.
 \end{align}
 \req{partitionpower:3} allows us to reorganize the partition function with a new magnetization quantum number $s'$, which characterizes paramagnetic flux increasing states $(s'=+1)$ and diamagnetic flux decreasing states $(s'=-1)$. This recasts \req{partitionpower:2} as
-\begin{multline}
+\begin{equation}
  \label{partitionpower:4}
- \ln{\mathcal{Z}_{e^{+}e^{-}}}=\frac{e{B}V}{(2\pi)^{2}}\sum_{s'}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}\mathrm{d}p_{z}\frac{(-1)^{k+1}}{k}\\
- \left[2\xi_{s'}\cosh\frac{k\mu}{T}\right]\exp\left(-k\frac{{\tilde m}_{s'}\varepsilon_{s'}^{n}}{T}\right)\,,
-\end{multline}
+ \ln{\mathcal{Z}_{e^{+}e^{-}}}=\frac{e{B}V}{(2\pi)^{2}}\sum_{s'}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}\mathrm{d}p_{z}\frac{(-1)^{k+1}}{k} \left[2\xi_{s'}\cosh\frac{k\mu}{T}\right]\exp\left(-k\frac{{\tilde m}_{s'}\varepsilon_{s'}^{n}}{T}\right)\,,
+\end{equation}
 with dimensionless energy $\varepsilon_{s'}^{n}$, polarization mass $\tilde{m}_{s'}$, and polarization $\zeta_{s'}$ redefined in terms of the moment orientation quantum number $s'$
 \begin{gather}
  {\tilde m}_{s'}^{2}=m_{e}^{2}+e{B}\left(1-\frac{g}{2}s'\right)\,,\\
@@ -325,19 +324,21 @@ The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=x
 
 Summation over the auxillary function $W_{\nu}$ can be replaced via Euler-Maclaurin\index{Euler-Maclaurin integration} integration~\req{eulermaclaurin} as
 \begin{align}
-\sum^{\infty}_{n=0}W_1(n)=\int^\infty_0\!\!dn\,W_1(n)&+\frac{1}{2}\bigg[W_1(\infty)+W_1(0)\bigg]\notag\\
-&\qquad+\frac{1}{12}\bigg[\left.\frac{\partial W_1}{\partial n}\right|_{\infty}-\left.\frac{\partial W_1}{\partial n}\right|_{0}\bigg]+R(2)\,.
+\sum^{\infty}_{n=0}W_1(n)=\int^\infty_0\!\!dn\,W_1(n)&+\frac{1}{2}\bigg[W_1(\infty)+W_1(0)\bigg]
+%\notag\\&\qquad
++\frac{1}{12}\bigg[\left.\frac{\partial W_1}{\partial n}\right|_{\infty}-\left.\frac{\partial W_1}{\partial n}\right|_{0}\bigg]+R(2)\,.
 \end{align}
 Using the properties of Bessel function we have
 \begin{align}
-\frac{\partial W_1(s',n)}{\partial n}=-\frac{k^2eB}{T^2}K_0\left({\frac{k}{T}\sqrt{\tilde{m}^2_{s'}+2eBn}}\right),\qquad W_1(\infty)=0,\\
+\frac{\partial W_1(s',n)}{\partial n}=-\frac{k^2eB}{T^2}K_0\left({\frac{k}{T}\sqrt{\tilde{m}^2_{s'}+2eBn}}\right),\qquad W_1(\infty)=0,\qquad
 \int^\infty_a\!\!dx\,x^2K_1(x)=a^2K_2(a)\,.
 \end{align}
 This yields
 \begin{align}
  \sum^{\infty}_{n=0}W_1(s',n)
- &=\left(\frac{T^2}{k^2eB}\right)\left[\left(\frac{k\tilde{m}_{s'}}{T}\right)^2K_2\left(\frac{k\tilde m_{s'}}{T}\right)\right]+\frac{1}{2}\left[\left(\frac{k\tilde{m}_{s'}}{T}\right)K_1\left(\frac{k\tilde m_{s'}}{T}\right)\right]\notag\\
- &\qquad+\frac{1}{12}\left[\left(\frac{k^2eB}{T^2}\right)K_0\left(\frac{k\tilde m_{s'}}{T}\right)\right].
+ &=\left(\frac{T^2}{k^2eB}\right)\left[\left(\frac{k\tilde{m}_{s'}}{T}\right)^2K_2\left(\frac{k\tilde m_{s'}}{T}\right)\right]+\frac{1}{2}\left[\left(\frac{k\tilde{m}_{s'}}{T}\right)K_1\left(\frac{k\tilde m_{s'}}{T}\right)\right]
+% \notag\\&\qquad
+ +\frac{1}{12}\left[\left(\frac{k^2eB}{T^2}\right)K_0\left(\frac{k\tilde m_{s'}}{T}\right)\right].
 \end{align}
 
 The standard Boltzmann distribution\index{Boltzmann!distribution} is obtained by summing only $k=1$ and neglecting the higher order terms. Therefore we can integrate the partition function over the summed Landau levels. After truncation of the series and error remainder (up to the first derivative $j=2$), the partition function \req{partitionpower:1} can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind and cosmic magnetic scale $b_{0}$, yielding
@@ -422,9 +423,9 @@ In presence of a magnetic field\index{magnetic!fields} in the Boltzmann approxim
 \req{chem} is fully determined by the right-hand side expression if the polarization fugacity\index{fugacity!polarization} is set to unity $\zeta=0$ implying no external bias to the number of polarizations except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
  \centering
- \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.0cm,width=0.95\linewidth]{plots/thesis_chempot_fixed.pdf}
+\includegraphics[width=0.8\linewidth]{plots/thesis_chempot_fixed.pdf}
  \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\zeta$ and magnetic scale $b_{0}$. \cccite{Steinmetz:2023ucp}. \radapt{Steinmetz:2023nsc}}
  \label{fig:chemicalpotential}
 \end{figure}
@@ -501,9 +502,9 @@ As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$
 \noindent In \rf{fig:magnet}, we plot the magnetization\index{magnetization} as given by \req{g2magplus} and \req{g2magminus} with the spin potential set to unity $\xi=1$. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field strength ${B}/{B}_{C}$ is also plotted for lower (dotted red) and upper (dotted blue) bounds. Since the derivative of the partition function governing magnetization may manifest differences between Fermi-Dirac and the here used Boltzmann limit more acutely, out of abundance of caution, we indicate extrapolation outside the domain of validity of the Boltzmann limit with dashes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
  \centering
- \includegraphics[width=0.95\linewidth]{plots/thesis_mag.pdf}
+ \hspace*{0.4cm}\includegraphics[width=0.8\linewidth]{plots/thesis_mag.pdf}
  \caption{The magnetization ${\mathfrak M}$, with $g\!=\!2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. \cccite{Steinmetz:2023ucp}. \radapt{Rafelski:2023emw,Steinmetz:2023nsc}}
  \label{fig:magnet} 
 \end{figure}
@@ -527,9 +528,9 @@ Primordial Universe conditions may also apply to some extreme stellar objects wi
 \noindent As discussed at the end of \rsec{sec:magnetization}, the AMM of $e^{+}e^{-}$ is not relevant in the present model. However out of academic interest, it is valuable to consider how magnetization is affected by changing the $g$-factor\index{g-factor} significantly.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
  \centering
- \includegraphics[width=0.90\linewidth]{plots/thesis_gfac.pdf}
+ \hspace*{-0.8cm}\includegraphics[width=0.84\linewidth]{plots/thesis_gfac.pdf}
  \caption{The magnetization $\mathfrak M$ as a function of $g$-factor plotted for several temperatures with magnetic scale $b_{0}=10^{-3}$ and polarization fugacity $\xi=1$. \cccite{Steinmetz:2023ucp}. \radapt{Steinmetz:2023nsc}}
  \label{fig:gfac} 
 \end{figure}
@@ -570,9 +571,9 @@ where $\mu_{B}$ is the Bohr magneton and $N=nV$ is the total particle number in 
 Statistically, we expect the transverse expectation values to be zero. We emphasize here that despite $|\vec{m}|_{z}$ being nonzero, this doesn't indicate a nonzero spin angular momentum as our plasma is nearly matter-antimatter symmetric. The quantity defined in \req{momentperlepton} gives us an insight into the microscopic response of the plasma.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
  \centering
- \includegraphics[clip, trim=0.0cm 0.0cm 0.0cm 0.0cm,width=0.90\linewidth]{plots/thesis_perlepton.png}
+ \includegraphics[width=0.80\linewidth]{plots/thesis_perlepton.png}
  \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis as a function of temperature. \cccite{Steinmetz:2023nsc}}
  \label{fig:momentperlepton}
 \end{figure}
@@ -587,12 +588,14 @@ If the field strength is held constant, then the average magnetic moment per lep
 \label{sec:ferro}\index{ferromagnetism}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent Up to this point, we have neglected the impact that a nonzero spin potential $\zeta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization given in \req{arbg:1} and \req{arbg:2} is entirely controlled by the polarization fugacity\index{fugacity!polarization} $\xi$ asymmetry generated by the spin potential $\zeta$ yielding up to first order $\mathcal{O}(b_{0})$ in magnetic scale
-\begin{multline}
+%\begin{multline}
+\begin{equation}
  \label{ferro}
- \lim_{m_{e}^{2}/T^{2}\gg b_0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\zeta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\\
+ \lim_{m_{e}^{2}/T^{2}\gg b_0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\zeta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right] 
  +b_{0}\left(g^{2}-\frac{4}{3}\right)\frac{e^{2}}{8\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\zeta}{T}}\cosh{\frac{\mu}{T}}K_{0}\left(\frac{m_{e}}{T}\right)
  +\mathcal{O}\left(b_{0}^{2}\right)\,.
-\end{multline}
+%\end{multline}
+\end{equation}
 
 Given \req{ferro}, we can understand the spin potential as a kind of `ferromagnetic'\index{ferromagnetism} influence on the primordial gas that allows for magnetization even in the absence of external magnetic fields. This interpretation is reinforced by the fact the leading coefficient is $g/2$. We suggest that a variety of physics could produce a small nonzero $\zeta$ within a domain of the gas. Such asymmetries could also originate statistically as while the expectation value of free gas polarization is zero, the variance is likely not.
 
@@ -614,7 +617,7 @@ While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
  \centering
- \includegraphics[width=0.9\linewidth]{plots/Spinchemical_04.jpg}
+ \includegraphics[width=0.8\linewidth]{plots/Spinchemical_04.jpg}
  \caption{The spin potential $\zeta$ and chemical potential\index{chemical potential} $\mu$ are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma. \radapt{Steinmetz:2023nsc}}
  \label{fig:self} 
 \end{figure}
@@ -630,9 +633,9 @@ which sets the total magnetization as a function of itself. The spin polarizatio
 The result of the self-magnetization assumption in \req{selfmag} for the potentials is plotted in \rf{fig:self}. The solid lines indicate the curves for $\zeta/T$ for differing values of $b_{0}=\{10^{-11},\ 10^{-7},\ 10^{-5},\ 10^{-3}\}$ which become dashed above $T\!=\!300\keV$ to indicate that the Boltzmann approximation is no longer appropriate though the general trend should remain unchanged.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}
  \centering
- \includegraphics[width=0.90\linewidth]{plots/ElectronDenisty_SpinChemicalPotential004.jpg}
+ \includegraphics[width=0.8\linewidth]{plots/ElectronDenisty_SpinChemicalPotential004.jpg}
  \caption{The number density $n_{e^{\pm}}$ of polarized electrons and positrons under the self-magnetization model for differing values of $b_{0}$. \cccite{Steinmetz:2023nsc}}
  \label{fig:polarswap} 
 \end{figure}

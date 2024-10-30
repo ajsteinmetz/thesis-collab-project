@@ -74,7 +74,7 @@ In these expressions, the plasma frequency $\omega_p$ (defined as $m_L$ in~\cite
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[width=0.90\linewidth]{plots/Distance_Plasma002.jpg}}
+\centerline{\includegraphics[width=0.80\linewidth]{plots/Distance_Plasma002.jpg}}
 \caption{ The average distance between baryons $n_B^{-1/3}$ and the Debye length $\lambda_D$ ($\mu_e \neq 0$) as a function of temperature (red solid line). During the BBN epoch (vertical dotted lines) $n_B^{-1/3}>\lambda_D$. For temperature below $T<32.76$ keV we have $n_B^{-1/3}<\lambda_D$. For comparison, the Debye length for zero chemical potential $\mu_e=0$ is also plotted as a blue dashed line. \cccite{Grayson:2023flr}}
 \label{MeanFreePath_fig} 
 \end{figure}
@@ -152,16 +152,16 @@ The second term is the damped-dynamic screening correction, which we refer to as
 \phi(t,\boldsymbol{x}) = \phi_{\text{stat}}(t,\boldsymbol{x}) +\Delta \phi(t,\boldsymbol{x}) \,,
 \end{equation}
 and $\phi_{\text{stat}}$ is the standard static screening potential. The details of the integration of \req{eq:ddsint} can be found in \cite{Grayson:2023flr}, the result is
-\begin{multline}\label{eq:pos_point_DDS}
-\Delta \phi(t,\boldsymbol{x}) = \frac{Ze \beta_N \cos (\psi) m_D^2}{4 \pi \varepsilon_0 \kappa} \Bigg[\left(\frac{\nu_\tau^2}{m_D^2 r(t)^2} + \frac{\nu_\tau^2}{m_D r(t)}+\frac{1 + \nu_\tau^2}{2}\right)e^{-m_D r(t)} \\ -\frac{\nu_\tau^2}{m_D^2 r(t)^2}\Bigg]\,,
-\end{multline}
+\begin{equation}\label{eq:pos_point_DDS}
+\Delta \phi(t,\boldsymbol{x}) = \frac{Ze \beta_N \cos (\psi) m_D^2}{4 \pi \varepsilon_0 \kappa} \Bigg[\left(\frac{\nu_\tau^2}{m_D^2 r(t)^2} + \frac{\nu_\tau^2}{m_D r(t)}+\frac{1 + \nu_\tau^2}{2}\right)e^{-m_D r(t)}   -\frac{\nu_\tau^2}{m_D^2 r(t)^2}\Bigg]\,,
+\end{equation}
 where $\psi$ is the angle between $\boldsymbol{x}-\boldsymbol{\beta}_N t$ and $\boldsymbol{\beta}_N$ and $r(t) = |\boldsymbol{x}-\boldsymbol{\beta}_N t|$.
 We introduce the ratio of the damping rate to the rate of oscillations in the plasma $\nu_\tau = \kappa/\omega_p$.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
  \centerline{
-\includegraphics[width=.90\linewidth]{plots/phidat_100_1_1_0_full_lin.pdf}}
+\includegraphics[width=.80\linewidth]{plots/phidat_100_1_1_0_full_lin.pdf}}
  \caption{Total screening potential scaled with charge Z and distance along the direction of motion. We show a comparison of the following screening models plotted along the direction of motion of a nucleus $\boldsymbol{r}\cdot\hat{\boldsymbol{\beta}_{\text{N}}}$: static screening (black), dynamic screening (red dotted) from \cite{Hwang:2021kno}, damped-dynamic screening (blue dashed), and the approximate analytic solution of \req{eq:pos_point} (orange dashed). A black arrow indicates the direction of motion of the nucleus $\hat{\boldsymbol{\beta}_{\text{N}}}$. \cccite{Grayson:2023flr}}
  \label{fig:dynamiclinear}
 \end{figure} 
@@ -171,7 +171,7 @@ This expression \req{eq:pos_point_DDS} is valid for large damping and slow motio
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[width=.90\linewidth]{plots/Pot_2DPlotFix.png}}
+\centerline{\includegraphics[width=.80\linewidth]{plots/Pot_2DPlotFix.png}}
  \caption{Two dimensional plot of the total potential \req{eq:pos_point} scaled with Z, at $T=74\,$keV. The potential is cylindrically symmetric about the direction of motion $\boldsymbol{\hat{z}}$, which is indicated by a black arrow. The direction transverse to the motion is $\rho$. The sign of the damped-dynamic correction \req{eq:pos_point_DDS} changes sign due to the cosine term. \radapt{Grayson:2024okq}}
  \label{fig:numericalComp}
 \end{figure} 

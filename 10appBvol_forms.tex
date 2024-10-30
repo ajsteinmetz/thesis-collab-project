@@ -35,10 +35,13 @@ i_{(v_1,...,v_n)}\Omega^M_x=\Omega^M_x(A_1^{j_1}w_{j_1},...,A_n^{j_n}w_{j_n},\cd
 \end{equation}
 since the terms involving $\ker F_*$ will vanish on $T_x F^{-1}(c)=\ker F_{*x}$. Therefore
 \begin{align}\label{indOfvProof}
-i_{(v_1,...,v_n)}\Omega^M_x&=A_1^{j_1}...A_n^{j_n}\Omega^M_x(w_{j_1},...,w_{j_n},\cdot)\\
-&=\sum_{\sigma\in S_n} \pi(\sigma)A_1^{\sigma(1)}...A_n^{\sigma(n)}\Omega^M_x(w_1,...,w_n,\cdot)\notag\\
-&=\det(A)i_{(w_1,...,w_n)}\Omega^M_x\notag\\
-&=i_{(w_1,...,w_n)}\Omega^M_x\,.\notag
+i_{(v_1,...,v_n)}\Omega^M_x&=A_1^{j_1}...A_n^{j_n}\Omega^M_x(w_{j_1},...,w_{j_n},\cdot)
+%\\&
+=\sum_{\sigma\in S_n} \pi(\sigma)A_1^{\sigma(1)}...A_n^{\sigma(n)}\Omega^M_x(w_1,...,w_n,\cdot)\notag\\
+&=\det(A)i_{(w_1,...,w_n)}\Omega^M_x
+%\notag\\&
+=i_{(w_1,...,w_n)}\Omega^M_x\,.
+%\notag
 \end{align}
 This proves that $\omega$ is independent of the choice of $v_i$. If we can show $\omega$ is smooth, then we are done. We will do better than this by proving that for any $v_i\in T_xM$ the following holds
 \begin{equation}
@@ -108,25 +111,26 @@ First suppose $F$ is a submersion. By the rank theorem there exists a countable 
 \end{align}
 Let $\sigma_i$ be a partition of unity subordinate to $U_i$. For each $i$ and $z$ we have $\Phi_i(U_i\cap F^{-1}(z))=\left(\mathbb{R}^{m-n}\times\{\Psi_i(z)\}\right)\cap \Phi_i(U_i)$. We can assume that the $\Phi_i(U_i)=U_i^1\times U_i^2\subset \mathbb{R}^{m-n}\times \mathbb{R}^n$ and therefore each $\Phi_i$ is a slice chart for $F^{-1}(z)$ for all $y$ such that $F^{-1}(z)\cap U_i\neq \emptyset$. In other words, $\Phi_i(U_i\cap F^{-1}(z))= U_i^1\times \{\Psi(z)\}$. This lets us compute the left and right hand sides of \req{coareaFormula} for $f\in L^+(M)$:
 \begin{align}
-\int_Mf(x) \Omega^M(dx)&=\sum_i\int_{U_i}(\sigma_if)(x) \Omega^M(dx)\\
-&=\sum_i\int_{\Phi_i(U_i)}(\sigma_if)\circ \Phi^{-1}(y,z) \Phi^{-1*}\Omega^M(dy,dz)\notag\\
-&=\sum_i\int_{\Phi_i(U_i)}(\sigma_if)\circ \Phi^{-1}(y,z)|g^M(y,z)| dy^{m-n}dz^n\notag\\
-&=\sum_i\int_{U_i^2}\left[\int_{U_i^1}(\sigma_if)\circ \Phi^{-1}(y,z)|g^M(y,z)| dy^{m-n}\right]dz^n\notag\\
-&\text{where }\Omega^M=g^M dy^1\wedge...\wedge dy^{m-n}\wedge dz^1\wedge...\wedge dz^n\,,\notag
+&\int_Mf(x) \Omega^M(dx)=\sum_i\int_{U_i}(\sigma_if)(x) \Omega^M(dx)
+%\\&
+=\sum_i\int_{\Phi_i(U_i)}(\sigma_if)\circ \Phi^{-1}(y,z) \Phi^{-1*}\Omega^M(dy,dz)\notag\\
+&=\sum_i\int_{\Phi_i(U_i)}(\sigma_if)\circ \Phi^{-1}(y,z)|g^M(y,z)| dy^{m-n}dz^n
+%\notag\\&
+=\sum_i\int_{U_i^2}\left[\int_{U_i^1}(\sigma_if)\circ \Phi^{-1}(y,z)|g^M(y,z)| dy^{m-n}\right]dz^n\\
+&\text{where \hspace{2cm}}\Omega^M=g^M dy^1\wedge...\wedge dy^{m-n}\wedge dz^1\wedge...\wedge dz^n\,,\notag
 \end{align}
 and
 \begin{align}
-&\int_{N}\int_{F^{-1}(z)} f(y)\omega^M_z(dy) \Omega^N(dz)\\
-=&\sum_i \int_{N}\left[\int_{\Phi_i(U_i\cap F^{-1}(z))} (\sigma_if)\circ\Phi_i^{-1}(y,\Psi(z))\Phi_i^{-1*}\omega^M_z(dy)\right] \Omega^N(dz)\notag\\
+\int_{N}\int_{F^{-1}(z)} f(y)\omega^M_z(dy) \Omega^N(dz)=&\sum_i \int_{N}\left[\int_{\Phi_i(U_i\cap F^{-1}(z))} (\sigma_if)\circ\Phi_i^{-1}(y,\Psi(z))\Phi_i^{-1*}\omega^M_z(dy)\right] \Omega^N(dz)\notag\\
 =&\sum_i \int_{V_i}\left[\int_{\Phi_i(U_i\cap F^{-1}(z))} (\sigma_if)\circ\Phi_i^{-1}(y,\Psi(z))\Phi_i^{-1*}\omega^M_z(dy)\right] \Omega^N(dz)\notag\\
 =&\sum_i \int_{\Psi_i(V_i)}\left[\int_{\Phi_i(U_i\cap F^{-1}(\Psi^{-1}(z))} (\sigma_if)\circ\Phi_i^{-1}(y,z)\Phi_i^{-1*}\omega^M_z(dy)\right] \Psi^{-1*}\Omega^N(dz)\notag\\
-=&\sum_i \int_{U_i^2}\left[\int_{U_i^1\times \{z\}} (\sigma_if)\circ\Phi_i^{-1}(y,z)|g^M_z(y)| dy^{m-n}\right] |g^N(z)| dz^n\,,\notag\\
-&\text{where }\omega^M_z=g^M_z dy^1\wedge...\wedge dy^{m-n} \text{ and }\Omega^N=g^N dz^1\wedge...\wedge dz^n \text{ for } g_1^M,g_N>0\,.\notag
+=&\sum_i \int_{U_i^2}\left[\int_{U_i^1\times \{z\}} (\sigma_if)\circ\Phi_i^{-1}(y,z)|g^M_z(y)| dy^{m-n}\right] |g^N(z)| dz^n\,,\\
+&\text{\hspace{-5cm}where \hspace{2cm}}\omega^M_z=g^M_z dy^1\wedge...\wedge dy^{m-n} \text{ and }\Omega^N=g^N dz^1\wedge...\wedge dz^n \text{ for } g_1^M,g_N>0\,.\notag
 \end{align}
 Therefore, if we can show $|g^M(y,z)|=|g_z^M(y)g^N(z)|$ on $U_i^1\times U_i^2$ we are done. From Corollary \ref{inducedVolEq} we have
 \begin{align}
-&(-1)^{n(m-n)} g^M(y,z)\\
-=&\Omega^M(\partial_{z^1},...,\partial_{z^n},\partial_{y^1},...,\partial_{y^{m-n}})=\Omega^N(F_*\partial_{z^n},...,F_*\partial_{z^n})g_z^M(y)\,.\notag
+&(-1)^{n(m-n)} g^M(y,z)
+=\Omega^M(\partial_{z^1},...,\partial_{z^n},\partial_{y^1},...,\partial_{y^{m-n}})=\Omega^N(F_*\partial_{z^n},...,F_*\partial_{z^n})g_z^M(y)\,.
 \end{align}
 Since $\Psi\circ F\circ\Phi^{-1}=\pi_2$ we have $F_*\partial_{z^j}=\partial_{z_j}$ and so $\Omega^N(F_*\partial_{z^n},...,F_*\partial_{z^n})=g^N$ which completes the proof in the case where $F$ is a submersion. The generalization to the case where $F_*$ is surjective a.e. follows from Sard's theorem and the fact that the set of $x\in M$ at which $F_*$ is surjective is open.
 \end{proof}
@@ -183,21 +187,16 @@ i_{(v_1,...,v_n)}\Omega^M_x=dV_h(F_*v_1,...,F_*v_n)\omega_x\,.
 \end{equation}
 If we let $v_i$ be an orthonormal basis of vectors orthogonal to $F^{-1}(c)$ at $x$ then $F_*v_i$ are linearly independent and so
 \begin{align}
-\omega=&(dV_h(F_*v_1,...,F_*v_n))^{-1}i_{(v_1,...,v_n)}dV_g\\
-=&(dV_h(F_*v_1,...,F_*v_n))^{-1}dA_g\,.\notag
+\omega=&(dV_h(F_*v_1,...,F_*v_n))^{-1}i_{(v_1,...,v_n)}dV_g=(dV_h(F_*v_1,...,F_*v_n))^{-1}dA_g\,.=
 \end{align}
 Choose coordinates about $x$ and $F(x)$ so that $\partial_{x^i}=v_i$ for $i=1...n$, $\{\partial_{x^i}\}_{n+1}^m$ span $\ker F_*$, and $\partial_{y_i}$ are orthonormal. Then 
 \begin{align}
-dV_h(F_*v_1,...,F_*v_n)&=\sqrt{|\det(h)|}\frac{\partial F^{j_1}}{\partial x^1}...\frac{\partial F^{j_n}}{\partial x^n}dy^1\wedge...\wedge dy^n(\partial_{y^{j_1}},...,\partial_{y^{j_n}})\\
-&=\det\left(\frac{\partial F^{j}}{\partial x^i}\right)_{i,j=1}^n\,.\notag
+dV_h(F_*v_1,...,F_*v_n)&=\sqrt{|\det(h)|}\frac{\partial F^{j_1}}{\partial x^1}...\frac{\partial F^{j_n}}{\partial x^n}dy^1\wedge...\wedge dy^n(\partial_{y^{j_1}},...,\partial_{y^{j_n}})=\det\left(\frac{\partial F^{j}}{\partial x^i}\right)_{i,j=1}^n\,.=
 \end{align}
 $F_*\partial_{x^i}=0$ for $i=n+1...m$ and so $\frac{\partial F^j}{\partial x_i}=0$ for $i=n+1...m$. Letting $\eta=\diag(\pm 1)$ be the signature of $g$, we find
 \begin{align}
-NJF(x)=&\left|\det\left(h_{ik}(F(x))\frac{\partial F^k}{\partial x^l}(x)g^{lm}(x)\frac{\partial F^j}{\partial x^m}(x)\right)\right|^{1/2}\\
-=&\left|\det\left(\sum_{l,m=1}^n\frac{\partial F^k}{\partial x^l}(x)\eta^{lm}(x)\frac{\partial F^j}{\partial x^m}(x)\right)\right|^{1/2}\notag\\
-=&\left|\det\left(\frac{\partial F^k}{\partial x^l}\right)_{k,l=1}^n\det(\eta^{lm})_{l,m=1}^n\det\left(\frac{\partial F^j}{\partial x^m}\right)_{j,m=1}^n\right|^{1/2}\notag\\
-=&\left|\det\left(\frac{\partial F^k}{\partial x^l}\right)_{k,l=1}^n\right|\notag\\
-=&|dV_h(F_*v_1,...,F_*v_n)|\,.\notag
+NJF(x)=&\left|\det\left(h_{ik}(F(x))\frac{\partial F^k}{\partial x^l}(x)g^{lm}(x)\frac{\partial F^j}{\partial x^m}(x)\right)\right|^{1/2}=\left|\det\left(\sum_{l,m=1}^n\frac{\partial F^k}{\partial x^l}(x)\eta^{lm}(x)\frac{\partial F^j}{\partial x^m}(x)\right)\right|^{1/2}\notag\\
+=&\left|\det\left(\frac{\partial F^k}{\partial x^l}\right)_{k,l=1}^n\det(\eta^{lm})_{l,m=1}^n\det\left(\frac{\partial F^j}{\partial x^m}\right)_{j,m=1}^n\right|^{1/2}=\left|\det\left(\frac{\partial F^k}{\partial x^l}\right)_{k,l=1}^n\right|=|dV_h(F_*v_1,...,F_*v_n)|\,.
 \end{align}
 Therefore 
 \begin{equation}
@@ -293,9 +292,7 @@ Let $w_i\in T_y M_2$ such that $\Omega_2(w_1,...,w_{m_2})=1$. By the same argume
 \end{equation}
 Since any term containing $\Omega_2$ will vanishes on $T_F(\cdot,y)^{-1}(c)\subset T M_1$, we have 
 \begin{align}
-\tilde{\omega}_{c,y}^1=&(-1)^{m_1-n}i_{((v_1,0),...,(v_n,0))}\Omega_1\\
-=&(-1)^{m_1-n}\omega_{c,y}^1\wedge\left(i_{((\tilde{v}_1,w_1),...,(\tilde{v}_{m_2},w_{m_2}))}\Omega_2\right)\notag\\
-=&(-1)^{m_1-n}\omega_{c,y}^1\,.\notag
+\tilde{\omega}_{c,y}^1=&(-1)^{m_1-n}i_{((v_1,0),...,(v_n,0))}\Omega_1=(-1)^{m_1-n}\omega_{c,y}^1\wedge\left(i_{((\tilde{v}_1,w_1),...,(\tilde{v}_{m_2},w_{m_2}))}\Omega_2\right)=(-1)^{m_1-n}\omega_{c,y}^1\,.
 \end{align}
 As we are integrating with respect to the densities defined by $\omega_{c,y}^1$ and $\tilde{\omega}_{c,y}^1$ we are done. 
 \end{proof}
@@ -567,11 +564,14 @@ dp^0=&\partial_{x^\alpha} p^0dx^\alpha+\partial_{p^j}(p^0) dp^j\,.
 \end{align}
 The terms in $dp^0$ involving $dx^\alpha$ drop out once they are wedged with $dx^0\wedge...\wedge dx^n$, hence
 \begin{align}
-&\widetilde{dV}_m\\
+\widetilde{dV}_m
 =&\frac{|g|}{m}dx^0\wedge...\wedge dx^n\wedge\left(p^0dp^1\wedge...\wedge dp^n+\sum_{i,j} (-1)^j p^j \partial_{p^i}p^0 dp^i\wedge...\wedge\widehat{dp^j}\wedge...\wedge dp^n\right)\notag\\
-=&\frac{|g|}{m}\left(p^0-\sum_{j}p^j \partial_{p^j}(p^0) \right)dx^0\wedge...\wedge dx^n\wedge dp^1\wedge...\wedge dp^n\,,\notag\\
-&p^0-\sum_jp^j\partial_{p^j}(p^0)= p^0+g_{0j}p^j/g_{00}-\frac{(g_{0j}p^j/g_{00})^2-g_{ij}p^ip^j/g_{00}}{\left((g_{0j}p^j/g_{00})^2+(m^2-g_{ij}p^ip^j)/g_{00}\right)^{1/2}}\notag\\
-=&\frac{1}{p_0}\left(\frac{1}{g_{00}}(g_{00}p^0+g_{0,j}p^j)^2-(g_{0j}p^j)^2/g_{00}+g_{ij}p^ip^j\right)=\frac{m^2}{p_0}\,.\notag
+=&\frac{|g|}{m}\left(p^0-\sum_{j}p^j \partial_{p^j}(p^0) \right)dx^0\wedge...\wedge dx^n\wedge dp^1\wedge...\wedge dp^n\,,
+\end{align}
+where
+\begin{align}
+ \hspace*{1cm}\left(p^0-\sum_jp^j\partial_{p^j}(p^0)\right) =& p^0+g_{0j}p^j/g_{00}-\frac{(g_{0j}p^j/g_{00})^2-g_{ij}p^ip^j/g_{00}}{\left((g_{0j}p^j/g_{00})^2+(m^2-g_{ij}p^ip^j)/g_{00}\right)^{1/2}}\notag\\
+=&\frac{1}{p_0}\left(\frac{1}{g_{00}}(g_{00}p^0+g_{0,j}p^j)^2-(g_{0j}p^j)^2/g_{00}+g_{ij}p^ip^j\right)=\frac{m^2}{p_0}\,. 
 \end{align}
 Therefore
 \begin{equation}

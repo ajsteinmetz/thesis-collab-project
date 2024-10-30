@@ -90,6 +90,7 @@ where the coupling constants for neutrino scattering with proton, neutron, and e
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
+\centering
 \begin{tabular}[c]{c|c|c|c|c}
 \hline\hline
 & Electron ($Z^0$ boson) & Electron ($W^\pm$ boson) & Proton (uud) & Neutron (udd)\\
@@ -121,8 +122,10 @@ and the atomic tensor $\Gamma^{\alpha\beta}_\mathrm{atom}$ can be written as
 \label{atomic_tensor}
 \Gamma^{\alpha\beta}_\mathrm{atom}
 &=\mathrm{Tr}\bigg[(C_{LR}\gamma^\alpha-C^\prime_{LR}\gamma^\alpha\gamma^5)(\slashed{p}_a+M_a)(C_{LR}\gamma^\beta-C^\prime_{LR}\gamma^\beta\gamma^5)(\slashed{p}^\prime_a+M_a)\bigg]\notag\\
-&=4\bigg\{(C^2_{LR}+C^{\prime2}_{LR})\left[(p_a)^\alpha\,(p^\prime_a)^\beta+(p_a)^{\prime\alpha}\,(p_a)^\beta\right]\notag\\
-&\qquad-g^{\alpha\beta}\bigg[(C^2_{LR}-C^{\prime2}_{LR})(p_a\cdot\,p_a^\prime)-(C^2_{LR}-C^{\prime2}_{LR})M^2_a\bigg]\notag\\&\qquad\qquad+2iC_{LR}C^\prime_{LR}\epsilon^{\alpha\sigma^\prime\beta\lambda^\prime}(p_a)_{\sigma^\prime}(p^\prime_a)^{\lambda^\prime}\bigg\},
+&=4\bigg\{(C^2_{LR}+C^{\prime2}_{LR})\left[(p_a)^\alpha\,(p^\prime_a)^\beta+(p_a)^{\prime\alpha}\,(p_a)^\beta\right]
++2iC_{LR}C^\prime_{LR}\epsilon^{\alpha\sigma^\prime\beta\lambda^\prime}(p_a)_{\sigma^\prime}(p^\prime_a)^{\lambda^\prime}\notag\\
+&\qquad-g^{\alpha\beta}\bigg[(C^2_{LR}-C^{\prime2}_{LR})(p_a\cdot\,p_a^\prime)-(C^2_{LR}-C^{\prime2}_{LR})M^2_a\bigg]
+\bigg\},
 \end{align}
 where $M_a$ is the target atom's mass $(M_a = AM_\mathrm{nucleon}, A=Z+N)$, and the coupling constants $C_{LR}$ and $C^\prime_{LR}$ are defined by
 \begin{align}
@@ -130,9 +133,12 @@ C_{LR}=\sum_t(C_L+C_R)_t,\,\,\,\,\,\,C^\prime_{LR}=\sum_t(C_L-C_R)_t.
 \end{align}
 Substituting \req{neutrino_tensor} and \req{atomic_tensor} into \req{scattering_matrix}, the transition matrix element for coherent elastic neutrino atom scattering is given by:\index{neutrino!scattering matrix element}
 \begin{align}
-|\mathcal{M}_{\mathrm{atom}}|^2&=\frac{G^2_F}{8}L_{\alpha\beta}^{\mathrm{neutrino}}\,\Gamma^{\alpha\beta}_{\mathrm{atom}}\notag\\
-&=8G^2_F\bigg[(C_{LR}+C^\prime_{LR})^2\,(p_\nu\cdot\,p_a)(p^\prime_\nu\cdot\,p^\prime_a)+(C_{LR}-C^\prime_{LR})^2\,(p_\nu\cdot\,p^\prime_a)(p^\prime_\nu\cdot\,p_a)\notag\\&
-\,\,\,\,\,\,-(C^2_{LR}-C^{\prime2}_{LR})M^2_a(p_\nu\cdot\,p_\nu^\prime)\bigg].
+|\mathcal{M}_{\mathrm{atom}}|^2&=\frac{G^2_F}{8}L_{\alpha\beta}^{\mathrm{neutrino}}\,\Gamma^{\alpha\beta}_{\mathrm{atom}}
+%\notag\\ &
+=8G^2_F\bigg[(C_{LR}+C^\prime_{LR})^2\,(p_\nu\cdot\,p_a)(p^\prime_\nu\cdot\,p^\prime_a)
+\notag\\&\,\,\,\,\,\,
++(C_{LR}-C^\prime_{LR})^2\,(p_\nu\cdot\,p^\prime_a)(p^\prime_\nu\cdot\,p_a)
+ -(C^2_{LR}-C^{\prime2}_{LR})M^2_a(p_\nu\cdot\,p_\nu^\prime)\bigg].
 \end{align}
 Taking the atom at rest in the laboratory frame, and considering small momentum transfer to an atom from a neutrino, i.e., $q^2=(p_\nu-p^\prime_\nu)^2=(p_a^\prime-p_a)^2\ll\,M^2_a$, we have
 \begin{align}
@@ -359,4 +365,4 @@ $32G^2_F\bigg[\left(p_1\cdot p_4\right)\left(p_2\cdot p_3\right)\bigg]$ \\
 \caption{The transition amplitude for different elastic scattering processes. The definition of particle number is given by $1+2\leftrightarrow3+4$, where $l,\,l^\prime=e,\,\mu,\,\tau\,(l\neq\,l^\prime)$.}
 \label{T006}
 \end{table}
-\clearpage
+%\clearpage
