@@ -64,8 +64,9 @@ T_\nu\equiv\frac{a(t_k)}{a(t)}T_k\,.
 with the effective neutrino temperature $T_\nu$. In the following calculation, we assume the condition $T_k\gg\mu_{\bar{\nu}},\,m_\nu$, {\it i.e.\/} we consider the massless neutrino in plasma. Substituting the distributions into the decay rate formula and using the neutron rest frame, the decay rate can be written as 
 \begin{align}
 \label{Decay_rate_01}
-\frac{1}{\tau_n^\prime}&=\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}\,(1+3g^2_A)\,(1+RC)\\
-&\times\int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)/T_\nu\right)+1},\notag
+\frac{1}{\tau_n^\prime}&=\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}\,(1+3g^2_A)\,(1+RC)
+%\\&\times
+\int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)/T_\nu\right)+1}\,,
 \end{align} 
 where $Q$ was defined in Eq.\;(\ref{Xn_abundance3}) and we integrate using dimensionless variable $\xi=E_e/Q$. From \req{Decay_rate_01}, the decay rate in vacuum can be written as
 \begin{align}
@@ -93,8 +94,9 @@ which compares well to the experimental result, $877.7\pm0.7\,\mathrm{sec}$~\cit
 In the case of plasma medium, we do not expect that these effect (Coulomb correction between electron and proton, proton recoil, nucleon size correction etc) are modified in the cosmic plasma. Thus we adapt the factor into our calculation and the neutron decay rate in the cosmic plasma is given by
 \begin{align}
 \label{Decay_rate_02}
-\frac{1}{\tau_n^{\mathrm{Medium}}}=&\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}\,(1+3g^2_A)\,(1+RC)\,\mathcal{F}\\
-&\times\int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)/T_\nu\right)+1}.\notag
+\frac{1}{\tau_n^{\mathrm{Medium}}}=&\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}\,(1+3g^2_A)\,(1+RC)\,\mathcal{F}
+%\\&\times
+\int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)/T_\nu\right)+1}.
 \end{align}
 From \req{Decay_rate_02} we see that the neutron decay rate in the primordial Universe depends on both the photon temperature $T$ and the neutrino effective temperature $T_\nu$.
 
@@ -117,8 +119,9 @@ T_\nu=\frac{T}{\kappa},\,\,\,\,\,\,\kappa\equiv\left[\frac{g^s_\ast(T_k)}{g^s_\a
 From \req{Neutrino_Photon} the neutron decay rate in a heat bath can be written as
 \begin{align}
 \label{Decay_rate_03}
-\frac{1}{\tau_n^\mathrm{Medium}}=&\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}(1+3g^2_A)\,(1+RC)\,\mathcal{F}\\
-&\times\int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)\kappa/T\right)+1}.\notag
+\frac{1}{\tau_n^\mathrm{Medium}}=&\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}(1+3g^2_A)\,(1+RC)\,\mathcal{F}
+%\\&\times
+\int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)\kappa/T\right)+1}. 
 \end{align}
 
 In the high temperature regime, $T\gg Q$, the exponential terms in the Fermi distribution becomes $1$ and the decay rate is given by
@@ -131,7 +134,7 @@ In \rf{Decay_Rate}, we plot the the neutron lifetime $\tau^\mathrm{Medium}_n$ in
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[width=0.9\linewidth]{./plots/Neutron_Lifetime_001}}
+\centerline{\includegraphics[width=0.8\linewidth]{./plots/Neutron_Lifetime_001}}
 \caption{The neutron lifetime $\tau_n^\mathrm{Medium}$ in the cosmic plasma as a function of temperature.\cccite{Yang:2018qrr}}
 \label{Decay_Rate} 
 \end{figure}
@@ -158,7 +161,7 @@ In this case, the neutron abundance will increase about $6.4\%$ in the cosmic pl
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[width=0.9\linewidth]{./plots/Neutron_Abundance}}
+\centerline{\includegraphics[width=0.8\linewidth]{./plots/Neutron_Abundance}}
 \caption{The neutron abundance ratio, in medium to vacuum, as a function of temperature. \cccite{Yang:2018qrr}}
 \label{Neutron:Abundance} 
 \end{figure}

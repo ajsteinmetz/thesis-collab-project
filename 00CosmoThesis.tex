@@ -1,6 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag
 \documentclass[epjST]{svjour}
-
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={174mm,251.5mm},
+ left=18mm,
+ top=23mm,
+ }
 \usepackage{amsmath,amssymb}
 \usepackage{float}
 \usepackage{imakeidx}
@@ -22,8 +28,8 @@
 \makeindex
 
 % Draft number lines on pages
-\usepackage{lineno}
-\linenumbers
+%\usepackage{lineno}
+%\linenumbers
 
 \makesavenoteenv{tabular}
 \makesavenoteenv{table}
@@ -129,9 +135,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{section}{References}
-\bibliographystyle{sn-aps}
-\bibliography{refs.bib}
-
+\bibliographystyle{sn-aps}% out for input
+\bibliography{refs.bib}% out for input
+%\input{00CosmoThesis.bbl}% in update file
 %%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{section}{Index}
 \printindex

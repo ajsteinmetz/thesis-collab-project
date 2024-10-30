@@ -167,9 +167,11 @@ The linear response approximation assumes the distribution function can be writt
 f(x,p) = f_\mathrm{eq}(x,p) + \delta f(x,p)\,.
 \end{equation}
 Here the small perturbation $\delta f(x,p)$ is induced by an external electromagnetic field. We expand \req{eq:boltzmanncov} in equilibrium and perturbation terms \cite{melrose2008quantum}
-\begin{multline}
-    (p \cdot \partial)\left(f_\mathrm{eq}(x,p)+ \delta f(x,p)\right) +  q \left(F_{\mathrm{eq}}^{\mu\nu} +\delta F^{\mu\nu}\right)p_\nu \frac{\partial (f_\mathrm{eq}(x,p)+\delta f(x,p))}{\partial p^\mu} \\ = \kappa (p\cdot u)\left(f_\mathrm{eq} (p)\frac{\delta n(x)}{{n_\mathrm{eq}(x)}} - \delta f(x,p)\right)\,.
-\end{multline}
+%\begin{multline}
+\begin{align}
+    (p \cdot \partial)\left(f_\mathrm{eq}(x,p)+ \delta f(x,p)\right) +  q \left(F_{\mathrm{eq}}^{\mu\nu} +\delta F^{\mu\nu}\right)p_\nu \frac{\partial (f_\mathrm{eq}(x,p)+\delta f(x,p))}{\partial p^\mu}  = \kappa (p\cdot u)\left(f_\mathrm{eq} (p)\frac{\delta n(x)}{{n_\mathrm{eq}(x)}} - \delta f(x,p)\right)\,.
+%\end{multline}
+\end{align}
 Since the equilibrium expressions are a solution to the collisionless Boltzmann equation, all the equilibrium terms combined are zero. The collision term is constructed to be zero at equilibrium. We will neglect the Lorentz force due to the induced field on the perturbation since it is second order in the perturbation
 \begin{equation}
     (p \cdot \partial) \delta f(x,p)+ q \delta F^{\mu\nu}p_\nu \frac{\partial f(x,p)}{\partial p^\mu} = \kappa (p\cdot u)\left(f_{\text{eq}} (x,p)\frac{\delta n(x)}{{n_{\text{eq}}(x)}} - \delta f(x,p)\right)\,.
@@ -241,21 +243,18 @@ The induced charge current is the sum of the antiparticle distribution $\widetil
 with the factor of two accounting for spin. Sometimes, this is referred to as the first moment of $\delta f$.
 After expanding in linear response \req{eq:perturbation}, and specifying $q_\pm = \pm e$ the induced current is a function of the perturbation
 \begin{align}\label{eq:perturbation2}
-\tilde{j}_{\mathrm{ind}}^\mu(k) = 2\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big( e \left[\tilde{f}^{\mathrm{eq}}_+(k,p)-\tilde{f}^{\mathrm{eq}}_-(k,p)\right]\notag\\
+\tilde{j}_{\mathrm{ind}}^\mu(k) = 2\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big( e \left[\tilde{f}^{\mathrm{eq}}_+(k,p)-\tilde{f}^{\mathrm{eq}}_-(k,p)\right]
 + e\left[\delta\tilde{f}_+(k,p)-\delta\tilde{f}_-(k,p)\right]
-\Big)
-\notag\\
+\Big) 
 =4 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \delta\tilde{f}(k,p)
 \,.
 \end{align}
 The equilibrium currents cancel in the weak field limit for zero chemical potential\index{chemical potential}, and the perturbations add since they differ by the charge $\delta f_\pm=\pm e \delta f' $. For finite chemical potential $\mu_q$, the equilibrium terms can be combined with hyperbolic trig-identities
 \begin{equation}
-\begin{split}
-\tilde{j}_{\mathrm{ind}}^\mu(k) 
-=2 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big(&-\frac{\sinh{(\mu_q)}}{\cosh{(p \cdot u)}+\cosh{(\mu_q)}} \\&+  \left[\delta\tilde{f}_+(k,p)-\delta\tilde{f}_-(k,p)\right]
+ \tilde{j}_{\mathrm{ind}}^\mu(k) 
+=2 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big(-\frac{\sinh{(\mu_q)}}{\cosh{(p \cdot u)}+\cosh{(\mu_q)}} +  \left[\delta\tilde{f}_+(k,p)-\delta\tilde{f}_-(k,p)\right]
  \Big)
 \,.
-\end{split}
 \end{equation}
 For now, we will focus on the case of zero chemical potential, $\mu_q=0$, where the first term vanishes.
 We can express the induced current in terms of defined integrals \cite{Formanek:2021blc} resulting from inserting \req{eq:deltafsolution} into the induced current
@@ -385,7 +384,7 @@ with analogous definitions for the current, $\widetilde{j}_{\parallel}$ and $\wi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
     \centering
-    \includegraphics[width=0.55\linewidth]{plots/Screenshot 2024-03-14 124133.png}
+    \includegraphics[width=0.55\linewidth]{plots/ChrisAxis.jpg}
     \caption{Vector potential is projected onto $\boldsymbol{\hat{k}} = \boldsymbol{\hat{x_3}} =\boldsymbol{\hat{z}}$. \radapt{Grayson:2024okq}.}
     \label{fig:project}
 \end{figure}
