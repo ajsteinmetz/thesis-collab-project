@@ -486,8 +486,8 @@ the editor}
 \def\makeheadbox{{%
 \hbox to0pt{\vbox{\baselineskip=10dd\hrule\hbox
 to\hsize{\vrule\kern3pt\vbox{\kern3pt
-\hbox{\bfseries\@journalname\ manuscript No.}
-\hbox{(will be inserted by the editor)}
+\hbox{\bfseries\@journalname\ ST}
+\hbox{(Special Topics)}
 \kern3pt}\hfil\kern3pt\vrule}\hrule}%
 \hss}}}
 

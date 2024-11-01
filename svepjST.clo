@@ -69,7 +69,10 @@
 %
 %\setlength{\textwidth}{145mm}\setlength{\textheight}{220mm}
 % 9/2010
-\setlength{\textwidth}{130mm}\setlength{\textheight}{210mm}
+%\setlength{\textwidth}{130mm}\setlength{\textheight}{210mm}
+%
+% 9/2024
+\setlength{\textwidth}{174mm}\setlength{\textheight}{251.5mm}
 %
 \def\epj@maketitle{\par
 \ch@ckobl{journalname}{Noname}
@@ -207,8 +210,8 @@
 %
 \def\epjabstract#1{\gdef\@abstract{#1}}
 %
-\def\epjrunnhead{\markboth{Will be inserted by the editor}{Will be inserted by
-the editor}}%
+\def\epjrunnhead{\markboth{Quarks to Cosmos: Particles and Plasma in
+Cosmological evolution}{Johann\ Rafelski,\ Jeremiah\ Birrell, Christopher\ Grayson,\ Andrew\ Steinmetz,\ Cheng\ Tao\ Yang}}%
 %
 \AtEndOfClass{\let\ackname\@empty
 \let\if@runhead\iftrue

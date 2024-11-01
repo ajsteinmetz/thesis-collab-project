@@ -35,30 +35,22 @@ n_\nu=[-0.3517(\delta N_\nu^{\mathrm{eff}})^2+6.717\delta N_\nu^{\mathrm{eff}}+5
 \end{equation}
 ($\delta N_\nu^{\mathrm{eff}}\equiv N_\nu^{\mathrm{eff}}-3$), compare to Eq.(55) in Ref.~\cite{Birrell:2012gg}.
 
-We show $f_v$ in Figure \ref{fig:RelvDist300} for several values of the neutrino mass\index{neutrino!mass}, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). As expected, the lighter the neutrino, the more $f_v$  is weighted towards higher velocities with the velocity becoming visibly peaked about $v_{\text{rel}}$ for $m_\nu=2$ eV. 
+We show $f_v$ in \rf{fig:RelvDist300} left hand panel for several values of the neutrino mass\index{neutrino!mass}, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). As expected, the lighter the neutrino, the more $f_v$  is weighted towards higher velocities with the velocity becoming visibly peaked about $v_{\text{rel}}$ for $m_\nu=2$ eV. A similar procedure produces the normalized FDEV energy distribution $f_E$.  In \req{fvdistrib} we replace $dp/dv\to dp/dE$ where it is understood that 
+\begin{equation}
+p(E)=\sqrt{E^2-m_\nu^2},\qquad \frac{dp}{dE}=\frac{E}{p}.
+\end{equation}
+We show $f_E$ in \rf{fig:RelvDist300} right hand frame for several values of the neutrino mass, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). The width of the FDEV energy distribution is on the micro-eV scale and the kinetic energy $T=E-m_\nu$ is peaked about $T=\frac{1}{2}m_\nu v_{\text{rel}}^2$, implying that the relative velocity between the Earth and the CMB\index{CMB} is the dominant factor for $m_\nu>0.1$ eV.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-\centerline{\includegraphics[width=0.8\linewidth]{plots/rel_v_dist_300.pdf}}
-\caption{Normalized neutrino FDEV velocity distribution in the Earth frame. We show the distribution for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). \cccite{Birrell:2014qna}}
+\centerline{\includegraphics[width=0.5\linewidth]{plots/rel_v_dist_300.pdf}\hspace*{-0.5cm}
+\includegraphics[width=0.5\linewidth]{plots/E_dist_300.pdf}}
+\caption{Normalized neutrino FDEV  for velocity on left and energy on right. We show the distribution for $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). \cccite{Birrell:2014qna}}
 \label{fig:RelvDist300}
  \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A similar procedure produces the normalized FDEV energy distribution $f_E$.  In \req{fvdistrib} we replace $dp/dv\to dp/dE$ where it is understood that 
-\begin{equation}
-p(E)=\sqrt{E^2-m_\nu^2},\qquad \frac{dp}{dE}=\frac{E}{p}.
-\end{equation}
-We show $f_E$ in Figure \ref{fig:EDist300}  for several values of the neutrino mass, $v_{\text{rel}}=300$ km/s, and $N_\nu^{\mathrm{eff}}=3.046$ (solid lines) and $N_\nu^{\mathrm{eff}}=3.62$ (dashed lines). The width of the FDEV energy distribution is on the micro-eV scale and the kinetic energy $T=E-m_\nu$ is peaked about $T=\frac{1}{2}m_\nu v_{\text{rel}}^2$, implying that the relative velocity between the Earth and the CMB\index{CMB} is the dominant factor for $m_\nu>0.1$ eV.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-\centerline{\includegraphics[width=0.8\linewidth]{plots/E_dist_300.pdf}}
-\caption{Neutrino FDEV energy distribution in the Earth frame. We show the distribution for $N_\nu=3.046$ (solid lines) and $N_\nu=3.62$ (dashed lines). \cccite{Birrell:2014qna}}
-\label{fig:EDist300}
- \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 By multiplying $f_E$ by the neutrino velocity and number density for a single neutrino flavor (without anti-neutrinos) we obtain the particle flux density,
  \begin{equation}
@@ -124,7 +116,7 @@ The only angular dependence in the neutrino distribution is in ${\bf p}\cdot {\b
 g(p)\equiv& \int_0^\pi(1-\cos(\phi))\frac{d\sigma}{ d\Omega}(p,\phi)\sin(\phi)d\phi\,.\label{geq}
 \end{align}
 
-For the case of normal density matter, the Born approximation is valid due to the weakness of the potential compared to the neutrino energy seen in Figure \ref{fig:EDist300}. To obtain an order of magnitude estimate, we take a Gaussian potential \begin{equation}
+For the case of normal density matter, the Born approximation is valid due to the weakness of the potential compared to the neutrino energy seen in \rf{fig:RelvDist300} right hand panel. To obtain an order of magnitude estimate, we take a Gaussian potential \begin{equation}
 V(r)=V_0e^{-r^2/R^2}\,,
 \end{equation}
 for which the differential cross-section in the Born approximation can be analytically evaluated

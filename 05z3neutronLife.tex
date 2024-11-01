@@ -63,12 +63,12 @@ T_\nu\equiv\frac{a(t_k)}{a(t)}T_k\,.
 \end{align}
 with the effective neutrino temperature $T_\nu$. In the following calculation, we assume the condition $T_k\gg\mu_{\bar{\nu}},\,m_\nu$, {\it i.e.\/} we consider the massless neutrino in plasma. Substituting the distributions into the decay rate formula and using the neutron rest frame, the decay rate can be written as 
 \begin{align}
-\label{Decay_rate_01}
+\label{Decay:Rate_01}
 \frac{1}{\tau_n^\prime}&=\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}\,(1+3g^2_A)\,(1+RC)
 %\\&\times
 \int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)/T_\nu\right)+1}\,,
 \end{align} 
-where $Q$ was defined in Eq.\;(\ref{Xn_abundance3}) and we integrate using dimensionless variable $\xi=E_e/Q$. From \req{Decay_rate_01}, the decay rate in vacuum can be written as
+where $Q$ was defined in Eq.\;(\ref{Xn_abundance3}) and we integrate using dimensionless variable $\xi=E_e/Q$. From \req{Decay:Rate_01}, the decay rate in vacuum can be written as
 \begin{align}
 &\frac{1}{\tau_n^0}=\frac{G^2_Fm_e^5V^2_{ud}}{2\pi^3}(1+3g^2_A)\,(1+RC)\,f^\prime,
 \end{align}
@@ -93,12 +93,12 @@ which compares well to the experimental result, $877.7\pm0.7\,\mathrm{sec}$~\cit
 
 In the case of plasma medium, we do not expect that these effect (Coulomb correction between electron and proton, proton recoil, nucleon size correction etc) are modified in the cosmic plasma. Thus we adapt the factor into our calculation and the neutron decay rate in the cosmic plasma is given by
 \begin{align}
-\label{Decay_rate_02}
+\label{Decay:Rate_02}
 \frac{1}{\tau_n^{\mathrm{Medium}}}=&\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}\,(1+3g^2_A)\,(1+RC)\,\mathcal{F}
 %\\&\times
 \int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)/T_\nu\right)+1}.
 \end{align}
-From \req{Decay_rate_02} we see that the neutron decay rate in the primordial Universe depends on both the photon temperature $T$ and the neutrino effective temperature $T_\nu$.
+From \req{Decay:Rate_02} we see that the neutron decay rate in the primordial Universe depends on both the photon temperature $T$ and the neutrino effective temperature $T_\nu$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Photon reheating}
@@ -118,7 +118,7 @@ T_\nu=\frac{T}{\kappa},\,\,\,\,\,\,\kappa\equiv\left[\frac{g^s_\ast(T_k)}{g^s_\a
 \end{align}
 From \req{Neutrino_Photon} the neutron decay rate in a heat bath can be written as
 \begin{align}
-\label{Decay_rate_03}
+\label{Decay:Rate_03}
 \frac{1}{\tau_n^\mathrm{Medium}}=&\frac{G^2_FQ^5V^2_{ud}}{2\pi^3}(1+3g^2_A)\,(1+RC)\,\mathcal{F}
 %\\&\times
 \int^1_{m_e/Q}d\xi\,\frac{\xi(1-\xi)^2}{\exp\left(-Q\xi/{T}\right)+1}\frac{\sqrt{\xi^2-(m_e/Q)^2}}{\exp\left(-Q(1-\xi)\kappa/T\right)+1}. 
@@ -130,15 +130,16 @@ In the high temperature regime, $T\gg Q$, the exponential terms in the Fermi dis
 \qquad
 T\gg Q\;.
 \end{align}
-In \rf{Decay_Rate}, we plot the the neutron lifetime $\tau^\mathrm{Medium}_n$ in plasma as a function of temperature. Fermi-suppression from electron and neutrino increases the neutron lifetime as compared to value in vacuum. At low temperature, $T<0.2\,m_e$, most of the electrons and positrons have annihilated and the main Fermi-blocking comes from the cosmic neutrino background. In this regime, the neutron lifetime depends also on the neutrino temperature, $T_\nu$. For cold neutrinos $T_\nu<T$, the Fermi suppression is smaller than the hot one $T_\nu=T$, the effect is made more visible in the insert.
+In \rf{Decay:Rate} on the left hand side we show the  neutron lifetime $\tau^\mathrm{Medium}_n$ in plasma as a function of temperature. Fermi-suppression from electron and neutrino increases the neutron lifetime as compared to value in vacuum. At low temperature, $T<0.2\,m_e$, most of the electrons and positrons have annihilated and the main Fermi-blocking comes from the cosmic neutrino background. In this regime, the neutron lifetime depends also on the neutrino temperature, $T_\nu$. For cold neutrinos $T_\nu<T$, the Fermi suppression is smaller than the hot one $T_\nu=T$, the effect is made more visible in the insert.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure} 
-\centerline{\includegraphics[width=0.8\linewidth]{./plots/Neutron_Lifetime_001}}
-\caption{The neutron lifetime $\tau_n^\mathrm{Medium}$ in the cosmic plasma as a function of temperature.\cccite{Yang:2018qrr}}
-\label{Decay_Rate} 
+\centerline{\includegraphics[width=0.5\linewidth]{./plots/Neutron_Lifetime_001}\hspace*{-0.5cm}
+\includegraphics[width=0.5\linewidth]{./plots/Neutron_Abundance}}
+\caption{On left: The neutron lifetime $\tau_n^\mathrm{Medium}$ in the cosmic plasma; On right: The neutron abundance in the cosmic plasma, ratio to vacuum  abundance, as a function of temperature\cccite{Yang:2018qrr}}
+\label{Decay:Rate}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{Neutron abundance}
@@ -147,26 +148,19 @@ After the neutron freeze-out, the neutron abundance is only affected by the neut
 \label{Abundance}
 X_n=X_n^f\,\exp\bigg[-\int^t_{t_f}\frac{dt^\prime}{\tau_n}\bigg],
 \end{align}
-where we use the subscripts $f$ to denote quantities at neutron freeze-out. Using \req{Decay_rate_03} and \req{Abundance}, the neutron abundance ratio between plasma medium and vacuum is given by
+where we use the subscripts $f$ to denote quantities at neutron freeze-out. Using \req{Decay:Rate_03} and \req{Abundance}, the neutron abundance ratio between plasma medium and vacuum is given by
 \begin{align}
 \label{Abundance_Ratio}
 \frac{X_n^{\mathrm{Meduim}}}{X_n^{\mathrm{Vacuum}}}=\exp\bigg[-\int^t_{t_f}dt^\prime\left(\frac{1}{\tau^\prime_n}-\frac{1}{\tau^0_n}\right)\bigg].
 \end{align}
 
-In \rf{Neutron:Abundance}, we show this neutron abundance ratio as a function of temperature. We consider as typical the neutron freeze-out temperature $T_f=0.08\mathrm{MeV}$ and the BBN  temperature $T_{BBN}\approx0.07\mathrm{MeV}$, which yields ${X_n^{\mathrm{Meduim}}}/{X_n^{\mathrm{Vacuum}}}=1.064$. Then from \req{Xn_abundance} the neutron abundance in plasma medium is given by
+On the right hand side in \rf{Decay:Rate}  we show this neutron abundance ratio as a function of temperature. We consider as typical the neutron freeze-out temperature $T_f=0.08\mathrm{MeV}$ and the BBN  temperature $T_{BBN}\approx0.07\mathrm{MeV}$, which yields ${X_n^{\mathrm{Meduim}}}/{X_n^{\mathrm{Vacuum}}}=1.064$. Then from \req{Xn_abundance} the neutron abundance in plasma medium is given by
 \begin{align}
 X_n^{\mathrm{Meduim}}=1.064\,X_n^{\mathrm{Vacuum}}\approx0.138.
 \end{align}
 In this case, the neutron abundance will increase about $6.4\%$ in the cosmic plasma which should affect the final abundances of the Helium-4 and other light elements in BBN. A further study of neutron decoupling and decay in medium will be needed. 
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure} 
-\centerline{\includegraphics[width=0.8\linewidth]{./plots/Neutron_Abundance}}
-\caption{The neutron abundance ratio, in medium to vacuum, as a function of temperature. \cccite{Yang:2018qrr}}
-\label{Neutron:Abundance} 
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \para{How is BBN impacted?}
 One of the important parameters of standard BBN is the neutron lifetime, as it affects the neutron abundance after neutron freeze-out at temperature $T_f\approx 0.8 \mathrm{MeV}$ and before the BBN $T\approx0.07 \mathrm{MeV}$. 

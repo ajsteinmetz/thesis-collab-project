@@ -62,8 +62,8 @@ The leading order invariant matrix elements for the reactions $e^++e^-\to\mu^++\
 \begin{align}\label{Mee}
 |M_{e\bar e\to\mu\bar\mu}|^2=&32\pi^2\alpha^2\frac{(m_\mu^2-t)^2+(m_\mu^2-u)^2+2m_\mu^2s}{s^2},\quad m_\mu\gg m_e\;,\\[0.2cm]
 \label{Mgg}
-|M_{\gamma\gamma\to\mu\bar\mu}|^2=&32\pi^2\alpha^2\bigg[\left(\frac{m_\mu^2-u}{m_\mu^2-t}+\frac{m_\mu^2-t}{m_\mu^2-u}\right)+4\left(\frac{m_\mu^2}{m_\mu^2-t}+\frac{m_\mu^2}{m^2_\mu-u}\right)\\[0.1cm] \nonumber
-&\hspace{1cm}-4\left(\frac{m_\mu^2}{m^2_\mu-t}+\frac{m^2_\mu}{m^2_\mu-u}\right)^2\bigg]\;,
+|M_{\gamma\gamma\to\mu\bar\mu}|^2=&32\pi^2\alpha^2\left[\left(\frac{m_\mu^2-u}{m_\mu^2-t}+\frac{m_\mu^2-t}{m_\mu^2-u}\right)+4\left(\frac{m_\mu^2}{m_\mu^2-t}+\frac{m_\mu^2}{m^2_\mu-u}\right) 
+-4\left(\frac{m_\mu^2}{m^2_\mu-t}+\frac{m^2_\mu}{m^2_\mu-u}\right)^{\!\!2}\;\right]\;,
 \end{align}
  where $s, t, u$ are the Mandelstam variables\index{Mandelstam variables}. The cross-section required in \req{pairR} can be obtained by integrating the matrix elements \req{Mee} and \req{Mgg} over the Mandelstam variable $t$~\cite{Kuznetsova:2010pi}. We have
 \begin{align}
@@ -165,7 +165,7 @@ By incorporating \req{charge_neutral_cond2} and \req{entropy_per_baryon}, the ch
 
 Using the Fermi distribution, the number density of electrons over positrons in the primordial Universe is given by
 \begin{align}\label{ee_density}
-n_{e^-}-n_{{e^+}}&=\frac{g_e}{2\pi^2}\left[\int_0^\infty\frac{p^2dp}{\exp{\left((E-\mu_e)\right)/T}+1}\right.\left.-\int_0^\infty\frac{p^2dp}{\exp{\left((E+\mu_e)/T\right)}+1}\right]\notag\\
+n_{e^-}-n_{{e^+}}&=\frac{g_e}{2\pi^2}\left[\int_0^\infty\frac{p^2dp}{\exp{\left((E-\mu_e)\right)/T}+1}\right.\left.-\int_0^\infty\frac{p^2dp}{\exp{\left((E+\mu_e)/T\right)}+1}\right]\notag\\[0.3cm]
 &=\frac{g_e}{2\pi^2}\,{T^3}\,\tanh(b_e)M_e^3\int_{1}^\infty \!\!\!\!\frac{ \zeta \sqrt{\zeta^2-1} d\zeta}{1+\cosh(M_e\zeta)/\cosh(b_e)},
 \end{align}
 where we have introduced the dimensionless variables as follows: 
@@ -253,8 +253,9 @@ where the density function ${\sqrt{n_{e^-}n_{e^+}}}$ in the Boltzmann limit is g
 In \rf{RelaxationRate:fig}, we show the reaction rates for M{\o}ller reaction, Bhabha reaction, and inverse Compton scattering as a function of temperature. For temperatures $T>12.0$\,keV, the dominant reactions in plasma are M{\o}ller and Bhabha scatterings between electrons and positrons. Thus in the BBN temperature range, we can neglect the inverse Compton scattering. The total relaxation rate $\kappa$ (black line) is approximately constant, $\kappa=10\sim12$\,keV, during the BBN. However, at $T<20.3$\,keV the relaxation rate $\kappa$ decreases rapidly because the plasma changes its nature when positrons disappear.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure} 
-\centerline{\includegraphics[width=0.8\linewidth]{./plots/May152023Kappa_EPPlasma}}
+\begin{figure}
+\centering
+\includegraphics[width=0.66\textwidth]{./plots/May152023Kappa_EPPlasma}
 \caption{The relaxation rate $\kappa$ (black line) as a function of temperature in the nonrelativistic electron-positron plasma, compared to reaction rates for M{\o}ller reaction $e^-+e^-\to e^-+e^-$ (blue dashed line), Bhabha reaction $e^-+e^+\to e^-+e^+$ (red dashed line), and inverse Compton scattering $e^-+\gamma\to e^-+\gamma$ (green dashed line) respectively. The Debye mass $m_D=\omega_{p}\sqrt{m_e/T}$ (purple line) is also shown. \cccite{Grayson:2023flr}. \radapt{Yang:2024ret}}
 \label{RelaxationRate:fig}
 \end{figure}
@@ -347,9 +348,9 @@ and
 We solve \req{Numerical_eq} numerically. In \rf{KappaSol:fig}, we plot the resultant relaxation rate $\kappa$ that satisfies \req{Numerical_eq} as a function of temperature $50\,\mathrm{keV} \leqslant T\leqslant 86$\,keV. The result shows that in the the BBN temperature range, the overdamping is considerably reduced: We remember that we started with $w_{pl}<\kappa$, and the effective photon mass $m^2_\gamma=\kappa^2$. Now we obtain a relaxation rate $\kappa=1.832\sim 0.350$\,keV during BBN epoch, which is smaller than the relaxation rate without damping effect on the photon mass, compare \rf{RelaxationRate:fig}, where the relaxation rate $\kappa=10\sim12$\,keV during the BBN epoch is shown.\index{plasma damping}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure} 
-\centerline{
-\includegraphics[width=0.8\linewidth]{./plots/OverdampingKappa.jpg}}
+\begin{figure}
+\centering
+\includegraphics[width=0.66\linewidth]{./plots/OverdampingKappa.jpg}
 \caption{The relaxation rate $\kappa$ that satisfies \req{Numerical_eq} self-consistently as a function of temperature $50\leqslant T\leqslant 86$\,keV. The minor fluctuations are due to limited numerical precision. \radapt{Yang:2024ret}}
 \label{KappaSol:fig} 
 \end{figure}

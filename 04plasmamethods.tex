@@ -169,7 +169,8 @@ f(x,p) = f_\mathrm{eq}(x,p) + \delta f(x,p)\,.
 Here the small perturbation $\delta f(x,p)$ is induced by an external electromagnetic field. We expand \req{eq:boltzmanncov} in equilibrium and perturbation terms \cite{melrose2008quantum}
 %\begin{multline}
 \begin{align}
-    (p \cdot \partial)\left(f_\mathrm{eq}(x,p)+ \delta f(x,p)\right) +  q \left(F_{\mathrm{eq}}^{\mu\nu} +\delta F^{\mu\nu}\right)p_\nu \frac{\partial (f_\mathrm{eq}(x,p)+\delta f(x,p))}{\partial p^\mu}  = \kappa (p\cdot u)\left(f_\mathrm{eq} (p)\frac{\delta n(x)}{{n_\mathrm{eq}(x)}} - \delta f(x,p)\right)\,.
+    (p \cdot \partial)\left(f_\mathrm{eq}+ \delta f(x,p)\right) +  q \left(F_{\mathrm{eq}}^{\mu\nu} +\delta F^{\mu\nu}\right)p_\nu &\frac{\partial (f_\mathrm{eq}+\delta f(x,p))}{\partial p^\mu} 
+    = \kappa (p\cdot u)\left(f_\mathrm{eq} \frac{\delta n(x)}{{n_\mathrm{eq}(x)}} - \delta f(x,p)\right)\,.
 %\end{multline}
 \end{align}
 Since the equilibrium expressions are a solution to the collisionless Boltzmann equation, all the equilibrium terms combined are zero. The collision term is constructed to be zero at equilibrium. We will neglect the Lorentz force due to the induced field on the perturbation since it is second order in the perturbation
@@ -243,10 +244,10 @@ The induced charge current is the sum of the antiparticle distribution $\widetil
 with the factor of two accounting for spin. Sometimes, this is referred to as the first moment of $\delta f$.
 After expanding in linear response \req{eq:perturbation}, and specifying $q_\pm = \pm e$ the induced current is a function of the perturbation
 \begin{align}\label{eq:perturbation2}
-\tilde{j}_{\mathrm{ind}}^\mu(k) = 2\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big( e \left[\tilde{f}^{\mathrm{eq}}_+(k,p)-\tilde{f}^{\mathrm{eq}}_-(k,p)\right]
+\tilde{j}_{\mathrm{ind}}^\mu(k) &= 2\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \Big( e \left[\tilde{f}^{\mathrm{eq}}_+(k,p)-\tilde{f}^{\mathrm{eq}}_-(k,p)\right]
 + e\left[\delta\tilde{f}_+(k,p)-\delta\tilde{f}_-(k,p)\right]
-\Big) 
-=4 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \delta\tilde{f}(k,p)
+\Big) \notag \\
+&=4 e\int \frac{d^3 p}{(2 \pi)^3 p^0}p^\mu \delta\tilde{f}(k,p)
 \,.
 \end{align}
 The equilibrium currents cancel in the weak field limit for zero chemical potential\index{chemical potential}, and the perturbations add since they differ by the charge $\delta f_\pm=\pm e \delta f' $. For finite chemical potential $\mu_q$, the equilibrium terms can be combined with hyperbolic trig-identities
@@ -284,22 +285,26 @@ To perform this comparison and extract the polarization tensor we must rewrite t
 We then substitute this into the definition of $R^\mu(k)$ (\ref{eq:Rmu}) and isolate $\widetilde{A}^\mu$ as so it is in the form of \req{eq:ohm} to obtain \cite{Formanek:2021blc}
 \begin{equation}
 R^\mu(k) = - 4q^2 \int \frac{d^3p}{(2\pi)^3p^0} f'_\mathrm{eq}(p)
-\times \frac{(u\cdot k)p^\mu p_\nu - (k \cdot p)p^\mu u_\nu}{p\cdot k + i (p \cdot u) \kappa} \widetilde{A}^\nu(k)\,,
+\;%\times 
+\frac{(u\cdot k)p^\mu p_\nu - (k \cdot p)p^\mu u_\nu}{p\cdot k + i (p \cdot u) \kappa} \widetilde{A}^\nu(k)\,,
 \end{equation}
 from which we see that the contribution of $R^\mu$ to the polarization tensor is
 \begin{equation}\label{eq:Rmunu}
 R^\mu_\nu(k) \equiv - 4q^2 \int \frac{d^3p}{(2\pi)^3p^0} f'_\mathrm{eq}(p)
-\times\frac{(u\cdot k)p^\mu p_\nu - (k \cdot p)p^\mu u_\nu}{p\cdot k + i (p \cdot u) \kappa}.
+\;%\times
+\frac{(u\cdot k)p^\mu p_\nu - (k \cdot p)p^\mu u_\nu}{p\cdot k + i (p \cdot u) \kappa}.
 \end{equation}
 The contribution of the second term is hidden in the $R(k)$ scalar. In terms of the four-vector potential in the momentum space $\widetilde{A}^\nu$, we have
 \begin{equation}
 R(k) = - 2q \int \frac{d^3p}{(2\pi)^3p^0}(p \cdot u)f'_\mathrm{eq}(p)
-\times\frac{(u\cdot k)p_\nu - (k \cdot p)u_\nu}{p\cdot k + i (p \cdot u) \kappa}\widetilde{A}^\nu(k)\,.
+\;%\times
+\frac{(u\cdot k)p_\nu - (k \cdot p)u_\nu}{p\cdot k + i (p \cdot u) \kappa}\widetilde{A}^\nu(k)\,.
 \end{equation}
 We can identify in this expression a four-vector $H_\nu(k)$ defined as
 \begin{equation}\label{eq:Hnu}
 H_\nu(k) \equiv - 2q \int \frac{d^3p}{(2\pi)^3p^0}(p \cdot u)f'_\mathrm{eq}(p)
-\times\frac{(u\cdot k)p_\nu - (k \cdot p)u_\nu}{p\cdot k + i (p \cdot u) \kappa}
+\;%\times
+\frac{(u\cdot k)p_\nu - (k \cdot p)u_\nu}{p\cdot k + i (p \cdot u) \kappa}
 \end{equation}
 so that the polarization tensor is given by
 \begin{equation}\label{eq:pimunu}
