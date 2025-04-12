@@ -37,7 +37,7 @@ d\pi_{C}^r=\frac{\sqrt{-g}}{(p_{C}^r)_0}\frac{g_{C}d^3{\bf p}_{C}^r}{8\pi^3}, p_
 \end{align}
  The integrations are over the future mass shells of all the particles, so the $p$ are related by $g_{\alpha \beta}p^\alpha p^\beta=m^2$. 
  
- The factorials in the collision term take into account the indistinguishability of the particles and prevent one from over counting the independent ways a reaction can happen when integrating over momentum. The terms $f^A$ are due to quantum statistics and account for Fermi repulsion or Bose attraction (again, upper signs are for fermions and lower signs for bosons). $W^I(p_{B_j}^l,p_{A_i}^k)$, an abbreviation for $W^I(p_{B_1}^1,p_{B_1}^2,\ldots ,p_{B_1}^{n_{B_1}},p_{B_2}^1,\ldots ,p_{A_1}^1,\ldots )$, is the scattering kernel that encodes the probability of $n_{B_j}$ particles of types $B_j$ with momenta $p_{B_j}^l$ interacting to form $n_{A_i}$ particles of types $A_i$ with momenta $p_{A_i}^k$ in the process $I=n_{B_1}B_1,n_{B_2}B_2,\ldots\longrightarrow n_{A_1}A_1,n_{A_1}A_1,\ldots $, and so it is non-negative. 
+ The factorials in the collision term take into account the indistinguishability of the particles and prevent one from overcounting the independent ways a reaction can happen when integrating over momentum. The terms $f^A$ are due to quantum statistics and account for Fermi repulsion or Bose attraction (again, upper signs are for fermions and lower signs for bosons). $W^I(p_{B_j}^l,p_{A_i}^k)$, an abbreviation for $W^I(p_{B_1}^1,p_{B_1}^2,\ldots ,p_{B_1}^{n_{B_1}},p_{B_2}^1,\ldots ,p_{A_1}^1,\ldots )$, is the scattering kernel that encodes the probability of $n_{B_j}$ particles of types $B_j$ with momenta $p_{B_j}^l$ interacting to form $n_{A_i}$ particles of types $A_i$ with momenta $p_{A_i}^k$ in the process $I=n_{B_1}B_1,n_{B_2}B_2,\ldots\longrightarrow n_{A_1}A_1,n_{A_1}A_1,\ldots $, and so it is non-negative. 
  
  The delta function in the collision term enforces conservation of four-momentum. The factors of $(2\pi^4)$ and $\frac{1}{2}$ in the definitions of the volume elements come from normalization of the transition functions from quantum scattering calculations. For computational purposes, the expression \eqref{collision:operator} must be further simplified, taking into account the structure of each interaction. For example, see \rapp{ch:coll:simp} for a detailed study of the collision operator in the case of neutrino freeze-out.
 
@@ -75,7 +75,7 @@ For any point $x$ in spacetime, by transforming to Riemannian normal coordinates
 \begin{equation}\label{useNormalCoords}
 \nabla_\mu N_A^\mu=\int p^\mu \partial_{x^\mu} f d\pi_A=\int C[f_A] d\pi_A
 \end{equation}
-at $x$. The left and right hand sides are scalars and therefore they are equal in any coordinate system. Noting this, we can then calculate
+at $x$. The left and right-hand sides are scalars and therefore they are equal in any coordinate system. Noting this, we can then calculate
 \begin{align}\label{eq:charge_current_div}
 \nabla_\mu B^\mu=&\sum_A b_A\int C[f_A]d\pi_A\notag\\
 =&\sum_A\sum_{I\in int(A)} \frac{n_Ab_A}{n_I}\int\int\left(f_{r,I}(p_{B_j}^l)f^{p,I}(p_{A_i}^k)W^I(p_{B_j}^l,p_{A_i}^k) %\right.\notag\\&\left. 
