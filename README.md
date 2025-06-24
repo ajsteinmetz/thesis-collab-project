@@ -55,11 +55,18 @@ style="width: 1em; margin-inline-start: 0.5em"
 alt="ORCID iD icon"/> Cheng Tao Yang</a>
 
 ## cite as
-Rafelski, J., Birrell, J., Grayson, C., Steinmetz, A., Yang, C. T. Quarks to Cosmos: Particles and Plasma in Cosmological evolution. Eur. Phys. J. Spec. Top. (in press, 2025), arXiv:2409.19031 [hep-ph].
+Rafelski, J., Birrell, J., Grayson, C., Steinmetz, A., Yang, C. T. Quarks to Cosmos: Particles and Plasma in Cosmological evolution. Eur. Phys. J. Spec. Top. (2025). https://doi.org/10.1140/epjs/s11734-025-01470-w
 
 ## doi/arXiv/GitHub
+* https://doi.org/10.1140/epjs/s11734-025-01470-w
 * https://arxiv.org/abs/2409.19031
 * https://github.com/ajsteinmetz/thesis-collab-project
 
 ## license
-Copyright © 2024, the authors, under exclusive licence to Springer Science Business Media, LLC, part of Springer Nature.
+Copyright © 2025, the authors. Open Access. This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
