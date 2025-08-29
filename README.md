@@ -55,7 +55,7 @@ style="width: 1em; margin-inline-start: 0.5em"
 alt="ORCID iD icon"/> Cheng Tao Yang</a>
 
 ## cite as
-Rafelski, J., Birrell, J., Grayson, C., Steinmetz, A., Yang, C. T. Quarks to Cosmos: Particles and Plasma in Cosmological evolution. Eur. Phys. J. Spec. Top. (2025). https://doi.org/10.1140/epjs/s11734-025-01470-w
+Rafelski, J., Birrell, J., Grayson, C., Steinmetz, A., Yang, C. T. Quarks to Cosmos: Particles and Plasma in Cosmological evolution. Eur. Phys. J. Spec. Top. 234, 1125-1329 (2025). https://doi.org/10.1140/epjs/s11734-025-01470-w
 
 ## doi/arXiv/GitHub
 * https://doi.org/10.1140/epjs/s11734-025-01470-w
