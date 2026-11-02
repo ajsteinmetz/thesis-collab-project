@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2025 Johann Rafelski, Jeremiah Birrell, Christopher Grayson, Andrew Steinmetz, Cheng Tao Yang
 
 echo "Looking for files!"
 for image_file in $(ls plots/)
